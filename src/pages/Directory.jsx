@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { certifications } from '../data/certifications';
 import CertCard from '../components/CertCard';
 import CertDetails from '../components/CertDetails';

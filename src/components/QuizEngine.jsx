@@ -1,58 +1,92 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { certifications } from '../data/certifications';
 import { CheckCircle2, XCircle, ChevronRight, RefreshCw, Trophy, Clock, AlertCircle, BarChart3 } from 'lucide-react';
 
 const QuizEngine = ({ certId, settings, onExit }) => {
-  const [questions, setQuestions] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [isAnswered, setIsAnswered] = useState(false);
-  const [score, setScore] = useState(0);
-  const [showResults, setShowResults] = useState(false);
-  const [timeLeft, setTimeLeft] = useState(null);
-  const [resultsData, setResultsData] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+  const storageKey = useMemo(() => `quiz_progress_${certId}`, [certId]);
 
-  const storageKey = `quiz_progress_${certId}`;
-
-  // Initialize Quiz or Restore from LocalStorage
-  useEffect(() => {
+  // Initialize state from localStorage or defaults
+  const [questions] = useState(() => {
     const savedProgress = localStorage.getItem(storageKey);
-    const cert = certifications.find(c => c.id === certId);
-
     if (savedProgress) {
       try {
         const parsed = JSON.parse(savedProgress);
-        // Only restore if settings match (e.g., length)
         if (parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
-          setQuestions(parsed.questions);
-          setCurrentIndex(parsed.currentIndex);
-          setScore(parsed.score);
-          setResultsData(parsed.resultsData);
-          if (settings.timed) setTimeLeft(parsed.timeLeft);
-          setIsLoaded(true);
-          return;
+          return parsed.questions;
         }
-      } catch (e) {
-        console.error("Failed to restore quiz progress", e);
-      }
+      } catch (e) { console.error(e); }
     }
-
+    const cert = certifications.find(c => c.id === certId);
     if (cert) {
-      let quizQuestions = [...cert.practiceQuestions];
-      while (quizQuestions.length < settings.length && quizQuestions.length > 0) {
-        quizQuestions = [...quizQuestions, ...cert.practiceQuestions.map(q => ({...q, id: q.id + '_copy_' + Math.random()}))];
-      }
-      const shuffled = quizQuestions.sort(() => Math.random() - 0.5).slice(0, settings.length);
-      setQuestions(shuffled);
-      if (settings.timed) setTimeLeft(settings.length * 60);
-      setIsLoaded(true);
+      return [...cert.practiceQuestions].sort(() => Math.random() - 0.5).slice(0, settings.length);
     }
-  }, [certId, settings, storageKey]);
+    return [];
+  });
+
+  const [currentIndex, setCurrentIndex] = useState(() => {
+    const savedProgress = localStorage.getItem(storageKey);
+    if (savedProgress) {
+      try {
+        const parsed = JSON.parse(savedProgress);
+        if (parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
+          return parsed.currentIndex;
+        }
+      } catch (e) { console.error(e); }
+    }
+    return 0;
+  });
+
+  const [score, setScore] = useState(() => {
+    const savedProgress = localStorage.getItem(storageKey);
+    if (savedProgress) {
+      try {
+        const parsed = JSON.parse(savedProgress);
+        if (parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
+          return parsed.score;
+        }
+      } catch (e) { console.error(e); }
+    }
+    return 0;
+  });
+
+  const [resultsData, setResultsData] = useState(() => {
+    const savedProgress = localStorage.getItem(storageKey);
+    if (savedProgress) {
+      try {
+        const parsed = JSON.parse(savedProgress);
+        if (parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
+          return parsed.resultsData;
+        }
+      } catch (e) { console.error(e); }
+    }
+    return [];
+  });
+
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const savedProgress = localStorage.getItem(storageKey);
+    if (savedProgress) {
+      try {
+        const parsed = JSON.parse(savedProgress);
+        if (parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
+          return parsed.timeLeft;
+        }
+      } catch (e) { console.error(e); }
+    }
+    return settings.timed ? settings.length * 60 : null;
+  });
+
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [isAnswered, setIsAnswered] = useState(false);
+  const [showResults, setShowResults] = useState(false);
+
+  const endQuiz = useCallback(() => {
+    setShowResults(true);
+    localStorage.removeItem(storageKey);
+  }, [storageKey]);
 
   // Persist Progress
   useEffect(() => {
-    if (!isLoaded || showResults) return;
+    if (showResults) return;
 
     const progress = {
       questions,
@@ -63,17 +97,19 @@ const QuizEngine = ({ certId, settings, onExit }) => {
       settings
     };
     localStorage.setItem(storageKey, JSON.stringify(progress));
-  }, [currentIndex, score, resultsData, timeLeft, isLoaded, showResults, storageKey, questions, settings]);
+  }, [currentIndex, score, resultsData, timeLeft, showResults, storageKey, questions, settings]);
 
   // Timer logic
   useEffect(() => {
     if (timeLeft === null || showResults) return;
-    if (timeLeft === 0) {
-      setShowResults(true);
-      localStorage.removeItem(storageKey);
-      return;
+    if (timeLeft <= 0) {
+      const timer = setTimeout(() => {
+        setShowResults(true);
+        localStorage.removeItem(storageKey);
+      }, 0);
+      return () => clearTimeout(timer);
     }
-    const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+    const timer = setTimeout(() => setTimeLeft(prev => (prev !== null ? prev - 1 : null)), 1000);
     return () => clearTimeout(timer);
   }, [timeLeft, showResults, storageKey]);
 
@@ -97,8 +133,7 @@ const QuizEngine = ({ certId, settings, onExit }) => {
       setSelectedOption(null);
       setIsAnswered(false);
     } else {
-      setShowResults(true);
-      localStorage.removeItem(storageKey);
+      endQuiz();
     }
   };
 
@@ -118,11 +153,13 @@ const QuizEngine = ({ certId, settings, onExit }) => {
     return categories;
   };
 
-  if (!isLoaded || questions.length === 0) return <div className="p-8 text-center">Loading questions...</div>;
+  if (questions.length === 0) return <div className="p-8 text-center">No questions found.</div>;
 
   if (showResults) {
     const percentage = Math.round((score / questions.length) * 100);
     const categoryStats = getCategoryPerformance();
+    const currentCert = certifications.find(c => c.id === certId);
+
     return (
       <div className="max-w-4xl mx-auto">
         <div className="bg-white p-8 rounded-2xl shadow-xl text-center border border-slate-100 mb-8">
@@ -132,7 +169,7 @@ const QuizEngine = ({ certId, settings, onExit }) => {
             </div>
           </div>
           <h2 className="text-3xl font-bold mb-2 text-slate-900">Quiz Completed!</h2>
-          <p className="text-slate-500 mb-8">You've completed the practice quiz for {certifications.find(c => c.id === certId)?.title}</p>
+          <p className="text-slate-500 mb-8">You've completed the practice quiz for {currentCert?.title}</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
             <div className="bg-slate-50 p-4 rounded-xl"><div className="text-2xl font-bold text-slate-900">{score}/{questions.length}</div><div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Score</div></div>
             <div className="bg-slate-50 p-4 rounded-xl"><div className="text-2xl font-bold text-slate-900">{percentage}%</div><div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Accuracy</div></div>

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { certifications } from '../data/certifications';
-import { ChevronDown, ChevronUp, Book, Lightbulb, Clock } from 'lucide-react';
+import { ChevronDown, ChevronUp, Book, Lightbulb, Clock, BookOpen } from 'lucide-react';
 
 const Reviewer = () => {
   const [selectedCertId, setSelectedCertId] = useState(certifications[0].id);
