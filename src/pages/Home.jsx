@@ -1,100 +1,164 @@
 
 import { Link } from 'react-router-dom';
-import { Search, BookOpen, GraduationCap, ArrowRight, Award, HelpCircle } from 'lucide-react';
+import { Search, BookOpen, GraduationCap, ArrowUpRight, Terminal, MousePointer2 } from 'lucide-react';
 import { certifications } from '../data/certifications';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
   const totalCerts = certifications.length;
   const totalQuestions = certifications.reduce((acc, cert) => acc + cert.practiceQuestions.length, 0);
+  const [text, setText] = useState('');
+  const fullText = "certification journey";
+
+  useEffect(() => {
+    let i = 0;
+    const timer = setInterval(() => {
+      setText(fullText.slice(0, i));
+      i++;
+      if (i > fullText.length) i = 0;
+    }, 200);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-slate-900 text-white py-20 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Master Your IT Career</h1>
-          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            Your all-in-one hub for IT certifications. Explore directories, study key concepts, and test your knowledge with our interactive quiz engine.
+      <section className="hero">
+        <div className="grid-overlay"></div>
+        <div className="container hero__inner">
+          <div className="hero__badge reveal reveal--up is-visible">
+            <span className="pulse-dot"></span>
+            v2.0 Explorer is live
+          </div>
+
+          <h1 className="hero__title reveal reveal--up is-visible" style={{ transitionDelay: '100ms' }}>
+            <span className="hero__title-line">Master your</span>
+            <span className="hero__title-line">IT <em className="serif">Future</em><span className="hero__title-dot">.</span></span>
+          </h1>
+
+          <div className="hero__terminal reveal reveal--up is-visible" style={{ transitionDelay: '200ms' }}>
+            <Terminal className="icon" />
+            <span className="hero__terminal-prompt">~/pathfinder</span>
+            <span className="rotator">{text}</span>
+          </div>
+
+          <p className="hero__statement reveal reveal--up is-visible" style={{ transitionDelay: '300ms' }}>
+            Your all-in-one hub for <em className="serif">professional</em> IT certifications. Study, practice, and conquer your career goals.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/directory" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition flex items-center">
-              Explore Certifications <ArrowRight className="ml-2" size={20} />
+
+          <div className="hero__cta reveal reveal--up is-visible" style={{ transitionDelay: '400ms' }}>
+            <Link to="/directory" className="btn btn--primary btn--lg">
+              Explore Directory
+              <ArrowUpRight className="icon" />
             </Link>
-            <Link to="/quiz" className="bg-slate-700 hover:bg-slate-600 text-white px-8 py-3 rounded-lg font-semibold transition">
-              Start a Quiz
+            <Link to="/quiz" className="btn btn--ghost btn--lg">
+              Start Quiz
             </Link>
+          </div>
+
+          <ul className="hero__stats reveal reveal--up is-visible" style={{ transitionDelay: '500ms' }}>
+            <li>
+              <span className="stat__num">{totalCerts}</span>
+              <span className="stat__label">Certifications</span>
+            </li>
+            <li>
+              <span className="stat__num">{totalQuestions}</span>
+              <span className="stat__label">Questions</span>
+            </li>
+            <li>
+              <span className="stat__num">100%</span>
+              <span className="stat__label">Free Access</span>
+            </li>
+          </ul>
+        </div>
+
+        <div className="hero__scroll">
+          <span className="hero__scroll-text">Scroll</span>
+          <div className="hero__scroll-line"></div>
+        </div>
+      </section>
+
+      {/* Features - Bento Grid Style */}
+      <section className="section section--alt">
+        <div className="container">
+          <div className="section-head section-head--center">
+            <div className="section-head__meta">
+              <span className="section-head__num">01</span>
+              <span className="section-head__label">Features</span>
+            </div>
+          </div>
+
+          <div className="bento">
+            <div className="bento__card bento__card--wide spot">
+              <div className="bento__icon">
+                <Search className="icon" />
+              </div>
+              <h3 className="font-display">Certification Directory</h3>
+              <p>
+                Comprehensive database of IT certifications. Compare costs, requirements, and job market demand to find your next step.
+              </p>
+              <ul className="chips">
+                <li>CompTIA</li>
+                <li>AWS</li>
+                <li>Azure</li>
+                <li>Cisco</li>
+                <li>Security+</li>
+              </ul>
+              <Link to="/directory" className="btn btn--sm btn--primary mt-6">
+                Browse All <ArrowUpRight className="icon" />
+              </Link>
+            </div>
+
+            <div className="bento__card spot">
+              <div className="bento__icon">
+                <BookOpen className="icon" />
+              </div>
+              <h3 className="font-display">Reviewer</h3>
+              <p>Summarized study guides for quick revisions.</p>
+              <Link to="/reviewer" className="btn btn--sm btn--ghost mt-auto">
+                Study <ArrowUpRight className="icon" />
+              </Link>
+            </div>
+
+            <div className="bento__card spot">
+              <div className="bento__icon">
+                <GraduationCap className="icon" />
+              </div>
+              <h3 className="font-display">Quiz Engine</h3>
+              <p>Practice with real-world scenarios.</p>
+              <Link to="/quiz" className="btn btn--sm btn--ghost mt-auto">
+                Test Me <ArrowUpRight className="icon" />
+              </Link>
+            </div>
+
+            <div className="bento__card bento__card--half spot">
+              <div className="bento__icon">
+                <Terminal className="icon" />
+              </div>
+              <h3 className="font-display">Exam Simulations</h3>
+              <p>Timed practice exams that mimic the real testing environment, helping you build stamina and confidence.</p>
+            </div>
+
+            <div className="bento__card bento__card--half spot">
+              <div className="bento__icon">
+                <MousePointer2 className="icon" />
+              </div>
+              <h3 className="font-display">Interactive Learning</h3>
+              <p>Dynamic feedback system that explains why answers are correct or incorrect, ensuring deep conceptual understanding.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 bg-white border-b border-slate-100">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-8 md:gap-24">
-            <div className="text-center">
-              <div className="flex items-center justify-center text-blue-600 mb-2">
-                <Award size={32} className="mr-3" />
-                <span className="text-4xl font-bold text-slate-900">{totalCerts}</span>
-              </div>
-              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Certifications</p>
-            </div>
-            <div className="text-center">
-              <div className="flex items-center justify-center text-purple-600 mb-2">
-                <HelpCircle size={32} className="mr-3" />
-                <span className="text-4xl font-bold text-slate-900">{totalQuestions}</span>
-              </div>
-              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Practice Questions</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Directory Card */}
-            <div className="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-lg transition">
-              <div className="bg-blue-100 text-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                <Search size={24} />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Cert Directory</h3>
-              <p className="text-slate-600 mb-6">
-                Comprehensive details on major IT certs including costs, requirements, and salary impact.
-              </p>
-              <Link to="/directory" className="text-blue-600 font-semibold flex items-center hover:underline">
-                Browse Directory <ArrowRight className="ml-1" size={16} />
-              </Link>
-            </div>
-
-            {/* Reviewer Card */}
-            <div className="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-lg transition">
-              <div className="bg-green-100 text-green-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                <BookOpen size={24} />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Study Reviewer</h3>
-              <p className="text-slate-600 mb-6">
-                Summarized study guides and cheat sheets for core exam objectives and terminology.
-              </p>
-              <Link to="/reviewer" className="text-green-600 font-semibold flex items-center hover:underline">
-                View Reviewer <ArrowRight className="ml-1" size={16} />
-              </Link>
-            </div>
-
-            {/* Quiz Card */}
-            <div className="bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:shadow-lg transition">
-              <div className="bg-purple-100 text-purple-600 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                <GraduationCap size={24} />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Practice Quiz</h3>
-              <p className="text-slate-600 mb-6">
-                Interactive quizzes with instant feedback to prepare you for the real certification exams.
-              </p>
-              <Link to="/quiz" className="text-purple-600 font-semibold flex items-center hover:underline">
-                Try a Quiz <ArrowRight className="ml-1" size={16} />
-              </Link>
-            </div>
-          </div>
+      {/* Editorial Quote Section */}
+      <section className="section">
+        <div className="container text-center">
+          <h2 className="section-head__title">
+            Unlock your <em className="serif">full potential</em> in the technology landscape.
+          </h2>
+          <p className="about__intro max-w-3xl mx-auto mt-6 text-2">
+            Pathfinder is designed to bridge the gap between learning and certification. We provide the tools, you provide the dedication. Together, we build the future of IT.
+          </p>
         </div>
       </section>
     </div>

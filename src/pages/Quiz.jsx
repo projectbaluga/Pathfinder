@@ -1,7 +1,8 @@
+
 import { useState } from 'react';
 import { certifications } from '../data/certifications';
 import QuizEngine from '../components/QuizEngine';
-import { GraduationCap, Settings2, Play, Timer } from 'lucide-react';
+import { Settings2, Play, Timer, Shield } from 'lucide-react';
 
 const Quiz = () => {
   const [quizState, setQuizState] = useState('setup'); // setup, active
@@ -21,107 +22,122 @@ const Quiz = () => {
 
   if (quizState === 'active') {
     return (
-      <div className="container mx-auto px-4 py-12">
-        <QuizEngine
-          certId={selectedCertId}
-          settings={quizSettings}
-          onExit={exitQuiz}
-        />
+      <div className="section pt-32">
+        <div className="container">
+          <QuizEngine
+            certId={selectedCertId}
+            settings={quizSettings}
+            onExit={exitQuiz}
+          />
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Practice Quiz Engine</h1>
-        <p className="text-slate-600 max-w-2xl">
-          Test your knowledge with our interactive quiz. Select a certification, choose your settings, and start your practice session.
-        </p>
-      </div>
-
-      <div className="max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Certification Selection */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-            <h2 className="text-xl font-bold mb-6 flex items-center text-slate-900">
-              <GraduationCap size={24} className="mr-3 text-blue-600" />
-              1. Choose Certification
-            </h2>
-            <div className="space-y-3">
-              {certifications.map(cert => (
-                <button
-                  key={cert.id}
-                  onClick={() => setSelectedCertId(cert.id)}
-                  className={`w-full text-left px-5 py-4 rounded-xl border-2 transition-all ${
-                    selectedCertId === cert.id
-                      ? 'border-blue-600 bg-blue-50 text-blue-700 font-bold'
-                      : 'border-slate-100 hover:border-slate-200 text-slate-600'
-                  }`}
-                >
-                  {cert.title}
-                </button>
-              ))}
-            </div>
+    <div className="section pt-32">
+      <div className="container">
+        <div className="section-head">
+          <div className="section-head__meta">
+            <span className="section-head__num">03</span>
+            <span className="section-head__label">Knowledge Test</span>
           </div>
+          <h1 className="section-head__title">Quiz <em className="serif">Engine</em></h1>
+          <p className="about__intro mt-6 text-text-2 max-w-2xl">
+            Test your knowledge with our interactive quiz. Select a certification, choose your settings, and start your practice session.
+          </p>
+        </div>
 
-          {/* Quiz Settings */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-            <h2 className="text-xl font-bold mb-6 flex items-center text-slate-900">
-              <Settings2 size={24} className="mr-3 text-purple-600" />
-              2. Quiz Settings
-            </h2>
-
-            <div className="mb-8">
-              <label className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4 block">Quiz Length</label>
-              <div className="grid grid-cols-3 gap-3">
-                {[10, 25, 50].map(len => (
+        <div className="max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Certification Selection */}
+            <div className="case p-0 overflow-hidden bg-surface-2 border-border-2">
+              <div className="p-6 border-b border-border bg-surface flex items-center gap-3">
+                <div className="principle__icon !w-10 !h-10 !mb-0 !bg-accent-soft/20">
+                  <Shield size={18} className="text-accent" />
+                </div>
+                <h2 className="text-lg font-display font-bold text-text">1. Choose Certification</h2>
+              </div>
+              <div className="p-6 space-y-3 max-h-[400px] overflow-y-auto custom-scrollbar">
+                {certifications.map(cert => (
                   <button
-                    key={len}
-                    onClick={() => setQuizSettings({...quizSettings, length: len})}
-                    className={`py-3 rounded-xl border-2 font-bold transition-all ${
-                      quizSettings.length === len
-                        ? 'border-purple-600 bg-purple-50 text-purple-700'
-                        : 'border-slate-100 hover:border-slate-200 text-slate-600'
+                    key={cert.id}
+                    onClick={() => setSelectedCertId(cert.id)}
+                    className={`w-full text-left px-5 py-4 rounded-xl border transition-all flex items-center justify-between group ${
+                      selectedCertId === cert.id
+                        ? 'border-accent bg-accent-soft text-text font-bold'
+                        : 'border-border bg-surface hover:border-border-2 text-text-2'
                     }`}
                   >
-                    {len}
+                    <span className="text-sm">{cert.title}</span>
+                    {selectedCertId === cert.id && <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>}
                   </button>
                 ))}
               </div>
             </div>
 
-            <div className="mb-10">
-              <label className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4 block">Exam Mode</label>
-              <button
-                onClick={() => setQuizSettings({...quizSettings, timed: !quizSettings.timed})}
-                className={`w-full flex items-center justify-between px-5 py-4 rounded-xl border-2 transition-all ${
-                  quizSettings.timed
-                    ? 'border-orange-500 bg-orange-50 text-orange-700 font-bold'
-                    : 'border-slate-100 hover:border-slate-200 text-slate-600'
-                }`}
-              >
-                <div className="flex items-center">
-                  <Timer size={20} className="mr-3" />
-                  <span>Timed Exam Mode</span>
+            {/* Quiz Settings */}
+            <div className="case p-0 overflow-hidden bg-surface-2 border-border-2">
+              <div className="p-6 border-b border-border bg-surface flex items-center gap-3">
+                <div className="principle__icon !w-10 !h-10 !mb-0 !bg-accent-2/10">
+                  <Settings2 size={18} className="text-accent-2" />
                 </div>
-                <div className={`w-12 h-6 rounded-full relative transition-colors ${quizSettings.timed ? 'bg-orange-500' : 'bg-slate-200'}`}>
-                  <div className={`absolute top-1 w-4 h-4 bg-white rounded-full transition-all ${quizSettings.timed ? 'left-7' : 'left-1'}`}></div>
-                </div>
-              </button>
-              <p className="text-xs text-slate-500 mt-3 ml-1 flex items-start">
-                <Timer size={12} className="mr-1 mt-0.5" />
-                Timed mode gives you 1 minute per question and simulates real test conditions.
-              </p>
-            </div>
+                <h2 className="text-lg font-display font-bold text-text">2. Quiz Settings</h2>
+              </div>
 
-            <button
-              onClick={startQuiz}
-              className="w-full bg-slate-900 text-white py-4 rounded-xl font-bold text-lg hover:bg-slate-800 transition shadow-lg flex items-center justify-center group"
-            >
-              Start Practice Quiz
-              <Play size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </button>
+              <div className="p-8">
+                <div className="mb-10">
+                  <label className="section-head__label block mb-4">Quiz Length</label>
+                  <div className="grid grid-cols-3 gap-4 font-mono">
+                    {[10, 25, 50].map(len => (
+                      <button
+                        key={len}
+                        onClick={() => setQuizSettings({...quizSettings, length: len})}
+                        className={`py-3 rounded-xl border transition-all text-sm ${
+                          quizSettings.length === len
+                            ? 'border-accent-2 bg-accent-2/10 text-accent-2 font-bold'
+                            : 'border-border bg-surface text-text-3'
+                        }`}
+                      >
+                        {len} items
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-10">
+                  <label className="section-head__label block mb-4">Exam Mode</label>
+                  <button
+                    onClick={() => setQuizSettings({...quizSettings, timed: !quizSettings.timed})}
+                    className={`w-full flex items-center justify-between px-5 py-5 rounded-xl border transition-all group ${
+                      quizSettings.timed
+                        ? 'border-accent-3 bg-accent-3/10 text-accent-3 font-bold'
+                        : 'border-border bg-surface text-text-2'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <Timer size={18} />
+                      <span className="text-sm">Timed Mode</span>
+                    </div>
+                    <div className={`w-10 h-5 rounded-full relative transition-colors ${quizSettings.timed ? 'bg-accent-3' : 'bg-border-2'}`}>
+                      <div className={`absolute top-1 w-3 h-3 bg-white rounded-full transition-all ${quizSettings.timed ? 'left-6' : 'left-1'}`}></div>
+                    </div>
+                  </button>
+                  <p className="font-mono text-[10px] text-text-3 mt-4 flex items-center gap-2">
+                    <Timer size={10} className="text-accent-3" />
+                    Simulates real test conditions (1 min/item).
+                  </p>
+                </div>
+
+                <button
+                  onClick={startQuiz}
+                  className="btn btn--primary w-full py-5 text-base"
+                >
+                  Start Practice Quiz
+                  <Play size={18} className="icon--fill ml-1" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

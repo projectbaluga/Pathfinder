@@ -1,48 +1,53 @@
-import { ExternalLink, DollarSign, Clock, Tag, Award } from 'lucide-react';
+
+import { ArrowUpRight, DollarSign, Clock, Award, Shield } from 'lucide-react';
 
 const CertCard = ({ cert, onClick }) => {
   return (
     <div
-      className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer"
+      className="principle spot group cursor-pointer"
       onClick={() => onClick(cert)}
     >
-      <div className="p-6">
-        <div className="flex justify-between items-start mb-4">
-          <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded uppercase tracking-wider">
+      <div className="flex justify-between items-start mb-4">
+        <div className="principle__icon">
+          <Shield className="icon" />
+        </div>
+        <div className="flex flex-col items-end gap-1">
+          <span className="case__group-tag text-[10px]">
             {cert.domain}
           </span>
-          <span className={`text-xs font-semibold px-2.5 py-0.5 rounded uppercase tracking-wider ${
-            cert.level === 'Beginner' ? 'bg-green-100 text-green-800' :
-            cert.level === 'Intermediate' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800'
+          <span className={`font-mono text-[10px] uppercase tracking-tighter ${
+            cert.level === 'Beginner' ? 'text-accent-2' :
+            cert.level === 'Intermediate' ? 'text-accent-3' : 'text-accent'
           }`}>
             {cert.level}
           </span>
         </div>
-        <h3 className="text-xl font-bold text-slate-900 mb-2">{cert.title}</h3>
-        <p className="text-slate-500 text-sm mb-4 line-clamp-2">{cert.description}</p>
-
-        <div className="grid grid-cols-2 gap-y-3 text-sm text-slate-600">
-          <div className="flex items-center">
-            <Award size={16} className="mr-2 text-slate-400" />
-            <span>{cert.issuer}</span>
-          </div>
-          <div className="flex items-center">
-            <DollarSign size={16} className="mr-2 text-slate-400" />
-            <span>${cert.price}</span>
-          </div>
-          <div className="flex items-center">
-            <Tag size={16} className="mr-2 text-slate-400" />
-            <span>{cert.domain}</span>
-          </div>
-          <div className="flex items-center">
-            <Clock size={16} className="mr-2 text-slate-400" />
-            <span>{cert.duration}</span>
-          </div>
-        </div>
       </div>
-      <div className="bg-slate-50 px-6 py-3 border-t border-slate-100 flex justify-between items-center text-blue-600 font-medium">
-        <span>View Details</span>
-        <ExternalLink size={16} />
+
+      <h3 className="font-display text-xl mb-2 group-hover:text-accent transition-colors">
+        {cert.title}
+      </h3>
+
+      <p className="text-sm text-text-2 mb-6 line-clamp-2">
+        {cert.description}
+      </p>
+
+      <div className="grid grid-cols-2 gap-3 text-[11px] font-mono text-text-3 border-t border-border pt-4">
+        <div className="flex items-center gap-2">
+          <Award size={12} className="text-accent" />
+          <span className="truncate">{cert.issuer}</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <DollarSign size={12} className="text-accent-2" />
+          <span>${cert.price}</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Clock size={12} className="text-accent-3" />
+          <span>{cert.duration}</span>
+        </div>
+        <div className="flex items-center justify-end text-accent group-hover:translate-x-1 transition-transform">
+          <ArrowUpRight size={14} />
+        </div>
       </div>
     </div>
   );
