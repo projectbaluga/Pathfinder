@@ -1,5 +1,4 @@
-
-import { X, Briefcase, Info, ListChecks } from 'lucide-react';
+import { X, Info, ListChecks } from 'lucide-react';
 
 const CertDetails = ({ cert, onClose }) => {
   if (!cert) return null;
@@ -24,12 +23,10 @@ const CertDetails = ({ cert, onClose }) => {
                 <Info size={16} className="mr-2" /> Overview
               </h3>
               <div className="space-y-3">
-                <p><span className="font-semibold">Issuer:</span> {cert.issuer}</p>
-                <p><span className="font-semibold">Domain:</span> {cert.domain}</p>
-                <p><span className="font-semibold">Level:</span> {cert.level}</p>
-                <p><span className="font-semibold">Cost:</span> {cert.cost}</p>
-                <p><span className="font-semibold">Validity:</span> {cert.validity}</p>
-                <p><span className="font-semibold">Prerequisites:</span> {cert.prerequisites}</p>
+                <p><span className="font-semibold text-slate-700">Issuer:</span> {cert.issuer}</p>
+                <p><span className="font-semibold text-slate-700">Domain:</span> {cert.domain}</p>
+                <p><span className="font-semibold text-slate-700">Level:</span> {cert.level}</p>
+                <p><span className="font-semibold text-slate-700">Cost:</span> ${cert.price}</p>
               </div>
             </div>
             <div>
@@ -37,25 +34,10 @@ const CertDetails = ({ cert, onClose }) => {
                 <ListChecks size={16} className="mr-2" /> Exam Details
               </h3>
               <div className="space-y-3">
-                <p><span className="font-semibold">Format:</span> {cert.questionsCount} questions</p>
-                <p><span className="font-semibold">Duration:</span> {cert.duration}</p>
-                <p><span className="font-semibold">Passing Score:</span> {cert.passingScore}</p>
-                <p><span className="font-semibold">Recommended Experience:</span> {cert.experience}</p>
-                <p><span className="font-semibold">Avg Salary Impact:</span> {cert.salaryImpact}</p>
+                <p><span className="font-semibold text-slate-700">Questions:</span> {cert.questionsCount}</p>
+                <p><span className="font-semibold text-slate-700">Duration:</span> {cert.duration}</p>
+                <p><span className="font-semibold text-slate-700">Practice:</span> 50 questions available</p>
               </div>
-            </div>
-          </div>
-
-          <div className="mb-8">
-            <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center">
-              <Briefcase size={16} className="mr-2" /> Career Roles
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {cert.careerRoles.map((role, index) => (
-                <span key={index} className="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-sm font-medium">
-                  {role}
-                </span>
-              ))}
             </div>
           </div>
 
@@ -68,7 +50,7 @@ const CertDetails = ({ cert, onClose }) => {
         <div className="sticky bottom-0 bg-white border-t border-slate-100 px-6 py-4 flex justify-end">
           <button
             onClick={onClose}
-            className="bg-slate-900 text-white px-6 py-2 rounded-lg font-semibold hover:bg-slate-800 transition"
+            className="bg-slate-900 text-white px-8 py-2.5 rounded-xl font-bold hover:bg-slate-800 transition shadow-lg shadow-slate-200"
           >
             Close
           </button>

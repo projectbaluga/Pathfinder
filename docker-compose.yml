@@ -1,7 +1,7 @@
 services:
-  certhub:
+  pathfinder:
     build: .
-    container_name: certhub-app
+    container_name: pathfinder-app
     ports:
       - "5173:80"
     restart: always

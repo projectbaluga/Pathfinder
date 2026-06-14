@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
         <Link to="/" className="flex items-center space-x-2 text-xl font-bold">
           <Shield className="text-blue-400" />
-          <span>CertHub</span>
+          <span>Pathfinder</span>
         </Link>
         <div className="flex space-x-6">
           <Link to="/directory" className="hover:text-blue-400 flex items-center space-x-1">

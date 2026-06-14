@@ -1,5 +1,4 @@
-
-import { ExternalLink, DollarSign, Clock, BarChart, Award } from 'lucide-react';
+import { ExternalLink, DollarSign, Clock, Tag, Award } from 'lucide-react';
 
 const CertCard = ({ cert, onClick }) => {
   return (
@@ -29,11 +28,11 @@ const CertCard = ({ cert, onClick }) => {
           </div>
           <div className="flex items-center">
             <DollarSign size={16} className="mr-2 text-slate-400" />
-            <span>{cert.cost}</span>
+            <span>${cert.price}</span>
           </div>
           <div className="flex items-center">
-            <BarChart size={16} className="mr-2 text-slate-400" />
-            <span>{cert.salaryImpact.split('(')[0]}</span>
+            <Tag size={16} className="mr-2 text-slate-400" />
+            <span>{cert.domain}</span>
           </div>
           <div className="flex items-center">
             <Clock size={16} className="mr-2 text-slate-400" />

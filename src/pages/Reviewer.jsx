@@ -117,7 +117,7 @@ const Reviewer = () => {
                   <ul className="text-slate-600 text-sm space-y-3">
                     <li>• Official Study Guide</li>
                     <li>• Hands-on Labs / Sandboxes</li>
-                    <li>• CertHub Practice Quizzes</li>
+                    <li>• Pathfinder Practice Quizzes</li>
                     <li>• Community Forums (Reddit/Discord)</li>
                   </ul>
                 </div>
