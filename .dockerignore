@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.gitignore
+*.log
+README.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+/home/jules/verification/
+scripts/

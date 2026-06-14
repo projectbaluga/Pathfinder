@@ -1,5 +1,5 @@
-import React from 'react';
-import { X, CheckCircle2, Briefcase, Info, ListChecks } from 'lucide-react';
+
+import { X, Briefcase, Info, ListChecks } from 'lucide-react';
 
 const CertDetails = ({ cert, onClose }) => {
   if (!cert) return null;
