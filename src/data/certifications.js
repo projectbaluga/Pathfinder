@@ -11,39 +11,262 @@ export const certifications = [
     "description": "Fundamentals for IT careers and networking technologies.",
     "reviewer": [
       {
-        "title": "Networking Core Knowledge",
+        "title": "IP Services",
         "topics": [
           {
-            "name": "OSI Model",
-            "detail": "L1: Physical to L7: Application layers."
+            "name": "What is the default subnet mask for a Class C network?",
+            "detail": "Class C networks have a /24 mask."
           },
           {
-            "name": "TCP/IP",
-            "detail": "TCP (reliable) vs UDP (fast) and IP addressing."
+            "name": "What does DHCP stand for?",
+            "detail": "DHCP automatically assigns IP addresses to devices on a network."
           },
           {
-            "name": "Routing",
-            "detail": "Static and dynamic routing (OSPF, BGP)."
+            "name": "What is the function of a 'Subnet'?",
+            "detail": "Subnetting improves organization and security."
           },
           {
-            "name": "Switching",
-            "detail": "VLANs, STP, and EtherChannel."
+            "name": "What is a 'Loopback' address?",
+            "detail": "127.0.0.1 is the standard IPv4 loopback address."
           },
           {
-            "name": "Wireless",
-            "detail": "802.11 standards and WPA3 security."
+            "name": "Which protocol uses port 53?",
+            "detail": "DNS uses both UDP and TCP on port 53."
           },
           {
-            "name": "IP Services",
-            "detail": "DHCP, DNS, and NAT operations."
+            "name": "What does 'CIDR' stand for?",
+            "detail": "CIDR replaced the older classful IP addressing system."
           },
           {
-            "name": "Security Fundamentals",
-            "detail": "ACLs, VPNs, and port security."
+            "name": "Which command checks the reachability of a DNS server?",
+            "detail": "nslookup is used to query DNS servers for information."
           },
           {
-            "name": "Automation",
-            "detail": "SDN architecture and JSON/APIs."
+            "name": "What is the range of private IP addresses for Class A?",
+            "detail": "The 10.0.0.0/8 block is reserved for private Class A networks."
+          },
+          {
+            "name": "What is the bit length of an IPv6 address?",
+            "detail": "IPv6 addresses are 128 bits long, providing a massive address space."
+          }
+        ]
+      },
+      {
+        "title": "Network Performance",
+        "topics": [
+          {
+            "name": "What is 'Jitter' in networking?",
+            "detail": "Low jitter is critical for real-time services like VoIP."
+          },
+          {
+            "name": "What is the purpose of 'QoS'?",
+            "detail": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice."
+          }
+        ]
+      },
+      {
+        "title": "Network Services",
+        "topics": [
+          {
+            "name": "Which protocol is used to retrieve emails from a server and delete them after?",
+            "detail": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server."
+          },
+          {
+            "name": "Which protocol uses port 25?",
+            "detail": "Simple Mail Transfer Protocol (SMTP) handles outgoing emails."
+          },
+          {
+            "name": "What is the default port for FTP?",
+            "detail": "File Transfer Protocol (FTP) uses port 21 for control."
+          },
+          {
+            "name": "Which protocol is used for synchronizing clocks on a network?",
+            "detail": "Network Time Protocol (NTP) ensures all devices have the correct time."
+          },
+          {
+            "name": "Which protocol uses port 3389?",
+            "detail": "Remote Desktop Protocol (RDP) allows controlling a remote computer."
+          },
+          {
+            "name": "What is the primary function of a Load Balancer?",
+            "detail": "Load balancers improve reliability and performance by spreading load."
+          },
+          {
+            "name": "Which protocol is commonly used for network management and monitoring?",
+            "detail": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices."
+          }
+        ]
+      },
+      {
+        "title": "Network Troubleshooting",
+        "topics": [
+          {
+            "name": "Which command shows the MAC address on a Windows PC?",
+            "detail": "All these commands can be used to find the physical address."
+          },
+          {
+            "name": "Which command is used to trace the path a packet takes to its destination?",
+            "detail": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination."
+          },
+          {
+            "name": "What is the purpose of the 'ping' command?",
+            "detail": "Ping uses ICMP Echo Request messages to check if a remote host is reachable."
+          }
+        ]
+      },
+      {
+        "title": "Networking Core",
+        "topics": [
+          {
+            "name": "What is 'CSMA/CD' used for?",
+            "detail": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol."
+          },
+          {
+            "name": "What is the bit length of a MAC address?",
+            "detail": "MAC addresses are 6-byte (48-bit) unique identifiers."
+          },
+          {
+            "name": "What is the function of the ARP protocol?",
+            "detail": "Address Resolution Protocol (ARP) finds the hardware address for a known IP."
+          },
+          {
+            "name": "What is 'Half-Duplex'?",
+            "detail": "Older hubs and walkie-talkies are half-duplex."
+          },
+          {
+            "name": "Which topology connects all devices to a central hub?",
+            "detail": "In a Star topology, if the central hub fails, the whole network goes down."
+          },
+          {
+            "name": "What does 'MTU' stand for?",
+            "detail": "MTU is the largest packet size a network can handle."
+          },
+          {
+            "name": "What does 'full-duplex' mean?",
+            "detail": "Full-duplex communication allows concurrent sending and receiving."
+          }
+        ]
+      },
+      {
+        "title": "OSI Model",
+        "topics": [
+          {
+            "name": "Which OSI layer is responsible for routing and IP addressing?",
+            "detail": "The Network Layer (Layer 3) handles logical addressing and path determination (routing)."
+          },
+          {
+            "name": "Which layer defines electrical and physical specifications for devices?",
+            "detail": "Layer 1 deals with cables, connectors, and signals."
+          },
+          {
+            "name": "Which layer of the OSI model handles error-free physical delivery via MAC addresses?",
+            "detail": "Layer 2 is responsible for node-to-node data transfer."
+          }
+        ]
+      },
+      {
+        "title": "Physical Infrastructure",
+        "topics": [
+          {
+            "name": "What is the maximum length of a Cat5e cable segment?",
+            "detail": "Ethernet standards for twisted pair cables usually limit segments to 100m."
+          },
+          {
+            "name": "What is 'PoE'?",
+            "detail": "PoE allows data cables to also carry electrical power to devices like IP cameras."
+          },
+          {
+            "name": "Which cable type uses a laser as a light source?",
+            "detail": "Single-mode uses lasers for long-distance transmission."
+          }
+        ]
+      },
+      {
+        "title": "Routing",
+        "topics": [
+          {
+            "name": "Which protocol is used for dynamic routing within an autonomous system?",
+            "detail": "OSPF is an Interior Gateway Protocol (IGP) used for routing within an organization."
+          },
+          {
+            "name": "What does a Gateway do?",
+            "detail": "A gateway serves as an entry/exit point for data between networks."
+          },
+          {
+            "name": "Which device connects multiple networks and makes path decisions?",
+            "detail": "Routers operate at Layer 3 and route traffic between different networks."
+          }
+        ]
+      },
+      {
+        "title": "Security Fundamentals",
+        "topics": [
+          {
+            "name": "What is the port for HTTPS?",
+            "detail": "HTTPS (Secure) uses port 443."
+          },
+          {
+            "name": "What is an 'ACL' in networking?",
+            "detail": "ACLs filter network traffic based on rules."
+          },
+          {
+            "name": "Which protocol is used for securely browsing the web?",
+            "detail": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server."
+          },
+          {
+            "name": "Which protocol is used to securely transfer files?",
+            "detail": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer."
+          },
+          {
+            "name": "Which type of VPN connects two locations directly?",
+            "detail": "Site-to-Site VPNs connect entire branch offices to headquarters."
+          },
+          {
+            "name": "What is the standard port for SSH?",
+            "detail": "Secure Shell (SSH) uses port 22 by default."
+          }
+        ]
+      },
+      {
+        "title": "Switching",
+        "topics": [
+          {
+            "name": "What is the purpose of a VLAN?",
+            "detail": "VLANs allow network administrators to group devices together even if they are on different physical switches."
+          },
+          {
+            "name": "Which command shows the status of all interfaces on a Cisco router?",
+            "detail": "This command provides a concise summary of interface status and IP addresses."
+          },
+          {
+            "name": "What does a 'Collision Domain' refer to?",
+            "detail": "Switches break up collision domains per port."
+          },
+          {
+            "name": "What does 'VLAN Tagging' (802.1Q) allow?",
+            "detail": "Tagging adds a header to indicate which VLAN a frame belongs to."
+          },
+          {
+            "name": "What is 'STP' (Spanning Tree Protocol) used for?",
+            "detail": "STP ensures there is only one active path between two network nodes."
+          }
+        ]
+      },
+      {
+        "title": "TCP/IP",
+        "topics": [
+          {
+            "name": "What is the primary difference between TCP and UDP?",
+            "detail": "TCP ensures delivery with handshakes, while UDP sends data without establishing a connection."
+          }
+        ]
+      },
+      {
+        "title": "Wireless",
+        "topics": [
+          {
+            "name": "Which wireless standard supports speeds up to 6.9 Gbps in the 5GHz band?",
+            "detail": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n."
           }
         ]
       }
@@ -60,7 +283,8 @@ export const certifications = [
         ],
         "answer": "Network Layer",
         "category": "Core Knowledge",
-        "explanation": "The Network Layer (Layer 3) handles logical addressing and path determination (routing)."
+        "explanation": "The Network Layer (Layer 3) handles logical addressing and path determination (routing).",
+        "topic": "OSI Model"
       },
       {
         "id": "ccna-q2",
@@ -73,7 +297,8 @@ export const certifications = [
         ],
         "answer": "TCP is connection-oriented; UDP is connectionless",
         "category": "Core Knowledge",
-        "explanation": "TCP ensures delivery with handshakes, while UDP sends data without establishing a connection."
+        "explanation": "TCP ensures delivery with handshakes, while UDP sends data without establishing a connection.",
+        "topic": "TCP/IP"
       },
       {
         "id": "ccna-q3",
@@ -86,7 +311,8 @@ export const certifications = [
         ],
         "answer": "OSPF",
         "category": "Core Knowledge",
-        "explanation": "OSPF is an Interior Gateway Protocol (IGP) used for routing within an organization."
+        "explanation": "OSPF is an Interior Gateway Protocol (IGP) used for routing within an organization.",
+        "topic": "Routing"
       },
       {
         "id": "ccna-q4",
@@ -99,7 +325,8 @@ export const certifications = [
         ],
         "answer": "Segment networks logically",
         "category": "Core Knowledge",
-        "explanation": "VLANs allow network administrators to group devices together even if they are on different physical switches."
+        "explanation": "VLANs allow network administrators to group devices together even if they are on different physical switches.",
+        "topic": "Switching"
       },
       {
         "id": "ccna-q5",
@@ -112,7 +339,8 @@ export const certifications = [
         ],
         "answer": "show ip interface brief",
         "category": "Core Knowledge",
-        "explanation": "This command provides a concise summary of interface status and IP addresses."
+        "explanation": "This command provides a concise summary of interface status and IP addresses.",
+        "topic": "Switching"
       },
       {
         "id": "ccna-q6",
@@ -125,7 +353,8 @@ export const certifications = [
         ],
         "answer": "Detecting collisions in Ethernet",
         "category": "Domain Review",
-        "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol."
+        "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccna-q7",
@@ -138,7 +367,8 @@ export const certifications = [
         ],
         "answer": "443",
         "category": "Domain Review",
-        "explanation": "HTTPS (Secure) uses port 443."
+        "explanation": "HTTPS (Secure) uses port 443.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccna-q8",
@@ -151,7 +381,8 @@ export const certifications = [
         ],
         "answer": "Connects different networks",
         "category": "Domain Review",
-        "explanation": "A gateway serves as an entry/exit point for data between networks."
+        "explanation": "A gateway serves as an entry/exit point for data between networks.",
+        "topic": "Routing"
       },
       {
         "id": "ccna-q9",
@@ -164,7 +395,8 @@ export const certifications = [
         ],
         "answer": "100 meters",
         "category": "Domain Review",
-        "explanation": "Ethernet standards for twisted pair cables usually limit segments to 100m."
+        "explanation": "Ethernet standards for twisted pair cables usually limit segments to 100m.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "ccna-q10",
@@ -177,7 +409,8 @@ export const certifications = [
         ],
         "answer": "255.255.255.0",
         "category": "Domain Review",
-        "explanation": "Class C networks have a /24 mask."
+        "explanation": "Class C networks have a /24 mask.",
+        "topic": "IP Services"
       },
       {
         "id": "ccna-q11",
@@ -190,7 +423,8 @@ export const certifications = [
         ],
         "answer": "Dynamic Host Configuration Protocol",
         "category": "Domain Review",
-        "explanation": "DHCP automatically assigns IP addresses to devices on a network."
+        "explanation": "DHCP automatically assigns IP addresses to devices on a network.",
+        "topic": "IP Services"
       },
       {
         "id": "ccna-q12",
@@ -203,7 +437,8 @@ export const certifications = [
         ],
         "answer": "POP3",
         "category": "Domain Review",
-        "explanation": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server."
+        "explanation": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server.",
+        "topic": "Network Services"
       },
       {
         "id": "ccna-q13",
@@ -216,7 +451,8 @@ export const certifications = [
         ],
         "answer": "Divide a large network into smaller ones",
         "category": "Domain Review",
-        "explanation": "Subnetting improves organization and security."
+        "explanation": "Subnetting improves organization and security.",
+        "topic": "IP Services"
       },
       {
         "id": "ccna-q14",
@@ -229,7 +465,8 @@ export const certifications = [
         ],
         "answer": "48 bits",
         "category": "Domain Review",
-        "explanation": "MAC addresses are 6-byte (48-bit) unique identifiers."
+        "explanation": "MAC addresses are 6-byte (48-bit) unique identifiers.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccna-q15",
@@ -242,7 +479,8 @@ export const certifications = [
         ],
         "answer": "Physical Layer",
         "category": "Domain Review",
-        "explanation": "Layer 1 deals with cables, connectors, and signals."
+        "explanation": "Layer 1 deals with cables, connectors, and signals.",
+        "topic": "OSI Model"
       },
       {
         "id": "ccna-q16",
@@ -255,7 +493,8 @@ export const certifications = [
         ],
         "answer": "Access Control List",
         "category": "Domain Review",
-        "explanation": "ACLs filter network traffic based on rules."
+        "explanation": "ACLs filter network traffic based on rules.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccna-q17",
@@ -268,7 +507,8 @@ export const certifications = [
         ],
         "answer": "all of the above",
         "category": "Domain Review",
-        "explanation": "All these commands can be used to find the physical address."
+        "explanation": "All these commands can be used to find the physical address.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "ccna-q18",
@@ -281,7 +521,8 @@ export const certifications = [
         ],
         "answer": "tracert",
         "category": "Domain Review",
-        "explanation": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination."
+        "explanation": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "ccna-q19",
@@ -294,7 +535,8 @@ export const certifications = [
         ],
         "answer": "An address used to test the local system",
         "category": "Domain Review",
-        "explanation": "127.0.0.1 is the standard IPv4 loopback address."
+        "explanation": "127.0.0.1 is the standard IPv4 loopback address.",
+        "topic": "IP Services"
       },
       {
         "id": "ccna-q20",
@@ -307,7 +549,8 @@ export const certifications = [
         ],
         "answer": "Variation in packet delay",
         "category": "Domain Review",
-        "explanation": "Low jitter is critical for real-time services like VoIP."
+        "explanation": "Low jitter is critical for real-time services like VoIP.",
+        "topic": "Network Performance"
       },
       {
         "id": "ccna-q21",
@@ -320,7 +563,8 @@ export const certifications = [
         ],
         "answer": "Test network connectivity",
         "category": "Domain Review",
-        "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable."
+        "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "ccna-q22",
@@ -333,7 +577,8 @@ export const certifications = [
         ],
         "answer": "HTTPS",
         "category": "Domain Review",
-        "explanation": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server."
+        "explanation": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccna-q23",
@@ -346,7 +591,8 @@ export const certifications = [
         ],
         "answer": "Resolve IP to MAC address",
         "category": "Domain Review",
-        "explanation": "Address Resolution Protocol (ARP) finds the hardware address for a known IP."
+        "explanation": "Address Resolution Protocol (ARP) finds the hardware address for a known IP.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccna-q24",
@@ -359,7 +605,8 @@ export const certifications = [
         ],
         "answer": "Router",
         "category": "Domain Review",
-        "explanation": "Routers operate at Layer 3 and route traffic between different networks."
+        "explanation": "Routers operate at Layer 3 and route traffic between different networks.",
+        "topic": "Routing"
       },
       {
         "id": "ccna-q25",
@@ -372,7 +619,8 @@ export const certifications = [
         ],
         "answer": "802.11ac",
         "category": "Domain Review",
-        "explanation": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n."
+        "explanation": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n.",
+        "topic": "Wireless"
       },
       {
         "id": "ccna-q26",
@@ -385,7 +633,8 @@ export const certifications = [
         ],
         "answer": "SMTP",
         "category": "Domain Review",
-        "explanation": "Simple Mail Transfer Protocol (SMTP) handles outgoing emails."
+        "explanation": "Simple Mail Transfer Protocol (SMTP) handles outgoing emails.",
+        "topic": "Network Services"
       },
       {
         "id": "ccna-q27",
@@ -398,7 +647,8 @@ export const certifications = [
         ],
         "answer": "Prioritize important traffic",
         "category": "Domain Review",
-        "explanation": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice."
+        "explanation": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice.",
+        "topic": "Network Performance"
       },
       {
         "id": "ccna-q28",
@@ -411,7 +661,8 @@ export const certifications = [
         ],
         "answer": "DNS",
         "category": "Domain Review",
-        "explanation": "DNS uses both UDP and TCP on port 53."
+        "explanation": "DNS uses both UDP and TCP on port 53.",
+        "topic": "IP Services"
       },
       {
         "id": "ccna-q29",
@@ -424,7 +675,8 @@ export const certifications = [
         ],
         "answer": "Classless Inter-Domain Routing",
         "category": "Domain Review",
-        "explanation": "CIDR replaced the older classful IP addressing system."
+        "explanation": "CIDR replaced the older classful IP addressing system.",
+        "topic": "IP Services"
       },
       {
         "id": "ccna-q30",
@@ -437,7 +689,8 @@ export const certifications = [
         ],
         "answer": "21",
         "category": "Domain Review",
-        "explanation": "File Transfer Protocol (FTP) uses port 21 for control."
+        "explanation": "File Transfer Protocol (FTP) uses port 21 for control.",
+        "topic": "Network Services"
       },
       {
         "id": "ccna-q31",
@@ -450,7 +703,8 @@ export const certifications = [
         ],
         "answer": "nslookup",
         "category": "Domain Review",
-        "explanation": "nslookup is used to query DNS servers for information."
+        "explanation": "nslookup is used to query DNS servers for information.",
+        "topic": "IP Services"
       },
       {
         "id": "ccna-q32",
@@ -463,7 +717,8 @@ export const certifications = [
         ],
         "answer": "SFTP",
         "category": "Domain Review",
-        "explanation": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer."
+        "explanation": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccna-q33",
@@ -476,7 +731,8 @@ export const certifications = [
         ],
         "answer": "A group of devices where data packets can collide",
         "category": "Domain Review",
-        "explanation": "Switches break up collision domains per port."
+        "explanation": "Switches break up collision domains per port.",
+        "topic": "Switching"
       },
       {
         "id": "ccna-q34",
@@ -489,7 +745,8 @@ export const certifications = [
         ],
         "answer": "NTP",
         "category": "Domain Review",
-        "explanation": "Network Time Protocol (NTP) ensures all devices have the correct time."
+        "explanation": "Network Time Protocol (NTP) ensures all devices have the correct time.",
+        "topic": "Network Services"
       },
       {
         "id": "ccna-q35",
@@ -502,7 +759,8 @@ export const certifications = [
         ],
         "answer": "Power over Ethernet",
         "category": "Domain Review",
-        "explanation": "PoE allows data cables to also carry electrical power to devices like IP cameras."
+        "explanation": "PoE allows data cables to also carry electrical power to devices like IP cameras.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "ccna-q36",
@@ -515,7 +773,8 @@ export const certifications = [
         ],
         "answer": "Devices can send or receive but not both at once",
         "category": "Domain Review",
-        "explanation": "Older hubs and walkie-talkies are half-duplex."
+        "explanation": "Older hubs and walkie-talkies are half-duplex.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccna-q37",
@@ -528,7 +787,8 @@ export const certifications = [
         ],
         "answer": "Single-mode Fiber",
         "category": "Domain Review",
-        "explanation": "Single-mode uses lasers for long-distance transmission."
+        "explanation": "Single-mode uses lasers for long-distance transmission.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "ccna-q38",
@@ -541,7 +801,8 @@ export const certifications = [
         ],
         "answer": "RDP",
         "category": "Domain Review",
-        "explanation": "Remote Desktop Protocol (RDP) allows controlling a remote computer."
+        "explanation": "Remote Desktop Protocol (RDP) allows controlling a remote computer.",
+        "topic": "Network Services"
       },
       {
         "id": "ccna-q39",
@@ -554,7 +815,8 @@ export const certifications = [
         ],
         "answer": "Distribute traffic across multiple servers",
         "category": "Domain Review",
-        "explanation": "Load balancers improve reliability and performance by spreading load."
+        "explanation": "Load balancers improve reliability and performance by spreading load.",
+        "topic": "Network Services"
       },
       {
         "id": "ccna-q40",
@@ -567,7 +829,8 @@ export const certifications = [
         ],
         "answer": "Star",
         "category": "Domain Review",
-        "explanation": "In a Star topology, if the central hub fails, the whole network goes down."
+        "explanation": "In a Star topology, if the central hub fails, the whole network goes down.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccna-q41",
@@ -580,7 +843,8 @@ export const certifications = [
         ],
         "answer": "Identifying traffic for different VLANs on a trunk",
         "category": "Domain Review",
-        "explanation": "Tagging adds a header to indicate which VLAN a frame belongs to."
+        "explanation": "Tagging adds a header to indicate which VLAN a frame belongs to.",
+        "topic": "Switching"
       },
       {
         "id": "ccna-q42",
@@ -593,7 +857,8 @@ export const certifications = [
         ],
         "answer": "SNMP",
         "category": "Domain Review",
-        "explanation": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices."
+        "explanation": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices.",
+        "topic": "Network Services"
       },
       {
         "id": "ccna-q43",
@@ -606,7 +871,8 @@ export const certifications = [
         ],
         "answer": "10.0.0.0 - 10.255.255.255",
         "category": "Domain Review",
-        "explanation": "The 10.0.0.0/8 block is reserved for private Class A networks."
+        "explanation": "The 10.0.0.0/8 block is reserved for private Class A networks.",
+        "topic": "IP Services"
       },
       {
         "id": "ccna-q44",
@@ -619,7 +885,8 @@ export const certifications = [
         ],
         "answer": "Data Link Layer",
         "category": "Domain Review",
-        "explanation": "Layer 2 is responsible for node-to-node data transfer."
+        "explanation": "Layer 2 is responsible for node-to-node data transfer.",
+        "topic": "OSI Model"
       },
       {
         "id": "ccna-q45",
@@ -632,7 +899,8 @@ export const certifications = [
         ],
         "answer": "Site-to-Site",
         "category": "Domain Review",
-        "explanation": "Site-to-Site VPNs connect entire branch offices to headquarters."
+        "explanation": "Site-to-Site VPNs connect entire branch offices to headquarters.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccna-q46",
@@ -645,7 +913,8 @@ export const certifications = [
         ],
         "answer": "Prevent network loops in switches",
         "category": "Domain Review",
-        "explanation": "STP ensures there is only one active path between two network nodes."
+        "explanation": "STP ensures there is only one active path between two network nodes.",
+        "topic": "Switching"
       },
       {
         "id": "ccna-q47",
@@ -658,7 +927,8 @@ export const certifications = [
         ],
         "answer": "Maximum Transmission Unit",
         "category": "Domain Review",
-        "explanation": "MTU is the largest packet size a network can handle."
+        "explanation": "MTU is the largest packet size a network can handle.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccna-q48",
@@ -671,7 +941,8 @@ export const certifications = [
         ],
         "answer": "22",
         "category": "Domain Review",
-        "explanation": "Secure Shell (SSH) uses port 22 by default."
+        "explanation": "Secure Shell (SSH) uses port 22 by default.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccna-q49",
@@ -684,7 +955,8 @@ export const certifications = [
         ],
         "answer": "Data can flow both ways simultaneously",
         "category": "Domain Review",
-        "explanation": "Full-duplex communication allows concurrent sending and receiving."
+        "explanation": "Full-duplex communication allows concurrent sending and receiving.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccna-q50",
@@ -697,7 +969,8 @@ export const certifications = [
         ],
         "answer": "128 bits",
         "category": "Domain Review",
-        "explanation": "IPv6 addresses are 128 bits long, providing a massive address space."
+        "explanation": "IPv6 addresses are 128 bits long, providing a massive address space.",
+        "topic": "IP Services"
       }
     ]
   },
@@ -713,27 +986,232 @@ export const certifications = [
     "description": "Baseline skills for core security functions and IT security career.",
     "reviewer": [
       {
-        "title": "Security Core Knowledge",
+        "title": "Architecture",
         "topics": [
           {
-            "name": "Attacks & Threats",
-            "detail": "Phishing, malware, and social engineering."
+            "name": "What is a DMZ used for in network security?",
+            "detail": "A DeMilitarized Zone (DMZ) isolates public services from the private internal network."
           },
           {
-            "name": "Architecture",
-            "detail": "Secure network design and cloud security."
+            "name": "What is 'Access Control'?",
+            "detail": "It involves identification, authentication, and authorization."
           },
           {
-            "name": "Implementation",
-            "detail": "Identity management and cryptography."
+            "name": "What is an 'Air Gap'?",
+            "detail": "Air-gapping is used for extremely high-security systems."
           },
           {
-            "name": "Operations",
-            "detail": "Incident response and digital forensics."
+            "name": "Which protocol provides a secure shell for remote access?",
+            "detail": "SSH is the secure alternative to the unencrypted Telnet."
           },
           {
-            "name": "Governance",
-            "detail": "Risk management and compliance standards."
+            "name": "What is 'Defense in Depth'?",
+            "detail": "If one layer fails, others are in place to stop the threat."
+          },
+          {
+            "name": "What is 'Mobile Device Management' (MDM)?",
+            "detail": "MDM allows enforcing security policies on employee phones."
+          },
+          {
+            "name": "What does 'WPA3' improve over WPA2?",
+            "detail": "WPA3 is the latest security standard for wireless networks."
+          },
+          {
+            "name": "What does a Firewall do?",
+            "detail": "Firewalls control incoming and outgoing network traffic based on an organization's security policy."
+          },
+          {
+            "name": "What is 'Data Loss Prevention' (DLP)?",
+            "detail": "DLP monitors data at rest, in use, and in transit."
+          }
+        ]
+      },
+      {
+        "title": "Attacks & Threats",
+        "topics": [
+          {
+            "name": "Which type of attack uses deceptive emails to steal credentials?",
+            "detail": "Phishing is a social engineering attack that tricks users into revealing sensitive information."
+          },
+          {
+            "name": "What is 'Spear Phishing'?",
+            "detail": "Spear phishing is highly customized and more effective than general phishing."
+          },
+          {
+            "name": "What is the difference between a 'Virus' and a 'Worm'?",
+            "detail": "Worms can spread across a network without human interaction."
+          },
+          {
+            "name": "What is 'Man-in-the-Middle' (MITM)?",
+            "detail": "The attacker can read or even modify the data being sent."
+          },
+          {
+            "name": "What is 'Pharmimg'?",
+            "detail": "Users think they are on a real site but are actually on a malicious one."
+          },
+          {
+            "name": "What is a 'Buffer Overflow'?",
+            "detail": "It can lead to system crashes or arbitrary code execution."
+          },
+          {
+            "name": "What is 'SQL Injection'?",
+            "detail": "SQLi can allow attackers to read or modify sensitive database data."
+          },
+          {
+            "name": "What is 'Whaling'?",
+            "detail": "Whaling targets 'big fish' like CEOs and CFOs."
+          },
+          {
+            "name": "What is a 'Botnet'?",
+            "detail": "Botnets are used for large-scale attacks like DDoS."
+          },
+          {
+            "name": "What is 'Shoulder Surfing'?",
+            "detail": "It's a low-tech social engineering technique."
+          },
+          {
+            "name": "What is Ransomware?",
+            "detail": "Ransomware locks users out of their data until a ransom is paid."
+          },
+          {
+            "name": "What is a 'Logic Bomb'?",
+            "detail": "Logic bombs can be planted by malicious insiders."
+          },
+          {
+            "name": "What is 'War Driving'?",
+            "detail": "Attackers use this to find vulnerable wireless networks to exploit."
+          },
+          {
+            "name": "What is a 'Backdoor'?",
+            "detail": "Backdoors can be used for maintenance or by attackers for persistence."
+          },
+          {
+            "name": "Which of these is a social engineering attack?",
+            "detail": "Tailgating involves physically following an authorized person into a secure area."
+          },
+          {
+            "name": "What is a 'Zero-Day' vulnerability?",
+            "detail": "Zero-day threats have no available patch at the time of discovery."
+          },
+          {
+            "name": "What is 'Eavesdropping' in network security?",
+            "detail": "This is a passive attack against confidentiality."
+          },
+          {
+            "name": "What is a 'Trojan Horse'?",
+            "detail": "Trojans do not replicate themselves like viruses or worms."
+          }
+        ]
+      },
+      {
+        "title": "Governance",
+        "topics": [
+          {
+            "name": "Which framework provides a standard for managing IT risks in the US?",
+            "detail": "The NIST Risk Management Framework is widely used for securing government and private systems."
+          },
+          {
+            "name": "What is 'BYOD'?",
+            "detail": "A policy allowing employees to use personal devices for work."
+          },
+          {
+            "name": "What is 'Authorization'?",
+            "detail": "It defines the permissions and rights of a user."
+          }
+        ]
+      },
+      {
+        "title": "Implementation",
+        "topics": [
+          {
+            "name": "What does the principle of Least Privilege state?",
+            "detail": "Least Privilege minimizes the potential damage from a compromised account."
+          },
+          {
+            "name": "Which encryption type uses the same key for both encryption and decryption?",
+            "detail": "Symmetric encryption (like AES) uses a single shared secret key."
+          },
+          {
+            "name": "What is a 'Private Key'?",
+            "detail": "The private key is used for decryption or creating digital signatures."
+          },
+          {
+            "name": "Which of these is a form of Symmetric encryption?",
+            "detail": "Advanced Encryption Standard (AES) is the most common symmetric cipher."
+          },
+          {
+            "name": "What is a 'Public Key'?",
+            "detail": "In asymmetric encryption, the public key is used for encryption."
+          },
+          {
+            "name": "What is the purpose of Hashing?",
+            "detail": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."
+          },
+          {
+            "name": "What is 'Encryption'?",
+            "detail": "Encryption protects data from being read by unauthorized parties."
+          },
+          {
+            "name": "Which of these is used for 'Non-repudiation'?",
+            "detail": "Non-repudiation ensures a sender cannot deny having sent a message."
+          },
+          {
+            "name": "What is 'Decryption'?",
+            "detail": "The reverse of encryption, usually requiring a key."
+          },
+          {
+            "name": "What is Multi-Factor Authentication (MFA)?",
+            "detail": "MFA combines something you know, something you have, and/or something you are."
+          },
+          {
+            "name": "What is 'Biometrics'?",
+            "detail": "Examples include fingerprints, iris scans, and facial recognition."
+          },
+          {
+            "name": "What is 'Two-Factor Authentication' (2FA)?",
+            "detail": "It adds an extra layer of security beyond just a password."
+          },
+          {
+            "name": "What is 'Steganography'?",
+            "detail": "Data is hidden in plain sight, making it hard to detect."
+          }
+        ]
+      },
+      {
+        "title": "Operations",
+        "topics": [
+          {
+            "name": "What is an 'Audit Trail'?",
+            "detail": "Audit trails are crucial for incident investigation and compliance."
+          },
+          {
+            "name": "What is the purpose of an 'IDS'?",
+            "detail": "Intrusion Detection Systems monitor and alert for suspicious activity."
+          },
+          {
+            "name": "What is a 'Penetration Test'?",
+            "detail": "Pen-tests provide a deep assessment of an organization's security posture."
+          },
+          {
+            "name": "What is the purpose of 'Sandboxing'?",
+            "detail": "Sandboxing prevents malware from affecting the host system."
+          }
+        ]
+      },
+      {
+        "title": "Security Core",
+        "topics": [
+          {
+            "name": "What is 'Authentication'?",
+            "detail": "Usually involves a password, token, or biometric trait."
+          },
+          {
+            "name": "What is 'Identification' in security?",
+            "detail": "The first step in the access control process."
+          },
+          {
+            "name": "What does 'Integrity' mean in security?",
+            "detail": "Integrity ensures data is accurate and trustworthy."
           }
         ]
       }
@@ -750,7 +1228,8 @@ export const certifications = [
         ],
         "answer": "Phishing",
         "category": "Core Knowledge",
-        "explanation": "Phishing is a social engineering attack that tricks users into revealing sensitive information."
+        "explanation": "Phishing is a social engineering attack that tricks users into revealing sensitive information.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q2",
@@ -763,7 +1242,8 @@ export const certifications = [
         ],
         "answer": "Users should only have minimum access required",
         "category": "Core Knowledge",
-        "explanation": "Least Privilege minimizes the potential damage from a compromised account."
+        "explanation": "Least Privilege minimizes the potential damage from a compromised account.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q3",
@@ -776,7 +1256,8 @@ export const certifications = [
         ],
         "answer": "Symmetric",
         "category": "Core Knowledge",
-        "explanation": "Symmetric encryption (like AES) uses a single shared secret key."
+        "explanation": "Symmetric encryption (like AES) uses a single shared secret key.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q4",
@@ -789,7 +1270,8 @@ export const certifications = [
         ],
         "answer": "Host public-facing services",
         "category": "Core Knowledge",
-        "explanation": "A DeMilitarized Zone (DMZ) isolates public services from the private internal network."
+        "explanation": "A DeMilitarized Zone (DMZ) isolates public services from the private internal network.",
+        "topic": "Architecture"
       },
       {
         "id": "sec-plus-q5",
@@ -802,7 +1284,8 @@ export const certifications = [
         ],
         "answer": "NIST RMF",
         "category": "Core Knowledge",
-        "explanation": "The NIST Risk Management Framework is widely used for securing government and private systems."
+        "explanation": "The NIST Risk Management Framework is widely used for securing government and private systems.",
+        "topic": "Governance"
       },
       {
         "id": "sec-plus-q6",
@@ -815,7 +1298,8 @@ export const certifications = [
         ],
         "answer": "Phishing targeted at a specific person",
         "category": "Domain Review",
-        "explanation": "Spear phishing is highly customized and more effective than general phishing."
+        "explanation": "Spear phishing is highly customized and more effective than general phishing.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q7",
@@ -828,7 +1312,8 @@ export const certifications = [
         ],
         "answer": "Worms replicate automatically; viruses need host files",
         "category": "Domain Review",
-        "explanation": "Worms can spread across a network without human interaction."
+        "explanation": "Worms can spread across a network without human interaction.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q8",
@@ -841,7 +1326,8 @@ export const certifications = [
         ],
         "answer": "Intercepting communication between two parties",
         "category": "Domain Review",
-        "explanation": "The attacker can read or even modify the data being sent."
+        "explanation": "The attacker can read or even modify the data being sent.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q9",
@@ -854,7 +1340,8 @@ export const certifications = [
         ],
         "answer": "A secret key known only to the owner",
         "category": "Domain Review",
-        "explanation": "The private key is used for decryption or creating digital signatures."
+        "explanation": "The private key is used for decryption or creating digital signatures.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q10",
@@ -867,7 +1354,8 @@ export const certifications = [
         ],
         "answer": "AES",
         "category": "Domain Review",
-        "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher."
+        "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q11",
@@ -880,7 +1368,8 @@ export const certifications = [
         ],
         "answer": "Redirecting users to a fake website by poisoning DNS",
         "category": "Domain Review",
-        "explanation": "Users think they are on a real site but are actually on a malicious one."
+        "explanation": "Users think they are on a real site but are actually on a malicious one.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q12",
@@ -893,7 +1382,8 @@ export const certifications = [
         ],
         "answer": "Overwriting memory to execute malicious code",
         "category": "Domain Review",
-        "explanation": "It can lead to system crashes or arbitrary code execution."
+        "explanation": "It can lead to system crashes or arbitrary code execution.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q13",
@@ -906,7 +1396,8 @@ export const certifications = [
         ],
         "answer": "Injecting malicious SQL queries into an input field",
         "category": "Domain Review",
-        "explanation": "SQLi can allow attackers to read or modify sensitive database data."
+        "explanation": "SQLi can allow attackers to read or modify sensitive database data.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q14",
@@ -919,7 +1410,8 @@ export const certifications = [
         ],
         "answer": "A chronological record of system activities",
         "category": "Domain Review",
-        "explanation": "Audit trails are crucial for incident investigation and compliance."
+        "explanation": "Audit trails are crucial for incident investigation and compliance.",
+        "topic": "Operations"
       },
       {
         "id": "sec-plus-q15",
@@ -932,7 +1424,8 @@ export const certifications = [
         ],
         "answer": "Restricting access to resources to authorized users",
         "category": "Domain Review",
-        "explanation": "It involves identification, authentication, and authorization."
+        "explanation": "It involves identification, authentication, and authorization.",
+        "topic": "Architecture"
       },
       {
         "id": "sec-plus-q16",
@@ -945,7 +1438,8 @@ export const certifications = [
         ],
         "answer": "A phishing attack targeted at high-level executives",
         "category": "Domain Review",
-        "explanation": "Whaling targets 'big fish' like CEOs and CFOs."
+        "explanation": "Whaling targets 'big fish' like CEOs and CFOs.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q17",
@@ -958,7 +1452,8 @@ export const certifications = [
         ],
         "answer": "A network of infected computers",
         "category": "Domain Review",
-        "explanation": "Botnets are used for large-scale attacks like DDoS."
+        "explanation": "Botnets are used for large-scale attacks like DDoS.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q18",
@@ -971,7 +1466,8 @@ export const certifications = [
         ],
         "answer": "A key that can be shared with anyone",
         "category": "Domain Review",
-        "explanation": "In asymmetric encryption, the public key is used for encryption."
+        "explanation": "In asymmetric encryption, the public key is used for encryption.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q19",
@@ -984,7 +1480,8 @@ export const certifications = [
         ],
         "answer": "Ensure data integrity",
         "category": "Domain Review",
-        "explanation": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."
+        "explanation": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q20",
@@ -997,7 +1494,8 @@ export const certifications = [
         ],
         "answer": "Watching someone enter their password",
         "category": "Domain Review",
-        "explanation": "It's a low-tech social engineering technique."
+        "explanation": "It's a low-tech social engineering technique.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q21",
@@ -1010,7 +1508,8 @@ export const certifications = [
         ],
         "answer": "Malware that encrypts data and demands payment",
         "category": "Domain Review",
-        "explanation": "Ransomware locks users out of their data until a ransom is paid."
+        "explanation": "Ransomware locks users out of their data until a ransom is paid.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q22",
@@ -1023,7 +1522,8 @@ export const certifications = [
         ],
         "answer": "Physically isolating a computer from any network",
         "category": "Domain Review",
-        "explanation": "Air-gapping is used for extremely high-security systems."
+        "explanation": "Air-gapping is used for extremely high-security systems.",
+        "topic": "Architecture"
       },
       {
         "id": "sec-plus-q23",
@@ -1036,7 +1536,8 @@ export const certifications = [
         ],
         "answer": "Verifying that you are who you say you are",
         "category": "Domain Review",
-        "explanation": "Usually involves a password, token, or biometric trait."
+        "explanation": "Usually involves a password, token, or biometric trait.",
+        "topic": "Security Core"
       },
       {
         "id": "sec-plus-q24",
@@ -1049,7 +1550,8 @@ export const certifications = [
         ],
         "answer": "Detect unauthorized access",
         "category": "Domain Review",
-        "explanation": "Intrusion Detection Systems monitor and alert for suspicious activity."
+        "explanation": "Intrusion Detection Systems monitor and alert for suspicious activity.",
+        "topic": "Operations"
       },
       {
         "id": "sec-plus-q25",
@@ -1062,7 +1564,8 @@ export const certifications = [
         ],
         "answer": "Converting plaintext into ciphertext",
         "category": "Domain Review",
-        "explanation": "Encryption protects data from being read by unauthorized parties."
+        "explanation": "Encryption protects data from being read by unauthorized parties.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q26",
@@ -1075,7 +1578,8 @@ export const certifications = [
         ],
         "answer": "Digital Signatures",
         "category": "Domain Review",
-        "explanation": "Non-repudiation ensures a sender cannot deny having sent a message."
+        "explanation": "Non-repudiation ensures a sender cannot deny having sent a message.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q27",
@@ -1088,7 +1592,8 @@ export const certifications = [
         ],
         "answer": "Converting ciphertext back into plaintext",
         "category": "Domain Review",
-        "explanation": "The reverse of encryption, usually requiring a key."
+        "explanation": "The reverse of encryption, usually requiring a key.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q28",
@@ -1101,7 +1606,8 @@ export const certifications = [
         ],
         "answer": "Using two or more different factors to verify identity",
         "category": "Domain Review",
-        "explanation": "MFA combines something you know, something you have, and/or something you are."
+        "explanation": "MFA combines something you know, something you have, and/or something you are.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q29",
@@ -1114,7 +1620,8 @@ export const certifications = [
         ],
         "answer": "SSH",
         "category": "Domain Review",
-        "explanation": "SSH is the secure alternative to the unencrypted Telnet."
+        "explanation": "SSH is the secure alternative to the unencrypted Telnet.",
+        "topic": "Architecture"
       },
       {
         "id": "sec-plus-q30",
@@ -1127,7 +1634,8 @@ export const certifications = [
         ],
         "answer": "Malware that triggers on a specific event or time",
         "category": "Domain Review",
-        "explanation": "Logic bombs can be planted by malicious insiders."
+        "explanation": "Logic bombs can be planted by malicious insiders.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q31",
@@ -1140,7 +1648,8 @@ export const certifications = [
         ],
         "answer": "Using physical traits for authentication",
         "category": "Domain Review",
-        "explanation": "Examples include fingerprints, iris scans, and facial recognition."
+        "explanation": "Examples include fingerprints, iris scans, and facial recognition.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q32",
@@ -1153,7 +1662,8 @@ export const certifications = [
         ],
         "answer": "Using two different types of credentials",
         "category": "Domain Review",
-        "explanation": "It adds an extra layer of security beyond just a password."
+        "explanation": "It adds an extra layer of security beyond just a password.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q33",
@@ -1166,7 +1676,8 @@ export const certifications = [
         ],
         "answer": "An authorized simulated attack to find flaws",
         "category": "Domain Review",
-        "explanation": "Pen-tests provide a deep assessment of an organization's security posture."
+        "explanation": "Pen-tests provide a deep assessment of an organization's security posture.",
+        "topic": "Operations"
       },
       {
         "id": "sec-plus-q34",
@@ -1179,7 +1690,8 @@ export const certifications = [
         ],
         "answer": "Using multiple layers of security",
         "category": "Domain Review",
-        "explanation": "If one layer fails, others are in place to stop the threat."
+        "explanation": "If one layer fails, others are in place to stop the threat.",
+        "topic": "Architecture"
       },
       {
         "id": "sec-plus-q35",
@@ -1192,7 +1704,8 @@ export const certifications = [
         ],
         "answer": "Software used to manage and secure mobile devices",
         "category": "Domain Review",
-        "explanation": "MDM allows enforcing security policies on employee phones."
+        "explanation": "MDM allows enforcing security policies on employee phones.",
+        "topic": "Architecture"
       },
       {
         "id": "sec-plus-q36",
@@ -1205,7 +1718,8 @@ export const certifications = [
         ],
         "answer": "Better encryption and protection against brute force",
         "category": "Domain Review",
-        "explanation": "WPA3 is the latest security standard for wireless networks."
+        "explanation": "WPA3 is the latest security standard for wireless networks.",
+        "topic": "Architecture"
       },
       {
         "id": "sec-plus-q37",
@@ -1218,7 +1732,8 @@ export const certifications = [
         ],
         "answer": "Searching for Wi-Fi networks from a vehicle",
         "category": "Domain Review",
-        "explanation": "Attackers use this to find vulnerable wireless networks to exploit."
+        "explanation": "Attackers use this to find vulnerable wireless networks to exploit.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q38",
@@ -1231,7 +1746,8 @@ export const certifications = [
         ],
         "answer": "Filter traffic based on security rules",
         "category": "Domain Review",
-        "explanation": "Firewalls control incoming and outgoing network traffic based on an organization's security policy."
+        "explanation": "Firewalls control incoming and outgoing network traffic based on an organization's security policy.",
+        "topic": "Architecture"
       },
       {
         "id": "sec-plus-q39",
@@ -1244,7 +1760,8 @@ export const certifications = [
         ],
         "answer": "A hidden way to bypass security",
         "category": "Domain Review",
-        "explanation": "Backdoors can be used for maintenance or by attackers for persistence."
+        "explanation": "Backdoors can be used for maintenance or by attackers for persistence.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q40",
@@ -1257,7 +1774,8 @@ export const certifications = [
         ],
         "answer": "Tailgating",
         "category": "Domain Review",
-        "explanation": "Tailgating involves physically following an authorized person into a secure area."
+        "explanation": "Tailgating involves physically following an authorized person into a secure area.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q41",
@@ -1270,7 +1788,8 @@ export const certifications = [
         ],
         "answer": "Hiding data within other data (like an image)",
         "category": "Domain Review",
-        "explanation": "Data is hidden in plain sight, making it hard to detect."
+        "explanation": "Data is hidden in plain sight, making it hard to detect.",
+        "topic": "Implementation"
       },
       {
         "id": "sec-plus-q42",
@@ -1283,7 +1802,8 @@ export const certifications = [
         ],
         "answer": "A flaw unknown to the vendor",
         "category": "Domain Review",
-        "explanation": "Zero-day threats have no available patch at the time of discovery."
+        "explanation": "Zero-day threats have no available patch at the time of discovery.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q43",
@@ -1296,7 +1816,8 @@ export const certifications = [
         ],
         "answer": "Bring Your Own Device",
         "category": "Domain Review",
-        "explanation": "A policy allowing employees to use personal devices for work."
+        "explanation": "A policy allowing employees to use personal devices for work.",
+        "topic": "Governance"
       },
       {
         "id": "sec-plus-q44",
@@ -1309,7 +1830,8 @@ export const certifications = [
         ],
         "answer": "Running suspicious programs in an isolated area",
         "category": "Domain Review",
-        "explanation": "Sandboxing prevents malware from affecting the host system."
+        "explanation": "Sandboxing prevents malware from affecting the host system.",
+        "topic": "Operations"
       },
       {
         "id": "sec-plus-q45",
@@ -1322,7 +1844,8 @@ export const certifications = [
         ],
         "answer": "Stating who you are (e.g., username)",
         "category": "Domain Review",
-        "explanation": "The first step in the access control process."
+        "explanation": "The first step in the access control process.",
+        "topic": "Security Core"
       },
       {
         "id": "sec-plus-q46",
@@ -1335,7 +1858,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data has not been tampered with",
         "category": "Domain Review",
-        "explanation": "Integrity ensures data is accurate and trustworthy."
+        "explanation": "Integrity ensures data is accurate and trustworthy.",
+        "topic": "Security Core"
       },
       {
         "id": "sec-plus-q47",
@@ -1348,7 +1872,8 @@ export const certifications = [
         ],
         "answer": "Determining what an authenticated user can do",
         "category": "Domain Review",
-        "explanation": "It defines the permissions and rights of a user."
+        "explanation": "It defines the permissions and rights of a user.",
+        "topic": "Governance"
       },
       {
         "id": "sec-plus-q48",
@@ -1361,7 +1886,8 @@ export const certifications = [
         ],
         "answer": "Unauthorized listening to private communication",
         "category": "Domain Review",
-        "explanation": "This is a passive attack against confidentiality."
+        "explanation": "This is a passive attack against confidentiality.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "sec-plus-q49",
@@ -1374,7 +1900,8 @@ export const certifications = [
         ],
         "answer": "Tools to prevent sensitive data from leaving the network",
         "category": "Domain Review",
-        "explanation": "DLP monitors data at rest, in use, and in transit."
+        "explanation": "DLP monitors data at rest, in use, and in transit.",
+        "topic": "Architecture"
       },
       {
         "id": "sec-plus-q50",
@@ -1387,7 +1914,8 @@ export const certifications = [
         ],
         "answer": "Malware disguised as legitimate software",
         "category": "Domain Review",
-        "explanation": "Trojans do not replicate themselves like viruses or worms."
+        "explanation": "Trojans do not replicate themselves like viruses or worms.",
+        "topic": "Attacks & Threats"
       }
     ]
   },
@@ -1403,23 +1931,222 @@ export const certifications = [
     "description": "Overall understanding of the AWS Cloud platform.",
     "reviewer": [
       {
-        "title": "Cloud Core Knowledge",
+        "title": "Billing & Pricing",
         "topics": [
           {
-            "name": "Cloud Concepts",
-            "detail": "Elasticity, scalability, and high availability."
+            "name": "Which AWS tool helps estimate monthly cloud costs?",
+            "detail": "The calculator provides an estimate of your AWS bill based on planned usage."
           },
           {
-            "name": "Security & Compliance",
-            "detail": "Shared Responsibility Model and IAM."
+            "name": "What is 'Reserved Instances'?",
+            "detail": "Reserved instances can save a lot of money for long-term workloads."
           },
           {
-            "name": "Technology",
-            "detail": "Compute (EC2), Storage (S3), and DBs (RDS)."
+            "name": "What is 'Spot Instances'?",
+            "detail": "Spot instances can be interrupted if the provider needs the capacity."
           },
           {
-            "name": "Billing & Pricing",
-            "detail": "Pricing models and cost optimization."
+            "name": "What is 'Cloud Billing'?",
+            "detail": "Cloud billing is usually based on usage (pay-as-you-go)."
+          },
+          {
+            "name": "What is the primary advantage of cloud computing?",
+            "detail": "Cloud computing converts capital expenses into variable operational expenses."
+          }
+        ]
+      },
+      {
+        "title": "Cloud Concepts",
+        "topics": [
+          {
+            "name": "What is the benefit of 'Elasticity' in cloud computing?",
+            "detail": "Elasticity allows a system to automatically add or remove resources to match load."
+          },
+          {
+            "name": "What is 'IaaS'?",
+            "detail": "IaaS provides fundamental compute, storage, and networking resources on demand."
+          },
+          {
+            "name": "What does 'Scalability' mean in the cloud?",
+            "detail": "Scalability can be vertical (size) or horizontal (number)."
+          },
+          {
+            "name": "What is 'PaaS'?",
+            "detail": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+          },
+          {
+            "name": "Which cloud model is a combination of public and private clouds?",
+            "detail": "Hybrid clouds allow data and apps to be shared between public and private environments."
+          },
+          {
+            "name": "What is 'Elasticity'?",
+            "detail": "Elasticity is a core feature of cloud computing for cost efficiency."
+          },
+          {
+            "name": "What is a 'Private Cloud'?",
+            "detail": "Private clouds offer greater control and privacy."
+          },
+          {
+            "name": "What is a 'Public Cloud'?",
+            "detail": "Examples include AWS, Azure, and Google Cloud."
+          },
+          {
+            "name": "What is 'High Availability' (HA)?",
+            "detail": "HA is achieved through redundancy and failover mechanisms."
+          },
+          {
+            "name": "What is 'Fault Tolerance'?",
+            "detail": "Fault tolerance is a higher level of availability."
+          },
+          {
+            "name": "What is a 'Cloud Service Provider' (CSP)?",
+            "detail": "The 'Big Three' are AWS, Microsoft, and Google."
+          },
+          {
+            "name": "What is 'SaaS'?",
+            "detail": "SaaS delivers software applications over the internet on a subscription basis."
+          }
+        ]
+      },
+      {
+        "title": "Security & Compliance",
+        "topics": [
+          {
+            "name": "In the Shared Responsibility Model, who is responsible for patching the guest OS?",
+            "detail": "AWS manages the infrastructure; the customer manages their data and OS."
+          },
+          {
+            "name": "Which service is used to manage user access and permissions in AWS?",
+            "detail": "Identity and Access Management (IAM) controls who can access AWS resources."
+          },
+          {
+            "name": "What is the 'Shared Responsibility Model'?",
+            "detail": "The provider secures the cloud; the customer secures what's in the cloud."
+          },
+          {
+            "name": "What is 'Cloud Security'?",
+            "detail": "Security is a shared responsibility in the cloud."
+          },
+          {
+            "name": "What is 'Data Sovereignty'?",
+            "detail": "Sovereignty is a major consideration for global cloud deployments."
+          },
+          {
+            "name": "What is 'Identity and Access Management' (IAM)?",
+            "detail": "IAM is a fundamental part of cloud security."
+          }
+        ]
+      },
+      {
+        "title": "Technology",
+        "topics": [
+          {
+            "name": "Which AWS service provides resizable compute capacity in the cloud?",
+            "detail": "EC2 allows users to run virtual servers in the AWS cloud."
+          },
+          {
+            "name": "What is 'Cloud Native'?",
+            "detail": "Cloud-native apps leverage microservices and containers."
+          },
+          {
+            "name": "What is an 'Availability Zone' (AZ)?",
+            "detail": "AZs help ensure high availability and fault tolerance within a region."
+          },
+          {
+            "name": "What is 'Microservices'?",
+            "detail": "Microservices improve scalability and ease of deployment."
+          },
+          {
+            "name": "What is a 'Virtual Private Cloud' (VPC)?",
+            "detail": "VPCs allow users to define their own network topology."
+          },
+          {
+            "name": "What is 'Virtualization' in cloud computing?",
+            "detail": "Virtualization is the foundation of cloud computing."
+          },
+          {
+            "name": "What is 'Object Storage'?",
+            "detail": "Object storage is ideal for unstructured data like photos and videos."
+          },
+          {
+            "name": "What is 'File Storage'?",
+            "detail": "File storage is common for shared network drives."
+          },
+          {
+            "name": "What is a 'Container'?",
+            "detail": "Docker is a popular container technology."
+          },
+          {
+            "name": "What is 'Hybrid IT'?",
+            "detail": "Most large enterprises operate in a hybrid IT model."
+          },
+          {
+            "name": "What is 'Cloud Logging'?",
+            "detail": "Logs are essential for troubleshooting and security analysis."
+          },
+          {
+            "name": "What is 'Edge Computing'?",
+            "detail": "Edge computing reduces latency and bandwidth usage."
+          },
+          {
+            "name": "What is 'Block Storage'?",
+            "detail": "Block storage provides high performance for transaction-heavy apps."
+          },
+          {
+            "name": "What is a 'Cloud Gateway'?",
+            "detail": "Example: AWS Storage Gateway or Azure ExpressRoute."
+          },
+          {
+            "name": "What is a 'Hypervisor'?",
+            "detail": "Hypervisors manage the physical resources for multiple guest OSs."
+          },
+          {
+            "name": "What is 'Serverless Database'?",
+            "detail": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+          },
+          {
+            "name": "What is 'Content Delivery Network' (CDN)?",
+            "detail": "CDNs reduce latency by serving content from a location near the user."
+          },
+          {
+            "name": "What is 'DevOps' in the cloud?",
+            "detail": "DevOps uses automation and CI/CD pipelines."
+          },
+          {
+            "name": "What is 'Kubernetes'?",
+            "detail": "Kubernetes is the standard for container orchestration."
+          },
+          {
+            "name": "What is 'Disaster Recovery' (DR)?",
+            "detail": "DR often involves multi-region backups and replication."
+          },
+          {
+            "name": "What is a 'Cloud Migration'?",
+            "detail": "Migration can be a complex and multi-stage process."
+          },
+          {
+            "name": "What is 'Cloud Monitoring'?",
+            "detail": "Example: Amazon CloudWatch or Azure Monitor."
+          },
+          {
+            "name": "What is a 'Region' in cloud computing?",
+            "detail": "Regions are geographically isolated areas where cloud resources are hosted."
+          },
+          {
+            "name": "What is 'Auto Scaling'?",
+            "detail": "Auto scaling ensures performance during peaks and saves money during lulls."
+          },
+          {
+            "name": "What is 'Terraform'?",
+            "detail": "Terraform is cloud-agnostic and supports many providers."
+          },
+          {
+            "name": "What is 'Low Latency'?",
+            "detail": "Low latency is critical for gaming and financial applications."
+          },
+          {
+            "name": "What is 'Infrastructure as Code' (IaC)?",
+            "detail": "IaC allows for consistent and repeatable deployments."
           }
         ]
       }
@@ -1436,7 +2163,8 @@ export const certifications = [
         ],
         "answer": "Amazon EC2",
         "category": "Core Knowledge",
-        "explanation": "EC2 allows users to run virtual servers in the AWS cloud."
+        "explanation": "EC2 allows users to run virtual servers in the AWS cloud.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q2",
@@ -1449,7 +2177,8 @@ export const certifications = [
         ],
         "answer": "The Customer",
         "category": "Core Knowledge",
-        "explanation": "AWS manages the infrastructure; the customer manages their data and OS."
+        "explanation": "AWS manages the infrastructure; the customer manages their data and OS.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-ccp-q3",
@@ -1462,7 +2191,8 @@ export const certifications = [
         ],
         "answer": "AWS IAM",
         "category": "Core Knowledge",
-        "explanation": "Identity and Access Management (IAM) controls who can access AWS resources."
+        "explanation": "Identity and Access Management (IAM) controls who can access AWS resources.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-ccp-q4",
@@ -1475,7 +2205,8 @@ export const certifications = [
         ],
         "answer": "Scaling resources based on demand",
         "category": "Core Knowledge",
-        "explanation": "Elasticity allows a system to automatically add or remove resources to match load."
+        "explanation": "Elasticity allows a system to automatically add or remove resources to match load.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q5",
@@ -1488,7 +2219,8 @@ export const certifications = [
         ],
         "answer": "AWS Pricing Calculator",
         "category": "Core Knowledge",
-        "explanation": "The calculator provides an estimate of your AWS bill based on planned usage."
+        "explanation": "The calculator provides an estimate of your AWS bill based on planned usage.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "aws-ccp-q6",
@@ -1501,7 +2233,8 @@ export const certifications = [
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
-        "explanation": "Cloud-native apps leverage microservices and containers."
+        "explanation": "Cloud-native apps leverage microservices and containers.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q7",
@@ -1514,7 +2247,8 @@ export const certifications = [
         ],
         "answer": "One or more discrete data centers with redundant power",
         "category": "Domain Review",
-        "explanation": "AZs help ensure high availability and fault tolerance within a region."
+        "explanation": "AZs help ensure high availability and fault tolerance within a region.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q8",
@@ -1527,7 +2261,8 @@ export const certifications = [
         ],
         "answer": "Breaking an app into small, independent services",
         "category": "Domain Review",
-        "explanation": "Microservices improve scalability and ease of deployment."
+        "explanation": "Microservices improve scalability and ease of deployment.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q9",
@@ -1540,7 +2275,8 @@ export const certifications = [
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
-        "explanation": "VPCs allow users to define their own network topology."
+        "explanation": "VPCs allow users to define their own network topology.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q10",
@@ -1553,7 +2289,8 @@ export const certifications = [
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
         "category": "Domain Review",
-        "explanation": "Virtualization is the foundation of cloud computing."
+        "explanation": "Virtualization is the foundation of cloud computing.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q11",
@@ -1566,7 +2303,8 @@ export const certifications = [
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
-        "explanation": "Object storage is ideal for unstructured data like photos and videos."
+        "explanation": "Object storage is ideal for unstructured data like photos and videos.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q12",
@@ -1579,7 +2317,8 @@ export const certifications = [
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
-        "explanation": "The provider secures the cloud; the customer secures what's in the cloud."
+        "explanation": "The provider secures the cloud; the customer secures what's in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-ccp-q13",
@@ -1592,7 +2331,8 @@ export const certifications = [
         ],
         "answer": "Data stored in a hierarchical folder structure",
         "category": "Domain Review",
-        "explanation": "File storage is common for shared network drives."
+        "explanation": "File storage is common for shared network drives.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q14",
@@ -1605,7 +2345,8 @@ export const certifications = [
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
-        "explanation": "Docker is a popular container technology."
+        "explanation": "Docker is a popular container technology.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q15",
@@ -1618,7 +2359,8 @@ export const certifications = [
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
         "category": "Domain Review",
-        "explanation": "Most large enterprises operate in a hybrid IT model."
+        "explanation": "Most large enterprises operate in a hybrid IT model.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q16",
@@ -1631,7 +2373,8 @@ export const certifications = [
         ],
         "answer": "Infrastructure as a Service",
         "category": "Domain Review",
-        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand."
+        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q17",
@@ -1644,7 +2387,8 @@ export const certifications = [
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
-        "explanation": "Logs are essential for troubleshooting and security analysis."
+        "explanation": "Logs are essential for troubleshooting and security analysis.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q18",
@@ -1657,7 +2401,8 @@ export const certifications = [
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
-        "explanation": "Edge computing reduces latency and bandwidth usage."
+        "explanation": "Edge computing reduces latency and bandwidth usage.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q19",
@@ -1670,7 +2415,8 @@ export const certifications = [
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
         "category": "Domain Review",
-        "explanation": "Security is a shared responsibility in the cloud."
+        "explanation": "Security is a shared responsibility in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-ccp-q20",
@@ -1683,7 +2429,8 @@ export const certifications = [
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
         "category": "Domain Review",
-        "explanation": "Reserved instances can save a lot of money for long-term workloads."
+        "explanation": "Reserved instances can save a lot of money for long-term workloads.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "aws-ccp-q21",
@@ -1696,7 +2443,8 @@ export const certifications = [
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
         "category": "Domain Review",
-        "explanation": "Block storage provides high performance for transaction-heavy apps."
+        "explanation": "Block storage provides high performance for transaction-heavy apps.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q22",
@@ -1709,7 +2457,8 @@ export const certifications = [
         ],
         "answer": "Using spare cloud capacity at a large discount",
         "category": "Domain Review",
-        "explanation": "Spot instances can be interrupted if the provider needs the capacity."
+        "explanation": "Spot instances can be interrupted if the provider needs the capacity.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "aws-ccp-q23",
@@ -1722,7 +2471,8 @@ export const certifications = [
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
-        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute."
+        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q24",
@@ -1735,7 +2485,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
         "category": "Domain Review",
-        "explanation": "Sovereignty is a major consideration for global cloud deployments."
+        "explanation": "Sovereignty is a major consideration for global cloud deployments.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-ccp-q25",
@@ -1748,7 +2499,8 @@ export const certifications = [
         ],
         "answer": "Software that creates and runs virtual machines",
         "category": "Domain Review",
-        "explanation": "Hypervisors manage the physical resources for multiple guest OSs."
+        "explanation": "Hypervisors manage the physical resources for multiple guest OSs.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q26",
@@ -1761,7 +2513,8 @@ export const certifications = [
         ],
         "answer": "The ability to increase or decrease resources",
         "category": "Domain Review",
-        "explanation": "Scalability can be vertical (size) or horizontal (number)."
+        "explanation": "Scalability can be vertical (size) or horizontal (number).",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q27",
@@ -1774,7 +2527,8 @@ export const certifications = [
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
-        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q28",
@@ -1787,7 +2541,8 @@ export const certifications = [
         ],
         "answer": "Managing users and their permissions to access cloud resources",
         "category": "Domain Review",
-        "explanation": "IAM is a fundamental part of cloud security."
+        "explanation": "IAM is a fundamental part of cloud security.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-ccp-q29",
@@ -1800,7 +2555,8 @@ export const certifications = [
         ],
         "answer": "Platform as a Service",
         "category": "Domain Review",
-        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q30",
@@ -1813,7 +2569,8 @@ export const certifications = [
         ],
         "answer": "How cloud providers charge for their services",
         "category": "Domain Review",
-        "explanation": "Cloud billing is usually based on usage (pay-as-you-go)."
+        "explanation": "Cloud billing is usually based on usage (pay-as-you-go).",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "aws-ccp-q31",
@@ -1826,7 +2583,8 @@ export const certifications = [
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
-        "explanation": "CDNs reduce latency by serving content from a location near the user."
+        "explanation": "CDNs reduce latency by serving content from a location near the user.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q32",
@@ -1839,7 +2597,8 @@ export const certifications = [
         ],
         "answer": "Combining development and operations to improve speed and quality",
         "category": "Domain Review",
-        "explanation": "DevOps uses automation and CI/CD pipelines."
+        "explanation": "DevOps uses automation and CI/CD pipelines.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q33",
@@ -1852,7 +2611,8 @@ export const certifications = [
         ],
         "answer": "An open-source system for automating deployment and management of containers",
         "category": "Domain Review",
-        "explanation": "Kubernetes is the standard for container orchestration."
+        "explanation": "Kubernetes is the standard for container orchestration.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q34",
@@ -1865,7 +2625,8 @@ export const certifications = [
         ],
         "answer": "Hybrid Cloud",
         "category": "Domain Review",
-        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments."
+        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q35",
@@ -1878,7 +2639,8 @@ export const certifications = [
         ],
         "answer": "Pay-as-you-go pricing",
         "category": "Domain Review",
-        "explanation": "Cloud computing converts capital expenses into variable operational expenses."
+        "explanation": "Cloud computing converts capital expenses into variable operational expenses.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "aws-ccp-q36",
@@ -1891,7 +2653,8 @@ export const certifications = [
         ],
         "answer": "The ability to automatically scale resources based on demand",
         "category": "Domain Review",
-        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency."
+        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q37",
@@ -1904,7 +2667,8 @@ export const certifications = [
         ],
         "answer": "Cloud resources used exclusively by one organization",
         "category": "Domain Review",
-        "explanation": "Private clouds offer greater control and privacy."
+        "explanation": "Private clouds offer greater control and privacy.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q38",
@@ -1917,7 +2681,8 @@ export const certifications = [
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
-        "explanation": "DR often involves multi-region backups and replication."
+        "explanation": "DR often involves multi-region backups and replication.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q39",
@@ -1930,7 +2695,8 @@ export const certifications = [
         ],
         "answer": "Services offered by third-party providers over the public internet",
         "category": "Domain Review",
-        "explanation": "Examples include AWS, Azure, and Google Cloud."
+        "explanation": "Examples include AWS, Azure, and Google Cloud.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q40",
@@ -1943,7 +2709,8 @@ export const certifications = [
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
-        "explanation": "Migration can be a complex and multi-stage process."
+        "explanation": "Migration can be a complex and multi-stage process.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q41",
@@ -1956,7 +2723,8 @@ export const certifications = [
         ],
         "answer": "Systems that are durable and likely to operate continuously",
         "category": "Domain Review",
-        "explanation": "HA is achieved through redundancy and failover mechanisms."
+        "explanation": "HA is achieved through redundancy and failover mechanisms.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q42",
@@ -1969,7 +2737,8 @@ export const certifications = [
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
-        "explanation": "Example: Amazon CloudWatch or Azure Monitor."
+        "explanation": "Example: Amazon CloudWatch or Azure Monitor.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q43",
@@ -1982,7 +2751,8 @@ export const certifications = [
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
-        "explanation": "Fault tolerance is a higher level of availability."
+        "explanation": "Fault tolerance is a higher level of availability.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q44",
@@ -1995,7 +2765,8 @@ export const certifications = [
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
-        "explanation": "Regions are geographically isolated areas where cloud resources are hosted."
+        "explanation": "Regions are geographically isolated areas where cloud resources are hosted.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q45",
@@ -2008,7 +2779,8 @@ export const certifications = [
         ],
         "answer": "Automatically adding or removing instances based on load",
         "category": "Domain Review",
-        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls."
+        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q46",
@@ -2021,7 +2793,8 @@ export const certifications = [
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
-        "explanation": "The 'Big Three' are AWS, Microsoft, and Google."
+        "explanation": "The 'Big Three' are AWS, Microsoft, and Google.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q47",
@@ -2034,7 +2807,8 @@ export const certifications = [
         ],
         "answer": "Software as a Service",
         "category": "Domain Review",
-        "explanation": "SaaS delivers software applications over the internet on a subscription basis."
+        "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-ccp-q48",
@@ -2047,7 +2821,8 @@ export const certifications = [
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
-        "explanation": "Terraform is cloud-agnostic and supports many providers."
+        "explanation": "Terraform is cloud-agnostic and supports many providers.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q49",
@@ -2060,7 +2835,8 @@ export const certifications = [
         ],
         "answer": "Minimal delay in data transmission",
         "category": "Domain Review",
-        "explanation": "Low latency is critical for gaming and financial applications."
+        "explanation": "Low latency is critical for gaming and financial applications.",
+        "topic": "Technology"
       },
       {
         "id": "aws-ccp-q50",
@@ -2073,7 +2849,8 @@ export const certifications = [
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
-        "explanation": "IaC allows for consistent and repeatable deployments."
+        "explanation": "IaC allows for consistent and repeatable deployments.",
+        "topic": "Technology"
       }
     ]
   },
@@ -2089,19 +2866,217 @@ export const certifications = [
     "description": "Gold standard of project management certification.",
     "reviewer": [
       {
-        "title": "Project Management Core Knowledge",
+        "title": "Business Environment",
         "topics": [
           {
-            "name": "People",
-            "detail": "Leading teams and managing conflict."
+            "name": "What is a 'PMO' (Project Management Office)?",
+            "detail": "PMOs provide standards, templates, and support."
           },
           {
-            "name": "Process",
-            "detail": "Methodologies (Agile, Waterfall, Hybrid)."
+            "name": "What is 'Portfolio Management'?",
+            "detail": "Portfolio management focuses on selecting the right work."
           },
           {
-            "name": "Business Environment",
-            "detail": "Organizational change and value delivery."
+            "name": "What is 'Project Governance'?",
+            "detail": "Governance ensures the project aligns with organizational goals."
+          },
+          {
+            "name": "What is 'Program Management'?",
+            "detail": "Programs deliver more value together than as separate projects."
+          }
+        ]
+      },
+      {
+        "title": "People",
+        "topics": [
+          {
+            "name": "How should a project manager handle a highly influential but resistant stakeholder?",
+            "detail": "Engagement is key to converting or mitigating the impact of resistant stakeholders."
+          },
+          {
+            "name": "What is a 'Daily Stand-up'?",
+            "detail": "Stand-ups are key to Agile sync and identifying blockers early."
+          },
+          {
+            "name": "Who are 'Stakeholders'?",
+            "detail": "Stakeholders include the team, customers, sponsors, and more."
+          },
+          {
+            "name": "What is 'Resource Management'?",
+            "detail": "It ensures resources are available when needed."
+          },
+          {
+            "name": "What is the role of the 'Scrum Master'?",
+            "detail": "The Scrum Master helps the team follow Scrum values and removes blockers."
+          },
+          {
+            "name": "What is a 'Stakeholder Registry'?",
+            "detail": "It helps in planning stakeholder engagement."
+          }
+        ]
+      },
+      {
+        "title": "Process",
+        "topics": [
+          {
+            "name": "In Scrum, who is responsible for prioritizing the Product Backlog?",
+            "detail": "The Product Owner represents the business and prioritizes work for the team."
+          },
+          {
+            "name": "What is the 'Critical Path' in a project schedule?",
+            "detail": "The critical path determines the minimum duration of the project."
+          },
+          {
+            "name": "Which methodology uses 'Sprints' to deliver incremental value?",
+            "detail": "Agile frameworks like Scrum break work into short time-boxed iterations."
+          },
+          {
+            "name": "What does EVM stand for in project management?",
+            "detail": "EVM is a technique used to measure project performance and progress."
+          },
+          {
+            "name": "What does 'Scope Creep' mean?",
+            "detail": "Scope creep occurs when new features are added without adjusting time or budget."
+          },
+          {
+            "name": "What is 'Velocity' in Agile?",
+            "detail": "Velocity helps in planning future sprints."
+          },
+          {
+            "name": "What does 'KPI' stand for?",
+            "detail": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives."
+          },
+          {
+            "name": "What is a 'User Story'?",
+            "detail": "User stories help teams understand user needs."
+          },
+          {
+            "name": "What is 'Quality Control' (QC)?",
+            "detail": "QC is focused on the deliverables themselves."
+          },
+          {
+            "name": "What is 'Sprint Planning'?",
+            "detail": "The team selects items from the product backlog."
+          },
+          {
+            "name": "What is a 'Lessons Learned' session?",
+            "detail": "Lessons learned improve future project performance."
+          },
+          {
+            "name": "What is 'Cost Baseline'?",
+            "detail": "The baseline includes all authorized expenses."
+          },
+          {
+            "name": "What is a 'SOW' (Statement of Work)?",
+            "detail": "SOW defines the scope, schedule, and deliverables for a vendor."
+          },
+          {
+            "name": "What is a 'Story Point'?",
+            "detail": "Story points account for complexity, effort, and risk."
+          },
+          {
+            "name": "What is 'Backlog Grooming' (or Refinement)?",
+            "detail": "Grooming ensures the backlog is ready for planning."
+          },
+          {
+            "name": "What is a 'Sprint Retrospective'?",
+            "detail": "The team identifies improvements for the next sprint."
+          },
+          {
+            "name": "What is 'Lean' project management?",
+            "detail": "Lean originated in manufacturing and is widely used in IT."
+          },
+          {
+            "name": "What is 'Scrum'?",
+            "detail": "Scrum uses roles, events, and artifacts to manage complex work."
+          },
+          {
+            "name": "What is a 'Burndown Chart'?",
+            "detail": "Burndown charts help teams track their progress during a sprint."
+          },
+          {
+            "name": "What is a 'Milestone'?",
+            "detail": "Milestones help track progress towards major goals."
+          },
+          {
+            "name": "What is 'Iterative Development'?",
+            "detail": "Each iteration improves the product based on feedback."
+          },
+          {
+            "name": "What is a 'Gantt Chart'?",
+            "detail": "Gantt charts show tasks over time and their dependencies."
+          },
+          {
+            "name": "What is a 'Product Backlog'?",
+            "detail": "The backlog is constantly evolving and managed by the Product Owner."
+          },
+          {
+            "name": "What is 'Incremental Delivery'?",
+            "detail": "Incremental delivery allows for early feedback and value."
+          },
+          {
+            "name": "What is 'Agile Manifesto'?",
+            "detail": "The manifesto was created by 17 software developers in 2001."
+          },
+          {
+            "name": "What is the 'MVP' in product development?",
+            "detail": "An MVP has just enough features to satisfy early customers and provide feedback."
+          },
+          {
+            "name": "What is 'Change Management'?",
+            "detail": "It ensures changes are properly reviewed and approved."
+          },
+          {
+            "name": "What is a 'Project Charter'?",
+            "detail": "The charter gives the project manager authority to use resources."
+          },
+          {
+            "name": "What is 'PRINCE2'?",
+            "detail": "PRINCE2 stands for Projects IN Controlled Environments."
+          },
+          {
+            "name": "What is an 'Epic'?",
+            "detail": "Epics often span multiple sprints."
+          },
+          {
+            "name": "What is 'Planning Poker'?",
+            "detail": "Teams use cards to estimate story points anonymously."
+          },
+          {
+            "name": "What is 'Agile' methodology?",
+            "detail": "Agile focuses on delivering value quickly and adapting to change."
+          },
+          {
+            "name": "What is 'Project Budget'?",
+            "detail": "Managing the budget is a key responsibility of the project manager."
+          },
+          {
+            "name": "What is a 'Sprint Review'?",
+            "detail": "The team gets feedback from stakeholders."
+          },
+          {
+            "name": "What is 'Kanban'?",
+            "detail": "Kanban helps visualize workflow and limit work-in-progress."
+          },
+          {
+            "name": "What is a 'Feature' in project management?",
+            "detail": "Features are often broken down into user stories."
+          },
+          {
+            "name": "What is 'Risk Management'?",
+            "detail": "Management involves mitigation, transfer, acceptance, or avoidance."
+          },
+          {
+            "name": "What is 'Procurement Management'?",
+            "detail": "It involves contracts, vendors, and purchasing."
+          },
+          {
+            "name": "What is 'Project Scope'?",
+            "detail": "Defining scope is essential to prevent uncontrolled changes."
+          },
+          {
+            "name": "What is 'Earned Value Management' (EVM)?",
+            "detail": "EVM integrates scope, schedule, and cost metrics."
           }
         ]
       }
@@ -2118,7 +3093,8 @@ export const certifications = [
         ],
         "answer": "Product Owner",
         "category": "Core Knowledge",
-        "explanation": "The Product Owner represents the business and prioritizes work for the team."
+        "explanation": "The Product Owner represents the business and prioritizes work for the team.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q2",
@@ -2131,7 +3107,8 @@ export const certifications = [
         ],
         "answer": "The longest sequence of tasks",
         "category": "Core Knowledge",
-        "explanation": "The critical path determines the minimum duration of the project."
+        "explanation": "The critical path determines the minimum duration of the project.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q3",
@@ -2144,7 +3121,8 @@ export const certifications = [
         ],
         "answer": "Agile",
         "category": "Core Knowledge",
-        "explanation": "Agile frameworks like Scrum break work into short time-boxed iterations."
+        "explanation": "Agile frameworks like Scrum break work into short time-boxed iterations.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q4",
@@ -2157,7 +3135,8 @@ export const certifications = [
         ],
         "answer": "Manage closely and engage frequently",
         "category": "Core Knowledge",
-        "explanation": "Engagement is key to converting or mitigating the impact of resistant stakeholders."
+        "explanation": "Engagement is key to converting or mitigating the impact of resistant stakeholders.",
+        "topic": "People"
       },
       {
         "id": "pmp-q5",
@@ -2170,7 +3149,8 @@ export const certifications = [
         ],
         "answer": "Earned Value Management",
         "category": "Core Knowledge",
-        "explanation": "EVM is a technique used to measure project performance and progress."
+        "explanation": "EVM is a technique used to measure project performance and progress.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q6",
@@ -2183,7 +3163,8 @@ export const certifications = [
         ],
         "answer": "Uncontrolled changes in project requirements",
         "category": "Domain Review",
-        "explanation": "Scope creep occurs when new features are added without adjusting time or budget."
+        "explanation": "Scope creep occurs when new features are added without adjusting time or budget.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q7",
@@ -2196,7 +3177,8 @@ export const certifications = [
         ],
         "answer": "A measure of the amount of work a team can complete in a sprint",
         "category": "Domain Review",
-        "explanation": "Velocity helps in planning future sprints."
+        "explanation": "Velocity helps in planning future sprints.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q8",
@@ -2209,7 +3191,8 @@ export const certifications = [
         ],
         "answer": "A department that centralizes and coordinates project management",
         "category": "Domain Review",
-        "explanation": "PMOs provide standards, templates, and support."
+        "explanation": "PMOs provide standards, templates, and support.",
+        "topic": "Business Environment"
       },
       {
         "id": "pmp-q9",
@@ -2222,7 +3205,8 @@ export const certifications = [
         ],
         "answer": "Key Performance Indicator",
         "category": "Domain Review",
-        "explanation": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives."
+        "explanation": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q10",
@@ -2235,7 +3219,8 @@ export const certifications = [
         ],
         "answer": "A short description of a feature from an end-user perspective",
         "category": "Domain Review",
-        "explanation": "User stories help teams understand user needs."
+        "explanation": "User stories help teams understand user needs.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q11",
@@ -2248,7 +3233,8 @@ export const certifications = [
         ],
         "answer": "Monitoring project results to ensure they meet standards",
         "category": "Domain Review",
-        "explanation": "QC is focused on the deliverables themselves."
+        "explanation": "QC is focused on the deliverables themselves.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q12",
@@ -2261,7 +3247,8 @@ export const certifications = [
         ],
         "answer": "A meeting where the team decides what to work on in the next sprint",
         "category": "Domain Review",
-        "explanation": "The team selects items from the product backlog."
+        "explanation": "The team selects items from the product backlog.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q13",
@@ -2274,7 +3261,8 @@ export const certifications = [
         ],
         "answer": "A meeting to discuss what went well and what didn't in a project",
         "category": "Domain Review",
-        "explanation": "Lessons learned improve future project performance."
+        "explanation": "Lessons learned improve future project performance.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q14",
@@ -2287,7 +3275,8 @@ export const certifications = [
         ],
         "answer": "The approved version of the project budget, used to measure performance",
         "category": "Domain Review",
-        "explanation": "The baseline includes all authorized expenses."
+        "explanation": "The baseline includes all authorized expenses.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q15",
@@ -2300,7 +3289,8 @@ export const certifications = [
         ],
         "answer": "A document describing the work to be performed under contract",
         "category": "Domain Review",
-        "explanation": "SOW defines the scope, schedule, and deliverables for a vendor."
+        "explanation": "SOW defines the scope, schedule, and deliverables for a vendor.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q16",
@@ -2313,7 +3303,8 @@ export const certifications = [
         ],
         "answer": "A short daily meeting to discuss progress",
         "category": "Domain Review",
-        "explanation": "Stand-ups are key to Agile sync and identifying blockers early."
+        "explanation": "Stand-ups are key to Agile sync and identifying blockers early.",
+        "topic": "People"
       },
       {
         "id": "pmp-q17",
@@ -2326,7 +3317,8 @@ export const certifications = [
         ],
         "answer": "Anyone affected by or involved in the project",
         "category": "Domain Review",
-        "explanation": "Stakeholders include the team, customers, sponsors, and more."
+        "explanation": "Stakeholders include the team, customers, sponsors, and more.",
+        "topic": "People"
       },
       {
         "id": "pmp-q18",
@@ -2339,7 +3331,8 @@ export const certifications = [
         ],
         "answer": "A unit of measure for expressing an estimate of the size of a user story",
         "category": "Domain Review",
-        "explanation": "Story points account for complexity, effort, and risk."
+        "explanation": "Story points account for complexity, effort, and risk.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q19",
@@ -2352,7 +3345,8 @@ export const certifications = [
         ],
         "answer": "Managing a collection of projects and programs to meet strategic goals",
         "category": "Domain Review",
-        "explanation": "Portfolio management focuses on selecting the right work."
+        "explanation": "Portfolio management focuses on selecting the right work.",
+        "topic": "Business Environment"
       },
       {
         "id": "pmp-q20",
@@ -2365,7 +3359,8 @@ export const certifications = [
         ],
         "answer": "Keeping the product backlog up to date and prioritized",
         "category": "Domain Review",
-        "explanation": "Grooming ensures the backlog is ready for planning."
+        "explanation": "Grooming ensures the backlog is ready for planning.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q21",
@@ -2378,7 +3373,8 @@ export const certifications = [
         ],
         "answer": "A meeting to discuss how to improve the team's process",
         "category": "Domain Review",
-        "explanation": "The team identifies improvements for the next sprint."
+        "explanation": "The team identifies improvements for the next sprint.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q22",
@@ -2391,7 +3387,8 @@ export const certifications = [
         ],
         "answer": "Focusing on maximizing value and minimizing waste",
         "category": "Domain Review",
-        "explanation": "Lean originated in manufacturing and is widely used in IT."
+        "explanation": "Lean originated in manufacturing and is widely used in IT.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q23",
@@ -2404,7 +3401,8 @@ export const certifications = [
         ],
         "answer": "A framework for implementing Agile development",
         "category": "Domain Review",
-        "explanation": "Scrum uses roles, events, and artifacts to manage complex work."
+        "explanation": "Scrum uses roles, events, and artifacts to manage complex work.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q24",
@@ -2417,7 +3415,8 @@ export const certifications = [
         ],
         "answer": "A graphical representation of work remaining versus time",
         "category": "Domain Review",
-        "explanation": "Burndown charts help teams track their progress during a sprint."
+        "explanation": "Burndown charts help teams track their progress during a sprint.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q25",
@@ -2430,7 +3429,8 @@ export const certifications = [
         ],
         "answer": "A significant point or event in a project",
         "category": "Domain Review",
-        "explanation": "Milestones help track progress towards major goals."
+        "explanation": "Milestones help track progress towards major goals.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q26",
@@ -2443,7 +3443,8 @@ export const certifications = [
         ],
         "answer": "Developing a product through repeated cycles (iterations)",
         "category": "Domain Review",
-        "explanation": "Each iteration improves the product based on feedback."
+        "explanation": "Each iteration improves the product based on feedback.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q27",
@@ -2456,7 +3457,8 @@ export const certifications = [
         ],
         "answer": "A visual representation of a project schedule",
         "category": "Domain Review",
-        "explanation": "Gantt charts show tasks over time and their dependencies."
+        "explanation": "Gantt charts show tasks over time and their dependencies.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q28",
@@ -2469,7 +3471,8 @@ export const certifications = [
         ],
         "answer": "A prioritized list of everything that might be needed in a product",
         "category": "Domain Review",
-        "explanation": "The backlog is constantly evolving and managed by the Product Owner."
+        "explanation": "The backlog is constantly evolving and managed by the Product Owner.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q29",
@@ -2482,7 +3485,8 @@ export const certifications = [
         ],
         "answer": "Delivering a product in small, usable parts over time",
         "category": "Domain Review",
-        "explanation": "Incremental delivery allows for early feedback and value."
+        "explanation": "Incremental delivery allows for early feedback and value.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q30",
@@ -2495,7 +3499,8 @@ export const certifications = [
         ],
         "answer": "A document outlining the values and principles of Agile",
         "category": "Domain Review",
-        "explanation": "The manifesto was created by 17 software developers in 2001."
+        "explanation": "The manifesto was created by 17 software developers in 2001.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q31",
@@ -2508,7 +3513,8 @@ export const certifications = [
         ],
         "answer": "Minimum Viable Product",
         "category": "Domain Review",
-        "explanation": "An MVP has just enough features to satisfy early customers and provide feedback."
+        "explanation": "An MVP has just enough features to satisfy early customers and provide feedback.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q32",
@@ -2521,7 +3527,8 @@ export const certifications = [
         ],
         "answer": "Managing people, equipment, and materials for a project",
         "category": "Domain Review",
-        "explanation": "It ensures resources are available when needed."
+        "explanation": "It ensures resources are available when needed.",
+        "topic": "People"
       },
       {
         "id": "pmp-q33",
@@ -2534,7 +3541,8 @@ export const certifications = [
         ],
         "answer": "A process for managing changes to project scope or plan",
         "category": "Domain Review",
-        "explanation": "It ensures changes are properly reviewed and approved."
+        "explanation": "It ensures changes are properly reviewed and approved.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q34",
@@ -2547,7 +3555,8 @@ export const certifications = [
         ],
         "answer": "A document that formally authorizes a project",
         "category": "Domain Review",
-        "explanation": "The charter gives the project manager authority to use resources."
+        "explanation": "The charter gives the project manager authority to use resources.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q35",
@@ -2560,7 +3569,8 @@ export const certifications = [
         ],
         "answer": "A structured project management methodology used widely in Europe",
         "category": "Domain Review",
-        "explanation": "PRINCE2 stands for Projects IN Controlled Environments."
+        "explanation": "PRINCE2 stands for Projects IN Controlled Environments.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q36",
@@ -2573,7 +3583,8 @@ export const certifications = [
         ],
         "answer": "A large body of work that can be broken down into many user stories",
         "category": "Domain Review",
-        "explanation": "Epics often span multiple sprints."
+        "explanation": "Epics often span multiple sprints.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q37",
@@ -2586,7 +3597,8 @@ export const certifications = [
         ],
         "answer": "The framework for project decision-making and oversight",
         "category": "Domain Review",
-        "explanation": "Governance ensures the project aligns with organizational goals."
+        "explanation": "Governance ensures the project aligns with organizational goals.",
+        "topic": "Business Environment"
       },
       {
         "id": "pmp-q38",
@@ -2599,7 +3611,8 @@ export const certifications = [
         ],
         "answer": "A consensus-based estimation technique for user stories",
         "category": "Domain Review",
-        "explanation": "Teams use cards to estimate story points anonymously."
+        "explanation": "Teams use cards to estimate story points anonymously.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q39",
@@ -2612,7 +3625,8 @@ export const certifications = [
         ],
         "answer": "An iterative approach to project management and software development",
         "category": "Domain Review",
-        "explanation": "Agile focuses on delivering value quickly and adapting to change."
+        "explanation": "Agile focuses on delivering value quickly and adapting to change.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q40",
@@ -2625,7 +3639,8 @@ export const certifications = [
         ],
         "answer": "A facilitator for a Scrum team",
         "category": "Domain Review",
-        "explanation": "The Scrum Master helps the team follow Scrum values and removes blockers."
+        "explanation": "The Scrum Master helps the team follow Scrum values and removes blockers.",
+        "topic": "People"
       },
       {
         "id": "pmp-q41",
@@ -2638,7 +3653,8 @@ export const certifications = [
         ],
         "answer": "Managing a group of related projects to achieve benefits",
         "category": "Domain Review",
-        "explanation": "Programs deliver more value together than as separate projects."
+        "explanation": "Programs deliver more value together than as separate projects.",
+        "topic": "Business Environment"
       },
       {
         "id": "pmp-q42",
@@ -2651,7 +3667,8 @@ export const certifications = [
         ],
         "answer": "The total amount of money allocated for a project",
         "category": "Domain Review",
-        "explanation": "Managing the budget is a key responsibility of the project manager."
+        "explanation": "Managing the budget is a key responsibility of the project manager.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q43",
@@ -2664,7 +3681,8 @@ export const certifications = [
         ],
         "answer": "A meeting to demonstrate the work completed during the sprint",
         "category": "Domain Review",
-        "explanation": "The team gets feedback from stakeholders."
+        "explanation": "The team gets feedback from stakeholders.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q44",
@@ -2677,7 +3695,8 @@ export const certifications = [
         ],
         "answer": "A visual system for managing work as it moves through a process",
         "category": "Domain Review",
-        "explanation": "Kanban helps visualize workflow and limit work-in-progress."
+        "explanation": "Kanban helps visualize workflow and limit work-in-progress.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q45",
@@ -2690,7 +3709,8 @@ export const certifications = [
         ],
         "answer": "A distinct functionality or capability of a product",
         "category": "Domain Review",
-        "explanation": "Features are often broken down into user stories."
+        "explanation": "Features are often broken down into user stories.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q46",
@@ -2703,7 +3723,8 @@ export const certifications = [
         ],
         "answer": "Identifying, assessing, and responding to project risks",
         "category": "Domain Review",
-        "explanation": "Management involves mitigation, transfer, acceptance, or avoidance."
+        "explanation": "Management involves mitigation, transfer, acceptance, or avoidance.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q47",
@@ -2716,7 +3737,8 @@ export const certifications = [
         ],
         "answer": "A document listing all project stakeholders and their info",
         "category": "Domain Review",
-        "explanation": "It helps in planning stakeholder engagement."
+        "explanation": "It helps in planning stakeholder engagement.",
+        "topic": "People"
       },
       {
         "id": "pmp-q48",
@@ -2729,7 +3751,8 @@ export const certifications = [
         ],
         "answer": "Managing the purchase of goods and services for a project",
         "category": "Domain Review",
-        "explanation": "It involves contracts, vendors, and purchasing."
+        "explanation": "It involves contracts, vendors, and purchasing.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q49",
@@ -2742,7 +3765,8 @@ export const certifications = [
         ],
         "answer": "The work that must be performed to deliver a result",
         "category": "Domain Review",
-        "explanation": "Defining scope is essential to prevent uncontrolled changes."
+        "explanation": "Defining scope is essential to prevent uncontrolled changes.",
+        "topic": "Process"
       },
       {
         "id": "pmp-q50",
@@ -2755,7 +3779,8 @@ export const certifications = [
         ],
         "answer": "A technique to measure project performance and progress",
         "category": "Domain Review",
-        "explanation": "EVM integrates scope, schedule, and cost metrics."
+        "explanation": "EVM integrates scope, schedule, and cost metrics.",
+        "topic": "Process"
       }
     ]
   },
@@ -2771,19 +3796,217 @@ export const certifications = [
     "description": "Standard for entry-level IT professionals.",
     "reviewer": [
       {
-        "title": "Infrastructure Core Knowledge",
+        "title": "Hardware",
         "topics": [
           {
-            "name": "Hardware",
-            "detail": "Processors, RAM, and Motherboards."
+            "name": "Which component acts as the 'brain' of the computer?",
+            "detail": "The Central Processing Unit (CPU) executes instructions and processes data."
           },
           {
-            "name": "Operating Systems",
-            "detail": "Windows, Linux, and mobile OS."
+            "name": "Which port is used for a standard wired network connection?",
+            "detail": "The Registered Jack 45 (RJ-45) is the standard connector for Ethernet cables."
           },
           {
-            "name": "Troubleshooting",
-            "detail": "Systematic hardware and software repair."
+            "name": "Which storage type has no moving parts and is faster than a traditional HDD?",
+            "detail": "Solid State Drives (SSDs) use flash memory for high-speed data access."
+          },
+          {
+            "name": "What is 'Data Center'?",
+            "detail": "Data centers include redundant power, cooling, and security."
+          },
+          {
+            "name": "What is 'Failover'?",
+            "detail": "Failover is crucial for high availability."
+          },
+          {
+            "name": "What is a 'Router'?",
+            "detail": "Routers operate at the Network Layer (Layer 3)."
+          },
+          {
+            "name": "What is 'Clustering'?",
+            "detail": "Clusters improve performance, scalability, and availability."
+          },
+          {
+            "name": "What is 'Colocation'?",
+            "detail": "Colocation provides professional infrastructure and connectivity."
+          },
+          {
+            "name": "What is 'RAID'?",
+            "detail": "RAID uses multiple hard drives to provide data redundancy and/or improve performance."
+          },
+          {
+            "name": "What is 'TPM' (Trusted Platform Module)?",
+            "detail": "TPM is used for disk encryption and secure authentication."
+          },
+          {
+            "name": "What is 'UEFI'?",
+            "detail": "UEFI provides a more advanced and secure boot environment."
+          },
+          {
+            "name": "What is 'Virtualization'?",
+            "detail": "Virtualization allows running multiple independent systems on a single physical machine."
+          },
+          {
+            "name": "What is 'HDD' (Hard Disk Drive)?",
+            "detail": "HDDs offer larger capacities at a lower cost than SSDs."
+          },
+          {
+            "name": "What is 'RAM' (Random Access Memory)?",
+            "detail": "RAM is volatile, meaning data is lost when power is removed."
+          },
+          {
+            "name": "What is 'Load Balancing'?",
+            "detail": "Load balancing improves performance and availability."
+          },
+          {
+            "name": "What is 'RAID 1'?",
+            "detail": "RAID 1 provides high fault tolerance by duplicating data."
+          },
+          {
+            "name": "What is 'SSD' (Solid State Drive)?",
+            "detail": "SSDs are much faster and more durable than traditional HDDs."
+          },
+          {
+            "name": "What is 'PSU' (Power Supply Unit)?",
+            "detail": "The PSU provides power to all computer components."
+          },
+          {
+            "name": "What is 'Rack' in a data center?",
+            "detail": "Server racks are usually 19 or 23 inches wide."
+          },
+          {
+            "name": "What is a 'UPS' (Uninterruptible Power Supply)?",
+            "detail": "UPS protects equipment from power outages and surges."
+          },
+          {
+            "name": "What is 'Mainframe'?",
+            "detail": "Mainframes are still used in large-scale industries like banking."
+          },
+          {
+            "name": "What is 'Form Factor'?",
+            "detail": "Examples include ATX, Micro-ATX, and ITX."
+          },
+          {
+            "name": "What is 'Blade Server'?",
+            "detail": "Blade servers save space and improve energy efficiency."
+          },
+          {
+            "name": "What is 'BIOS Update'?",
+            "detail": "BIOS updates can fix hardware compatibility issues."
+          },
+          {
+            "name": "What is 'KVM Switch'?",
+            "detail": "KVM switches are used for managing server racks."
+          },
+          {
+            "name": "What is 'Motherboard'?",
+            "detail": "The motherboard connects all other components together."
+          },
+          {
+            "name": "What is a 'Switch' in networking?",
+            "detail": "Switches operate at the Data Link Layer (Layer 2)."
+          },
+          {
+            "name": "What is 'Firmware'?",
+            "detail": "Firmware is stored on hardware devices like routers and SSDs."
+          },
+          {
+            "name": "What is 'CPU' (Central Processing Unit)?",
+            "detail": "The CPU is the 'brain' of the computer."
+          },
+          {
+            "name": "What is 'RAID 5'?",
+            "detail": "RAID 5 provides a good balance of performance and fault tolerance."
+          },
+          {
+            "name": "What is 'GPU' (Graphics Processing Unit)?",
+            "detail": "GPUs are used for graphics rendering and scientific computing."
+          },
+          {
+            "name": "What is 'CMOS Battery'?",
+            "detail": "The CMOS battery maintains the date, time, and BIOS settings."
+          }
+        ]
+      },
+      {
+        "title": "Operating Systems",
+        "topics": [
+          {
+            "name": "What command is used to check the IP configuration on a Windows machine?",
+            "detail": "The ipconfig command displays all current TCP/IP network configuration values."
+          },
+          {
+            "name": "What is 'Snapshot' in storage?",
+            "detail": "Snapshots are often used for quick recovery and testing."
+          },
+          {
+            "name": "What is 'Secure Boot'?",
+            "detail": "Secure Boot protects against malware during the boot process."
+          },
+          {
+            "name": "What is a 'MAC Address'?",
+            "detail": "MAC addresses are physical addresses baked into hardware."
+          },
+          {
+            "name": "What is 'SSH' (Secure Shell)?",
+            "detail": "SSH is commonly used for remote login to Linux servers."
+          },
+          {
+            "name": "What is 'Active Directory' (AD)?",
+            "detail": "AD manages users, computers, and other objects in a network."
+          },
+          {
+            "name": "What is 'Docker' used for?",
+            "detail": "Docker packages apps and their dependencies into portable containers."
+          },
+          {
+            "name": "What is 'Patch Management'?",
+            "detail": "Patches fix bugs, improve performance, and close security holes."
+          },
+          {
+            "name": "What is a 'Firewall'?",
+            "detail": "Firewalls are the first line of defense in network security."
+          },
+          {
+            "name": "What is 'Uptime'?",
+            "detail": "High uptime (e.g., 99.999%) is a major goal for IT infrastructure."
+          },
+          {
+            "name": "What is 'SLA' (Service Level Agreement)?",
+            "detail": "SLAs often include uptime guarantees and penalties."
+          },
+          {
+            "name": "What is 'Downtime'?",
+            "detail": "Downtime can result in lost revenue and reputation."
+          },
+          {
+            "name": "What is 'Linux'?",
+            "detail": "Linux is the foundation for many popular operating systems like Ubuntu and CentOS."
+          },
+          {
+            "name": "What is an 'IP Address'?",
+            "detail": "IP addresses can be static or dynamic."
+          },
+          {
+            "name": "What is 'VPN' (Virtual Private Network)?",
+            "detail": "VPNs are used for secure remote access and privacy."
+          },
+          {
+            "name": "What is 'DHCP'?",
+            "detail": "DHCP makes network management much easier."
+          },
+          {
+            "name": "What is 'Backup'?",
+            "detail": "Backups are essential for data protection."
+          }
+        ]
+      },
+      {
+        "title": "Troubleshooting",
+        "topics": [
+          {
+            "name": "What is the first step in the troubleshooting process?",
+            "detail": "You must first understand what is wrong before attempting to fix it."
           }
         ]
       }
@@ -2800,7 +4023,8 @@ export const certifications = [
         ],
         "answer": "CPU",
         "category": "Core Knowledge",
-        "explanation": "The Central Processing Unit (CPU) executes instructions and processes data."
+        "explanation": "The Central Processing Unit (CPU) executes instructions and processes data.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q2",
@@ -2813,7 +4037,8 @@ export const certifications = [
         ],
         "answer": "Identify the problem",
         "category": "Core Knowledge",
-        "explanation": "You must first understand what is wrong before attempting to fix it."
+        "explanation": "You must first understand what is wrong before attempting to fix it.",
+        "topic": "Troubleshooting"
       },
       {
         "id": "aplus-q3",
@@ -2826,7 +4051,8 @@ export const certifications = [
         ],
         "answer": "RJ-45",
         "category": "Core Knowledge",
-        "explanation": "The Registered Jack 45 (RJ-45) is the standard connector for Ethernet cables."
+        "explanation": "The Registered Jack 45 (RJ-45) is the standard connector for Ethernet cables.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q4",
@@ -2839,7 +4065,8 @@ export const certifications = [
         ],
         "answer": "SSD",
         "category": "Core Knowledge",
-        "explanation": "Solid State Drives (SSDs) use flash memory for high-speed data access."
+        "explanation": "Solid State Drives (SSDs) use flash memory for high-speed data access.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q5",
@@ -2852,7 +4079,8 @@ export const certifications = [
         ],
         "answer": "ipconfig",
         "category": "Core Knowledge",
-        "explanation": "The ipconfig command displays all current TCP/IP network configuration values."
+        "explanation": "The ipconfig command displays all current TCP/IP network configuration values.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q6",
@@ -2865,7 +4093,8 @@ export const certifications = [
         ],
         "answer": "A facility used to house computer systems and associated components",
         "category": "Domain Review",
-        "explanation": "Data centers include redundant power, cooling, and security."
+        "explanation": "Data centers include redundant power, cooling, and security.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q7",
@@ -2878,7 +4107,8 @@ export const certifications = [
         ],
         "answer": "A copy of a system or data at a specific point in time",
         "category": "Domain Review",
-        "explanation": "Snapshots are often used for quick recovery and testing."
+        "explanation": "Snapshots are often used for quick recovery and testing.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q8",
@@ -2891,7 +4121,8 @@ export const certifications = [
         ],
         "answer": "A security standard that ensures a device boots using only trusted software",
         "category": "Domain Review",
-        "explanation": "Secure Boot protects against malware during the boot process."
+        "explanation": "Secure Boot protects against malware during the boot process.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q9",
@@ -2904,7 +4135,8 @@ export const certifications = [
         ],
         "answer": "A unique identifier assigned to a network interface controller",
         "category": "Domain Review",
-        "explanation": "MAC addresses are physical addresses baked into hardware."
+        "explanation": "MAC addresses are physical addresses baked into hardware.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q10",
@@ -2917,7 +4149,8 @@ export const certifications = [
         ],
         "answer": "Automatically switching to a redundant or standby system upon failure",
         "category": "Domain Review",
-        "explanation": "Failover is crucial for high availability."
+        "explanation": "Failover is crucial for high availability.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q11",
@@ -2930,7 +4163,8 @@ export const certifications = [
         ],
         "answer": "A device that forwards data packets between computer networks",
         "category": "Domain Review",
-        "explanation": "Routers operate at the Network Layer (Layer 3)."
+        "explanation": "Routers operate at the Network Layer (Layer 3).",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q12",
@@ -2943,7 +4177,8 @@ export const certifications = [
         ],
         "answer": "Connecting multiple servers to work together as a single system",
         "category": "Domain Review",
-        "explanation": "Clusters improve performance, scalability, and availability."
+        "explanation": "Clusters improve performance, scalability, and availability.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q13",
@@ -2956,7 +4191,8 @@ export const certifications = [
         ],
         "answer": "A cryptographic network protocol for operating network services securely",
         "category": "Domain Review",
-        "explanation": "SSH is commonly used for remote login to Linux servers."
+        "explanation": "SSH is commonly used for remote login to Linux servers.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q14",
@@ -2969,7 +4205,8 @@ export const certifications = [
         ],
         "answer": "Renting space for your servers in a third-party data center",
         "category": "Domain Review",
-        "explanation": "Colocation provides professional infrastructure and connectivity."
+        "explanation": "Colocation provides professional infrastructure and connectivity.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q15",
@@ -2982,7 +4219,8 @@ export const certifications = [
         ],
         "answer": "A directory service for Windows domain networks",
         "category": "Domain Review",
-        "explanation": "AD manages users, computers, and other objects in a network."
+        "explanation": "AD manages users, computers, and other objects in a network.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q16",
@@ -2995,7 +4233,8 @@ export const certifications = [
         ],
         "answer": "Redundant Array of Independent Disks",
         "category": "Domain Review",
-        "explanation": "RAID uses multiple hard drives to provide data redundancy and/or improve performance."
+        "explanation": "RAID uses multiple hard drives to provide data redundancy and/or improve performance.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q17",
@@ -3008,7 +4247,8 @@ export const certifications = [
         ],
         "answer": "A specialized chip on a device that provides hardware-level security",
         "category": "Domain Review",
-        "explanation": "TPM is used for disk encryption and secure authentication."
+        "explanation": "TPM is used for disk encryption and secure authentication.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q18",
@@ -3021,7 +4261,8 @@ export const certifications = [
         ],
         "answer": "Containerization of applications",
         "category": "Domain Review",
-        "explanation": "Docker packages apps and their dependencies into portable containers."
+        "explanation": "Docker packages apps and their dependencies into portable containers.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q19",
@@ -3034,7 +4275,8 @@ export const certifications = [
         ],
         "answer": "The modern replacement for the traditional BIOS",
         "category": "Domain Review",
-        "explanation": "UEFI provides a more advanced and secure boot environment."
+        "explanation": "UEFI provides a more advanced and secure boot environment.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q20",
@@ -3047,7 +4289,8 @@ export const certifications = [
         ],
         "answer": "The process of distributing and applying updates to software",
         "category": "Domain Review",
-        "explanation": "Patches fix bugs, improve performance, and close security holes."
+        "explanation": "Patches fix bugs, improve performance, and close security holes.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q21",
@@ -3060,7 +4303,8 @@ export const certifications = [
         ],
         "answer": "A network security system that monitors and controls traffic",
         "category": "Domain Review",
-        "explanation": "Firewalls are the first line of defense in network security."
+        "explanation": "Firewalls are the first line of defense in network security.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q22",
@@ -3073,7 +4317,8 @@ export const certifications = [
         ],
         "answer": "The amount of time a system or service is operational",
         "category": "Domain Review",
-        "explanation": "High uptime (e.g., 99.999%) is a major goal for IT infrastructure."
+        "explanation": "High uptime (e.g., 99.999%) is a major goal for IT infrastructure.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q23",
@@ -3086,7 +4331,8 @@ export const certifications = [
         ],
         "answer": "A contract that defines the expected level of service from a provider",
         "category": "Domain Review",
-        "explanation": "SLAs often include uptime guarantees and penalties."
+        "explanation": "SLAs often include uptime guarantees and penalties.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q24",
@@ -3099,7 +4345,8 @@ export const certifications = [
         ],
         "answer": "Creating virtual versions of hardware or OS",
         "category": "Domain Review",
-        "explanation": "Virtualization allows running multiple independent systems on a single physical machine."
+        "explanation": "Virtualization allows running multiple independent systems on a single physical machine.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q25",
@@ -3112,7 +4359,8 @@ export const certifications = [
         ],
         "answer": "A data storage device that uses magnetic storage and rotating disks",
         "category": "Domain Review",
-        "explanation": "HDDs offer larger capacities at a lower cost than SSDs."
+        "explanation": "HDDs offer larger capacities at a lower cost than SSDs.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q26",
@@ -3125,7 +4373,8 @@ export const certifications = [
         ],
         "answer": "A form of computer memory that can be read and changed in any order",
         "category": "Domain Review",
-        "explanation": "RAM is volatile, meaning data is lost when power is removed."
+        "explanation": "RAM is volatile, meaning data is lost when power is removed.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q27",
@@ -3138,7 +4387,8 @@ export const certifications = [
         ],
         "answer": "Distributing network or application traffic across multiple servers",
         "category": "Domain Review",
-        "explanation": "Load balancing improves performance and availability."
+        "explanation": "Load balancing improves performance and availability.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q28",
@@ -3151,7 +4401,8 @@ export const certifications = [
         ],
         "answer": "The period during which a system or service is unavailable",
         "category": "Domain Review",
-        "explanation": "Downtime can result in lost revenue and reputation."
+        "explanation": "Downtime can result in lost revenue and reputation.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q29",
@@ -3164,7 +4415,8 @@ export const certifications = [
         ],
         "answer": "Mirroring data onto two or more disks",
         "category": "Domain Review",
-        "explanation": "RAID 1 provides high fault tolerance by duplicating data."
+        "explanation": "RAID 1 provides high fault tolerance by duplicating data.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q30",
@@ -3177,7 +4429,8 @@ export const certifications = [
         ],
         "answer": "An open-source operating system kernel",
         "category": "Domain Review",
-        "explanation": "Linux is the foundation for many popular operating systems like Ubuntu and CentOS."
+        "explanation": "Linux is the foundation for many popular operating systems like Ubuntu and CentOS.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q31",
@@ -3190,7 +4443,8 @@ export const certifications = [
         ],
         "answer": "A unique string of numbers that identifies each computer on a network",
         "category": "Domain Review",
-        "explanation": "IP addresses can be static or dynamic."
+        "explanation": "IP addresses can be static or dynamic.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q32",
@@ -3203,7 +4457,8 @@ export const certifications = [
         ],
         "answer": "A storage device that uses integrated circuits for data storage",
         "category": "Domain Review",
-        "explanation": "SSDs are much faster and more durable than traditional HDDs."
+        "explanation": "SSDs are much faster and more durable than traditional HDDs.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q33",
@@ -3216,7 +4471,8 @@ export const certifications = [
         ],
         "answer": "A device that converts mains AC to low-voltage regulated DC power",
         "category": "Domain Review",
-        "explanation": "The PSU provides power to all computer components."
+        "explanation": "The PSU provides power to all computer components.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q34",
@@ -3229,7 +4485,8 @@ export const certifications = [
         ],
         "answer": "A standardized frame for mounting IT equipment",
         "category": "Domain Review",
-        "explanation": "Server racks are usually 19 or 23 inches wide."
+        "explanation": "Server racks are usually 19 or 23 inches wide.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q35",
@@ -3242,7 +4499,8 @@ export const certifications = [
         ],
         "answer": "A device that provides emergency power when the main source fails",
         "category": "Domain Review",
-        "explanation": "UPS protects equipment from power outages and surges."
+        "explanation": "UPS protects equipment from power outages and surges.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q36",
@@ -3255,7 +4513,8 @@ export const certifications = [
         ],
         "answer": "A large, powerful computer used for high-volume data processing",
         "category": "Domain Review",
-        "explanation": "Mainframes are still used in large-scale industries like banking."
+        "explanation": "Mainframes are still used in large-scale industries like banking.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q37",
@@ -3268,7 +4527,8 @@ export const certifications = [
         ],
         "answer": "The physical size and shape of a computer component",
         "category": "Domain Review",
-        "explanation": "Examples include ATX, Micro-ATX, and ITX."
+        "explanation": "Examples include ATX, Micro-ATX, and ITX.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q38",
@@ -3281,7 +4541,8 @@ export const certifications = [
         ],
         "answer": "A thin, modular server that fits into a specialized chassis",
         "category": "Domain Review",
-        "explanation": "Blade servers save space and improve energy efficiency."
+        "explanation": "Blade servers save space and improve energy efficiency.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q39",
@@ -3294,7 +4555,8 @@ export const certifications = [
         ],
         "answer": "Updating the firmware on the motherboard",
         "category": "Domain Review",
-        "explanation": "BIOS updates can fix hardware compatibility issues."
+        "explanation": "BIOS updates can fix hardware compatibility issues.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q40",
@@ -3307,7 +4569,8 @@ export const certifications = [
         ],
         "answer": "A service that creates a safe, encrypted connection over a less secure network",
         "category": "Domain Review",
-        "explanation": "VPNs are used for secure remote access and privacy."
+        "explanation": "VPNs are used for secure remote access and privacy.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q41",
@@ -3320,7 +4583,8 @@ export const certifications = [
         ],
         "answer": "A hardware device that allows controlling multiple computers from one keyboard/video/mouse",
         "category": "Domain Review",
-        "explanation": "KVM switches are used for managing server racks."
+        "explanation": "KVM switches are used for managing server racks.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q42",
@@ -3333,7 +4597,8 @@ export const certifications = [
         ],
         "answer": "A protocol for automatically assigning IP addresses to devices",
         "category": "Domain Review",
-        "explanation": "DHCP makes network management much easier."
+        "explanation": "DHCP makes network management much easier.",
+        "topic": "Operating Systems"
       },
       {
         "id": "aplus-q43",
@@ -3346,7 +4611,8 @@ export const certifications = [
         ],
         "answer": "The main printed circuit board in general-purpose computers",
         "category": "Domain Review",
-        "explanation": "The motherboard connects all other components together."
+        "explanation": "The motherboard connects all other components together.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q44",
@@ -3359,7 +4625,8 @@ export const certifications = [
         ],
         "answer": "A device that connects devices on a computer network using packet switching",
         "category": "Domain Review",
-        "explanation": "Switches operate at the Data Link Layer (Layer 2)."
+        "explanation": "Switches operate at the Data Link Layer (Layer 2).",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q45",
@@ -3372,7 +4639,8 @@ export const certifications = [
         ],
         "answer": "A specific class of computer software that provides low-level control for hardware",
         "category": "Domain Review",
-        "explanation": "Firmware is stored on hardware devices like routers and SSDs."
+        "explanation": "Firmware is stored on hardware devices like routers and SSDs.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q46",
@@ -3385,7 +4653,8 @@ export const certifications = [
         ],
         "answer": "The electronic circuitry that executes instructions of a computer program",
         "category": "Domain Review",
-        "explanation": "The CPU is the 'brain' of the computer."
+        "explanation": "The CPU is the 'brain' of the computer.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q47",
@@ -3398,7 +4667,8 @@ export const certifications = [
         ],
         "answer": "Striping data and parity across three or more disks",
         "category": "Domain Review",
-        "explanation": "RAID 5 provides a good balance of performance and fault tolerance."
+        "explanation": "RAID 5 provides a good balance of performance and fault tolerance.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q48",
@@ -3411,7 +4681,8 @@ export const certifications = [
         ],
         "answer": "A specialized electronic circuit designed to accelerate image creation",
         "category": "Domain Review",
-        "explanation": "GPUs are used for graphics rendering and scientific computing."
+        "explanation": "GPUs are used for graphics rendering and scientific computing.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q49",
@@ -3424,7 +4695,8 @@ export const certifications = [
         ],
         "answer": "A battery that powers the CMOS memory when the computer is off",
         "category": "Domain Review",
-        "explanation": "The CMOS battery maintains the date, time, and BIOS settings."
+        "explanation": "The CMOS battery maintains the date, time, and BIOS settings.",
+        "topic": "Hardware"
       },
       {
         "id": "aplus-q50",
@@ -3437,7 +4709,8 @@ export const certifications = [
         ],
         "answer": "A copy of data stored in a separate location for recovery",
         "category": "Domain Review",
-        "explanation": "Backups are essential for data protection."
+        "explanation": "Backups are essential for data protection.",
+        "topic": "Operating Systems"
       }
     ]
   },
@@ -3453,11 +4726,257 @@ export const certifications = [
     "description": "Essential knowledge for a career in IT infrastructure.",
     "reviewer": [
       {
-        "title": "Networking Fundamentals",
+        "title": "IP Services",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for CompTIA Network+."
+            "name": "What is a 'Loopback' address?",
+            "detail": "127.0.0.1 is the standard IPv4 loopback address."
+          },
+          {
+            "name": "What is the bit length of an IPv6 address?",
+            "detail": "IPv6 addresses are 128 bits long, providing a massive address space."
+          },
+          {
+            "name": "Which protocol resolves domain names to IP addresses?",
+            "detail": "Domain Name System (DNS) maps human-readable names to IP addresses."
+          },
+          {
+            "name": "What is the function of a 'Subnet'?",
+            "detail": "Subnetting improves organization and security."
+          },
+          {
+            "name": "Which command checks the reachability of a DNS server?",
+            "detail": "nslookup is used to query DNS servers for information."
+          },
+          {
+            "name": "Which protocol uses port 53?",
+            "detail": "DNS uses both UDP and TCP on port 53."
+          },
+          {
+            "name": "What does DHCP stand for?",
+            "detail": "DHCP automatically assigns IP addresses to devices on a network."
+          },
+          {
+            "name": "What is the purpose of 'NAT'?",
+            "detail": "Network Address Translation (NAT) allows multiple devices to share one public IP."
+          },
+          {
+            "name": "What is the range of private IP addresses for Class A?",
+            "detail": "The 10.0.0.0/8 block is reserved for private Class A networks."
+          },
+          {
+            "name": "What does 'CIDR' stand for?",
+            "detail": "CIDR replaced the older classful IP addressing system."
+          }
+        ]
+      },
+      {
+        "title": "Network Performance",
+        "topics": [
+          {
+            "name": "What is the purpose of 'QoS'?",
+            "detail": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice."
+          },
+          {
+            "name": "What is 'Jitter' in networking?",
+            "detail": "Low jitter is critical for real-time services like VoIP."
+          }
+        ]
+      },
+      {
+        "title": "Network Services",
+        "topics": [
+          {
+            "name": "Which protocol is used for synchronizing clocks on a network?",
+            "detail": "Network Time Protocol (NTP) ensures all devices have the correct time."
+          },
+          {
+            "name": "What is the primary function of a Load Balancer?",
+            "detail": "Load balancers improve reliability and performance by spreading load."
+          },
+          {
+            "name": "Which protocol is commonly used for network management and monitoring?",
+            "detail": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices."
+          },
+          {
+            "name": "Which protocol uses port 3389?",
+            "detail": "Remote Desktop Protocol (RDP) allows controlling a remote computer."
+          },
+          {
+            "name": "Which protocol is used to retrieve emails from a server and delete them after?",
+            "detail": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server."
+          },
+          {
+            "name": "Which protocol is used for transferring web pages?",
+            "detail": "Hypertext Transfer Protocol (HTTP) is the foundation of data exchange on the web."
+          },
+          {
+            "name": "What is the default port for FTP?",
+            "detail": "File Transfer Protocol (FTP) uses port 21 for control."
+          }
+        ]
+      },
+      {
+        "title": "Network Troubleshooting",
+        "topics": [
+          {
+            "name": "What is the purpose of the 'ping' command?",
+            "detail": "Ping uses ICMP Echo Request messages to check if a remote host is reachable."
+          },
+          {
+            "name": "Which command is used to trace the path a packet takes to its destination?",
+            "detail": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination."
+          },
+          {
+            "name": "Which command shows the MAC address on a Windows PC?",
+            "detail": "All these commands can be used to find the physical address."
+          }
+        ]
+      },
+      {
+        "title": "Networking Core",
+        "topics": [
+          {
+            "name": "Which topology connects all devices to a central hub?",
+            "detail": "In a Star topology, if the central hub fails, the whole network goes down."
+          },
+          {
+            "name": "What is the function of the ARP protocol?",
+            "detail": "Address Resolution Protocol (ARP) finds the hardware address for a known IP."
+          },
+          {
+            "name": "What is the bit length of a MAC address?",
+            "detail": "MAC addresses are 6-byte (48-bit) unique identifiers."
+          },
+          {
+            "name": "What does 'full-duplex' mean?",
+            "detail": "Full-duplex communication allows concurrent sending and receiving."
+          },
+          {
+            "name": "What is 'CSMA/CD' used for?",
+            "detail": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol."
+          },
+          {
+            "name": "What does 'MTU' stand for?",
+            "detail": "MTU is the largest packet size a network can handle."
+          },
+          {
+            "name": "What is 'Half-Duplex'?",
+            "detail": "Older hubs and walkie-talkies are half-duplex."
+          }
+        ]
+      },
+      {
+        "title": "OSI Model",
+        "topics": [
+          {
+            "name": "Which layer of the OSI model handles error-free physical delivery via MAC addresses?",
+            "detail": "Layer 2 is responsible for node-to-node data transfer."
+          },
+          {
+            "name": "Which layer defines electrical and physical specifications for devices?",
+            "detail": "Layer 1 deals with cables, connectors, and signals."
+          },
+          {
+            "name": "Which layer is responsible for encryption and compression?",
+            "detail": "Layer 6 ensures data is in a usable format."
+          }
+        ]
+      },
+      {
+        "title": "Physical Infrastructure",
+        "topics": [
+          {
+            "name": "What is 'PoE'?",
+            "detail": "PoE allows data cables to also carry electrical power to devices like IP cameras."
+          },
+          {
+            "name": "Which cable type uses a laser as a light source?",
+            "detail": "Single-mode uses lasers for long-distance transmission."
+          },
+          {
+            "name": "What is the maximum length of a Cat5e cable segment?",
+            "detail": "Ethernet standards for twisted pair cables usually limit segments to 100m."
+          },
+          {
+            "name": "Which type of cable is least susceptible to EMI?",
+            "detail": "Fiber uses light instead of electricity, making it immune to electromagnetic interference."
+          }
+        ]
+      },
+      {
+        "title": "Routing",
+        "topics": [
+          {
+            "name": "Which command displays the routing table on a Cisco device?",
+            "detail": "This command list all routes known to the router."
+          },
+          {
+            "name": "Which device connects multiple networks and makes path decisions?",
+            "detail": "Routers operate at Layer 3 and route traffic between different networks."
+          },
+          {
+            "name": "Which routing protocol is known as the protocol of the internet?",
+            "detail": "Border Gateway Protocol (BGP) manages routing between autonomous systems on the web."
+          },
+          {
+            "name": "What does a Gateway do?",
+            "detail": "A gateway serves as an entry/exit point for data between networks."
+          }
+        ]
+      },
+      {
+        "title": "Security Fundamentals",
+        "topics": [
+          {
+            "name": "Which type of VPN connects two locations directly?",
+            "detail": "Site-to-Site VPNs connect entire branch offices to headquarters."
+          },
+          {
+            "name": "Which protocol is used to securely transfer files?",
+            "detail": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer."
+          },
+          {
+            "name": "What is the standard port for SSH?",
+            "detail": "Secure Shell (SSH) uses port 22 by default."
+          },
+          {
+            "name": "What is the port for HTTPS?",
+            "detail": "HTTPS (Secure) uses port 443."
+          },
+          {
+            "name": "What is an 'ACL' in networking?",
+            "detail": "ACLs filter network traffic based on rules."
+          }
+        ]
+      },
+      {
+        "title": "Switching",
+        "topics": [
+          {
+            "name": "What does a 'Collision Domain' refer to?",
+            "detail": "Switches break up collision domains per port."
+          },
+          {
+            "name": "Which device operates at Layer 2 and makes forwarding decisions based on MAC addresses?",
+            "detail": "Switches are more efficient than hubs as they only send data to the intended port."
+          },
+          {
+            "name": "What does 'VLAN Tagging' (802.1Q) allow?",
+            "detail": "Tagging adds a header to indicate which VLAN a frame belongs to."
+          }
+        ]
+      },
+      {
+        "title": "Wireless",
+        "topics": [
+          {
+            "name": "Which wireless standard supports speeds up to 6.9 Gbps in the 5GHz band?",
+            "detail": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n."
+          },
+          {
+            "name": "Which device is used to extend the range of a Wi-Fi signal?",
+            "detail": "APs provide wireless connectivity to a wired network."
           }
         ]
       }
@@ -3474,7 +4993,8 @@ export const certifications = [
         ],
         "answer": "show ip route",
         "category": "Domain Review",
-        "explanation": "This command list all routes known to the router."
+        "explanation": "This command list all routes known to the router.",
+        "topic": "Routing"
       },
       {
         "id": "network-plus-q2",
@@ -3487,7 +5007,8 @@ export const certifications = [
         ],
         "answer": "Site-to-Site",
         "category": "Domain Review",
-        "explanation": "Site-to-Site VPNs connect entire branch offices to headquarters."
+        "explanation": "Site-to-Site VPNs connect entire branch offices to headquarters.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "network-plus-q3",
@@ -3500,7 +5021,8 @@ export const certifications = [
         ],
         "answer": "A group of devices where data packets can collide",
         "category": "Domain Review",
-        "explanation": "Switches break up collision domains per port."
+        "explanation": "Switches break up collision domains per port.",
+        "topic": "Switching"
       },
       {
         "id": "network-plus-q4",
@@ -3513,7 +5035,8 @@ export const certifications = [
         ],
         "answer": "Star",
         "category": "Domain Review",
-        "explanation": "In a Star topology, if the central hub fails, the whole network goes down."
+        "explanation": "In a Star topology, if the central hub fails, the whole network goes down.",
+        "topic": "Networking Core"
       },
       {
         "id": "network-plus-q5",
@@ -3526,7 +5049,8 @@ export const certifications = [
         ],
         "answer": "Router",
         "category": "Domain Review",
-        "explanation": "Routers operate at Layer 3 and route traffic between different networks."
+        "explanation": "Routers operate at Layer 3 and route traffic between different networks.",
+        "topic": "Routing"
       },
       {
         "id": "network-plus-q6",
@@ -3539,7 +5063,8 @@ export const certifications = [
         ],
         "answer": "Resolve IP to MAC address",
         "category": "Domain Review",
-        "explanation": "Address Resolution Protocol (ARP) finds the hardware address for a known IP."
+        "explanation": "Address Resolution Protocol (ARP) finds the hardware address for a known IP.",
+        "topic": "Networking Core"
       },
       {
         "id": "network-plus-q7",
@@ -3552,7 +5077,8 @@ export const certifications = [
         ],
         "answer": "An address used to test the local system",
         "category": "Domain Review",
-        "explanation": "127.0.0.1 is the standard IPv4 loopback address."
+        "explanation": "127.0.0.1 is the standard IPv4 loopback address.",
+        "topic": "IP Services"
       },
       {
         "id": "network-plus-q8",
@@ -3565,7 +5091,8 @@ export const certifications = [
         ],
         "answer": "Data Link Layer",
         "category": "Domain Review",
-        "explanation": "Layer 2 is responsible for node-to-node data transfer."
+        "explanation": "Layer 2 is responsible for node-to-node data transfer.",
+        "topic": "OSI Model"
       },
       {
         "id": "network-plus-q9",
@@ -3578,7 +5105,8 @@ export const certifications = [
         ],
         "answer": "Prioritize important traffic",
         "category": "Domain Review",
-        "explanation": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice."
+        "explanation": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice.",
+        "topic": "Network Performance"
       },
       {
         "id": "network-plus-q10",
@@ -3591,7 +5119,8 @@ export const certifications = [
         ],
         "answer": "Power over Ethernet",
         "category": "Domain Review",
-        "explanation": "PoE allows data cables to also carry electrical power to devices like IP cameras."
+        "explanation": "PoE allows data cables to also carry electrical power to devices like IP cameras.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "network-plus-q11",
@@ -3604,7 +5133,8 @@ export const certifications = [
         ],
         "answer": "128 bits",
         "category": "Domain Review",
-        "explanation": "IPv6 addresses are 128 bits long, providing a massive address space."
+        "explanation": "IPv6 addresses are 128 bits long, providing a massive address space.",
+        "topic": "IP Services"
       },
       {
         "id": "network-plus-q12",
@@ -3617,7 +5147,8 @@ export const certifications = [
         ],
         "answer": "802.11ac",
         "category": "Domain Review",
-        "explanation": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n."
+        "explanation": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n.",
+        "topic": "Wireless"
       },
       {
         "id": "network-plus-q13",
@@ -3630,7 +5161,8 @@ export const certifications = [
         ],
         "answer": "Physical Layer",
         "category": "Domain Review",
-        "explanation": "Layer 1 deals with cables, connectors, and signals."
+        "explanation": "Layer 1 deals with cables, connectors, and signals.",
+        "topic": "OSI Model"
       },
       {
         "id": "network-plus-q14",
@@ -3643,7 +5175,8 @@ export const certifications = [
         ],
         "answer": "SFTP",
         "category": "Domain Review",
-        "explanation": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer."
+        "explanation": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "network-plus-q15",
@@ -3656,7 +5189,8 @@ export const certifications = [
         ],
         "answer": "NTP",
         "category": "Domain Review",
-        "explanation": "Network Time Protocol (NTP) ensures all devices have the correct time."
+        "explanation": "Network Time Protocol (NTP) ensures all devices have the correct time.",
+        "topic": "Network Services"
       },
       {
         "id": "network-plus-q16",
@@ -3669,7 +5203,8 @@ export const certifications = [
         ],
         "answer": "22",
         "category": "Domain Review",
-        "explanation": "Secure Shell (SSH) uses port 22 by default."
+        "explanation": "Secure Shell (SSH) uses port 22 by default.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "network-plus-q17",
@@ -3682,7 +5217,8 @@ export const certifications = [
         ],
         "answer": "Test network connectivity",
         "category": "Domain Review",
-        "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable."
+        "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "network-plus-q18",
@@ -3695,7 +5231,8 @@ export const certifications = [
         ],
         "answer": "DNS",
         "category": "Domain Review",
-        "explanation": "Domain Name System (DNS) maps human-readable names to IP addresses."
+        "explanation": "Domain Name System (DNS) maps human-readable names to IP addresses.",
+        "topic": "IP Services"
       },
       {
         "id": "network-plus-q19",
@@ -3708,7 +5245,8 @@ export const certifications = [
         ],
         "answer": "Single-mode Fiber",
         "category": "Domain Review",
-        "explanation": "Single-mode uses lasers for long-distance transmission."
+        "explanation": "Single-mode uses lasers for long-distance transmission.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "network-plus-q20",
@@ -3721,7 +5259,8 @@ export const certifications = [
         ],
         "answer": "Distribute traffic across multiple servers",
         "category": "Domain Review",
-        "explanation": "Load balancers improve reliability and performance by spreading load."
+        "explanation": "Load balancers improve reliability and performance by spreading load.",
+        "topic": "Network Services"
       },
       {
         "id": "network-plus-q21",
@@ -3734,7 +5273,8 @@ export const certifications = [
         ],
         "answer": "SNMP",
         "category": "Domain Review",
-        "explanation": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices."
+        "explanation": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices.",
+        "topic": "Network Services"
       },
       {
         "id": "network-plus-q22",
@@ -3747,7 +5287,8 @@ export const certifications = [
         ],
         "answer": "Access Point",
         "category": "Domain Review",
-        "explanation": "APs provide wireless connectivity to a wired network."
+        "explanation": "APs provide wireless connectivity to a wired network.",
+        "topic": "Wireless"
       },
       {
         "id": "network-plus-q23",
@@ -3760,7 +5301,8 @@ export const certifications = [
         ],
         "answer": "RDP",
         "category": "Domain Review",
-        "explanation": "Remote Desktop Protocol (RDP) allows controlling a remote computer."
+        "explanation": "Remote Desktop Protocol (RDP) allows controlling a remote computer.",
+        "topic": "Network Services"
       },
       {
         "id": "network-plus-q24",
@@ -3773,7 +5315,8 @@ export const certifications = [
         ],
         "answer": "POP3",
         "category": "Domain Review",
-        "explanation": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server."
+        "explanation": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server.",
+        "topic": "Network Services"
       },
       {
         "id": "network-plus-q25",
@@ -3786,7 +5329,8 @@ export const certifications = [
         ],
         "answer": "48 bits",
         "category": "Domain Review",
-        "explanation": "MAC addresses are 6-byte (48-bit) unique identifiers."
+        "explanation": "MAC addresses are 6-byte (48-bit) unique identifiers.",
+        "topic": "Networking Core"
       },
       {
         "id": "network-plus-q26",
@@ -3799,7 +5343,8 @@ export const certifications = [
         ],
         "answer": "HTTP",
         "category": "Domain Review",
-        "explanation": "Hypertext Transfer Protocol (HTTP) is the foundation of data exchange on the web."
+        "explanation": "Hypertext Transfer Protocol (HTTP) is the foundation of data exchange on the web.",
+        "topic": "Network Services"
       },
       {
         "id": "network-plus-q27",
@@ -3812,7 +5357,8 @@ export const certifications = [
         ],
         "answer": "Switch",
         "category": "Domain Review",
-        "explanation": "Switches are more efficient than hubs as they only send data to the intended port."
+        "explanation": "Switches are more efficient than hubs as they only send data to the intended port.",
+        "topic": "Switching"
       },
       {
         "id": "network-plus-q28",
@@ -3825,7 +5371,8 @@ export const certifications = [
         ],
         "answer": "Variation in packet delay",
         "category": "Domain Review",
-        "explanation": "Low jitter is critical for real-time services like VoIP."
+        "explanation": "Low jitter is critical for real-time services like VoIP.",
+        "topic": "Network Performance"
       },
       {
         "id": "network-plus-q29",
@@ -3838,7 +5385,8 @@ export const certifications = [
         ],
         "answer": "Data can flow both ways simultaneously",
         "category": "Domain Review",
-        "explanation": "Full-duplex communication allows concurrent sending and receiving."
+        "explanation": "Full-duplex communication allows concurrent sending and receiving.",
+        "topic": "Networking Core"
       },
       {
         "id": "network-plus-q30",
@@ -3851,7 +5399,8 @@ export const certifications = [
         ],
         "answer": "Divide a large network into smaller ones",
         "category": "Domain Review",
-        "explanation": "Subnetting improves organization and security."
+        "explanation": "Subnetting improves organization and security.",
+        "topic": "IP Services"
       },
       {
         "id": "network-plus-q31",
@@ -3864,7 +5413,8 @@ export const certifications = [
         ],
         "answer": "21",
         "category": "Domain Review",
-        "explanation": "File Transfer Protocol (FTP) uses port 21 for control."
+        "explanation": "File Transfer Protocol (FTP) uses port 21 for control.",
+        "topic": "Network Services"
       },
       {
         "id": "network-plus-q32",
@@ -3877,7 +5427,8 @@ export const certifications = [
         ],
         "answer": "443",
         "category": "Domain Review",
-        "explanation": "HTTPS (Secure) uses port 443."
+        "explanation": "HTTPS (Secure) uses port 443.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "network-plus-q33",
@@ -3890,7 +5441,8 @@ export const certifications = [
         ],
         "answer": "tracert",
         "category": "Domain Review",
-        "explanation": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination."
+        "explanation": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "network-plus-q34",
@@ -3903,7 +5455,8 @@ export const certifications = [
         ],
         "answer": "Identifying traffic for different VLANs on a trunk",
         "category": "Domain Review",
-        "explanation": "Tagging adds a header to indicate which VLAN a frame belongs to."
+        "explanation": "Tagging adds a header to indicate which VLAN a frame belongs to.",
+        "topic": "Switching"
       },
       {
         "id": "network-plus-q35",
@@ -3916,7 +5469,8 @@ export const certifications = [
         ],
         "answer": "Presentation Layer",
         "category": "Domain Review",
-        "explanation": "Layer 6 ensures data is in a usable format."
+        "explanation": "Layer 6 ensures data is in a usable format.",
+        "topic": "OSI Model"
       },
       {
         "id": "network-plus-q36",
@@ -3929,7 +5483,8 @@ export const certifications = [
         ],
         "answer": "nslookup",
         "category": "Domain Review",
-        "explanation": "nslookup is used to query DNS servers for information."
+        "explanation": "nslookup is used to query DNS servers for information.",
+        "topic": "IP Services"
       },
       {
         "id": "network-plus-q37",
@@ -3942,7 +5497,8 @@ export const certifications = [
         ],
         "answer": "DNS",
         "category": "Domain Review",
-        "explanation": "DNS uses both UDP and TCP on port 53."
+        "explanation": "DNS uses both UDP and TCP on port 53.",
+        "topic": "IP Services"
       },
       {
         "id": "network-plus-q38",
@@ -3955,7 +5511,8 @@ export const certifications = [
         ],
         "answer": "BGP",
         "category": "Domain Review",
-        "explanation": "Border Gateway Protocol (BGP) manages routing between autonomous systems on the web."
+        "explanation": "Border Gateway Protocol (BGP) manages routing between autonomous systems on the web.",
+        "topic": "Routing"
       },
       {
         "id": "network-plus-q39",
@@ -3968,7 +5525,8 @@ export const certifications = [
         ],
         "answer": "all of the above",
         "category": "Domain Review",
-        "explanation": "All these commands can be used to find the physical address."
+        "explanation": "All these commands can be used to find the physical address.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "network-plus-q40",
@@ -3981,7 +5539,8 @@ export const certifications = [
         ],
         "answer": "Dynamic Host Configuration Protocol",
         "category": "Domain Review",
-        "explanation": "DHCP automatically assigns IP addresses to devices on a network."
+        "explanation": "DHCP automatically assigns IP addresses to devices on a network.",
+        "topic": "IP Services"
       },
       {
         "id": "network-plus-q41",
@@ -3994,7 +5553,8 @@ export const certifications = [
         ],
         "answer": "Detecting collisions in Ethernet",
         "category": "Domain Review",
-        "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol."
+        "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol.",
+        "topic": "Networking Core"
       },
       {
         "id": "network-plus-q42",
@@ -4007,7 +5567,8 @@ export const certifications = [
         ],
         "answer": "Connects different networks",
         "category": "Domain Review",
-        "explanation": "A gateway serves as an entry/exit point for data between networks."
+        "explanation": "A gateway serves as an entry/exit point for data between networks.",
+        "topic": "Routing"
       },
       {
         "id": "network-plus-q43",
@@ -4020,7 +5581,8 @@ export const certifications = [
         ],
         "answer": "100 meters",
         "category": "Domain Review",
-        "explanation": "Ethernet standards for twisted pair cables usually limit segments to 100m."
+        "explanation": "Ethernet standards for twisted pair cables usually limit segments to 100m.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "network-plus-q44",
@@ -4033,7 +5595,8 @@ export const certifications = [
         ],
         "answer": "Maximum Transmission Unit",
         "category": "Domain Review",
-        "explanation": "MTU is the largest packet size a network can handle."
+        "explanation": "MTU is the largest packet size a network can handle.",
+        "topic": "Networking Core"
       },
       {
         "id": "network-plus-q45",
@@ -4046,7 +5609,8 @@ export const certifications = [
         ],
         "answer": "Translate private IPs to public IPs",
         "category": "Domain Review",
-        "explanation": "Network Address Translation (NAT) allows multiple devices to share one public IP."
+        "explanation": "Network Address Translation (NAT) allows multiple devices to share one public IP.",
+        "topic": "IP Services"
       },
       {
         "id": "network-plus-q46",
@@ -4059,7 +5623,8 @@ export const certifications = [
         ],
         "answer": "Devices can send or receive but not both at once",
         "category": "Domain Review",
-        "explanation": "Older hubs and walkie-talkies are half-duplex."
+        "explanation": "Older hubs and walkie-talkies are half-duplex.",
+        "topic": "Networking Core"
       },
       {
         "id": "network-plus-q47",
@@ -4072,7 +5637,8 @@ export const certifications = [
         ],
         "answer": "10.0.0.0 - 10.255.255.255",
         "category": "Domain Review",
-        "explanation": "The 10.0.0.0/8 block is reserved for private Class A networks."
+        "explanation": "The 10.0.0.0/8 block is reserved for private Class A networks.",
+        "topic": "IP Services"
       },
       {
         "id": "network-plus-q48",
@@ -4085,7 +5651,8 @@ export const certifications = [
         ],
         "answer": "Classless Inter-Domain Routing",
         "category": "Domain Review",
-        "explanation": "CIDR replaced the older classful IP addressing system."
+        "explanation": "CIDR replaced the older classful IP addressing system.",
+        "topic": "IP Services"
       },
       {
         "id": "network-plus-q49",
@@ -4098,7 +5665,8 @@ export const certifications = [
         ],
         "answer": "Access Control List",
         "category": "Domain Review",
-        "explanation": "ACLs filter network traffic based on rules."
+        "explanation": "ACLs filter network traffic based on rules.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "network-plus-q50",
@@ -4111,7 +5679,8 @@ export const certifications = [
         ],
         "answer": "Fiber Optic",
         "category": "Domain Review",
-        "explanation": "Fiber uses light instead of electricity, making it immune to electromagnetic interference."
+        "explanation": "Fiber uses light instead of electricity, making it immune to electromagnetic interference.",
+        "topic": "Physical Infrastructure"
       }
     ]
   },
@@ -4127,11 +5696,257 @@ export const certifications = [
     "description": "Implementing and operating core network technologies.",
     "reviewer": [
       {
-        "title": "Networking Fundamentals",
+        "title": "IP Services",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for CCNP Enterprise ENCOR."
+            "name": "What is the range of private IP addresses for Class A?",
+            "detail": "The 10.0.0.0/8 block is reserved for private Class A networks."
+          },
+          {
+            "name": "Which protocol resolves domain names to IP addresses?",
+            "detail": "Domain Name System (DNS) maps human-readable names to IP addresses."
+          },
+          {
+            "name": "What is the bit length of an IPv6 address?",
+            "detail": "IPv6 addresses are 128 bits long, providing a massive address space."
+          },
+          {
+            "name": "What is the purpose of 'NAT'?",
+            "detail": "Network Address Translation (NAT) allows multiple devices to share one public IP."
+          },
+          {
+            "name": "What is the default subnet mask for a Class C network?",
+            "detail": "Class C networks have a /24 mask."
+          },
+          {
+            "name": "Which command checks the reachability of a DNS server?",
+            "detail": "nslookup is used to query DNS servers for information."
+          },
+          {
+            "name": "What is the function of a 'Subnet'?",
+            "detail": "Subnetting improves organization and security."
+          },
+          {
+            "name": "What is a 'Loopback' address?",
+            "detail": "127.0.0.1 is the standard IPv4 loopback address."
+          },
+          {
+            "name": "Which protocol uses port 53?",
+            "detail": "DNS uses both UDP and TCP on port 53."
+          }
+        ]
+      },
+      {
+        "title": "Network Performance",
+        "topics": [
+          {
+            "name": "What is 'Jitter' in networking?",
+            "detail": "Low jitter is critical for real-time services like VoIP."
+          },
+          {
+            "name": "What is the purpose of 'QoS'?",
+            "detail": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice."
+          }
+        ]
+      },
+      {
+        "title": "Network Services",
+        "topics": [
+          {
+            "name": "Which protocol is used for transferring web pages?",
+            "detail": "Hypertext Transfer Protocol (HTTP) is the foundation of data exchange on the web."
+          },
+          {
+            "name": "What is the primary function of a Load Balancer?",
+            "detail": "Load balancers improve reliability and performance by spreading load."
+          },
+          {
+            "name": "Which protocol is commonly used for network management and monitoring?",
+            "detail": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices."
+          },
+          {
+            "name": "Which protocol is used for synchronizing clocks on a network?",
+            "detail": "Network Time Protocol (NTP) ensures all devices have the correct time."
+          },
+          {
+            "name": "Which protocol is used to retrieve emails from a server and delete them after?",
+            "detail": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server."
+          },
+          {
+            "name": "Which protocol uses port 25?",
+            "detail": "Simple Mail Transfer Protocol (SMTP) handles outgoing emails."
+          },
+          {
+            "name": "Which protocol uses port 3389?",
+            "detail": "Remote Desktop Protocol (RDP) allows controlling a remote computer."
+          }
+        ]
+      },
+      {
+        "title": "Network Troubleshooting",
+        "topics": [
+          {
+            "name": "What is the purpose of the 'ping' command?",
+            "detail": "Ping uses ICMP Echo Request messages to check if a remote host is reachable."
+          },
+          {
+            "name": "Which command shows the MAC address on a Windows PC?",
+            "detail": "All these commands can be used to find the physical address."
+          },
+          {
+            "name": "Which command is used to trace the path a packet takes to its destination?",
+            "detail": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination."
+          }
+        ]
+      },
+      {
+        "title": "Networking Core",
+        "topics": [
+          {
+            "name": "Which topology connects all devices to a central hub?",
+            "detail": "In a Star topology, if the central hub fails, the whole network goes down."
+          },
+          {
+            "name": "What does 'full-duplex' mean?",
+            "detail": "Full-duplex communication allows concurrent sending and receiving."
+          },
+          {
+            "name": "What does 'MTU' stand for?",
+            "detail": "MTU is the largest packet size a network can handle."
+          },
+          {
+            "name": "What is 'Half-Duplex'?",
+            "detail": "Older hubs and walkie-talkies are half-duplex."
+          },
+          {
+            "name": "What is the bit length of a MAC address?",
+            "detail": "MAC addresses are 6-byte (48-bit) unique identifiers."
+          },
+          {
+            "name": "What is 'CSMA/CD' used for?",
+            "detail": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol."
+          }
+        ]
+      },
+      {
+        "title": "OSI Model",
+        "topics": [
+          {
+            "name": "Which layer is responsible for encryption and compression?",
+            "detail": "Layer 6 ensures data is in a usable format."
+          },
+          {
+            "name": "Which layer of the OSI model handles error-free physical delivery via MAC addresses?",
+            "detail": "Layer 2 is responsible for node-to-node data transfer."
+          },
+          {
+            "name": "Which layer defines electrical and physical specifications for devices?",
+            "detail": "Layer 1 deals with cables, connectors, and signals."
+          }
+        ]
+      },
+      {
+        "title": "Physical Infrastructure",
+        "topics": [
+          {
+            "name": "What is 'PoE'?",
+            "detail": "PoE allows data cables to also carry electrical power to devices like IP cameras."
+          },
+          {
+            "name": "Which cable type uses a laser as a light source?",
+            "detail": "Single-mode uses lasers for long-distance transmission."
+          },
+          {
+            "name": "Which type of cable is least susceptible to EMI?",
+            "detail": "Fiber uses light instead of electricity, making it immune to electromagnetic interference."
+          },
+          {
+            "name": "What is the maximum length of a Cat5e cable segment?",
+            "detail": "Ethernet standards for twisted pair cables usually limit segments to 100m."
+          }
+        ]
+      },
+      {
+        "title": "Routing",
+        "topics": [
+          {
+            "name": "Which device connects multiple networks and makes path decisions?",
+            "detail": "Routers operate at Layer 3 and route traffic between different networks."
+          },
+          {
+            "name": "Which routing protocol is known as the protocol of the internet?",
+            "detail": "Border Gateway Protocol (BGP) manages routing between autonomous systems on the web."
+          },
+          {
+            "name": "What does a Gateway do?",
+            "detail": "A gateway serves as an entry/exit point for data between networks."
+          },
+          {
+            "name": "Which command displays the routing table on a Cisco device?",
+            "detail": "This command list all routes known to the router."
+          }
+        ]
+      },
+      {
+        "title": "Security Fundamentals",
+        "topics": [
+          {
+            "name": "What is an 'ACL' in networking?",
+            "detail": "ACLs filter network traffic based on rules."
+          },
+          {
+            "name": "Which type of VPN connects two locations directly?",
+            "detail": "Site-to-Site VPNs connect entire branch offices to headquarters."
+          },
+          {
+            "name": "What is the port for HTTPS?",
+            "detail": "HTTPS (Secure) uses port 443."
+          },
+          {
+            "name": "Which protocol is used for securely browsing the web?",
+            "detail": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server."
+          },
+          {
+            "name": "What is the standard port for SSH?",
+            "detail": "Secure Shell (SSH) uses port 22 by default."
+          },
+          {
+            "name": "Which protocol is used to securely transfer files?",
+            "detail": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer."
+          }
+        ]
+      },
+      {
+        "title": "Switching",
+        "topics": [
+          {
+            "name": "What does a 'Collision Domain' refer to?",
+            "detail": "Switches break up collision domains per port."
+          },
+          {
+            "name": "What does 'VLAN Tagging' (802.1Q) allow?",
+            "detail": "Tagging adds a header to indicate which VLAN a frame belongs to."
+          },
+          {
+            "name": "Which device operates at Layer 2 and makes forwarding decisions based on MAC addresses?",
+            "detail": "Switches are more efficient than hubs as they only send data to the intended port."
+          },
+          {
+            "name": "What is 'STP' (Spanning Tree Protocol) used for?",
+            "detail": "STP ensures there is only one active path between two network nodes."
+          }
+        ]
+      },
+      {
+        "title": "Wireless",
+        "topics": [
+          {
+            "name": "Which wireless standard supports speeds up to 6.9 Gbps in the 5GHz band?",
+            "detail": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n."
+          },
+          {
+            "name": "Which device is used to extend the range of a Wi-Fi signal?",
+            "detail": "APs provide wireless connectivity to a wired network."
           }
         ]
       }
@@ -4148,7 +5963,8 @@ export const certifications = [
         ],
         "answer": "A group of devices where data packets can collide",
         "category": "Domain Review",
-        "explanation": "Switches break up collision domains per port."
+        "explanation": "Switches break up collision domains per port.",
+        "topic": "Switching"
       },
       {
         "id": "ccnp-encor-q2",
@@ -4161,7 +5977,8 @@ export const certifications = [
         ],
         "answer": "10.0.0.0 - 10.255.255.255",
         "category": "Domain Review",
-        "explanation": "The 10.0.0.0/8 block is reserved for private Class A networks."
+        "explanation": "The 10.0.0.0/8 block is reserved for private Class A networks.",
+        "topic": "IP Services"
       },
       {
         "id": "ccnp-encor-q3",
@@ -4174,7 +5991,8 @@ export const certifications = [
         ],
         "answer": "HTTP",
         "category": "Domain Review",
-        "explanation": "Hypertext Transfer Protocol (HTTP) is the foundation of data exchange on the web."
+        "explanation": "Hypertext Transfer Protocol (HTTP) is the foundation of data exchange on the web.",
+        "topic": "Network Services"
       },
       {
         "id": "ccnp-encor-q4",
@@ -4187,7 +6005,8 @@ export const certifications = [
         ],
         "answer": "Presentation Layer",
         "category": "Domain Review",
-        "explanation": "Layer 6 ensures data is in a usable format."
+        "explanation": "Layer 6 ensures data is in a usable format.",
+        "topic": "OSI Model"
       },
       {
         "id": "ccnp-encor-q5",
@@ -4200,7 +6019,8 @@ export const certifications = [
         ],
         "answer": "Distribute traffic across multiple servers",
         "category": "Domain Review",
-        "explanation": "Load balancers improve reliability and performance by spreading load."
+        "explanation": "Load balancers improve reliability and performance by spreading load.",
+        "topic": "Network Services"
       },
       {
         "id": "ccnp-encor-q6",
@@ -4213,7 +6033,8 @@ export const certifications = [
         ],
         "answer": "Star",
         "category": "Domain Review",
-        "explanation": "In a Star topology, if the central hub fails, the whole network goes down."
+        "explanation": "In a Star topology, if the central hub fails, the whole network goes down.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccnp-encor-q7",
@@ -4226,7 +6047,8 @@ export const certifications = [
         ],
         "answer": "Data can flow both ways simultaneously",
         "category": "Domain Review",
-        "explanation": "Full-duplex communication allows concurrent sending and receiving."
+        "explanation": "Full-duplex communication allows concurrent sending and receiving.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccnp-encor-q8",
@@ -4239,7 +6061,8 @@ export const certifications = [
         ],
         "answer": "Power over Ethernet",
         "category": "Domain Review",
-        "explanation": "PoE allows data cables to also carry electrical power to devices like IP cameras."
+        "explanation": "PoE allows data cables to also carry electrical power to devices like IP cameras.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "ccnp-encor-q9",
@@ -4252,7 +6075,8 @@ export const certifications = [
         ],
         "answer": "Maximum Transmission Unit",
         "category": "Domain Review",
-        "explanation": "MTU is the largest packet size a network can handle."
+        "explanation": "MTU is the largest packet size a network can handle.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccnp-encor-q10",
@@ -4265,7 +6089,8 @@ export const certifications = [
         ],
         "answer": "Router",
         "category": "Domain Review",
-        "explanation": "Routers operate at Layer 3 and route traffic between different networks."
+        "explanation": "Routers operate at Layer 3 and route traffic between different networks.",
+        "topic": "Routing"
       },
       {
         "id": "ccnp-encor-q11",
@@ -4278,7 +6103,8 @@ export const certifications = [
         ],
         "answer": "802.11ac",
         "category": "Domain Review",
-        "explanation": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n."
+        "explanation": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n.",
+        "topic": "Wireless"
       },
       {
         "id": "ccnp-encor-q12",
@@ -4291,7 +6117,8 @@ export const certifications = [
         ],
         "answer": "DNS",
         "category": "Domain Review",
-        "explanation": "Domain Name System (DNS) maps human-readable names to IP addresses."
+        "explanation": "Domain Name System (DNS) maps human-readable names to IP addresses.",
+        "topic": "IP Services"
       },
       {
         "id": "ccnp-encor-q13",
@@ -4304,7 +6131,8 @@ export const certifications = [
         ],
         "answer": "128 bits",
         "category": "Domain Review",
-        "explanation": "IPv6 addresses are 128 bits long, providing a massive address space."
+        "explanation": "IPv6 addresses are 128 bits long, providing a massive address space.",
+        "topic": "IP Services"
       },
       {
         "id": "ccnp-encor-q14",
@@ -4317,7 +6145,8 @@ export const certifications = [
         ],
         "answer": "Variation in packet delay",
         "category": "Domain Review",
-        "explanation": "Low jitter is critical for real-time services like VoIP."
+        "explanation": "Low jitter is critical for real-time services like VoIP.",
+        "topic": "Network Performance"
       },
       {
         "id": "ccnp-encor-q15",
@@ -4330,7 +6159,8 @@ export const certifications = [
         ],
         "answer": "Translate private IPs to public IPs",
         "category": "Domain Review",
-        "explanation": "Network Address Translation (NAT) allows multiple devices to share one public IP."
+        "explanation": "Network Address Translation (NAT) allows multiple devices to share one public IP.",
+        "topic": "IP Services"
       },
       {
         "id": "ccnp-encor-q16",
@@ -4343,7 +6173,8 @@ export const certifications = [
         ],
         "answer": "Test network connectivity",
         "category": "Domain Review",
-        "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable."
+        "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "ccnp-encor-q17",
@@ -4356,7 +6187,8 @@ export const certifications = [
         ],
         "answer": "SNMP",
         "category": "Domain Review",
-        "explanation": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices."
+        "explanation": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices.",
+        "topic": "Network Services"
       },
       {
         "id": "ccnp-encor-q18",
@@ -4369,7 +6201,8 @@ export const certifications = [
         ],
         "answer": "255.255.255.0",
         "category": "Domain Review",
-        "explanation": "Class C networks have a /24 mask."
+        "explanation": "Class C networks have a /24 mask.",
+        "topic": "IP Services"
       },
       {
         "id": "ccnp-encor-q19",
@@ -4382,7 +6215,8 @@ export const certifications = [
         ],
         "answer": "nslookup",
         "category": "Domain Review",
-        "explanation": "nslookup is used to query DNS servers for information."
+        "explanation": "nslookup is used to query DNS servers for information.",
+        "topic": "IP Services"
       },
       {
         "id": "ccnp-encor-q20",
@@ -4395,7 +6229,8 @@ export const certifications = [
         ],
         "answer": "Identifying traffic for different VLANs on a trunk",
         "category": "Domain Review",
-        "explanation": "Tagging adds a header to indicate which VLAN a frame belongs to."
+        "explanation": "Tagging adds a header to indicate which VLAN a frame belongs to.",
+        "topic": "Switching"
       },
       {
         "id": "ccnp-encor-q21",
@@ -4408,7 +6243,8 @@ export const certifications = [
         ],
         "answer": "Divide a large network into smaller ones",
         "category": "Domain Review",
-        "explanation": "Subnetting improves organization and security."
+        "explanation": "Subnetting improves organization and security.",
+        "topic": "IP Services"
       },
       {
         "id": "ccnp-encor-q22",
@@ -4421,7 +6257,8 @@ export const certifications = [
         ],
         "answer": "Switch",
         "category": "Domain Review",
-        "explanation": "Switches are more efficient than hubs as they only send data to the intended port."
+        "explanation": "Switches are more efficient than hubs as they only send data to the intended port.",
+        "topic": "Switching"
       },
       {
         "id": "ccnp-encor-q23",
@@ -4434,7 +6271,8 @@ export const certifications = [
         ],
         "answer": "Data Link Layer",
         "category": "Domain Review",
-        "explanation": "Layer 2 is responsible for node-to-node data transfer."
+        "explanation": "Layer 2 is responsible for node-to-node data transfer.",
+        "topic": "OSI Model"
       },
       {
         "id": "ccnp-encor-q24",
@@ -4447,7 +6285,8 @@ export const certifications = [
         ],
         "answer": "Access Control List",
         "category": "Domain Review",
-        "explanation": "ACLs filter network traffic based on rules."
+        "explanation": "ACLs filter network traffic based on rules.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccnp-encor-q25",
@@ -4460,7 +6299,8 @@ export const certifications = [
         ],
         "answer": "Site-to-Site",
         "category": "Domain Review",
-        "explanation": "Site-to-Site VPNs connect entire branch offices to headquarters."
+        "explanation": "Site-to-Site VPNs connect entire branch offices to headquarters.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccnp-encor-q26",
@@ -4473,7 +6313,8 @@ export const certifications = [
         ],
         "answer": "443",
         "category": "Domain Review",
-        "explanation": "HTTPS (Secure) uses port 443."
+        "explanation": "HTTPS (Secure) uses port 443.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccnp-encor-q27",
@@ -4486,7 +6327,8 @@ export const certifications = [
         ],
         "answer": "BGP",
         "category": "Domain Review",
-        "explanation": "Border Gateway Protocol (BGP) manages routing between autonomous systems on the web."
+        "explanation": "Border Gateway Protocol (BGP) manages routing between autonomous systems on the web.",
+        "topic": "Routing"
       },
       {
         "id": "ccnp-encor-q28",
@@ -4499,7 +6341,8 @@ export const certifications = [
         ],
         "answer": "Connects different networks",
         "category": "Domain Review",
-        "explanation": "A gateway serves as an entry/exit point for data between networks."
+        "explanation": "A gateway serves as an entry/exit point for data between networks.",
+        "topic": "Routing"
       },
       {
         "id": "ccnp-encor-q29",
@@ -4512,7 +6355,8 @@ export const certifications = [
         ],
         "answer": "HTTPS",
         "category": "Domain Review",
-        "explanation": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server."
+        "explanation": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccnp-encor-q30",
@@ -4525,7 +6369,8 @@ export const certifications = [
         ],
         "answer": "NTP",
         "category": "Domain Review",
-        "explanation": "Network Time Protocol (NTP) ensures all devices have the correct time."
+        "explanation": "Network Time Protocol (NTP) ensures all devices have the correct time.",
+        "topic": "Network Services"
       },
       {
         "id": "ccnp-encor-q31",
@@ -4538,7 +6383,8 @@ export const certifications = [
         ],
         "answer": "Single-mode Fiber",
         "category": "Domain Review",
-        "explanation": "Single-mode uses lasers for long-distance transmission."
+        "explanation": "Single-mode uses lasers for long-distance transmission.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "ccnp-encor-q32",
@@ -4551,7 +6397,8 @@ export const certifications = [
         ],
         "answer": "Devices can send or receive but not both at once",
         "category": "Domain Review",
-        "explanation": "Older hubs and walkie-talkies are half-duplex."
+        "explanation": "Older hubs and walkie-talkies are half-duplex.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccnp-encor-q33",
@@ -4564,7 +6411,8 @@ export const certifications = [
         ],
         "answer": "all of the above",
         "category": "Domain Review",
-        "explanation": "All these commands can be used to find the physical address."
+        "explanation": "All these commands can be used to find the physical address.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "ccnp-encor-q34",
@@ -4577,7 +6425,8 @@ export const certifications = [
         ],
         "answer": "Fiber Optic",
         "category": "Domain Review",
-        "explanation": "Fiber uses light instead of electricity, making it immune to electromagnetic interference."
+        "explanation": "Fiber uses light instead of electricity, making it immune to electromagnetic interference.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "ccnp-encor-q35",
@@ -4590,7 +6439,8 @@ export const certifications = [
         ],
         "answer": "Prevent network loops in switches",
         "category": "Domain Review",
-        "explanation": "STP ensures there is only one active path between two network nodes."
+        "explanation": "STP ensures there is only one active path between two network nodes.",
+        "topic": "Switching"
       },
       {
         "id": "ccnp-encor-q36",
@@ -4603,7 +6453,8 @@ export const certifications = [
         ],
         "answer": "An address used to test the local system",
         "category": "Domain Review",
-        "explanation": "127.0.0.1 is the standard IPv4 loopback address."
+        "explanation": "127.0.0.1 is the standard IPv4 loopback address.",
+        "topic": "IP Services"
       },
       {
         "id": "ccnp-encor-q37",
@@ -4616,7 +6467,8 @@ export const certifications = [
         ],
         "answer": "tracert",
         "category": "Domain Review",
-        "explanation": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination."
+        "explanation": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "ccnp-encor-q38",
@@ -4629,7 +6481,8 @@ export const certifications = [
         ],
         "answer": "Access Point",
         "category": "Domain Review",
-        "explanation": "APs provide wireless connectivity to a wired network."
+        "explanation": "APs provide wireless connectivity to a wired network.",
+        "topic": "Wireless"
       },
       {
         "id": "ccnp-encor-q39",
@@ -4642,7 +6495,8 @@ export const certifications = [
         ],
         "answer": "48 bits",
         "category": "Domain Review",
-        "explanation": "MAC addresses are 6-byte (48-bit) unique identifiers."
+        "explanation": "MAC addresses are 6-byte (48-bit) unique identifiers.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccnp-encor-q40",
@@ -4655,7 +6509,8 @@ export const certifications = [
         ],
         "answer": "22",
         "category": "Domain Review",
-        "explanation": "Secure Shell (SSH) uses port 22 by default."
+        "explanation": "Secure Shell (SSH) uses port 22 by default.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccnp-encor-q41",
@@ -4668,7 +6523,8 @@ export const certifications = [
         ],
         "answer": "DNS",
         "category": "Domain Review",
-        "explanation": "DNS uses both UDP and TCP on port 53."
+        "explanation": "DNS uses both UDP and TCP on port 53.",
+        "topic": "IP Services"
       },
       {
         "id": "ccnp-encor-q42",
@@ -4681,7 +6537,8 @@ export const certifications = [
         ],
         "answer": "show ip route",
         "category": "Domain Review",
-        "explanation": "This command list all routes known to the router."
+        "explanation": "This command list all routes known to the router.",
+        "topic": "Routing"
       },
       {
         "id": "ccnp-encor-q43",
@@ -4694,7 +6551,8 @@ export const certifications = [
         ],
         "answer": "SFTP",
         "category": "Domain Review",
-        "explanation": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer."
+        "explanation": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "ccnp-encor-q44",
@@ -4707,7 +6565,8 @@ export const certifications = [
         ],
         "answer": "100 meters",
         "category": "Domain Review",
-        "explanation": "Ethernet standards for twisted pair cables usually limit segments to 100m."
+        "explanation": "Ethernet standards for twisted pair cables usually limit segments to 100m.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "ccnp-encor-q45",
@@ -4720,7 +6579,8 @@ export const certifications = [
         ],
         "answer": "Physical Layer",
         "category": "Domain Review",
-        "explanation": "Layer 1 deals with cables, connectors, and signals."
+        "explanation": "Layer 1 deals with cables, connectors, and signals.",
+        "topic": "OSI Model"
       },
       {
         "id": "ccnp-encor-q46",
@@ -4733,7 +6593,8 @@ export const certifications = [
         ],
         "answer": "POP3",
         "category": "Domain Review",
-        "explanation": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server."
+        "explanation": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server.",
+        "topic": "Network Services"
       },
       {
         "id": "ccnp-encor-q47",
@@ -4746,7 +6607,8 @@ export const certifications = [
         ],
         "answer": "Prioritize important traffic",
         "category": "Domain Review",
-        "explanation": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice."
+        "explanation": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice.",
+        "topic": "Network Performance"
       },
       {
         "id": "ccnp-encor-q48",
@@ -4759,7 +6621,8 @@ export const certifications = [
         ],
         "answer": "Detecting collisions in Ethernet",
         "category": "Domain Review",
-        "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol."
+        "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol.",
+        "topic": "Networking Core"
       },
       {
         "id": "ccnp-encor-q49",
@@ -4772,7 +6635,8 @@ export const certifications = [
         ],
         "answer": "SMTP",
         "category": "Domain Review",
-        "explanation": "Simple Mail Transfer Protocol (SMTP) handles outgoing emails."
+        "explanation": "Simple Mail Transfer Protocol (SMTP) handles outgoing emails.",
+        "topic": "Network Services"
       },
       {
         "id": "ccnp-encor-q50",
@@ -4785,7 +6649,8 @@ export const certifications = [
         ],
         "answer": "RDP",
         "category": "Domain Review",
-        "explanation": "Remote Desktop Protocol (RDP) allows controlling a remote computer."
+        "explanation": "Remote Desktop Protocol (RDP) allows controlling a remote computer.",
+        "topic": "Network Services"
       }
     ]
   },
@@ -4801,11 +6666,232 @@ export const certifications = [
     "description": "The gold standard for info security professionals.",
     "reviewer": [
       {
-        "title": "Security Fundamentals",
+        "title": "Architecture",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Certified Information Systems Security Professional."
+            "name": "What is an 'Air Gap'?",
+            "detail": "Air-gapping is used for extremely high-security systems."
+          },
+          {
+            "name": "What is 'Mobile Device Management' (MDM)?",
+            "detail": "MDM allows enforcing security policies on employee phones."
+          },
+          {
+            "name": "What does 'WPA3' improve over WPA2?",
+            "detail": "WPA3 is the latest security standard for wireless networks."
+          },
+          {
+            "name": "What does a Firewall do?",
+            "detail": "Firewalls control incoming and outgoing network traffic based on an organization's security policy."
+          },
+          {
+            "name": "Which protocol provides a secure shell for remote access?",
+            "detail": "SSH is the secure alternative to the unencrypted Telnet."
+          },
+          {
+            "name": "What is a 'Firewall Policy'?",
+            "detail": "It dictates how the firewall handles various types of packets."
+          },
+          {
+            "name": "What is 'Data Loss Prevention' (DLP)?",
+            "detail": "DLP monitors data at rest, in use, and in transit."
+          },
+          {
+            "name": "What is 'Access Control'?",
+            "detail": "It involves identification, authentication, and authorization."
+          }
+        ]
+      },
+      {
+        "title": "Attacks & Threats",
+        "topics": [
+          {
+            "name": "What is the difference between a 'Virus' and a 'Worm'?",
+            "detail": "Worms can spread across a network without human interaction."
+          },
+          {
+            "name": "What is 'Cross-Site Scripting' (XSS)?",
+            "detail": "XSS can steal cookies and session info from users."
+          },
+          {
+            "name": "What is 'Shoulder Surfing'?",
+            "detail": "It's a low-tech social engineering technique."
+          },
+          {
+            "name": "What is 'Eavesdropping' in network security?",
+            "detail": "This is a passive attack against confidentiality."
+          },
+          {
+            "name": "What is 'Social Engineering'?",
+            "detail": "It exploits human psychology rather than technical flaws."
+          },
+          {
+            "name": "Which of these is a social engineering attack?",
+            "detail": "Tailgating involves physically following an authorized person into a secure area."
+          },
+          {
+            "name": "What is a 'Buffer Overflow'?",
+            "detail": "It can lead to system crashes or arbitrary code execution."
+          },
+          {
+            "name": "What is 'Whaling'?",
+            "detail": "Whaling targets 'big fish' like CEOs and CFOs."
+          },
+          {
+            "name": "What is 'Man-in-the-Middle' (MITM)?",
+            "detail": "The attacker can read or even modify the data being sent."
+          },
+          {
+            "name": "What is a 'Zero-Day' vulnerability?",
+            "detail": "Zero-day threats have no available patch at the time of discovery."
+          },
+          {
+            "name": "What does 'DDoS' stand for?",
+            "detail": "DDoS attacks overwhelm a target with traffic from multiple sources."
+          },
+          {
+            "name": "What is a 'Rootkit'?",
+            "detail": "Rootkits operate at a deep level of the OS to remain undetected."
+          },
+          {
+            "name": "What is 'Pharmimg'?",
+            "detail": "Users think they are on a real site but are actually on a malicious one."
+          },
+          {
+            "name": "What is 'War Driving'?",
+            "detail": "Attackers use this to find vulnerable wireless networks to exploit."
+          },
+          {
+            "name": "What is Ransomware?",
+            "detail": "Ransomware locks users out of their data until a ransom is paid."
+          },
+          {
+            "name": "What is a 'Botnet'?",
+            "detail": "Botnets are used for large-scale attacks like DDoS."
+          },
+          {
+            "name": "What is a 'Logic Bomb'?",
+            "detail": "Logic bombs can be planted by malicious insiders."
+          },
+          {
+            "name": "What is a 'Backdoor'?",
+            "detail": "Backdoors can be used for maintenance or by attackers for persistence."
+          },
+          {
+            "name": "What is 'SQL Injection'?",
+            "detail": "SQLi can allow attackers to read or modify sensitive database data."
+          }
+        ]
+      },
+      {
+        "title": "Governance",
+        "topics": [
+          {
+            "name": "What is 'Authorization'?",
+            "detail": "It defines the permissions and rights of a user."
+          },
+          {
+            "name": "What is 'BYOD'?",
+            "detail": "A policy allowing employees to use personal devices for work."
+          },
+          {
+            "name": "What is the 'Principle of Least Privilege'?",
+            "detail": "This minimizes potential impact of a security breach."
+          }
+        ]
+      },
+      {
+        "title": "Implementation",
+        "topics": [
+          {
+            "name": "What is 'Two-Factor Authentication' (2FA)?",
+            "detail": "It adds an extra layer of security beyond just a password."
+          },
+          {
+            "name": "Which of these is a form of Symmetric encryption?",
+            "detail": "Advanced Encryption Standard (AES) is the most common symmetric cipher."
+          },
+          {
+            "name": "What is 'Decryption'?",
+            "detail": "The reverse of encryption, usually requiring a key."
+          },
+          {
+            "name": "What is a 'Private Key'?",
+            "detail": "The private key is used for decryption or creating digital signatures."
+          },
+          {
+            "name": "Which of these is used for 'Non-repudiation'?",
+            "detail": "Non-repudiation ensures a sender cannot deny having sent a message."
+          },
+          {
+            "name": "What is 'Steganography'?",
+            "detail": "Data is hidden in plain sight, making it hard to detect."
+          },
+          {
+            "name": "What is Multi-Factor Authentication (MFA)?",
+            "detail": "MFA combines something you know, something you have, and/or something you are."
+          },
+          {
+            "name": "What is the purpose of Hashing?",
+            "detail": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."
+          },
+          {
+            "name": "What is 'Encryption'?",
+            "detail": "Encryption protects data from being read by unauthorized parties."
+          },
+          {
+            "name": "What is 'Biometrics'?",
+            "detail": "Examples include fingerprints, iris scans, and facial recognition."
+          },
+          {
+            "name": "What is a 'Public Key'?",
+            "detail": "In asymmetric encryption, the public key is used for encryption."
+          }
+        ]
+      },
+      {
+        "title": "Operations",
+        "topics": [
+          {
+            "name": "What is a 'Penetration Test'?",
+            "detail": "Pen-tests provide a deep assessment of an organization's security posture."
+          },
+          {
+            "name": "What is the purpose of an 'IDS'?",
+            "detail": "Intrusion Detection Systems monitor and alert for suspicious activity."
+          },
+          {
+            "name": "What is an 'Audit Trail'?",
+            "detail": "Audit trails are crucial for incident investigation and compliance."
+          },
+          {
+            "name": "What is the purpose of 'Sandboxing'?",
+            "detail": "Sandboxing prevents malware from affecting the host system."
+          },
+          {
+            "name": "What is a 'Honey Pot'?",
+            "detail": "Honeypots help researchers study attacker behavior and deflect them from real targets."
+          }
+        ]
+      },
+      {
+        "title": "Security Core",
+        "topics": [
+          {
+            "name": "What is 'Identification' in security?",
+            "detail": "The first step in the access control process."
+          },
+          {
+            "name": "What does 'Integrity' mean in security?",
+            "detail": "Integrity ensures data is accurate and trustworthy."
+          },
+          {
+            "name": "What is the goal of 'Confidentiality' in the CIA triad?",
+            "detail": "Confidentiality prevents unauthorized disclosure of information."
+          },
+          {
+            "name": "What is 'Authentication'?",
+            "detail": "Usually involves a password, token, or biometric trait."
           }
         ]
       }
@@ -4822,7 +6908,8 @@ export const certifications = [
         ],
         "answer": "Stating who you are (e.g., username)",
         "category": "Domain Review",
-        "explanation": "The first step in the access control process."
+        "explanation": "The first step in the access control process.",
+        "topic": "Security Core"
       },
       {
         "id": "cissp-q2",
@@ -4835,7 +6922,8 @@ export const certifications = [
         ],
         "answer": "Determining what an authenticated user can do",
         "category": "Domain Review",
-        "explanation": "It defines the permissions and rights of a user."
+        "explanation": "It defines the permissions and rights of a user.",
+        "topic": "Governance"
       },
       {
         "id": "cissp-q3",
@@ -4848,7 +6936,8 @@ export const certifications = [
         ],
         "answer": "Physically isolating a computer from any network",
         "category": "Domain Review",
-        "explanation": "Air-gapping is used for extremely high-security systems."
+        "explanation": "Air-gapping is used for extremely high-security systems.",
+        "topic": "Architecture"
       },
       {
         "id": "cissp-q4",
@@ -4861,7 +6950,8 @@ export const certifications = [
         ],
         "answer": "Using two different types of credentials",
         "category": "Domain Review",
-        "explanation": "It adds an extra layer of security beyond just a password."
+        "explanation": "It adds an extra layer of security beyond just a password.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q5",
@@ -4874,7 +6964,8 @@ export const certifications = [
         ],
         "answer": "Worms replicate automatically; viruses need host files",
         "category": "Domain Review",
-        "explanation": "Worms can spread across a network without human interaction."
+        "explanation": "Worms can spread across a network without human interaction.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q6",
@@ -4887,7 +6978,8 @@ export const certifications = [
         ],
         "answer": "Bring Your Own Device",
         "category": "Domain Review",
-        "explanation": "A policy allowing employees to use personal devices for work."
+        "explanation": "A policy allowing employees to use personal devices for work.",
+        "topic": "Governance"
       },
       {
         "id": "cissp-q7",
@@ -4900,7 +6992,8 @@ export const certifications = [
         ],
         "answer": "Injecting malicious scripts into web pages",
         "category": "Domain Review",
-        "explanation": "XSS can steal cookies and session info from users."
+        "explanation": "XSS can steal cookies and session info from users.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q8",
@@ -4913,7 +7006,8 @@ export const certifications = [
         ],
         "answer": "AES",
         "category": "Domain Review",
-        "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher."
+        "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q9",
@@ -4926,7 +7020,8 @@ export const certifications = [
         ],
         "answer": "Converting ciphertext back into plaintext",
         "category": "Domain Review",
-        "explanation": "The reverse of encryption, usually requiring a key."
+        "explanation": "The reverse of encryption, usually requiring a key.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q10",
@@ -4939,7 +7034,8 @@ export const certifications = [
         ],
         "answer": "Watching someone enter their password",
         "category": "Domain Review",
-        "explanation": "It's a low-tech social engineering technique."
+        "explanation": "It's a low-tech social engineering technique.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q11",
@@ -4952,7 +7048,8 @@ export const certifications = [
         ],
         "answer": "An authorized simulated attack to find flaws",
         "category": "Domain Review",
-        "explanation": "Pen-tests provide a deep assessment of an organization's security posture."
+        "explanation": "Pen-tests provide a deep assessment of an organization's security posture.",
+        "topic": "Operations"
       },
       {
         "id": "cissp-q12",
@@ -4965,7 +7062,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data has not been tampered with",
         "category": "Domain Review",
-        "explanation": "Integrity ensures data is accurate and trustworthy."
+        "explanation": "Integrity ensures data is accurate and trustworthy.",
+        "topic": "Security Core"
       },
       {
         "id": "cissp-q13",
@@ -4978,7 +7076,8 @@ export const certifications = [
         ],
         "answer": "A secret key known only to the owner",
         "category": "Domain Review",
-        "explanation": "The private key is used for decryption or creating digital signatures."
+        "explanation": "The private key is used for decryption or creating digital signatures.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q14",
@@ -4991,7 +7090,8 @@ export const certifications = [
         ],
         "answer": "Unauthorized listening to private communication",
         "category": "Domain Review",
-        "explanation": "This is a passive attack against confidentiality."
+        "explanation": "This is a passive attack against confidentiality.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q15",
@@ -5004,7 +7104,8 @@ export const certifications = [
         ],
         "answer": "Software used to manage and secure mobile devices",
         "category": "Domain Review",
-        "explanation": "MDM allows enforcing security policies on employee phones."
+        "explanation": "MDM allows enforcing security policies on employee phones.",
+        "topic": "Architecture"
       },
       {
         "id": "cissp-q16",
@@ -5017,7 +7118,8 @@ export const certifications = [
         ],
         "answer": "Manipulating people into giving up info",
         "category": "Domain Review",
-        "explanation": "It exploits human psychology rather than technical flaws."
+        "explanation": "It exploits human psychology rather than technical flaws.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q17",
@@ -5030,7 +7132,8 @@ export const certifications = [
         ],
         "answer": "Ensure only authorized users can read data",
         "category": "Domain Review",
-        "explanation": "Confidentiality prevents unauthorized disclosure of information."
+        "explanation": "Confidentiality prevents unauthorized disclosure of information.",
+        "topic": "Security Core"
       },
       {
         "id": "cissp-q18",
@@ -5043,7 +7146,8 @@ export const certifications = [
         ],
         "answer": "Tailgating",
         "category": "Domain Review",
-        "explanation": "Tailgating involves physically following an authorized person into a secure area."
+        "explanation": "Tailgating involves physically following an authorized person into a secure area.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q19",
@@ -5056,7 +7160,8 @@ export const certifications = [
         ],
         "answer": "Better encryption and protection against brute force",
         "category": "Domain Review",
-        "explanation": "WPA3 is the latest security standard for wireless networks."
+        "explanation": "WPA3 is the latest security standard for wireless networks.",
+        "topic": "Architecture"
       },
       {
         "id": "cissp-q20",
@@ -5069,7 +7174,8 @@ export const certifications = [
         ],
         "answer": "Overwriting memory to execute malicious code",
         "category": "Domain Review",
-        "explanation": "It can lead to system crashes or arbitrary code execution."
+        "explanation": "It can lead to system crashes or arbitrary code execution.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q21",
@@ -5082,7 +7188,8 @@ export const certifications = [
         ],
         "answer": "Filter traffic based on security rules",
         "category": "Domain Review",
-        "explanation": "Firewalls control incoming and outgoing network traffic based on an organization's security policy."
+        "explanation": "Firewalls control incoming and outgoing network traffic based on an organization's security policy.",
+        "topic": "Architecture"
       },
       {
         "id": "cissp-q22",
@@ -5095,7 +7202,8 @@ export const certifications = [
         ],
         "answer": "A phishing attack targeted at high-level executives",
         "category": "Domain Review",
-        "explanation": "Whaling targets 'big fish' like CEOs and CFOs."
+        "explanation": "Whaling targets 'big fish' like CEOs and CFOs.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q23",
@@ -5108,7 +7216,8 @@ export const certifications = [
         ],
         "answer": "SSH",
         "category": "Domain Review",
-        "explanation": "SSH is the secure alternative to the unencrypted Telnet."
+        "explanation": "SSH is the secure alternative to the unencrypted Telnet.",
+        "topic": "Architecture"
       },
       {
         "id": "cissp-q24",
@@ -5121,7 +7230,8 @@ export const certifications = [
         ],
         "answer": "Detect unauthorized access",
         "category": "Domain Review",
-        "explanation": "Intrusion Detection Systems monitor and alert for suspicious activity."
+        "explanation": "Intrusion Detection Systems monitor and alert for suspicious activity.",
+        "topic": "Operations"
       },
       {
         "id": "cissp-q25",
@@ -5134,7 +7244,8 @@ export const certifications = [
         ],
         "answer": "Digital Signatures",
         "category": "Domain Review",
-        "explanation": "Non-repudiation ensures a sender cannot deny having sent a message."
+        "explanation": "Non-repudiation ensures a sender cannot deny having sent a message.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q26",
@@ -5147,7 +7258,8 @@ export const certifications = [
         ],
         "answer": "Intercepting communication between two parties",
         "category": "Domain Review",
-        "explanation": "The attacker can read or even modify the data being sent."
+        "explanation": "The attacker can read or even modify the data being sent.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q27",
@@ -5160,7 +7272,8 @@ export const certifications = [
         ],
         "answer": "Giving only necessary access to a user",
         "category": "Domain Review",
-        "explanation": "This minimizes potential impact of a security breach."
+        "explanation": "This minimizes potential impact of a security breach.",
+        "topic": "Governance"
       },
       {
         "id": "cissp-q28",
@@ -5173,7 +7286,8 @@ export const certifications = [
         ],
         "answer": "A flaw unknown to the vendor",
         "category": "Domain Review",
-        "explanation": "Zero-day threats have no available patch at the time of discovery."
+        "explanation": "Zero-day threats have no available patch at the time of discovery.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q29",
@@ -5186,7 +7300,8 @@ export const certifications = [
         ],
         "answer": "Hiding data within other data (like an image)",
         "category": "Domain Review",
-        "explanation": "Data is hidden in plain sight, making it hard to detect."
+        "explanation": "Data is hidden in plain sight, making it hard to detect.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q30",
@@ -5199,7 +7314,8 @@ export const certifications = [
         ],
         "answer": "Distributed Denial of Service",
         "category": "Domain Review",
-        "explanation": "DDoS attacks overwhelm a target with traffic from multiple sources."
+        "explanation": "DDoS attacks overwhelm a target with traffic from multiple sources.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q31",
@@ -5212,7 +7328,8 @@ export const certifications = [
         ],
         "answer": "A chronological record of system activities",
         "category": "Domain Review",
-        "explanation": "Audit trails are crucial for incident investigation and compliance."
+        "explanation": "Audit trails are crucial for incident investigation and compliance.",
+        "topic": "Operations"
       },
       {
         "id": "cissp-q32",
@@ -5225,7 +7342,8 @@ export const certifications = [
         ],
         "answer": "Using two or more different factors to verify identity",
         "category": "Domain Review",
-        "explanation": "MFA combines something you know, something you have, and/or something you are."
+        "explanation": "MFA combines something you know, something you have, and/or something you are.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q33",
@@ -5238,7 +7356,8 @@ export const certifications = [
         ],
         "answer": "Malware that hides its presence on a system",
         "category": "Domain Review",
-        "explanation": "Rootkits operate at a deep level of the OS to remain undetected."
+        "explanation": "Rootkits operate at a deep level of the OS to remain undetected.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q34",
@@ -5251,7 +7370,8 @@ export const certifications = [
         ],
         "answer": "Verifying that you are who you say you are",
         "category": "Domain Review",
-        "explanation": "Usually involves a password, token, or biometric trait."
+        "explanation": "Usually involves a password, token, or biometric trait.",
+        "topic": "Security Core"
       },
       {
         "id": "cissp-q35",
@@ -5264,7 +7384,8 @@ export const certifications = [
         ],
         "answer": "Redirecting users to a fake website by poisoning DNS",
         "category": "Domain Review",
-        "explanation": "Users think they are on a real site but are actually on a malicious one."
+        "explanation": "Users think they are on a real site but are actually on a malicious one.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q36",
@@ -5277,7 +7398,8 @@ export const certifications = [
         ],
         "answer": "Searching for Wi-Fi networks from a vehicle",
         "category": "Domain Review",
-        "explanation": "Attackers use this to find vulnerable wireless networks to exploit."
+        "explanation": "Attackers use this to find vulnerable wireless networks to exploit.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q37",
@@ -5290,7 +7412,8 @@ export const certifications = [
         ],
         "answer": "A set of rules that define allowed traffic",
         "category": "Domain Review",
-        "explanation": "It dictates how the firewall handles various types of packets."
+        "explanation": "It dictates how the firewall handles various types of packets.",
+        "topic": "Architecture"
       },
       {
         "id": "cissp-q38",
@@ -5303,7 +7426,8 @@ export const certifications = [
         ],
         "answer": "Tools to prevent sensitive data from leaving the network",
         "category": "Domain Review",
-        "explanation": "DLP monitors data at rest, in use, and in transit."
+        "explanation": "DLP monitors data at rest, in use, and in transit.",
+        "topic": "Architecture"
       },
       {
         "id": "cissp-q39",
@@ -5316,7 +7440,8 @@ export const certifications = [
         ],
         "answer": "Ensure data integrity",
         "category": "Domain Review",
-        "explanation": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."
+        "explanation": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q40",
@@ -5329,7 +7454,8 @@ export const certifications = [
         ],
         "answer": "Running suspicious programs in an isolated area",
         "category": "Domain Review",
-        "explanation": "Sandboxing prevents malware from affecting the host system."
+        "explanation": "Sandboxing prevents malware from affecting the host system.",
+        "topic": "Operations"
       },
       {
         "id": "cissp-q41",
@@ -5342,7 +7468,8 @@ export const certifications = [
         ],
         "answer": "Converting plaintext into ciphertext",
         "category": "Domain Review",
-        "explanation": "Encryption protects data from being read by unauthorized parties."
+        "explanation": "Encryption protects data from being read by unauthorized parties.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q42",
@@ -5355,7 +7482,8 @@ export const certifications = [
         ],
         "answer": "Restricting access to resources to authorized users",
         "category": "Domain Review",
-        "explanation": "It involves identification, authentication, and authorization."
+        "explanation": "It involves identification, authentication, and authorization.",
+        "topic": "Architecture"
       },
       {
         "id": "cissp-q43",
@@ -5368,7 +7496,8 @@ export const certifications = [
         ],
         "answer": "Malware that encrypts data and demands payment",
         "category": "Domain Review",
-        "explanation": "Ransomware locks users out of their data until a ransom is paid."
+        "explanation": "Ransomware locks users out of their data until a ransom is paid.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q44",
@@ -5381,7 +7510,8 @@ export const certifications = [
         ],
         "answer": "A network of infected computers",
         "category": "Domain Review",
-        "explanation": "Botnets are used for large-scale attacks like DDoS."
+        "explanation": "Botnets are used for large-scale attacks like DDoS.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q45",
@@ -5394,7 +7524,8 @@ export const certifications = [
         ],
         "answer": "Malware that triggers on a specific event or time",
         "category": "Domain Review",
-        "explanation": "Logic bombs can be planted by malicious insiders."
+        "explanation": "Logic bombs can be planted by malicious insiders.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q46",
@@ -5407,7 +7538,8 @@ export const certifications = [
         ],
         "answer": "Using physical traits for authentication",
         "category": "Domain Review",
-        "explanation": "Examples include fingerprints, iris scans, and facial recognition."
+        "explanation": "Examples include fingerprints, iris scans, and facial recognition.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q47",
@@ -5420,7 +7552,8 @@ export const certifications = [
         ],
         "answer": "A key that can be shared with anyone",
         "category": "Domain Review",
-        "explanation": "In asymmetric encryption, the public key is used for encryption."
+        "explanation": "In asymmetric encryption, the public key is used for encryption.",
+        "topic": "Implementation"
       },
       {
         "id": "cissp-q48",
@@ -5433,7 +7566,8 @@ export const certifications = [
         ],
         "answer": "A hidden way to bypass security",
         "category": "Domain Review",
-        "explanation": "Backdoors can be used for maintenance or by attackers for persistence."
+        "explanation": "Backdoors can be used for maintenance or by attackers for persistence.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cissp-q49",
@@ -5446,7 +7580,8 @@ export const certifications = [
         ],
         "answer": "A decoy system to lure attackers",
         "category": "Domain Review",
-        "explanation": "Honeypots help researchers study attacker behavior and deflect them from real targets."
+        "explanation": "Honeypots help researchers study attacker behavior and deflect them from real targets.",
+        "topic": "Operations"
       },
       {
         "id": "cissp-q50",
@@ -5459,7 +7594,8 @@ export const certifications = [
         ],
         "answer": "Injecting malicious SQL queries into an input field",
         "category": "Domain Review",
-        "explanation": "SQLi can allow attackers to read or modify sensitive database data."
+        "explanation": "SQLi can allow attackers to read or modify sensitive database data.",
+        "topic": "Attacks & Threats"
       }
     ]
   },
@@ -5475,11 +7611,232 @@ export const certifications = [
     "description": "Master the 5 phases of ethical hacking.",
     "reviewer": [
       {
-        "title": "Security Fundamentals",
+        "title": "Architecture",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Certified Ethical Hacker."
+            "name": "What is a 'Firewall Policy'?",
+            "detail": "It dictates how the firewall handles various types of packets."
+          },
+          {
+            "name": "What does 'WPA3' improve over WPA2?",
+            "detail": "WPA3 is the latest security standard for wireless networks."
+          },
+          {
+            "name": "What is an 'Air Gap'?",
+            "detail": "Air-gapping is used for extremely high-security systems."
+          },
+          {
+            "name": "What is 'Defense in Depth'?",
+            "detail": "If one layer fails, others are in place to stop the threat."
+          },
+          {
+            "name": "What does a Firewall do?",
+            "detail": "Firewalls control incoming and outgoing network traffic based on an organization's security policy."
+          },
+          {
+            "name": "Which protocol provides a secure shell for remote access?",
+            "detail": "SSH is the secure alternative to the unencrypted Telnet."
+          },
+          {
+            "name": "What is 'Mobile Device Management' (MDM)?",
+            "detail": "MDM allows enforcing security policies on employee phones."
+          },
+          {
+            "name": "What is 'Data Loss Prevention' (DLP)?",
+            "detail": "DLP monitors data at rest, in use, and in transit."
+          },
+          {
+            "name": "What is 'Access Control'?",
+            "detail": "It involves identification, authentication, and authorization."
+          }
+        ]
+      },
+      {
+        "title": "Attacks & Threats",
+        "topics": [
+          {
+            "name": "What is 'SQL Injection'?",
+            "detail": "SQLi can allow attackers to read or modify sensitive database data."
+          },
+          {
+            "name": "What is 'Eavesdropping' in network security?",
+            "detail": "This is a passive attack against confidentiality."
+          },
+          {
+            "name": "What is the difference between a 'Virus' and a 'Worm'?",
+            "detail": "Worms can spread across a network without human interaction."
+          },
+          {
+            "name": "What is a 'Trojan Horse'?",
+            "detail": "Trojans do not replicate themselves like viruses or worms."
+          },
+          {
+            "name": "What is a 'Zero-Day' vulnerability?",
+            "detail": "Zero-day threats have no available patch at the time of discovery."
+          },
+          {
+            "name": "What is 'Man-in-the-Middle' (MITM)?",
+            "detail": "The attacker can read or even modify the data being sent."
+          },
+          {
+            "name": "What is 'Pharmimg'?",
+            "detail": "Users think they are on a real site but are actually on a malicious one."
+          },
+          {
+            "name": "What is 'Shoulder Surfing'?",
+            "detail": "It's a low-tech social engineering technique."
+          },
+          {
+            "name": "What is a 'Logic Bomb'?",
+            "detail": "Logic bombs can be planted by malicious insiders."
+          },
+          {
+            "name": "What is a 'Rootkit'?",
+            "detail": "Rootkits operate at a deep level of the OS to remain undetected."
+          },
+          {
+            "name": "What is Ransomware?",
+            "detail": "Ransomware locks users out of their data until a ransom is paid."
+          },
+          {
+            "name": "What is 'Whaling'?",
+            "detail": "Whaling targets 'big fish' like CEOs and CFOs."
+          },
+          {
+            "name": "What is 'Spear Phishing'?",
+            "detail": "Spear phishing is highly customized and more effective than general phishing."
+          },
+          {
+            "name": "What is a 'Backdoor'?",
+            "detail": "Backdoors can be used for maintenance or by attackers for persistence."
+          },
+          {
+            "name": "What is a 'Buffer Overflow'?",
+            "detail": "It can lead to system crashes or arbitrary code execution."
+          },
+          {
+            "name": "What is 'War Driving'?",
+            "detail": "Attackers use this to find vulnerable wireless networks to exploit."
+          },
+          {
+            "name": "What is 'Cross-Site Scripting' (XSS)?",
+            "detail": "XSS can steal cookies and session info from users."
+          },
+          {
+            "name": "What is 'Social Engineering'?",
+            "detail": "It exploits human psychology rather than technical flaws."
+          },
+          {
+            "name": "Which of these is a social engineering attack?",
+            "detail": "Tailgating involves physically following an authorized person into a secure area."
+          },
+          {
+            "name": "What does 'DDoS' stand for?",
+            "detail": "DDoS attacks overwhelm a target with traffic from multiple sources."
+          }
+        ]
+      },
+      {
+        "title": "Governance",
+        "topics": [
+          {
+            "name": "What is the 'Principle of Least Privilege'?",
+            "detail": "This minimizes potential impact of a security breach."
+          },
+          {
+            "name": "What is 'Authorization'?",
+            "detail": "It defines the permissions and rights of a user."
+          }
+        ]
+      },
+      {
+        "title": "Implementation",
+        "topics": [
+          {
+            "name": "Which of these is a form of Symmetric encryption?",
+            "detail": "Advanced Encryption Standard (AES) is the most common symmetric cipher."
+          },
+          {
+            "name": "What is the purpose of Hashing?",
+            "detail": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."
+          },
+          {
+            "name": "What is 'Steganography'?",
+            "detail": "Data is hidden in plain sight, making it hard to detect."
+          },
+          {
+            "name": "What is 'Biometrics'?",
+            "detail": "Examples include fingerprints, iris scans, and facial recognition."
+          },
+          {
+            "name": "What is a 'Public Key'?",
+            "detail": "In asymmetric encryption, the public key is used for encryption."
+          },
+          {
+            "name": "What is 'Decryption'?",
+            "detail": "The reverse of encryption, usually requiring a key."
+          },
+          {
+            "name": "What is a 'Private Key'?",
+            "detail": "The private key is used for decryption or creating digital signatures."
+          },
+          {
+            "name": "What is Multi-Factor Authentication (MFA)?",
+            "detail": "MFA combines something you know, something you have, and/or something you are."
+          },
+          {
+            "name": "Which of these is used for 'Non-repudiation'?",
+            "detail": "Non-repudiation ensures a sender cannot deny having sent a message."
+          },
+          {
+            "name": "What is 'Two-Factor Authentication' (2FA)?",
+            "detail": "It adds an extra layer of security beyond just a password."
+          }
+        ]
+      },
+      {
+        "title": "Operations",
+        "topics": [
+          {
+            "name": "What is 'Vulnerability Scanning'?",
+            "detail": "Tools like Nessus or OpenVAS are used for this purpose."
+          },
+          {
+            "name": "What is an 'Audit Trail'?",
+            "detail": "Audit trails are crucial for incident investigation and compliance."
+          },
+          {
+            "name": "What is the purpose of 'Sandboxing'?",
+            "detail": "Sandboxing prevents malware from affecting the host system."
+          },
+          {
+            "name": "What is a 'Honey Pot'?",
+            "detail": "Honeypots help researchers study attacker behavior and deflect them from real targets."
+          },
+          {
+            "name": "What is a 'Penetration Test'?",
+            "detail": "Pen-tests provide a deep assessment of an organization's security posture."
+          }
+        ]
+      },
+      {
+        "title": "Security Core",
+        "topics": [
+          {
+            "name": "What is 'Authentication'?",
+            "detail": "Usually involves a password, token, or biometric trait."
+          },
+          {
+            "name": "What is 'Identification' in security?",
+            "detail": "The first step in the access control process."
+          },
+          {
+            "name": "What does 'Integrity' mean in security?",
+            "detail": "Integrity ensures data is accurate and trustworthy."
+          },
+          {
+            "name": "What is the goal of 'Confidentiality' in the CIA triad?",
+            "detail": "Confidentiality prevents unauthorized disclosure of information."
           }
         ]
       }
@@ -5496,7 +7853,8 @@ export const certifications = [
         ],
         "answer": "Verifying that you are who you say you are",
         "category": "Domain Review",
-        "explanation": "Usually involves a password, token, or biometric trait."
+        "explanation": "Usually involves a password, token, or biometric trait.",
+        "topic": "Security Core"
       },
       {
         "id": "ceh-q2",
@@ -5509,7 +7867,8 @@ export const certifications = [
         ],
         "answer": "Injecting malicious SQL queries into an input field",
         "category": "Domain Review",
-        "explanation": "SQLi can allow attackers to read or modify sensitive database data."
+        "explanation": "SQLi can allow attackers to read or modify sensitive database data.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q3",
@@ -5522,7 +7881,8 @@ export const certifications = [
         ],
         "answer": "Unauthorized listening to private communication",
         "category": "Domain Review",
-        "explanation": "This is a passive attack against confidentiality."
+        "explanation": "This is a passive attack against confidentiality.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q4",
@@ -5535,7 +7895,8 @@ export const certifications = [
         ],
         "answer": "AES",
         "category": "Domain Review",
-        "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher."
+        "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher.",
+        "topic": "Implementation"
       },
       {
         "id": "ceh-q5",
@@ -5548,7 +7909,8 @@ export const certifications = [
         ],
         "answer": "Worms replicate automatically; viruses need host files",
         "category": "Domain Review",
-        "explanation": "Worms can spread across a network without human interaction."
+        "explanation": "Worms can spread across a network without human interaction.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q6",
@@ -5561,7 +7923,8 @@ export const certifications = [
         ],
         "answer": "Ensure data integrity",
         "category": "Domain Review",
-        "explanation": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."
+        "explanation": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes.",
+        "topic": "Implementation"
       },
       {
         "id": "ceh-q7",
@@ -5574,7 +7937,8 @@ export const certifications = [
         ],
         "answer": "Malware disguised as legitimate software",
         "category": "Domain Review",
-        "explanation": "Trojans do not replicate themselves like viruses or worms."
+        "explanation": "Trojans do not replicate themselves like viruses or worms.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q8",
@@ -5587,7 +7951,8 @@ export const certifications = [
         ],
         "answer": "A flaw unknown to the vendor",
         "category": "Domain Review",
-        "explanation": "Zero-day threats have no available patch at the time of discovery."
+        "explanation": "Zero-day threats have no available patch at the time of discovery.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q9",
@@ -5600,7 +7965,8 @@ export const certifications = [
         ],
         "answer": "Automatically identifying security flaws",
         "category": "Domain Review",
-        "explanation": "Tools like Nessus or OpenVAS are used for this purpose."
+        "explanation": "Tools like Nessus or OpenVAS are used for this purpose.",
+        "topic": "Operations"
       },
       {
         "id": "ceh-q10",
@@ -5613,7 +7979,8 @@ export const certifications = [
         ],
         "answer": "Hiding data within other data (like an image)",
         "category": "Domain Review",
-        "explanation": "Data is hidden in plain sight, making it hard to detect."
+        "explanation": "Data is hidden in plain sight, making it hard to detect.",
+        "topic": "Implementation"
       },
       {
         "id": "ceh-q11",
@@ -5626,7 +7993,8 @@ export const certifications = [
         ],
         "answer": "Intercepting communication between two parties",
         "category": "Domain Review",
-        "explanation": "The attacker can read or even modify the data being sent."
+        "explanation": "The attacker can read or even modify the data being sent.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q12",
@@ -5639,7 +8007,8 @@ export const certifications = [
         ],
         "answer": "A chronological record of system activities",
         "category": "Domain Review",
-        "explanation": "Audit trails are crucial for incident investigation and compliance."
+        "explanation": "Audit trails are crucial for incident investigation and compliance.",
+        "topic": "Operations"
       },
       {
         "id": "ceh-q13",
@@ -5652,7 +8021,8 @@ export const certifications = [
         ],
         "answer": "Redirecting users to a fake website by poisoning DNS",
         "category": "Domain Review",
-        "explanation": "Users think they are on a real site but are actually on a malicious one."
+        "explanation": "Users think they are on a real site but are actually on a malicious one.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q14",
@@ -5665,7 +8035,8 @@ export const certifications = [
         ],
         "answer": "Watching someone enter their password",
         "category": "Domain Review",
-        "explanation": "It's a low-tech social engineering technique."
+        "explanation": "It's a low-tech social engineering technique.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q15",
@@ -5678,7 +8049,8 @@ export const certifications = [
         ],
         "answer": "Malware that triggers on a specific event or time",
         "category": "Domain Review",
-        "explanation": "Logic bombs can be planted by malicious insiders."
+        "explanation": "Logic bombs can be planted by malicious insiders.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q16",
@@ -5691,7 +8063,8 @@ export const certifications = [
         ],
         "answer": "Malware that hides its presence on a system",
         "category": "Domain Review",
-        "explanation": "Rootkits operate at a deep level of the OS to remain undetected."
+        "explanation": "Rootkits operate at a deep level of the OS to remain undetected.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q17",
@@ -5704,7 +8077,8 @@ export const certifications = [
         ],
         "answer": "Using physical traits for authentication",
         "category": "Domain Review",
-        "explanation": "Examples include fingerprints, iris scans, and facial recognition."
+        "explanation": "Examples include fingerprints, iris scans, and facial recognition.",
+        "topic": "Implementation"
       },
       {
         "id": "ceh-q18",
@@ -5717,7 +8091,8 @@ export const certifications = [
         ],
         "answer": "A set of rules that define allowed traffic",
         "category": "Domain Review",
-        "explanation": "It dictates how the firewall handles various types of packets."
+        "explanation": "It dictates how the firewall handles various types of packets.",
+        "topic": "Architecture"
       },
       {
         "id": "ceh-q19",
@@ -5730,7 +8105,8 @@ export const certifications = [
         ],
         "answer": "Malware that encrypts data and demands payment",
         "category": "Domain Review",
-        "explanation": "Ransomware locks users out of their data until a ransom is paid."
+        "explanation": "Ransomware locks users out of their data until a ransom is paid.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q20",
@@ -5743,7 +8119,8 @@ export const certifications = [
         ],
         "answer": "A phishing attack targeted at high-level executives",
         "category": "Domain Review",
-        "explanation": "Whaling targets 'big fish' like CEOs and CFOs."
+        "explanation": "Whaling targets 'big fish' like CEOs and CFOs.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q21",
@@ -5756,7 +8133,8 @@ export const certifications = [
         ],
         "answer": "Phishing targeted at a specific person",
         "category": "Domain Review",
-        "explanation": "Spear phishing is highly customized and more effective than general phishing."
+        "explanation": "Spear phishing is highly customized and more effective than general phishing.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q22",
@@ -5769,7 +8147,8 @@ export const certifications = [
         ],
         "answer": "Better encryption and protection against brute force",
         "category": "Domain Review",
-        "explanation": "WPA3 is the latest security standard for wireless networks."
+        "explanation": "WPA3 is the latest security standard for wireless networks.",
+        "topic": "Architecture"
       },
       {
         "id": "ceh-q23",
@@ -5782,7 +8161,8 @@ export const certifications = [
         ],
         "answer": "Stating who you are (e.g., username)",
         "category": "Domain Review",
-        "explanation": "The first step in the access control process."
+        "explanation": "The first step in the access control process.",
+        "topic": "Security Core"
       },
       {
         "id": "ceh-q24",
@@ -5795,7 +8175,8 @@ export const certifications = [
         ],
         "answer": "A key that can be shared with anyone",
         "category": "Domain Review",
-        "explanation": "In asymmetric encryption, the public key is used for encryption."
+        "explanation": "In asymmetric encryption, the public key is used for encryption.",
+        "topic": "Implementation"
       },
       {
         "id": "ceh-q25",
@@ -5808,7 +8189,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data has not been tampered with",
         "category": "Domain Review",
-        "explanation": "Integrity ensures data is accurate and trustworthy."
+        "explanation": "Integrity ensures data is accurate and trustworthy.",
+        "topic": "Security Core"
       },
       {
         "id": "ceh-q26",
@@ -5821,7 +8203,8 @@ export const certifications = [
         ],
         "answer": "A hidden way to bypass security",
         "category": "Domain Review",
-        "explanation": "Backdoors can be used for maintenance or by attackers for persistence."
+        "explanation": "Backdoors can be used for maintenance or by attackers for persistence.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q27",
@@ -5834,7 +8217,8 @@ export const certifications = [
         ],
         "answer": "Converting ciphertext back into plaintext",
         "category": "Domain Review",
-        "explanation": "The reverse of encryption, usually requiring a key."
+        "explanation": "The reverse of encryption, usually requiring a key.",
+        "topic": "Implementation"
       },
       {
         "id": "ceh-q28",
@@ -5847,7 +8231,8 @@ export const certifications = [
         ],
         "answer": "Overwriting memory to execute malicious code",
         "category": "Domain Review",
-        "explanation": "It can lead to system crashes or arbitrary code execution."
+        "explanation": "It can lead to system crashes or arbitrary code execution.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q29",
@@ -5860,7 +8245,8 @@ export const certifications = [
         ],
         "answer": "Physically isolating a computer from any network",
         "category": "Domain Review",
-        "explanation": "Air-gapping is used for extremely high-security systems."
+        "explanation": "Air-gapping is used for extremely high-security systems.",
+        "topic": "Architecture"
       },
       {
         "id": "ceh-q30",
@@ -5873,7 +8259,8 @@ export const certifications = [
         ],
         "answer": "A secret key known only to the owner",
         "category": "Domain Review",
-        "explanation": "The private key is used for decryption or creating digital signatures."
+        "explanation": "The private key is used for decryption or creating digital signatures.",
+        "topic": "Implementation"
       },
       {
         "id": "ceh-q31",
@@ -5886,7 +8273,8 @@ export const certifications = [
         ],
         "answer": "Using multiple layers of security",
         "category": "Domain Review",
-        "explanation": "If one layer fails, others are in place to stop the threat."
+        "explanation": "If one layer fails, others are in place to stop the threat.",
+        "topic": "Architecture"
       },
       {
         "id": "ceh-q32",
@@ -5899,7 +8287,8 @@ export const certifications = [
         ],
         "answer": "Using two or more different factors to verify identity",
         "category": "Domain Review",
-        "explanation": "MFA combines something you know, something you have, and/or something you are."
+        "explanation": "MFA combines something you know, something you have, and/or something you are.",
+        "topic": "Implementation"
       },
       {
         "id": "ceh-q33",
@@ -5912,7 +8301,8 @@ export const certifications = [
         ],
         "answer": "Filter traffic based on security rules",
         "category": "Domain Review",
-        "explanation": "Firewalls control incoming and outgoing network traffic based on an organization's security policy."
+        "explanation": "Firewalls control incoming and outgoing network traffic based on an organization's security policy.",
+        "topic": "Architecture"
       },
       {
         "id": "ceh-q34",
@@ -5925,7 +8315,8 @@ export const certifications = [
         ],
         "answer": "Searching for Wi-Fi networks from a vehicle",
         "category": "Domain Review",
-        "explanation": "Attackers use this to find vulnerable wireless networks to exploit."
+        "explanation": "Attackers use this to find vulnerable wireless networks to exploit.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q35",
@@ -5938,7 +8329,8 @@ export const certifications = [
         ],
         "answer": "SSH",
         "category": "Domain Review",
-        "explanation": "SSH is the secure alternative to the unencrypted Telnet."
+        "explanation": "SSH is the secure alternative to the unencrypted Telnet.",
+        "topic": "Architecture"
       },
       {
         "id": "ceh-q36",
@@ -5951,7 +8343,8 @@ export const certifications = [
         ],
         "answer": "Digital Signatures",
         "category": "Domain Review",
-        "explanation": "Non-repudiation ensures a sender cannot deny having sent a message."
+        "explanation": "Non-repudiation ensures a sender cannot deny having sent a message.",
+        "topic": "Implementation"
       },
       {
         "id": "ceh-q37",
@@ -5964,7 +8357,8 @@ export const certifications = [
         ],
         "answer": "Ensure only authorized users can read data",
         "category": "Domain Review",
-        "explanation": "Confidentiality prevents unauthorized disclosure of information."
+        "explanation": "Confidentiality prevents unauthorized disclosure of information.",
+        "topic": "Security Core"
       },
       {
         "id": "ceh-q38",
@@ -5977,7 +8371,8 @@ export const certifications = [
         ],
         "answer": "Software used to manage and secure mobile devices",
         "category": "Domain Review",
-        "explanation": "MDM allows enforcing security policies on employee phones."
+        "explanation": "MDM allows enforcing security policies on employee phones.",
+        "topic": "Architecture"
       },
       {
         "id": "ceh-q39",
@@ -5990,7 +8385,8 @@ export const certifications = [
         ],
         "answer": "Running suspicious programs in an isolated area",
         "category": "Domain Review",
-        "explanation": "Sandboxing prevents malware from affecting the host system."
+        "explanation": "Sandboxing prevents malware from affecting the host system.",
+        "topic": "Operations"
       },
       {
         "id": "ceh-q40",
@@ -6003,7 +8399,8 @@ export const certifications = [
         ],
         "answer": "Giving only necessary access to a user",
         "category": "Domain Review",
-        "explanation": "This minimizes potential impact of a security breach."
+        "explanation": "This minimizes potential impact of a security breach.",
+        "topic": "Governance"
       },
       {
         "id": "ceh-q41",
@@ -6016,7 +8413,8 @@ export const certifications = [
         ],
         "answer": "Determining what an authenticated user can do",
         "category": "Domain Review",
-        "explanation": "It defines the permissions and rights of a user."
+        "explanation": "It defines the permissions and rights of a user.",
+        "topic": "Governance"
       },
       {
         "id": "ceh-q42",
@@ -6029,7 +8427,8 @@ export const certifications = [
         ],
         "answer": "A decoy system to lure attackers",
         "category": "Domain Review",
-        "explanation": "Honeypots help researchers study attacker behavior and deflect them from real targets."
+        "explanation": "Honeypots help researchers study attacker behavior and deflect them from real targets.",
+        "topic": "Operations"
       },
       {
         "id": "ceh-q43",
@@ -6042,7 +8441,8 @@ export const certifications = [
         ],
         "answer": "Injecting malicious scripts into web pages",
         "category": "Domain Review",
-        "explanation": "XSS can steal cookies and session info from users."
+        "explanation": "XSS can steal cookies and session info from users.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q44",
@@ -6055,7 +8455,8 @@ export const certifications = [
         ],
         "answer": "Manipulating people into giving up info",
         "category": "Domain Review",
-        "explanation": "It exploits human psychology rather than technical flaws."
+        "explanation": "It exploits human psychology rather than technical flaws.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q45",
@@ -6068,7 +8469,8 @@ export const certifications = [
         ],
         "answer": "Tools to prevent sensitive data from leaving the network",
         "category": "Domain Review",
-        "explanation": "DLP monitors data at rest, in use, and in transit."
+        "explanation": "DLP monitors data at rest, in use, and in transit.",
+        "topic": "Architecture"
       },
       {
         "id": "ceh-q46",
@@ -6081,7 +8483,8 @@ export const certifications = [
         ],
         "answer": "Tailgating",
         "category": "Domain Review",
-        "explanation": "Tailgating involves physically following an authorized person into a secure area."
+        "explanation": "Tailgating involves physically following an authorized person into a secure area.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q47",
@@ -6094,7 +8497,8 @@ export const certifications = [
         ],
         "answer": "An authorized simulated attack to find flaws",
         "category": "Domain Review",
-        "explanation": "Pen-tests provide a deep assessment of an organization's security posture."
+        "explanation": "Pen-tests provide a deep assessment of an organization's security posture.",
+        "topic": "Operations"
       },
       {
         "id": "ceh-q48",
@@ -6107,7 +8511,8 @@ export const certifications = [
         ],
         "answer": "Using two different types of credentials",
         "category": "Domain Review",
-        "explanation": "It adds an extra layer of security beyond just a password."
+        "explanation": "It adds an extra layer of security beyond just a password.",
+        "topic": "Implementation"
       },
       {
         "id": "ceh-q49",
@@ -6120,7 +8525,8 @@ export const certifications = [
         ],
         "answer": "Distributed Denial of Service",
         "category": "Domain Review",
-        "explanation": "DDoS attacks overwhelm a target with traffic from multiple sources."
+        "explanation": "DDoS attacks overwhelm a target with traffic from multiple sources.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "ceh-q50",
@@ -6133,7 +8539,8 @@ export const certifications = [
         ],
         "answer": "Restricting access to resources to authorized users",
         "category": "Domain Review",
-        "explanation": "It involves identification, authentication, and authorization."
+        "explanation": "It involves identification, authentication, and authorization.",
+        "topic": "Architecture"
       }
     ]
   },
@@ -6149,11 +8556,222 @@ export const certifications = [
     "description": "Design cost-efficient, fault-tolerant systems on AWS.",
     "reviewer": [
       {
-        "title": "Cloud Fundamentals",
+        "title": "Billing & Pricing",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for AWS Solutions Architect - Associate."
+            "name": "What is 'Spot Instances'?",
+            "detail": "Spot instances can be interrupted if the provider needs the capacity."
+          },
+          {
+            "name": "What is the primary advantage of cloud computing?",
+            "detail": "Cloud computing converts capital expenses into variable operational expenses."
+          },
+          {
+            "name": "What is 'Cloud Billing'?",
+            "detail": "Cloud billing is usually based on usage (pay-as-you-go)."
+          },
+          {
+            "name": "What is 'Reserved Instances'?",
+            "detail": "Reserved instances can save a lot of money for long-term workloads."
+          }
+        ]
+      },
+      {
+        "title": "Cloud Concepts",
+        "topics": [
+          {
+            "name": "What is 'PaaS'?",
+            "detail": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+          },
+          {
+            "name": "What is a 'Cloud Service Provider' (CSP)?",
+            "detail": "The 'Big Three' are AWS, Microsoft, and Google."
+          },
+          {
+            "name": "What does 'Scalability' mean in the cloud?",
+            "detail": "Scalability can be vertical (size) or horizontal (number)."
+          },
+          {
+            "name": "What is 'Fault Tolerance'?",
+            "detail": "Fault tolerance is a higher level of availability."
+          },
+          {
+            "name": "What is 'Multi-Tenancy'?",
+            "detail": "The provider ensures data isolation between tenants."
+          },
+          {
+            "name": "What is 'IaaS'?",
+            "detail": "IaaS provides fundamental compute, storage, and networking resources on demand."
+          },
+          {
+            "name": "What is a 'Private Cloud'?",
+            "detail": "Private clouds offer greater control and privacy."
+          },
+          {
+            "name": "Which cloud model is a combination of public and private clouds?",
+            "detail": "Hybrid clouds allow data and apps to be shared between public and private environments."
+          },
+          {
+            "name": "What is 'SaaS'?",
+            "detail": "SaaS delivers software applications over the internet on a subscription basis."
+          },
+          {
+            "name": "What is 'High Availability' (HA)?",
+            "detail": "HA is achieved through redundancy and failover mechanisms."
+          },
+          {
+            "name": "What is a 'Public Cloud'?",
+            "detail": "Examples include AWS, Azure, and Google Cloud."
+          },
+          {
+            "name": "What is 'Elasticity'?",
+            "detail": "Elasticity is a core feature of cloud computing for cost efficiency."
+          }
+        ]
+      },
+      {
+        "title": "Security & Compliance",
+        "topics": [
+          {
+            "name": "What is 'Data Sovereignty'?",
+            "detail": "Sovereignty is a major consideration for global cloud deployments."
+          },
+          {
+            "name": "What is 'Cloud Governance'?",
+            "detail": "Governance ensures compliance and efficiency."
+          },
+          {
+            "name": "What is 'Identity and Access Management' (IAM)?",
+            "detail": "IAM is a fundamental part of cloud security."
+          },
+          {
+            "name": "What is 'Cloud Security'?",
+            "detail": "Security is a shared responsibility in the cloud."
+          },
+          {
+            "name": "What is the 'Shared Responsibility Model'?",
+            "detail": "The provider secures the cloud; the customer secures what's in the cloud."
+          }
+        ]
+      },
+      {
+        "title": "Technology",
+        "topics": [
+          {
+            "name": "What is 'Block Storage'?",
+            "detail": "Block storage provides high performance for transaction-heavy apps."
+          },
+          {
+            "name": "What is 'Infrastructure as Code' (IaC)?",
+            "detail": "IaC allows for consistent and repeatable deployments."
+          },
+          {
+            "name": "What is a 'Region' in cloud computing?",
+            "detail": "Regions are geographically isolated areas where cloud resources are hosted."
+          },
+          {
+            "name": "What is a 'Virtual Private Cloud' (VPC)?",
+            "detail": "VPCs allow users to define their own network topology."
+          },
+          {
+            "name": "What is 'Kubernetes'?",
+            "detail": "Kubernetes is the standard for container orchestration."
+          },
+          {
+            "name": "What is 'Content Delivery Network' (CDN)?",
+            "detail": "CDNs reduce latency by serving content from a location near the user."
+          },
+          {
+            "name": "What is 'Terraform'?",
+            "detail": "Terraform is cloud-agnostic and supports many providers."
+          },
+          {
+            "name": "What is 'File Storage'?",
+            "detail": "File storage is common for shared network drives."
+          },
+          {
+            "name": "What is a 'Hypervisor'?",
+            "detail": "Hypervisors manage the physical resources for multiple guest OSs."
+          },
+          {
+            "name": "What is 'Cloud Monitoring'?",
+            "detail": "Example: Amazon CloudWatch or Azure Monitor."
+          },
+          {
+            "name": "What is 'Serverless Functions'?",
+            "detail": "Example: AWS Lambda or Azure Functions."
+          },
+          {
+            "name": "What is 'Cloud Native'?",
+            "detail": "Cloud-native apps leverage microservices and containers."
+          },
+          {
+            "name": "What is 'Low Latency'?",
+            "detail": "Low latency is critical for gaming and financial applications."
+          },
+          {
+            "name": "What is 'Microservices'?",
+            "detail": "Microservices improve scalability and ease of deployment."
+          },
+          {
+            "name": "What is 'Disaster Recovery' (DR)?",
+            "detail": "DR often involves multi-region backups and replication."
+          },
+          {
+            "name": "What is an 'Availability Zone' (AZ)?",
+            "detail": "AZs help ensure high availability and fault tolerance within a region."
+          },
+          {
+            "name": "What is 'Virtualization' in cloud computing?",
+            "detail": "Virtualization is the foundation of cloud computing."
+          },
+          {
+            "name": "What is a 'Cloud Gateway'?",
+            "detail": "Example: AWS Storage Gateway or Azure ExpressRoute."
+          },
+          {
+            "name": "What is 'Object Storage'?",
+            "detail": "Object storage is ideal for unstructured data like photos and videos."
+          },
+          {
+            "name": "What is 'Serverless Database'?",
+            "detail": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+          },
+          {
+            "name": "What is 'DevOps' in the cloud?",
+            "detail": "DevOps uses automation and CI/CD pipelines."
+          },
+          {
+            "name": "What is 'Cloud Storage'?",
+            "detail": "Cloud storage is highly scalable and accessible from anywhere."
+          },
+          {
+            "name": "What is 'Edge Computing'?",
+            "detail": "Edge computing reduces latency and bandwidth usage."
+          },
+          {
+            "name": "What is 'Cloud Logging'?",
+            "detail": "Logs are essential for troubleshooting and security analysis."
+          },
+          {
+            "name": "What is a 'Container'?",
+            "detail": "Docker is a popular container technology."
+          },
+          {
+            "name": "What is a 'Cloud Migration'?",
+            "detail": "Migration can be a complex and multi-stage process."
+          },
+          {
+            "name": "What is 'Hybrid IT'?",
+            "detail": "Most large enterprises operate in a hybrid IT model."
+          },
+          {
+            "name": "What is 'Auto Scaling'?",
+            "detail": "Auto scaling ensures performance during peaks and saves money during lulls."
+          },
+          {
+            "name": "What is 'Serverless' computing?",
+            "detail": "Cloud providers manage the server infrastructure and automatically scale based on code execution."
           }
         ]
       }
@@ -6170,7 +8788,8 @@ export const certifications = [
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
         "category": "Domain Review",
-        "explanation": "Block storage provides high performance for transaction-heavy apps."
+        "explanation": "Block storage provides high performance for transaction-heavy apps.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q2",
@@ -6183,7 +8802,8 @@ export const certifications = [
         ],
         "answer": "Platform as a Service",
         "category": "Domain Review",
-        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q3",
@@ -6196,7 +8816,8 @@ export const certifications = [
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
-        "explanation": "IaC allows for consistent and repeatable deployments."
+        "explanation": "IaC allows for consistent and repeatable deployments.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q4",
@@ -6209,7 +8830,8 @@ export const certifications = [
         ],
         "answer": "Using spare cloud capacity at a large discount",
         "category": "Domain Review",
-        "explanation": "Spot instances can be interrupted if the provider needs the capacity."
+        "explanation": "Spot instances can be interrupted if the provider needs the capacity.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "aws-sa-assoc-q5",
@@ -6222,7 +8844,8 @@ export const certifications = [
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
-        "explanation": "Regions are geographically isolated areas where cloud resources are hosted."
+        "explanation": "Regions are geographically isolated areas where cloud resources are hosted.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q6",
@@ -6235,7 +8858,8 @@ export const certifications = [
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
-        "explanation": "VPCs allow users to define their own network topology."
+        "explanation": "VPCs allow users to define their own network topology.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q7",
@@ -6248,7 +8872,8 @@ export const certifications = [
         ],
         "answer": "An open-source system for automating deployment and management of containers",
         "category": "Domain Review",
-        "explanation": "Kubernetes is the standard for container orchestration."
+        "explanation": "Kubernetes is the standard for container orchestration.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q8",
@@ -6261,7 +8886,8 @@ export const certifications = [
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
-        "explanation": "The 'Big Three' are AWS, Microsoft, and Google."
+        "explanation": "The 'Big Three' are AWS, Microsoft, and Google.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q9",
@@ -6274,7 +8900,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
         "category": "Domain Review",
-        "explanation": "Sovereignty is a major consideration for global cloud deployments."
+        "explanation": "Sovereignty is a major consideration for global cloud deployments.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-sa-assoc-q10",
@@ -6287,7 +8914,8 @@ export const certifications = [
         ],
         "answer": "Policies and procedures to manage cloud resources and costs",
         "category": "Domain Review",
-        "explanation": "Governance ensures compliance and efficiency."
+        "explanation": "Governance ensures compliance and efficiency.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-sa-assoc-q11",
@@ -6300,7 +8928,8 @@ export const certifications = [
         ],
         "answer": "Pay-as-you-go pricing",
         "category": "Domain Review",
-        "explanation": "Cloud computing converts capital expenses into variable operational expenses."
+        "explanation": "Cloud computing converts capital expenses into variable operational expenses.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "aws-sa-assoc-q12",
@@ -6313,7 +8942,8 @@ export const certifications = [
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
-        "explanation": "CDNs reduce latency by serving content from a location near the user."
+        "explanation": "CDNs reduce latency by serving content from a location near the user.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q13",
@@ -6326,7 +8956,8 @@ export const certifications = [
         ],
         "answer": "The ability to increase or decrease resources",
         "category": "Domain Review",
-        "explanation": "Scalability can be vertical (size) or horizontal (number)."
+        "explanation": "Scalability can be vertical (size) or horizontal (number).",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q14",
@@ -6339,7 +8970,8 @@ export const certifications = [
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
-        "explanation": "Terraform is cloud-agnostic and supports many providers."
+        "explanation": "Terraform is cloud-agnostic and supports many providers.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q15",
@@ -6352,7 +8984,8 @@ export const certifications = [
         ],
         "answer": "Managing users and their permissions to access cloud resources",
         "category": "Domain Review",
-        "explanation": "IAM is a fundamental part of cloud security."
+        "explanation": "IAM is a fundamental part of cloud security.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-sa-assoc-q16",
@@ -6365,7 +8998,8 @@ export const certifications = [
         ],
         "answer": "Data stored in a hierarchical folder structure",
         "category": "Domain Review",
-        "explanation": "File storage is common for shared network drives."
+        "explanation": "File storage is common for shared network drives.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q17",
@@ -6378,7 +9012,8 @@ export const certifications = [
         ],
         "answer": "Software that creates and runs virtual machines",
         "category": "Domain Review",
-        "explanation": "Hypervisors manage the physical resources for multiple guest OSs."
+        "explanation": "Hypervisors manage the physical resources for multiple guest OSs.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q18",
@@ -6391,7 +9026,8 @@ export const certifications = [
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
-        "explanation": "Example: Amazon CloudWatch or Azure Monitor."
+        "explanation": "Example: Amazon CloudWatch or Azure Monitor.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q19",
@@ -6404,7 +9040,8 @@ export const certifications = [
         ],
         "answer": "Running small snippets of code in response to events",
         "category": "Domain Review",
-        "explanation": "Example: AWS Lambda or Azure Functions."
+        "explanation": "Example: AWS Lambda or Azure Functions.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q20",
@@ -6417,7 +9054,8 @@ export const certifications = [
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
-        "explanation": "Cloud-native apps leverage microservices and containers."
+        "explanation": "Cloud-native apps leverage microservices and containers.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q21",
@@ -6430,7 +9068,8 @@ export const certifications = [
         ],
         "answer": "Minimal delay in data transmission",
         "category": "Domain Review",
-        "explanation": "Low latency is critical for gaming and financial applications."
+        "explanation": "Low latency is critical for gaming and financial applications.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q22",
@@ -6443,7 +9082,8 @@ export const certifications = [
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
-        "explanation": "Fault tolerance is a higher level of availability."
+        "explanation": "Fault tolerance is a higher level of availability.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q23",
@@ -6456,7 +9096,8 @@ export const certifications = [
         ],
         "answer": "Breaking an app into small, independent services",
         "category": "Domain Review",
-        "explanation": "Microservices improve scalability and ease of deployment."
+        "explanation": "Microservices improve scalability and ease of deployment.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q24",
@@ -6469,7 +9110,8 @@ export const certifications = [
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
-        "explanation": "DR often involves multi-region backups and replication."
+        "explanation": "DR often involves multi-region backups and replication.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q25",
@@ -6482,7 +9124,8 @@ export const certifications = [
         ],
         "answer": "One or more discrete data centers with redundant power",
         "category": "Domain Review",
-        "explanation": "AZs help ensure high availability and fault tolerance within a region."
+        "explanation": "AZs help ensure high availability and fault tolerance within a region.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q26",
@@ -6495,7 +9138,8 @@ export const certifications = [
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
         "category": "Domain Review",
-        "explanation": "Virtualization is the foundation of cloud computing."
+        "explanation": "Virtualization is the foundation of cloud computing.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q27",
@@ -6508,7 +9152,8 @@ export const certifications = [
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
-        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute."
+        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q28",
@@ -6521,7 +9166,8 @@ export const certifications = [
         ],
         "answer": "Multiple customers sharing the same physical hardware",
         "category": "Domain Review",
-        "explanation": "The provider ensures data isolation between tenants."
+        "explanation": "The provider ensures data isolation between tenants.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q29",
@@ -6534,7 +9180,8 @@ export const certifications = [
         ],
         "answer": "Infrastructure as a Service",
         "category": "Domain Review",
-        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand."
+        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q30",
@@ -6547,7 +9194,8 @@ export const certifications = [
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
-        "explanation": "Object storage is ideal for unstructured data like photos and videos."
+        "explanation": "Object storage is ideal for unstructured data like photos and videos.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q31",
@@ -6560,7 +9208,8 @@ export const certifications = [
         ],
         "answer": "How cloud providers charge for their services",
         "category": "Domain Review",
-        "explanation": "Cloud billing is usually based on usage (pay-as-you-go)."
+        "explanation": "Cloud billing is usually based on usage (pay-as-you-go).",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "aws-sa-assoc-q32",
@@ -6573,7 +9222,8 @@ export const certifications = [
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
-        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q33",
@@ -6586,7 +9236,8 @@ export const certifications = [
         ],
         "answer": "Cloud resources used exclusively by one organization",
         "category": "Domain Review",
-        "explanation": "Private clouds offer greater control and privacy."
+        "explanation": "Private clouds offer greater control and privacy.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q34",
@@ -6599,7 +9250,8 @@ export const certifications = [
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
         "category": "Domain Review",
-        "explanation": "Security is a shared responsibility in the cloud."
+        "explanation": "Security is a shared responsibility in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-sa-assoc-q35",
@@ -6612,7 +9264,8 @@ export const certifications = [
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
         "category": "Domain Review",
-        "explanation": "Reserved instances can save a lot of money for long-term workloads."
+        "explanation": "Reserved instances can save a lot of money for long-term workloads.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "aws-sa-assoc-q36",
@@ -6625,7 +9278,8 @@ export const certifications = [
         ],
         "answer": "Combining development and operations to improve speed and quality",
         "category": "Domain Review",
-        "explanation": "DevOps uses automation and CI/CD pipelines."
+        "explanation": "DevOps uses automation and CI/CD pipelines.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q37",
@@ -6638,7 +9292,8 @@ export const certifications = [
         ],
         "answer": "Storing data on remote servers accessed via the internet",
         "category": "Domain Review",
-        "explanation": "Cloud storage is highly scalable and accessible from anywhere."
+        "explanation": "Cloud storage is highly scalable and accessible from anywhere.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q38",
@@ -6651,7 +9306,8 @@ export const certifications = [
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
-        "explanation": "Edge computing reduces latency and bandwidth usage."
+        "explanation": "Edge computing reduces latency and bandwidth usage.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q39",
@@ -6664,7 +9320,8 @@ export const certifications = [
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
-        "explanation": "Logs are essential for troubleshooting and security analysis."
+        "explanation": "Logs are essential for troubleshooting and security analysis.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q40",
@@ -6677,7 +9334,8 @@ export const certifications = [
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
-        "explanation": "Docker is a popular container technology."
+        "explanation": "Docker is a popular container technology.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q41",
@@ -6690,7 +9348,8 @@ export const certifications = [
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
-        "explanation": "Migration can be a complex and multi-stage process."
+        "explanation": "Migration can be a complex and multi-stage process.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q42",
@@ -6703,7 +9362,8 @@ export const certifications = [
         ],
         "answer": "Hybrid Cloud",
         "category": "Domain Review",
-        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments."
+        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q43",
@@ -6716,7 +9376,8 @@ export const certifications = [
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
-        "explanation": "The provider secures the cloud; the customer secures what's in the cloud."
+        "explanation": "The provider secures the cloud; the customer secures what's in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "aws-sa-assoc-q44",
@@ -6729,7 +9390,8 @@ export const certifications = [
         ],
         "answer": "Software as a Service",
         "category": "Domain Review",
-        "explanation": "SaaS delivers software applications over the internet on a subscription basis."
+        "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q45",
@@ -6742,7 +9404,8 @@ export const certifications = [
         ],
         "answer": "Systems that are durable and likely to operate continuously",
         "category": "Domain Review",
-        "explanation": "HA is achieved through redundancy and failover mechanisms."
+        "explanation": "HA is achieved through redundancy and failover mechanisms.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q46",
@@ -6755,7 +9418,8 @@ export const certifications = [
         ],
         "answer": "Services offered by third-party providers over the public internet",
         "category": "Domain Review",
-        "explanation": "Examples include AWS, Azure, and Google Cloud."
+        "explanation": "Examples include AWS, Azure, and Google Cloud.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q47",
@@ -6768,7 +9432,8 @@ export const certifications = [
         ],
         "answer": "The ability to automatically scale resources based on demand",
         "category": "Domain Review",
-        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency."
+        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "aws-sa-assoc-q48",
@@ -6781,7 +9446,8 @@ export const certifications = [
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
         "category": "Domain Review",
-        "explanation": "Most large enterprises operate in a hybrid IT model."
+        "explanation": "Most large enterprises operate in a hybrid IT model.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q49",
@@ -6794,7 +9460,8 @@ export const certifications = [
         ],
         "answer": "Automatically adding or removing instances based on load",
         "category": "Domain Review",
-        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls."
+        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls.",
+        "topic": "Technology"
       },
       {
         "id": "aws-sa-assoc-q50",
@@ -6807,7 +9474,8 @@ export const certifications = [
         ],
         "answer": "Running code without managing servers",
         "category": "Domain Review",
-        "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution."
+        "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution.",
+        "topic": "Technology"
       }
     ]
   },
@@ -6823,11 +9491,222 @@ export const certifications = [
     "description": "Foundational knowledge of cloud services and Azure.",
     "reviewer": [
       {
-        "title": "Cloud Fundamentals",
+        "title": "Billing & Pricing",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Microsoft Certified: Azure Fundamentals."
+            "name": "What is 'Spot Instances'?",
+            "detail": "Spot instances can be interrupted if the provider needs the capacity."
+          },
+          {
+            "name": "What is 'Reserved Instances'?",
+            "detail": "Reserved instances can save a lot of money for long-term workloads."
+          },
+          {
+            "name": "What is 'Cloud Billing'?",
+            "detail": "Cloud billing is usually based on usage (pay-as-you-go)."
+          },
+          {
+            "name": "What is the primary advantage of cloud computing?",
+            "detail": "Cloud computing converts capital expenses into variable operational expenses."
+          }
+        ]
+      },
+      {
+        "title": "Cloud Concepts",
+        "topics": [
+          {
+            "name": "What is a 'Public Cloud'?",
+            "detail": "Examples include AWS, Azure, and Google Cloud."
+          },
+          {
+            "name": "What is 'PaaS'?",
+            "detail": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+          },
+          {
+            "name": "What is 'Fault Tolerance'?",
+            "detail": "Fault tolerance is a higher level of availability."
+          },
+          {
+            "name": "What is 'SaaS'?",
+            "detail": "SaaS delivers software applications over the internet on a subscription basis."
+          },
+          {
+            "name": "What is 'High Availability' (HA)?",
+            "detail": "HA is achieved through redundancy and failover mechanisms."
+          },
+          {
+            "name": "What is 'Elasticity'?",
+            "detail": "Elasticity is a core feature of cloud computing for cost efficiency."
+          },
+          {
+            "name": "What is 'Multi-Tenancy'?",
+            "detail": "The provider ensures data isolation between tenants."
+          },
+          {
+            "name": "What is 'IaaS'?",
+            "detail": "IaaS provides fundamental compute, storage, and networking resources on demand."
+          },
+          {
+            "name": "What is a 'Cloud Service Provider' (CSP)?",
+            "detail": "The 'Big Three' are AWS, Microsoft, and Google."
+          },
+          {
+            "name": "What does 'Scalability' mean in the cloud?",
+            "detail": "Scalability can be vertical (size) or horizontal (number)."
+          },
+          {
+            "name": "What is a 'Private Cloud'?",
+            "detail": "Private clouds offer greater control and privacy."
+          },
+          {
+            "name": "Which cloud model is a combination of public and private clouds?",
+            "detail": "Hybrid clouds allow data and apps to be shared between public and private environments."
+          }
+        ]
+      },
+      {
+        "title": "Security & Compliance",
+        "topics": [
+          {
+            "name": "What is 'Cloud Security'?",
+            "detail": "Security is a shared responsibility in the cloud."
+          },
+          {
+            "name": "What is 'Cloud Governance'?",
+            "detail": "Governance ensures compliance and efficiency."
+          },
+          {
+            "name": "What is the 'Shared Responsibility Model'?",
+            "detail": "The provider secures the cloud; the customer secures what's in the cloud."
+          },
+          {
+            "name": "What is 'Identity and Access Management' (IAM)?",
+            "detail": "IAM is a fundamental part of cloud security."
+          },
+          {
+            "name": "What is 'Data Sovereignty'?",
+            "detail": "Sovereignty is a major consideration for global cloud deployments."
+          }
+        ]
+      },
+      {
+        "title": "Technology",
+        "topics": [
+          {
+            "name": "What is a 'Region' in cloud computing?",
+            "detail": "Regions are geographically isolated areas where cloud resources are hosted."
+          },
+          {
+            "name": "What is 'Edge Computing'?",
+            "detail": "Edge computing reduces latency and bandwidth usage."
+          },
+          {
+            "name": "What is 'Low Latency'?",
+            "detail": "Low latency is critical for gaming and financial applications."
+          },
+          {
+            "name": "What is 'File Storage'?",
+            "detail": "File storage is common for shared network drives."
+          },
+          {
+            "name": "What is 'Serverless Database'?",
+            "detail": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+          },
+          {
+            "name": "What is 'Content Delivery Network' (CDN)?",
+            "detail": "CDNs reduce latency by serving content from a location near the user."
+          },
+          {
+            "name": "What is 'Hybrid IT'?",
+            "detail": "Most large enterprises operate in a hybrid IT model."
+          },
+          {
+            "name": "What is 'Microservices'?",
+            "detail": "Microservices improve scalability and ease of deployment."
+          },
+          {
+            "name": "What is 'Object Storage'?",
+            "detail": "Object storage is ideal for unstructured data like photos and videos."
+          },
+          {
+            "name": "What is 'Cloud Storage'?",
+            "detail": "Cloud storage is highly scalable and accessible from anywhere."
+          },
+          {
+            "name": "What is a 'Virtual Private Cloud' (VPC)?",
+            "detail": "VPCs allow users to define their own network topology."
+          },
+          {
+            "name": "What is 'Serverless Functions'?",
+            "detail": "Example: AWS Lambda or Azure Functions."
+          },
+          {
+            "name": "What is 'Block Storage'?",
+            "detail": "Block storage provides high performance for transaction-heavy apps."
+          },
+          {
+            "name": "What is 'DevOps' in the cloud?",
+            "detail": "DevOps uses automation and CI/CD pipelines."
+          },
+          {
+            "name": "What is a 'Hypervisor'?",
+            "detail": "Hypervisors manage the physical resources for multiple guest OSs."
+          },
+          {
+            "name": "What is 'Kubernetes'?",
+            "detail": "Kubernetes is the standard for container orchestration."
+          },
+          {
+            "name": "What is 'Disaster Recovery' (DR)?",
+            "detail": "DR often involves multi-region backups and replication."
+          },
+          {
+            "name": "What is 'Cloud Logging'?",
+            "detail": "Logs are essential for troubleshooting and security analysis."
+          },
+          {
+            "name": "What is 'Cloud Monitoring'?",
+            "detail": "Example: Amazon CloudWatch or Azure Monitor."
+          },
+          {
+            "name": "What is an 'Availability Zone' (AZ)?",
+            "detail": "AZs help ensure high availability and fault tolerance within a region."
+          },
+          {
+            "name": "What is a 'Container'?",
+            "detail": "Docker is a popular container technology."
+          },
+          {
+            "name": "What is 'Auto Scaling'?",
+            "detail": "Auto scaling ensures performance during peaks and saves money during lulls."
+          },
+          {
+            "name": "What is a 'Cloud Gateway'?",
+            "detail": "Example: AWS Storage Gateway or Azure ExpressRoute."
+          },
+          {
+            "name": "What is 'Serverless' computing?",
+            "detail": "Cloud providers manage the server infrastructure and automatically scale based on code execution."
+          },
+          {
+            "name": "What is a 'Cloud Migration'?",
+            "detail": "Migration can be a complex and multi-stage process."
+          },
+          {
+            "name": "What is 'Terraform'?",
+            "detail": "Terraform is cloud-agnostic and supports many providers."
+          },
+          {
+            "name": "What is 'Cloud Native'?",
+            "detail": "Cloud-native apps leverage microservices and containers."
+          },
+          {
+            "name": "What is 'Virtualization' in cloud computing?",
+            "detail": "Virtualization is the foundation of cloud computing."
+          },
+          {
+            "name": "What is 'Infrastructure as Code' (IaC)?",
+            "detail": "IaC allows for consistent and repeatable deployments."
           }
         ]
       }
@@ -6844,7 +9723,8 @@ export const certifications = [
         ],
         "answer": "Services offered by third-party providers over the public internet",
         "category": "Domain Review",
-        "explanation": "Examples include AWS, Azure, and Google Cloud."
+        "explanation": "Examples include AWS, Azure, and Google Cloud.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q2",
@@ -6857,7 +9737,8 @@ export const certifications = [
         ],
         "answer": "Using spare cloud capacity at a large discount",
         "category": "Domain Review",
-        "explanation": "Spot instances can be interrupted if the provider needs the capacity."
+        "explanation": "Spot instances can be interrupted if the provider needs the capacity.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "az-900-q3",
@@ -6870,7 +9751,8 @@ export const certifications = [
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
         "category": "Domain Review",
-        "explanation": "Reserved instances can save a lot of money for long-term workloads."
+        "explanation": "Reserved instances can save a lot of money for long-term workloads.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "az-900-q4",
@@ -6883,7 +9765,8 @@ export const certifications = [
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
-        "explanation": "Regions are geographically isolated areas where cloud resources are hosted."
+        "explanation": "Regions are geographically isolated areas where cloud resources are hosted.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q5",
@@ -6896,7 +9779,8 @@ export const certifications = [
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
         "category": "Domain Review",
-        "explanation": "Security is a shared responsibility in the cloud."
+        "explanation": "Security is a shared responsibility in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "az-900-q6",
@@ -6909,7 +9793,8 @@ export const certifications = [
         ],
         "answer": "Policies and procedures to manage cloud resources and costs",
         "category": "Domain Review",
-        "explanation": "Governance ensures compliance and efficiency."
+        "explanation": "Governance ensures compliance and efficiency.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "az-900-q7",
@@ -6922,7 +9807,8 @@ export const certifications = [
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
-        "explanation": "Edge computing reduces latency and bandwidth usage."
+        "explanation": "Edge computing reduces latency and bandwidth usage.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q8",
@@ -6935,7 +9821,8 @@ export const certifications = [
         ],
         "answer": "Minimal delay in data transmission",
         "category": "Domain Review",
-        "explanation": "Low latency is critical for gaming and financial applications."
+        "explanation": "Low latency is critical for gaming and financial applications.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q9",
@@ -6948,7 +9835,8 @@ export const certifications = [
         ],
         "answer": "Data stored in a hierarchical folder structure",
         "category": "Domain Review",
-        "explanation": "File storage is common for shared network drives."
+        "explanation": "File storage is common for shared network drives.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q10",
@@ -6961,7 +9849,8 @@ export const certifications = [
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
-        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q11",
@@ -6974,7 +9863,8 @@ export const certifications = [
         ],
         "answer": "Platform as a Service",
         "category": "Domain Review",
-        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q12",
@@ -6987,7 +9877,8 @@ export const certifications = [
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
-        "explanation": "Fault tolerance is a higher level of availability."
+        "explanation": "Fault tolerance is a higher level of availability.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q13",
@@ -7000,7 +9891,8 @@ export const certifications = [
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
-        "explanation": "CDNs reduce latency by serving content from a location near the user."
+        "explanation": "CDNs reduce latency by serving content from a location near the user.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q14",
@@ -7013,7 +9905,8 @@ export const certifications = [
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
         "category": "Domain Review",
-        "explanation": "Most large enterprises operate in a hybrid IT model."
+        "explanation": "Most large enterprises operate in a hybrid IT model.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q15",
@@ -7026,7 +9919,8 @@ export const certifications = [
         ],
         "answer": "Breaking an app into small, independent services",
         "category": "Domain Review",
-        "explanation": "Microservices improve scalability and ease of deployment."
+        "explanation": "Microservices improve scalability and ease of deployment.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q16",
@@ -7039,7 +9933,8 @@ export const certifications = [
         ],
         "answer": "Software as a Service",
         "category": "Domain Review",
-        "explanation": "SaaS delivers software applications over the internet on a subscription basis."
+        "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q17",
@@ -7052,7 +9947,8 @@ export const certifications = [
         ],
         "answer": "Systems that are durable and likely to operate continuously",
         "category": "Domain Review",
-        "explanation": "HA is achieved through redundancy and failover mechanisms."
+        "explanation": "HA is achieved through redundancy and failover mechanisms.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q18",
@@ -7065,7 +9961,8 @@ export const certifications = [
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
-        "explanation": "Object storage is ideal for unstructured data like photos and videos."
+        "explanation": "Object storage is ideal for unstructured data like photos and videos.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q19",
@@ -7078,7 +9975,8 @@ export const certifications = [
         ],
         "answer": "Storing data on remote servers accessed via the internet",
         "category": "Domain Review",
-        "explanation": "Cloud storage is highly scalable and accessible from anywhere."
+        "explanation": "Cloud storage is highly scalable and accessible from anywhere.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q20",
@@ -7091,7 +9989,8 @@ export const certifications = [
         ],
         "answer": "The ability to automatically scale resources based on demand",
         "category": "Domain Review",
-        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency."
+        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q21",
@@ -7104,7 +10003,8 @@ export const certifications = [
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
-        "explanation": "VPCs allow users to define their own network topology."
+        "explanation": "VPCs allow users to define their own network topology.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q22",
@@ -7117,7 +10017,8 @@ export const certifications = [
         ],
         "answer": "Running small snippets of code in response to events",
         "category": "Domain Review",
-        "explanation": "Example: AWS Lambda or Azure Functions."
+        "explanation": "Example: AWS Lambda or Azure Functions.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q23",
@@ -7130,7 +10031,8 @@ export const certifications = [
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
         "category": "Domain Review",
-        "explanation": "Block storage provides high performance for transaction-heavy apps."
+        "explanation": "Block storage provides high performance for transaction-heavy apps.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q24",
@@ -7143,7 +10045,8 @@ export const certifications = [
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
-        "explanation": "The provider secures the cloud; the customer secures what's in the cloud."
+        "explanation": "The provider secures the cloud; the customer secures what's in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "az-900-q25",
@@ -7156,7 +10059,8 @@ export const certifications = [
         ],
         "answer": "Combining development and operations to improve speed and quality",
         "category": "Domain Review",
-        "explanation": "DevOps uses automation and CI/CD pipelines."
+        "explanation": "DevOps uses automation and CI/CD pipelines.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q26",
@@ -7169,7 +10073,8 @@ export const certifications = [
         ],
         "answer": "Software that creates and runs virtual machines",
         "category": "Domain Review",
-        "explanation": "Hypervisors manage the physical resources for multiple guest OSs."
+        "explanation": "Hypervisors manage the physical resources for multiple guest OSs.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q27",
@@ -7182,7 +10087,8 @@ export const certifications = [
         ],
         "answer": "Managing users and their permissions to access cloud resources",
         "category": "Domain Review",
-        "explanation": "IAM is a fundamental part of cloud security."
+        "explanation": "IAM is a fundamental part of cloud security.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "az-900-q28",
@@ -7195,7 +10101,8 @@ export const certifications = [
         ],
         "answer": "An open-source system for automating deployment and management of containers",
         "category": "Domain Review",
-        "explanation": "Kubernetes is the standard for container orchestration."
+        "explanation": "Kubernetes is the standard for container orchestration.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q29",
@@ -7208,7 +10115,8 @@ export const certifications = [
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
-        "explanation": "DR often involves multi-region backups and replication."
+        "explanation": "DR often involves multi-region backups and replication.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q30",
@@ -7221,7 +10129,8 @@ export const certifications = [
         ],
         "answer": "Multiple customers sharing the same physical hardware",
         "category": "Domain Review",
-        "explanation": "The provider ensures data isolation between tenants."
+        "explanation": "The provider ensures data isolation between tenants.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q31",
@@ -7234,7 +10143,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
         "category": "Domain Review",
-        "explanation": "Sovereignty is a major consideration for global cloud deployments."
+        "explanation": "Sovereignty is a major consideration for global cloud deployments.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "az-900-q32",
@@ -7247,7 +10157,8 @@ export const certifications = [
         ],
         "answer": "Infrastructure as a Service",
         "category": "Domain Review",
-        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand."
+        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q33",
@@ -7260,7 +10171,8 @@ export const certifications = [
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
-        "explanation": "The 'Big Three' are AWS, Microsoft, and Google."
+        "explanation": "The 'Big Three' are AWS, Microsoft, and Google.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q34",
@@ -7273,7 +10185,8 @@ export const certifications = [
         ],
         "answer": "The ability to increase or decrease resources",
         "category": "Domain Review",
-        "explanation": "Scalability can be vertical (size) or horizontal (number)."
+        "explanation": "Scalability can be vertical (size) or horizontal (number).",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q35",
@@ -7286,7 +10199,8 @@ export const certifications = [
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
-        "explanation": "Logs are essential for troubleshooting and security analysis."
+        "explanation": "Logs are essential for troubleshooting and security analysis.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q36",
@@ -7299,7 +10213,8 @@ export const certifications = [
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
-        "explanation": "Example: Amazon CloudWatch or Azure Monitor."
+        "explanation": "Example: Amazon CloudWatch or Azure Monitor.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q37",
@@ -7312,7 +10227,8 @@ export const certifications = [
         ],
         "answer": "One or more discrete data centers with redundant power",
         "category": "Domain Review",
-        "explanation": "AZs help ensure high availability and fault tolerance within a region."
+        "explanation": "AZs help ensure high availability and fault tolerance within a region.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q38",
@@ -7325,7 +10241,8 @@ export const certifications = [
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
-        "explanation": "Docker is a popular container technology."
+        "explanation": "Docker is a popular container technology.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q39",
@@ -7338,7 +10255,8 @@ export const certifications = [
         ],
         "answer": "How cloud providers charge for their services",
         "category": "Domain Review",
-        "explanation": "Cloud billing is usually based on usage (pay-as-you-go)."
+        "explanation": "Cloud billing is usually based on usage (pay-as-you-go).",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "az-900-q40",
@@ -7351,7 +10269,8 @@ export const certifications = [
         ],
         "answer": "Pay-as-you-go pricing",
         "category": "Domain Review",
-        "explanation": "Cloud computing converts capital expenses into variable operational expenses."
+        "explanation": "Cloud computing converts capital expenses into variable operational expenses.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "az-900-q41",
@@ -7364,7 +10283,8 @@ export const certifications = [
         ],
         "answer": "Automatically adding or removing instances based on load",
         "category": "Domain Review",
-        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls."
+        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q42",
@@ -7377,7 +10297,8 @@ export const certifications = [
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
-        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute."
+        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q43",
@@ -7390,7 +10311,8 @@ export const certifications = [
         ],
         "answer": "Cloud resources used exclusively by one organization",
         "category": "Domain Review",
-        "explanation": "Private clouds offer greater control and privacy."
+        "explanation": "Private clouds offer greater control and privacy.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q44",
@@ -7403,7 +10325,8 @@ export const certifications = [
         ],
         "answer": "Hybrid Cloud",
         "category": "Domain Review",
-        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments."
+        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-900-q45",
@@ -7416,7 +10339,8 @@ export const certifications = [
         ],
         "answer": "Running code without managing servers",
         "category": "Domain Review",
-        "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution."
+        "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q46",
@@ -7429,7 +10353,8 @@ export const certifications = [
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
-        "explanation": "Migration can be a complex and multi-stage process."
+        "explanation": "Migration can be a complex and multi-stage process.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q47",
@@ -7442,7 +10367,8 @@ export const certifications = [
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
-        "explanation": "Terraform is cloud-agnostic and supports many providers."
+        "explanation": "Terraform is cloud-agnostic and supports many providers.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q48",
@@ -7455,7 +10381,8 @@ export const certifications = [
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
-        "explanation": "Cloud-native apps leverage microservices and containers."
+        "explanation": "Cloud-native apps leverage microservices and containers.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q49",
@@ -7468,7 +10395,8 @@ export const certifications = [
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
         "category": "Domain Review",
-        "explanation": "Virtualization is the foundation of cloud computing."
+        "explanation": "Virtualization is the foundation of cloud computing.",
+        "topic": "Technology"
       },
       {
         "id": "az-900-q50",
@@ -7481,7 +10409,8 @@ export const certifications = [
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
-        "explanation": "IaC allows for consistent and repeatable deployments."
+        "explanation": "IaC allows for consistent and repeatable deployments.",
+        "topic": "Technology"
       }
     ]
   },
@@ -7497,11 +10426,222 @@ export const certifications = [
     "description": "Implement, manage, and monitor Azure environments.",
     "reviewer": [
       {
-        "title": "Cloud Fundamentals",
+        "title": "Billing & Pricing",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Microsoft Azure Administrator."
+            "name": "What is 'Reserved Instances'?",
+            "detail": "Reserved instances can save a lot of money for long-term workloads."
+          },
+          {
+            "name": "What is 'Spot Instances'?",
+            "detail": "Spot instances can be interrupted if the provider needs the capacity."
+          },
+          {
+            "name": "What is the primary advantage of cloud computing?",
+            "detail": "Cloud computing converts capital expenses into variable operational expenses."
+          },
+          {
+            "name": "What is 'Cloud Billing'?",
+            "detail": "Cloud billing is usually based on usage (pay-as-you-go)."
+          }
+        ]
+      },
+      {
+        "title": "Cloud Concepts",
+        "topics": [
+          {
+            "name": "What is 'PaaS'?",
+            "detail": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+          },
+          {
+            "name": "What is 'SaaS'?",
+            "detail": "SaaS delivers software applications over the internet on a subscription basis."
+          },
+          {
+            "name": "What is 'Elasticity'?",
+            "detail": "Elasticity is a core feature of cloud computing for cost efficiency."
+          },
+          {
+            "name": "What is 'IaaS'?",
+            "detail": "IaaS provides fundamental compute, storage, and networking resources on demand."
+          },
+          {
+            "name": "Which cloud model is a combination of public and private clouds?",
+            "detail": "Hybrid clouds allow data and apps to be shared between public and private environments."
+          },
+          {
+            "name": "What is a 'Private Cloud'?",
+            "detail": "Private clouds offer greater control and privacy."
+          },
+          {
+            "name": "What does 'Scalability' mean in the cloud?",
+            "detail": "Scalability can be vertical (size) or horizontal (number)."
+          },
+          {
+            "name": "What is a 'Public Cloud'?",
+            "detail": "Examples include AWS, Azure, and Google Cloud."
+          },
+          {
+            "name": "What is a 'Cloud Service Provider' (CSP)?",
+            "detail": "The 'Big Three' are AWS, Microsoft, and Google."
+          },
+          {
+            "name": "What is 'Multi-Tenancy'?",
+            "detail": "The provider ensures data isolation between tenants."
+          },
+          {
+            "name": "What is 'Fault Tolerance'?",
+            "detail": "Fault tolerance is a higher level of availability."
+          },
+          {
+            "name": "What is 'High Availability' (HA)?",
+            "detail": "HA is achieved through redundancy and failover mechanisms."
+          }
+        ]
+      },
+      {
+        "title": "Security & Compliance",
+        "topics": [
+          {
+            "name": "What is 'Data Sovereignty'?",
+            "detail": "Sovereignty is a major consideration for global cloud deployments."
+          },
+          {
+            "name": "What is the 'Shared Responsibility Model'?",
+            "detail": "The provider secures the cloud; the customer secures what's in the cloud."
+          },
+          {
+            "name": "What is 'Cloud Governance'?",
+            "detail": "Governance ensures compliance and efficiency."
+          },
+          {
+            "name": "What is 'Identity and Access Management' (IAM)?",
+            "detail": "IAM is a fundamental part of cloud security."
+          },
+          {
+            "name": "What is 'Cloud Security'?",
+            "detail": "Security is a shared responsibility in the cloud."
+          }
+        ]
+      },
+      {
+        "title": "Technology",
+        "topics": [
+          {
+            "name": "What is a 'Hypervisor'?",
+            "detail": "Hypervisors manage the physical resources for multiple guest OSs."
+          },
+          {
+            "name": "What is 'Serverless' computing?",
+            "detail": "Cloud providers manage the server infrastructure and automatically scale based on code execution."
+          },
+          {
+            "name": "What is a 'Container'?",
+            "detail": "Docker is a popular container technology."
+          },
+          {
+            "name": "What is 'File Storage'?",
+            "detail": "File storage is common for shared network drives."
+          },
+          {
+            "name": "What is 'Disaster Recovery' (DR)?",
+            "detail": "DR often involves multi-region backups and replication."
+          },
+          {
+            "name": "What is 'Content Delivery Network' (CDN)?",
+            "detail": "CDNs reduce latency by serving content from a location near the user."
+          },
+          {
+            "name": "What is 'Infrastructure as Code' (IaC)?",
+            "detail": "IaC allows for consistent and repeatable deployments."
+          },
+          {
+            "name": "What is 'Cloud Storage'?",
+            "detail": "Cloud storage is highly scalable and accessible from anywhere."
+          },
+          {
+            "name": "What is 'Edge Computing'?",
+            "detail": "Edge computing reduces latency and bandwidth usage."
+          },
+          {
+            "name": "What is 'Serverless Functions'?",
+            "detail": "Example: AWS Lambda or Azure Functions."
+          },
+          {
+            "name": "What is an 'Availability Zone' (AZ)?",
+            "detail": "AZs help ensure high availability and fault tolerance within a region."
+          },
+          {
+            "name": "What is 'Low Latency'?",
+            "detail": "Low latency is critical for gaming and financial applications."
+          },
+          {
+            "name": "What is a 'Cloud Migration'?",
+            "detail": "Migration can be a complex and multi-stage process."
+          },
+          {
+            "name": "What is 'Block Storage'?",
+            "detail": "Block storage provides high performance for transaction-heavy apps."
+          },
+          {
+            "name": "What is 'Kubernetes'?",
+            "detail": "Kubernetes is the standard for container orchestration."
+          },
+          {
+            "name": "What is 'Virtualization' in cloud computing?",
+            "detail": "Virtualization is the foundation of cloud computing."
+          },
+          {
+            "name": "What is 'Cloud Monitoring'?",
+            "detail": "Example: Amazon CloudWatch or Azure Monitor."
+          },
+          {
+            "name": "What is 'Auto Scaling'?",
+            "detail": "Auto scaling ensures performance during peaks and saves money during lulls."
+          },
+          {
+            "name": "What is 'Cloud Native'?",
+            "detail": "Cloud-native apps leverage microservices and containers."
+          },
+          {
+            "name": "What is 'Cloud Logging'?",
+            "detail": "Logs are essential for troubleshooting and security analysis."
+          },
+          {
+            "name": "What is a 'Region' in cloud computing?",
+            "detail": "Regions are geographically isolated areas where cloud resources are hosted."
+          },
+          {
+            "name": "What is 'Serverless Database'?",
+            "detail": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+          },
+          {
+            "name": "What is a 'Virtual Private Cloud' (VPC)?",
+            "detail": "VPCs allow users to define their own network topology."
+          },
+          {
+            "name": "What is 'Hybrid IT'?",
+            "detail": "Most large enterprises operate in a hybrid IT model."
+          },
+          {
+            "name": "What is 'Object Storage'?",
+            "detail": "Object storage is ideal for unstructured data like photos and videos."
+          },
+          {
+            "name": "What is a 'Cloud Gateway'?",
+            "detail": "Example: AWS Storage Gateway or Azure ExpressRoute."
+          },
+          {
+            "name": "What is 'DevOps' in the cloud?",
+            "detail": "DevOps uses automation and CI/CD pipelines."
+          },
+          {
+            "name": "What is 'Terraform'?",
+            "detail": "Terraform is cloud-agnostic and supports many providers."
+          },
+          {
+            "name": "What is 'Microservices'?",
+            "detail": "Microservices improve scalability and ease of deployment."
           }
         ]
       }
@@ -7518,7 +10658,8 @@ export const certifications = [
         ],
         "answer": "Platform as a Service",
         "category": "Domain Review",
-        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q2",
@@ -7531,7 +10672,8 @@ export const certifications = [
         ],
         "answer": "Software as a Service",
         "category": "Domain Review",
-        "explanation": "SaaS delivers software applications over the internet on a subscription basis."
+        "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q3",
@@ -7544,7 +10686,8 @@ export const certifications = [
         ],
         "answer": "The ability to automatically scale resources based on demand",
         "category": "Domain Review",
-        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency."
+        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q4",
@@ -7557,7 +10700,8 @@ export const certifications = [
         ],
         "answer": "Infrastructure as a Service",
         "category": "Domain Review",
-        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand."
+        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q5",
@@ -7570,7 +10714,8 @@ export const certifications = [
         ],
         "answer": "Software that creates and runs virtual machines",
         "category": "Domain Review",
-        "explanation": "Hypervisors manage the physical resources for multiple guest OSs."
+        "explanation": "Hypervisors manage the physical resources for multiple guest OSs.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q6",
@@ -7583,7 +10728,8 @@ export const certifications = [
         ],
         "answer": "Running code without managing servers",
         "category": "Domain Review",
-        "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution."
+        "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q7",
@@ -7596,7 +10742,8 @@ export const certifications = [
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
-        "explanation": "Docker is a popular container technology."
+        "explanation": "Docker is a popular container technology.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q8",
@@ -7609,7 +10756,8 @@ export const certifications = [
         ],
         "answer": "Data stored in a hierarchical folder structure",
         "category": "Domain Review",
-        "explanation": "File storage is common for shared network drives."
+        "explanation": "File storage is common for shared network drives.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q9",
@@ -7622,7 +10770,8 @@ export const certifications = [
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
         "category": "Domain Review",
-        "explanation": "Reserved instances can save a lot of money for long-term workloads."
+        "explanation": "Reserved instances can save a lot of money for long-term workloads.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "az-104-q10",
@@ -7635,7 +10784,8 @@ export const certifications = [
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
-        "explanation": "DR often involves multi-region backups and replication."
+        "explanation": "DR often involves multi-region backups and replication.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q11",
@@ -7648,7 +10798,8 @@ export const certifications = [
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
-        "explanation": "CDNs reduce latency by serving content from a location near the user."
+        "explanation": "CDNs reduce latency by serving content from a location near the user.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q12",
@@ -7661,7 +10812,8 @@ export const certifications = [
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
-        "explanation": "IaC allows for consistent and repeatable deployments."
+        "explanation": "IaC allows for consistent and repeatable deployments.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q13",
@@ -7674,7 +10826,8 @@ export const certifications = [
         ],
         "answer": "Hybrid Cloud",
         "category": "Domain Review",
-        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments."
+        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q14",
@@ -7687,7 +10840,8 @@ export const certifications = [
         ],
         "answer": "Cloud resources used exclusively by one organization",
         "category": "Domain Review",
-        "explanation": "Private clouds offer greater control and privacy."
+        "explanation": "Private clouds offer greater control and privacy.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q15",
@@ -7700,7 +10854,8 @@ export const certifications = [
         ],
         "answer": "Storing data on remote servers accessed via the internet",
         "category": "Domain Review",
-        "explanation": "Cloud storage is highly scalable and accessible from anywhere."
+        "explanation": "Cloud storage is highly scalable and accessible from anywhere.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q16",
@@ -7713,7 +10868,8 @@ export const certifications = [
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
-        "explanation": "Edge computing reduces latency and bandwidth usage."
+        "explanation": "Edge computing reduces latency and bandwidth usage.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q17",
@@ -7726,7 +10882,8 @@ export const certifications = [
         ],
         "answer": "Using spare cloud capacity at a large discount",
         "category": "Domain Review",
-        "explanation": "Spot instances can be interrupted if the provider needs the capacity."
+        "explanation": "Spot instances can be interrupted if the provider needs the capacity.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "az-104-q18",
@@ -7739,7 +10896,8 @@ export const certifications = [
         ],
         "answer": "Running small snippets of code in response to events",
         "category": "Domain Review",
-        "explanation": "Example: AWS Lambda or Azure Functions."
+        "explanation": "Example: AWS Lambda or Azure Functions.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q19",
@@ -7752,7 +10910,8 @@ export const certifications = [
         ],
         "answer": "One or more discrete data centers with redundant power",
         "category": "Domain Review",
-        "explanation": "AZs help ensure high availability and fault tolerance within a region."
+        "explanation": "AZs help ensure high availability and fault tolerance within a region.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q20",
@@ -7765,7 +10924,8 @@ export const certifications = [
         ],
         "answer": "Pay-as-you-go pricing",
         "category": "Domain Review",
-        "explanation": "Cloud computing converts capital expenses into variable operational expenses."
+        "explanation": "Cloud computing converts capital expenses into variable operational expenses.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "az-104-q21",
@@ -7778,7 +10938,8 @@ export const certifications = [
         ],
         "answer": "Minimal delay in data transmission",
         "category": "Domain Review",
-        "explanation": "Low latency is critical for gaming and financial applications."
+        "explanation": "Low latency is critical for gaming and financial applications.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q22",
@@ -7791,7 +10952,8 @@ export const certifications = [
         ],
         "answer": "How cloud providers charge for their services",
         "category": "Domain Review",
-        "explanation": "Cloud billing is usually based on usage (pay-as-you-go)."
+        "explanation": "Cloud billing is usually based on usage (pay-as-you-go).",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "az-104-q23",
@@ -7804,7 +10966,8 @@ export const certifications = [
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
-        "explanation": "Migration can be a complex and multi-stage process."
+        "explanation": "Migration can be a complex and multi-stage process.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q24",
@@ -7817,7 +10980,8 @@ export const certifications = [
         ],
         "answer": "The ability to increase or decrease resources",
         "category": "Domain Review",
-        "explanation": "Scalability can be vertical (size) or horizontal (number)."
+        "explanation": "Scalability can be vertical (size) or horizontal (number).",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q25",
@@ -7830,7 +10994,8 @@ export const certifications = [
         ],
         "answer": "Services offered by third-party providers over the public internet",
         "category": "Domain Review",
-        "explanation": "Examples include AWS, Azure, and Google Cloud."
+        "explanation": "Examples include AWS, Azure, and Google Cloud.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q26",
@@ -7843,7 +11008,8 @@ export const certifications = [
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
-        "explanation": "The 'Big Three' are AWS, Microsoft, and Google."
+        "explanation": "The 'Big Three' are AWS, Microsoft, and Google.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q27",
@@ -7856,7 +11022,8 @@ export const certifications = [
         ],
         "answer": "Multiple customers sharing the same physical hardware",
         "category": "Domain Review",
-        "explanation": "The provider ensures data isolation between tenants."
+        "explanation": "The provider ensures data isolation between tenants.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q28",
@@ -7869,7 +11036,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
         "category": "Domain Review",
-        "explanation": "Sovereignty is a major consideration for global cloud deployments."
+        "explanation": "Sovereignty is a major consideration for global cloud deployments.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "az-104-q29",
@@ -7882,7 +11050,8 @@ export const certifications = [
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
         "category": "Domain Review",
-        "explanation": "Block storage provides high performance for transaction-heavy apps."
+        "explanation": "Block storage provides high performance for transaction-heavy apps.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q30",
@@ -7895,7 +11064,8 @@ export const certifications = [
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
-        "explanation": "The provider secures the cloud; the customer secures what's in the cloud."
+        "explanation": "The provider secures the cloud; the customer secures what's in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "az-104-q31",
@@ -7908,7 +11078,8 @@ export const certifications = [
         ],
         "answer": "An open-source system for automating deployment and management of containers",
         "category": "Domain Review",
-        "explanation": "Kubernetes is the standard for container orchestration."
+        "explanation": "Kubernetes is the standard for container orchestration.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q32",
@@ -7921,7 +11092,8 @@ export const certifications = [
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
         "category": "Domain Review",
-        "explanation": "Virtualization is the foundation of cloud computing."
+        "explanation": "Virtualization is the foundation of cloud computing.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q33",
@@ -7934,7 +11106,8 @@ export const certifications = [
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
-        "explanation": "Example: Amazon CloudWatch or Azure Monitor."
+        "explanation": "Example: Amazon CloudWatch or Azure Monitor.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q34",
@@ -7947,7 +11120,8 @@ export const certifications = [
         ],
         "answer": "Automatically adding or removing instances based on load",
         "category": "Domain Review",
-        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls."
+        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q35",
@@ -7960,7 +11134,8 @@ export const certifications = [
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
-        "explanation": "Fault tolerance is a higher level of availability."
+        "explanation": "Fault tolerance is a higher level of availability.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q36",
@@ -7973,7 +11148,8 @@ export const certifications = [
         ],
         "answer": "Policies and procedures to manage cloud resources and costs",
         "category": "Domain Review",
-        "explanation": "Governance ensures compliance and efficiency."
+        "explanation": "Governance ensures compliance and efficiency.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "az-104-q37",
@@ -7986,7 +11162,8 @@ export const certifications = [
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
-        "explanation": "Cloud-native apps leverage microservices and containers."
+        "explanation": "Cloud-native apps leverage microservices and containers.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q38",
@@ -7999,7 +11176,8 @@ export const certifications = [
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
-        "explanation": "Logs are essential for troubleshooting and security analysis."
+        "explanation": "Logs are essential for troubleshooting and security analysis.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q39",
@@ -8012,7 +11190,8 @@ export const certifications = [
         ],
         "answer": "Managing users and their permissions to access cloud resources",
         "category": "Domain Review",
-        "explanation": "IAM is a fundamental part of cloud security."
+        "explanation": "IAM is a fundamental part of cloud security.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "az-104-q40",
@@ -8025,7 +11204,8 @@ export const certifications = [
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
-        "explanation": "Regions are geographically isolated areas where cloud resources are hosted."
+        "explanation": "Regions are geographically isolated areas where cloud resources are hosted.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q41",
@@ -8038,7 +11218,8 @@ export const certifications = [
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
-        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q42",
@@ -8051,7 +11232,8 @@ export const certifications = [
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
-        "explanation": "VPCs allow users to define their own network topology."
+        "explanation": "VPCs allow users to define their own network topology.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q43",
@@ -8064,7 +11246,8 @@ export const certifications = [
         ],
         "answer": "Systems that are durable and likely to operate continuously",
         "category": "Domain Review",
-        "explanation": "HA is achieved through redundancy and failover mechanisms."
+        "explanation": "HA is achieved through redundancy and failover mechanisms.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "az-104-q44",
@@ -8077,7 +11260,8 @@ export const certifications = [
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
         "category": "Domain Review",
-        "explanation": "Most large enterprises operate in a hybrid IT model."
+        "explanation": "Most large enterprises operate in a hybrid IT model.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q45",
@@ -8090,7 +11274,8 @@ export const certifications = [
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
-        "explanation": "Object storage is ideal for unstructured data like photos and videos."
+        "explanation": "Object storage is ideal for unstructured data like photos and videos.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q46",
@@ -8103,7 +11288,8 @@ export const certifications = [
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
-        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute."
+        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q47",
@@ -8116,7 +11302,8 @@ export const certifications = [
         ],
         "answer": "Combining development and operations to improve speed and quality",
         "category": "Domain Review",
-        "explanation": "DevOps uses automation and CI/CD pipelines."
+        "explanation": "DevOps uses automation and CI/CD pipelines.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q48",
@@ -8129,7 +11316,8 @@ export const certifications = [
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
-        "explanation": "Terraform is cloud-agnostic and supports many providers."
+        "explanation": "Terraform is cloud-agnostic and supports many providers.",
+        "topic": "Technology"
       },
       {
         "id": "az-104-q49",
@@ -8142,7 +11330,8 @@ export const certifications = [
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
         "category": "Domain Review",
-        "explanation": "Security is a shared responsibility in the cloud."
+        "explanation": "Security is a shared responsibility in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "az-104-q50",
@@ -8155,7 +11344,8 @@ export const certifications = [
         ],
         "answer": "Breaking an app into small, independent services",
         "category": "Domain Review",
-        "explanation": "Microservices improve scalability and ease of deployment."
+        "explanation": "Microservices improve scalability and ease of deployment.",
+        "topic": "Technology"
       }
     ]
   },
@@ -8171,11 +11361,222 @@ export const certifications = [
     "description": "Design and manage robust solutions on Google Cloud.",
     "reviewer": [
       {
-        "title": "Cloud Fundamentals",
+        "title": "Billing & Pricing",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Google Professional Cloud Architect."
+            "name": "What is the primary advantage of cloud computing?",
+            "detail": "Cloud computing converts capital expenses into variable operational expenses."
+          },
+          {
+            "name": "What is 'Cloud Billing'?",
+            "detail": "Cloud billing is usually based on usage (pay-as-you-go)."
+          },
+          {
+            "name": "What is 'Reserved Instances'?",
+            "detail": "Reserved instances can save a lot of money for long-term workloads."
+          },
+          {
+            "name": "What is 'Spot Instances'?",
+            "detail": "Spot instances can be interrupted if the provider needs the capacity."
+          }
+        ]
+      },
+      {
+        "title": "Cloud Concepts",
+        "topics": [
+          {
+            "name": "What is 'Fault Tolerance'?",
+            "detail": "Fault tolerance is a higher level of availability."
+          },
+          {
+            "name": "Which cloud model is a combination of public and private clouds?",
+            "detail": "Hybrid clouds allow data and apps to be shared between public and private environments."
+          },
+          {
+            "name": "What does 'Scalability' mean in the cloud?",
+            "detail": "Scalability can be vertical (size) or horizontal (number)."
+          },
+          {
+            "name": "What is 'SaaS'?",
+            "detail": "SaaS delivers software applications over the internet on a subscription basis."
+          },
+          {
+            "name": "What is a 'Private Cloud'?",
+            "detail": "Private clouds offer greater control and privacy."
+          },
+          {
+            "name": "What is 'Elasticity'?",
+            "detail": "Elasticity is a core feature of cloud computing for cost efficiency."
+          },
+          {
+            "name": "What is 'High Availability' (HA)?",
+            "detail": "HA is achieved through redundancy and failover mechanisms."
+          },
+          {
+            "name": "What is a 'Public Cloud'?",
+            "detail": "Examples include AWS, Azure, and Google Cloud."
+          },
+          {
+            "name": "What is a 'Cloud Service Provider' (CSP)?",
+            "detail": "The 'Big Three' are AWS, Microsoft, and Google."
+          },
+          {
+            "name": "What is 'IaaS'?",
+            "detail": "IaaS provides fundamental compute, storage, and networking resources on demand."
+          },
+          {
+            "name": "What is 'PaaS'?",
+            "detail": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+          },
+          {
+            "name": "What is 'Multi-Tenancy'?",
+            "detail": "The provider ensures data isolation between tenants."
+          }
+        ]
+      },
+      {
+        "title": "Security & Compliance",
+        "topics": [
+          {
+            "name": "What is 'Cloud Security'?",
+            "detail": "Security is a shared responsibility in the cloud."
+          },
+          {
+            "name": "What is the 'Shared Responsibility Model'?",
+            "detail": "The provider secures the cloud; the customer secures what's in the cloud."
+          },
+          {
+            "name": "What is 'Identity and Access Management' (IAM)?",
+            "detail": "IAM is a fundamental part of cloud security."
+          },
+          {
+            "name": "What is 'Cloud Governance'?",
+            "detail": "Governance ensures compliance and efficiency."
+          },
+          {
+            "name": "What is 'Data Sovereignty'?",
+            "detail": "Sovereignty is a major consideration for global cloud deployments."
+          }
+        ]
+      },
+      {
+        "title": "Technology",
+        "topics": [
+          {
+            "name": "What is 'Terraform'?",
+            "detail": "Terraform is cloud-agnostic and supports many providers."
+          },
+          {
+            "name": "What is 'Edge Computing'?",
+            "detail": "Edge computing reduces latency and bandwidth usage."
+          },
+          {
+            "name": "What is 'Content Delivery Network' (CDN)?",
+            "detail": "CDNs reduce latency by serving content from a location near the user."
+          },
+          {
+            "name": "What is 'Cloud Native'?",
+            "detail": "Cloud-native apps leverage microservices and containers."
+          },
+          {
+            "name": "What is 'Cloud Storage'?",
+            "detail": "Cloud storage is highly scalable and accessible from anywhere."
+          },
+          {
+            "name": "What is 'Auto Scaling'?",
+            "detail": "Auto scaling ensures performance during peaks and saves money during lulls."
+          },
+          {
+            "name": "What is 'Serverless' computing?",
+            "detail": "Cloud providers manage the server infrastructure and automatically scale based on code execution."
+          },
+          {
+            "name": "What is 'Microservices'?",
+            "detail": "Microservices improve scalability and ease of deployment."
+          },
+          {
+            "name": "What is a 'Virtual Private Cloud' (VPC)?",
+            "detail": "VPCs allow users to define their own network topology."
+          },
+          {
+            "name": "What is a 'Container'?",
+            "detail": "Docker is a popular container technology."
+          },
+          {
+            "name": "What is 'Disaster Recovery' (DR)?",
+            "detail": "DR often involves multi-region backups and replication."
+          },
+          {
+            "name": "What is 'Infrastructure as Code' (IaC)?",
+            "detail": "IaC allows for consistent and repeatable deployments."
+          },
+          {
+            "name": "What is 'Kubernetes'?",
+            "detail": "Kubernetes is the standard for container orchestration."
+          },
+          {
+            "name": "What is 'Block Storage'?",
+            "detail": "Block storage provides high performance for transaction-heavy apps."
+          },
+          {
+            "name": "What is 'File Storage'?",
+            "detail": "File storage is common for shared network drives."
+          },
+          {
+            "name": "What is a 'Cloud Gateway'?",
+            "detail": "Example: AWS Storage Gateway or Azure ExpressRoute."
+          },
+          {
+            "name": "What is 'Hybrid IT'?",
+            "detail": "Most large enterprises operate in a hybrid IT model."
+          },
+          {
+            "name": "What is 'DevOps' in the cloud?",
+            "detail": "DevOps uses automation and CI/CD pipelines."
+          },
+          {
+            "name": "What is an 'Availability Zone' (AZ)?",
+            "detail": "AZs help ensure high availability and fault tolerance within a region."
+          },
+          {
+            "name": "What is 'Low Latency'?",
+            "detail": "Low latency is critical for gaming and financial applications."
+          },
+          {
+            "name": "What is 'Serverless Functions'?",
+            "detail": "Example: AWS Lambda or Azure Functions."
+          },
+          {
+            "name": "What is a 'Hypervisor'?",
+            "detail": "Hypervisors manage the physical resources for multiple guest OSs."
+          },
+          {
+            "name": "What is 'Cloud Monitoring'?",
+            "detail": "Example: Amazon CloudWatch or Azure Monitor."
+          },
+          {
+            "name": "What is a 'Cloud Migration'?",
+            "detail": "Migration can be a complex and multi-stage process."
+          },
+          {
+            "name": "What is 'Object Storage'?",
+            "detail": "Object storage is ideal for unstructured data like photos and videos."
+          },
+          {
+            "name": "What is 'Cloud Logging'?",
+            "detail": "Logs are essential for troubleshooting and security analysis."
+          },
+          {
+            "name": "What is a 'Region' in cloud computing?",
+            "detail": "Regions are geographically isolated areas where cloud resources are hosted."
+          },
+          {
+            "name": "What is 'Serverless Database'?",
+            "detail": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+          },
+          {
+            "name": "What is 'Virtualization' in cloud computing?",
+            "detail": "Virtualization is the foundation of cloud computing."
           }
         ]
       }
@@ -8192,7 +11593,8 @@ export const certifications = [
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
-        "explanation": "Fault tolerance is a higher level of availability."
+        "explanation": "Fault tolerance is a higher level of availability.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q2",
@@ -8205,7 +11607,8 @@ export const certifications = [
         ],
         "answer": "Hybrid Cloud",
         "category": "Domain Review",
-        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments."
+        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q3",
@@ -8218,7 +11621,8 @@ export const certifications = [
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
-        "explanation": "Terraform is cloud-agnostic and supports many providers."
+        "explanation": "Terraform is cloud-agnostic and supports many providers.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q4",
@@ -8231,7 +11635,8 @@ export const certifications = [
         ],
         "answer": "The ability to increase or decrease resources",
         "category": "Domain Review",
-        "explanation": "Scalability can be vertical (size) or horizontal (number)."
+        "explanation": "Scalability can be vertical (size) or horizontal (number).",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q5",
@@ -8244,7 +11649,8 @@ export const certifications = [
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
-        "explanation": "Edge computing reduces latency and bandwidth usage."
+        "explanation": "Edge computing reduces latency and bandwidth usage.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q6",
@@ -8257,7 +11663,8 @@ export const certifications = [
         ],
         "answer": "Software as a Service",
         "category": "Domain Review",
-        "explanation": "SaaS delivers software applications over the internet on a subscription basis."
+        "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q7",
@@ -8270,7 +11677,8 @@ export const certifications = [
         ],
         "answer": "Cloud resources used exclusively by one organization",
         "category": "Domain Review",
-        "explanation": "Private clouds offer greater control and privacy."
+        "explanation": "Private clouds offer greater control and privacy.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q8",
@@ -8283,7 +11691,8 @@ export const certifications = [
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
-        "explanation": "CDNs reduce latency by serving content from a location near the user."
+        "explanation": "CDNs reduce latency by serving content from a location near the user.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q9",
@@ -8296,7 +11705,8 @@ export const certifications = [
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
-        "explanation": "Cloud-native apps leverage microservices and containers."
+        "explanation": "Cloud-native apps leverage microservices and containers.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q10",
@@ -8309,7 +11719,8 @@ export const certifications = [
         ],
         "answer": "Storing data on remote servers accessed via the internet",
         "category": "Domain Review",
-        "explanation": "Cloud storage is highly scalable and accessible from anywhere."
+        "explanation": "Cloud storage is highly scalable and accessible from anywhere.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q11",
@@ -8322,7 +11733,8 @@ export const certifications = [
         ],
         "answer": "Automatically adding or removing instances based on load",
         "category": "Domain Review",
-        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls."
+        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q12",
@@ -8335,7 +11747,8 @@ export const certifications = [
         ],
         "answer": "Running code without managing servers",
         "category": "Domain Review",
-        "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution."
+        "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q13",
@@ -8348,7 +11761,8 @@ export const certifications = [
         ],
         "answer": "Breaking an app into small, independent services",
         "category": "Domain Review",
-        "explanation": "Microservices improve scalability and ease of deployment."
+        "explanation": "Microservices improve scalability and ease of deployment.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q14",
@@ -8361,7 +11775,8 @@ export const certifications = [
         ],
         "answer": "The ability to automatically scale resources based on demand",
         "category": "Domain Review",
-        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency."
+        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q15",
@@ -8374,7 +11789,8 @@ export const certifications = [
         ],
         "answer": "Systems that are durable and likely to operate continuously",
         "category": "Domain Review",
-        "explanation": "HA is achieved through redundancy and failover mechanisms."
+        "explanation": "HA is achieved through redundancy and failover mechanisms.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q16",
@@ -8387,7 +11803,8 @@ export const certifications = [
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
-        "explanation": "VPCs allow users to define their own network topology."
+        "explanation": "VPCs allow users to define their own network topology.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q17",
@@ -8400,7 +11817,8 @@ export const certifications = [
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
         "category": "Domain Review",
-        "explanation": "Security is a shared responsibility in the cloud."
+        "explanation": "Security is a shared responsibility in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "gcp-pca-q18",
@@ -8413,7 +11831,8 @@ export const certifications = [
         ],
         "answer": "Services offered by third-party providers over the public internet",
         "category": "Domain Review",
-        "explanation": "Examples include AWS, Azure, and Google Cloud."
+        "explanation": "Examples include AWS, Azure, and Google Cloud.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q19",
@@ -8426,7 +11845,8 @@ export const certifications = [
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
-        "explanation": "Docker is a popular container technology."
+        "explanation": "Docker is a popular container technology.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q20",
@@ -8439,7 +11859,8 @@ export const certifications = [
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
-        "explanation": "DR often involves multi-region backups and replication."
+        "explanation": "DR often involves multi-region backups and replication.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q21",
@@ -8452,7 +11873,8 @@ export const certifications = [
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
-        "explanation": "IaC allows for consistent and repeatable deployments."
+        "explanation": "IaC allows for consistent and repeatable deployments.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q22",
@@ -8465,7 +11887,8 @@ export const certifications = [
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
-        "explanation": "The 'Big Three' are AWS, Microsoft, and Google."
+        "explanation": "The 'Big Three' are AWS, Microsoft, and Google.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q23",
@@ -8478,7 +11901,8 @@ export const certifications = [
         ],
         "answer": "Infrastructure as a Service",
         "category": "Domain Review",
-        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand."
+        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q24",
@@ -8491,7 +11915,8 @@ export const certifications = [
         ],
         "answer": "An open-source system for automating deployment and management of containers",
         "category": "Domain Review",
-        "explanation": "Kubernetes is the standard for container orchestration."
+        "explanation": "Kubernetes is the standard for container orchestration.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q25",
@@ -8504,7 +11929,8 @@ export const certifications = [
         ],
         "answer": "Pay-as-you-go pricing",
         "category": "Domain Review",
-        "explanation": "Cloud computing converts capital expenses into variable operational expenses."
+        "explanation": "Cloud computing converts capital expenses into variable operational expenses.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "gcp-pca-q26",
@@ -8517,7 +11943,8 @@ export const certifications = [
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
         "category": "Domain Review",
-        "explanation": "Block storage provides high performance for transaction-heavy apps."
+        "explanation": "Block storage provides high performance for transaction-heavy apps.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q27",
@@ -8530,7 +11957,8 @@ export const certifications = [
         ],
         "answer": "Data stored in a hierarchical folder structure",
         "category": "Domain Review",
-        "explanation": "File storage is common for shared network drives."
+        "explanation": "File storage is common for shared network drives.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q28",
@@ -8543,7 +11971,8 @@ export const certifications = [
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
-        "explanation": "The provider secures the cloud; the customer secures what's in the cloud."
+        "explanation": "The provider secures the cloud; the customer secures what's in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "gcp-pca-q29",
@@ -8556,7 +11985,8 @@ export const certifications = [
         ],
         "answer": "Managing users and their permissions to access cloud resources",
         "category": "Domain Review",
-        "explanation": "IAM is a fundamental part of cloud security."
+        "explanation": "IAM is a fundamental part of cloud security.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "gcp-pca-q30",
@@ -8569,7 +11999,8 @@ export const certifications = [
         ],
         "answer": "How cloud providers charge for their services",
         "category": "Domain Review",
-        "explanation": "Cloud billing is usually based on usage (pay-as-you-go)."
+        "explanation": "Cloud billing is usually based on usage (pay-as-you-go).",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "gcp-pca-q31",
@@ -8582,7 +12013,8 @@ export const certifications = [
         ],
         "answer": "Policies and procedures to manage cloud resources and costs",
         "category": "Domain Review",
-        "explanation": "Governance ensures compliance and efficiency."
+        "explanation": "Governance ensures compliance and efficiency.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "gcp-pca-q32",
@@ -8595,7 +12027,8 @@ export const certifications = [
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
         "category": "Domain Review",
-        "explanation": "Reserved instances can save a lot of money for long-term workloads."
+        "explanation": "Reserved instances can save a lot of money for long-term workloads.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "gcp-pca-q33",
@@ -8608,7 +12041,8 @@ export const certifications = [
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
-        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute."
+        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q34",
@@ -8621,7 +12055,8 @@ export const certifications = [
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
         "category": "Domain Review",
-        "explanation": "Most large enterprises operate in a hybrid IT model."
+        "explanation": "Most large enterprises operate in a hybrid IT model.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q35",
@@ -8634,7 +12069,8 @@ export const certifications = [
         ],
         "answer": "Combining development and operations to improve speed and quality",
         "category": "Domain Review",
-        "explanation": "DevOps uses automation and CI/CD pipelines."
+        "explanation": "DevOps uses automation and CI/CD pipelines.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q36",
@@ -8647,7 +12083,8 @@ export const certifications = [
         ],
         "answer": "One or more discrete data centers with redundant power",
         "category": "Domain Review",
-        "explanation": "AZs help ensure high availability and fault tolerance within a region."
+        "explanation": "AZs help ensure high availability and fault tolerance within a region.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q37",
@@ -8660,7 +12097,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
         "category": "Domain Review",
-        "explanation": "Sovereignty is a major consideration for global cloud deployments."
+        "explanation": "Sovereignty is a major consideration for global cloud deployments.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "gcp-pca-q38",
@@ -8673,7 +12111,8 @@ export const certifications = [
         ],
         "answer": "Minimal delay in data transmission",
         "category": "Domain Review",
-        "explanation": "Low latency is critical for gaming and financial applications."
+        "explanation": "Low latency is critical for gaming and financial applications.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q39",
@@ -8686,7 +12125,8 @@ export const certifications = [
         ],
         "answer": "Running small snippets of code in response to events",
         "category": "Domain Review",
-        "explanation": "Example: AWS Lambda or Azure Functions."
+        "explanation": "Example: AWS Lambda or Azure Functions.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q40",
@@ -8699,7 +12139,8 @@ export const certifications = [
         ],
         "answer": "Software that creates and runs virtual machines",
         "category": "Domain Review",
-        "explanation": "Hypervisors manage the physical resources for multiple guest OSs."
+        "explanation": "Hypervisors manage the physical resources for multiple guest OSs.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q41",
@@ -8712,7 +12153,8 @@ export const certifications = [
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
-        "explanation": "Example: Amazon CloudWatch or Azure Monitor."
+        "explanation": "Example: Amazon CloudWatch or Azure Monitor.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q42",
@@ -8725,7 +12167,8 @@ export const certifications = [
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
-        "explanation": "Migration can be a complex and multi-stage process."
+        "explanation": "Migration can be a complex and multi-stage process.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q43",
@@ -8738,7 +12181,8 @@ export const certifications = [
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
-        "explanation": "Object storage is ideal for unstructured data like photos and videos."
+        "explanation": "Object storage is ideal for unstructured data like photos and videos.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q44",
@@ -8751,7 +12195,8 @@ export const certifications = [
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
-        "explanation": "Logs are essential for troubleshooting and security analysis."
+        "explanation": "Logs are essential for troubleshooting and security analysis.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q45",
@@ -8764,7 +12209,8 @@ export const certifications = [
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
-        "explanation": "Regions are geographically isolated areas where cloud resources are hosted."
+        "explanation": "Regions are geographically isolated areas where cloud resources are hosted.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q46",
@@ -8777,7 +12223,8 @@ export const certifications = [
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
-        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q47",
@@ -8790,7 +12237,8 @@ export const certifications = [
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
         "category": "Domain Review",
-        "explanation": "Virtualization is the foundation of cloud computing."
+        "explanation": "Virtualization is the foundation of cloud computing.",
+        "topic": "Technology"
       },
       {
         "id": "gcp-pca-q48",
@@ -8803,7 +12251,8 @@ export const certifications = [
         ],
         "answer": "Platform as a Service",
         "category": "Domain Review",
-        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q49",
@@ -8816,7 +12265,8 @@ export const certifications = [
         ],
         "answer": "Multiple customers sharing the same physical hardware",
         "category": "Domain Review",
-        "explanation": "The provider ensures data isolation between tenants."
+        "explanation": "The provider ensures data isolation between tenants.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "gcp-pca-q50",
@@ -8829,7 +12279,8 @@ export const certifications = [
         ],
         "answer": "Using spare cloud capacity at a large discount",
         "category": "Domain Review",
-        "explanation": "Spot instances can be interrupted if the provider needs the capacity."
+        "explanation": "Spot instances can be interrupted if the provider needs the capacity.",
+        "topic": "Billing & Pricing"
       }
     ]
   },
@@ -8845,11 +12296,222 @@ export const certifications = [
     "description": "Fundamental knowledge of OCI public cloud services.",
     "reviewer": [
       {
-        "title": "Cloud Fundamentals",
+        "title": "Billing & Pricing",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for OCI Foundations Associate."
+            "name": "What is 'Spot Instances'?",
+            "detail": "Spot instances can be interrupted if the provider needs the capacity."
+          },
+          {
+            "name": "What is the primary advantage of cloud computing?",
+            "detail": "Cloud computing converts capital expenses into variable operational expenses."
+          },
+          {
+            "name": "What is 'Reserved Instances'?",
+            "detail": "Reserved instances can save a lot of money for long-term workloads."
+          },
+          {
+            "name": "What is 'Cloud Billing'?",
+            "detail": "Cloud billing is usually based on usage (pay-as-you-go)."
+          }
+        ]
+      },
+      {
+        "title": "Cloud Concepts",
+        "topics": [
+          {
+            "name": "What is 'PaaS'?",
+            "detail": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+          },
+          {
+            "name": "What is 'Elasticity'?",
+            "detail": "Elasticity is a core feature of cloud computing for cost efficiency."
+          },
+          {
+            "name": "What is a 'Cloud Service Provider' (CSP)?",
+            "detail": "The 'Big Three' are AWS, Microsoft, and Google."
+          },
+          {
+            "name": "What is 'SaaS'?",
+            "detail": "SaaS delivers software applications over the internet on a subscription basis."
+          },
+          {
+            "name": "What is 'IaaS'?",
+            "detail": "IaaS provides fundamental compute, storage, and networking resources on demand."
+          },
+          {
+            "name": "What is a 'Private Cloud'?",
+            "detail": "Private clouds offer greater control and privacy."
+          },
+          {
+            "name": "What is 'High Availability' (HA)?",
+            "detail": "HA is achieved through redundancy and failover mechanisms."
+          },
+          {
+            "name": "What is 'Multi-Tenancy'?",
+            "detail": "The provider ensures data isolation between tenants."
+          },
+          {
+            "name": "What is 'Fault Tolerance'?",
+            "detail": "Fault tolerance is a higher level of availability."
+          },
+          {
+            "name": "Which cloud model is a combination of public and private clouds?",
+            "detail": "Hybrid clouds allow data and apps to be shared between public and private environments."
+          },
+          {
+            "name": "What does 'Scalability' mean in the cloud?",
+            "detail": "Scalability can be vertical (size) or horizontal (number)."
+          },
+          {
+            "name": "What is a 'Public Cloud'?",
+            "detail": "Examples include AWS, Azure, and Google Cloud."
+          }
+        ]
+      },
+      {
+        "title": "Security & Compliance",
+        "topics": [
+          {
+            "name": "What is 'Cloud Governance'?",
+            "detail": "Governance ensures compliance and efficiency."
+          },
+          {
+            "name": "What is the 'Shared Responsibility Model'?",
+            "detail": "The provider secures the cloud; the customer secures what's in the cloud."
+          },
+          {
+            "name": "What is 'Identity and Access Management' (IAM)?",
+            "detail": "IAM is a fundamental part of cloud security."
+          },
+          {
+            "name": "What is 'Cloud Security'?",
+            "detail": "Security is a shared responsibility in the cloud."
+          },
+          {
+            "name": "What is 'Data Sovereignty'?",
+            "detail": "Sovereignty is a major consideration for global cloud deployments."
+          }
+        ]
+      },
+      {
+        "title": "Technology",
+        "topics": [
+          {
+            "name": "What is 'Terraform'?",
+            "detail": "Terraform is cloud-agnostic and supports many providers."
+          },
+          {
+            "name": "What is 'Cloud Native'?",
+            "detail": "Cloud-native apps leverage microservices and containers."
+          },
+          {
+            "name": "What is 'Cloud Storage'?",
+            "detail": "Cloud storage is highly scalable and accessible from anywhere."
+          },
+          {
+            "name": "What is 'Hybrid IT'?",
+            "detail": "Most large enterprises operate in a hybrid IT model."
+          },
+          {
+            "name": "What is 'File Storage'?",
+            "detail": "File storage is common for shared network drives."
+          },
+          {
+            "name": "What is 'Cloud Logging'?",
+            "detail": "Logs are essential for troubleshooting and security analysis."
+          },
+          {
+            "name": "What is 'Disaster Recovery' (DR)?",
+            "detail": "DR often involves multi-region backups and replication."
+          },
+          {
+            "name": "What is a 'Cloud Gateway'?",
+            "detail": "Example: AWS Storage Gateway or Azure ExpressRoute."
+          },
+          {
+            "name": "What is 'Serverless Functions'?",
+            "detail": "Example: AWS Lambda or Azure Functions."
+          },
+          {
+            "name": "What is 'Content Delivery Network' (CDN)?",
+            "detail": "CDNs reduce latency by serving content from a location near the user."
+          },
+          {
+            "name": "What is 'Kubernetes'?",
+            "detail": "Kubernetes is the standard for container orchestration."
+          },
+          {
+            "name": "What is 'Serverless Database'?",
+            "detail": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+          },
+          {
+            "name": "What is 'Infrastructure as Code' (IaC)?",
+            "detail": "IaC allows for consistent and repeatable deployments."
+          },
+          {
+            "name": "What is 'Microservices'?",
+            "detail": "Microservices improve scalability and ease of deployment."
+          },
+          {
+            "name": "What is 'Serverless' computing?",
+            "detail": "Cloud providers manage the server infrastructure and automatically scale based on code execution."
+          },
+          {
+            "name": "What is a 'Cloud Migration'?",
+            "detail": "Migration can be a complex and multi-stage process."
+          },
+          {
+            "name": "What is 'DevOps' in the cloud?",
+            "detail": "DevOps uses automation and CI/CD pipelines."
+          },
+          {
+            "name": "What is 'Auto Scaling'?",
+            "detail": "Auto scaling ensures performance during peaks and saves money during lulls."
+          },
+          {
+            "name": "What is a 'Container'?",
+            "detail": "Docker is a popular container technology."
+          },
+          {
+            "name": "What is a 'Hypervisor'?",
+            "detail": "Hypervisors manage the physical resources for multiple guest OSs."
+          },
+          {
+            "name": "What is 'Object Storage'?",
+            "detail": "Object storage is ideal for unstructured data like photos and videos."
+          },
+          {
+            "name": "What is a 'Virtual Private Cloud' (VPC)?",
+            "detail": "VPCs allow users to define their own network topology."
+          },
+          {
+            "name": "What is 'Block Storage'?",
+            "detail": "Block storage provides high performance for transaction-heavy apps."
+          },
+          {
+            "name": "What is 'Virtualization' in cloud computing?",
+            "detail": "Virtualization is the foundation of cloud computing."
+          },
+          {
+            "name": "What is an 'Availability Zone' (AZ)?",
+            "detail": "AZs help ensure high availability and fault tolerance within a region."
+          },
+          {
+            "name": "What is a 'Region' in cloud computing?",
+            "detail": "Regions are geographically isolated areas where cloud resources are hosted."
+          },
+          {
+            "name": "What is 'Edge Computing'?",
+            "detail": "Edge computing reduces latency and bandwidth usage."
+          },
+          {
+            "name": "What is 'Cloud Monitoring'?",
+            "detail": "Example: Amazon CloudWatch or Azure Monitor."
+          },
+          {
+            "name": "What is 'Low Latency'?",
+            "detail": "Low latency is critical for gaming and financial applications."
           }
         ]
       }
@@ -8866,7 +12528,8 @@ export const certifications = [
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
-        "explanation": "Terraform is cloud-agnostic and supports many providers."
+        "explanation": "Terraform is cloud-agnostic and supports many providers.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q2",
@@ -8879,7 +12542,8 @@ export const certifications = [
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
-        "explanation": "Cloud-native apps leverage microservices and containers."
+        "explanation": "Cloud-native apps leverage microservices and containers.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q3",
@@ -8892,7 +12556,8 @@ export const certifications = [
         ],
         "answer": "Storing data on remote servers accessed via the internet",
         "category": "Domain Review",
-        "explanation": "Cloud storage is highly scalable and accessible from anywhere."
+        "explanation": "Cloud storage is highly scalable and accessible from anywhere.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q4",
@@ -8905,7 +12570,8 @@ export const certifications = [
         ],
         "answer": "Platform as a Service",
         "category": "Domain Review",
-        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure."
+        "explanation": "PaaS provides a framework for developers to build and run applications without managing infrastructure.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q5",
@@ -8918,7 +12584,8 @@ export const certifications = [
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
         "category": "Domain Review",
-        "explanation": "Most large enterprises operate in a hybrid IT model."
+        "explanation": "Most large enterprises operate in a hybrid IT model.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q6",
@@ -8931,7 +12598,8 @@ export const certifications = [
         ],
         "answer": "Data stored in a hierarchical folder structure",
         "category": "Domain Review",
-        "explanation": "File storage is common for shared network drives."
+        "explanation": "File storage is common for shared network drives.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q7",
@@ -8944,7 +12612,8 @@ export const certifications = [
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
-        "explanation": "Logs are essential for troubleshooting and security analysis."
+        "explanation": "Logs are essential for troubleshooting and security analysis.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q8",
@@ -8957,7 +12626,8 @@ export const certifications = [
         ],
         "answer": "Policies and procedures to manage cloud resources and costs",
         "category": "Domain Review",
-        "explanation": "Governance ensures compliance and efficiency."
+        "explanation": "Governance ensures compliance and efficiency.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "oci-found-q9",
@@ -8970,7 +12640,8 @@ export const certifications = [
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
-        "explanation": "DR often involves multi-region backups and replication."
+        "explanation": "DR often involves multi-region backups and replication.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q10",
@@ -8983,7 +12654,8 @@ export const certifications = [
         ],
         "answer": "The ability to automatically scale resources based on demand",
         "category": "Domain Review",
-        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency."
+        "explanation": "Elasticity is a core feature of cloud computing for cost efficiency.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q11",
@@ -8996,7 +12668,8 @@ export const certifications = [
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
-        "explanation": "The 'Big Three' are AWS, Microsoft, and Google."
+        "explanation": "The 'Big Three' are AWS, Microsoft, and Google.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q12",
@@ -9009,7 +12682,8 @@ export const certifications = [
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
-        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute."
+        "explanation": "Example: AWS Storage Gateway or Azure ExpressRoute.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q13",
@@ -9022,7 +12696,8 @@ export const certifications = [
         ],
         "answer": "Running small snippets of code in response to events",
         "category": "Domain Review",
-        "explanation": "Example: AWS Lambda or Azure Functions."
+        "explanation": "Example: AWS Lambda or Azure Functions.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q14",
@@ -9035,7 +12710,8 @@ export const certifications = [
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
-        "explanation": "CDNs reduce latency by serving content from a location near the user."
+        "explanation": "CDNs reduce latency by serving content from a location near the user.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q15",
@@ -9048,7 +12724,8 @@ export const certifications = [
         ],
         "answer": "An open-source system for automating deployment and management of containers",
         "category": "Domain Review",
-        "explanation": "Kubernetes is the standard for container orchestration."
+        "explanation": "Kubernetes is the standard for container orchestration.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q16",
@@ -9061,7 +12738,8 @@ export const certifications = [
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
-        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore."
+        "explanation": "Example: Amazon Aurora Serverless or Google Cloud Firestore.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q17",
@@ -9074,7 +12752,8 @@ export const certifications = [
         ],
         "answer": "Using spare cloud capacity at a large discount",
         "category": "Domain Review",
-        "explanation": "Spot instances can be interrupted if the provider needs the capacity."
+        "explanation": "Spot instances can be interrupted if the provider needs the capacity.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "oci-found-q18",
@@ -9087,7 +12766,8 @@ export const certifications = [
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
-        "explanation": "IaC allows for consistent and repeatable deployments."
+        "explanation": "IaC allows for consistent and repeatable deployments.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q19",
@@ -9100,7 +12780,8 @@ export const certifications = [
         ],
         "answer": "Software as a Service",
         "category": "Domain Review",
-        "explanation": "SaaS delivers software applications over the internet on a subscription basis."
+        "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q20",
@@ -9113,7 +12794,8 @@ export const certifications = [
         ],
         "answer": "Breaking an app into small, independent services",
         "category": "Domain Review",
-        "explanation": "Microservices improve scalability and ease of deployment."
+        "explanation": "Microservices improve scalability and ease of deployment.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q21",
@@ -9126,7 +12808,8 @@ export const certifications = [
         ],
         "answer": "Running code without managing servers",
         "category": "Domain Review",
-        "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution."
+        "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q22",
@@ -9139,7 +12822,8 @@ export const certifications = [
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
-        "explanation": "Migration can be a complex and multi-stage process."
+        "explanation": "Migration can be a complex and multi-stage process.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q23",
@@ -9152,7 +12836,8 @@ export const certifications = [
         ],
         "answer": "Pay-as-you-go pricing",
         "category": "Domain Review",
-        "explanation": "Cloud computing converts capital expenses into variable operational expenses."
+        "explanation": "Cloud computing converts capital expenses into variable operational expenses.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "oci-found-q24",
@@ -9165,7 +12850,8 @@ export const certifications = [
         ],
         "answer": "Combining development and operations to improve speed and quality",
         "category": "Domain Review",
-        "explanation": "DevOps uses automation and CI/CD pipelines."
+        "explanation": "DevOps uses automation and CI/CD pipelines.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q25",
@@ -9178,7 +12864,8 @@ export const certifications = [
         ],
         "answer": "Infrastructure as a Service",
         "category": "Domain Review",
-        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand."
+        "explanation": "IaaS provides fundamental compute, storage, and networking resources on demand.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q26",
@@ -9191,7 +12878,8 @@ export const certifications = [
         ],
         "answer": "Cloud resources used exclusively by one organization",
         "category": "Domain Review",
-        "explanation": "Private clouds offer greater control and privacy."
+        "explanation": "Private clouds offer greater control and privacy.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q27",
@@ -9204,7 +12892,8 @@ export const certifications = [
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
         "category": "Domain Review",
-        "explanation": "Reserved instances can save a lot of money for long-term workloads."
+        "explanation": "Reserved instances can save a lot of money for long-term workloads.",
+        "topic": "Billing & Pricing"
       },
       {
         "id": "oci-found-q28",
@@ -9217,7 +12906,8 @@ export const certifications = [
         ],
         "answer": "Automatically adding or removing instances based on load",
         "category": "Domain Review",
-        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls."
+        "explanation": "Auto scaling ensures performance during peaks and saves money during lulls.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q29",
@@ -9230,7 +12920,8 @@ export const certifications = [
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
-        "explanation": "The provider secures the cloud; the customer secures what's in the cloud."
+        "explanation": "The provider secures the cloud; the customer secures what's in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "oci-found-q30",
@@ -9243,7 +12934,8 @@ export const certifications = [
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
-        "explanation": "Docker is a popular container technology."
+        "explanation": "Docker is a popular container technology.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q31",
@@ -9256,7 +12948,8 @@ export const certifications = [
         ],
         "answer": "Systems that are durable and likely to operate continuously",
         "category": "Domain Review",
-        "explanation": "HA is achieved through redundancy and failover mechanisms."
+        "explanation": "HA is achieved through redundancy and failover mechanisms.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q32",
@@ -9269,7 +12962,8 @@ export const certifications = [
         ],
         "answer": "Managing users and their permissions to access cloud resources",
         "category": "Domain Review",
-        "explanation": "IAM is a fundamental part of cloud security."
+        "explanation": "IAM is a fundamental part of cloud security.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "oci-found-q33",
@@ -9282,7 +12976,8 @@ export const certifications = [
         ],
         "answer": "Software that creates and runs virtual machines",
         "category": "Domain Review",
-        "explanation": "Hypervisors manage the physical resources for multiple guest OSs."
+        "explanation": "Hypervisors manage the physical resources for multiple guest OSs.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q34",
@@ -9295,7 +12990,8 @@ export const certifications = [
         ],
         "answer": "Multiple customers sharing the same physical hardware",
         "category": "Domain Review",
-        "explanation": "The provider ensures data isolation between tenants."
+        "explanation": "The provider ensures data isolation between tenants.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q35",
@@ -9308,7 +13004,8 @@ export const certifications = [
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
-        "explanation": "Object storage is ideal for unstructured data like photos and videos."
+        "explanation": "Object storage is ideal for unstructured data like photos and videos.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q36",
@@ -9321,7 +13018,8 @@ export const certifications = [
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
-        "explanation": "Fault tolerance is a higher level of availability."
+        "explanation": "Fault tolerance is a higher level of availability.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q37",
@@ -9334,7 +13032,8 @@ export const certifications = [
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
-        "explanation": "VPCs allow users to define their own network topology."
+        "explanation": "VPCs allow users to define their own network topology.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q38",
@@ -9347,7 +13046,8 @@ export const certifications = [
         ],
         "answer": "Hybrid Cloud",
         "category": "Domain Review",
-        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments."
+        "explanation": "Hybrid clouds allow data and apps to be shared between public and private environments.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q39",
@@ -9360,7 +13060,8 @@ export const certifications = [
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
         "category": "Domain Review",
-        "explanation": "Block storage provides high performance for transaction-heavy apps."
+        "explanation": "Block storage provides high performance for transaction-heavy apps.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q40",
@@ -9373,7 +13074,8 @@ export const certifications = [
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
         "category": "Domain Review",
-        "explanation": "Security is a shared responsibility in the cloud."
+        "explanation": "Security is a shared responsibility in the cloud.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "oci-found-q41",
@@ -9386,7 +13088,8 @@ export const certifications = [
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
         "category": "Domain Review",
-        "explanation": "Virtualization is the foundation of cloud computing."
+        "explanation": "Virtualization is the foundation of cloud computing.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q42",
@@ -9399,7 +13102,8 @@ export const certifications = [
         ],
         "answer": "One or more discrete data centers with redundant power",
         "category": "Domain Review",
-        "explanation": "AZs help ensure high availability and fault tolerance within a region."
+        "explanation": "AZs help ensure high availability and fault tolerance within a region.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q43",
@@ -9412,7 +13116,8 @@ export const certifications = [
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
-        "explanation": "Regions are geographically isolated areas where cloud resources are hosted."
+        "explanation": "Regions are geographically isolated areas where cloud resources are hosted.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q44",
@@ -9425,7 +13130,8 @@ export const certifications = [
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
-        "explanation": "Edge computing reduces latency and bandwidth usage."
+        "explanation": "Edge computing reduces latency and bandwidth usage.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q45",
@@ -9438,7 +13144,8 @@ export const certifications = [
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
-        "explanation": "Example: Amazon CloudWatch or Azure Monitor."
+        "explanation": "Example: Amazon CloudWatch or Azure Monitor.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q46",
@@ -9451,7 +13158,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
         "category": "Domain Review",
-        "explanation": "Sovereignty is a major consideration for global cloud deployments."
+        "explanation": "Sovereignty is a major consideration for global cloud deployments.",
+        "topic": "Security & Compliance"
       },
       {
         "id": "oci-found-q47",
@@ -9464,7 +13172,8 @@ export const certifications = [
         ],
         "answer": "The ability to increase or decrease resources",
         "category": "Domain Review",
-        "explanation": "Scalability can be vertical (size) or horizontal (number)."
+        "explanation": "Scalability can be vertical (size) or horizontal (number).",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q48",
@@ -9477,7 +13186,8 @@ export const certifications = [
         ],
         "answer": "Minimal delay in data transmission",
         "category": "Domain Review",
-        "explanation": "Low latency is critical for gaming and financial applications."
+        "explanation": "Low latency is critical for gaming and financial applications.",
+        "topic": "Technology"
       },
       {
         "id": "oci-found-q49",
@@ -9490,7 +13200,8 @@ export const certifications = [
         ],
         "answer": "Services offered by third-party providers over the public internet",
         "category": "Domain Review",
-        "explanation": "Examples include AWS, Azure, and Google Cloud."
+        "explanation": "Examples include AWS, Azure, and Google Cloud.",
+        "topic": "Cloud Concepts"
       },
       {
         "id": "oci-found-q50",
@@ -9503,7 +13214,8 @@ export const certifications = [
         ],
         "answer": "How cloud providers charge for their services",
         "category": "Domain Review",
-        "explanation": "Cloud billing is usually based on usage (pay-as-you-go)."
+        "explanation": "Cloud billing is usually based on usage (pay-as-you-go).",
+        "topic": "Billing & Pricing"
       }
     ]
   },
@@ -9519,11 +13231,217 @@ export const certifications = [
     "description": "Entry-level certification for project team members.",
     "reviewer": [
       {
-        "title": "Project Management Fundamentals",
+        "title": "Business Environment",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Certified Associate in Project Management."
+            "name": "What is 'Portfolio Management'?",
+            "detail": "Portfolio management focuses on selecting the right work."
+          },
+          {
+            "name": "What is 'Program Management'?",
+            "detail": "Programs deliver more value together than as separate projects."
+          },
+          {
+            "name": "What is 'Project Governance'?",
+            "detail": "Governance ensures the project aligns with organizational goals."
+          },
+          {
+            "name": "What is a 'PMO' (Project Management Office)?",
+            "detail": "PMOs provide standards, templates, and support."
+          }
+        ]
+      },
+      {
+        "title": "People",
+        "topics": [
+          {
+            "name": "What is 'Resource Management'?",
+            "detail": "It ensures resources are available when needed."
+          },
+          {
+            "name": "What is a 'Stakeholder Registry'?",
+            "detail": "It helps in planning stakeholder engagement."
+          },
+          {
+            "name": "Who are 'Stakeholders'?",
+            "detail": "Stakeholders include the team, customers, sponsors, and more."
+          },
+          {
+            "name": "What is the role of the 'Scrum Master'?",
+            "detail": "The Scrum Master helps the team follow Scrum values and removes blockers."
+          },
+          {
+            "name": "What is a 'Daily Stand-up'?",
+            "detail": "Stand-ups are key to Agile sync and identifying blockers early."
+          }
+        ]
+      },
+      {
+        "title": "Process",
+        "topics": [
+          {
+            "name": "What is an 'Epic'?",
+            "detail": "Epics often span multiple sprints."
+          },
+          {
+            "name": "What is a 'SOW' (Statement of Work)?",
+            "detail": "SOW defines the scope, schedule, and deliverables for a vendor."
+          },
+          {
+            "name": "What is a 'Lessons Learned' session?",
+            "detail": "Lessons learned improve future project performance."
+          },
+          {
+            "name": "What is a 'Sprint Retrospective'?",
+            "detail": "The team identifies improvements for the next sprint."
+          },
+          {
+            "name": "What is a 'Critical Success Factor' (CSF)?",
+            "detail": "CSFs are key areas of focus for the project manager."
+          },
+          {
+            "name": "What is 'Project Scope'?",
+            "detail": "Defining scope is essential to prevent uncontrolled changes."
+          },
+          {
+            "name": "What is 'Cost Baseline'?",
+            "detail": "The baseline includes all authorized expenses."
+          },
+          {
+            "name": "What is 'Sprint Planning'?",
+            "detail": "The team selects items from the product backlog."
+          },
+          {
+            "name": "What is 'Backlog Grooming' (or Refinement)?",
+            "detail": "Grooming ensures the backlog is ready for planning."
+          },
+          {
+            "name": "What is a 'WBS' (Work Breakdown Structure)?",
+            "detail": "WBS breaks a project down into manageable parts."
+          },
+          {
+            "name": "What is 'Planning Poker'?",
+            "detail": "Teams use cards to estimate story points anonymously."
+          },
+          {
+            "name": "What is 'Lean' project management?",
+            "detail": "Lean originated in manufacturing and is widely used in IT."
+          },
+          {
+            "name": "What is 'Waterfall' methodology?",
+            "detail": "Work flows through distinct phases like requirements, design, and testing."
+          },
+          {
+            "name": "What does 'Scope Creep' mean?",
+            "detail": "Scope creep occurs when new features are added without adjusting time or budget."
+          },
+          {
+            "name": "What is a 'Sprint' in Scrum?",
+            "detail": "Work is completed and made ready for review within a sprint."
+          },
+          {
+            "name": "What is 'Velocity' in Agile?",
+            "detail": "Velocity helps in planning future sprints."
+          },
+          {
+            "name": "What is 'Quality Control' (QC)?",
+            "detail": "QC is focused on the deliverables themselves."
+          },
+          {
+            "name": "What is 'Earned Value Management' (EVM)?",
+            "detail": "EVM integrates scope, schedule, and cost metrics."
+          },
+          {
+            "name": "What is a 'Story Point'?",
+            "detail": "Story points account for complexity, effort, and risk."
+          },
+          {
+            "name": "What is a 'User Story'?",
+            "detail": "User stories help teams understand user needs."
+          },
+          {
+            "name": "What is a 'Milestone'?",
+            "detail": "Milestones help track progress towards major goals."
+          },
+          {
+            "name": "What is 'Scrum'?",
+            "detail": "Scrum uses roles, events, and artifacts to manage complex work."
+          },
+          {
+            "name": "What is 'Change Management'?",
+            "detail": "It ensures changes are properly reviewed and approved."
+          },
+          {
+            "name": "What is a 'Product Backlog'?",
+            "detail": "The backlog is constantly evolving and managed by the Product Owner."
+          },
+          {
+            "name": "What is 'Six Sigma'?",
+            "detail": "Six Sigma focuses on reducing defects and variability."
+          },
+          {
+            "name": "What is the 'MVP' in product development?",
+            "detail": "An MVP has just enough features to satisfy early customers and provide feedback."
+          },
+          {
+            "name": "What is 'Kanban'?",
+            "detail": "Kanban helps visualize workflow and limit work-in-progress."
+          },
+          {
+            "name": "What is 'Iterative Development'?",
+            "detail": "Each iteration improves the product based on feedback."
+          },
+          {
+            "name": "What is a 'Gantt Chart'?",
+            "detail": "Gantt charts show tasks over time and their dependencies."
+          },
+          {
+            "name": "What is 'Risk Management'?",
+            "detail": "Management involves mitigation, transfer, acceptance, or avoidance."
+          },
+          {
+            "name": "What is 'Agile Manifesto'?",
+            "detail": "The manifesto was created by 17 software developers in 2001."
+          },
+          {
+            "name": "What is 'Procurement Management'?",
+            "detail": "It involves contracts, vendors, and purchasing."
+          },
+          {
+            "name": "What is a 'Project Charter'?",
+            "detail": "The charter gives the project manager authority to use resources."
+          },
+          {
+            "name": "What is 'Project Budget'?",
+            "detail": "Managing the budget is a key responsibility of the project manager."
+          },
+          {
+            "name": "What is 'PRINCE2'?",
+            "detail": "PRINCE2 stands for Projects IN Controlled Environments."
+          },
+          {
+            "name": "What is 'Quality Assurance' (QA)?",
+            "detail": "QA is focused on the process used to create the deliverables."
+          },
+          {
+            "name": "What is a 'Burndown Chart'?",
+            "detail": "Burndown charts help teams track their progress during a sprint."
+          },
+          {
+            "name": "What is a 'Sprint Review'?",
+            "detail": "The team gets feedback from stakeholders."
+          },
+          {
+            "name": "What does 'KPI' stand for?",
+            "detail": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives."
+          },
+          {
+            "name": "What is 'Incremental Delivery'?",
+            "detail": "Incremental delivery allows for early feedback and value."
+          },
+          {
+            "name": "What is a 'Feature' in project management?",
+            "detail": "Features are often broken down into user stories."
           }
         ]
       }
@@ -9540,7 +13458,8 @@ export const certifications = [
         ],
         "answer": "A large body of work that can be broken down into many user stories",
         "category": "Domain Review",
-        "explanation": "Epics often span multiple sprints."
+        "explanation": "Epics often span multiple sprints.",
+        "topic": "Process"
       },
       {
         "id": "capm-q2",
@@ -9553,7 +13472,8 @@ export const certifications = [
         ],
         "answer": "A document describing the work to be performed under contract",
         "category": "Domain Review",
-        "explanation": "SOW defines the scope, schedule, and deliverables for a vendor."
+        "explanation": "SOW defines the scope, schedule, and deliverables for a vendor.",
+        "topic": "Process"
       },
       {
         "id": "capm-q3",
@@ -9566,7 +13486,8 @@ export const certifications = [
         ],
         "answer": "A meeting to discuss what went well and what didn't in a project",
         "category": "Domain Review",
-        "explanation": "Lessons learned improve future project performance."
+        "explanation": "Lessons learned improve future project performance.",
+        "topic": "Process"
       },
       {
         "id": "capm-q4",
@@ -9579,7 +13500,8 @@ export const certifications = [
         ],
         "answer": "A meeting to discuss how to improve the team's process",
         "category": "Domain Review",
-        "explanation": "The team identifies improvements for the next sprint."
+        "explanation": "The team identifies improvements for the next sprint.",
+        "topic": "Process"
       },
       {
         "id": "capm-q5",
@@ -9592,7 +13514,8 @@ export const certifications = [
         ],
         "answer": "Something that must happen for a project to succeed",
         "category": "Domain Review",
-        "explanation": "CSFs are key areas of focus for the project manager."
+        "explanation": "CSFs are key areas of focus for the project manager.",
+        "topic": "Process"
       },
       {
         "id": "capm-q6",
@@ -9605,7 +13528,8 @@ export const certifications = [
         ],
         "answer": "Managing people, equipment, and materials for a project",
         "category": "Domain Review",
-        "explanation": "It ensures resources are available when needed."
+        "explanation": "It ensures resources are available when needed.",
+        "topic": "People"
       },
       {
         "id": "capm-q7",
@@ -9618,7 +13542,8 @@ export const certifications = [
         ],
         "answer": "Managing a collection of projects and programs to meet strategic goals",
         "category": "Domain Review",
-        "explanation": "Portfolio management focuses on selecting the right work."
+        "explanation": "Portfolio management focuses on selecting the right work.",
+        "topic": "Business Environment"
       },
       {
         "id": "capm-q8",
@@ -9631,7 +13556,8 @@ export const certifications = [
         ],
         "answer": "The work that must be performed to deliver a result",
         "category": "Domain Review",
-        "explanation": "Defining scope is essential to prevent uncontrolled changes."
+        "explanation": "Defining scope is essential to prevent uncontrolled changes.",
+        "topic": "Process"
       },
       {
         "id": "capm-q9",
@@ -9644,7 +13570,8 @@ export const certifications = [
         ],
         "answer": "The approved version of the project budget, used to measure performance",
         "category": "Domain Review",
-        "explanation": "The baseline includes all authorized expenses."
+        "explanation": "The baseline includes all authorized expenses.",
+        "topic": "Process"
       },
       {
         "id": "capm-q10",
@@ -9657,7 +13584,8 @@ export const certifications = [
         ],
         "answer": "A meeting where the team decides what to work on in the next sprint",
         "category": "Domain Review",
-        "explanation": "The team selects items from the product backlog."
+        "explanation": "The team selects items from the product backlog.",
+        "topic": "Process"
       },
       {
         "id": "capm-q11",
@@ -9670,7 +13598,8 @@ export const certifications = [
         ],
         "answer": "Keeping the product backlog up to date and prioritized",
         "category": "Domain Review",
-        "explanation": "Grooming ensures the backlog is ready for planning."
+        "explanation": "Grooming ensures the backlog is ready for planning.",
+        "topic": "Process"
       },
       {
         "id": "capm-q12",
@@ -9683,7 +13612,8 @@ export const certifications = [
         ],
         "answer": "A hierarchical decomposition of project work",
         "category": "Domain Review",
-        "explanation": "WBS breaks a project down into manageable parts."
+        "explanation": "WBS breaks a project down into manageable parts.",
+        "topic": "Process"
       },
       {
         "id": "capm-q13",
@@ -9696,7 +13626,8 @@ export const certifications = [
         ],
         "answer": "A consensus-based estimation technique for user stories",
         "category": "Domain Review",
-        "explanation": "Teams use cards to estimate story points anonymously."
+        "explanation": "Teams use cards to estimate story points anonymously.",
+        "topic": "Process"
       },
       {
         "id": "capm-q14",
@@ -9709,7 +13640,8 @@ export const certifications = [
         ],
         "answer": "Focusing on maximizing value and minimizing waste",
         "category": "Domain Review",
-        "explanation": "Lean originated in manufacturing and is widely used in IT."
+        "explanation": "Lean originated in manufacturing and is widely used in IT.",
+        "topic": "Process"
       },
       {
         "id": "capm-q15",
@@ -9722,7 +13654,8 @@ export const certifications = [
         ],
         "answer": "A sequential project management process",
         "category": "Domain Review",
-        "explanation": "Work flows through distinct phases like requirements, design, and testing."
+        "explanation": "Work flows through distinct phases like requirements, design, and testing.",
+        "topic": "Process"
       },
       {
         "id": "capm-q16",
@@ -9735,7 +13668,8 @@ export const certifications = [
         ],
         "answer": "Uncontrolled changes in project requirements",
         "category": "Domain Review",
-        "explanation": "Scope creep occurs when new features are added without adjusting time or budget."
+        "explanation": "Scope creep occurs when new features are added without adjusting time or budget.",
+        "topic": "Process"
       },
       {
         "id": "capm-q17",
@@ -9748,7 +13682,8 @@ export const certifications = [
         ],
         "answer": "A time-boxed iteration (usually 1-4 weeks)",
         "category": "Domain Review",
-        "explanation": "Work is completed and made ready for review within a sprint."
+        "explanation": "Work is completed and made ready for review within a sprint.",
+        "topic": "Process"
       },
       {
         "id": "capm-q18",
@@ -9761,7 +13696,8 @@ export const certifications = [
         ],
         "answer": "A document listing all project stakeholders and their info",
         "category": "Domain Review",
-        "explanation": "It helps in planning stakeholder engagement."
+        "explanation": "It helps in planning stakeholder engagement.",
+        "topic": "People"
       },
       {
         "id": "capm-q19",
@@ -9774,7 +13710,8 @@ export const certifications = [
         ],
         "answer": "A measure of the amount of work a team can complete in a sprint",
         "category": "Domain Review",
-        "explanation": "Velocity helps in planning future sprints."
+        "explanation": "Velocity helps in planning future sprints.",
+        "topic": "Process"
       },
       {
         "id": "capm-q20",
@@ -9787,7 +13724,8 @@ export const certifications = [
         ],
         "answer": "Anyone affected by or involved in the project",
         "category": "Domain Review",
-        "explanation": "Stakeholders include the team, customers, sponsors, and more."
+        "explanation": "Stakeholders include the team, customers, sponsors, and more.",
+        "topic": "People"
       },
       {
         "id": "capm-q21",
@@ -9800,7 +13738,8 @@ export const certifications = [
         ],
         "answer": "Monitoring project results to ensure they meet standards",
         "category": "Domain Review",
-        "explanation": "QC is focused on the deliverables themselves."
+        "explanation": "QC is focused on the deliverables themselves.",
+        "topic": "Process"
       },
       {
         "id": "capm-q22",
@@ -9813,7 +13752,8 @@ export const certifications = [
         ],
         "answer": "A technique to measure project performance and progress",
         "category": "Domain Review",
-        "explanation": "EVM integrates scope, schedule, and cost metrics."
+        "explanation": "EVM integrates scope, schedule, and cost metrics.",
+        "topic": "Process"
       },
       {
         "id": "capm-q23",
@@ -9826,7 +13766,8 @@ export const certifications = [
         ],
         "answer": "A unit of measure for expressing an estimate of the size of a user story",
         "category": "Domain Review",
-        "explanation": "Story points account for complexity, effort, and risk."
+        "explanation": "Story points account for complexity, effort, and risk.",
+        "topic": "Process"
       },
       {
         "id": "capm-q24",
@@ -9839,7 +13780,8 @@ export const certifications = [
         ],
         "answer": "A short description of a feature from an end-user perspective",
         "category": "Domain Review",
-        "explanation": "User stories help teams understand user needs."
+        "explanation": "User stories help teams understand user needs.",
+        "topic": "Process"
       },
       {
         "id": "capm-q25",
@@ -9852,7 +13794,8 @@ export const certifications = [
         ],
         "answer": "A significant point or event in a project",
         "category": "Domain Review",
-        "explanation": "Milestones help track progress towards major goals."
+        "explanation": "Milestones help track progress towards major goals.",
+        "topic": "Process"
       },
       {
         "id": "capm-q26",
@@ -9865,7 +13808,8 @@ export const certifications = [
         ],
         "answer": "A framework for implementing Agile development",
         "category": "Domain Review",
-        "explanation": "Scrum uses roles, events, and artifacts to manage complex work."
+        "explanation": "Scrum uses roles, events, and artifacts to manage complex work.",
+        "topic": "Process"
       },
       {
         "id": "capm-q27",
@@ -9878,7 +13822,8 @@ export const certifications = [
         ],
         "answer": "A process for managing changes to project scope or plan",
         "category": "Domain Review",
-        "explanation": "It ensures changes are properly reviewed and approved."
+        "explanation": "It ensures changes are properly reviewed and approved.",
+        "topic": "Process"
       },
       {
         "id": "capm-q28",
@@ -9891,7 +13836,8 @@ export const certifications = [
         ],
         "answer": "A prioritized list of everything that might be needed in a product",
         "category": "Domain Review",
-        "explanation": "The backlog is constantly evolving and managed by the Product Owner."
+        "explanation": "The backlog is constantly evolving and managed by the Product Owner.",
+        "topic": "Process"
       },
       {
         "id": "capm-q29",
@@ -9904,7 +13850,8 @@ export const certifications = [
         ],
         "answer": "A set of techniques for process improvement and quality control",
         "category": "Domain Review",
-        "explanation": "Six Sigma focuses on reducing defects and variability."
+        "explanation": "Six Sigma focuses on reducing defects and variability.",
+        "topic": "Process"
       },
       {
         "id": "capm-q30",
@@ -9917,7 +13864,8 @@ export const certifications = [
         ],
         "answer": "A facilitator for a Scrum team",
         "category": "Domain Review",
-        "explanation": "The Scrum Master helps the team follow Scrum values and removes blockers."
+        "explanation": "The Scrum Master helps the team follow Scrum values and removes blockers.",
+        "topic": "People"
       },
       {
         "id": "capm-q31",
@@ -9930,7 +13878,8 @@ export const certifications = [
         ],
         "answer": "Managing a group of related projects to achieve benefits",
         "category": "Domain Review",
-        "explanation": "Programs deliver more value together than as separate projects."
+        "explanation": "Programs deliver more value together than as separate projects.",
+        "topic": "Business Environment"
       },
       {
         "id": "capm-q32",
@@ -9943,7 +13892,8 @@ export const certifications = [
         ],
         "answer": "Minimum Viable Product",
         "category": "Domain Review",
-        "explanation": "An MVP has just enough features to satisfy early customers and provide feedback."
+        "explanation": "An MVP has just enough features to satisfy early customers and provide feedback.",
+        "topic": "Process"
       },
       {
         "id": "capm-q33",
@@ -9956,7 +13906,8 @@ export const certifications = [
         ],
         "answer": "A visual system for managing work as it moves through a process",
         "category": "Domain Review",
-        "explanation": "Kanban helps visualize workflow and limit work-in-progress."
+        "explanation": "Kanban helps visualize workflow and limit work-in-progress.",
+        "topic": "Process"
       },
       {
         "id": "capm-q34",
@@ -9969,7 +13920,8 @@ export const certifications = [
         ],
         "answer": "Developing a product through repeated cycles (iterations)",
         "category": "Domain Review",
-        "explanation": "Each iteration improves the product based on feedback."
+        "explanation": "Each iteration improves the product based on feedback.",
+        "topic": "Process"
       },
       {
         "id": "capm-q35",
@@ -9982,7 +13934,8 @@ export const certifications = [
         ],
         "answer": "A visual representation of a project schedule",
         "category": "Domain Review",
-        "explanation": "Gantt charts show tasks over time and their dependencies."
+        "explanation": "Gantt charts show tasks over time and their dependencies.",
+        "topic": "Process"
       },
       {
         "id": "capm-q36",
@@ -9995,7 +13948,8 @@ export const certifications = [
         ],
         "answer": "Identifying, assessing, and responding to project risks",
         "category": "Domain Review",
-        "explanation": "Management involves mitigation, transfer, acceptance, or avoidance."
+        "explanation": "Management involves mitigation, transfer, acceptance, or avoidance.",
+        "topic": "Process"
       },
       {
         "id": "capm-q37",
@@ -10008,7 +13962,8 @@ export const certifications = [
         ],
         "answer": "A document outlining the values and principles of Agile",
         "category": "Domain Review",
-        "explanation": "The manifesto was created by 17 software developers in 2001."
+        "explanation": "The manifesto was created by 17 software developers in 2001.",
+        "topic": "Process"
       },
       {
         "id": "capm-q38",
@@ -10021,7 +13976,8 @@ export const certifications = [
         ],
         "answer": "Managing the purchase of goods and services for a project",
         "category": "Domain Review",
-        "explanation": "It involves contracts, vendors, and purchasing."
+        "explanation": "It involves contracts, vendors, and purchasing.",
+        "topic": "Process"
       },
       {
         "id": "capm-q39",
@@ -10034,7 +13990,8 @@ export const certifications = [
         ],
         "answer": "A short daily meeting to discuss progress",
         "category": "Domain Review",
-        "explanation": "Stand-ups are key to Agile sync and identifying blockers early."
+        "explanation": "Stand-ups are key to Agile sync and identifying blockers early.",
+        "topic": "People"
       },
       {
         "id": "capm-q40",
@@ -10047,7 +14004,8 @@ export const certifications = [
         ],
         "answer": "The framework for project decision-making and oversight",
         "category": "Domain Review",
-        "explanation": "Governance ensures the project aligns with organizational goals."
+        "explanation": "Governance ensures the project aligns with organizational goals.",
+        "topic": "Business Environment"
       },
       {
         "id": "capm-q41",
@@ -10060,7 +14018,8 @@ export const certifications = [
         ],
         "answer": "A department that centralizes and coordinates project management",
         "category": "Domain Review",
-        "explanation": "PMOs provide standards, templates, and support."
+        "explanation": "PMOs provide standards, templates, and support.",
+        "topic": "Business Environment"
       },
       {
         "id": "capm-q42",
@@ -10073,7 +14032,8 @@ export const certifications = [
         ],
         "answer": "A document that formally authorizes a project",
         "category": "Domain Review",
-        "explanation": "The charter gives the project manager authority to use resources."
+        "explanation": "The charter gives the project manager authority to use resources.",
+        "topic": "Process"
       },
       {
         "id": "capm-q43",
@@ -10086,7 +14046,8 @@ export const certifications = [
         ],
         "answer": "The total amount of money allocated for a project",
         "category": "Domain Review",
-        "explanation": "Managing the budget is a key responsibility of the project manager."
+        "explanation": "Managing the budget is a key responsibility of the project manager.",
+        "topic": "Process"
       },
       {
         "id": "capm-q44",
@@ -10099,7 +14060,8 @@ export const certifications = [
         ],
         "answer": "A structured project management methodology used widely in Europe",
         "category": "Domain Review",
-        "explanation": "PRINCE2 stands for Projects IN Controlled Environments."
+        "explanation": "PRINCE2 stands for Projects IN Controlled Environments.",
+        "topic": "Process"
       },
       {
         "id": "capm-q45",
@@ -10112,7 +14074,8 @@ export const certifications = [
         ],
         "answer": "Processes to ensure a project meets quality standards",
         "category": "Domain Review",
-        "explanation": "QA is focused on the process used to create the deliverables."
+        "explanation": "QA is focused on the process used to create the deliverables.",
+        "topic": "Process"
       },
       {
         "id": "capm-q46",
@@ -10125,7 +14088,8 @@ export const certifications = [
         ],
         "answer": "A graphical representation of work remaining versus time",
         "category": "Domain Review",
-        "explanation": "Burndown charts help teams track their progress during a sprint."
+        "explanation": "Burndown charts help teams track their progress during a sprint.",
+        "topic": "Process"
       },
       {
         "id": "capm-q47",
@@ -10138,7 +14102,8 @@ export const certifications = [
         ],
         "answer": "A meeting to demonstrate the work completed during the sprint",
         "category": "Domain Review",
-        "explanation": "The team gets feedback from stakeholders."
+        "explanation": "The team gets feedback from stakeholders.",
+        "topic": "Process"
       },
       {
         "id": "capm-q48",
@@ -10151,7 +14116,8 @@ export const certifications = [
         ],
         "answer": "Key Performance Indicator",
         "category": "Domain Review",
-        "explanation": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives."
+        "explanation": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives.",
+        "topic": "Process"
       },
       {
         "id": "capm-q49",
@@ -10164,7 +14130,8 @@ export const certifications = [
         ],
         "answer": "Delivering a product in small, usable parts over time",
         "category": "Domain Review",
-        "explanation": "Incremental delivery allows for early feedback and value."
+        "explanation": "Incremental delivery allows for early feedback and value.",
+        "topic": "Process"
       },
       {
         "id": "capm-q50",
@@ -10177,7 +14144,8 @@ export const certifications = [
         ],
         "answer": "A distinct functionality or capability of a product",
         "category": "Domain Review",
-        "explanation": "Features are often broken down into user stories."
+        "explanation": "Features are often broken down into user stories.",
+        "topic": "Process"
       }
     ]
   },
@@ -10193,11 +14161,217 @@ export const certifications = [
     "description": "Lead Agile teams and deliver high-value results.",
     "reviewer": [
       {
-        "title": "Project Management Fundamentals",
+        "title": "Business Environment",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Certified ScrumMaster (CSM)."
+            "name": "What is 'Portfolio Management'?",
+            "detail": "Portfolio management focuses on selecting the right work."
+          },
+          {
+            "name": "What is 'Project Governance'?",
+            "detail": "Governance ensures the project aligns with organizational goals."
+          },
+          {
+            "name": "What is 'Program Management'?",
+            "detail": "Programs deliver more value together than as separate projects."
+          },
+          {
+            "name": "What is a 'PMO' (Project Management Office)?",
+            "detail": "PMOs provide standards, templates, and support."
+          }
+        ]
+      },
+      {
+        "title": "People",
+        "topics": [
+          {
+            "name": "What is a 'Stakeholder Registry'?",
+            "detail": "It helps in planning stakeholder engagement."
+          },
+          {
+            "name": "What is the role of the 'Scrum Master'?",
+            "detail": "The Scrum Master helps the team follow Scrum values and removes blockers."
+          },
+          {
+            "name": "What is a 'Daily Stand-up'?",
+            "detail": "Stand-ups are key to Agile sync and identifying blockers early."
+          },
+          {
+            "name": "Who are 'Stakeholders'?",
+            "detail": "Stakeholders include the team, customers, sponsors, and more."
+          },
+          {
+            "name": "What is 'Resource Management'?",
+            "detail": "It ensures resources are available when needed."
+          }
+        ]
+      },
+      {
+        "title": "Process",
+        "topics": [
+          {
+            "name": "What is 'Scrum'?",
+            "detail": "Scrum uses roles, events, and artifacts to manage complex work."
+          },
+          {
+            "name": "What is 'Quality Control' (QC)?",
+            "detail": "QC is focused on the deliverables themselves."
+          },
+          {
+            "name": "What is a 'Sprint Review'?",
+            "detail": "The team gets feedback from stakeholders."
+          },
+          {
+            "name": "What is 'Risk Management'?",
+            "detail": "Management involves mitigation, transfer, acceptance, or avoidance."
+          },
+          {
+            "name": "What is a 'WBS' (Work Breakdown Structure)?",
+            "detail": "WBS breaks a project down into manageable parts."
+          },
+          {
+            "name": "What is 'Change Management'?",
+            "detail": "It ensures changes are properly reviewed and approved."
+          },
+          {
+            "name": "What is 'Backlog Grooming' (or Refinement)?",
+            "detail": "Grooming ensures the backlog is ready for planning."
+          },
+          {
+            "name": "What is a 'Sprint' in Scrum?",
+            "detail": "Work is completed and made ready for review within a sprint."
+          },
+          {
+            "name": "What is a 'Milestone'?",
+            "detail": "Milestones help track progress towards major goals."
+          },
+          {
+            "name": "What is a 'SOW' (Statement of Work)?",
+            "detail": "SOW defines the scope, schedule, and deliverables for a vendor."
+          },
+          {
+            "name": "What is a 'Lessons Learned' session?",
+            "detail": "Lessons learned improve future project performance."
+          },
+          {
+            "name": "What is the 'MVP' in product development?",
+            "detail": "An MVP has just enough features to satisfy early customers and provide feedback."
+          },
+          {
+            "name": "What is a 'Feature' in project management?",
+            "detail": "Features are often broken down into user stories."
+          },
+          {
+            "name": "What is a 'Project Charter'?",
+            "detail": "The charter gives the project manager authority to use resources."
+          },
+          {
+            "name": "What is a 'User Story'?",
+            "detail": "User stories help teams understand user needs."
+          },
+          {
+            "name": "What is 'Earned Value Management' (EVM)?",
+            "detail": "EVM integrates scope, schedule, and cost metrics."
+          },
+          {
+            "name": "What is 'Incremental Delivery'?",
+            "detail": "Incremental delivery allows for early feedback and value."
+          },
+          {
+            "name": "What is a 'Product Backlog'?",
+            "detail": "The backlog is constantly evolving and managed by the Product Owner."
+          },
+          {
+            "name": "What is a 'Burndown Chart'?",
+            "detail": "Burndown charts help teams track their progress during a sprint."
+          },
+          {
+            "name": "What is a 'Story Point'?",
+            "detail": "Story points account for complexity, effort, and risk."
+          },
+          {
+            "name": "What is 'Kanban'?",
+            "detail": "Kanban helps visualize workflow and limit work-in-progress."
+          },
+          {
+            "name": "What is 'Agile Manifesto'?",
+            "detail": "The manifesto was created by 17 software developers in 2001."
+          },
+          {
+            "name": "What is a 'Gantt Chart'?",
+            "detail": "Gantt charts show tasks over time and their dependencies."
+          },
+          {
+            "name": "What is 'Procurement Management'?",
+            "detail": "It involves contracts, vendors, and purchasing."
+          },
+          {
+            "name": "What is a 'Sprint Retrospective'?",
+            "detail": "The team identifies improvements for the next sprint."
+          },
+          {
+            "name": "What is 'Agile' methodology?",
+            "detail": "Agile focuses on delivering value quickly and adapting to change."
+          },
+          {
+            "name": "What does 'KPI' stand for?",
+            "detail": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives."
+          },
+          {
+            "name": "What is 'Planning Poker'?",
+            "detail": "Teams use cards to estimate story points anonymously."
+          },
+          {
+            "name": "What is 'Cost Baseline'?",
+            "detail": "The baseline includes all authorized expenses."
+          },
+          {
+            "name": "What is 'Six Sigma'?",
+            "detail": "Six Sigma focuses on reducing defects and variability."
+          },
+          {
+            "name": "What is 'Iterative Development'?",
+            "detail": "Each iteration improves the product based on feedback."
+          },
+          {
+            "name": "What does 'Scope Creep' mean?",
+            "detail": "Scope creep occurs when new features are added without adjusting time or budget."
+          },
+          {
+            "name": "What is 'Velocity' in Agile?",
+            "detail": "Velocity helps in planning future sprints."
+          },
+          {
+            "name": "What is 'Project Budget'?",
+            "detail": "Managing the budget is a key responsibility of the project manager."
+          },
+          {
+            "name": "What is 'Project Scope'?",
+            "detail": "Defining scope is essential to prevent uncontrolled changes."
+          },
+          {
+            "name": "What is 'Waterfall' methodology?",
+            "detail": "Work flows through distinct phases like requirements, design, and testing."
+          },
+          {
+            "name": "What is a 'Critical Success Factor' (CSF)?",
+            "detail": "CSFs are key areas of focus for the project manager."
+          },
+          {
+            "name": "What is 'Quality Assurance' (QA)?",
+            "detail": "QA is focused on the process used to create the deliverables."
+          },
+          {
+            "name": "What is 'Sprint Planning'?",
+            "detail": "The team selects items from the product backlog."
+          },
+          {
+            "name": "What is an 'Epic'?",
+            "detail": "Epics often span multiple sprints."
+          },
+          {
+            "name": "What is 'PRINCE2'?",
+            "detail": "PRINCE2 stands for Projects IN Controlled Environments."
           }
         ]
       }
@@ -10214,7 +14388,8 @@ export const certifications = [
         ],
         "answer": "A framework for implementing Agile development",
         "category": "Domain Review",
-        "explanation": "Scrum uses roles, events, and artifacts to manage complex work."
+        "explanation": "Scrum uses roles, events, and artifacts to manage complex work.",
+        "topic": "Process"
       },
       {
         "id": "csm-q2",
@@ -10227,7 +14402,8 @@ export const certifications = [
         ],
         "answer": "Monitoring project results to ensure they meet standards",
         "category": "Domain Review",
-        "explanation": "QC is focused on the deliverables themselves."
+        "explanation": "QC is focused on the deliverables themselves.",
+        "topic": "Process"
       },
       {
         "id": "csm-q3",
@@ -10240,7 +14416,8 @@ export const certifications = [
         ],
         "answer": "A meeting to demonstrate the work completed during the sprint",
         "category": "Domain Review",
-        "explanation": "The team gets feedback from stakeholders."
+        "explanation": "The team gets feedback from stakeholders.",
+        "topic": "Process"
       },
       {
         "id": "csm-q4",
@@ -10253,7 +14430,8 @@ export const certifications = [
         ],
         "answer": "Identifying, assessing, and responding to project risks",
         "category": "Domain Review",
-        "explanation": "Management involves mitigation, transfer, acceptance, or avoidance."
+        "explanation": "Management involves mitigation, transfer, acceptance, or avoidance.",
+        "topic": "Process"
       },
       {
         "id": "csm-q5",
@@ -10266,7 +14444,8 @@ export const certifications = [
         ],
         "answer": "A hierarchical decomposition of project work",
         "category": "Domain Review",
-        "explanation": "WBS breaks a project down into manageable parts."
+        "explanation": "WBS breaks a project down into manageable parts.",
+        "topic": "Process"
       },
       {
         "id": "csm-q6",
@@ -10279,7 +14458,8 @@ export const certifications = [
         ],
         "answer": "A process for managing changes to project scope or plan",
         "category": "Domain Review",
-        "explanation": "It ensures changes are properly reviewed and approved."
+        "explanation": "It ensures changes are properly reviewed and approved.",
+        "topic": "Process"
       },
       {
         "id": "csm-q7",
@@ -10292,7 +14472,8 @@ export const certifications = [
         ],
         "answer": "Keeping the product backlog up to date and prioritized",
         "category": "Domain Review",
-        "explanation": "Grooming ensures the backlog is ready for planning."
+        "explanation": "Grooming ensures the backlog is ready for planning.",
+        "topic": "Process"
       },
       {
         "id": "csm-q8",
@@ -10305,7 +14486,8 @@ export const certifications = [
         ],
         "answer": "A time-boxed iteration (usually 1-4 weeks)",
         "category": "Domain Review",
-        "explanation": "Work is completed and made ready for review within a sprint."
+        "explanation": "Work is completed and made ready for review within a sprint.",
+        "topic": "Process"
       },
       {
         "id": "csm-q9",
@@ -10318,7 +14500,8 @@ export const certifications = [
         ],
         "answer": "A significant point or event in a project",
         "category": "Domain Review",
-        "explanation": "Milestones help track progress towards major goals."
+        "explanation": "Milestones help track progress towards major goals.",
+        "topic": "Process"
       },
       {
         "id": "csm-q10",
@@ -10331,7 +14514,8 @@ export const certifications = [
         ],
         "answer": "A document describing the work to be performed under contract",
         "category": "Domain Review",
-        "explanation": "SOW defines the scope, schedule, and deliverables for a vendor."
+        "explanation": "SOW defines the scope, schedule, and deliverables for a vendor.",
+        "topic": "Process"
       },
       {
         "id": "csm-q11",
@@ -10344,7 +14528,8 @@ export const certifications = [
         ],
         "answer": "A meeting to discuss what went well and what didn't in a project",
         "category": "Domain Review",
-        "explanation": "Lessons learned improve future project performance."
+        "explanation": "Lessons learned improve future project performance.",
+        "topic": "Process"
       },
       {
         "id": "csm-q12",
@@ -10357,7 +14542,8 @@ export const certifications = [
         ],
         "answer": "Minimum Viable Product",
         "category": "Domain Review",
-        "explanation": "An MVP has just enough features to satisfy early customers and provide feedback."
+        "explanation": "An MVP has just enough features to satisfy early customers and provide feedback.",
+        "topic": "Process"
       },
       {
         "id": "csm-q13",
@@ -10370,7 +14556,8 @@ export const certifications = [
         ],
         "answer": "A distinct functionality or capability of a product",
         "category": "Domain Review",
-        "explanation": "Features are often broken down into user stories."
+        "explanation": "Features are often broken down into user stories.",
+        "topic": "Process"
       },
       {
         "id": "csm-q14",
@@ -10383,7 +14570,8 @@ export const certifications = [
         ],
         "answer": "A document that formally authorizes a project",
         "category": "Domain Review",
-        "explanation": "The charter gives the project manager authority to use resources."
+        "explanation": "The charter gives the project manager authority to use resources.",
+        "topic": "Process"
       },
       {
         "id": "csm-q15",
@@ -10396,7 +14584,8 @@ export const certifications = [
         ],
         "answer": "A short description of a feature from an end-user perspective",
         "category": "Domain Review",
-        "explanation": "User stories help teams understand user needs."
+        "explanation": "User stories help teams understand user needs.",
+        "topic": "Process"
       },
       {
         "id": "csm-q16",
@@ -10409,7 +14598,8 @@ export const certifications = [
         ],
         "answer": "A technique to measure project performance and progress",
         "category": "Domain Review",
-        "explanation": "EVM integrates scope, schedule, and cost metrics."
+        "explanation": "EVM integrates scope, schedule, and cost metrics.",
+        "topic": "Process"
       },
       {
         "id": "csm-q17",
@@ -10422,7 +14612,8 @@ export const certifications = [
         ],
         "answer": "A document listing all project stakeholders and their info",
         "category": "Domain Review",
-        "explanation": "It helps in planning stakeholder engagement."
+        "explanation": "It helps in planning stakeholder engagement.",
+        "topic": "People"
       },
       {
         "id": "csm-q18",
@@ -10435,7 +14626,8 @@ export const certifications = [
         ],
         "answer": "Delivering a product in small, usable parts over time",
         "category": "Domain Review",
-        "explanation": "Incremental delivery allows for early feedback and value."
+        "explanation": "Incremental delivery allows for early feedback and value.",
+        "topic": "Process"
       },
       {
         "id": "csm-q19",
@@ -10448,7 +14640,8 @@ export const certifications = [
         ],
         "answer": "A prioritized list of everything that might be needed in a product",
         "category": "Domain Review",
-        "explanation": "The backlog is constantly evolving and managed by the Product Owner."
+        "explanation": "The backlog is constantly evolving and managed by the Product Owner.",
+        "topic": "Process"
       },
       {
         "id": "csm-q20",
@@ -10461,7 +14654,8 @@ export const certifications = [
         ],
         "answer": "A graphical representation of work remaining versus time",
         "category": "Domain Review",
-        "explanation": "Burndown charts help teams track their progress during a sprint."
+        "explanation": "Burndown charts help teams track their progress during a sprint.",
+        "topic": "Process"
       },
       {
         "id": "csm-q21",
@@ -10474,7 +14668,8 @@ export const certifications = [
         ],
         "answer": "A unit of measure for expressing an estimate of the size of a user story",
         "category": "Domain Review",
-        "explanation": "Story points account for complexity, effort, and risk."
+        "explanation": "Story points account for complexity, effort, and risk.",
+        "topic": "Process"
       },
       {
         "id": "csm-q22",
@@ -10487,7 +14682,8 @@ export const certifications = [
         ],
         "answer": "A visual system for managing work as it moves through a process",
         "category": "Domain Review",
-        "explanation": "Kanban helps visualize workflow and limit work-in-progress."
+        "explanation": "Kanban helps visualize workflow and limit work-in-progress.",
+        "topic": "Process"
       },
       {
         "id": "csm-q23",
@@ -10500,7 +14696,8 @@ export const certifications = [
         ],
         "answer": "Managing a collection of projects and programs to meet strategic goals",
         "category": "Domain Review",
-        "explanation": "Portfolio management focuses on selecting the right work."
+        "explanation": "Portfolio management focuses on selecting the right work.",
+        "topic": "Business Environment"
       },
       {
         "id": "csm-q24",
@@ -10513,7 +14710,8 @@ export const certifications = [
         ],
         "answer": "The framework for project decision-making and oversight",
         "category": "Domain Review",
-        "explanation": "Governance ensures the project aligns with organizational goals."
+        "explanation": "Governance ensures the project aligns with organizational goals.",
+        "topic": "Business Environment"
       },
       {
         "id": "csm-q25",
@@ -10526,7 +14724,8 @@ export const certifications = [
         ],
         "answer": "A document outlining the values and principles of Agile",
         "category": "Domain Review",
-        "explanation": "The manifesto was created by 17 software developers in 2001."
+        "explanation": "The manifesto was created by 17 software developers in 2001.",
+        "topic": "Process"
       },
       {
         "id": "csm-q26",
@@ -10539,7 +14738,8 @@ export const certifications = [
         ],
         "answer": "A facilitator for a Scrum team",
         "category": "Domain Review",
-        "explanation": "The Scrum Master helps the team follow Scrum values and removes blockers."
+        "explanation": "The Scrum Master helps the team follow Scrum values and removes blockers.",
+        "topic": "People"
       },
       {
         "id": "csm-q27",
@@ -10552,7 +14752,8 @@ export const certifications = [
         ],
         "answer": "A visual representation of a project schedule",
         "category": "Domain Review",
-        "explanation": "Gantt charts show tasks over time and their dependencies."
+        "explanation": "Gantt charts show tasks over time and their dependencies.",
+        "topic": "Process"
       },
       {
         "id": "csm-q28",
@@ -10565,7 +14766,8 @@ export const certifications = [
         ],
         "answer": "Managing a group of related projects to achieve benefits",
         "category": "Domain Review",
-        "explanation": "Programs deliver more value together than as separate projects."
+        "explanation": "Programs deliver more value together than as separate projects.",
+        "topic": "Business Environment"
       },
       {
         "id": "csm-q29",
@@ -10578,7 +14780,8 @@ export const certifications = [
         ],
         "answer": "Managing the purchase of goods and services for a project",
         "category": "Domain Review",
-        "explanation": "It involves contracts, vendors, and purchasing."
+        "explanation": "It involves contracts, vendors, and purchasing.",
+        "topic": "Process"
       },
       {
         "id": "csm-q30",
@@ -10591,7 +14794,8 @@ export const certifications = [
         ],
         "answer": "A meeting to discuss how to improve the team's process",
         "category": "Domain Review",
-        "explanation": "The team identifies improvements for the next sprint."
+        "explanation": "The team identifies improvements for the next sprint.",
+        "topic": "Process"
       },
       {
         "id": "csm-q31",
@@ -10604,7 +14808,8 @@ export const certifications = [
         ],
         "answer": "An iterative approach to project management and software development",
         "category": "Domain Review",
-        "explanation": "Agile focuses on delivering value quickly and adapting to change."
+        "explanation": "Agile focuses on delivering value quickly and adapting to change.",
+        "topic": "Process"
       },
       {
         "id": "csm-q32",
@@ -10617,7 +14822,8 @@ export const certifications = [
         ],
         "answer": "Key Performance Indicator",
         "category": "Domain Review",
-        "explanation": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives."
+        "explanation": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives.",
+        "topic": "Process"
       },
       {
         "id": "csm-q33",
@@ -10630,7 +14836,8 @@ export const certifications = [
         ],
         "answer": "A short daily meeting to discuss progress",
         "category": "Domain Review",
-        "explanation": "Stand-ups are key to Agile sync and identifying blockers early."
+        "explanation": "Stand-ups are key to Agile sync and identifying blockers early.",
+        "topic": "People"
       },
       {
         "id": "csm-q34",
@@ -10643,7 +14850,8 @@ export const certifications = [
         ],
         "answer": "A consensus-based estimation technique for user stories",
         "category": "Domain Review",
-        "explanation": "Teams use cards to estimate story points anonymously."
+        "explanation": "Teams use cards to estimate story points anonymously.",
+        "topic": "Process"
       },
       {
         "id": "csm-q35",
@@ -10656,7 +14864,8 @@ export const certifications = [
         ],
         "answer": "The approved version of the project budget, used to measure performance",
         "category": "Domain Review",
-        "explanation": "The baseline includes all authorized expenses."
+        "explanation": "The baseline includes all authorized expenses.",
+        "topic": "Process"
       },
       {
         "id": "csm-q36",
@@ -10669,7 +14878,8 @@ export const certifications = [
         ],
         "answer": "Anyone affected by or involved in the project",
         "category": "Domain Review",
-        "explanation": "Stakeholders include the team, customers, sponsors, and more."
+        "explanation": "Stakeholders include the team, customers, sponsors, and more.",
+        "topic": "People"
       },
       {
         "id": "csm-q37",
@@ -10682,7 +14892,8 @@ export const certifications = [
         ],
         "answer": "A set of techniques for process improvement and quality control",
         "category": "Domain Review",
-        "explanation": "Six Sigma focuses on reducing defects and variability."
+        "explanation": "Six Sigma focuses on reducing defects and variability.",
+        "topic": "Process"
       },
       {
         "id": "csm-q38",
@@ -10695,7 +14906,8 @@ export const certifications = [
         ],
         "answer": "Developing a product through repeated cycles (iterations)",
         "category": "Domain Review",
-        "explanation": "Each iteration improves the product based on feedback."
+        "explanation": "Each iteration improves the product based on feedback.",
+        "topic": "Process"
       },
       {
         "id": "csm-q39",
@@ -10708,7 +14920,8 @@ export const certifications = [
         ],
         "answer": "Uncontrolled changes in project requirements",
         "category": "Domain Review",
-        "explanation": "Scope creep occurs when new features are added without adjusting time or budget."
+        "explanation": "Scope creep occurs when new features are added without adjusting time or budget.",
+        "topic": "Process"
       },
       {
         "id": "csm-q40",
@@ -10721,7 +14934,8 @@ export const certifications = [
         ],
         "answer": "Managing people, equipment, and materials for a project",
         "category": "Domain Review",
-        "explanation": "It ensures resources are available when needed."
+        "explanation": "It ensures resources are available when needed.",
+        "topic": "People"
       },
       {
         "id": "csm-q41",
@@ -10734,7 +14948,8 @@ export const certifications = [
         ],
         "answer": "A measure of the amount of work a team can complete in a sprint",
         "category": "Domain Review",
-        "explanation": "Velocity helps in planning future sprints."
+        "explanation": "Velocity helps in planning future sprints.",
+        "topic": "Process"
       },
       {
         "id": "csm-q42",
@@ -10747,7 +14962,8 @@ export const certifications = [
         ],
         "answer": "The total amount of money allocated for a project",
         "category": "Domain Review",
-        "explanation": "Managing the budget is a key responsibility of the project manager."
+        "explanation": "Managing the budget is a key responsibility of the project manager.",
+        "topic": "Process"
       },
       {
         "id": "csm-q43",
@@ -10760,7 +14976,8 @@ export const certifications = [
         ],
         "answer": "The work that must be performed to deliver a result",
         "category": "Domain Review",
-        "explanation": "Defining scope is essential to prevent uncontrolled changes."
+        "explanation": "Defining scope is essential to prevent uncontrolled changes.",
+        "topic": "Process"
       },
       {
         "id": "csm-q44",
@@ -10773,7 +14990,8 @@ export const certifications = [
         ],
         "answer": "A sequential project management process",
         "category": "Domain Review",
-        "explanation": "Work flows through distinct phases like requirements, design, and testing."
+        "explanation": "Work flows through distinct phases like requirements, design, and testing.",
+        "topic": "Process"
       },
       {
         "id": "csm-q45",
@@ -10786,7 +15004,8 @@ export const certifications = [
         ],
         "answer": "Something that must happen for a project to succeed",
         "category": "Domain Review",
-        "explanation": "CSFs are key areas of focus for the project manager."
+        "explanation": "CSFs are key areas of focus for the project manager.",
+        "topic": "Process"
       },
       {
         "id": "csm-q46",
@@ -10799,7 +15018,8 @@ export const certifications = [
         ],
         "answer": "Processes to ensure a project meets quality standards",
         "category": "Domain Review",
-        "explanation": "QA is focused on the process used to create the deliverables."
+        "explanation": "QA is focused on the process used to create the deliverables.",
+        "topic": "Process"
       },
       {
         "id": "csm-q47",
@@ -10812,7 +15032,8 @@ export const certifications = [
         ],
         "answer": "A meeting where the team decides what to work on in the next sprint",
         "category": "Domain Review",
-        "explanation": "The team selects items from the product backlog."
+        "explanation": "The team selects items from the product backlog.",
+        "topic": "Process"
       },
       {
         "id": "csm-q48",
@@ -10825,7 +15046,8 @@ export const certifications = [
         ],
         "answer": "A department that centralizes and coordinates project management",
         "category": "Domain Review",
-        "explanation": "PMOs provide standards, templates, and support."
+        "explanation": "PMOs provide standards, templates, and support.",
+        "topic": "Business Environment"
       },
       {
         "id": "csm-q49",
@@ -10838,7 +15060,8 @@ export const certifications = [
         ],
         "answer": "A large body of work that can be broken down into many user stories",
         "category": "Domain Review",
-        "explanation": "Epics often span multiple sprints."
+        "explanation": "Epics often span multiple sprints.",
+        "topic": "Process"
       },
       {
         "id": "csm-q50",
@@ -10851,7 +15074,8 @@ export const certifications = [
         ],
         "answer": "A structured project management methodology used widely in Europe",
         "category": "Domain Review",
-        "explanation": "PRINCE2 stands for Projects IN Controlled Environments."
+        "explanation": "PRINCE2 stands for Projects IN Controlled Environments.",
+        "topic": "Process"
       }
     ]
   },
@@ -10867,11 +15091,217 @@ export const certifications = [
     "description": "Digital-first operating model for service management.",
     "reviewer": [
       {
-        "title": "Project Management Fundamentals",
+        "title": "Business Environment",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for ITIL 4 Foundation."
+            "name": "What is 'Portfolio Management'?",
+            "detail": "Portfolio management focuses on selecting the right work."
+          },
+          {
+            "name": "What is a 'PMO' (Project Management Office)?",
+            "detail": "PMOs provide standards, templates, and support."
+          },
+          {
+            "name": "What is 'Program Management'?",
+            "detail": "Programs deliver more value together than as separate projects."
+          },
+          {
+            "name": "What is 'Project Governance'?",
+            "detail": "Governance ensures the project aligns with organizational goals."
+          }
+        ]
+      },
+      {
+        "title": "People",
+        "topics": [
+          {
+            "name": "Who are 'Stakeholders'?",
+            "detail": "Stakeholders include the team, customers, sponsors, and more."
+          },
+          {
+            "name": "What is 'Resource Management'?",
+            "detail": "It ensures resources are available when needed."
+          },
+          {
+            "name": "What is a 'Daily Stand-up'?",
+            "detail": "Stand-ups are key to Agile sync and identifying blockers early."
+          },
+          {
+            "name": "What is a 'Stakeholder Registry'?",
+            "detail": "It helps in planning stakeholder engagement."
+          },
+          {
+            "name": "What is the role of the 'Scrum Master'?",
+            "detail": "The Scrum Master helps the team follow Scrum values and removes blockers."
+          }
+        ]
+      },
+      {
+        "title": "Process",
+        "topics": [
+          {
+            "name": "What is a 'Project Charter'?",
+            "detail": "The charter gives the project manager authority to use resources."
+          },
+          {
+            "name": "What is 'PRINCE2'?",
+            "detail": "PRINCE2 stands for Projects IN Controlled Environments."
+          },
+          {
+            "name": "What is 'Project Budget'?",
+            "detail": "Managing the budget is a key responsibility of the project manager."
+          },
+          {
+            "name": "What is 'Planning Poker'?",
+            "detail": "Teams use cards to estimate story points anonymously."
+          },
+          {
+            "name": "What is the 'MVP' in product development?",
+            "detail": "An MVP has just enough features to satisfy early customers and provide feedback."
+          },
+          {
+            "name": "What does 'Scope Creep' mean?",
+            "detail": "Scope creep occurs when new features are added without adjusting time or budget."
+          },
+          {
+            "name": "What is 'Sprint Planning'?",
+            "detail": "The team selects items from the product backlog."
+          },
+          {
+            "name": "What is a 'SOW' (Statement of Work)?",
+            "detail": "SOW defines the scope, schedule, and deliverables for a vendor."
+          },
+          {
+            "name": "What is 'Procurement Management'?",
+            "detail": "It involves contracts, vendors, and purchasing."
+          },
+          {
+            "name": "What is 'Scrum'?",
+            "detail": "Scrum uses roles, events, and artifacts to manage complex work."
+          },
+          {
+            "name": "What is 'Iterative Development'?",
+            "detail": "Each iteration improves the product based on feedback."
+          },
+          {
+            "name": "What is a 'Sprint Review'?",
+            "detail": "The team gets feedback from stakeholders."
+          },
+          {
+            "name": "What is 'Quality Assurance' (QA)?",
+            "detail": "QA is focused on the process used to create the deliverables."
+          },
+          {
+            "name": "What is 'Quality Control' (QC)?",
+            "detail": "QC is focused on the deliverables themselves."
+          },
+          {
+            "name": "What is 'Agile Manifesto'?",
+            "detail": "The manifesto was created by 17 software developers in 2001."
+          },
+          {
+            "name": "What is a 'Gantt Chart'?",
+            "detail": "Gantt charts show tasks over time and their dependencies."
+          },
+          {
+            "name": "What is a 'Critical Success Factor' (CSF)?",
+            "detail": "CSFs are key areas of focus for the project manager."
+          },
+          {
+            "name": "What is a 'User Story'?",
+            "detail": "User stories help teams understand user needs."
+          },
+          {
+            "name": "What is 'Kanban'?",
+            "detail": "Kanban helps visualize workflow and limit work-in-progress."
+          },
+          {
+            "name": "What is 'Change Management'?",
+            "detail": "It ensures changes are properly reviewed and approved."
+          },
+          {
+            "name": "What is 'Earned Value Management' (EVM)?",
+            "detail": "EVM integrates scope, schedule, and cost metrics."
+          },
+          {
+            "name": "What is a 'Feature' in project management?",
+            "detail": "Features are often broken down into user stories."
+          },
+          {
+            "name": "What is 'Waterfall' methodology?",
+            "detail": "Work flows through distinct phases like requirements, design, and testing."
+          },
+          {
+            "name": "What is a 'Product Backlog'?",
+            "detail": "The backlog is constantly evolving and managed by the Product Owner."
+          },
+          {
+            "name": "What is 'Agile' methodology?",
+            "detail": "Agile focuses on delivering value quickly and adapting to change."
+          },
+          {
+            "name": "What is 'Six Sigma'?",
+            "detail": "Six Sigma focuses on reducing defects and variability."
+          },
+          {
+            "name": "What is a 'Story Point'?",
+            "detail": "Story points account for complexity, effort, and risk."
+          },
+          {
+            "name": "What is an 'Epic'?",
+            "detail": "Epics often span multiple sprints."
+          },
+          {
+            "name": "What is 'Incremental Delivery'?",
+            "detail": "Incremental delivery allows for early feedback and value."
+          },
+          {
+            "name": "What is a 'Milestone'?",
+            "detail": "Milestones help track progress towards major goals."
+          },
+          {
+            "name": "What is 'Risk Management'?",
+            "detail": "Management involves mitigation, transfer, acceptance, or avoidance."
+          },
+          {
+            "name": "What is 'Backlog Grooming' (or Refinement)?",
+            "detail": "Grooming ensures the backlog is ready for planning."
+          },
+          {
+            "name": "What is a 'WBS' (Work Breakdown Structure)?",
+            "detail": "WBS breaks a project down into manageable parts."
+          },
+          {
+            "name": "What is a 'Burndown Chart'?",
+            "detail": "Burndown charts help teams track their progress during a sprint."
+          },
+          {
+            "name": "What is a 'Sprint' in Scrum?",
+            "detail": "Work is completed and made ready for review within a sprint."
+          },
+          {
+            "name": "What does 'KPI' stand for?",
+            "detail": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives."
+          },
+          {
+            "name": "What is 'Project Scope'?",
+            "detail": "Defining scope is essential to prevent uncontrolled changes."
+          },
+          {
+            "name": "What is 'Velocity' in Agile?",
+            "detail": "Velocity helps in planning future sprints."
+          },
+          {
+            "name": "What is 'Lean' project management?",
+            "detail": "Lean originated in manufacturing and is widely used in IT."
+          },
+          {
+            "name": "What is a 'Sprint Retrospective'?",
+            "detail": "The team identifies improvements for the next sprint."
+          },
+          {
+            "name": "What is 'Cost Baseline'?",
+            "detail": "The baseline includes all authorized expenses."
           }
         ]
       }
@@ -10888,7 +15318,8 @@ export const certifications = [
         ],
         "answer": "Anyone affected by or involved in the project",
         "category": "Domain Review",
-        "explanation": "Stakeholders include the team, customers, sponsors, and more."
+        "explanation": "Stakeholders include the team, customers, sponsors, and more.",
+        "topic": "People"
       },
       {
         "id": "itil-found-q2",
@@ -10901,7 +15332,8 @@ export const certifications = [
         ],
         "answer": "Managing people, equipment, and materials for a project",
         "category": "Domain Review",
-        "explanation": "It ensures resources are available when needed."
+        "explanation": "It ensures resources are available when needed.",
+        "topic": "People"
       },
       {
         "id": "itil-found-q3",
@@ -10914,7 +15346,8 @@ export const certifications = [
         ],
         "answer": "A document that formally authorizes a project",
         "category": "Domain Review",
-        "explanation": "The charter gives the project manager authority to use resources."
+        "explanation": "The charter gives the project manager authority to use resources.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q4",
@@ -10927,7 +15360,8 @@ export const certifications = [
         ],
         "answer": "A structured project management methodology used widely in Europe",
         "category": "Domain Review",
-        "explanation": "PRINCE2 stands for Projects IN Controlled Environments."
+        "explanation": "PRINCE2 stands for Projects IN Controlled Environments.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q5",
@@ -10940,7 +15374,8 @@ export const certifications = [
         ],
         "answer": "A short daily meeting to discuss progress",
         "category": "Domain Review",
-        "explanation": "Stand-ups are key to Agile sync and identifying blockers early."
+        "explanation": "Stand-ups are key to Agile sync and identifying blockers early.",
+        "topic": "People"
       },
       {
         "id": "itil-found-q6",
@@ -10953,7 +15388,8 @@ export const certifications = [
         ],
         "answer": "The total amount of money allocated for a project",
         "category": "Domain Review",
-        "explanation": "Managing the budget is a key responsibility of the project manager."
+        "explanation": "Managing the budget is a key responsibility of the project manager.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q7",
@@ -10966,7 +15402,8 @@ export const certifications = [
         ],
         "answer": "A document listing all project stakeholders and their info",
         "category": "Domain Review",
-        "explanation": "It helps in planning stakeholder engagement."
+        "explanation": "It helps in planning stakeholder engagement.",
+        "topic": "People"
       },
       {
         "id": "itil-found-q8",
@@ -10979,7 +15416,8 @@ export const certifications = [
         ],
         "answer": "A consensus-based estimation technique for user stories",
         "category": "Domain Review",
-        "explanation": "Teams use cards to estimate story points anonymously."
+        "explanation": "Teams use cards to estimate story points anonymously.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q9",
@@ -10992,7 +15430,8 @@ export const certifications = [
         ],
         "answer": "Minimum Viable Product",
         "category": "Domain Review",
-        "explanation": "An MVP has just enough features to satisfy early customers and provide feedback."
+        "explanation": "An MVP has just enough features to satisfy early customers and provide feedback.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q10",
@@ -11005,7 +15444,8 @@ export const certifications = [
         ],
         "answer": "Uncontrolled changes in project requirements",
         "category": "Domain Review",
-        "explanation": "Scope creep occurs when new features are added without adjusting time or budget."
+        "explanation": "Scope creep occurs when new features are added without adjusting time or budget.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q11",
@@ -11018,7 +15458,8 @@ export const certifications = [
         ],
         "answer": "A meeting where the team decides what to work on in the next sprint",
         "category": "Domain Review",
-        "explanation": "The team selects items from the product backlog."
+        "explanation": "The team selects items from the product backlog.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q12",
@@ -11031,7 +15472,8 @@ export const certifications = [
         ],
         "answer": "A document describing the work to be performed under contract",
         "category": "Domain Review",
-        "explanation": "SOW defines the scope, schedule, and deliverables for a vendor."
+        "explanation": "SOW defines the scope, schedule, and deliverables for a vendor.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q13",
@@ -11044,7 +15486,8 @@ export const certifications = [
         ],
         "answer": "Managing the purchase of goods and services for a project",
         "category": "Domain Review",
-        "explanation": "It involves contracts, vendors, and purchasing."
+        "explanation": "It involves contracts, vendors, and purchasing.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q14",
@@ -11057,7 +15500,8 @@ export const certifications = [
         ],
         "answer": "A framework for implementing Agile development",
         "category": "Domain Review",
-        "explanation": "Scrum uses roles, events, and artifacts to manage complex work."
+        "explanation": "Scrum uses roles, events, and artifacts to manage complex work.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q15",
@@ -11070,7 +15514,8 @@ export const certifications = [
         ],
         "answer": "Developing a product through repeated cycles (iterations)",
         "category": "Domain Review",
-        "explanation": "Each iteration improves the product based on feedback."
+        "explanation": "Each iteration improves the product based on feedback.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q16",
@@ -11083,7 +15528,8 @@ export const certifications = [
         ],
         "answer": "Managing a collection of projects and programs to meet strategic goals",
         "category": "Domain Review",
-        "explanation": "Portfolio management focuses on selecting the right work."
+        "explanation": "Portfolio management focuses on selecting the right work.",
+        "topic": "Business Environment"
       },
       {
         "id": "itil-found-q17",
@@ -11096,7 +15542,8 @@ export const certifications = [
         ],
         "answer": "A meeting to demonstrate the work completed during the sprint",
         "category": "Domain Review",
-        "explanation": "The team gets feedback from stakeholders."
+        "explanation": "The team gets feedback from stakeholders.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q18",
@@ -11109,7 +15556,8 @@ export const certifications = [
         ],
         "answer": "Processes to ensure a project meets quality standards",
         "category": "Domain Review",
-        "explanation": "QA is focused on the process used to create the deliverables."
+        "explanation": "QA is focused on the process used to create the deliverables.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q19",
@@ -11122,7 +15570,8 @@ export const certifications = [
         ],
         "answer": "Monitoring project results to ensure they meet standards",
         "category": "Domain Review",
-        "explanation": "QC is focused on the deliverables themselves."
+        "explanation": "QC is focused on the deliverables themselves.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q20",
@@ -11135,7 +15584,8 @@ export const certifications = [
         ],
         "answer": "A document outlining the values and principles of Agile",
         "category": "Domain Review",
-        "explanation": "The manifesto was created by 17 software developers in 2001."
+        "explanation": "The manifesto was created by 17 software developers in 2001.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q21",
@@ -11148,7 +15598,8 @@ export const certifications = [
         ],
         "answer": "A visual representation of a project schedule",
         "category": "Domain Review",
-        "explanation": "Gantt charts show tasks over time and their dependencies."
+        "explanation": "Gantt charts show tasks over time and their dependencies.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q22",
@@ -11161,7 +15612,8 @@ export const certifications = [
         ],
         "answer": "Something that must happen for a project to succeed",
         "category": "Domain Review",
-        "explanation": "CSFs are key areas of focus for the project manager."
+        "explanation": "CSFs are key areas of focus for the project manager.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q23",
@@ -11174,7 +15626,8 @@ export const certifications = [
         ],
         "answer": "A facilitator for a Scrum team",
         "category": "Domain Review",
-        "explanation": "The Scrum Master helps the team follow Scrum values and removes blockers."
+        "explanation": "The Scrum Master helps the team follow Scrum values and removes blockers.",
+        "topic": "People"
       },
       {
         "id": "itil-found-q24",
@@ -11187,7 +15640,8 @@ export const certifications = [
         ],
         "answer": "A short description of a feature from an end-user perspective",
         "category": "Domain Review",
-        "explanation": "User stories help teams understand user needs."
+        "explanation": "User stories help teams understand user needs.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q25",
@@ -11200,7 +15654,8 @@ export const certifications = [
         ],
         "answer": "A visual system for managing work as it moves through a process",
         "category": "Domain Review",
-        "explanation": "Kanban helps visualize workflow and limit work-in-progress."
+        "explanation": "Kanban helps visualize workflow and limit work-in-progress.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q26",
@@ -11213,7 +15668,8 @@ export const certifications = [
         ],
         "answer": "A department that centralizes and coordinates project management",
         "category": "Domain Review",
-        "explanation": "PMOs provide standards, templates, and support."
+        "explanation": "PMOs provide standards, templates, and support.",
+        "topic": "Business Environment"
       },
       {
         "id": "itil-found-q27",
@@ -11226,7 +15682,8 @@ export const certifications = [
         ],
         "answer": "Managing a group of related projects to achieve benefits",
         "category": "Domain Review",
-        "explanation": "Programs deliver more value together than as separate projects."
+        "explanation": "Programs deliver more value together than as separate projects.",
+        "topic": "Business Environment"
       },
       {
         "id": "itil-found-q28",
@@ -11239,7 +15696,8 @@ export const certifications = [
         ],
         "answer": "A process for managing changes to project scope or plan",
         "category": "Domain Review",
-        "explanation": "It ensures changes are properly reviewed and approved."
+        "explanation": "It ensures changes are properly reviewed and approved.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q29",
@@ -11252,7 +15710,8 @@ export const certifications = [
         ],
         "answer": "A technique to measure project performance and progress",
         "category": "Domain Review",
-        "explanation": "EVM integrates scope, schedule, and cost metrics."
+        "explanation": "EVM integrates scope, schedule, and cost metrics.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q30",
@@ -11265,7 +15724,8 @@ export const certifications = [
         ],
         "answer": "The framework for project decision-making and oversight",
         "category": "Domain Review",
-        "explanation": "Governance ensures the project aligns with organizational goals."
+        "explanation": "Governance ensures the project aligns with organizational goals.",
+        "topic": "Business Environment"
       },
       {
         "id": "itil-found-q31",
@@ -11278,7 +15738,8 @@ export const certifications = [
         ],
         "answer": "A distinct functionality or capability of a product",
         "category": "Domain Review",
-        "explanation": "Features are often broken down into user stories."
+        "explanation": "Features are often broken down into user stories.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q32",
@@ -11291,7 +15752,8 @@ export const certifications = [
         ],
         "answer": "A sequential project management process",
         "category": "Domain Review",
-        "explanation": "Work flows through distinct phases like requirements, design, and testing."
+        "explanation": "Work flows through distinct phases like requirements, design, and testing.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q33",
@@ -11304,7 +15766,8 @@ export const certifications = [
         ],
         "answer": "A prioritized list of everything that might be needed in a product",
         "category": "Domain Review",
-        "explanation": "The backlog is constantly evolving and managed by the Product Owner."
+        "explanation": "The backlog is constantly evolving and managed by the Product Owner.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q34",
@@ -11317,7 +15780,8 @@ export const certifications = [
         ],
         "answer": "An iterative approach to project management and software development",
         "category": "Domain Review",
-        "explanation": "Agile focuses on delivering value quickly and adapting to change."
+        "explanation": "Agile focuses on delivering value quickly and adapting to change.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q35",
@@ -11330,7 +15794,8 @@ export const certifications = [
         ],
         "answer": "A set of techniques for process improvement and quality control",
         "category": "Domain Review",
-        "explanation": "Six Sigma focuses on reducing defects and variability."
+        "explanation": "Six Sigma focuses on reducing defects and variability.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q36",
@@ -11343,7 +15808,8 @@ export const certifications = [
         ],
         "answer": "A unit of measure for expressing an estimate of the size of a user story",
         "category": "Domain Review",
-        "explanation": "Story points account for complexity, effort, and risk."
+        "explanation": "Story points account for complexity, effort, and risk.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q37",
@@ -11356,7 +15822,8 @@ export const certifications = [
         ],
         "answer": "A large body of work that can be broken down into many user stories",
         "category": "Domain Review",
-        "explanation": "Epics often span multiple sprints."
+        "explanation": "Epics often span multiple sprints.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q38",
@@ -11369,7 +15836,8 @@ export const certifications = [
         ],
         "answer": "Delivering a product in small, usable parts over time",
         "category": "Domain Review",
-        "explanation": "Incremental delivery allows for early feedback and value."
+        "explanation": "Incremental delivery allows for early feedback and value.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q39",
@@ -11382,7 +15850,8 @@ export const certifications = [
         ],
         "answer": "A significant point or event in a project",
         "category": "Domain Review",
-        "explanation": "Milestones help track progress towards major goals."
+        "explanation": "Milestones help track progress towards major goals.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q40",
@@ -11395,7 +15864,8 @@ export const certifications = [
         ],
         "answer": "Identifying, assessing, and responding to project risks",
         "category": "Domain Review",
-        "explanation": "Management involves mitigation, transfer, acceptance, or avoidance."
+        "explanation": "Management involves mitigation, transfer, acceptance, or avoidance.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q41",
@@ -11408,7 +15878,8 @@ export const certifications = [
         ],
         "answer": "Keeping the product backlog up to date and prioritized",
         "category": "Domain Review",
-        "explanation": "Grooming ensures the backlog is ready for planning."
+        "explanation": "Grooming ensures the backlog is ready for planning.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q42",
@@ -11421,7 +15892,8 @@ export const certifications = [
         ],
         "answer": "A hierarchical decomposition of project work",
         "category": "Domain Review",
-        "explanation": "WBS breaks a project down into manageable parts."
+        "explanation": "WBS breaks a project down into manageable parts.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q43",
@@ -11434,7 +15906,8 @@ export const certifications = [
         ],
         "answer": "A graphical representation of work remaining versus time",
         "category": "Domain Review",
-        "explanation": "Burndown charts help teams track their progress during a sprint."
+        "explanation": "Burndown charts help teams track their progress during a sprint.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q44",
@@ -11447,7 +15920,8 @@ export const certifications = [
         ],
         "answer": "A time-boxed iteration (usually 1-4 weeks)",
         "category": "Domain Review",
-        "explanation": "Work is completed and made ready for review within a sprint."
+        "explanation": "Work is completed and made ready for review within a sprint.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q45",
@@ -11460,7 +15934,8 @@ export const certifications = [
         ],
         "answer": "Key Performance Indicator",
         "category": "Domain Review",
-        "explanation": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives."
+        "explanation": "KPIs are measurable values that demonstrate how effectively a project is achieving objectives.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q46",
@@ -11473,7 +15948,8 @@ export const certifications = [
         ],
         "answer": "The work that must be performed to deliver a result",
         "category": "Domain Review",
-        "explanation": "Defining scope is essential to prevent uncontrolled changes."
+        "explanation": "Defining scope is essential to prevent uncontrolled changes.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q47",
@@ -11486,7 +15962,8 @@ export const certifications = [
         ],
         "answer": "A measure of the amount of work a team can complete in a sprint",
         "category": "Domain Review",
-        "explanation": "Velocity helps in planning future sprints."
+        "explanation": "Velocity helps in planning future sprints.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q48",
@@ -11499,7 +15976,8 @@ export const certifications = [
         ],
         "answer": "Focusing on maximizing value and minimizing waste",
         "category": "Domain Review",
-        "explanation": "Lean originated in manufacturing and is widely used in IT."
+        "explanation": "Lean originated in manufacturing and is widely used in IT.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q49",
@@ -11512,7 +15990,8 @@ export const certifications = [
         ],
         "answer": "A meeting to discuss how to improve the team's process",
         "category": "Domain Review",
-        "explanation": "The team identifies improvements for the next sprint."
+        "explanation": "The team identifies improvements for the next sprint.",
+        "topic": "Process"
       },
       {
         "id": "itil-found-q50",
@@ -11525,7 +16004,8 @@ export const certifications = [
         ],
         "answer": "The approved version of the project budget, used to measure performance",
         "category": "Domain Review",
-        "explanation": "The baseline includes all authorized expenses."
+        "explanation": "The baseline includes all authorized expenses.",
+        "topic": "Process"
       }
     ]
   },
@@ -11541,11 +16021,212 @@ export const certifications = [
     "description": "Securely manage Linux-based IT infrastructure.",
     "reviewer": [
       {
-        "title": "Infrastructure Fundamentals",
+        "title": "Hardware",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for CompTIA Linux+."
+            "name": "What is 'KVM Switch'?",
+            "detail": "KVM switches are used for managing server racks."
+          },
+          {
+            "name": "What is 'Rack' in a data center?",
+            "detail": "Server racks are usually 19 or 23 inches wide."
+          },
+          {
+            "name": "What is 'Firmware'?",
+            "detail": "Firmware is stored on hardware devices like routers and SSDs."
+          },
+          {
+            "name": "What is a 'UPS' (Uninterruptible Power Supply)?",
+            "detail": "UPS protects equipment from power outages and surges."
+          },
+          {
+            "name": "What is 'HDD' (Hard Disk Drive)?",
+            "detail": "HDDs offer larger capacities at a lower cost than SSDs."
+          },
+          {
+            "name": "What is 'Blade Server'?",
+            "detail": "Blade servers save space and improve energy efficiency."
+          },
+          {
+            "name": "What is 'Clustering'?",
+            "detail": "Clusters improve performance, scalability, and availability."
+          },
+          {
+            "name": "What is 'PSU' (Power Supply Unit)?",
+            "detail": "The PSU provides power to all computer components."
+          },
+          {
+            "name": "What is 'Virtualization'?",
+            "detail": "Virtualization allows running multiple independent systems on a single physical machine."
+          },
+          {
+            "name": "What is 'CMOS Battery'?",
+            "detail": "The CMOS battery maintains the date, time, and BIOS settings."
+          },
+          {
+            "name": "What is 'UEFI'?",
+            "detail": "UEFI provides a more advanced and secure boot environment."
+          },
+          {
+            "name": "What is 'Failover'?",
+            "detail": "Failover is crucial for high availability."
+          },
+          {
+            "name": "What is 'RAID 1'?",
+            "detail": "RAID 1 provides high fault tolerance by duplicating data."
+          },
+          {
+            "name": "What is 'CPU' (Central Processing Unit)?",
+            "detail": "The CPU is the 'brain' of the computer."
+          },
+          {
+            "name": "What is 'Colocation'?",
+            "detail": "Colocation provides professional infrastructure and connectivity."
+          },
+          {
+            "name": "What is 'SSD' (Solid State Drive)?",
+            "detail": "SSDs are much faster and more durable than traditional HDDs."
+          },
+          {
+            "name": "What is 'BIOS Update'?",
+            "detail": "BIOS updates can fix hardware compatibility issues."
+          },
+          {
+            "name": "What is 'Mainframe'?",
+            "detail": "Mainframes are still used in large-scale industries like banking."
+          },
+          {
+            "name": "What is a 'Switch' in networking?",
+            "detail": "Switches operate at the Data Link Layer (Layer 2)."
+          },
+          {
+            "name": "What is 'RAID 5'?",
+            "detail": "RAID 5 provides a good balance of performance and fault tolerance."
+          },
+          {
+            "name": "What is a 'Hypervisor'?",
+            "detail": "Hypervisors manage the physical resources for multiple guest operating systems."
+          },
+          {
+            "name": "What is 'Form Factor'?",
+            "detail": "Examples include ATX, Micro-ATX, and ITX."
+          },
+          {
+            "name": "What is 'Motherboard'?",
+            "detail": "The motherboard connects all other components together."
+          },
+          {
+            "name": "What is a 'Server'?",
+            "detail": "Common servers include web servers, mail servers, and database servers."
+          },
+          {
+            "name": "What is 'RAID'?",
+            "detail": "RAID uses multiple hard drives to provide data redundancy and/or improve performance."
+          },
+          {
+            "name": "What is 'TPM' (Trusted Platform Module)?",
+            "detail": "TPM is used for disk encryption and secure authentication."
+          },
+          {
+            "name": "What is 'RAM' (Random Access Memory)?",
+            "detail": "RAM is volatile, meaning data is lost when power is removed."
+          },
+          {
+            "name": "What is 'Load Balancing'?",
+            "detail": "Load balancing improves performance and availability."
+          },
+          {
+            "name": "What does 'BIOS' stand for?",
+            "detail": "BIOS is the firmware used to perform hardware initialization during the booting process."
+          },
+          {
+            "name": "What is 'GPU' (Graphics Processing Unit)?",
+            "detail": "GPUs are used for graphics rendering and scientific computing."
+          },
+          {
+            "name": "What is a 'Router'?",
+            "detail": "Routers operate at the Network Layer (Layer 3)."
+          },
+          {
+            "name": "What is 'RAID 0'?",
+            "detail": "RAID 0 improves speed but increases the risk of data loss."
+          },
+          {
+            "name": "What is 'Data Center'?",
+            "detail": "Data centers include redundant power, cooling, and security."
+          }
+        ]
+      },
+      {
+        "title": "Operating Systems",
+        "topics": [
+          {
+            "name": "What is 'SSH' (Secure Shell)?",
+            "detail": "SSH is commonly used for remote login to Linux servers."
+          },
+          {
+            "name": "What is 'SLA' (Service Level Agreement)?",
+            "detail": "SLAs often include uptime guarantees and penalties."
+          },
+          {
+            "name": "What is a 'MAC Address'?",
+            "detail": "MAC addresses are physical addresses baked into hardware."
+          },
+          {
+            "name": "What is 'Patch Management'?",
+            "detail": "Patches fix bugs, improve performance, and close security holes."
+          },
+          {
+            "name": "What is a 'Firewall'?",
+            "detail": "Firewalls are the first line of defense in network security."
+          },
+          {
+            "name": "What is 'Snapshot' in storage?",
+            "detail": "Snapshots are often used for quick recovery and testing."
+          },
+          {
+            "name": "What is 'Uptime'?",
+            "detail": "High uptime (e.g., 99.999%) is a major goal for IT infrastructure."
+          },
+          {
+            "name": "What is 'Docker' used for?",
+            "detail": "Docker packages apps and their dependencies into portable containers."
+          },
+          {
+            "name": "What is 'Bash'?",
+            "detail": "Bash is the default shell on many Linux distributions."
+          },
+          {
+            "name": "What is 'Active Directory' (AD)?",
+            "detail": "AD manages users, computers, and other objects in a network."
+          },
+          {
+            "name": "What is 'VPN' (Virtual Private Network)?",
+            "detail": "VPNs are used for secure remote access and privacy."
+          },
+          {
+            "name": "What is 'Backup'?",
+            "detail": "Backups are essential for data protection."
+          },
+          {
+            "name": "What is 'Linux'?",
+            "detail": "Linux is the foundation for many popular operating systems like Ubuntu and CentOS."
+          },
+          {
+            "name": "What is 'DHCP'?",
+            "detail": "DHCP makes network management much easier."
+          },
+          {
+            "name": "What is an 'IP Address'?",
+            "detail": "IP addresses can be static or dynamic."
+          },
+          {
+            "name": "What is 'Secure Boot'?",
+            "detail": "Secure Boot protects against malware during the boot process."
+          },
+          {
+            "name": "What is 'DNS' (Domain Name System)?",
+            "detail": "DNS is often called the 'phonebook of the internet'."
           }
         ]
       }
@@ -11562,7 +16243,8 @@ export const certifications = [
         ],
         "answer": "A hardware device that allows controlling multiple computers from one keyboard/video/mouse",
         "category": "Domain Review",
-        "explanation": "KVM switches are used for managing server racks."
+        "explanation": "KVM switches are used for managing server racks.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q2",
@@ -11575,7 +16257,8 @@ export const certifications = [
         ],
         "answer": "A standardized frame for mounting IT equipment",
         "category": "Domain Review",
-        "explanation": "Server racks are usually 19 or 23 inches wide."
+        "explanation": "Server racks are usually 19 or 23 inches wide.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q3",
@@ -11588,7 +16271,8 @@ export const certifications = [
         ],
         "answer": "A specific class of computer software that provides low-level control for hardware",
         "category": "Domain Review",
-        "explanation": "Firmware is stored on hardware devices like routers and SSDs."
+        "explanation": "Firmware is stored on hardware devices like routers and SSDs.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q4",
@@ -11601,7 +16285,8 @@ export const certifications = [
         ],
         "answer": "A cryptographic network protocol for operating network services securely",
         "category": "Domain Review",
-        "explanation": "SSH is commonly used for remote login to Linux servers."
+        "explanation": "SSH is commonly used for remote login to Linux servers.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q5",
@@ -11614,7 +16299,8 @@ export const certifications = [
         ],
         "answer": "A device that provides emergency power when the main source fails",
         "category": "Domain Review",
-        "explanation": "UPS protects equipment from power outages and surges."
+        "explanation": "UPS protects equipment from power outages and surges.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q6",
@@ -11627,7 +16313,8 @@ export const certifications = [
         ],
         "answer": "A contract that defines the expected level of service from a provider",
         "category": "Domain Review",
-        "explanation": "SLAs often include uptime guarantees and penalties."
+        "explanation": "SLAs often include uptime guarantees and penalties.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q7",
@@ -11640,7 +16327,8 @@ export const certifications = [
         ],
         "answer": "A unique identifier assigned to a network interface controller",
         "category": "Domain Review",
-        "explanation": "MAC addresses are physical addresses baked into hardware."
+        "explanation": "MAC addresses are physical addresses baked into hardware.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q8",
@@ -11653,7 +16341,8 @@ export const certifications = [
         ],
         "answer": "A data storage device that uses magnetic storage and rotating disks",
         "category": "Domain Review",
-        "explanation": "HDDs offer larger capacities at a lower cost than SSDs."
+        "explanation": "HDDs offer larger capacities at a lower cost than SSDs.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q9",
@@ -11666,7 +16355,8 @@ export const certifications = [
         ],
         "answer": "A thin, modular server that fits into a specialized chassis",
         "category": "Domain Review",
-        "explanation": "Blade servers save space and improve energy efficiency."
+        "explanation": "Blade servers save space and improve energy efficiency.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q10",
@@ -11679,7 +16369,8 @@ export const certifications = [
         ],
         "answer": "The process of distributing and applying updates to software",
         "category": "Domain Review",
-        "explanation": "Patches fix bugs, improve performance, and close security holes."
+        "explanation": "Patches fix bugs, improve performance, and close security holes.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q11",
@@ -11692,7 +16383,8 @@ export const certifications = [
         ],
         "answer": "A network security system that monitors and controls traffic",
         "category": "Domain Review",
-        "explanation": "Firewalls are the first line of defense in network security."
+        "explanation": "Firewalls are the first line of defense in network security.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q12",
@@ -11705,7 +16397,8 @@ export const certifications = [
         ],
         "answer": "Connecting multiple servers to work together as a single system",
         "category": "Domain Review",
-        "explanation": "Clusters improve performance, scalability, and availability."
+        "explanation": "Clusters improve performance, scalability, and availability.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q13",
@@ -11718,7 +16411,8 @@ export const certifications = [
         ],
         "answer": "A device that converts mains AC to low-voltage regulated DC power",
         "category": "Domain Review",
-        "explanation": "The PSU provides power to all computer components."
+        "explanation": "The PSU provides power to all computer components.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q14",
@@ -11731,7 +16425,8 @@ export const certifications = [
         ],
         "answer": "Creating virtual versions of hardware or OS",
         "category": "Domain Review",
-        "explanation": "Virtualization allows running multiple independent systems on a single physical machine."
+        "explanation": "Virtualization allows running multiple independent systems on a single physical machine.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q15",
@@ -11744,7 +16439,8 @@ export const certifications = [
         ],
         "answer": "A battery that powers the CMOS memory when the computer is off",
         "category": "Domain Review",
-        "explanation": "The CMOS battery maintains the date, time, and BIOS settings."
+        "explanation": "The CMOS battery maintains the date, time, and BIOS settings.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q16",
@@ -11757,7 +16453,8 @@ export const certifications = [
         ],
         "answer": "The modern replacement for the traditional BIOS",
         "category": "Domain Review",
-        "explanation": "UEFI provides a more advanced and secure boot environment."
+        "explanation": "UEFI provides a more advanced and secure boot environment.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q17",
@@ -11770,7 +16467,8 @@ export const certifications = [
         ],
         "answer": "Automatically switching to a redundant or standby system upon failure",
         "category": "Domain Review",
-        "explanation": "Failover is crucial for high availability."
+        "explanation": "Failover is crucial for high availability.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q18",
@@ -11783,7 +16481,8 @@ export const certifications = [
         ],
         "answer": "A copy of a system or data at a specific point in time",
         "category": "Domain Review",
-        "explanation": "Snapshots are often used for quick recovery and testing."
+        "explanation": "Snapshots are often used for quick recovery and testing.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q19",
@@ -11796,7 +16495,8 @@ export const certifications = [
         ],
         "answer": "Mirroring data onto two or more disks",
         "category": "Domain Review",
-        "explanation": "RAID 1 provides high fault tolerance by duplicating data."
+        "explanation": "RAID 1 provides high fault tolerance by duplicating data.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q20",
@@ -11809,7 +16509,8 @@ export const certifications = [
         ],
         "answer": "The amount of time a system or service is operational",
         "category": "Domain Review",
-        "explanation": "High uptime (e.g., 99.999%) is a major goal for IT infrastructure."
+        "explanation": "High uptime (e.g., 99.999%) is a major goal for IT infrastructure.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q21",
@@ -11822,7 +16523,8 @@ export const certifications = [
         ],
         "answer": "Containerization of applications",
         "category": "Domain Review",
-        "explanation": "Docker packages apps and their dependencies into portable containers."
+        "explanation": "Docker packages apps and their dependencies into portable containers.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q22",
@@ -11835,7 +16537,8 @@ export const certifications = [
         ],
         "answer": "The electronic circuitry that executes instructions of a computer program",
         "category": "Domain Review",
-        "explanation": "The CPU is the 'brain' of the computer."
+        "explanation": "The CPU is the 'brain' of the computer.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q23",
@@ -11848,7 +16551,8 @@ export const certifications = [
         ],
         "answer": "A Unix shell and command language",
         "category": "Domain Review",
-        "explanation": "Bash is the default shell on many Linux distributions."
+        "explanation": "Bash is the default shell on many Linux distributions.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q24",
@@ -11861,7 +16565,8 @@ export const certifications = [
         ],
         "answer": "A directory service for Windows domain networks",
         "category": "Domain Review",
-        "explanation": "AD manages users, computers, and other objects in a network."
+        "explanation": "AD manages users, computers, and other objects in a network.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q25",
@@ -11874,7 +16579,8 @@ export const certifications = [
         ],
         "answer": "Renting space for your servers in a third-party data center",
         "category": "Domain Review",
-        "explanation": "Colocation provides professional infrastructure and connectivity."
+        "explanation": "Colocation provides professional infrastructure and connectivity.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q26",
@@ -11887,7 +16593,8 @@ export const certifications = [
         ],
         "answer": "A service that creates a safe, encrypted connection over a less secure network",
         "category": "Domain Review",
-        "explanation": "VPNs are used for secure remote access and privacy."
+        "explanation": "VPNs are used for secure remote access and privacy.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q27",
@@ -11900,7 +16607,8 @@ export const certifications = [
         ],
         "answer": "A storage device that uses integrated circuits for data storage",
         "category": "Domain Review",
-        "explanation": "SSDs are much faster and more durable than traditional HDDs."
+        "explanation": "SSDs are much faster and more durable than traditional HDDs.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q28",
@@ -11913,7 +16621,8 @@ export const certifications = [
         ],
         "answer": "Updating the firmware on the motherboard",
         "category": "Domain Review",
-        "explanation": "BIOS updates can fix hardware compatibility issues."
+        "explanation": "BIOS updates can fix hardware compatibility issues.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q29",
@@ -11926,7 +16635,8 @@ export const certifications = [
         ],
         "answer": "A large, powerful computer used for high-volume data processing",
         "category": "Domain Review",
-        "explanation": "Mainframes are still used in large-scale industries like banking."
+        "explanation": "Mainframes are still used in large-scale industries like banking.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q30",
@@ -11939,7 +16649,8 @@ export const certifications = [
         ],
         "answer": "A copy of data stored in a separate location for recovery",
         "category": "Domain Review",
-        "explanation": "Backups are essential for data protection."
+        "explanation": "Backups are essential for data protection.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q31",
@@ -11952,7 +16663,8 @@ export const certifications = [
         ],
         "answer": "A device that connects devices on a computer network using packet switching",
         "category": "Domain Review",
-        "explanation": "Switches operate at the Data Link Layer (Layer 2)."
+        "explanation": "Switches operate at the Data Link Layer (Layer 2).",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q32",
@@ -11965,7 +16677,8 @@ export const certifications = [
         ],
         "answer": "An open-source operating system kernel",
         "category": "Domain Review",
-        "explanation": "Linux is the foundation for many popular operating systems like Ubuntu and CentOS."
+        "explanation": "Linux is the foundation for many popular operating systems like Ubuntu and CentOS.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q33",
@@ -11978,7 +16691,8 @@ export const certifications = [
         ],
         "answer": "Striping data and parity across three or more disks",
         "category": "Domain Review",
-        "explanation": "RAID 5 provides a good balance of performance and fault tolerance."
+        "explanation": "RAID 5 provides a good balance of performance and fault tolerance.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q34",
@@ -11991,7 +16705,8 @@ export const certifications = [
         ],
         "answer": "Software that creates and runs virtual machines",
         "category": "Domain Review",
-        "explanation": "Hypervisors manage the physical resources for multiple guest operating systems."
+        "explanation": "Hypervisors manage the physical resources for multiple guest operating systems.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q35",
@@ -12004,7 +16719,8 @@ export const certifications = [
         ],
         "answer": "The physical size and shape of a computer component",
         "category": "Domain Review",
-        "explanation": "Examples include ATX, Micro-ATX, and ITX."
+        "explanation": "Examples include ATX, Micro-ATX, and ITX.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q36",
@@ -12017,7 +16733,8 @@ export const certifications = [
         ],
         "answer": "The main printed circuit board in general-purpose computers",
         "category": "Domain Review",
-        "explanation": "The motherboard connects all other components together."
+        "explanation": "The motherboard connects all other components together.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q37",
@@ -12030,7 +16747,8 @@ export const certifications = [
         ],
         "answer": "A computer or system that provides resources or services to other computers",
         "category": "Domain Review",
-        "explanation": "Common servers include web servers, mail servers, and database servers."
+        "explanation": "Common servers include web servers, mail servers, and database servers.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q38",
@@ -12043,7 +16761,8 @@ export const certifications = [
         ],
         "answer": "A protocol for automatically assigning IP addresses to devices",
         "category": "Domain Review",
-        "explanation": "DHCP makes network management much easier."
+        "explanation": "DHCP makes network management much easier.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q39",
@@ -12056,7 +16775,8 @@ export const certifications = [
         ],
         "answer": "Redundant Array of Independent Disks",
         "category": "Domain Review",
-        "explanation": "RAID uses multiple hard drives to provide data redundancy and/or improve performance."
+        "explanation": "RAID uses multiple hard drives to provide data redundancy and/or improve performance.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q40",
@@ -12069,7 +16789,8 @@ export const certifications = [
         ],
         "answer": "A specialized chip on a device that provides hardware-level security",
         "category": "Domain Review",
-        "explanation": "TPM is used for disk encryption and secure authentication."
+        "explanation": "TPM is used for disk encryption and secure authentication.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q41",
@@ -12082,7 +16803,8 @@ export const certifications = [
         ],
         "answer": "A unique string of numbers that identifies each computer on a network",
         "category": "Domain Review",
-        "explanation": "IP addresses can be static or dynamic."
+        "explanation": "IP addresses can be static or dynamic.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q42",
@@ -12095,7 +16817,8 @@ export const certifications = [
         ],
         "answer": "A form of computer memory that can be read and changed in any order",
         "category": "Domain Review",
-        "explanation": "RAM is volatile, meaning data is lost when power is removed."
+        "explanation": "RAM is volatile, meaning data is lost when power is removed.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q43",
@@ -12108,7 +16831,8 @@ export const certifications = [
         ],
         "answer": "Distributing network or application traffic across multiple servers",
         "category": "Domain Review",
-        "explanation": "Load balancing improves performance and availability."
+        "explanation": "Load balancing improves performance and availability.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q44",
@@ -12121,7 +16845,8 @@ export const certifications = [
         ],
         "answer": "Basic Input/Output System",
         "category": "Domain Review",
-        "explanation": "BIOS is the firmware used to perform hardware initialization during the booting process."
+        "explanation": "BIOS is the firmware used to perform hardware initialization during the booting process.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q45",
@@ -12134,7 +16859,8 @@ export const certifications = [
         ],
         "answer": "A specialized electronic circuit designed to accelerate image creation",
         "category": "Domain Review",
-        "explanation": "GPUs are used for graphics rendering and scientific computing."
+        "explanation": "GPUs are used for graphics rendering and scientific computing.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q46",
@@ -12147,7 +16873,8 @@ export const certifications = [
         ],
         "answer": "A security standard that ensures a device boots using only trusted software",
         "category": "Domain Review",
-        "explanation": "Secure Boot protects against malware during the boot process."
+        "explanation": "Secure Boot protects against malware during the boot process.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q47",
@@ -12160,7 +16887,8 @@ export const certifications = [
         ],
         "answer": "The system that translates domain names into IP addresses",
         "category": "Domain Review",
-        "explanation": "DNS is often called the 'phonebook of the internet'."
+        "explanation": "DNS is often called the 'phonebook of the internet'.",
+        "topic": "Operating Systems"
       },
       {
         "id": "linux-plus-q48",
@@ -12173,7 +16901,8 @@ export const certifications = [
         ],
         "answer": "A device that forwards data packets between computer networks",
         "category": "Domain Review",
-        "explanation": "Routers operate at the Network Layer (Layer 3)."
+        "explanation": "Routers operate at the Network Layer (Layer 3).",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q49",
@@ -12186,7 +16915,8 @@ export const certifications = [
         ],
         "answer": "Striping data across disks for performance with no redundancy",
         "category": "Domain Review",
-        "explanation": "RAID 0 improves speed but increases the risk of data loss."
+        "explanation": "RAID 0 improves speed but increases the risk of data loss.",
+        "topic": "Hardware"
       },
       {
         "id": "linux-plus-q50",
@@ -12199,7 +16929,8 @@ export const certifications = [
         ],
         "answer": "A facility used to house computer systems and associated components",
         "category": "Domain Review",
-        "explanation": "Data centers include redundant power, cooling, and security."
+        "explanation": "Data centers include redundant power, cooling, and security.",
+        "topic": "Hardware"
       }
     ]
   },
@@ -12215,11 +16946,212 @@ export const certifications = [
     "description": "Infrastructure as Code (IaC) concepts and skills.",
     "reviewer": [
       {
-        "title": "Infrastructure Fundamentals",
+        "title": "Hardware",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for HashiCorp Certified: Terraform Associate."
+            "name": "What is 'UEFI'?",
+            "detail": "UEFI provides a more advanced and secure boot environment."
+          },
+          {
+            "name": "What is 'Clustering'?",
+            "detail": "Clusters improve performance, scalability, and availability."
+          },
+          {
+            "name": "What is 'Virtualization'?",
+            "detail": "Virtualization allows running multiple independent systems on a single physical machine."
+          },
+          {
+            "name": "What is 'Failover'?",
+            "detail": "Failover is crucial for high availability."
+          },
+          {
+            "name": "What is 'RAM' (Random Access Memory)?",
+            "detail": "RAM is volatile, meaning data is lost when power is removed."
+          },
+          {
+            "name": "What is 'Colocation'?",
+            "detail": "Colocation provides professional infrastructure and connectivity."
+          },
+          {
+            "name": "What is 'CMOS Battery'?",
+            "detail": "The CMOS battery maintains the date, time, and BIOS settings."
+          },
+          {
+            "name": "What is a 'Hypervisor'?",
+            "detail": "Hypervisors manage the physical resources for multiple guest operating systems."
+          },
+          {
+            "name": "What is 'TPM' (Trusted Platform Module)?",
+            "detail": "TPM is used for disk encryption and secure authentication."
+          },
+          {
+            "name": "What is 'PSU' (Power Supply Unit)?",
+            "detail": "The PSU provides power to all computer components."
+          },
+          {
+            "name": "What is 'Firmware'?",
+            "detail": "Firmware is stored on hardware devices like routers and SSDs."
+          },
+          {
+            "name": "What is 'KVM Switch'?",
+            "detail": "KVM switches are used for managing server racks."
+          },
+          {
+            "name": "What is 'Form Factor'?",
+            "detail": "Examples include ATX, Micro-ATX, and ITX."
+          },
+          {
+            "name": "What is a 'Switch' in networking?",
+            "detail": "Switches operate at the Data Link Layer (Layer 2)."
+          },
+          {
+            "name": "What is 'RAID'?",
+            "detail": "RAID uses multiple hard drives to provide data redundancy and/or improve performance."
+          },
+          {
+            "name": "What is 'Mainframe'?",
+            "detail": "Mainframes are still used in large-scale industries like banking."
+          },
+          {
+            "name": "What does 'BIOS' stand for?",
+            "detail": "BIOS is the firmware used to perform hardware initialization during the booting process."
+          },
+          {
+            "name": "What is 'Motherboard'?",
+            "detail": "The motherboard connects all other components together."
+          },
+          {
+            "name": "What is 'RAID 1'?",
+            "detail": "RAID 1 provides high fault tolerance by duplicating data."
+          },
+          {
+            "name": "What is 'Data Center'?",
+            "detail": "Data centers include redundant power, cooling, and security."
+          },
+          {
+            "name": "What is 'Rack' in a data center?",
+            "detail": "Server racks are usually 19 or 23 inches wide."
+          },
+          {
+            "name": "What is 'GPU' (Graphics Processing Unit)?",
+            "detail": "GPUs are used for graphics rendering and scientific computing."
+          },
+          {
+            "name": "What is 'CPU' (Central Processing Unit)?",
+            "detail": "The CPU is the 'brain' of the computer."
+          },
+          {
+            "name": "What is 'SSD' (Solid State Drive)?",
+            "detail": "SSDs are much faster and more durable than traditional HDDs."
+          },
+          {
+            "name": "What is 'Blade Server'?",
+            "detail": "Blade servers save space and improve energy efficiency."
+          },
+          {
+            "name": "What is 'Load Balancing'?",
+            "detail": "Load balancing improves performance and availability."
+          },
+          {
+            "name": "What is a 'UPS' (Uninterruptible Power Supply)?",
+            "detail": "UPS protects equipment from power outages and surges."
+          },
+          {
+            "name": "What is a 'Server'?",
+            "detail": "Common servers include web servers, mail servers, and database servers."
+          },
+          {
+            "name": "What is 'RAID 5'?",
+            "detail": "RAID 5 provides a good balance of performance and fault tolerance."
+          },
+          {
+            "name": "What is 'RAID 0'?",
+            "detail": "RAID 0 improves speed but increases the risk of data loss."
+          },
+          {
+            "name": "What is 'BIOS Update'?",
+            "detail": "BIOS updates can fix hardware compatibility issues."
+          },
+          {
+            "name": "What is a 'Router'?",
+            "detail": "Routers operate at the Network Layer (Layer 3)."
+          },
+          {
+            "name": "What is 'HDD' (Hard Disk Drive)?",
+            "detail": "HDDs offer larger capacities at a lower cost than SSDs."
+          }
+        ]
+      },
+      {
+        "title": "Operating Systems",
+        "topics": [
+          {
+            "name": "What is 'SLA' (Service Level Agreement)?",
+            "detail": "SLAs often include uptime guarantees and penalties."
+          },
+          {
+            "name": "What is a 'MAC Address'?",
+            "detail": "MAC addresses are physical addresses baked into hardware."
+          },
+          {
+            "name": "What is 'VPN' (Virtual Private Network)?",
+            "detail": "VPNs are used for secure remote access and privacy."
+          },
+          {
+            "name": "What is 'Patch Management'?",
+            "detail": "Patches fix bugs, improve performance, and close security holes."
+          },
+          {
+            "name": "What is 'SSH' (Secure Shell)?",
+            "detail": "SSH is commonly used for remote login to Linux servers."
+          },
+          {
+            "name": "What is 'Bash'?",
+            "detail": "Bash is the default shell on many Linux distributions."
+          },
+          {
+            "name": "What is 'DNS' (Domain Name System)?",
+            "detail": "DNS is often called the 'phonebook of the internet'."
+          },
+          {
+            "name": "What is 'DHCP'?",
+            "detail": "DHCP makes network management much easier."
+          },
+          {
+            "name": "What is 'Downtime'?",
+            "detail": "Downtime can result in lost revenue and reputation."
+          },
+          {
+            "name": "What is 'Uptime'?",
+            "detail": "High uptime (e.g., 99.999%) is a major goal for IT infrastructure."
+          },
+          {
+            "name": "What is 'Secure Boot'?",
+            "detail": "Secure Boot protects against malware during the boot process."
+          },
+          {
+            "name": "What is a 'Firewall'?",
+            "detail": "Firewalls are the first line of defense in network security."
+          },
+          {
+            "name": "What is 'Backup'?",
+            "detail": "Backups are essential for data protection."
+          },
+          {
+            "name": "What is 'Docker' used for?",
+            "detail": "Docker packages apps and their dependencies into portable containers."
+          },
+          {
+            "name": "What is 'Linux'?",
+            "detail": "Linux is the foundation for many popular operating systems like Ubuntu and CentOS."
+          },
+          {
+            "name": "What is an 'IP Address'?",
+            "detail": "IP addresses can be static or dynamic."
+          },
+          {
+            "name": "What is 'Snapshot' in storage?",
+            "detail": "Snapshots are often used for quick recovery and testing."
           }
         ]
       }
@@ -12236,7 +17168,8 @@ export const certifications = [
         ],
         "answer": "A contract that defines the expected level of service from a provider",
         "category": "Domain Review",
-        "explanation": "SLAs often include uptime guarantees and penalties."
+        "explanation": "SLAs often include uptime guarantees and penalties.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q2",
@@ -12249,7 +17182,8 @@ export const certifications = [
         ],
         "answer": "A unique identifier assigned to a network interface controller",
         "category": "Domain Review",
-        "explanation": "MAC addresses are physical addresses baked into hardware."
+        "explanation": "MAC addresses are physical addresses baked into hardware.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q3",
@@ -12262,7 +17196,8 @@ export const certifications = [
         ],
         "answer": "The modern replacement for the traditional BIOS",
         "category": "Domain Review",
-        "explanation": "UEFI provides a more advanced and secure boot environment."
+        "explanation": "UEFI provides a more advanced and secure boot environment.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q4",
@@ -12275,7 +17210,8 @@ export const certifications = [
         ],
         "answer": "Connecting multiple servers to work together as a single system",
         "category": "Domain Review",
-        "explanation": "Clusters improve performance, scalability, and availability."
+        "explanation": "Clusters improve performance, scalability, and availability.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q5",
@@ -12288,7 +17224,8 @@ export const certifications = [
         ],
         "answer": "A service that creates a safe, encrypted connection over a less secure network",
         "category": "Domain Review",
-        "explanation": "VPNs are used for secure remote access and privacy."
+        "explanation": "VPNs are used for secure remote access and privacy.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q6",
@@ -12301,7 +17238,8 @@ export const certifications = [
         ],
         "answer": "Creating virtual versions of hardware or OS",
         "category": "Domain Review",
-        "explanation": "Virtualization allows running multiple independent systems on a single physical machine."
+        "explanation": "Virtualization allows running multiple independent systems on a single physical machine.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q7",
@@ -12314,7 +17252,8 @@ export const certifications = [
         ],
         "answer": "Automatically switching to a redundant or standby system upon failure",
         "category": "Domain Review",
-        "explanation": "Failover is crucial for high availability."
+        "explanation": "Failover is crucial for high availability.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q8",
@@ -12327,7 +17266,8 @@ export const certifications = [
         ],
         "answer": "A form of computer memory that can be read and changed in any order",
         "category": "Domain Review",
-        "explanation": "RAM is volatile, meaning data is lost when power is removed."
+        "explanation": "RAM is volatile, meaning data is lost when power is removed.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q9",
@@ -12340,7 +17280,8 @@ export const certifications = [
         ],
         "answer": "The process of distributing and applying updates to software",
         "category": "Domain Review",
-        "explanation": "Patches fix bugs, improve performance, and close security holes."
+        "explanation": "Patches fix bugs, improve performance, and close security holes.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q10",
@@ -12353,7 +17294,8 @@ export const certifications = [
         ],
         "answer": "Renting space for your servers in a third-party data center",
         "category": "Domain Review",
-        "explanation": "Colocation provides professional infrastructure and connectivity."
+        "explanation": "Colocation provides professional infrastructure and connectivity.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q11",
@@ -12366,7 +17308,8 @@ export const certifications = [
         ],
         "answer": "A cryptographic network protocol for operating network services securely",
         "category": "Domain Review",
-        "explanation": "SSH is commonly used for remote login to Linux servers."
+        "explanation": "SSH is commonly used for remote login to Linux servers.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q12",
@@ -12379,7 +17322,8 @@ export const certifications = [
         ],
         "answer": "A battery that powers the CMOS memory when the computer is off",
         "category": "Domain Review",
-        "explanation": "The CMOS battery maintains the date, time, and BIOS settings."
+        "explanation": "The CMOS battery maintains the date, time, and BIOS settings.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q13",
@@ -12392,7 +17336,8 @@ export const certifications = [
         ],
         "answer": "Software that creates and runs virtual machines",
         "category": "Domain Review",
-        "explanation": "Hypervisors manage the physical resources for multiple guest operating systems."
+        "explanation": "Hypervisors manage the physical resources for multiple guest operating systems.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q14",
@@ -12405,7 +17350,8 @@ export const certifications = [
         ],
         "answer": "A Unix shell and command language",
         "category": "Domain Review",
-        "explanation": "Bash is the default shell on many Linux distributions."
+        "explanation": "Bash is the default shell on many Linux distributions.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q15",
@@ -12418,7 +17364,8 @@ export const certifications = [
         ],
         "answer": "A specialized chip on a device that provides hardware-level security",
         "category": "Domain Review",
-        "explanation": "TPM is used for disk encryption and secure authentication."
+        "explanation": "TPM is used for disk encryption and secure authentication.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q16",
@@ -12431,7 +17378,8 @@ export const certifications = [
         ],
         "answer": "A device that converts mains AC to low-voltage regulated DC power",
         "category": "Domain Review",
-        "explanation": "The PSU provides power to all computer components."
+        "explanation": "The PSU provides power to all computer components.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q17",
@@ -12444,7 +17392,8 @@ export const certifications = [
         ],
         "answer": "A specific class of computer software that provides low-level control for hardware",
         "category": "Domain Review",
-        "explanation": "Firmware is stored on hardware devices like routers and SSDs."
+        "explanation": "Firmware is stored on hardware devices like routers and SSDs.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q18",
@@ -12457,7 +17406,8 @@ export const certifications = [
         ],
         "answer": "A hardware device that allows controlling multiple computers from one keyboard/video/mouse",
         "category": "Domain Review",
-        "explanation": "KVM switches are used for managing server racks."
+        "explanation": "KVM switches are used for managing server racks.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q19",
@@ -12470,7 +17420,8 @@ export const certifications = [
         ],
         "answer": "The physical size and shape of a computer component",
         "category": "Domain Review",
-        "explanation": "Examples include ATX, Micro-ATX, and ITX."
+        "explanation": "Examples include ATX, Micro-ATX, and ITX.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q20",
@@ -12483,7 +17434,8 @@ export const certifications = [
         ],
         "answer": "A device that connects devices on a computer network using packet switching",
         "category": "Domain Review",
-        "explanation": "Switches operate at the Data Link Layer (Layer 2)."
+        "explanation": "Switches operate at the Data Link Layer (Layer 2).",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q21",
@@ -12496,7 +17448,8 @@ export const certifications = [
         ],
         "answer": "Redundant Array of Independent Disks",
         "category": "Domain Review",
-        "explanation": "RAID uses multiple hard drives to provide data redundancy and/or improve performance."
+        "explanation": "RAID uses multiple hard drives to provide data redundancy and/or improve performance.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q22",
@@ -12509,7 +17462,8 @@ export const certifications = [
         ],
         "answer": "A large, powerful computer used for high-volume data processing",
         "category": "Domain Review",
-        "explanation": "Mainframes are still used in large-scale industries like banking."
+        "explanation": "Mainframes are still used in large-scale industries like banking.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q23",
@@ -12522,7 +17476,8 @@ export const certifications = [
         ],
         "answer": "Basic Input/Output System",
         "category": "Domain Review",
-        "explanation": "BIOS is the firmware used to perform hardware initialization during the booting process."
+        "explanation": "BIOS is the firmware used to perform hardware initialization during the booting process.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q24",
@@ -12535,7 +17490,8 @@ export const certifications = [
         ],
         "answer": "The system that translates domain names into IP addresses",
         "category": "Domain Review",
-        "explanation": "DNS is often called the 'phonebook of the internet'."
+        "explanation": "DNS is often called the 'phonebook of the internet'.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q25",
@@ -12548,7 +17504,8 @@ export const certifications = [
         ],
         "answer": "The main printed circuit board in general-purpose computers",
         "category": "Domain Review",
-        "explanation": "The motherboard connects all other components together."
+        "explanation": "The motherboard connects all other components together.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q26",
@@ -12561,7 +17518,8 @@ export const certifications = [
         ],
         "answer": "A protocol for automatically assigning IP addresses to devices",
         "category": "Domain Review",
-        "explanation": "DHCP makes network management much easier."
+        "explanation": "DHCP makes network management much easier.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q27",
@@ -12574,7 +17532,8 @@ export const certifications = [
         ],
         "answer": "The period during which a system or service is unavailable",
         "category": "Domain Review",
-        "explanation": "Downtime can result in lost revenue and reputation."
+        "explanation": "Downtime can result in lost revenue and reputation.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q28",
@@ -12587,7 +17546,8 @@ export const certifications = [
         ],
         "answer": "Mirroring data onto two or more disks",
         "category": "Domain Review",
-        "explanation": "RAID 1 provides high fault tolerance by duplicating data."
+        "explanation": "RAID 1 provides high fault tolerance by duplicating data.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q29",
@@ -12600,7 +17560,8 @@ export const certifications = [
         ],
         "answer": "A facility used to house computer systems and associated components",
         "category": "Domain Review",
-        "explanation": "Data centers include redundant power, cooling, and security."
+        "explanation": "Data centers include redundant power, cooling, and security.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q30",
@@ -12613,7 +17574,8 @@ export const certifications = [
         ],
         "answer": "A standardized frame for mounting IT equipment",
         "category": "Domain Review",
-        "explanation": "Server racks are usually 19 or 23 inches wide."
+        "explanation": "Server racks are usually 19 or 23 inches wide.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q31",
@@ -12626,7 +17588,8 @@ export const certifications = [
         ],
         "answer": "A specialized electronic circuit designed to accelerate image creation",
         "category": "Domain Review",
-        "explanation": "GPUs are used for graphics rendering and scientific computing."
+        "explanation": "GPUs are used for graphics rendering and scientific computing.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q32",
@@ -12639,7 +17602,8 @@ export const certifications = [
         ],
         "answer": "The amount of time a system or service is operational",
         "category": "Domain Review",
-        "explanation": "High uptime (e.g., 99.999%) is a major goal for IT infrastructure."
+        "explanation": "High uptime (e.g., 99.999%) is a major goal for IT infrastructure.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q33",
@@ -12652,7 +17616,8 @@ export const certifications = [
         ],
         "answer": "The electronic circuitry that executes instructions of a computer program",
         "category": "Domain Review",
-        "explanation": "The CPU is the 'brain' of the computer."
+        "explanation": "The CPU is the 'brain' of the computer.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q34",
@@ -12665,7 +17630,8 @@ export const certifications = [
         ],
         "answer": "A storage device that uses integrated circuits for data storage",
         "category": "Domain Review",
-        "explanation": "SSDs are much faster and more durable than traditional HDDs."
+        "explanation": "SSDs are much faster and more durable than traditional HDDs.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q35",
@@ -12678,7 +17644,8 @@ export const certifications = [
         ],
         "answer": "A thin, modular server that fits into a specialized chassis",
         "category": "Domain Review",
-        "explanation": "Blade servers save space and improve energy efficiency."
+        "explanation": "Blade servers save space and improve energy efficiency.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q36",
@@ -12691,7 +17658,8 @@ export const certifications = [
         ],
         "answer": "A security standard that ensures a device boots using only trusted software",
         "category": "Domain Review",
-        "explanation": "Secure Boot protects against malware during the boot process."
+        "explanation": "Secure Boot protects against malware during the boot process.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q37",
@@ -12704,7 +17672,8 @@ export const certifications = [
         ],
         "answer": "A network security system that monitors and controls traffic",
         "category": "Domain Review",
-        "explanation": "Firewalls are the first line of defense in network security."
+        "explanation": "Firewalls are the first line of defense in network security.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q38",
@@ -12717,7 +17686,8 @@ export const certifications = [
         ],
         "answer": "A copy of data stored in a separate location for recovery",
         "category": "Domain Review",
-        "explanation": "Backups are essential for data protection."
+        "explanation": "Backups are essential for data protection.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q39",
@@ -12730,7 +17700,8 @@ export const certifications = [
         ],
         "answer": "Distributing network or application traffic across multiple servers",
         "category": "Domain Review",
-        "explanation": "Load balancing improves performance and availability."
+        "explanation": "Load balancing improves performance and availability.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q40",
@@ -12743,7 +17714,8 @@ export const certifications = [
         ],
         "answer": "A device that provides emergency power when the main source fails",
         "category": "Domain Review",
-        "explanation": "UPS protects equipment from power outages and surges."
+        "explanation": "UPS protects equipment from power outages and surges.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q41",
@@ -12756,7 +17728,8 @@ export const certifications = [
         ],
         "answer": "A computer or system that provides resources or services to other computers",
         "category": "Domain Review",
-        "explanation": "Common servers include web servers, mail servers, and database servers."
+        "explanation": "Common servers include web servers, mail servers, and database servers.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q42",
@@ -12769,7 +17742,8 @@ export const certifications = [
         ],
         "answer": "Striping data and parity across three or more disks",
         "category": "Domain Review",
-        "explanation": "RAID 5 provides a good balance of performance and fault tolerance."
+        "explanation": "RAID 5 provides a good balance of performance and fault tolerance.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q43",
@@ -12782,7 +17756,8 @@ export const certifications = [
         ],
         "answer": "Containerization of applications",
         "category": "Domain Review",
-        "explanation": "Docker packages apps and their dependencies into portable containers."
+        "explanation": "Docker packages apps and their dependencies into portable containers.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q44",
@@ -12795,7 +17770,8 @@ export const certifications = [
         ],
         "answer": "Striping data across disks for performance with no redundancy",
         "category": "Domain Review",
-        "explanation": "RAID 0 improves speed but increases the risk of data loss."
+        "explanation": "RAID 0 improves speed but increases the risk of data loss.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q45",
@@ -12808,7 +17784,8 @@ export const certifications = [
         ],
         "answer": "Updating the firmware on the motherboard",
         "category": "Domain Review",
-        "explanation": "BIOS updates can fix hardware compatibility issues."
+        "explanation": "BIOS updates can fix hardware compatibility issues.",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q46",
@@ -12821,7 +17798,8 @@ export const certifications = [
         ],
         "answer": "A device that forwards data packets between computer networks",
         "category": "Domain Review",
-        "explanation": "Routers operate at the Network Layer (Layer 3)."
+        "explanation": "Routers operate at the Network Layer (Layer 3).",
+        "topic": "Hardware"
       },
       {
         "id": "terraform-assoc-q47",
@@ -12834,7 +17812,8 @@ export const certifications = [
         ],
         "answer": "An open-source operating system kernel",
         "category": "Domain Review",
-        "explanation": "Linux is the foundation for many popular operating systems like Ubuntu and CentOS."
+        "explanation": "Linux is the foundation for many popular operating systems like Ubuntu and CentOS.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q48",
@@ -12847,7 +17826,8 @@ export const certifications = [
         ],
         "answer": "A unique string of numbers that identifies each computer on a network",
         "category": "Domain Review",
-        "explanation": "IP addresses can be static or dynamic."
+        "explanation": "IP addresses can be static or dynamic.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q49",
@@ -12860,7 +17840,8 @@ export const certifications = [
         ],
         "answer": "A copy of a system or data at a specific point in time",
         "category": "Domain Review",
-        "explanation": "Snapshots are often used for quick recovery and testing."
+        "explanation": "Snapshots are often used for quick recovery and testing.",
+        "topic": "Operating Systems"
       },
       {
         "id": "terraform-assoc-q50",
@@ -12873,7 +17854,8 @@ export const certifications = [
         ],
         "answer": "A data storage device that uses magnetic storage and rotating disks",
         "category": "Domain Review",
-        "explanation": "HDDs offer larger capacities at a lower cost than SSDs."
+        "explanation": "HDDs offer larger capacities at a lower cost than SSDs.",
+        "topic": "Hardware"
       }
     ]
   },
@@ -12892,8 +17874,204 @@ export const certifications = [
         "title": "Data & AI Fundamentals",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Microsoft Azure Data Fundamentals."
+            "name": "What is 'Classification' in ML?",
+            "detail": "Example: Predicting if an email is spam."
+          },
+          {
+            "name": "What is 'Big Data'?",
+            "detail": "Big Data is characterized by Volume, Velocity, and Variety."
+          },
+          {
+            "name": "What is 'Data Cleansing'?",
+            "detail": "Cleansing is essential for accurate analysis."
+          },
+          {
+            "name": "What is 'Semi-Structured Data'?",
+            "detail": "Examples include XML and JSON."
+          },
+          {
+            "name": "What is 'Unsupervised Learning'?",
+            "detail": "Examples include clustering and association."
+          },
+          {
+            "name": "What is 'Reinforcement Learning'?",
+            "detail": "RL is used in robotics and game playing."
+          },
+          {
+            "name": "What is 'NoSQL'?",
+            "detail": "NoSQL databases are often used for big data and real-time web apps."
+          },
+          {
+            "name": "What is 'Data Governance'?",
+            "detail": "Governance ensures data is accurate and trustworthy."
+          },
+          {
+            "name": "What is a 'Data Scientist'?",
+            "detail": "Data scientists combine skills in statistics, coding, and domain knowledge."
+          },
+          {
+            "name": "What is 'Spark' (Apache Spark)?",
+            "detail": "Spark is much faster than the older MapReduce."
+          },
+          {
+            "name": "What is 'Big Data Analytics'?",
+            "detail": "Analytics provides insights that can lead to better business decisions."
+          },
+          {
+            "name": "What is 'Artificial Intelligence'?",
+            "detail": "AI encompasses machine learning, robotics, and natural language processing."
+          },
+          {
+            "name": "What is 'Data Lake'?",
+            "detail": "Data lakes can store data as-is, without first structuring it."
+          },
+          {
+            "name": "What is 'Generative AI'?",
+            "detail": "Examples include ChatGPT and Midjourney."
+          },
+          {
+            "name": "What is 'Clustering' in ML?",
+            "detail": "Clustering is an unsupervised learning technique."
+          },
+          {
+            "name": "What is 'Cloud Database'?",
+            "detail": "Cloud databases are highly scalable and managed."
+          },
+          {
+            "name": "What is 'Test Data'?",
+            "detail": "Test data must be separate from training data."
+          },
+          {
+            "name": "What is 'Primary Key' in a database?",
+            "detail": "The primary key cannot be null and must be unique."
+          },
+          {
+            "name": "What is 'Explainable AI' (XAI)?",
+            "detail": "XAI is important for trust and accountability."
+          },
+          {
+            "name": "What is 'ETL'?",
+            "detail": "ETL is the process of moving data from source systems to a data warehouse."
+          },
+          {
+            "name": "What is 'Predictive Analytics'?",
+            "detail": "Predictive models help in decision-making."
+          },
+          {
+            "name": "What is 'Regression' in ML?",
+            "detail": "Example: Predicting a house price."
+          },
+          {
+            "name": "What is an 'Artificial Neural Network'?",
+            "detail": "Neural networks are the foundation of deep learning."
+          },
+          {
+            "name": "What is 'Business Intelligence' (BI)?",
+            "detail": "BI provides historical, current, and predictive views of operations."
+          },
+          {
+            "name": "What is 'SQL'?",
+            "detail": "SQL is the standard language for managing and querying relational databases."
+          },
+          {
+            "name": "What is 'Unstructured Data'?",
+            "detail": "Examples include text, images, and videos."
+          },
+          {
+            "name": "What is 'Deep Learning'?",
+            "detail": "Deep learning is inspired by the structure and function of the human brain."
+          },
+          {
+            "name": "What is 'Training Data'?",
+            "detail": "Quality and quantity of training data are critical."
+          },
+          {
+            "name": "What is 'Data Warehouse'?",
+            "detail": "Warehouses consolidate data from multiple sources."
+          },
+          {
+            "name": "What is 'Natural Language Processing' (NLP)?",
+            "detail": "NLP is used in translation, sentiment analysis, and chatbots."
+          },
+          {
+            "name": "What is 'Data Mining'?",
+            "detail": "Data mining uses ML, statistics, and database systems."
+          },
+          {
+            "name": "What is 'Data Integration'?",
+            "detail": "Integration is a major challenge in large organizations."
+          },
+          {
+            "name": "What is 'Foreign Key' in a database?",
+            "detail": "Foreign keys create relationships between tables."
+          },
+          {
+            "name": "What is 'Overfitting'?",
+            "detail": "Overfitted models lack generalizability."
+          },
+          {
+            "name": "What is 'Structured Data'?",
+            "detail": "Structured data is easily searchable (e.g., in a database)."
+          },
+          {
+            "name": "What is 'Database Index'?",
+            "detail": "Indexes make queries much faster but slow down writes."
+          },
+          {
+            "name": "What is an 'Algorithm'?",
+            "detail": "Algorithms are the foundation of computer programs and ML models."
+          },
+          {
+            "name": "What is 'Normalizaton' in a database?",
+            "detail": "Normalization involves dividing large tables into smaller ones."
+          },
+          {
+            "name": "What is 'Database Management System' (DBMS)?",
+            "detail": "Examples include MySQL, PostgreSQL, and Oracle Database."
+          },
+          {
+            "name": "What is 'Data Mart'?",
+            "detail": "Data marts are often used by a specific department (e.g., Finance)."
+          },
+          {
+            "name": "What is 'Supervised Learning'?",
+            "detail": "The model learns to map inputs to the correct outputs."
+          },
+          {
+            "name": "What is 'Data Visualization'?",
+            "detail": "Visualization helps in understanding trends, outliers, and patterns."
+          },
+          {
+            "name": "What is 'Hadoop'?",
+            "detail": "Hadoop is a core technology in the big data ecosystem."
+          },
+          {
+            "name": "What is 'Bias' in AI?",
+            "detail": "Bias can arise from flawed training data or algorithms."
+          },
+          {
+            "name": "What is 'Denormalization'?",
+            "detail": "Denormalization is often used in data warehouses."
+          },
+          {
+            "name": "What is 'Model' in ML?",
+            "detail": "A model is 'trained' on data to make predictions."
+          },
+          {
+            "name": "What is 'Machine Learning'?",
+            "detail": "ML uses statistical techniques to give computers the ability to 'learn' from data."
+          },
+          {
+            "name": "What is 'Underfitting'?",
+            "detail": "Underfitted models have poor performance on both training and test data."
+          },
+          {
+            "name": "What is 'Computer Vision'?",
+            "detail": "Computer vision is used in facial recognition and autonomous vehicles."
+          },
+          {
+            "name": "What is a 'Relational Database'?",
+            "detail": "RDBMS (like SQL) use structured relationships between tables."
           }
         ]
       }
@@ -12910,7 +18088,8 @@ export const certifications = [
         ],
         "answer": "Predicting a discrete label or category",
         "category": "Domain Review",
-        "explanation": "Example: Predicting if an email is spam."
+        "explanation": "Example: Predicting if an email is spam.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q2",
@@ -12923,7 +18102,8 @@ export const certifications = [
         ],
         "answer": "Extremely large and complex datasets",
         "category": "Domain Review",
-        "explanation": "Big Data is characterized by Volume, Velocity, and Variety."
+        "explanation": "Big Data is characterized by Volume, Velocity, and Variety.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q3",
@@ -12936,7 +18116,8 @@ export const certifications = [
         ],
         "answer": "Identifying and correcting errors or inconsistencies in data",
         "category": "Domain Review",
-        "explanation": "Cleansing is essential for accurate analysis."
+        "explanation": "Cleansing is essential for accurate analysis.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q4",
@@ -12949,7 +18130,8 @@ export const certifications = [
         ],
         "answer": "Data that does not reside in a relational database but has organizational properties",
         "category": "Domain Review",
-        "explanation": "Examples include XML and JSON."
+        "explanation": "Examples include XML and JSON.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q5",
@@ -12962,7 +18144,8 @@ export const certifications = [
         ],
         "answer": "Training a model on unlabeled data to find hidden patterns",
         "category": "Domain Review",
-        "explanation": "Examples include clustering and association."
+        "explanation": "Examples include clustering and association.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q6",
@@ -12975,7 +18158,8 @@ export const certifications = [
         ],
         "answer": "Training a model through rewards and penalties",
         "category": "Domain Review",
-        "explanation": "RL is used in robotics and game playing."
+        "explanation": "RL is used in robotics and game playing.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q7",
@@ -12988,7 +18172,8 @@ export const certifications = [
         ],
         "answer": "A non-relational database for storing diverse data types",
         "category": "Domain Review",
-        "explanation": "NoSQL databases are often used for big data and real-time web apps."
+        "explanation": "NoSQL databases are often used for big data and real-time web apps.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q8",
@@ -13001,7 +18186,8 @@ export const certifications = [
         ],
         "answer": "Managing the availability, usability, integrity, and security of data",
         "category": "Domain Review",
-        "explanation": "Governance ensures data is accurate and trustworthy."
+        "explanation": "Governance ensures data is accurate and trustworthy.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q9",
@@ -13014,7 +18200,8 @@ export const certifications = [
         ],
         "answer": "A person who uses scientific methods and data to find insights",
         "category": "Domain Review",
-        "explanation": "Data scientists combine skills in statistics, coding, and domain knowledge."
+        "explanation": "Data scientists combine skills in statistics, coding, and domain knowledge.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q10",
@@ -13027,7 +18214,8 @@ export const certifications = [
         ],
         "answer": "An open-source distributed processing system used for big data workloads",
         "category": "Domain Review",
-        "explanation": "Spark is much faster than the older MapReduce."
+        "explanation": "Spark is much faster than the older MapReduce.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q11",
@@ -13040,7 +18228,8 @@ export const certifications = [
         ],
         "answer": "The process of examining large and varied data sets to find hidden patterns",
         "category": "Domain Review",
-        "explanation": "Analytics provides insights that can lead to better business decisions."
+        "explanation": "Analytics provides insights that can lead to better business decisions.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q12",
@@ -13053,7 +18242,8 @@ export const certifications = [
         ],
         "answer": "Simulation of human intelligence by machines",
         "category": "Domain Review",
-        "explanation": "AI encompasses machine learning, robotics, and natural language processing."
+        "explanation": "AI encompasses machine learning, robotics, and natural language processing.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q13",
@@ -13066,7 +18256,8 @@ export const certifications = [
         ],
         "answer": "A centralized repository that allows you to store all your structured and unstructured data",
         "category": "Domain Review",
-        "explanation": "Data lakes can store data as-is, without first structuring it."
+        "explanation": "Data lakes can store data as-is, without first structuring it.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q14",
@@ -13079,7 +18270,8 @@ export const certifications = [
         ],
         "answer": "AI that can create new content like text, images, or music",
         "category": "Domain Review",
-        "explanation": "Examples include ChatGPT and Midjourney."
+        "explanation": "Examples include ChatGPT and Midjourney.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q15",
@@ -13092,7 +18284,8 @@ export const certifications = [
         ],
         "answer": "Grouping similar data points together",
         "category": "Domain Review",
-        "explanation": "Clustering is an unsupervised learning technique."
+        "explanation": "Clustering is an unsupervised learning technique.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q16",
@@ -13105,7 +18298,8 @@ export const certifications = [
         ],
         "answer": "A database service built and accessed through a cloud platform",
         "category": "Domain Review",
-        "explanation": "Cloud databases are highly scalable and managed."
+        "explanation": "Cloud databases are highly scalable and managed.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q17",
@@ -13118,7 +18312,8 @@ export const certifications = [
         ],
         "answer": "The data used to evaluate the performance of an ML model",
         "category": "Domain Review",
-        "explanation": "Test data must be separate from training data."
+        "explanation": "Test data must be separate from training data.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q18",
@@ -13131,7 +18326,8 @@ export const certifications = [
         ],
         "answer": "A unique identifier for each record in a table",
         "category": "Domain Review",
-        "explanation": "The primary key cannot be null and must be unique."
+        "explanation": "The primary key cannot be null and must be unique.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q19",
@@ -13144,7 +18340,8 @@ export const certifications = [
         ],
         "answer": "AI systems that can explain their decisions and actions to humans",
         "category": "Domain Review",
-        "explanation": "XAI is important for trust and accountability."
+        "explanation": "XAI is important for trust and accountability.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q20",
@@ -13157,7 +18354,8 @@ export const certifications = [
         ],
         "answer": "Extract, Transform, Load",
         "category": "Domain Review",
-        "explanation": "ETL is the process of moving data from source systems to a data warehouse."
+        "explanation": "ETL is the process of moving data from source systems to a data warehouse.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q21",
@@ -13170,7 +18368,8 @@ export const certifications = [
         ],
         "answer": "Using data, statistics, and ML to identify the likelihood of future outcomes",
         "category": "Domain Review",
-        "explanation": "Predictive models help in decision-making."
+        "explanation": "Predictive models help in decision-making.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q22",
@@ -13183,7 +18382,8 @@ export const certifications = [
         ],
         "answer": "Predicting a continuous numerical value",
         "category": "Domain Review",
-        "explanation": "Example: Predicting a house price."
+        "explanation": "Example: Predicting a house price.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q23",
@@ -13196,7 +18396,8 @@ export const certifications = [
         ],
         "answer": "A computing system inspired by biological neural networks",
         "category": "Domain Review",
-        "explanation": "Neural networks are the foundation of deep learning."
+        "explanation": "Neural networks are the foundation of deep learning.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q24",
@@ -13209,7 +18410,8 @@ export const certifications = [
         ],
         "answer": "Strategies and technologies used for data analysis of business info",
         "category": "Domain Review",
-        "explanation": "BI provides historical, current, and predictive views of operations."
+        "explanation": "BI provides historical, current, and predictive views of operations.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q25",
@@ -13222,7 +18424,8 @@ export const certifications = [
         ],
         "answer": "Structured Query Language",
         "category": "Domain Review",
-        "explanation": "SQL is the standard language for managing and querying relational databases."
+        "explanation": "SQL is the standard language for managing and querying relational databases.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q26",
@@ -13235,7 +18438,8 @@ export const certifications = [
         ],
         "answer": "Data that does not have a predefined model or organization",
         "category": "Domain Review",
-        "explanation": "Examples include text, images, and videos."
+        "explanation": "Examples include text, images, and videos.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q27",
@@ -13248,7 +18452,8 @@ export const certifications = [
         ],
         "answer": "A subset of ML based on artificial neural networks",
         "category": "Domain Review",
-        "explanation": "Deep learning is inspired by the structure and function of the human brain."
+        "explanation": "Deep learning is inspired by the structure and function of the human brain.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q28",
@@ -13261,7 +18466,8 @@ export const certifications = [
         ],
         "answer": "The data used to train an ML model",
         "category": "Domain Review",
-        "explanation": "Quality and quantity of training data are critical."
+        "explanation": "Quality and quantity of training data are critical.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q29",
@@ -13274,7 +18480,8 @@ export const certifications = [
         ],
         "answer": "A system used for reporting and data analysis",
         "category": "Domain Review",
-        "explanation": "Warehouses consolidate data from multiple sources."
+        "explanation": "Warehouses consolidate data from multiple sources.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q30",
@@ -13287,7 +18494,8 @@ export const certifications = [
         ],
         "answer": "The ability of computers to understand and process human language",
         "category": "Domain Review",
-        "explanation": "NLP is used in translation, sentiment analysis, and chatbots."
+        "explanation": "NLP is used in translation, sentiment analysis, and chatbots.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q31",
@@ -13300,7 +18508,8 @@ export const certifications = [
         ],
         "answer": "Discovering patterns and knowledge from large amounts of data",
         "category": "Domain Review",
-        "explanation": "Data mining uses ML, statistics, and database systems."
+        "explanation": "Data mining uses ML, statistics, and database systems.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q32",
@@ -13313,7 +18522,8 @@ export const certifications = [
         ],
         "answer": "Combining data from different sources into a single, unified view",
         "category": "Domain Review",
-        "explanation": "Integration is a major challenge in large organizations."
+        "explanation": "Integration is a major challenge in large organizations.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q33",
@@ -13326,7 +18536,8 @@ export const certifications = [
         ],
         "answer": "A field in one table that uniquely identifies a row of another table",
         "category": "Domain Review",
-        "explanation": "Foreign keys create relationships between tables."
+        "explanation": "Foreign keys create relationships between tables.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q34",
@@ -13339,7 +18550,8 @@ export const certifications = [
         ],
         "answer": "When a model learns the training data too well but fails on new data",
         "category": "Domain Review",
-        "explanation": "Overfitted models lack generalizability."
+        "explanation": "Overfitted models lack generalizability.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q35",
@@ -13352,7 +18564,8 @@ export const certifications = [
         ],
         "answer": "Data that adheres to a predefined schema or model",
         "category": "Domain Review",
-        "explanation": "Structured data is easily searchable (e.g., in a database)."
+        "explanation": "Structured data is easily searchable (e.g., in a database).",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q36",
@@ -13365,7 +18578,8 @@ export const certifications = [
         ],
         "answer": "A data structure that improves the speed of data retrieval",
         "category": "Domain Review",
-        "explanation": "Indexes make queries much faster but slow down writes."
+        "explanation": "Indexes make queries much faster but slow down writes.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q37",
@@ -13378,7 +18592,8 @@ export const certifications = [
         ],
         "answer": "A set of rules or instructions to be followed in calculations",
         "category": "Domain Review",
-        "explanation": "Algorithms are the foundation of computer programs and ML models."
+        "explanation": "Algorithms are the foundation of computer programs and ML models.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q38",
@@ -13391,7 +18606,8 @@ export const certifications = [
         ],
         "answer": "Organizing data to reduce redundancy and improve integrity",
         "category": "Domain Review",
-        "explanation": "Normalization involves dividing large tables into smaller ones."
+        "explanation": "Normalization involves dividing large tables into smaller ones.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q39",
@@ -13404,7 +18620,8 @@ export const certifications = [
         ],
         "answer": "Software that interacts with end users, applications, and the database",
         "category": "Domain Review",
-        "explanation": "Examples include MySQL, PostgreSQL, and Oracle Database."
+        "explanation": "Examples include MySQL, PostgreSQL, and Oracle Database.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q40",
@@ -13417,7 +18634,8 @@ export const certifications = [
         ],
         "answer": "A small-scale data warehouse focused on a single functional area",
         "category": "Domain Review",
-        "explanation": "Data marts are often used by a specific department (e.g., Finance)."
+        "explanation": "Data marts are often used by a specific department (e.g., Finance).",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q41",
@@ -13430,7 +18648,8 @@ export const certifications = [
         ],
         "answer": "Training a model on labeled data",
         "category": "Domain Review",
-        "explanation": "The model learns to map inputs to the correct outputs."
+        "explanation": "The model learns to map inputs to the correct outputs.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q42",
@@ -13443,7 +18662,8 @@ export const certifications = [
         ],
         "answer": "A graphical representation of information and data",
         "category": "Domain Review",
-        "explanation": "Visualization helps in understanding trends, outliers, and patterns."
+        "explanation": "Visualization helps in understanding trends, outliers, and patterns.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q43",
@@ -13456,7 +18676,8 @@ export const certifications = [
         ],
         "answer": "An open-source framework for distributed storage and processing of big data",
         "category": "Domain Review",
-        "explanation": "Hadoop is a core technology in the big data ecosystem."
+        "explanation": "Hadoop is a core technology in the big data ecosystem.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q44",
@@ -13469,7 +18690,8 @@ export const certifications = [
         ],
         "answer": "When a model produces systematically prejudiced results",
         "category": "Domain Review",
-        "explanation": "Bias can arise from flawed training data or algorithms."
+        "explanation": "Bias can arise from flawed training data or algorithms.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q45",
@@ -13482,7 +18704,8 @@ export const certifications = [
         ],
         "answer": "Adding redundant data to improve read performance",
         "category": "Domain Review",
-        "explanation": "Denormalization is often used in data warehouses."
+        "explanation": "Denormalization is often used in data warehouses.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q46",
@@ -13495,7 +18718,8 @@ export const certifications = [
         ],
         "answer": "A mathematical representation of a real-world process",
         "category": "Domain Review",
-        "explanation": "A model is 'trained' on data to make predictions."
+        "explanation": "A model is 'trained' on data to make predictions.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q47",
@@ -13508,7 +18732,8 @@ export const certifications = [
         ],
         "answer": "Algorithms that learn patterns from data",
         "category": "Domain Review",
-        "explanation": "ML uses statistical techniques to give computers the ability to 'learn' from data."
+        "explanation": "ML uses statistical techniques to give computers the ability to 'learn' from data.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q48",
@@ -13521,7 +18746,8 @@ export const certifications = [
         ],
         "answer": "When a model is too simple to learn the patterns in data",
         "category": "Domain Review",
-        "explanation": "Underfitted models have poor performance on both training and test data."
+        "explanation": "Underfitted models have poor performance on both training and test data.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q49",
@@ -13534,7 +18760,8 @@ export const certifications = [
         ],
         "answer": "The ability of computers to gain understanding from digital images or videos",
         "category": "Domain Review",
-        "explanation": "Computer vision is used in facial recognition and autonomous vehicles."
+        "explanation": "Computer vision is used in facial recognition and autonomous vehicles.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "dp-900-q50",
@@ -13547,7 +18774,8 @@ export const certifications = [
         ],
         "answer": "Data organized in tables with rows and columns",
         "category": "Domain Review",
-        "explanation": "RDBMS (like SQL) use structured relationships between tables."
+        "explanation": "RDBMS (like SQL) use structured relationships between tables.",
+        "topic": "Data & AI Fundamentals"
       }
     ]
   },
@@ -13566,8 +18794,204 @@ export const certifications = [
         "title": "Data & AI Fundamentals",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Microsoft Azure AI Fundamentals."
+            "name": "What is 'Clustering' in ML?",
+            "detail": "Clustering is an unsupervised learning technique."
+          },
+          {
+            "name": "What is 'Regression' in ML?",
+            "detail": "Example: Predicting a house price."
+          },
+          {
+            "name": "What is 'Generative AI'?",
+            "detail": "Examples include ChatGPT and Midjourney."
+          },
+          {
+            "name": "What is 'Data Mining'?",
+            "detail": "Data mining uses ML, statistics, and database systems."
+          },
+          {
+            "name": "What is 'Deep Learning'?",
+            "detail": "Deep learning is inspired by the structure and function of the human brain."
+          },
+          {
+            "name": "What is 'NoSQL'?",
+            "detail": "NoSQL databases are often used for big data and real-time web apps."
+          },
+          {
+            "name": "What is 'Predictive Analytics'?",
+            "detail": "Predictive models help in decision-making."
+          },
+          {
+            "name": "What is 'ETL'?",
+            "detail": "ETL is the process of moving data from source systems to a data warehouse."
+          },
+          {
+            "name": "What is 'Test Data'?",
+            "detail": "Test data must be separate from training data."
+          },
+          {
+            "name": "What is 'Data Warehouse'?",
+            "detail": "Warehouses consolidate data from multiple sources."
+          },
+          {
+            "name": "What is 'Bias' in AI?",
+            "detail": "Bias can arise from flawed training data or algorithms."
+          },
+          {
+            "name": "What is 'Semi-Structured Data'?",
+            "detail": "Examples include XML and JSON."
+          },
+          {
+            "name": "What is 'Unstructured Data'?",
+            "detail": "Examples include text, images, and videos."
+          },
+          {
+            "name": "What is 'Big Data Analytics'?",
+            "detail": "Analytics provides insights that can lead to better business decisions."
+          },
+          {
+            "name": "What is 'Model' in ML?",
+            "detail": "A model is 'trained' on data to make predictions."
+          },
+          {
+            "name": "What is 'Foreign Key' in a database?",
+            "detail": "Foreign keys create relationships between tables."
+          },
+          {
+            "name": "What is 'Artificial Intelligence'?",
+            "detail": "AI encompasses machine learning, robotics, and natural language processing."
+          },
+          {
+            "name": "What is 'Data Cleansing'?",
+            "detail": "Cleansing is essential for accurate analysis."
+          },
+          {
+            "name": "What is 'Training Data'?",
+            "detail": "Quality and quantity of training data are critical."
+          },
+          {
+            "name": "What is 'Business Intelligence' (BI)?",
+            "detail": "BI provides historical, current, and predictive views of operations."
+          },
+          {
+            "name": "What is 'Data Mart'?",
+            "detail": "Data marts are often used by a specific department (e.g., Finance)."
+          },
+          {
+            "name": "What is 'Machine Learning'?",
+            "detail": "ML uses statistical techniques to give computers the ability to 'learn' from data."
+          },
+          {
+            "name": "What is 'Database Index'?",
+            "detail": "Indexes make queries much faster but slow down writes."
+          },
+          {
+            "name": "What is 'Big Data'?",
+            "detail": "Big Data is characterized by Volume, Velocity, and Variety."
+          },
+          {
+            "name": "What is 'SQL'?",
+            "detail": "SQL is the standard language for managing and querying relational databases."
+          },
+          {
+            "name": "What is 'Data Governance'?",
+            "detail": "Governance ensures data is accurate and trustworthy."
+          },
+          {
+            "name": "What is 'Data Lake'?",
+            "detail": "Data lakes can store data as-is, without first structuring it."
+          },
+          {
+            "name": "What is 'Database Management System' (DBMS)?",
+            "detail": "Examples include MySQL, PostgreSQL, and Oracle Database."
+          },
+          {
+            "name": "What is 'Reinforcement Learning'?",
+            "detail": "RL is used in robotics and game playing."
+          },
+          {
+            "name": "What is 'Denormalization'?",
+            "detail": "Denormalization is often used in data warehouses."
+          },
+          {
+            "name": "What is 'Natural Language Processing' (NLP)?",
+            "detail": "NLP is used in translation, sentiment analysis, and chatbots."
+          },
+          {
+            "name": "What is 'Unsupervised Learning'?",
+            "detail": "Examples include clustering and association."
+          },
+          {
+            "name": "What is 'Supervised Learning'?",
+            "detail": "The model learns to map inputs to the correct outputs."
+          },
+          {
+            "name": "What is an 'Algorithm'?",
+            "detail": "Algorithms are the foundation of computer programs and ML models."
+          },
+          {
+            "name": "What is 'Data Integration'?",
+            "detail": "Integration is a major challenge in large organizations."
+          },
+          {
+            "name": "What is 'Primary Key' in a database?",
+            "detail": "The primary key cannot be null and must be unique."
+          },
+          {
+            "name": "What is 'Cloud Database'?",
+            "detail": "Cloud databases are highly scalable and managed."
+          },
+          {
+            "name": "What is 'Hadoop'?",
+            "detail": "Hadoop is a core technology in the big data ecosystem."
+          },
+          {
+            "name": "What is 'Data Visualization'?",
+            "detail": "Visualization helps in understanding trends, outliers, and patterns."
+          },
+          {
+            "name": "What is 'Structured Data'?",
+            "detail": "Structured data is easily searchable (e.g., in a database)."
+          },
+          {
+            "name": "What is 'Computer Vision'?",
+            "detail": "Computer vision is used in facial recognition and autonomous vehicles."
+          },
+          {
+            "name": "What is an 'Artificial Neural Network'?",
+            "detail": "Neural networks are the foundation of deep learning."
+          },
+          {
+            "name": "What is 'Classification' in ML?",
+            "detail": "Example: Predicting if an email is spam."
+          },
+          {
+            "name": "What is a 'Data Scientist'?",
+            "detail": "Data scientists combine skills in statistics, coding, and domain knowledge."
+          },
+          {
+            "name": "What is 'Explainable AI' (XAI)?",
+            "detail": "XAI is important for trust and accountability."
+          },
+          {
+            "name": "What is a 'Relational Database'?",
+            "detail": "RDBMS (like SQL) use structured relationships between tables."
+          },
+          {
+            "name": "What is 'Spark' (Apache Spark)?",
+            "detail": "Spark is much faster than the older MapReduce."
+          },
+          {
+            "name": "What is 'Overfitting'?",
+            "detail": "Overfitted models lack generalizability."
+          },
+          {
+            "name": "What is 'Underfitting'?",
+            "detail": "Underfitted models have poor performance on both training and test data."
+          },
+          {
+            "name": "What is 'Normalizaton' in a database?",
+            "detail": "Normalization involves dividing large tables into smaller ones."
           }
         ]
       }
@@ -13584,7 +19008,8 @@ export const certifications = [
         ],
         "answer": "Grouping similar data points together",
         "category": "Domain Review",
-        "explanation": "Clustering is an unsupervised learning technique."
+        "explanation": "Clustering is an unsupervised learning technique.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q2",
@@ -13597,7 +19022,8 @@ export const certifications = [
         ],
         "answer": "Predicting a continuous numerical value",
         "category": "Domain Review",
-        "explanation": "Example: Predicting a house price."
+        "explanation": "Example: Predicting a house price.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q3",
@@ -13610,7 +19036,8 @@ export const certifications = [
         ],
         "answer": "AI that can create new content like text, images, or music",
         "category": "Domain Review",
-        "explanation": "Examples include ChatGPT and Midjourney."
+        "explanation": "Examples include ChatGPT and Midjourney.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q4",
@@ -13623,7 +19050,8 @@ export const certifications = [
         ],
         "answer": "Discovering patterns and knowledge from large amounts of data",
         "category": "Domain Review",
-        "explanation": "Data mining uses ML, statistics, and database systems."
+        "explanation": "Data mining uses ML, statistics, and database systems.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q5",
@@ -13636,7 +19064,8 @@ export const certifications = [
         ],
         "answer": "A subset of ML based on artificial neural networks",
         "category": "Domain Review",
-        "explanation": "Deep learning is inspired by the structure and function of the human brain."
+        "explanation": "Deep learning is inspired by the structure and function of the human brain.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q6",
@@ -13649,7 +19078,8 @@ export const certifications = [
         ],
         "answer": "A non-relational database for storing diverse data types",
         "category": "Domain Review",
-        "explanation": "NoSQL databases are often used for big data and real-time web apps."
+        "explanation": "NoSQL databases are often used for big data and real-time web apps.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q7",
@@ -13662,7 +19092,8 @@ export const certifications = [
         ],
         "answer": "Using data, statistics, and ML to identify the likelihood of future outcomes",
         "category": "Domain Review",
-        "explanation": "Predictive models help in decision-making."
+        "explanation": "Predictive models help in decision-making.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q8",
@@ -13675,7 +19106,8 @@ export const certifications = [
         ],
         "answer": "Extract, Transform, Load",
         "category": "Domain Review",
-        "explanation": "ETL is the process of moving data from source systems to a data warehouse."
+        "explanation": "ETL is the process of moving data from source systems to a data warehouse.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q9",
@@ -13688,7 +19120,8 @@ export const certifications = [
         ],
         "answer": "The data used to evaluate the performance of an ML model",
         "category": "Domain Review",
-        "explanation": "Test data must be separate from training data."
+        "explanation": "Test data must be separate from training data.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q10",
@@ -13701,7 +19134,8 @@ export const certifications = [
         ],
         "answer": "A system used for reporting and data analysis",
         "category": "Domain Review",
-        "explanation": "Warehouses consolidate data from multiple sources."
+        "explanation": "Warehouses consolidate data from multiple sources.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q11",
@@ -13714,7 +19148,8 @@ export const certifications = [
         ],
         "answer": "When a model produces systematically prejudiced results",
         "category": "Domain Review",
-        "explanation": "Bias can arise from flawed training data or algorithms."
+        "explanation": "Bias can arise from flawed training data or algorithms.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q12",
@@ -13727,7 +19162,8 @@ export const certifications = [
         ],
         "answer": "Data that does not reside in a relational database but has organizational properties",
         "category": "Domain Review",
-        "explanation": "Examples include XML and JSON."
+        "explanation": "Examples include XML and JSON.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q13",
@@ -13740,7 +19176,8 @@ export const certifications = [
         ],
         "answer": "Data that does not have a predefined model or organization",
         "category": "Domain Review",
-        "explanation": "Examples include text, images, and videos."
+        "explanation": "Examples include text, images, and videos.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q14",
@@ -13753,7 +19190,8 @@ export const certifications = [
         ],
         "answer": "The process of examining large and varied data sets to find hidden patterns",
         "category": "Domain Review",
-        "explanation": "Analytics provides insights that can lead to better business decisions."
+        "explanation": "Analytics provides insights that can lead to better business decisions.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q15",
@@ -13766,7 +19204,8 @@ export const certifications = [
         ],
         "answer": "A mathematical representation of a real-world process",
         "category": "Domain Review",
-        "explanation": "A model is 'trained' on data to make predictions."
+        "explanation": "A model is 'trained' on data to make predictions.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q16",
@@ -13779,7 +19218,8 @@ export const certifications = [
         ],
         "answer": "A field in one table that uniquely identifies a row of another table",
         "category": "Domain Review",
-        "explanation": "Foreign keys create relationships between tables."
+        "explanation": "Foreign keys create relationships between tables.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q17",
@@ -13792,7 +19232,8 @@ export const certifications = [
         ],
         "answer": "Simulation of human intelligence by machines",
         "category": "Domain Review",
-        "explanation": "AI encompasses machine learning, robotics, and natural language processing."
+        "explanation": "AI encompasses machine learning, robotics, and natural language processing.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q18",
@@ -13805,7 +19246,8 @@ export const certifications = [
         ],
         "answer": "Identifying and correcting errors or inconsistencies in data",
         "category": "Domain Review",
-        "explanation": "Cleansing is essential for accurate analysis."
+        "explanation": "Cleansing is essential for accurate analysis.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q19",
@@ -13818,7 +19260,8 @@ export const certifications = [
         ],
         "answer": "The data used to train an ML model",
         "category": "Domain Review",
-        "explanation": "Quality and quantity of training data are critical."
+        "explanation": "Quality and quantity of training data are critical.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q20",
@@ -13831,7 +19274,8 @@ export const certifications = [
         ],
         "answer": "Strategies and technologies used for data analysis of business info",
         "category": "Domain Review",
-        "explanation": "BI provides historical, current, and predictive views of operations."
+        "explanation": "BI provides historical, current, and predictive views of operations.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q21",
@@ -13844,7 +19288,8 @@ export const certifications = [
         ],
         "answer": "A small-scale data warehouse focused on a single functional area",
         "category": "Domain Review",
-        "explanation": "Data marts are often used by a specific department (e.g., Finance)."
+        "explanation": "Data marts are often used by a specific department (e.g., Finance).",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q22",
@@ -13857,7 +19302,8 @@ export const certifications = [
         ],
         "answer": "Algorithms that learn patterns from data",
         "category": "Domain Review",
-        "explanation": "ML uses statistical techniques to give computers the ability to 'learn' from data."
+        "explanation": "ML uses statistical techniques to give computers the ability to 'learn' from data.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q23",
@@ -13870,7 +19316,8 @@ export const certifications = [
         ],
         "answer": "A data structure that improves the speed of data retrieval",
         "category": "Domain Review",
-        "explanation": "Indexes make queries much faster but slow down writes."
+        "explanation": "Indexes make queries much faster but slow down writes.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q24",
@@ -13883,7 +19330,8 @@ export const certifications = [
         ],
         "answer": "Extremely large and complex datasets",
         "category": "Domain Review",
-        "explanation": "Big Data is characterized by Volume, Velocity, and Variety."
+        "explanation": "Big Data is characterized by Volume, Velocity, and Variety.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q25",
@@ -13896,7 +19344,8 @@ export const certifications = [
         ],
         "answer": "Structured Query Language",
         "category": "Domain Review",
-        "explanation": "SQL is the standard language for managing and querying relational databases."
+        "explanation": "SQL is the standard language for managing and querying relational databases.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q26",
@@ -13909,7 +19358,8 @@ export const certifications = [
         ],
         "answer": "Managing the availability, usability, integrity, and security of data",
         "category": "Domain Review",
-        "explanation": "Governance ensures data is accurate and trustworthy."
+        "explanation": "Governance ensures data is accurate and trustworthy.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q27",
@@ -13922,7 +19372,8 @@ export const certifications = [
         ],
         "answer": "A centralized repository that allows you to store all your structured and unstructured data",
         "category": "Domain Review",
-        "explanation": "Data lakes can store data as-is, without first structuring it."
+        "explanation": "Data lakes can store data as-is, without first structuring it.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q28",
@@ -13935,7 +19386,8 @@ export const certifications = [
         ],
         "answer": "Software that interacts with end users, applications, and the database",
         "category": "Domain Review",
-        "explanation": "Examples include MySQL, PostgreSQL, and Oracle Database."
+        "explanation": "Examples include MySQL, PostgreSQL, and Oracle Database.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q29",
@@ -13948,7 +19400,8 @@ export const certifications = [
         ],
         "answer": "Training a model through rewards and penalties",
         "category": "Domain Review",
-        "explanation": "RL is used in robotics and game playing."
+        "explanation": "RL is used in robotics and game playing.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q30",
@@ -13961,7 +19414,8 @@ export const certifications = [
         ],
         "answer": "Adding redundant data to improve read performance",
         "category": "Domain Review",
-        "explanation": "Denormalization is often used in data warehouses."
+        "explanation": "Denormalization is often used in data warehouses.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q31",
@@ -13974,7 +19428,8 @@ export const certifications = [
         ],
         "answer": "The ability of computers to understand and process human language",
         "category": "Domain Review",
-        "explanation": "NLP is used in translation, sentiment analysis, and chatbots."
+        "explanation": "NLP is used in translation, sentiment analysis, and chatbots.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q32",
@@ -13987,7 +19442,8 @@ export const certifications = [
         ],
         "answer": "Training a model on unlabeled data to find hidden patterns",
         "category": "Domain Review",
-        "explanation": "Examples include clustering and association."
+        "explanation": "Examples include clustering and association.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q33",
@@ -14000,7 +19456,8 @@ export const certifications = [
         ],
         "answer": "Training a model on labeled data",
         "category": "Domain Review",
-        "explanation": "The model learns to map inputs to the correct outputs."
+        "explanation": "The model learns to map inputs to the correct outputs.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q34",
@@ -14013,7 +19470,8 @@ export const certifications = [
         ],
         "answer": "A set of rules or instructions to be followed in calculations",
         "category": "Domain Review",
-        "explanation": "Algorithms are the foundation of computer programs and ML models."
+        "explanation": "Algorithms are the foundation of computer programs and ML models.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q35",
@@ -14026,7 +19484,8 @@ export const certifications = [
         ],
         "answer": "Combining data from different sources into a single, unified view",
         "category": "Domain Review",
-        "explanation": "Integration is a major challenge in large organizations."
+        "explanation": "Integration is a major challenge in large organizations.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q36",
@@ -14039,7 +19498,8 @@ export const certifications = [
         ],
         "answer": "A unique identifier for each record in a table",
         "category": "Domain Review",
-        "explanation": "The primary key cannot be null and must be unique."
+        "explanation": "The primary key cannot be null and must be unique.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q37",
@@ -14052,7 +19512,8 @@ export const certifications = [
         ],
         "answer": "A database service built and accessed through a cloud platform",
         "category": "Domain Review",
-        "explanation": "Cloud databases are highly scalable and managed."
+        "explanation": "Cloud databases are highly scalable and managed.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q38",
@@ -14065,7 +19526,8 @@ export const certifications = [
         ],
         "answer": "An open-source framework for distributed storage and processing of big data",
         "category": "Domain Review",
-        "explanation": "Hadoop is a core technology in the big data ecosystem."
+        "explanation": "Hadoop is a core technology in the big data ecosystem.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q39",
@@ -14078,7 +19540,8 @@ export const certifications = [
         ],
         "answer": "A graphical representation of information and data",
         "category": "Domain Review",
-        "explanation": "Visualization helps in understanding trends, outliers, and patterns."
+        "explanation": "Visualization helps in understanding trends, outliers, and patterns.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q40",
@@ -14091,7 +19554,8 @@ export const certifications = [
         ],
         "answer": "Data that adheres to a predefined schema or model",
         "category": "Domain Review",
-        "explanation": "Structured data is easily searchable (e.g., in a database)."
+        "explanation": "Structured data is easily searchable (e.g., in a database).",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q41",
@@ -14104,7 +19568,8 @@ export const certifications = [
         ],
         "answer": "The ability of computers to gain understanding from digital images or videos",
         "category": "Domain Review",
-        "explanation": "Computer vision is used in facial recognition and autonomous vehicles."
+        "explanation": "Computer vision is used in facial recognition and autonomous vehicles.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q42",
@@ -14117,7 +19582,8 @@ export const certifications = [
         ],
         "answer": "A computing system inspired by biological neural networks",
         "category": "Domain Review",
-        "explanation": "Neural networks are the foundation of deep learning."
+        "explanation": "Neural networks are the foundation of deep learning.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q43",
@@ -14130,7 +19596,8 @@ export const certifications = [
         ],
         "answer": "Predicting a discrete label or category",
         "category": "Domain Review",
-        "explanation": "Example: Predicting if an email is spam."
+        "explanation": "Example: Predicting if an email is spam.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q44",
@@ -14143,7 +19610,8 @@ export const certifications = [
         ],
         "answer": "A person who uses scientific methods and data to find insights",
         "category": "Domain Review",
-        "explanation": "Data scientists combine skills in statistics, coding, and domain knowledge."
+        "explanation": "Data scientists combine skills in statistics, coding, and domain knowledge.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q45",
@@ -14156,7 +19624,8 @@ export const certifications = [
         ],
         "answer": "AI systems that can explain their decisions and actions to humans",
         "category": "Domain Review",
-        "explanation": "XAI is important for trust and accountability."
+        "explanation": "XAI is important for trust and accountability.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q46",
@@ -14169,7 +19638,8 @@ export const certifications = [
         ],
         "answer": "Data organized in tables with rows and columns",
         "category": "Domain Review",
-        "explanation": "RDBMS (like SQL) use structured relationships between tables."
+        "explanation": "RDBMS (like SQL) use structured relationships between tables.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q47",
@@ -14182,7 +19652,8 @@ export const certifications = [
         ],
         "answer": "An open-source distributed processing system used for big data workloads",
         "category": "Domain Review",
-        "explanation": "Spark is much faster than the older MapReduce."
+        "explanation": "Spark is much faster than the older MapReduce.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q48",
@@ -14195,7 +19666,8 @@ export const certifications = [
         ],
         "answer": "When a model learns the training data too well but fails on new data",
         "category": "Domain Review",
-        "explanation": "Overfitted models lack generalizability."
+        "explanation": "Overfitted models lack generalizability.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q49",
@@ -14208,7 +19680,8 @@ export const certifications = [
         ],
         "answer": "When a model is too simple to learn the patterns in data",
         "category": "Domain Review",
-        "explanation": "Underfitted models have poor performance on both training and test data."
+        "explanation": "Underfitted models have poor performance on both training and test data.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "ai-900-q50",
@@ -14221,7 +19694,8 @@ export const certifications = [
         ],
         "answer": "Organizing data to reduce redundancy and improve integrity",
         "category": "Domain Review",
-        "explanation": "Normalization involves dividing large tables into smaller ones."
+        "explanation": "Normalization involves dividing large tables into smaller ones.",
+        "topic": "Data & AI Fundamentals"
       }
     ]
   },
@@ -14240,8 +19714,204 @@ export const certifications = [
         "title": "Data & AI Fundamentals",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Microsoft Power Platform Fundamentals."
+            "name": "What is 'Business Intelligence' (BI)?",
+            "detail": "BI provides historical, current, and predictive views of operations."
+          },
+          {
+            "name": "What is 'Semi-Structured Data'?",
+            "detail": "Examples include XML and JSON."
+          },
+          {
+            "name": "What is 'Predictive Analytics'?",
+            "detail": "Predictive models help in decision-making."
+          },
+          {
+            "name": "What is 'Primary Key' in a database?",
+            "detail": "The primary key cannot be null and must be unique."
+          },
+          {
+            "name": "What is 'Generative AI'?",
+            "detail": "Examples include ChatGPT and Midjourney."
+          },
+          {
+            "name": "What is 'Database Management System' (DBMS)?",
+            "detail": "Examples include MySQL, PostgreSQL, and Oracle Database."
+          },
+          {
+            "name": "What is 'Machine Learning'?",
+            "detail": "ML uses statistical techniques to give computers the ability to 'learn' from data."
+          },
+          {
+            "name": "What is 'Supervised Learning'?",
+            "detail": "The model learns to map inputs to the correct outputs."
+          },
+          {
+            "name": "What is 'Bias' in AI?",
+            "detail": "Bias can arise from flawed training data or algorithms."
+          },
+          {
+            "name": "What is 'Artificial Intelligence'?",
+            "detail": "AI encompasses machine learning, robotics, and natural language processing."
+          },
+          {
+            "name": "What is 'Computer Vision'?",
+            "detail": "Computer vision is used in facial recognition and autonomous vehicles."
+          },
+          {
+            "name": "What is 'Classification' in ML?",
+            "detail": "Example: Predicting if an email is spam."
+          },
+          {
+            "name": "What is 'Underfitting'?",
+            "detail": "Underfitted models have poor performance on both training and test data."
+          },
+          {
+            "name": "What is 'Structured Data'?",
+            "detail": "Structured data is easily searchable (e.g., in a database)."
+          },
+          {
+            "name": "What is an 'Algorithm'?",
+            "detail": "Algorithms are the foundation of computer programs and ML models."
+          },
+          {
+            "name": "What is 'Data Mining'?",
+            "detail": "Data mining uses ML, statistics, and database systems."
+          },
+          {
+            "name": "What is 'ETL'?",
+            "detail": "ETL is the process of moving data from source systems to a data warehouse."
+          },
+          {
+            "name": "What is 'Unstructured Data'?",
+            "detail": "Examples include text, images, and videos."
+          },
+          {
+            "name": "What is 'Training Data'?",
+            "detail": "Quality and quantity of training data are critical."
+          },
+          {
+            "name": "What is 'Hadoop'?",
+            "detail": "Hadoop is a core technology in the big data ecosystem."
+          },
+          {
+            "name": "What is 'Data Integration'?",
+            "detail": "Integration is a major challenge in large organizations."
+          },
+          {
+            "name": "What is a 'Data Scientist'?",
+            "detail": "Data scientists combine skills in statistics, coding, and domain knowledge."
+          },
+          {
+            "name": "What is 'Explainable AI' (XAI)?",
+            "detail": "XAI is important for trust and accountability."
+          },
+          {
+            "name": "What is 'Spark' (Apache Spark)?",
+            "detail": "Spark is much faster than the older MapReduce."
+          },
+          {
+            "name": "What is 'Cloud Database'?",
+            "detail": "Cloud databases are highly scalable and managed."
+          },
+          {
+            "name": "What is 'SQL'?",
+            "detail": "SQL is the standard language for managing and querying relational databases."
+          },
+          {
+            "name": "What is 'Database Index'?",
+            "detail": "Indexes make queries much faster but slow down writes."
+          },
+          {
+            "name": "What is 'Data Lake'?",
+            "detail": "Data lakes can store data as-is, without first structuring it."
+          },
+          {
+            "name": "What is 'Reinforcement Learning'?",
+            "detail": "RL is used in robotics and game playing."
+          },
+          {
+            "name": "What is 'Data Visualization'?",
+            "detail": "Visualization helps in understanding trends, outliers, and patterns."
+          },
+          {
+            "name": "What is 'Unsupervised Learning'?",
+            "detail": "Examples include clustering and association."
+          },
+          {
+            "name": "What is 'Test Data'?",
+            "detail": "Test data must be separate from training data."
+          },
+          {
+            "name": "What is 'Regression' in ML?",
+            "detail": "Example: Predicting a house price."
+          },
+          {
+            "name": "What is 'Deep Learning'?",
+            "detail": "Deep learning is inspired by the structure and function of the human brain."
+          },
+          {
+            "name": "What is 'Big Data'?",
+            "detail": "Big Data is characterized by Volume, Velocity, and Variety."
+          },
+          {
+            "name": "What is 'Normalizaton' in a database?",
+            "detail": "Normalization involves dividing large tables into smaller ones."
+          },
+          {
+            "name": "What is 'Overfitting'?",
+            "detail": "Overfitted models lack generalizability."
+          },
+          {
+            "name": "What is 'Clustering' in ML?",
+            "detail": "Clustering is an unsupervised learning technique."
+          },
+          {
+            "name": "What is an 'Artificial Neural Network'?",
+            "detail": "Neural networks are the foundation of deep learning."
+          },
+          {
+            "name": "What is 'Data Cleansing'?",
+            "detail": "Cleansing is essential for accurate analysis."
+          },
+          {
+            "name": "What is 'Big Data Analytics'?",
+            "detail": "Analytics provides insights that can lead to better business decisions."
+          },
+          {
+            "name": "What is a 'Relational Database'?",
+            "detail": "RDBMS (like SQL) use structured relationships between tables."
+          },
+          {
+            "name": "What is 'Data Warehouse'?",
+            "detail": "Warehouses consolidate data from multiple sources."
+          },
+          {
+            "name": "What is 'Model' in ML?",
+            "detail": "A model is 'trained' on data to make predictions."
+          },
+          {
+            "name": "What is 'Natural Language Processing' (NLP)?",
+            "detail": "NLP is used in translation, sentiment analysis, and chatbots."
+          },
+          {
+            "name": "What is 'NoSQL'?",
+            "detail": "NoSQL databases are often used for big data and real-time web apps."
+          },
+          {
+            "name": "What is 'Data Mart'?",
+            "detail": "Data marts are often used by a specific department (e.g., Finance)."
+          },
+          {
+            "name": "What is 'Data Governance'?",
+            "detail": "Governance ensures data is accurate and trustworthy."
+          },
+          {
+            "name": "What is 'Denormalization'?",
+            "detail": "Denormalization is often used in data warehouses."
+          },
+          {
+            "name": "What is 'Foreign Key' in a database?",
+            "detail": "Foreign keys create relationships between tables."
           }
         ]
       }
@@ -14258,7 +19928,8 @@ export const certifications = [
         ],
         "answer": "Strategies and technologies used for data analysis of business info",
         "category": "Domain Review",
-        "explanation": "BI provides historical, current, and predictive views of operations."
+        "explanation": "BI provides historical, current, and predictive views of operations.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q2",
@@ -14271,7 +19942,8 @@ export const certifications = [
         ],
         "answer": "Data that does not reside in a relational database but has organizational properties",
         "category": "Domain Review",
-        "explanation": "Examples include XML and JSON."
+        "explanation": "Examples include XML and JSON.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q3",
@@ -14284,7 +19956,8 @@ export const certifications = [
         ],
         "answer": "Using data, statistics, and ML to identify the likelihood of future outcomes",
         "category": "Domain Review",
-        "explanation": "Predictive models help in decision-making."
+        "explanation": "Predictive models help in decision-making.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q4",
@@ -14297,7 +19970,8 @@ export const certifications = [
         ],
         "answer": "A unique identifier for each record in a table",
         "category": "Domain Review",
-        "explanation": "The primary key cannot be null and must be unique."
+        "explanation": "The primary key cannot be null and must be unique.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q5",
@@ -14310,7 +19984,8 @@ export const certifications = [
         ],
         "answer": "AI that can create new content like text, images, or music",
         "category": "Domain Review",
-        "explanation": "Examples include ChatGPT and Midjourney."
+        "explanation": "Examples include ChatGPT and Midjourney.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q6",
@@ -14323,7 +19998,8 @@ export const certifications = [
         ],
         "answer": "Software that interacts with end users, applications, and the database",
         "category": "Domain Review",
-        "explanation": "Examples include MySQL, PostgreSQL, and Oracle Database."
+        "explanation": "Examples include MySQL, PostgreSQL, and Oracle Database.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q7",
@@ -14336,7 +20012,8 @@ export const certifications = [
         ],
         "answer": "Algorithms that learn patterns from data",
         "category": "Domain Review",
-        "explanation": "ML uses statistical techniques to give computers the ability to 'learn' from data."
+        "explanation": "ML uses statistical techniques to give computers the ability to 'learn' from data.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q8",
@@ -14349,7 +20026,8 @@ export const certifications = [
         ],
         "answer": "Training a model on labeled data",
         "category": "Domain Review",
-        "explanation": "The model learns to map inputs to the correct outputs."
+        "explanation": "The model learns to map inputs to the correct outputs.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q9",
@@ -14362,7 +20040,8 @@ export const certifications = [
         ],
         "answer": "When a model produces systematically prejudiced results",
         "category": "Domain Review",
-        "explanation": "Bias can arise from flawed training data or algorithms."
+        "explanation": "Bias can arise from flawed training data or algorithms.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q10",
@@ -14375,7 +20054,8 @@ export const certifications = [
         ],
         "answer": "Simulation of human intelligence by machines",
         "category": "Domain Review",
-        "explanation": "AI encompasses machine learning, robotics, and natural language processing."
+        "explanation": "AI encompasses machine learning, robotics, and natural language processing.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q11",
@@ -14388,7 +20068,8 @@ export const certifications = [
         ],
         "answer": "The ability of computers to gain understanding from digital images or videos",
         "category": "Domain Review",
-        "explanation": "Computer vision is used in facial recognition and autonomous vehicles."
+        "explanation": "Computer vision is used in facial recognition and autonomous vehicles.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q12",
@@ -14401,7 +20082,8 @@ export const certifications = [
         ],
         "answer": "Predicting a discrete label or category",
         "category": "Domain Review",
-        "explanation": "Example: Predicting if an email is spam."
+        "explanation": "Example: Predicting if an email is spam.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q13",
@@ -14414,7 +20096,8 @@ export const certifications = [
         ],
         "answer": "When a model is too simple to learn the patterns in data",
         "category": "Domain Review",
-        "explanation": "Underfitted models have poor performance on both training and test data."
+        "explanation": "Underfitted models have poor performance on both training and test data.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q14",
@@ -14427,7 +20110,8 @@ export const certifications = [
         ],
         "answer": "Data that adheres to a predefined schema or model",
         "category": "Domain Review",
-        "explanation": "Structured data is easily searchable (e.g., in a database)."
+        "explanation": "Structured data is easily searchable (e.g., in a database).",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q15",
@@ -14440,7 +20124,8 @@ export const certifications = [
         ],
         "answer": "A set of rules or instructions to be followed in calculations",
         "category": "Domain Review",
-        "explanation": "Algorithms are the foundation of computer programs and ML models."
+        "explanation": "Algorithms are the foundation of computer programs and ML models.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q16",
@@ -14453,7 +20138,8 @@ export const certifications = [
         ],
         "answer": "Discovering patterns and knowledge from large amounts of data",
         "category": "Domain Review",
-        "explanation": "Data mining uses ML, statistics, and database systems."
+        "explanation": "Data mining uses ML, statistics, and database systems.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q17",
@@ -14466,7 +20152,8 @@ export const certifications = [
         ],
         "answer": "Extract, Transform, Load",
         "category": "Domain Review",
-        "explanation": "ETL is the process of moving data from source systems to a data warehouse."
+        "explanation": "ETL is the process of moving data from source systems to a data warehouse.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q18",
@@ -14479,7 +20166,8 @@ export const certifications = [
         ],
         "answer": "Data that does not have a predefined model or organization",
         "category": "Domain Review",
-        "explanation": "Examples include text, images, and videos."
+        "explanation": "Examples include text, images, and videos.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q19",
@@ -14492,7 +20180,8 @@ export const certifications = [
         ],
         "answer": "The data used to train an ML model",
         "category": "Domain Review",
-        "explanation": "Quality and quantity of training data are critical."
+        "explanation": "Quality and quantity of training data are critical.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q20",
@@ -14505,7 +20194,8 @@ export const certifications = [
         ],
         "answer": "An open-source framework for distributed storage and processing of big data",
         "category": "Domain Review",
-        "explanation": "Hadoop is a core technology in the big data ecosystem."
+        "explanation": "Hadoop is a core technology in the big data ecosystem.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q21",
@@ -14518,7 +20208,8 @@ export const certifications = [
         ],
         "answer": "Combining data from different sources into a single, unified view",
         "category": "Domain Review",
-        "explanation": "Integration is a major challenge in large organizations."
+        "explanation": "Integration is a major challenge in large organizations.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q22",
@@ -14531,7 +20222,8 @@ export const certifications = [
         ],
         "answer": "A person who uses scientific methods and data to find insights",
         "category": "Domain Review",
-        "explanation": "Data scientists combine skills in statistics, coding, and domain knowledge."
+        "explanation": "Data scientists combine skills in statistics, coding, and domain knowledge.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q23",
@@ -14544,7 +20236,8 @@ export const certifications = [
         ],
         "answer": "AI systems that can explain their decisions and actions to humans",
         "category": "Domain Review",
-        "explanation": "XAI is important for trust and accountability."
+        "explanation": "XAI is important for trust and accountability.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q24",
@@ -14557,7 +20250,8 @@ export const certifications = [
         ],
         "answer": "An open-source distributed processing system used for big data workloads",
         "category": "Domain Review",
-        "explanation": "Spark is much faster than the older MapReduce."
+        "explanation": "Spark is much faster than the older MapReduce.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q25",
@@ -14570,7 +20264,8 @@ export const certifications = [
         ],
         "answer": "A database service built and accessed through a cloud platform",
         "category": "Domain Review",
-        "explanation": "Cloud databases are highly scalable and managed."
+        "explanation": "Cloud databases are highly scalable and managed.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q26",
@@ -14583,7 +20278,8 @@ export const certifications = [
         ],
         "answer": "Structured Query Language",
         "category": "Domain Review",
-        "explanation": "SQL is the standard language for managing and querying relational databases."
+        "explanation": "SQL is the standard language for managing and querying relational databases.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q27",
@@ -14596,7 +20292,8 @@ export const certifications = [
         ],
         "answer": "A data structure that improves the speed of data retrieval",
         "category": "Domain Review",
-        "explanation": "Indexes make queries much faster but slow down writes."
+        "explanation": "Indexes make queries much faster but slow down writes.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q28",
@@ -14609,7 +20306,8 @@ export const certifications = [
         ],
         "answer": "A centralized repository that allows you to store all your structured and unstructured data",
         "category": "Domain Review",
-        "explanation": "Data lakes can store data as-is, without first structuring it."
+        "explanation": "Data lakes can store data as-is, without first structuring it.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q29",
@@ -14622,7 +20320,8 @@ export const certifications = [
         ],
         "answer": "Training a model through rewards and penalties",
         "category": "Domain Review",
-        "explanation": "RL is used in robotics and game playing."
+        "explanation": "RL is used in robotics and game playing.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q30",
@@ -14635,7 +20334,8 @@ export const certifications = [
         ],
         "answer": "A graphical representation of information and data",
         "category": "Domain Review",
-        "explanation": "Visualization helps in understanding trends, outliers, and patterns."
+        "explanation": "Visualization helps in understanding trends, outliers, and patterns.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q31",
@@ -14648,7 +20348,8 @@ export const certifications = [
         ],
         "answer": "Training a model on unlabeled data to find hidden patterns",
         "category": "Domain Review",
-        "explanation": "Examples include clustering and association."
+        "explanation": "Examples include clustering and association.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q32",
@@ -14661,7 +20362,8 @@ export const certifications = [
         ],
         "answer": "The data used to evaluate the performance of an ML model",
         "category": "Domain Review",
-        "explanation": "Test data must be separate from training data."
+        "explanation": "Test data must be separate from training data.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q33",
@@ -14674,7 +20376,8 @@ export const certifications = [
         ],
         "answer": "Predicting a continuous numerical value",
         "category": "Domain Review",
-        "explanation": "Example: Predicting a house price."
+        "explanation": "Example: Predicting a house price.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q34",
@@ -14687,7 +20390,8 @@ export const certifications = [
         ],
         "answer": "A subset of ML based on artificial neural networks",
         "category": "Domain Review",
-        "explanation": "Deep learning is inspired by the structure and function of the human brain."
+        "explanation": "Deep learning is inspired by the structure and function of the human brain.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q35",
@@ -14700,7 +20404,8 @@ export const certifications = [
         ],
         "answer": "Extremely large and complex datasets",
         "category": "Domain Review",
-        "explanation": "Big Data is characterized by Volume, Velocity, and Variety."
+        "explanation": "Big Data is characterized by Volume, Velocity, and Variety.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q36",
@@ -14713,7 +20418,8 @@ export const certifications = [
         ],
         "answer": "Organizing data to reduce redundancy and improve integrity",
         "category": "Domain Review",
-        "explanation": "Normalization involves dividing large tables into smaller ones."
+        "explanation": "Normalization involves dividing large tables into smaller ones.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q37",
@@ -14726,7 +20432,8 @@ export const certifications = [
         ],
         "answer": "When a model learns the training data too well but fails on new data",
         "category": "Domain Review",
-        "explanation": "Overfitted models lack generalizability."
+        "explanation": "Overfitted models lack generalizability.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q38",
@@ -14739,7 +20446,8 @@ export const certifications = [
         ],
         "answer": "Grouping similar data points together",
         "category": "Domain Review",
-        "explanation": "Clustering is an unsupervised learning technique."
+        "explanation": "Clustering is an unsupervised learning technique.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q39",
@@ -14752,7 +20460,8 @@ export const certifications = [
         ],
         "answer": "A computing system inspired by biological neural networks",
         "category": "Domain Review",
-        "explanation": "Neural networks are the foundation of deep learning."
+        "explanation": "Neural networks are the foundation of deep learning.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q40",
@@ -14765,7 +20474,8 @@ export const certifications = [
         ],
         "answer": "Identifying and correcting errors or inconsistencies in data",
         "category": "Domain Review",
-        "explanation": "Cleansing is essential for accurate analysis."
+        "explanation": "Cleansing is essential for accurate analysis.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q41",
@@ -14778,7 +20488,8 @@ export const certifications = [
         ],
         "answer": "The process of examining large and varied data sets to find hidden patterns",
         "category": "Domain Review",
-        "explanation": "Analytics provides insights that can lead to better business decisions."
+        "explanation": "Analytics provides insights that can lead to better business decisions.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q42",
@@ -14791,7 +20502,8 @@ export const certifications = [
         ],
         "answer": "Data organized in tables with rows and columns",
         "category": "Domain Review",
-        "explanation": "RDBMS (like SQL) use structured relationships between tables."
+        "explanation": "RDBMS (like SQL) use structured relationships between tables.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q43",
@@ -14804,7 +20516,8 @@ export const certifications = [
         ],
         "answer": "A system used for reporting and data analysis",
         "category": "Domain Review",
-        "explanation": "Warehouses consolidate data from multiple sources."
+        "explanation": "Warehouses consolidate data from multiple sources.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q44",
@@ -14817,7 +20530,8 @@ export const certifications = [
         ],
         "answer": "A mathematical representation of a real-world process",
         "category": "Domain Review",
-        "explanation": "A model is 'trained' on data to make predictions."
+        "explanation": "A model is 'trained' on data to make predictions.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q45",
@@ -14830,7 +20544,8 @@ export const certifications = [
         ],
         "answer": "The ability of computers to understand and process human language",
         "category": "Domain Review",
-        "explanation": "NLP is used in translation, sentiment analysis, and chatbots."
+        "explanation": "NLP is used in translation, sentiment analysis, and chatbots.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q46",
@@ -14843,7 +20558,8 @@ export const certifications = [
         ],
         "answer": "A non-relational database for storing diverse data types",
         "category": "Domain Review",
-        "explanation": "NoSQL databases are often used for big data and real-time web apps."
+        "explanation": "NoSQL databases are often used for big data and real-time web apps.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q47",
@@ -14856,7 +20572,8 @@ export const certifications = [
         ],
         "answer": "A small-scale data warehouse focused on a single functional area",
         "category": "Domain Review",
-        "explanation": "Data marts are often used by a specific department (e.g., Finance)."
+        "explanation": "Data marts are often used by a specific department (e.g., Finance).",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q48",
@@ -14869,7 +20586,8 @@ export const certifications = [
         ],
         "answer": "Managing the availability, usability, integrity, and security of data",
         "category": "Domain Review",
-        "explanation": "Governance ensures data is accurate and trustworthy."
+        "explanation": "Governance ensures data is accurate and trustworthy.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q49",
@@ -14882,7 +20600,8 @@ export const certifications = [
         ],
         "answer": "Adding redundant data to improve read performance",
         "category": "Domain Review",
-        "explanation": "Denormalization is often used in data warehouses."
+        "explanation": "Denormalization is often used in data warehouses.",
+        "topic": "Data & AI Fundamentals"
       },
       {
         "id": "pl-900-q50",
@@ -14895,7 +20614,8 @@ export const certifications = [
         ],
         "answer": "A field in one table that uniquely identifies a row of another table",
         "category": "Domain Review",
-        "explanation": "Foreign keys create relationships between tables."
+        "explanation": "Foreign keys create relationships between tables.",
+        "topic": "Data & AI Fundamentals"
       }
     ]
   },
@@ -14911,11 +20631,232 @@ export const certifications = [
     "description": "Focus on security management and strategy.",
     "reviewer": [
       {
-        "title": "Security Fundamentals",
+        "title": "Architecture",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Certified Information Security Manager."
+            "name": "What is 'Defense in Depth'?",
+            "detail": "If one layer fails, others are in place to stop the threat."
+          },
+          {
+            "name": "Which protocol provides a secure shell for remote access?",
+            "detail": "SSH is the secure alternative to the unencrypted Telnet."
+          },
+          {
+            "name": "What is an 'Air Gap'?",
+            "detail": "Air-gapping is used for extremely high-security systems."
+          },
+          {
+            "name": "What is 'Data Loss Prevention' (DLP)?",
+            "detail": "DLP monitors data at rest, in use, and in transit."
+          },
+          {
+            "name": "What is 'Mobile Device Management' (MDM)?",
+            "detail": "MDM allows enforcing security policies on employee phones."
+          },
+          {
+            "name": "What is a 'Firewall Policy'?",
+            "detail": "It dictates how the firewall handles various types of packets."
+          },
+          {
+            "name": "What does 'WPA3' improve over WPA2?",
+            "detail": "WPA3 is the latest security standard for wireless networks."
+          },
+          {
+            "name": "What is 'Access Control'?",
+            "detail": "It involves identification, authentication, and authorization."
+          },
+          {
+            "name": "What does a Firewall do?",
+            "detail": "Firewalls control incoming and outgoing network traffic based on an organization's security policy."
+          }
+        ]
+      },
+      {
+        "title": "Attacks & Threats",
+        "topics": [
+          {
+            "name": "What is 'Whaling'?",
+            "detail": "Whaling targets 'big fish' like CEOs and CFOs."
+          },
+          {
+            "name": "What is 'Pharmimg'?",
+            "detail": "Users think they are on a real site but are actually on a malicious one."
+          },
+          {
+            "name": "What is 'Man-in-the-Middle' (MITM)?",
+            "detail": "The attacker can read or even modify the data being sent."
+          },
+          {
+            "name": "What is the difference between a 'Virus' and a 'Worm'?",
+            "detail": "Worms can spread across a network without human interaction."
+          },
+          {
+            "name": "What is 'War Driving'?",
+            "detail": "Attackers use this to find vulnerable wireless networks to exploit."
+          },
+          {
+            "name": "What is 'SQL Injection'?",
+            "detail": "SQLi can allow attackers to read or modify sensitive database data."
+          },
+          {
+            "name": "What is 'Shoulder Surfing'?",
+            "detail": "It's a low-tech social engineering technique."
+          },
+          {
+            "name": "What is a 'Trojan Horse'?",
+            "detail": "Trojans do not replicate themselves like viruses or worms."
+          },
+          {
+            "name": "What is Ransomware?",
+            "detail": "Ransomware locks users out of their data until a ransom is paid."
+          },
+          {
+            "name": "What is 'Social Engineering'?",
+            "detail": "It exploits human psychology rather than technical flaws."
+          },
+          {
+            "name": "What is a 'Botnet'?",
+            "detail": "Botnets are used for large-scale attacks like DDoS."
+          },
+          {
+            "name": "What is a 'Backdoor'?",
+            "detail": "Backdoors can be used for maintenance or by attackers for persistence."
+          },
+          {
+            "name": "Which of these is a social engineering attack?",
+            "detail": "Tailgating involves physically following an authorized person into a secure area."
+          },
+          {
+            "name": "What is 'Cross-Site Scripting' (XSS)?",
+            "detail": "XSS can steal cookies and session info from users."
+          },
+          {
+            "name": "What is 'Eavesdropping' in network security?",
+            "detail": "This is a passive attack against confidentiality."
+          },
+          {
+            "name": "What is a 'Logic Bomb'?",
+            "detail": "Logic bombs can be planted by malicious insiders."
+          },
+          {
+            "name": "What is a 'Buffer Overflow'?",
+            "detail": "It can lead to system crashes or arbitrary code execution."
+          }
+        ]
+      },
+      {
+        "title": "Governance",
+        "topics": [
+          {
+            "name": "What is 'Authorization'?",
+            "detail": "It defines the permissions and rights of a user."
+          },
+          {
+            "name": "What is 'BYOD'?",
+            "detail": "A policy allowing employees to use personal devices for work."
+          },
+          {
+            "name": "What is the 'Principle of Least Privilege'?",
+            "detail": "This minimizes potential impact of a security breach."
+          }
+        ]
+      },
+      {
+        "title": "Implementation",
+        "topics": [
+          {
+            "name": "Which of these is used for 'Non-repudiation'?",
+            "detail": "Non-repudiation ensures a sender cannot deny having sent a message."
+          },
+          {
+            "name": "What is Multi-Factor Authentication (MFA)?",
+            "detail": "MFA combines something you know, something you have, and/or something you are."
+          },
+          {
+            "name": "What is 'Biometrics'?",
+            "detail": "Examples include fingerprints, iris scans, and facial recognition."
+          },
+          {
+            "name": "Which of these is a form of Symmetric encryption?",
+            "detail": "Advanced Encryption Standard (AES) is the most common symmetric cipher."
+          },
+          {
+            "name": "What is 'Encryption'?",
+            "detail": "Encryption protects data from being read by unauthorized parties."
+          },
+          {
+            "name": "What is 'Steganography'?",
+            "detail": "Data is hidden in plain sight, making it hard to detect."
+          },
+          {
+            "name": "What is 'Decryption'?",
+            "detail": "The reverse of encryption, usually requiring a key."
+          },
+          {
+            "name": "What is a 'Private Key'?",
+            "detail": "The private key is used for decryption or creating digital signatures."
+          },
+          {
+            "name": "What is the purpose of Hashing?",
+            "detail": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."
+          },
+          {
+            "name": "What is 'Two-Factor Authentication' (2FA)?",
+            "detail": "It adds an extra layer of security beyond just a password."
+          },
+          {
+            "name": "What is a 'Public Key'?",
+            "detail": "In asymmetric encryption, the public key is used for encryption."
+          }
+        ]
+      },
+      {
+        "title": "Operations",
+        "topics": [
+          {
+            "name": "What is a 'Honey Pot'?",
+            "detail": "Honeypots help researchers study attacker behavior and deflect them from real targets."
+          },
+          {
+            "name": "What is the purpose of an 'IDS'?",
+            "detail": "Intrusion Detection Systems monitor and alert for suspicious activity."
+          },
+          {
+            "name": "What is the purpose of 'Sandboxing'?",
+            "detail": "Sandboxing prevents malware from affecting the host system."
+          },
+          {
+            "name": "What is an 'Audit Trail'?",
+            "detail": "Audit trails are crucial for incident investigation and compliance."
+          },
+          {
+            "name": "What is a 'Penetration Test'?",
+            "detail": "Pen-tests provide a deep assessment of an organization's security posture."
+          },
+          {
+            "name": "What is 'Vulnerability Scanning'?",
+            "detail": "Tools like Nessus or OpenVAS are used for this purpose."
+          }
+        ]
+      },
+      {
+        "title": "Security Core",
+        "topics": [
+          {
+            "name": "What is 'Identification' in security?",
+            "detail": "The first step in the access control process."
+          },
+          {
+            "name": "What is 'Authentication'?",
+            "detail": "Usually involves a password, token, or biometric trait."
+          },
+          {
+            "name": "What is the goal of 'Confidentiality' in the CIA triad?",
+            "detail": "Confidentiality prevents unauthorized disclosure of information."
+          },
+          {
+            "name": "What does 'Integrity' mean in security?",
+            "detail": "Integrity ensures data is accurate and trustworthy."
           }
         ]
       }
@@ -14932,7 +20873,8 @@ export const certifications = [
         ],
         "answer": "Stating who you are (e.g., username)",
         "category": "Domain Review",
-        "explanation": "The first step in the access control process."
+        "explanation": "The first step in the access control process.",
+        "topic": "Security Core"
       },
       {
         "id": "cism-q2",
@@ -14945,7 +20887,8 @@ export const certifications = [
         ],
         "answer": "Digital Signatures",
         "category": "Domain Review",
-        "explanation": "Non-repudiation ensures a sender cannot deny having sent a message."
+        "explanation": "Non-repudiation ensures a sender cannot deny having sent a message.",
+        "topic": "Implementation"
       },
       {
         "id": "cism-q3",
@@ -14958,7 +20901,8 @@ export const certifications = [
         ],
         "answer": "A phishing attack targeted at high-level executives",
         "category": "Domain Review",
-        "explanation": "Whaling targets 'big fish' like CEOs and CFOs."
+        "explanation": "Whaling targets 'big fish' like CEOs and CFOs.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q4",
@@ -14971,7 +20915,8 @@ export const certifications = [
         ],
         "answer": "Using multiple layers of security",
         "category": "Domain Review",
-        "explanation": "If one layer fails, others are in place to stop the threat."
+        "explanation": "If one layer fails, others are in place to stop the threat.",
+        "topic": "Architecture"
       },
       {
         "id": "cism-q5",
@@ -14984,7 +20929,8 @@ export const certifications = [
         ],
         "answer": "SSH",
         "category": "Domain Review",
-        "explanation": "SSH is the secure alternative to the unencrypted Telnet."
+        "explanation": "SSH is the secure alternative to the unencrypted Telnet.",
+        "topic": "Architecture"
       },
       {
         "id": "cism-q6",
@@ -14997,7 +20943,8 @@ export const certifications = [
         ],
         "answer": "Determining what an authenticated user can do",
         "category": "Domain Review",
-        "explanation": "It defines the permissions and rights of a user."
+        "explanation": "It defines the permissions and rights of a user.",
+        "topic": "Governance"
       },
       {
         "id": "cism-q7",
@@ -15010,7 +20957,8 @@ export const certifications = [
         ],
         "answer": "Redirecting users to a fake website by poisoning DNS",
         "category": "Domain Review",
-        "explanation": "Users think they are on a real site but are actually on a malicious one."
+        "explanation": "Users think they are on a real site but are actually on a malicious one.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q8",
@@ -15023,7 +20971,8 @@ export const certifications = [
         ],
         "answer": "Physically isolating a computer from any network",
         "category": "Domain Review",
-        "explanation": "Air-gapping is used for extremely high-security systems."
+        "explanation": "Air-gapping is used for extremely high-security systems.",
+        "topic": "Architecture"
       },
       {
         "id": "cism-q9",
@@ -15036,7 +20985,8 @@ export const certifications = [
         ],
         "answer": "Using two or more different factors to verify identity",
         "category": "Domain Review",
-        "explanation": "MFA combines something you know, something you have, and/or something you are."
+        "explanation": "MFA combines something you know, something you have, and/or something you are.",
+        "topic": "Implementation"
       },
       {
         "id": "cism-q10",
@@ -15049,7 +20999,8 @@ export const certifications = [
         ],
         "answer": "Tools to prevent sensitive data from leaving the network",
         "category": "Domain Review",
-        "explanation": "DLP monitors data at rest, in use, and in transit."
+        "explanation": "DLP monitors data at rest, in use, and in transit.",
+        "topic": "Architecture"
       },
       {
         "id": "cism-q11",
@@ -15062,7 +21013,8 @@ export const certifications = [
         ],
         "answer": "Verifying that you are who you say you are",
         "category": "Domain Review",
-        "explanation": "Usually involves a password, token, or biometric trait."
+        "explanation": "Usually involves a password, token, or biometric trait.",
+        "topic": "Security Core"
       },
       {
         "id": "cism-q12",
@@ -15075,7 +21027,8 @@ export const certifications = [
         ],
         "answer": "Intercepting communication between two parties",
         "category": "Domain Review",
-        "explanation": "The attacker can read or even modify the data being sent."
+        "explanation": "The attacker can read or even modify the data being sent.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q13",
@@ -15088,7 +21041,8 @@ export const certifications = [
         ],
         "answer": "A decoy system to lure attackers",
         "category": "Domain Review",
-        "explanation": "Honeypots help researchers study attacker behavior and deflect them from real targets."
+        "explanation": "Honeypots help researchers study attacker behavior and deflect them from real targets.",
+        "topic": "Operations"
       },
       {
         "id": "cism-q14",
@@ -15101,7 +21055,8 @@ export const certifications = [
         ],
         "answer": "Worms replicate automatically; viruses need host files",
         "category": "Domain Review",
-        "explanation": "Worms can spread across a network without human interaction."
+        "explanation": "Worms can spread across a network without human interaction.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q15",
@@ -15114,7 +21069,8 @@ export const certifications = [
         ],
         "answer": "Detect unauthorized access",
         "category": "Domain Review",
-        "explanation": "Intrusion Detection Systems monitor and alert for suspicious activity."
+        "explanation": "Intrusion Detection Systems monitor and alert for suspicious activity.",
+        "topic": "Operations"
       },
       {
         "id": "cism-q16",
@@ -15127,7 +21083,8 @@ export const certifications = [
         ],
         "answer": "Searching for Wi-Fi networks from a vehicle",
         "category": "Domain Review",
-        "explanation": "Attackers use this to find vulnerable wireless networks to exploit."
+        "explanation": "Attackers use this to find vulnerable wireless networks to exploit.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q17",
@@ -15140,7 +21097,8 @@ export const certifications = [
         ],
         "answer": "Bring Your Own Device",
         "category": "Domain Review",
-        "explanation": "A policy allowing employees to use personal devices for work."
+        "explanation": "A policy allowing employees to use personal devices for work.",
+        "topic": "Governance"
       },
       {
         "id": "cism-q18",
@@ -15153,7 +21111,8 @@ export const certifications = [
         ],
         "answer": "Running suspicious programs in an isolated area",
         "category": "Domain Review",
-        "explanation": "Sandboxing prevents malware from affecting the host system."
+        "explanation": "Sandboxing prevents malware from affecting the host system.",
+        "topic": "Operations"
       },
       {
         "id": "cism-q19",
@@ -15166,7 +21125,8 @@ export const certifications = [
         ],
         "answer": "Using physical traits for authentication",
         "category": "Domain Review",
-        "explanation": "Examples include fingerprints, iris scans, and facial recognition."
+        "explanation": "Examples include fingerprints, iris scans, and facial recognition.",
+        "topic": "Implementation"
       },
       {
         "id": "cism-q20",
@@ -15179,7 +21139,8 @@ export const certifications = [
         ],
         "answer": "Giving only necessary access to a user",
         "category": "Domain Review",
-        "explanation": "This minimizes potential impact of a security breach."
+        "explanation": "This minimizes potential impact of a security breach.",
+        "topic": "Governance"
       },
       {
         "id": "cism-q21",
@@ -15192,7 +21153,8 @@ export const certifications = [
         ],
         "answer": "Injecting malicious SQL queries into an input field",
         "category": "Domain Review",
-        "explanation": "SQLi can allow attackers to read or modify sensitive database data."
+        "explanation": "SQLi can allow attackers to read or modify sensitive database data.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q22",
@@ -15205,7 +21167,8 @@ export const certifications = [
         ],
         "answer": "A chronological record of system activities",
         "category": "Domain Review",
-        "explanation": "Audit trails are crucial for incident investigation and compliance."
+        "explanation": "Audit trails are crucial for incident investigation and compliance.",
+        "topic": "Operations"
       },
       {
         "id": "cism-q23",
@@ -15218,7 +21181,8 @@ export const certifications = [
         ],
         "answer": "Watching someone enter their password",
         "category": "Domain Review",
-        "explanation": "It's a low-tech social engineering technique."
+        "explanation": "It's a low-tech social engineering technique.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q24",
@@ -15231,7 +21195,8 @@ export const certifications = [
         ],
         "answer": "AES",
         "category": "Domain Review",
-        "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher."
+        "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher.",
+        "topic": "Implementation"
       },
       {
         "id": "cism-q25",
@@ -15244,7 +21209,8 @@ export const certifications = [
         ],
         "answer": "Software used to manage and secure mobile devices",
         "category": "Domain Review",
-        "explanation": "MDM allows enforcing security policies on employee phones."
+        "explanation": "MDM allows enforcing security policies on employee phones.",
+        "topic": "Architecture"
       },
       {
         "id": "cism-q26",
@@ -15257,7 +21223,8 @@ export const certifications = [
         ],
         "answer": "Ensure only authorized users can read data",
         "category": "Domain Review",
-        "explanation": "Confidentiality prevents unauthorized disclosure of information."
+        "explanation": "Confidentiality prevents unauthorized disclosure of information.",
+        "topic": "Security Core"
       },
       {
         "id": "cism-q27",
@@ -15270,7 +21237,8 @@ export const certifications = [
         ],
         "answer": "A set of rules that define allowed traffic",
         "category": "Domain Review",
-        "explanation": "It dictates how the firewall handles various types of packets."
+        "explanation": "It dictates how the firewall handles various types of packets.",
+        "topic": "Architecture"
       },
       {
         "id": "cism-q28",
@@ -15283,7 +21251,8 @@ export const certifications = [
         ],
         "answer": "Malware disguised as legitimate software",
         "category": "Domain Review",
-        "explanation": "Trojans do not replicate themselves like viruses or worms."
+        "explanation": "Trojans do not replicate themselves like viruses or worms.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q29",
@@ -15296,7 +21265,8 @@ export const certifications = [
         ],
         "answer": "Converting plaintext into ciphertext",
         "category": "Domain Review",
-        "explanation": "Encryption protects data from being read by unauthorized parties."
+        "explanation": "Encryption protects data from being read by unauthorized parties.",
+        "topic": "Implementation"
       },
       {
         "id": "cism-q30",
@@ -15309,7 +21279,8 @@ export const certifications = [
         ],
         "answer": "Hiding data within other data (like an image)",
         "category": "Domain Review",
-        "explanation": "Data is hidden in plain sight, making it hard to detect."
+        "explanation": "Data is hidden in plain sight, making it hard to detect.",
+        "topic": "Implementation"
       },
       {
         "id": "cism-q31",
@@ -15322,7 +21293,8 @@ export const certifications = [
         ],
         "answer": "An authorized simulated attack to find flaws",
         "category": "Domain Review",
-        "explanation": "Pen-tests provide a deep assessment of an organization's security posture."
+        "explanation": "Pen-tests provide a deep assessment of an organization's security posture.",
+        "topic": "Operations"
       },
       {
         "id": "cism-q32",
@@ -15335,7 +21307,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data has not been tampered with",
         "category": "Domain Review",
-        "explanation": "Integrity ensures data is accurate and trustworthy."
+        "explanation": "Integrity ensures data is accurate and trustworthy.",
+        "topic": "Security Core"
       },
       {
         "id": "cism-q33",
@@ -15348,7 +21321,8 @@ export const certifications = [
         ],
         "answer": "Automatically identifying security flaws",
         "category": "Domain Review",
-        "explanation": "Tools like Nessus or OpenVAS are used for this purpose."
+        "explanation": "Tools like Nessus or OpenVAS are used for this purpose.",
+        "topic": "Operations"
       },
       {
         "id": "cism-q34",
@@ -15361,7 +21335,8 @@ export const certifications = [
         ],
         "answer": "Malware that encrypts data and demands payment",
         "category": "Domain Review",
-        "explanation": "Ransomware locks users out of their data until a ransom is paid."
+        "explanation": "Ransomware locks users out of their data until a ransom is paid.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q35",
@@ -15374,7 +21349,8 @@ export const certifications = [
         ],
         "answer": "Manipulating people into giving up info",
         "category": "Domain Review",
-        "explanation": "It exploits human psychology rather than technical flaws."
+        "explanation": "It exploits human psychology rather than technical flaws.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q36",
@@ -15387,7 +21363,8 @@ export const certifications = [
         ],
         "answer": "Better encryption and protection against brute force",
         "category": "Domain Review",
-        "explanation": "WPA3 is the latest security standard for wireless networks."
+        "explanation": "WPA3 is the latest security standard for wireless networks.",
+        "topic": "Architecture"
       },
       {
         "id": "cism-q37",
@@ -15400,7 +21377,8 @@ export const certifications = [
         ],
         "answer": "A network of infected computers",
         "category": "Domain Review",
-        "explanation": "Botnets are used for large-scale attacks like DDoS."
+        "explanation": "Botnets are used for large-scale attacks like DDoS.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q38",
@@ -15413,7 +21391,8 @@ export const certifications = [
         ],
         "answer": "Converting ciphertext back into plaintext",
         "category": "Domain Review",
-        "explanation": "The reverse of encryption, usually requiring a key."
+        "explanation": "The reverse of encryption, usually requiring a key.",
+        "topic": "Implementation"
       },
       {
         "id": "cism-q39",
@@ -15426,7 +21405,8 @@ export const certifications = [
         ],
         "answer": "A hidden way to bypass security",
         "category": "Domain Review",
-        "explanation": "Backdoors can be used for maintenance or by attackers for persistence."
+        "explanation": "Backdoors can be used for maintenance or by attackers for persistence.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q40",
@@ -15439,7 +21419,8 @@ export const certifications = [
         ],
         "answer": "Restricting access to resources to authorized users",
         "category": "Domain Review",
-        "explanation": "It involves identification, authentication, and authorization."
+        "explanation": "It involves identification, authentication, and authorization.",
+        "topic": "Architecture"
       },
       {
         "id": "cism-q41",
@@ -15452,7 +21433,8 @@ export const certifications = [
         ],
         "answer": "Tailgating",
         "category": "Domain Review",
-        "explanation": "Tailgating involves physically following an authorized person into a secure area."
+        "explanation": "Tailgating involves physically following an authorized person into a secure area.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q42",
@@ -15465,7 +21447,8 @@ export const certifications = [
         ],
         "answer": "Injecting malicious scripts into web pages",
         "category": "Domain Review",
-        "explanation": "XSS can steal cookies and session info from users."
+        "explanation": "XSS can steal cookies and session info from users.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q43",
@@ -15478,7 +21461,8 @@ export const certifications = [
         ],
         "answer": "A secret key known only to the owner",
         "category": "Domain Review",
-        "explanation": "The private key is used for decryption or creating digital signatures."
+        "explanation": "The private key is used for decryption or creating digital signatures.",
+        "topic": "Implementation"
       },
       {
         "id": "cism-q44",
@@ -15491,7 +21475,8 @@ export const certifications = [
         ],
         "answer": "Ensure data integrity",
         "category": "Domain Review",
-        "explanation": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."
+        "explanation": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes.",
+        "topic": "Implementation"
       },
       {
         "id": "cism-q45",
@@ -15504,7 +21489,8 @@ export const certifications = [
         ],
         "answer": "Filter traffic based on security rules",
         "category": "Domain Review",
-        "explanation": "Firewalls control incoming and outgoing network traffic based on an organization's security policy."
+        "explanation": "Firewalls control incoming and outgoing network traffic based on an organization's security policy.",
+        "topic": "Architecture"
       },
       {
         "id": "cism-q46",
@@ -15517,7 +21503,8 @@ export const certifications = [
         ],
         "answer": "Unauthorized listening to private communication",
         "category": "Domain Review",
-        "explanation": "This is a passive attack against confidentiality."
+        "explanation": "This is a passive attack against confidentiality.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q47",
@@ -15530,7 +21517,8 @@ export const certifications = [
         ],
         "answer": "Using two different types of credentials",
         "category": "Domain Review",
-        "explanation": "It adds an extra layer of security beyond just a password."
+        "explanation": "It adds an extra layer of security beyond just a password.",
+        "topic": "Implementation"
       },
       {
         "id": "cism-q48",
@@ -15543,7 +21531,8 @@ export const certifications = [
         ],
         "answer": "Malware that triggers on a specific event or time",
         "category": "Domain Review",
-        "explanation": "Logic bombs can be planted by malicious insiders."
+        "explanation": "Logic bombs can be planted by malicious insiders.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q49",
@@ -15556,7 +21545,8 @@ export const certifications = [
         ],
         "answer": "Overwriting memory to execute malicious code",
         "category": "Domain Review",
-        "explanation": "It can lead to system crashes or arbitrary code execution."
+        "explanation": "It can lead to system crashes or arbitrary code execution.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "cism-q50",
@@ -15569,7 +21559,8 @@ export const certifications = [
         ],
         "answer": "A key that can be shared with anyone",
         "category": "Domain Review",
-        "explanation": "In asymmetric encryption, the public key is used for encryption."
+        "explanation": "In asymmetric encryption, the public key is used for encryption.",
+        "topic": "Implementation"
       }
     ]
   },
@@ -15585,11 +21576,232 @@ export const certifications = [
     "description": "The leading penetration testing certification.",
     "reviewer": [
       {
-        "title": "Security Fundamentals",
+        "title": "Architecture",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for Offensive Security Certified Professional."
+            "name": "What does a Firewall do?",
+            "detail": "Firewalls control incoming and outgoing network traffic based on an organization's security policy."
+          },
+          {
+            "name": "What is 'Access Control'?",
+            "detail": "It involves identification, authentication, and authorization."
+          },
+          {
+            "name": "Which protocol provides a secure shell for remote access?",
+            "detail": "SSH is the secure alternative to the unencrypted Telnet."
+          },
+          {
+            "name": "What is 'Defense in Depth'?",
+            "detail": "If one layer fails, others are in place to stop the threat."
+          },
+          {
+            "name": "What is a 'Firewall Policy'?",
+            "detail": "It dictates how the firewall handles various types of packets."
+          },
+          {
+            "name": "What does 'WPA3' improve over WPA2?",
+            "detail": "WPA3 is the latest security standard for wireless networks."
+          },
+          {
+            "name": "What is 'Mobile Device Management' (MDM)?",
+            "detail": "MDM allows enforcing security policies on employee phones."
+          },
+          {
+            "name": "What is 'Data Loss Prevention' (DLP)?",
+            "detail": "DLP monitors data at rest, in use, and in transit."
+          },
+          {
+            "name": "What is an 'Air Gap'?",
+            "detail": "Air-gapping is used for extremely high-security systems."
+          }
+        ]
+      },
+      {
+        "title": "Attacks & Threats",
+        "topics": [
+          {
+            "name": "What is 'War Driving'?",
+            "detail": "Attackers use this to find vulnerable wireless networks to exploit."
+          },
+          {
+            "name": "What is 'Cross-Site Scripting' (XSS)?",
+            "detail": "XSS can steal cookies and session info from users."
+          },
+          {
+            "name": "What is a 'Logic Bomb'?",
+            "detail": "Logic bombs can be planted by malicious insiders."
+          },
+          {
+            "name": "What is 'Social Engineering'?",
+            "detail": "It exploits human psychology rather than technical flaws."
+          },
+          {
+            "name": "What is a 'Buffer Overflow'?",
+            "detail": "It can lead to system crashes or arbitrary code execution."
+          },
+          {
+            "name": "What is 'Spear Phishing'?",
+            "detail": "Spear phishing is highly customized and more effective than general phishing."
+          },
+          {
+            "name": "What does 'DDoS' stand for?",
+            "detail": "DDoS attacks overwhelm a target with traffic from multiple sources."
+          },
+          {
+            "name": "What is Ransomware?",
+            "detail": "Ransomware locks users out of their data until a ransom is paid."
+          },
+          {
+            "name": "What is a 'Trojan Horse'?",
+            "detail": "Trojans do not replicate themselves like viruses or worms."
+          },
+          {
+            "name": "What is 'Whaling'?",
+            "detail": "Whaling targets 'big fish' like CEOs and CFOs."
+          },
+          {
+            "name": "What is a 'Botnet'?",
+            "detail": "Botnets are used for large-scale attacks like DDoS."
+          },
+          {
+            "name": "What is 'Man-in-the-Middle' (MITM)?",
+            "detail": "The attacker can read or even modify the data being sent."
+          },
+          {
+            "name": "Which of these is a social engineering attack?",
+            "detail": "Tailgating involves physically following an authorized person into a secure area."
+          },
+          {
+            "name": "What is a 'Backdoor'?",
+            "detail": "Backdoors can be used for maintenance or by attackers for persistence."
+          },
+          {
+            "name": "What is a 'Rootkit'?",
+            "detail": "Rootkits operate at a deep level of the OS to remain undetected."
+          },
+          {
+            "name": "What is the difference between a 'Virus' and a 'Worm'?",
+            "detail": "Worms can spread across a network without human interaction."
+          },
+          {
+            "name": "What is 'SQL Injection'?",
+            "detail": "SQLi can allow attackers to read or modify sensitive database data."
+          },
+          {
+            "name": "What is 'Pharmimg'?",
+            "detail": "Users think they are on a real site but are actually on a malicious one."
+          },
+          {
+            "name": "What is a 'Zero-Day' vulnerability?",
+            "detail": "Zero-day threats have no available patch at the time of discovery."
+          }
+        ]
+      },
+      {
+        "title": "Governance",
+        "topics": [
+          {
+            "name": "What is the 'Principle of Least Privilege'?",
+            "detail": "This minimizes potential impact of a security breach."
+          },
+          {
+            "name": "What is 'Authorization'?",
+            "detail": "It defines the permissions and rights of a user."
+          },
+          {
+            "name": "What is 'BYOD'?",
+            "detail": "A policy allowing employees to use personal devices for work."
+          }
+        ]
+      },
+      {
+        "title": "Implementation",
+        "topics": [
+          {
+            "name": "What is the purpose of Hashing?",
+            "detail": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."
+          },
+          {
+            "name": "What is Multi-Factor Authentication (MFA)?",
+            "detail": "MFA combines something you know, something you have, and/or something you are."
+          },
+          {
+            "name": "What is 'Encryption'?",
+            "detail": "Encryption protects data from being read by unauthorized parties."
+          },
+          {
+            "name": "What is a 'Private Key'?",
+            "detail": "The private key is used for decryption or creating digital signatures."
+          },
+          {
+            "name": "What is 'Decryption'?",
+            "detail": "The reverse of encryption, usually requiring a key."
+          },
+          {
+            "name": "What is a 'Public Key'?",
+            "detail": "In asymmetric encryption, the public key is used for encryption."
+          },
+          {
+            "name": "What is 'Two-Factor Authentication' (2FA)?",
+            "detail": "It adds an extra layer of security beyond just a password."
+          },
+          {
+            "name": "Which of these is used for 'Non-repudiation'?",
+            "detail": "Non-repudiation ensures a sender cannot deny having sent a message."
+          },
+          {
+            "name": "What is 'Steganography'?",
+            "detail": "Data is hidden in plain sight, making it hard to detect."
+          }
+        ]
+      },
+      {
+        "title": "Operations",
+        "topics": [
+          {
+            "name": "What is the purpose of an 'IDS'?",
+            "detail": "Intrusion Detection Systems monitor and alert for suspicious activity."
+          },
+          {
+            "name": "What is a 'Penetration Test'?",
+            "detail": "Pen-tests provide a deep assessment of an organization's security posture."
+          },
+          {
+            "name": "What is 'Vulnerability Scanning'?",
+            "detail": "Tools like Nessus or OpenVAS are used for this purpose."
+          },
+          {
+            "name": "What is an 'Audit Trail'?",
+            "detail": "Audit trails are crucial for incident investigation and compliance."
+          },
+          {
+            "name": "What is the purpose of 'Sandboxing'?",
+            "detail": "Sandboxing prevents malware from affecting the host system."
+          },
+          {
+            "name": "What is a 'Honey Pot'?",
+            "detail": "Honeypots help researchers study attacker behavior and deflect them from real targets."
+          }
+        ]
+      },
+      {
+        "title": "Security Core",
+        "topics": [
+          {
+            "name": "What is 'Authentication'?",
+            "detail": "Usually involves a password, token, or biometric trait."
+          },
+          {
+            "name": "What is 'Identification' in security?",
+            "detail": "The first step in the access control process."
+          },
+          {
+            "name": "What does 'Integrity' mean in security?",
+            "detail": "Integrity ensures data is accurate and trustworthy."
+          },
+          {
+            "name": "What is the goal of 'Confidentiality' in the CIA triad?",
+            "detail": "Confidentiality prevents unauthorized disclosure of information."
           }
         ]
       }
@@ -15606,7 +21818,8 @@ export const certifications = [
         ],
         "answer": "Detect unauthorized access",
         "category": "Domain Review",
-        "explanation": "Intrusion Detection Systems monitor and alert for suspicious activity."
+        "explanation": "Intrusion Detection Systems monitor and alert for suspicious activity.",
+        "topic": "Operations"
       },
       {
         "id": "oscp-q2",
@@ -15619,7 +21832,8 @@ export const certifications = [
         ],
         "answer": "Ensure data integrity",
         "category": "Domain Review",
-        "explanation": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."
+        "explanation": "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes.",
+        "topic": "Implementation"
       },
       {
         "id": "oscp-q3",
@@ -15632,7 +21846,8 @@ export const certifications = [
         ],
         "answer": "Verifying that you are who you say you are",
         "category": "Domain Review",
-        "explanation": "Usually involves a password, token, or biometric trait."
+        "explanation": "Usually involves a password, token, or biometric trait.",
+        "topic": "Security Core"
       },
       {
         "id": "oscp-q4",
@@ -15645,7 +21860,8 @@ export const certifications = [
         ],
         "answer": "Filter traffic based on security rules",
         "category": "Domain Review",
-        "explanation": "Firewalls control incoming and outgoing network traffic based on an organization's security policy."
+        "explanation": "Firewalls control incoming and outgoing network traffic based on an organization's security policy.",
+        "topic": "Architecture"
       },
       {
         "id": "oscp-q5",
@@ -15658,7 +21874,8 @@ export const certifications = [
         ],
         "answer": "Using two or more different factors to verify identity",
         "category": "Domain Review",
-        "explanation": "MFA combines something you know, something you have, and/or something you are."
+        "explanation": "MFA combines something you know, something you have, and/or something you are.",
+        "topic": "Implementation"
       },
       {
         "id": "oscp-q6",
@@ -15671,7 +21888,8 @@ export const certifications = [
         ],
         "answer": "Searching for Wi-Fi networks from a vehicle",
         "category": "Domain Review",
-        "explanation": "Attackers use this to find vulnerable wireless networks to exploit."
+        "explanation": "Attackers use this to find vulnerable wireless networks to exploit.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q7",
@@ -15684,7 +21902,8 @@ export const certifications = [
         ],
         "answer": "Restricting access to resources to authorized users",
         "category": "Domain Review",
-        "explanation": "It involves identification, authentication, and authorization."
+        "explanation": "It involves identification, authentication, and authorization.",
+        "topic": "Architecture"
       },
       {
         "id": "oscp-q8",
@@ -15697,7 +21916,8 @@ export const certifications = [
         ],
         "answer": "Injecting malicious scripts into web pages",
         "category": "Domain Review",
-        "explanation": "XSS can steal cookies and session info from users."
+        "explanation": "XSS can steal cookies and session info from users.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q9",
@@ -15710,7 +21930,8 @@ export const certifications = [
         ],
         "answer": "Malware that triggers on a specific event or time",
         "category": "Domain Review",
-        "explanation": "Logic bombs can be planted by malicious insiders."
+        "explanation": "Logic bombs can be planted by malicious insiders.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q10",
@@ -15723,7 +21944,8 @@ export const certifications = [
         ],
         "answer": "SSH",
         "category": "Domain Review",
-        "explanation": "SSH is the secure alternative to the unencrypted Telnet."
+        "explanation": "SSH is the secure alternative to the unencrypted Telnet.",
+        "topic": "Architecture"
       },
       {
         "id": "oscp-q11",
@@ -15736,7 +21958,8 @@ export const certifications = [
         ],
         "answer": "Using multiple layers of security",
         "category": "Domain Review",
-        "explanation": "If one layer fails, others are in place to stop the threat."
+        "explanation": "If one layer fails, others are in place to stop the threat.",
+        "topic": "Architecture"
       },
       {
         "id": "oscp-q12",
@@ -15749,7 +21972,8 @@ export const certifications = [
         ],
         "answer": "Converting plaintext into ciphertext",
         "category": "Domain Review",
-        "explanation": "Encryption protects data from being read by unauthorized parties."
+        "explanation": "Encryption protects data from being read by unauthorized parties.",
+        "topic": "Implementation"
       },
       {
         "id": "oscp-q13",
@@ -15762,7 +21986,8 @@ export const certifications = [
         ],
         "answer": "Manipulating people into giving up info",
         "category": "Domain Review",
-        "explanation": "It exploits human psychology rather than technical flaws."
+        "explanation": "It exploits human psychology rather than technical flaws.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q14",
@@ -15775,7 +22000,8 @@ export const certifications = [
         ],
         "answer": "Overwriting memory to execute malicious code",
         "category": "Domain Review",
-        "explanation": "It can lead to system crashes or arbitrary code execution."
+        "explanation": "It can lead to system crashes or arbitrary code execution.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q15",
@@ -15788,7 +22014,8 @@ export const certifications = [
         ],
         "answer": "Stating who you are (e.g., username)",
         "category": "Domain Review",
-        "explanation": "The first step in the access control process."
+        "explanation": "The first step in the access control process.",
+        "topic": "Security Core"
       },
       {
         "id": "oscp-q16",
@@ -15801,7 +22028,8 @@ export const certifications = [
         ],
         "answer": "Phishing targeted at a specific person",
         "category": "Domain Review",
-        "explanation": "Spear phishing is highly customized and more effective than general phishing."
+        "explanation": "Spear phishing is highly customized and more effective than general phishing.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q17",
@@ -15814,7 +22042,8 @@ export const certifications = [
         ],
         "answer": "A set of rules that define allowed traffic",
         "category": "Domain Review",
-        "explanation": "It dictates how the firewall handles various types of packets."
+        "explanation": "It dictates how the firewall handles various types of packets.",
+        "topic": "Architecture"
       },
       {
         "id": "oscp-q18",
@@ -15827,7 +22056,8 @@ export const certifications = [
         ],
         "answer": "Distributed Denial of Service",
         "category": "Domain Review",
-        "explanation": "DDoS attacks overwhelm a target with traffic from multiple sources."
+        "explanation": "DDoS attacks overwhelm a target with traffic from multiple sources.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q19",
@@ -15840,7 +22070,8 @@ export const certifications = [
         ],
         "answer": "Malware that encrypts data and demands payment",
         "category": "Domain Review",
-        "explanation": "Ransomware locks users out of their data until a ransom is paid."
+        "explanation": "Ransomware locks users out of their data until a ransom is paid.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q20",
@@ -15853,7 +22084,8 @@ export const certifications = [
         ],
         "answer": "Better encryption and protection against brute force",
         "category": "Domain Review",
-        "explanation": "WPA3 is the latest security standard for wireless networks."
+        "explanation": "WPA3 is the latest security standard for wireless networks.",
+        "topic": "Architecture"
       },
       {
         "id": "oscp-q21",
@@ -15866,7 +22098,8 @@ export const certifications = [
         ],
         "answer": "Malware disguised as legitimate software",
         "category": "Domain Review",
-        "explanation": "Trojans do not replicate themselves like viruses or worms."
+        "explanation": "Trojans do not replicate themselves like viruses or worms.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q22",
@@ -15879,7 +22112,8 @@ export const certifications = [
         ],
         "answer": "A phishing attack targeted at high-level executives",
         "category": "Domain Review",
-        "explanation": "Whaling targets 'big fish' like CEOs and CFOs."
+        "explanation": "Whaling targets 'big fish' like CEOs and CFOs.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q23",
@@ -15892,7 +22126,8 @@ export const certifications = [
         ],
         "answer": "A secret key known only to the owner",
         "category": "Domain Review",
-        "explanation": "The private key is used for decryption or creating digital signatures."
+        "explanation": "The private key is used for decryption or creating digital signatures.",
+        "topic": "Implementation"
       },
       {
         "id": "oscp-q24",
@@ -15905,7 +22140,8 @@ export const certifications = [
         ],
         "answer": "Converting ciphertext back into plaintext",
         "category": "Domain Review",
-        "explanation": "The reverse of encryption, usually requiring a key."
+        "explanation": "The reverse of encryption, usually requiring a key.",
+        "topic": "Implementation"
       },
       {
         "id": "oscp-q25",
@@ -15918,7 +22154,8 @@ export const certifications = [
         ],
         "answer": "Software used to manage and secure mobile devices",
         "category": "Domain Review",
-        "explanation": "MDM allows enforcing security policies on employee phones."
+        "explanation": "MDM allows enforcing security policies on employee phones.",
+        "topic": "Architecture"
       },
       {
         "id": "oscp-q26",
@@ -15931,7 +22168,8 @@ export const certifications = [
         ],
         "answer": "An authorized simulated attack to find flaws",
         "category": "Domain Review",
-        "explanation": "Pen-tests provide a deep assessment of an organization's security posture."
+        "explanation": "Pen-tests provide a deep assessment of an organization's security posture.",
+        "topic": "Operations"
       },
       {
         "id": "oscp-q27",
@@ -15944,7 +22182,8 @@ export const certifications = [
         ],
         "answer": "A network of infected computers",
         "category": "Domain Review",
-        "explanation": "Botnets are used for large-scale attacks like DDoS."
+        "explanation": "Botnets are used for large-scale attacks like DDoS.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q28",
@@ -15957,7 +22196,8 @@ export const certifications = [
         ],
         "answer": "Automatically identifying security flaws",
         "category": "Domain Review",
-        "explanation": "Tools like Nessus or OpenVAS are used for this purpose."
+        "explanation": "Tools like Nessus or OpenVAS are used for this purpose.",
+        "topic": "Operations"
       },
       {
         "id": "oscp-q29",
@@ -15970,7 +22210,8 @@ export const certifications = [
         ],
         "answer": "A chronological record of system activities",
         "category": "Domain Review",
-        "explanation": "Audit trails are crucial for incident investigation and compliance."
+        "explanation": "Audit trails are crucial for incident investigation and compliance.",
+        "topic": "Operations"
       },
       {
         "id": "oscp-q30",
@@ -15983,7 +22224,8 @@ export const certifications = [
         ],
         "answer": "Tools to prevent sensitive data from leaving the network",
         "category": "Domain Review",
-        "explanation": "DLP monitors data at rest, in use, and in transit."
+        "explanation": "DLP monitors data at rest, in use, and in transit.",
+        "topic": "Architecture"
       },
       {
         "id": "oscp-q31",
@@ -15996,7 +22238,8 @@ export const certifications = [
         ],
         "answer": "A key that can be shared with anyone",
         "category": "Domain Review",
-        "explanation": "In asymmetric encryption, the public key is used for encryption."
+        "explanation": "In asymmetric encryption, the public key is used for encryption.",
+        "topic": "Implementation"
       },
       {
         "id": "oscp-q32",
@@ -16009,7 +22252,8 @@ export const certifications = [
         ],
         "answer": "Intercepting communication between two parties",
         "category": "Domain Review",
-        "explanation": "The attacker can read or even modify the data being sent."
+        "explanation": "The attacker can read or even modify the data being sent.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q33",
@@ -16022,7 +22266,8 @@ export const certifications = [
         ],
         "answer": "Tailgating",
         "category": "Domain Review",
-        "explanation": "Tailgating involves physically following an authorized person into a secure area."
+        "explanation": "Tailgating involves physically following an authorized person into a secure area.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q34",
@@ -16035,7 +22280,8 @@ export const certifications = [
         ],
         "answer": "Physically isolating a computer from any network",
         "category": "Domain Review",
-        "explanation": "Air-gapping is used for extremely high-security systems."
+        "explanation": "Air-gapping is used for extremely high-security systems.",
+        "topic": "Architecture"
       },
       {
         "id": "oscp-q35",
@@ -16048,7 +22294,8 @@ export const certifications = [
         ],
         "answer": "Giving only necessary access to a user",
         "category": "Domain Review",
-        "explanation": "This minimizes potential impact of a security breach."
+        "explanation": "This minimizes potential impact of a security breach.",
+        "topic": "Governance"
       },
       {
         "id": "oscp-q36",
@@ -16061,7 +22308,8 @@ export const certifications = [
         ],
         "answer": "Ensuring data has not been tampered with",
         "category": "Domain Review",
-        "explanation": "Integrity ensures data is accurate and trustworthy."
+        "explanation": "Integrity ensures data is accurate and trustworthy.",
+        "topic": "Security Core"
       },
       {
         "id": "oscp-q37",
@@ -16074,7 +22322,8 @@ export const certifications = [
         ],
         "answer": "Ensure only authorized users can read data",
         "category": "Domain Review",
-        "explanation": "Confidentiality prevents unauthorized disclosure of information."
+        "explanation": "Confidentiality prevents unauthorized disclosure of information.",
+        "topic": "Security Core"
       },
       {
         "id": "oscp-q38",
@@ -16087,7 +22336,8 @@ export const certifications = [
         ],
         "answer": "Running suspicious programs in an isolated area",
         "category": "Domain Review",
-        "explanation": "Sandboxing prevents malware from affecting the host system."
+        "explanation": "Sandboxing prevents malware from affecting the host system.",
+        "topic": "Operations"
       },
       {
         "id": "oscp-q39",
@@ -16100,7 +22350,8 @@ export const certifications = [
         ],
         "answer": "A hidden way to bypass security",
         "category": "Domain Review",
-        "explanation": "Backdoors can be used for maintenance or by attackers for persistence."
+        "explanation": "Backdoors can be used for maintenance or by attackers for persistence.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q40",
@@ -16113,7 +22364,8 @@ export const certifications = [
         ],
         "answer": "Determining what an authenticated user can do",
         "category": "Domain Review",
-        "explanation": "It defines the permissions and rights of a user."
+        "explanation": "It defines the permissions and rights of a user.",
+        "topic": "Governance"
       },
       {
         "id": "oscp-q41",
@@ -16126,7 +22378,8 @@ export const certifications = [
         ],
         "answer": "Malware that hides its presence on a system",
         "category": "Domain Review",
-        "explanation": "Rootkits operate at a deep level of the OS to remain undetected."
+        "explanation": "Rootkits operate at a deep level of the OS to remain undetected.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q42",
@@ -16139,7 +22392,8 @@ export const certifications = [
         ],
         "answer": "Using two different types of credentials",
         "category": "Domain Review",
-        "explanation": "It adds an extra layer of security beyond just a password."
+        "explanation": "It adds an extra layer of security beyond just a password.",
+        "topic": "Implementation"
       },
       {
         "id": "oscp-q43",
@@ -16152,7 +22406,8 @@ export const certifications = [
         ],
         "answer": "Worms replicate automatically; viruses need host files",
         "category": "Domain Review",
-        "explanation": "Worms can spread across a network without human interaction."
+        "explanation": "Worms can spread across a network without human interaction.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q44",
@@ -16165,7 +22420,8 @@ export const certifications = [
         ],
         "answer": "Digital Signatures",
         "category": "Domain Review",
-        "explanation": "Non-repudiation ensures a sender cannot deny having sent a message."
+        "explanation": "Non-repudiation ensures a sender cannot deny having sent a message.",
+        "topic": "Implementation"
       },
       {
         "id": "oscp-q45",
@@ -16178,7 +22434,8 @@ export const certifications = [
         ],
         "answer": "Injecting malicious SQL queries into an input field",
         "category": "Domain Review",
-        "explanation": "SQLi can allow attackers to read or modify sensitive database data."
+        "explanation": "SQLi can allow attackers to read or modify sensitive database data.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q46",
@@ -16191,7 +22448,8 @@ export const certifications = [
         ],
         "answer": "A decoy system to lure attackers",
         "category": "Domain Review",
-        "explanation": "Honeypots help researchers study attacker behavior and deflect them from real targets."
+        "explanation": "Honeypots help researchers study attacker behavior and deflect them from real targets.",
+        "topic": "Operations"
       },
       {
         "id": "oscp-q47",
@@ -16204,7 +22462,8 @@ export const certifications = [
         ],
         "answer": "Hiding data within other data (like an image)",
         "category": "Domain Review",
-        "explanation": "Data is hidden in plain sight, making it hard to detect."
+        "explanation": "Data is hidden in plain sight, making it hard to detect.",
+        "topic": "Implementation"
       },
       {
         "id": "oscp-q48",
@@ -16217,7 +22476,8 @@ export const certifications = [
         ],
         "answer": "Bring Your Own Device",
         "category": "Domain Review",
-        "explanation": "A policy allowing employees to use personal devices for work."
+        "explanation": "A policy allowing employees to use personal devices for work.",
+        "topic": "Governance"
       },
       {
         "id": "oscp-q49",
@@ -16230,7 +22490,8 @@ export const certifications = [
         ],
         "answer": "Redirecting users to a fake website by poisoning DNS",
         "category": "Domain Review",
-        "explanation": "Users think they are on a real site but are actually on a malicious one."
+        "explanation": "Users think they are on a real site but are actually on a malicious one.",
+        "topic": "Attacks & Threats"
       },
       {
         "id": "oscp-q50",
@@ -16243,7 +22504,8 @@ export const certifications = [
         ],
         "answer": "A flaw unknown to the vendor",
         "category": "Domain Review",
-        "explanation": "Zero-day threats have no available patch at the time of discovery."
+        "explanation": "Zero-day threats have no available patch at the time of discovery.",
+        "topic": "Attacks & Threats"
       }
     ]
   },
@@ -16259,11 +22521,257 @@ export const certifications = [
     "description": "Knowledge of the Juniper Networks Junos OS.",
     "reviewer": [
       {
-        "title": "Networking Fundamentals",
+        "title": "IP Services",
         "topics": [
           {
-            "name": "Core Concepts",
-            "detail": "Fundamental knowledge required for JNCIA-Junos."
+            "name": "What is the default subnet mask for a Class C network?",
+            "detail": "Class C networks have a /24 mask."
+          },
+          {
+            "name": "Which command checks the reachability of a DNS server?",
+            "detail": "nslookup is used to query DNS servers for information."
+          },
+          {
+            "name": "What does DHCP stand for?",
+            "detail": "DHCP automatically assigns IP addresses to devices on a network."
+          },
+          {
+            "name": "Which protocol resolves domain names to IP addresses?",
+            "detail": "Domain Name System (DNS) maps human-readable names to IP addresses."
+          },
+          {
+            "name": "What is the purpose of 'NAT'?",
+            "detail": "Network Address Translation (NAT) allows multiple devices to share one public IP."
+          },
+          {
+            "name": "What is the range of private IP addresses for Class A?",
+            "detail": "The 10.0.0.0/8 block is reserved for private Class A networks."
+          },
+          {
+            "name": "Which protocol uses port 53?",
+            "detail": "DNS uses both UDP and TCP on port 53."
+          },
+          {
+            "name": "What is the bit length of an IPv6 address?",
+            "detail": "IPv6 addresses are 128 bits long, providing a massive address space."
+          },
+          {
+            "name": "What is the function of a 'Subnet'?",
+            "detail": "Subnetting improves organization and security."
+          }
+        ]
+      },
+      {
+        "title": "Network Performance",
+        "topics": [
+          {
+            "name": "What is 'Jitter' in networking?",
+            "detail": "Low jitter is critical for real-time services like VoIP."
+          },
+          {
+            "name": "What is the purpose of 'QoS'?",
+            "detail": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice."
+          }
+        ]
+      },
+      {
+        "title": "Network Services",
+        "topics": [
+          {
+            "name": "Which protocol is commonly used for network management and monitoring?",
+            "detail": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices."
+          },
+          {
+            "name": "Which protocol uses port 25?",
+            "detail": "Simple Mail Transfer Protocol (SMTP) handles outgoing emails."
+          },
+          {
+            "name": "What is the primary function of a Load Balancer?",
+            "detail": "Load balancers improve reliability and performance by spreading load."
+          },
+          {
+            "name": "What is the default port for FTP?",
+            "detail": "File Transfer Protocol (FTP) uses port 21 for control."
+          },
+          {
+            "name": "Which protocol is used to retrieve emails from a server and delete them after?",
+            "detail": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server."
+          },
+          {
+            "name": "Which protocol is used for synchronizing clocks on a network?",
+            "detail": "Network Time Protocol (NTP) ensures all devices have the correct time."
+          },
+          {
+            "name": "Which protocol uses port 3389?",
+            "detail": "Remote Desktop Protocol (RDP) allows controlling a remote computer."
+          }
+        ]
+      },
+      {
+        "title": "Network Troubleshooting",
+        "topics": [
+          {
+            "name": "What is the purpose of the 'ping' command?",
+            "detail": "Ping uses ICMP Echo Request messages to check if a remote host is reachable."
+          },
+          {
+            "name": "Which command is used to trace the path a packet takes to its destination?",
+            "detail": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination."
+          },
+          {
+            "name": "Which command shows the MAC address on a Windows PC?",
+            "detail": "All these commands can be used to find the physical address."
+          }
+        ]
+      },
+      {
+        "title": "Networking Core",
+        "topics": [
+          {
+            "name": "What is 'Half-Duplex'?",
+            "detail": "Older hubs and walkie-talkies are half-duplex."
+          },
+          {
+            "name": "What does 'MTU' stand for?",
+            "detail": "MTU is the largest packet size a network can handle."
+          },
+          {
+            "name": "What does 'full-duplex' mean?",
+            "detail": "Full-duplex communication allows concurrent sending and receiving."
+          },
+          {
+            "name": "What is the bit length of a MAC address?",
+            "detail": "MAC addresses are 6-byte (48-bit) unique identifiers."
+          },
+          {
+            "name": "What is the function of the ARP protocol?",
+            "detail": "Address Resolution Protocol (ARP) finds the hardware address for a known IP."
+          },
+          {
+            "name": "What is 'CSMA/CD' used for?",
+            "detail": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol."
+          },
+          {
+            "name": "Which topology connects all devices to a central hub?",
+            "detail": "In a Star topology, if the central hub fails, the whole network goes down."
+          }
+        ]
+      },
+      {
+        "title": "OSI Model",
+        "topics": [
+          {
+            "name": "Which layer is responsible for encryption and compression?",
+            "detail": "Layer 6 ensures data is in a usable format."
+          },
+          {
+            "name": "Which layer defines electrical and physical specifications for devices?",
+            "detail": "Layer 1 deals with cables, connectors, and signals."
+          },
+          {
+            "name": "Which layer of the OSI model handles error-free physical delivery via MAC addresses?",
+            "detail": "Layer 2 is responsible for node-to-node data transfer."
+          }
+        ]
+      },
+      {
+        "title": "Physical Infrastructure",
+        "topics": [
+          {
+            "name": "What is 'PoE'?",
+            "detail": "PoE allows data cables to also carry electrical power to devices like IP cameras."
+          },
+          {
+            "name": "Which cable type uses a laser as a light source?",
+            "detail": "Single-mode uses lasers for long-distance transmission."
+          },
+          {
+            "name": "Which type of cable is least susceptible to EMI?",
+            "detail": "Fiber uses light instead of electricity, making it immune to electromagnetic interference."
+          }
+        ]
+      },
+      {
+        "title": "Routing",
+        "topics": [
+          {
+            "name": "Which routing protocol is known as the protocol of the internet?",
+            "detail": "Border Gateway Protocol (BGP) manages routing between autonomous systems on the web."
+          },
+          {
+            "name": "What does a Gateway do?",
+            "detail": "A gateway serves as an entry/exit point for data between networks."
+          },
+          {
+            "name": "Which device connects multiple networks and makes path decisions?",
+            "detail": "Routers operate at Layer 3 and route traffic between different networks."
+          },
+          {
+            "name": "Which command displays the routing table on a Cisco device?",
+            "detail": "This command list all routes known to the router."
+          }
+        ]
+      },
+      {
+        "title": "Security Fundamentals",
+        "topics": [
+          {
+            "name": "Which protocol is used for securely browsing the web?",
+            "detail": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server."
+          },
+          {
+            "name": "What is the standard port for SSH?",
+            "detail": "Secure Shell (SSH) uses port 22 by default."
+          },
+          {
+            "name": "Which protocol is used to securely transfer files?",
+            "detail": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer."
+          },
+          {
+            "name": "What is an 'ACL' in networking?",
+            "detail": "ACLs filter network traffic based on rules."
+          },
+          {
+            "name": "What is the port for HTTPS?",
+            "detail": "HTTPS (Secure) uses port 443."
+          },
+          {
+            "name": "Which type of VPN connects two locations directly?",
+            "detail": "Site-to-Site VPNs connect entire branch offices to headquarters."
+          }
+        ]
+      },
+      {
+        "title": "Switching",
+        "topics": [
+          {
+            "name": "What does a 'Collision Domain' refer to?",
+            "detail": "Switches break up collision domains per port."
+          },
+          {
+            "name": "What does 'VLAN Tagging' (802.1Q) allow?",
+            "detail": "Tagging adds a header to indicate which VLAN a frame belongs to."
+          },
+          {
+            "name": "What is 'STP' (Spanning Tree Protocol) used for?",
+            "detail": "STP ensures there is only one active path between two network nodes."
+          },
+          {
+            "name": "Which device operates at Layer 2 and makes forwarding decisions based on MAC addresses?",
+            "detail": "Switches are more efficient than hubs as they only send data to the intended port."
+          }
+        ]
+      },
+      {
+        "title": "Wireless",
+        "topics": [
+          {
+            "name": "Which wireless standard supports speeds up to 6.9 Gbps in the 5GHz band?",
+            "detail": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n."
+          },
+          {
+            "name": "Which device is used to extend the range of a Wi-Fi signal?",
+            "detail": "APs provide wireless connectivity to a wired network."
           }
         ]
       }
@@ -16280,7 +22788,8 @@ export const certifications = [
         ],
         "answer": "Test network connectivity",
         "category": "Domain Review",
-        "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable."
+        "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "jcia-junos-q2",
@@ -16293,7 +22802,8 @@ export const certifications = [
         ],
         "answer": "SNMP",
         "category": "Domain Review",
-        "explanation": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices."
+        "explanation": "Simple Network Management Protocol (SNMP) collects and organizes info about managed devices.",
+        "topic": "Network Services"
       },
       {
         "id": "jcia-junos-q3",
@@ -16306,7 +22816,8 @@ export const certifications = [
         ],
         "answer": "Presentation Layer",
         "category": "Domain Review",
-        "explanation": "Layer 6 ensures data is in a usable format."
+        "explanation": "Layer 6 ensures data is in a usable format.",
+        "topic": "OSI Model"
       },
       {
         "id": "jcia-junos-q4",
@@ -16319,7 +22830,8 @@ export const certifications = [
         ],
         "answer": "255.255.255.0",
         "category": "Domain Review",
-        "explanation": "Class C networks have a /24 mask."
+        "explanation": "Class C networks have a /24 mask.",
+        "topic": "IP Services"
       },
       {
         "id": "jcia-junos-q5",
@@ -16332,7 +22844,8 @@ export const certifications = [
         ],
         "answer": "BGP",
         "category": "Domain Review",
-        "explanation": "Border Gateway Protocol (BGP) manages routing between autonomous systems on the web."
+        "explanation": "Border Gateway Protocol (BGP) manages routing between autonomous systems on the web.",
+        "topic": "Routing"
       },
       {
         "id": "jcia-junos-q6",
@@ -16345,7 +22858,8 @@ export const certifications = [
         ],
         "answer": "nslookup",
         "category": "Domain Review",
-        "explanation": "nslookup is used to query DNS servers for information."
+        "explanation": "nslookup is used to query DNS servers for information.",
+        "topic": "IP Services"
       },
       {
         "id": "jcia-junos-q7",
@@ -16358,7 +22872,8 @@ export const certifications = [
         ],
         "answer": "HTTPS",
         "category": "Domain Review",
-        "explanation": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server."
+        "explanation": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "jcia-junos-q8",
@@ -16371,7 +22886,8 @@ export const certifications = [
         ],
         "answer": "Power over Ethernet",
         "category": "Domain Review",
-        "explanation": "PoE allows data cables to also carry electrical power to devices like IP cameras."
+        "explanation": "PoE allows data cables to also carry electrical power to devices like IP cameras.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "jcia-junos-q9",
@@ -16384,7 +22900,8 @@ export const certifications = [
         ],
         "answer": "tracert",
         "category": "Domain Review",
-        "explanation": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination."
+        "explanation": "Tracert (Windows) or traceroute (Linux) shows each hop to a destination.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "jcia-junos-q10",
@@ -16397,7 +22914,8 @@ export const certifications = [
         ],
         "answer": "SMTP",
         "category": "Domain Review",
-        "explanation": "Simple Mail Transfer Protocol (SMTP) handles outgoing emails."
+        "explanation": "Simple Mail Transfer Protocol (SMTP) handles outgoing emails.",
+        "topic": "Network Services"
       },
       {
         "id": "jcia-junos-q11",
@@ -16410,7 +22928,8 @@ export const certifications = [
         ],
         "answer": "802.11ac",
         "category": "Domain Review",
-        "explanation": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n."
+        "explanation": "802.11ac (Wi-Fi 5) significantly improved throughput over 802.11n.",
+        "topic": "Wireless"
       },
       {
         "id": "jcia-junos-q12",
@@ -16423,7 +22942,8 @@ export const certifications = [
         ],
         "answer": "A group of devices where data packets can collide",
         "category": "Domain Review",
-        "explanation": "Switches break up collision domains per port."
+        "explanation": "Switches break up collision domains per port.",
+        "topic": "Switching"
       },
       {
         "id": "jcia-junos-q13",
@@ -16436,7 +22956,8 @@ export const certifications = [
         ],
         "answer": "Dynamic Host Configuration Protocol",
         "category": "Domain Review",
-        "explanation": "DHCP automatically assigns IP addresses to devices on a network."
+        "explanation": "DHCP automatically assigns IP addresses to devices on a network.",
+        "topic": "IP Services"
       },
       {
         "id": "jcia-junos-q14",
@@ -16449,7 +22970,8 @@ export const certifications = [
         ],
         "answer": "DNS",
         "category": "Domain Review",
-        "explanation": "Domain Name System (DNS) maps human-readable names to IP addresses."
+        "explanation": "Domain Name System (DNS) maps human-readable names to IP addresses.",
+        "topic": "IP Services"
       },
       {
         "id": "jcia-junos-q15",
@@ -16462,7 +22984,8 @@ export const certifications = [
         ],
         "answer": "Identifying traffic for different VLANs on a trunk",
         "category": "Domain Review",
-        "explanation": "Tagging adds a header to indicate which VLAN a frame belongs to."
+        "explanation": "Tagging adds a header to indicate which VLAN a frame belongs to.",
+        "topic": "Switching"
       },
       {
         "id": "jcia-junos-q16",
@@ -16475,7 +22998,8 @@ export const certifications = [
         ],
         "answer": "Distribute traffic across multiple servers",
         "category": "Domain Review",
-        "explanation": "Load balancers improve reliability and performance by spreading load."
+        "explanation": "Load balancers improve reliability and performance by spreading load.",
+        "topic": "Network Services"
       },
       {
         "id": "jcia-junos-q17",
@@ -16488,7 +23012,8 @@ export const certifications = [
         ],
         "answer": "Devices can send or receive but not both at once",
         "category": "Domain Review",
-        "explanation": "Older hubs and walkie-talkies are half-duplex."
+        "explanation": "Older hubs and walkie-talkies are half-duplex.",
+        "topic": "Networking Core"
       },
       {
         "id": "jcia-junos-q18",
@@ -16501,7 +23026,8 @@ export const certifications = [
         ],
         "answer": "21",
         "category": "Domain Review",
-        "explanation": "File Transfer Protocol (FTP) uses port 21 for control."
+        "explanation": "File Transfer Protocol (FTP) uses port 21 for control.",
+        "topic": "Network Services"
       },
       {
         "id": "jcia-junos-q19",
@@ -16514,7 +23040,8 @@ export const certifications = [
         ],
         "answer": "Translate private IPs to public IPs",
         "category": "Domain Review",
-        "explanation": "Network Address Translation (NAT) allows multiple devices to share one public IP."
+        "explanation": "Network Address Translation (NAT) allows multiple devices to share one public IP.",
+        "topic": "IP Services"
       },
       {
         "id": "jcia-junos-q20",
@@ -16527,7 +23054,8 @@ export const certifications = [
         ],
         "answer": "10.0.0.0 - 10.255.255.255",
         "category": "Domain Review",
-        "explanation": "The 10.0.0.0/8 block is reserved for private Class A networks."
+        "explanation": "The 10.0.0.0/8 block is reserved for private Class A networks.",
+        "topic": "IP Services"
       },
       {
         "id": "jcia-junos-q21",
@@ -16540,7 +23068,8 @@ export const certifications = [
         ],
         "answer": "22",
         "category": "Domain Review",
-        "explanation": "Secure Shell (SSH) uses port 22 by default."
+        "explanation": "Secure Shell (SSH) uses port 22 by default.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "jcia-junos-q22",
@@ -16553,7 +23082,8 @@ export const certifications = [
         ],
         "answer": "Variation in packet delay",
         "category": "Domain Review",
-        "explanation": "Low jitter is critical for real-time services like VoIP."
+        "explanation": "Low jitter is critical for real-time services like VoIP.",
+        "topic": "Network Performance"
       },
       {
         "id": "jcia-junos-q23",
@@ -16566,7 +23096,8 @@ export const certifications = [
         ],
         "answer": "all of the above",
         "category": "Domain Review",
-        "explanation": "All these commands can be used to find the physical address."
+        "explanation": "All these commands can be used to find the physical address.",
+        "topic": "Network Troubleshooting"
       },
       {
         "id": "jcia-junos-q24",
@@ -16579,7 +23110,8 @@ export const certifications = [
         ],
         "answer": "Single-mode Fiber",
         "category": "Domain Review",
-        "explanation": "Single-mode uses lasers for long-distance transmission."
+        "explanation": "Single-mode uses lasers for long-distance transmission.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "jcia-junos-q25",
@@ -16592,7 +23124,8 @@ export const certifications = [
         ],
         "answer": "Connects different networks",
         "category": "Domain Review",
-        "explanation": "A gateway serves as an entry/exit point for data between networks."
+        "explanation": "A gateway serves as an entry/exit point for data between networks.",
+        "topic": "Routing"
       },
       {
         "id": "jcia-junos-q26",
@@ -16605,7 +23138,8 @@ export const certifications = [
         ],
         "answer": "Maximum Transmission Unit",
         "category": "Domain Review",
-        "explanation": "MTU is the largest packet size a network can handle."
+        "explanation": "MTU is the largest packet size a network can handle.",
+        "topic": "Networking Core"
       },
       {
         "id": "jcia-junos-q27",
@@ -16618,7 +23152,8 @@ export const certifications = [
         ],
         "answer": "POP3",
         "category": "Domain Review",
-        "explanation": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server."
+        "explanation": "Post Office Protocol v3 (POP3) typically downloads and removes mail from the server.",
+        "topic": "Network Services"
       },
       {
         "id": "jcia-junos-q28",
@@ -16631,7 +23166,8 @@ export const certifications = [
         ],
         "answer": "DNS",
         "category": "Domain Review",
-        "explanation": "DNS uses both UDP and TCP on port 53."
+        "explanation": "DNS uses both UDP and TCP on port 53.",
+        "topic": "IP Services"
       },
       {
         "id": "jcia-junos-q29",
@@ -16644,7 +23180,8 @@ export const certifications = [
         ],
         "answer": "NTP",
         "category": "Domain Review",
-        "explanation": "Network Time Protocol (NTP) ensures all devices have the correct time."
+        "explanation": "Network Time Protocol (NTP) ensures all devices have the correct time.",
+        "topic": "Network Services"
       },
       {
         "id": "jcia-junos-q30",
@@ -16657,7 +23194,8 @@ export const certifications = [
         ],
         "answer": "Access Point",
         "category": "Domain Review",
-        "explanation": "APs provide wireless connectivity to a wired network."
+        "explanation": "APs provide wireless connectivity to a wired network.",
+        "topic": "Wireless"
       },
       {
         "id": "jcia-junos-q31",
@@ -16670,7 +23208,8 @@ export const certifications = [
         ],
         "answer": "RDP",
         "category": "Domain Review",
-        "explanation": "Remote Desktop Protocol (RDP) allows controlling a remote computer."
+        "explanation": "Remote Desktop Protocol (RDP) allows controlling a remote computer.",
+        "topic": "Network Services"
       },
       {
         "id": "jcia-junos-q32",
@@ -16683,7 +23222,8 @@ export const certifications = [
         ],
         "answer": "SFTP",
         "category": "Domain Review",
-        "explanation": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer."
+        "explanation": "SSH File Transfer Protocol (SFTP) provides secure file access and transfer.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "jcia-junos-q33",
@@ -16696,7 +23236,8 @@ export const certifications = [
         ],
         "answer": "Data can flow both ways simultaneously",
         "category": "Domain Review",
-        "explanation": "Full-duplex communication allows concurrent sending and receiving."
+        "explanation": "Full-duplex communication allows concurrent sending and receiving.",
+        "topic": "Networking Core"
       },
       {
         "id": "jcia-junos-q34",
@@ -16709,7 +23250,8 @@ export const certifications = [
         ],
         "answer": "Prevent network loops in switches",
         "category": "Domain Review",
-        "explanation": "STP ensures there is only one active path between two network nodes."
+        "explanation": "STP ensures there is only one active path between two network nodes.",
+        "topic": "Switching"
       },
       {
         "id": "jcia-junos-q35",
@@ -16722,7 +23264,8 @@ export const certifications = [
         ],
         "answer": "48 bits",
         "category": "Domain Review",
-        "explanation": "MAC addresses are 6-byte (48-bit) unique identifiers."
+        "explanation": "MAC addresses are 6-byte (48-bit) unique identifiers.",
+        "topic": "Networking Core"
       },
       {
         "id": "jcia-junos-q36",
@@ -16735,7 +23278,8 @@ export const certifications = [
         ],
         "answer": "Access Control List",
         "category": "Domain Review",
-        "explanation": "ACLs filter network traffic based on rules."
+        "explanation": "ACLs filter network traffic based on rules.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "jcia-junos-q37",
@@ -16748,7 +23292,8 @@ export const certifications = [
         ],
         "answer": "Fiber Optic",
         "category": "Domain Review",
-        "explanation": "Fiber uses light instead of electricity, making it immune to electromagnetic interference."
+        "explanation": "Fiber uses light instead of electricity, making it immune to electromagnetic interference.",
+        "topic": "Physical Infrastructure"
       },
       {
         "id": "jcia-junos-q38",
@@ -16761,7 +23306,8 @@ export const certifications = [
         ],
         "answer": "Physical Layer",
         "category": "Domain Review",
-        "explanation": "Layer 1 deals with cables, connectors, and signals."
+        "explanation": "Layer 1 deals with cables, connectors, and signals.",
+        "topic": "OSI Model"
       },
       {
         "id": "jcia-junos-q39",
@@ -16774,7 +23320,8 @@ export const certifications = [
         ],
         "answer": "Router",
         "category": "Domain Review",
-        "explanation": "Routers operate at Layer 3 and route traffic between different networks."
+        "explanation": "Routers operate at Layer 3 and route traffic between different networks.",
+        "topic": "Routing"
       },
       {
         "id": "jcia-junos-q40",
@@ -16787,7 +23334,8 @@ export const certifications = [
         ],
         "answer": "443",
         "category": "Domain Review",
-        "explanation": "HTTPS (Secure) uses port 443."
+        "explanation": "HTTPS (Secure) uses port 443.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "jcia-junos-q41",
@@ -16800,7 +23348,8 @@ export const certifications = [
         ],
         "answer": "Resolve IP to MAC address",
         "category": "Domain Review",
-        "explanation": "Address Resolution Protocol (ARP) finds the hardware address for a known IP."
+        "explanation": "Address Resolution Protocol (ARP) finds the hardware address for a known IP.",
+        "topic": "Networking Core"
       },
       {
         "id": "jcia-junos-q42",
@@ -16813,7 +23362,8 @@ export const certifications = [
         ],
         "answer": "Data Link Layer",
         "category": "Domain Review",
-        "explanation": "Layer 2 is responsible for node-to-node data transfer."
+        "explanation": "Layer 2 is responsible for node-to-node data transfer.",
+        "topic": "OSI Model"
       },
       {
         "id": "jcia-junos-q43",
@@ -16826,7 +23376,8 @@ export const certifications = [
         ],
         "answer": "128 bits",
         "category": "Domain Review",
-        "explanation": "IPv6 addresses are 128 bits long, providing a massive address space."
+        "explanation": "IPv6 addresses are 128 bits long, providing a massive address space.",
+        "topic": "IP Services"
       },
       {
         "id": "jcia-junos-q44",
@@ -16839,7 +23390,8 @@ export const certifications = [
         ],
         "answer": "Prioritize important traffic",
         "category": "Domain Review",
-        "explanation": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice."
+        "explanation": "Quality of Service (QoS) ensures high priority for delay-sensitive data like voice.",
+        "topic": "Network Performance"
       },
       {
         "id": "jcia-junos-q45",
@@ -16852,7 +23404,8 @@ export const certifications = [
         ],
         "answer": "Detecting collisions in Ethernet",
         "category": "Domain Review",
-        "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol."
+        "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol.",
+        "topic": "Networking Core"
       },
       {
         "id": "jcia-junos-q46",
@@ -16865,7 +23418,8 @@ export const certifications = [
         ],
         "answer": "Divide a large network into smaller ones",
         "category": "Domain Review",
-        "explanation": "Subnetting improves organization and security."
+        "explanation": "Subnetting improves organization and security.",
+        "topic": "IP Services"
       },
       {
         "id": "jcia-junos-q47",
@@ -16878,7 +23432,8 @@ export const certifications = [
         ],
         "answer": "Site-to-Site",
         "category": "Domain Review",
-        "explanation": "Site-to-Site VPNs connect entire branch offices to headquarters."
+        "explanation": "Site-to-Site VPNs connect entire branch offices to headquarters.",
+        "topic": "Security Fundamentals"
       },
       {
         "id": "jcia-junos-q48",
@@ -16891,7 +23446,8 @@ export const certifications = [
         ],
         "answer": "Switch",
         "category": "Domain Review",
-        "explanation": "Switches are more efficient than hubs as they only send data to the intended port."
+        "explanation": "Switches are more efficient than hubs as they only send data to the intended port.",
+        "topic": "Switching"
       },
       {
         "id": "jcia-junos-q49",
@@ -16904,7 +23460,8 @@ export const certifications = [
         ],
         "answer": "Star",
         "category": "Domain Review",
-        "explanation": "In a Star topology, if the central hub fails, the whole network goes down."
+        "explanation": "In a Star topology, if the central hub fails, the whole network goes down.",
+        "topic": "Networking Core"
       },
       {
         "id": "jcia-junos-q50",
@@ -16917,7 +23474,8 @@ export const certifications = [
         ],
         "answer": "show ip route",
         "category": "Domain Review",
-        "explanation": "This command list all routes known to the router."
+        "explanation": "This command list all routes known to the router.",
+        "topic": "Routing"
       }
     ]
   }
