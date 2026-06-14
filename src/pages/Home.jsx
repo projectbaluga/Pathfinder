@@ -1,8 +1,12 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
-import { Search, BookOpen, GraduationCap, ArrowRight } from 'lucide-react';
+import { Search, BookOpen, GraduationCap, ArrowRight, Award, HelpCircle } from 'lucide-react';
+import { certifications } from '../data/certifications';
 
 const Home = () => {
+  const totalCerts = certifications.length;
+  const totalQuestions = certifications.reduce((acc, cert) => acc + cert.practiceQuestions.length, 0);
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -19,6 +23,28 @@ const Home = () => {
             <Link to="/quiz" className="bg-slate-700 hover:bg-slate-600 text-white px-8 py-3 rounded-lg font-semibold transition">
               Start a Quiz
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 bg-white border-b border-slate-100">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-8 md:gap-24">
+            <div className="text-center">
+              <div className="flex items-center justify-center text-blue-600 mb-2">
+                <Award size={32} className="mr-3" />
+                <span className="text-4xl font-bold text-slate-900">{totalCerts}</span>
+              </div>
+              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Certifications</p>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center text-purple-600 mb-2">
+                <HelpCircle size={32} className="mr-3" />
+                <span className="text-4xl font-bold text-slate-900">{totalQuestions}</span>
+              </div>
+              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Practice Questions</p>
+            </div>
           </div>
         </div>
       </section>

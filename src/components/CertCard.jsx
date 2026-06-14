@@ -1,5 +1,5 @@
-import React from 'react';
-import { ExternalLink, DollarSign, Clock, Calendar, BarChart, Award } from 'lucide-react';
+
+import { ExternalLink, DollarSign, Clock, BarChart, Award } from 'lucide-react';
 
 const CertCard = ({ cert, onClick }) => {
   return (

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { certifications } from '../data/certifications';
 import QuizEngine from '../components/QuizEngine';
-import { GraduationCap, Settings2, Play, Timer, List } from 'lucide-react';
+import { GraduationCap, Settings2, Play, Timer } from 'lucide-react';
 
 const Quiz = () => {
   const [quizState, setQuizState] = useState('setup'); // setup, active
