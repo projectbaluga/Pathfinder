@@ -276,12 +276,12 @@ export const certifications = [
         "id": "ccna-q1",
         "question": "Which OSI layer is responsible for routing and IP addressing?",
         "options": [
-          "Data Link Layer",
-          "Network Layer",
-          "Physical Layer",
-          "Transport Layer"
+          "Data Link Layer (Layer 2)",
+          "Network Layer (Layer 3)",
+          "Physical Layer (Layer 1)",
+          "Transport Layer (Layer 4)"
         ],
-        "answer": "Network Layer",
+        "answer": "Network Layer (Layer 3)",
         "category": "Core Knowledge",
         "explanation": "The Network Layer (Layer 3) handles logical addressing and path determination (routing).",
         "topic": "OSI Model"
@@ -291,9 +291,9 @@ export const certifications = [
         "question": "What is the primary difference between TCP and UDP?",
         "options": [
           "TCP is connection-oriented; UDP is connectionless",
-          "TCP is faster than UDP",
-          "TCP uses less overhead than UDP",
-          "UDP provides reliability; TCP does not"
+          "TCP is faster than UDP; UDP is slower than TCP",
+          "TCP uses less overhead; UDP requires more resources",
+          "UDP provides reliability; TCP has no error checking"
         ],
         "answer": "TCP is connection-oriented; UDP is connectionless",
         "category": "Core Knowledge",
@@ -304,12 +304,12 @@ export const certifications = [
         "id": "ccna-q3",
         "question": "Which protocol is used for dynamic routing within an autonomous system?",
         "options": [
-          "BGP",
-          "HTTPS",
-          "OSPF",
-          "SMTP"
+          "Border Gateway Protocol (BGP)",
+          "Hypertext Transfer Protocol (HTTPS)",
+          "Open Shortest Path First (OSPF)",
+          "Simple Mail Transfer Protocol (SMTP)"
         ],
-        "answer": "OSPF",
+        "answer": "Open Shortest Path First (OSPF)",
         "category": "Core Knowledge",
         "explanation": "OSPF is an Interior Gateway Protocol (IGP) used for routing within an organization.",
         "topic": "Routing"
@@ -318,12 +318,12 @@ export const certifications = [
         "id": "ccna-q4",
         "question": "What is the purpose of a VLAN?",
         "options": [
-          "Convert fiber to ethernet",
-          "Increase physical cable distance",
-          "Provide power to devices",
-          "Segment networks logically"
+          "To convert fiber optic signals to ethernet",
+          "To increase physical cable distance limitations",
+          "To provide electrical power to network devices",
+          "To segment networks logically within a switch"
         ],
-        "answer": "Segment networks logically",
+        "answer": "To segment networks logically within a switch",
         "category": "Core Knowledge",
         "explanation": "VLANs allow network administrators to group devices together even if they are on different physical switches.",
         "topic": "Switching"
@@ -332,10 +332,10 @@ export const certifications = [
         "id": "ccna-q5",
         "question": "Which command shows the status of all interfaces on a Cisco router?",
         "options": [
-          "display all",
-          "get status",
+          "display all interfaces",
+          "get interface status",
           "show ip interface brief",
-          "show run config"
+          "show running-config"
         ],
         "answer": "show ip interface brief",
         "category": "Core Knowledge",
@@ -346,12 +346,12 @@ export const certifications = [
         "id": "ccna-q6",
         "question": "What is 'CSMA/CD' used for?",
         "options": [
-          "Assigning IPs",
-          "Detecting collisions in Ethernet",
-          "Encrypting data",
-          "Routing packets"
+          "Assigning unique IP addresses to network devices",
+          "Detecting collisions in an Ethernet-based network",
+          "Encrypting sensitive data for secure transmission",
+          "Routing data packets between different networks"
         ],
-        "answer": "Detecting collisions in Ethernet",
+        "answer": "Detecting collisions in an Ethernet-based network",
         "category": "Domain Review",
         "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol.",
         "topic": "Networking Core"
@@ -444,12 +444,12 @@ export const certifications = [
         "id": "ccna-q13",
         "question": "What is the function of a 'Subnet'?",
         "options": [
-          "Connect to the printer",
-          "Divide a large network into smaller ones",
-          "Speed up the processor",
-          "Store emails"
+          "Connect to the local network printer for printing",
+          "Divide a large network into multiple smaller ones",
+          "Speed up the processing power of the computer",
+          "Store incoming and outgoing emails on the server"
         ],
-        "answer": "Divide a large network into smaller ones",
+        "answer": "Divide a large network into multiple smaller ones",
         "category": "Domain Review",
         "explanation": "Subnetting improves organization and security.",
         "topic": "IP Services"
@@ -500,12 +500,12 @@ export const certifications = [
         "id": "ccna-q17",
         "question": "Which command shows the MAC address on a Windows PC?",
         "options": [
-          "all of the above",
-          "arp -a",
-          "getmac",
-          "ipconfig /all"
+          "All of the above commands",
+          "The arp -a command",
+          "The getmac command",
+          "The ipconfig /all command"
         ],
-        "answer": "all of the above",
+        "answer": "All of the above commands",
         "category": "Domain Review",
         "explanation": "All these commands can be used to find the physical address.",
         "topic": "Network Troubleshooting"
@@ -528,12 +528,12 @@ export const certifications = [
         "id": "ccna-q19",
         "question": "What is a 'Loopback' address?",
         "options": [
-          "A public IP",
-          "An address used to test the local system",
-          "The DNS server address",
-          "The address of the router"
+          "A public IP address accessible from the internet",
+          "An address used to test the local computer system",
+          "The address of the Domain Name System (DNS) server",
+          "The address of the primary network router device"
         ],
-        "answer": "An address used to test the local system",
+        "answer": "An address used to test the local computer system",
         "category": "Domain Review",
         "explanation": "127.0.0.1 is the standard IPv4 loopback address.",
         "topic": "IP Services"
@@ -556,12 +556,12 @@ export const certifications = [
         "id": "ccna-q21",
         "question": "What is the purpose of the 'ping' command?",
         "options": [
-          "Change IP address",
-          "Download a file",
-          "Secure a port",
-          "Test network connectivity"
+          "To change the local IP address",
+          "To download a file from a server",
+          "To secure a specific network port",
+          "To test basic network connectivity"
         ],
-        "answer": "Test network connectivity",
+        "answer": "To test basic network connectivity",
         "category": "Domain Review",
         "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable.",
         "topic": "Network Troubleshooting"
@@ -570,12 +570,12 @@ export const certifications = [
         "id": "ccna-q22",
         "question": "Which protocol is used for securely browsing the web?",
         "options": [
-          "FTP",
-          "HTTP",
-          "HTTPS",
-          "SSH"
+          "FTP (File Transfer Protocol)",
+          "HTTP (Standard Protocol)",
+          "HTTPS (Secure Protocol)",
+          "SSH (Secure Shell Protocol)"
         ],
-        "answer": "HTTPS",
+        "answer": "HTTPS (Secure Protocol)",
         "category": "Domain Review",
         "explanation": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server.",
         "topic": "Security Fundamentals"
@@ -598,12 +598,12 @@ export const certifications = [
         "id": "ccna-q24",
         "question": "Which device connects multiple networks and makes path decisions?",
         "options": [
-          "Hub",
-          "Repeater",
-          "Router",
-          "Switch"
+          "Hub (Layer 1 Device)",
+          "Repeater (Layer 1 Device)",
+          "Router (Layer 3 Device)",
+          "Switch (Layer 2 Device)"
         ],
-        "answer": "Router",
+        "answer": "Router (Layer 3 Device)",
         "category": "Domain Review",
         "explanation": "Routers operate at Layer 3 and route traffic between different networks.",
         "topic": "Routing"
@@ -725,9 +725,9 @@ export const certifications = [
         "question": "What does a 'Collision Domain' refer to?",
         "options": [
           "A group of devices where data packets can collide",
-          "A set of devices sharing a router",
-          "A single network cable",
-          "The entire internet"
+          "A set of devices sharing a single network router",
+          "A single network cable connecting two different computers",
+          "The entire internet-wide group of interconnected devices"
         ],
         "answer": "A group of devices where data packets can collide",
         "category": "Domain Review",
@@ -766,10 +766,10 @@ export const certifications = [
         "id": "ccna-q36",
         "question": "What is 'Half-Duplex'?",
         "options": [
-          "Data is sent at half speed",
+          "Data is sent at exactly half the standard speed",
           "Devices can send or receive but not both at once",
-          "Only half the packets arrive",
-          "Only one device can ever send"
+          "Only half of the data packets arrive at destination",
+          "Only one device in the network can ever send data"
         ],
         "answer": "Devices can send or receive but not both at once",
         "category": "Domain Review",
@@ -780,12 +780,12 @@ export const certifications = [
         "id": "ccna-q37",
         "question": "Which cable type uses a laser as a light source?",
         "options": [
-          "Coaxial",
-          "Multi-mode Fiber",
-          "Single-mode Fiber",
-          "UTP"
+          "Multi-mode Fiber cabling",
+          "Single-mode Fiber cabling",
+          "Standard Coaxial cabling",
+          "Unshielded Twisted Pair (UTP)"
         ],
-        "answer": "Single-mode Fiber",
+        "answer": "Single-mode Fiber cabling",
         "category": "Domain Review",
         "explanation": "Single-mode uses lasers for long-distance transmission.",
         "topic": "Physical Infrastructure"
@@ -808,12 +808,12 @@ export const certifications = [
         "id": "ccna-q39",
         "question": "What is the primary function of a Load Balancer?",
         "options": [
-          "Assign IP addresses",
-          "Distribute traffic across multiple servers",
-          "Encrypt network traffic",
-          "Store website files"
+          "Assign IP addresses to all devices on the network",
+          "Distribute incoming traffic across multiple servers",
+          "Encrypt all incoming network traffic for security",
+          "Store website files and images for fast access"
         ],
-        "answer": "Distribute traffic across multiple servers",
+        "answer": "Distribute incoming traffic across multiple servers",
         "category": "Domain Review",
         "explanation": "Load balancers improve reliability and performance by spreading load.",
         "topic": "Network Services"
@@ -836,10 +836,10 @@ export const certifications = [
         "id": "ccna-q41",
         "question": "What does 'VLAN Tagging' (802.1Q) allow?",
         "options": [
-          "Faster browsing",
-          "Hiding the network name",
+          "Faster browsing of the web for all local users",
+          "Hiding the network name for security purposes",
           "Identifying traffic for different VLANs on a trunk",
-          "Printing wirelessly"
+          "Printing documents wirelessly to a network printer"
         ],
         "answer": "Identifying traffic for different VLANs on a trunk",
         "category": "Domain Review",
@@ -906,10 +906,10 @@ export const certifications = [
         "id": "ccna-q46",
         "question": "What is 'STP' (Spanning Tree Protocol) used for?",
         "options": [
-          "Assign IP addresses",
-          "Encrypt passwords",
+          "Assign new IP addresses",
+          "Encrypt all user passwords",
           "Prevent network loops in switches",
-          "Speed up the network"
+          "Speed up the local network"
         ],
         "answer": "Prevent network loops in switches",
         "category": "Domain Review",
@@ -934,12 +934,12 @@ export const certifications = [
         "id": "ccna-q48",
         "question": "What is the standard port for SSH?",
         "options": [
-          "22",
-          "23",
-          "443",
-          "80"
+          "Port 22 (Standard SSH)",
+          "Port 23 (Standard Telnet)",
+          "Port 443 (Standard HTTPS)",
+          "Port 80 (Standard HTTP)"
         ],
-        "answer": "22",
+        "answer": "Port 22 (Standard SSH)",
         "category": "Domain Review",
         "explanation": "Secure Shell (SSH) uses port 22 by default.",
         "topic": "Security Fundamentals"
@@ -962,12 +962,12 @@ export const certifications = [
         "id": "ccna-q50",
         "question": "What is the bit length of an IPv6 address?",
         "options": [
-          "128 bits",
-          "256 bits",
-          "32 bits",
-          "64 bits"
+          "128 bits in length",
+          "256 bits in length",
+          "32 bits in length",
+          "64 bits in length"
         ],
-        "answer": "128 bits",
+        "answer": "128 bits in length",
         "category": "Domain Review",
         "explanation": "IPv6 addresses are 128 bits long, providing a massive address space.",
         "topic": "IP Services"
@@ -1221,12 +1221,12 @@ export const certifications = [
         "id": "sec-plus-q1",
         "question": "Which type of attack uses deceptive emails to steal credentials?",
         "options": [
-          "DDoS",
-          "Man-in-the-Middle",
-          "Phishing",
+          "DDoS attack",
+          "MITM attack",
+          "Phishing attack",
           "SQL Injection"
         ],
-        "answer": "Phishing",
+        "answer": "Phishing attack",
         "category": "Core Knowledge",
         "explanation": "Phishing is a social engineering attack that tricks users into revealing sensitive information.",
         "topic": "Attacks & Threats"
@@ -1235,9 +1235,9 @@ export const certifications = [
         "id": "sec-plus-q2",
         "question": "What does the principle of Least Privilege state?",
         "options": [
-          "Access is based on seniority",
-          "All users should have admin rights",
-          "Everyone has access to everything",
+          "Access is granted based on employee seniority",
+          "All users should have full administrative rights",
+          "Everyone should have access to all resources",
           "Users should only have minimum access required"
         ],
         "answer": "Users should only have minimum access required",
@@ -1249,12 +1249,12 @@ export const certifications = [
         "id": "sec-plus-q3",
         "question": "Which encryption type uses the same key for both encryption and decryption?",
         "options": [
-          "Asymmetric",
-          "Hashing",
-          "Public Key",
-          "Symmetric"
+          "Asymmetric encryption",
+          "Hashing algorithms",
+          "Public Key exchange",
+          "Symmetric encryption"
         ],
-        "answer": "Symmetric",
+        "answer": "Symmetric encryption",
         "category": "Core Knowledge",
         "explanation": "Symmetric encryption (like AES) uses a single shared secret key.",
         "topic": "Implementation"
@@ -1263,12 +1263,12 @@ export const certifications = [
         "id": "sec-plus-q4",
         "question": "What is a DMZ used for in network security?",
         "options": [
-          "Backup internal data",
-          "Host public-facing services",
-          "Storage for logs",
-          "Testing malware"
+          "To backup sensitive internal organizational data",
+          "To host public-facing services and isolate them",
+          "To provide centralized storage for system logs",
+          "To test malware in a safe, isolated environment"
         ],
-        "answer": "Host public-facing services",
+        "answer": "To host public-facing services and isolate them",
         "category": "Core Knowledge",
         "explanation": "A DeMilitarized Zone (DMZ) isolates public services from the private internal network.",
         "topic": "Architecture"
@@ -1277,12 +1277,12 @@ export const certifications = [
         "id": "sec-plus-q5",
         "question": "Which framework provides a standard for managing IT risks in the US?",
         "options": [
-          "GDPR",
-          "HIPAA",
-          "ISO 27001",
-          "NIST RMF"
+          "GDPR (General Data Protection Regulation)",
+          "HIPAA (Health Insurance Portability Act)",
+          "ISO 27001 (Information Security Standard)",
+          "NIST RMF (Risk Management Framework)"
         ],
-        "answer": "NIST RMF",
+        "answer": "NIST RMF (Risk Management Framework)",
         "category": "Core Knowledge",
         "explanation": "The NIST Risk Management Framework is widely used for securing government and private systems.",
         "topic": "Governance"
@@ -1291,10 +1291,10 @@ export const certifications = [
         "id": "sec-plus-q6",
         "question": "What is 'Spear Phishing'?",
         "options": [
-          "A type of network cable",
-          "A very fast attack",
+          "A type of network cable for data transfers",
+          "A very fast attack that occurs in seconds",
           "Phishing targeted at a specific person",
-          "Phishing with a weapon"
+          "Phishing with a physical weapon for theft"
         ],
         "answer": "Phishing targeted at a specific person",
         "category": "Domain Review",
@@ -1305,9 +1305,9 @@ export const certifications = [
         "id": "sec-plus-q7",
         "question": "What is the difference between a 'Virus' and a 'Worm'?",
         "options": [
-          "There is no difference",
-          "Viruses are faster",
-          "Worms are harmless",
+          "There is no difference between a virus and a worm",
+          "Viruses are much faster than worms at infecting systems",
+          "Worms are harmless and do not cause any system damage",
           "Worms replicate automatically; viruses need host files"
         ],
         "answer": "Worms replicate automatically; viruses need host files",
@@ -1319,9 +1319,9 @@ export const certifications = [
         "id": "sec-plus-q8",
         "question": "What is 'Man-in-the-Middle' (MITM)?",
         "options": [
-          "A network hub",
-          "A referee",
-          "A secure proxy",
+          "A physical network hub for connecting devices",
+          "A professional sports referee during a match",
+          "A standard secure proxy for browsing the web",
           "Intercepting communication between two parties"
         ],
         "answer": "Intercepting communication between two parties",
@@ -1333,9 +1333,9 @@ export const certifications = [
         "id": "sec-plus-q9",
         "question": "What is a 'Private Key'?",
         "options": [
-          "A key for a private room",
-          "A key that everyone has",
-          "A physical key",
+          "A key that everyone in an office has",
+          "A key used for opening a private room",
+          "A physical metal key for opening a door",
           "A secret key known only to the owner"
         ],
         "answer": "A secret key known only to the owner",
@@ -1347,12 +1347,12 @@ export const certifications = [
         "id": "sec-plus-q10",
         "question": "Which of these is a form of Symmetric encryption?",
         "options": [
-          "AES",
-          "Diffie-Hellman",
-          "ECC",
-          "RSA"
+          "Advanced Encryption Standard (AES)",
+          "Diffie-Hellman Key Exchange",
+          "Elliptic Curve Cryptography",
+          "Rivest-Shamir-Adleman (RSA)"
         ],
-        "answer": "AES",
+        "answer": "Advanced Encryption Standard (AES)",
         "category": "Domain Review",
         "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher.",
         "topic": "Implementation"
@@ -1361,10 +1361,10 @@ export const certifications = [
         "id": "sec-plus-q11",
         "question": "What is 'Pharmimg'?",
         "options": [
-          "A secure network protocol",
-          "A type of agriculture",
+          "A secure network protocol for transmitting data sets",
+          "A specific type of agriculture involving data plants",
           "Redirecting users to a fake website by poisoning DNS",
-          "Stealing emails"
+          "The act of stealing emails from a remote server"
         ],
         "answer": "Redirecting users to a fake website by poisoning DNS",
         "category": "Domain Review",
@@ -1375,10 +1375,10 @@ export const certifications = [
         "id": "sec-plus-q12",
         "question": "What is a 'Buffer Overflow'?",
         "options": [
-          "A slow internet connection",
-          "A software update",
-          "Overwriting memory to execute malicious code",
-          "Too much data on a disk"
+          "A slow internet connection that delays downloads",
+          "A standard software update for computer applications",
+          "Having too much data on a computer hard disk",
+          "Overwriting memory to execute malicious code"
         ],
         "answer": "Overwriting memory to execute malicious code",
         "category": "Domain Review",
@@ -1389,9 +1389,9 @@ export const certifications = [
         "id": "sec-plus-q13",
         "question": "What is 'SQL Injection'?",
         "options": [
-          "A database backup",
-          "A network protocol",
-          "A type of virus",
+          "A network protocol for transmitting data sets",
+          "A specific type of malicious computer virus",
+          "A standard database backup for data safety",
           "Injecting malicious SQL queries into an input field"
         ],
         "answer": "Injecting malicious SQL queries into an input field",
@@ -1404,9 +1404,9 @@ export const certifications = [
         "question": "What is an 'Audit Trail'?",
         "options": [
           "A chronological record of system activities",
-          "A hardware inventory",
-          "A list of employees",
-          "A path in the woods"
+          "A hardware inventory of all computer parts",
+          "A list of all employees in a small company",
+          "A path through the woods for outdoor hiking"
         ],
         "answer": "A chronological record of system activities",
         "category": "Domain Review",
@@ -1417,10 +1417,10 @@ export const certifications = [
         "id": "sec-plus-q15",
         "question": "What is 'Access Control'?",
         "options": [
-          "A type of remote control",
-          "Hiring a security guard",
+          "A specific type of remote control for a television set",
+          "Hiring a security guard to monitor the office building",
           "Restricting access to resources to authorized users",
-          "Turning off the computer"
+          "The act of turning off the computer at the end of the day"
         ],
         "answer": "Restricting access to resources to authorized users",
         "category": "Domain Review",
@@ -1431,10 +1431,10 @@ export const certifications = [
         "id": "sec-plus-q16",
         "question": "What is 'Whaling'?",
         "options": [
-          "A large-scale DDoS",
+          "A large-scale DDoS attack from many sources",
           "A phishing attack targeted at high-level executives",
-          "A type of network cable",
-          "Hunting whales"
+          "A type of network cable for data transmission",
+          "The act of hunting whales in the natural ocean"
         ],
         "answer": "A phishing attack targeted at high-level executives",
         "category": "Domain Review",
@@ -1501,9 +1501,9 @@ export const certifications = [
         "id": "sec-plus-q21",
         "question": "What is Ransomware?",
         "options": [
-          "A hardware firewall",
-          "A tool for generating passwords",
-          "A type of secure email",
+          "A hardware firewall device for network security",
+          "A tool for generating and storing passwords",
+          "A type of secure and encrypted email service",
           "Malware that encrypts data and demands payment"
         ],
         "answer": "Malware that encrypts data and demands payment",
@@ -1515,9 +1515,9 @@ export const certifications = [
         "id": "sec-plus-q22",
         "question": "What is an 'Air Gap'?",
         "options": [
-          "A gap between server racks",
-          "A leak in a tire",
-          "A type of Wi-Fi",
+          "A physical gap between computer server racks in a room",
+          "A small leak in a rubber tire that causes low pressure",
+          "A specific type of high-speed Wi-Fi network connection",
           "Physically isolating a computer from any network"
         ],
         "answer": "Physically isolating a computer from any network",
@@ -1529,9 +1529,9 @@ export const certifications = [
         "id": "sec-plus-q23",
         "question": "What is 'Authentication'?",
         "options": [
-          "Creating a backup",
-          "Giving permission",
-          "Logging out",
+          "Creating a backup of sensitive organizational data",
+          "Giving permission to access a secure resource",
+          "The act of logging out from a secure account",
           "Verifying that you are who you say you are"
         ],
         "answer": "Verifying that you are who you say you are",
@@ -1557,10 +1557,10 @@ export const certifications = [
         "id": "sec-plus-q25",
         "question": "What is 'Encryption'?",
         "options": [
-          "Compressing data",
+          "Compressing data to save storage space",
           "Converting plaintext into ciphertext",
-          "Deleting files",
-          "Making data public"
+          "Deleting files from a computer system",
+          "Making data public for everyone to see"
         ],
         "answer": "Converting plaintext into ciphertext",
         "category": "Domain Review",
@@ -1572,9 +1572,9 @@ export const certifications = [
         "question": "Which of these is used for 'Non-repudiation'?",
         "options": [
           "Digital Signatures",
-          "Encryption",
-          "Firewalls",
-          "Hashing"
+          "Encryption tools",
+          "Hashing algorithms",
+          "Network Firewalls"
         ],
         "answer": "Digital Signatures",
         "category": "Domain Review",
@@ -1585,10 +1585,10 @@ export const certifications = [
         "id": "sec-plus-q27",
         "question": "What is 'Decryption'?",
         "options": [
-          "Analyzing code",
-          "Breaking a password",
+          "Analyzing computer code for potential bugs",
+          "Breaking a password using a brute force tool",
           "Converting ciphertext back into plaintext",
-          "Downloading data"
+          "Downloading data from a remote computer server"
         ],
         "answer": "Converting ciphertext back into plaintext",
         "category": "Domain Review",
@@ -1599,9 +1599,9 @@ export const certifications = [
         "id": "sec-plus-q28",
         "question": "What is Multi-Factor Authentication (MFA)?",
         "options": [
-          "Changing passwords every week",
-          "Using a secure browser",
-          "Using a very long password",
+          "Changing your account passwords every single week",
+          "Using a secure and encrypted web browser for access",
+          "Using a very long and complex alphanumeric password",
           "Using two or more different factors to verify identity"
         ],
         "answer": "Using two or more different factors to verify identity",
@@ -1627,9 +1627,9 @@ export const certifications = [
         "id": "sec-plus-q30",
         "question": "What is a 'Logic Bomb'?",
         "options": [
-          "A secure storage device",
-          "A type of math problem",
-          "An actual explosive",
+          "A secure storage device for organizational data",
+          "A specific type of math problem for students",
+          "An actual explosive used in a combat zone",
           "Malware that triggers on a specific event or time"
         ],
         "answer": "Malware that triggers on a specific event or time",
@@ -1641,9 +1641,9 @@ export const certifications = [
         "id": "sec-plus-q31",
         "question": "What is 'Biometrics'?",
         "options": [
-          "A secure password manager",
-          "A type of firewall",
-          "Studying biological data",
+          "A secure password manager for all accounts",
+          "A type of firewall for network protection",
+          "Studying biological data sets for research",
           "Using physical traits for authentication"
         ],
         "answer": "Using physical traits for authentication",
@@ -1655,10 +1655,10 @@ export const certifications = [
         "id": "sec-plus-q32",
         "question": "What is 'Two-Factor Authentication' (2FA)?",
         "options": [
-          "Having two accounts",
-          "Logging in twice",
-          "Using two different types of credentials",
-          "Using two passwords"
+          "Having two different accounts for one service",
+          "The act of logging in twice to the same system",
+          "Using two different passwords for one account",
+          "Using two different types of credentials"
         ],
         "answer": "Using two different types of credentials",
         "category": "Domain Review",
@@ -1669,9 +1669,9 @@ export const certifications = [
         "id": "sec-plus-q33",
         "question": "What is a 'Penetration Test'?",
         "options": [
-          "A hardware stress test",
-          "A network speed test",
-          "A test of ink levels",
+          "A hardware stress test for computer components",
+          "A network speed test for measuring bandwidth",
+          "A test of ink levels in a professional printer",
           "An authorized simulated attack to find flaws"
         ],
         "answer": "An authorized simulated attack to find flaws",
@@ -1697,9 +1697,9 @@ export const certifications = [
         "id": "sec-plus-q35",
         "question": "What is 'Mobile Device Management' (MDM)?",
         "options": [
-          "A phone repair shop",
-          "A type of mobile app",
-          "Hiring a mobile expert",
+          "A professional phone repair shop in a city center",
+          "A specific type of mobile app for playing games",
+          "Hiring a professional mobile expert to manage devices",
           "Software used to manage and secure mobile devices"
         ],
         "answer": "Software used to manage and secure mobile devices",
@@ -1711,10 +1711,10 @@ export const certifications = [
         "id": "sec-plus-q36",
         "question": "What does 'WPA3' improve over WPA2?",
         "options": [
-          "Better Wi-Fi range",
+          "Better Wi-Fi range for large office buildings",
           "Better encryption and protection against brute force",
-          "Cheaper hardware",
-          "Faster speeds only"
+          "Cheaper hardware for small home applications",
+          "Faster speeds only for all network connections"
         ],
         "answer": "Better encryption and protection against brute force",
         "category": "Domain Review",
@@ -1725,9 +1725,9 @@ export const certifications = [
         "id": "sec-plus-q37",
         "question": "What is 'War Driving'?",
         "options": [
-          "A military exercise",
-          "A type of car race",
-          "Driving a tank",
+          "A specific type of high-speed car race",
+          "A standard military exercise for troops",
+          "Driving a large tank in a combat zone",
           "Searching for Wi-Fi networks from a vehicle"
         ],
         "answer": "Searching for Wi-Fi networks from a vehicle",
@@ -1739,10 +1739,10 @@ export const certifications = [
         "id": "sec-plus-q38",
         "question": "What does a Firewall do?",
         "options": [
-          "Cool down the server room",
-          "Detect viruses on a hard drive",
+          "Cool down the hardware in the server room",
+          "Detect viruses on a computer hard drive",
           "Filter traffic based on security rules",
-          "Speed up internet connection"
+          "Speed up the local internet connection"
         ],
         "answer": "Filter traffic based on security rules",
         "category": "Domain Review",
@@ -1754,9 +1754,9 @@ export const certifications = [
         "question": "What is a 'Backdoor'?",
         "options": [
           "A hidden way to bypass security",
-          "A real door",
-          "A secure login",
-          "A type of firewall"
+          "A real physical door at the back of a room",
+          "A specific type of network security firewall",
+          "A standard secure login for a web application"
         ],
         "answer": "A hidden way to bypass security",
         "category": "Domain Review",
@@ -1767,12 +1767,12 @@ export const certifications = [
         "id": "sec-plus-q40",
         "question": "Which of these is a social engineering attack?",
         "options": [
-          "Buffer overflow",
-          "Cross-site scripting",
-          "SQLi",
-          "Tailgating"
+          "Buffer overflow (Memory)",
+          "Cross-site scripting (Web)",
+          "SQLi (Injection)",
+          "Tailgating (Physical)"
         ],
-        "answer": "Tailgating",
+        "answer": "Tailgating (Physical)",
         "category": "Domain Review",
         "explanation": "Tailgating involves physically following an authorized person into a secure area.",
         "topic": "Attacks & Threats"
@@ -1781,10 +1781,10 @@ export const certifications = [
         "id": "sec-plus-q41",
         "question": "What is 'Steganography'?",
         "options": [
-          "A secure network protocol",
-          "A type of stenography",
+          "A secure network protocol for transmitting data",
+          "A specific type of professional stenography",
           "Hiding data within other data (like an image)",
-          "Writing very fast"
+          "The act of writing very fast during a meeting"
         ],
         "answer": "Hiding data within other data (like an image)",
         "category": "Domain Review",
@@ -1823,10 +1823,10 @@ export const certifications = [
         "id": "sec-plus-q44",
         "question": "What is the purpose of 'Sandboxing'?",
         "options": [
-          "Cleaning a hard drive",
-          "Playing with sand",
+          "Cleaning a physical hard drive with a cloth",
           "Running suspicious programs in an isolated area",
-          "Testing website designs"
+          "Testing website designs for better appearance",
+          "The act of playing with sand on a large beach"
         ],
         "answer": "Running suspicious programs in an isolated area",
         "category": "Domain Review",
@@ -1837,10 +1837,10 @@ export const certifications = [
         "id": "sec-plus-q45",
         "question": "What is 'Identification' in security?",
         "options": [
-          "Checking an ID card",
-          "Looking in a mirror",
+          "Checking an ID card at the building entrance",
+          "Looking in a mirror to check your appearance",
           "Stating who you are (e.g., username)",
-          "Taking a photo"
+          "Taking a professional photo for a staff badge"
         ],
         "answer": "Stating who you are (e.g., username)",
         "category": "Domain Review",
@@ -1851,10 +1851,10 @@ export const certifications = [
         "id": "sec-plus-q46",
         "question": "What does 'Integrity' mean in security?",
         "options": [
-          "Being honest",
+          "Being honest in all professional interactions",
           "Ensuring data has not been tampered with",
-          "Keeping secrets",
-          "Making sure the website is fast"
+          "Keeping all organizational secrets safe",
+          "Making sure the website is fast and responsive"
         ],
         "answer": "Ensuring data has not been tampered with",
         "category": "Domain Review",
@@ -1865,10 +1865,10 @@ export const certifications = [
         "id": "sec-plus-q47",
         "question": "What is 'Authorization'?",
         "options": [
-          "Checking a password",
-          "Creating a new account",
+          "Checking a password for accessing a secure system",
+          "Creating a new account for a website or application",
           "Determining what an authenticated user can do",
-          "Entering a building"
+          "The act of entering a building through the front door"
         ],
         "answer": "Determining what an authenticated user can do",
         "category": "Domain Review",
@@ -1879,9 +1879,9 @@ export const certifications = [
         "id": "sec-plus-q48",
         "question": "What is 'Eavesdropping' in network security?",
         "options": [
-          "A secure protocol",
-          "A type of antenna",
-          "Listening through a wall",
+          "A secure network protocol for transmitting data",
+          "A type of antenna designed for receiving radio data",
+          "Listening through a physical wall using a device",
           "Unauthorized listening to private communication"
         ],
         "answer": "Unauthorized listening to private communication",
@@ -1893,9 +1893,9 @@ export const certifications = [
         "id": "sec-plus-q49",
         "question": "What is 'Data Loss Prevention' (DLP)?",
         "options": [
-          "A backup system",
-          "A secure hard drive",
-          "A way to find lost files",
+          "A secure and encrypted hardware hard drive",
+          "A specific way to find lost files on a computer",
+          "A standard backup system for organizational data",
           "Tools to prevent sensitive data from leaving the network"
         ],
         "answer": "Tools to prevent sensitive data from leaving the network",
@@ -1907,9 +1907,9 @@ export const certifications = [
         "id": "sec-plus-q50",
         "question": "What is a 'Trojan Horse'?",
         "options": [
-          "A secure downloader",
-          "A type of virus that replicates",
-          "A wooden statue",
+          "A large wooden statue from Greek mythology",
+          "A standard secure downloader for applications",
+          "A type of virus that replicates automatically",
           "Malware disguised as legitimate software"
         ],
         "answer": "Malware disguised as legitimate software",
@@ -2156,12 +2156,12 @@ export const certifications = [
         "id": "aws-ccp-q1",
         "question": "Which AWS service provides resizable compute capacity in the cloud?",
         "options": [
-          "AWS Lambda",
-          "Amazon EC2",
-          "Amazon RDS",
-          "Amazon S3"
+          "AWS Lambda (Serverless Functions)",
+          "Amazon EC2 (Elastic Compute Cloud)",
+          "Amazon RDS (Relational Database Service)",
+          "Amazon S3 (Simple Storage Service)"
         ],
-        "answer": "Amazon EC2",
+        "answer": "Amazon EC2 (Elastic Compute Cloud)",
         "category": "Core Knowledge",
         "explanation": "EC2 allows users to run virtual servers in the AWS cloud.",
         "topic": "Technology"
@@ -2170,12 +2170,12 @@ export const certifications = [
         "id": "aws-ccp-q2",
         "question": "In the Shared Responsibility Model, who is responsible for patching the guest OS?",
         "options": [
-          "AWS",
-          "Both",
-          "The Customer",
-          "Third-party vendor"
+          "AWS Cloud is responsible",
+          "Both parties are responsible",
+          "The Customer is responsible",
+          "Third-party vendor is responsible"
         ],
-        "answer": "The Customer",
+        "answer": "The Customer is responsible",
         "category": "Core Knowledge",
         "explanation": "AWS manages the infrastructure; the customer manages their data and OS.",
         "topic": "Security & Compliance"
@@ -2184,12 +2184,12 @@ export const certifications = [
         "id": "aws-ccp-q3",
         "question": "Which service is used to manage user access and permissions in AWS?",
         "options": [
-          "AWS Config",
-          "AWS IAM",
-          "AWS Shield",
-          "Amazon CloudWatch"
+          "AWS Config (Configuration Auditing Tool)",
+          "AWS IAM (Identity and Access Management)",
+          "AWS Shield (DDoS Protection Service)",
+          "Amazon CloudWatch (Monitoring Service)"
         ],
-        "answer": "AWS IAM",
+        "answer": "AWS IAM (Identity and Access Management)",
         "category": "Core Knowledge",
         "explanation": "Identity and Access Management (IAM) controls who can access AWS resources.",
         "topic": "Security & Compliance"
@@ -2198,12 +2198,12 @@ export const certifications = [
         "id": "aws-ccp-q4",
         "question": "What is the benefit of 'Elasticity' in cloud computing?",
         "options": [
-          "Accessing data from anywhere",
-          "Having a static IP address",
-          "Paying a fixed monthly fee",
-          "Scaling resources based on demand"
+          "Ability of having a static IP address",
+          "Ability to scale resources based on demand",
+          "Capability of accessing data from anywhere",
+          "Requirement of paying a fixed monthly fee"
         ],
-        "answer": "Scaling resources based on demand",
+        "answer": "Ability to scale resources based on demand",
         "category": "Core Knowledge",
         "explanation": "Elasticity allows a system to automatically add or remove resources to match load.",
         "topic": "Cloud Concepts"
@@ -2213,9 +2213,9 @@ export const certifications = [
         "question": "Which AWS tool helps estimate monthly cloud costs?",
         "options": [
           "AWS Pricing Calculator",
-          "AWS Shield",
+          "AWS Shield Advanced",
           "AWS Trusted Advisor",
-          "Amazon Inspector"
+          "Amazon Inspector Tool"
         ],
         "answer": "AWS Pricing Calculator",
         "category": "Core Knowledge",
@@ -2226,10 +2226,10 @@ export const certifications = [
         "id": "aws-ccp-q6",
         "question": "What is 'Cloud Native'?",
         "options": [
-          "A cloud provider",
-          "A type of software",
-          "Applications designed specifically for the cloud environment",
-          "Someone born in the cloud"
+          "A person who was born in the cloud computing era",
+          "A public cloud provider such as AWS or Azure",
+          "A specific type of software for managing data",
+          "Applications designed specifically for the cloud environment"
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
@@ -2240,9 +2240,9 @@ export const certifications = [
         "id": "aws-ccp-q7",
         "question": "What is an 'Availability Zone' (AZ)?",
         "options": [
-          "A backup hard drive",
-          "A city-wide network",
-          "A single server rack",
+          "A backup hard drive used for storing sensitive data sets",
+          "A large city-wide computer network for the general public",
+          "A single server rack located inside a small data center",
           "One or more discrete data centers with redundant power"
         ],
         "answer": "One or more discrete data centers with redundant power",
@@ -2254,9 +2254,9 @@ export const certifications = [
         "id": "aws-ccp-q8",
         "question": "What is 'Microservices'?",
         "options": [
-          "A simple app",
-          "A type of computer chip",
-          "A very small server",
+          "A simple application for tracking data sets",
+          "A type of computer chip for mobile devices",
+          "A very small server used for local hosting",
           "Breaking an app into small, independent services"
         ],
         "answer": "Breaking an app into small, independent services",
@@ -2268,10 +2268,10 @@ export const certifications = [
         "id": "aws-ccp-q9",
         "question": "What is a 'Virtual Private Cloud' (VPC)?",
         "options": [
-          "A VPN",
-          "A personal server",
+          "A personal server hosted in a private home",
           "A private network section within a public cloud",
-          "A secure website"
+          "A secure website with a SSL certificate",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
@@ -2282,9 +2282,9 @@ export const certifications = [
         "id": "aws-ccp-q10",
         "question": "What is 'Virtualization' in cloud computing?",
         "options": [
-          "A VR headset",
-          "A computer game",
-          "A fake cloud",
+          "A VR headset used for playing immersive virtual reality computer games",
+          "A computer game designed for teaching general technology concepts",
+          "A fake cloud-based service that does not have any real data sets",
           "Technology that allows creating multiple simulated environments from one physical system"
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
@@ -2296,10 +2296,10 @@ export const certifications = [
         "id": "aws-ccp-q11",
         "question": "What is 'Object Storage'?",
         "options": [
-          "A folder on a PC",
-          "A type of database",
+          "A simple hierarchical folder stored on a personal computer",
+          "A specific type of database optimized for storing metadata",
           "Data stored as objects with metadata and a unique identifier",
-          "Storing physical objects"
+          "Storing physical objects in a warehouse or storage facility"
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
@@ -2310,10 +2310,10 @@ export const certifications = [
         "id": "aws-ccp-q12",
         "question": "What is the 'Shared Responsibility Model'?",
         "options": [
+          "A collaborative group project for a university course",
           "A framework defining security tasks for provider and customer",
-          "A group project",
-          "Sharing a password",
-          "Splitting the cloud bill"
+          "Sharing a secure account password with another team member",
+          "Splitting the monthly cloud bill between multiple departments"
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
@@ -2324,9 +2324,9 @@ export const certifications = [
         "id": "aws-ccp-q13",
         "question": "What is 'File Storage'?",
         "options": [
-          "A backup on a CD",
-          "A filing cabinet",
-          "A type of cloud",
+          "A copy of data saved on a standard physical compact disc",
+          "A physical filing cabinet used for storing paper documents",
+          "A specific type of cloud service for general data storage",
           "Data stored in a hierarchical folder structure"
         ],
         "answer": "Data stored in a hierarchical folder structure",
@@ -2338,10 +2338,10 @@ export const certifications = [
         "id": "aws-ccp-q14",
         "question": "What is a 'Container'?",
         "options": [
-          "A box for servers",
+          "A large physical box used for shipping computer servers",
           "A lightweight, portable unit containing an app and its dependencies",
-          "A secure room",
-          "A type of storage"
+          "A secure and locked room for housing organizational data",
+          "A specific type of storage device for saving digital files"
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
@@ -2352,9 +2352,9 @@ export const certifications = [
         "id": "aws-ccp-q15",
         "question": "What is 'Hybrid IT'?",
         "options": [
-          "A computer that runs on gas",
-          "A fast internet connection",
-          "A type of server",
+          "A fast internet connection for high-speed transfers",
+          "A specialized computer that runs on natural gas",
+          "A standard computer server for managing data sets",
           "Combining on-premises infrastructure with cloud services"
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
@@ -2380,10 +2380,10 @@ export const certifications = [
         "id": "aws-ccp-q17",
         "question": "What is 'Cloud Logging'?",
         "options": [
-          "A type of storage",
-          "Cutting down trees",
+          "A specific type of storage device for local data backups",
           "Recording events and activities in the cloud for auditing",
-          "Writing a diary"
+          "The act of cutting down trees for timber production",
+          "The act of writing a personal diary at the end of the day"
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
@@ -2394,10 +2394,10 @@ export const certifications = [
         "id": "aws-ccp-q18",
         "question": "What is 'Edge Computing'?",
         "options": [
-          "Building a cloud on a cliff",
-          "Fast internet at home",
+          "A fast internet connection used for general home browsing",
+          "Building a physical cloud data center on a mountain cliff",
           "Processing data closer to the source of data generation",
-          "Using the latest hardware"
+          "Using the latest computer hardware for high-speed processing"
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
@@ -2408,9 +2408,9 @@ export const certifications = [
         "id": "aws-ccp-q19",
         "question": "What is 'Cloud Security'?",
         "options": [
-          "A guard in a data center",
-          "A lock on a server",
-          "A secure browser",
+          "A physical lock placed on a computer server in a rack",
+          "A professional security guard working in a data center",
+          "A secure and encrypted web browser for accessing the web",
           "The set of technologies and policies to protect cloud data and apps"
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
@@ -2422,9 +2422,9 @@ export const certifications = [
         "id": "aws-ccp-q20",
         "question": "What is 'Reserved Instances'?",
         "options": [
-          "A backup system",
-          "A private server",
-          "A type of storage",
+          "A backup system for saving organizational data",
+          "A private server for an individual organization",
+          "A specific type of storage for active data sets",
           "Pre-paying for cloud capacity at a discounted rate"
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
@@ -2436,9 +2436,9 @@ export const certifications = [
         "id": "aws-ccp-q21",
         "question": "What is 'Block Storage'?",
         "options": [
-          "A secure vault",
-          "A type of memory",
-          "A wall of servers",
+          "A large wall made of physical computer servers in a rack",
+          "A secure and locked vault used for storing physical data",
+          "A specific type of computer memory for high-speed tasks",
           "Data stored in fixed-size blocks, usually for database use"
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
@@ -2450,9 +2450,9 @@ export const certifications = [
         "id": "aws-ccp-q22",
         "question": "What is 'Spot Instances'?",
         "options": [
-          "A server with spots",
-          "A temporary cloud",
-          "A type of storage",
+          "A physical server with spots on its chassis",
+          "A specific type of storage for active data sets",
+          "A temporary cloud environment for testing apps",
           "Using spare cloud capacity at a large discount"
         ],
         "answer": "Using spare cloud capacity at a large discount",
@@ -2465,9 +2465,9 @@ export const certifications = [
         "question": "What is a 'Cloud Gateway'?",
         "options": [
           "A bridge between on-premises and cloud networks",
-          "A fast router",
-          "A type of VPN",
-          "An entrance to a data center"
+          "A high-speed router for local area networks",
+          "A physical entrance to a secured data center",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
@@ -2478,9 +2478,9 @@ export const certifications = [
         "id": "aws-ccp-q24",
         "question": "What is 'Data Sovereignty'?",
         "options": [
-          "A king in the cloud",
-          "A secure database",
-          "A type of storage",
+          "A highly secure database with advanced encryption",
+          "A king or monarch ruling over a cloud-based kingdom",
+          "A specific type of storage device for local data sets",
           "Ensuring data is subject to the laws of the country where it's stored"
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
@@ -2492,9 +2492,9 @@ export const certifications = [
         "id": "aws-ccp-q25",
         "question": "What is a 'Hypervisor'?",
         "options": [
-          "A cloud manager",
-          "A type of network cable",
-          "A very fast processor",
+          "A professional manager who oversees a cloud department",
+          "A specific type of high-speed network cable for data",
+          "A very fast computer processor for high-end gaming",
           "Software that creates and runs virtual machines"
         ],
         "answer": "Software that creates and runs virtual machines",
@@ -2520,10 +2520,10 @@ export const certifications = [
         "id": "aws-ccp-q27",
         "question": "What is 'Serverless Database'?",
         "options": [
-          "A database for everyone",
-          "A database on a USB",
+          "A database stored on a physical USB flash drive",
           "A database that scales automatically and has no fixed cost",
-          "A file in the cloud"
+          "A simple text file stored in a cloud environment",
+          "A standard database that is available for everyone"
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
@@ -2534,9 +2534,9 @@ export const certifications = [
         "id": "aws-ccp-q28",
         "question": "What is 'Identity and Access Management' (IAM)?",
         "options": [
-          "A driver's license",
-          "A login page",
-          "A security guard",
+          "A physical driver's license used for identification",
+          "A security guard who protects the data center building",
+          "A standard login page for a website or application",
           "Managing users and their permissions to access cloud resources"
         ],
         "answer": "Managing users and their permissions to access cloud resources",
@@ -2562,9 +2562,9 @@ export const certifications = [
         "id": "aws-ccp-q30",
         "question": "What is 'Cloud Billing'?",
         "options": [
-          "A paper bill in the mail",
-          "A software license",
-          "A type of payment",
+          "A paper bill sent through the standard mail",
+          "A specific type of payment for web services",
+          "A standard software license for applications",
           "How cloud providers charge for their services"
         ],
         "answer": "How cloud providers charge for their services",
@@ -2576,10 +2576,10 @@ export const certifications = [
         "id": "aws-ccp-q31",
         "question": "What is 'Content Delivery Network' (CDN)?",
         "options": [
-          "A TV station",
-          "A fast internet connection",
+          "A fast internet connection for home users to browse the web",
           "A system of distributed servers that deliver web content to users",
-          "A type of storage"
+          "A television station for broadcasting news and information",
+          "A type of storage device for local backups of data files"
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
@@ -2590,9 +2590,9 @@ export const certifications = [
         "id": "aws-ccp-q32",
         "question": "What is 'DevOps' in the cloud?",
         "options": [
-          "A hardware engineer",
-          "A programming language",
-          "A type of cloud",
+          "A hardware engineer who designs data centers",
+          "A programming language used for cloud apps",
+          "A specific type of cloud for development tasks",
           "Combining development and operations to improve speed and quality"
         ],
         "answer": "Combining development and operations to improve speed and quality",
@@ -2604,9 +2604,9 @@ export const certifications = [
         "id": "aws-ccp-q33",
         "question": "What is 'Kubernetes'?",
         "options": [
-          "A cloud provider",
-          "A programming language",
-          "A type of database",
+          "A programming language used for creating web applications",
+          "A public cloud provider for storing organizational data",
+          "A specific type of database optimized for container data",
           "An open-source system for automating deployment and management of containers"
         ],
         "answer": "An open-source system for automating deployment and management of containers",
@@ -2646,9 +2646,9 @@ export const certifications = [
         "id": "aws-ccp-q36",
         "question": "What is 'Elasticity'?",
         "options": [
-          "A flexible cable",
-          "A type of cloud storage",
-          "Fast network speed",
+          "A flexible cable used for connecting networking devices",
+          "A specific type of cloud-based service for data storage",
+          "A very fast network speed for transmitting large data sets",
           "The ability to automatically scale resources based on demand"
         ],
         "answer": "The ability to automatically scale resources based on demand",
@@ -2660,9 +2660,9 @@ export const certifications = [
         "id": "aws-ccp-q37",
         "question": "What is a 'Private Cloud'?",
         "options": [
-          "A cloud with a password",
-          "A hidden data center",
-          "A personal hard drive",
+          "A cloud-based service that is protected with a password",
+          "A hidden data center facility with no public access points",
+          "A personal hard drive used for storing digital information",
           "Cloud resources used exclusively by one organization"
         ],
         "answer": "Cloud resources used exclusively by one organization",
@@ -2674,10 +2674,10 @@ export const certifications = [
         "id": "aws-ccp-q38",
         "question": "What is 'Disaster Recovery' (DR)?",
         "options": [
-          "A backup on a USB",
-          "A government program",
-          "Fixing a broken PC",
-          "Plans and processes to restore IT systems after a major failure"
+          "A standard backup saved on a physical USB drive",
+          "A standard government program for disaster relief",
+          "Plans and processes to restore IT systems after a major failure",
+          "The simple act of fixing a broken personal computer"
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
@@ -2688,9 +2688,9 @@ export const certifications = [
         "id": "aws-ccp-q39",
         "question": "What is a 'Public Cloud'?",
         "options": [
-          "A cloud for everyone",
-          "A free Wi-Fi hotspot",
-          "A government network",
+          "A free Wi-Fi hotspot available for public use in a city",
+          "A generic cloud-based service that is open for everyone to use",
+          "A government-owned and operated internal computer network",
           "Services offered by third-party providers over the public internet"
         ],
         "answer": "Services offered by third-party providers over the public internet",
@@ -2702,10 +2702,10 @@ export const certifications = [
         "id": "aws-ccp-q40",
         "question": "What is a 'Cloud Migration'?",
         "options": [
-          "Birds flying south",
-          "Buying new servers",
+          "Buying new computer servers for an internal data center",
           "Moving data and apps from on-premises to the cloud",
-          "Updating a website"
+          "The act of updating a website with new content and images",
+          "The natural process of birds flying south during winter"
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
@@ -2716,9 +2716,9 @@ export const certifications = [
         "id": "aws-ccp-q41",
         "question": "What is 'High Availability' (HA)?",
         "options": [
-          "A cloud for everyone",
-          "A tall server",
-          "Fast internet",
+          "A fast internet connection for data transfers",
+          "A public cloud service for everyone to use",
+          "A very tall server rack in a data center",
           "Systems that are durable and likely to operate continuously"
         ],
         "answer": "Systems that are durable and likely to operate continuously",
@@ -2730,10 +2730,10 @@ export const certifications = [
         "id": "aws-ccp-q42",
         "question": "What is 'Cloud Monitoring'?",
         "options": [
-          "A security guard",
-          "A software update",
+          "A security guard who monitors the server room",
+          "A standard software update for computer apps",
           "Observing the performance and health of cloud resources",
-          "Watching a cloud"
+          "The act of watching a cloud in the natural sky"
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
@@ -2744,10 +2744,10 @@ export const certifications = [
         "id": "aws-ccp-q43",
         "question": "What is 'Fault Tolerance'?",
         "options": [
-          "A bug in the software",
-          "A hardware warranty",
-          "Being very patient",
-          "The ability of a system to continue operating even if a component fails"
+          "A hardware warranty that covers parts and labor costs",
+          "A minor bug in the software application source code",
+          "The ability of a system to continue operating even if a component fails",
+          "The act of being very patient during a system outage"
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
@@ -2758,10 +2758,10 @@ export const certifications = [
         "id": "aws-ccp-q44",
         "question": "What is a 'Region' in cloud computing?",
         "options": [
-          "A country-wide network",
+          "A large country-wide computer network for public use",
           "A physical location containing multiple availability zones",
-          "A single data center",
-          "A virtual private cloud"
+          "A single data center facility located in a remote area",
+          "A virtual private cloud connection for an individual"
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
@@ -2772,9 +2772,9 @@ export const certifications = [
         "id": "aws-ccp-q45",
         "question": "What is 'Auto Scaling'?",
         "options": [
-          "A hardware upgrade",
-          "A self-adjusting scale",
-          "A type of cloud billing",
+          "A self-adjusting physical scale used for measuring weight",
+          "A specific type of cloud billing for managing monthly costs",
+          "A standard hardware upgrade for increasing system speed",
           "Automatically adding or removing instances based on load"
         ],
         "answer": "Automatically adding or removing instances based on load",
@@ -2787,9 +2787,9 @@ export const certifications = [
         "question": "What is a 'Cloud Service Provider' (CSP)?",
         "options": [
           "A company that offers cloud computing services",
-          "A hardware manufacturer",
-          "A website developer",
-          "An internet provider"
+          "A hardware manufacturer that produces computer components",
+          "A standard internet provider for home and business use",
+          "A website developer who creates online content and sites"
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
@@ -2800,12 +2800,12 @@ export const certifications = [
         "id": "aws-ccp-q47",
         "question": "What is 'SaaS'?",
         "options": [
-          "Security as a Service",
-          "Software as a Service",
-          "Storage as a Service",
-          "System as a Service"
+          "Security as a Service (SaaS)",
+          "Software as a Service (SaaS)",
+          "Storage as a Service (SaaS)",
+          "System as a Service (SaaS)"
         ],
-        "answer": "Software as a Service",
+        "answer": "Software as a Service (SaaS)",
         "category": "Domain Review",
         "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
         "topic": "Cloud Concepts"
@@ -2814,10 +2814,10 @@ export const certifications = [
         "id": "aws-ccp-q48",
         "question": "What is 'Terraform'?",
         "options": [
-          "A cloud provider",
-          "A database system",
-          "A planet",
-          "A popular tool for Infrastructure as Code"
+          "A database system for storing user profiles",
+          "A planet in the solar system such as Earth",
+          "A popular tool for Infrastructure as Code",
+          "A public cloud provider for data storage"
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
@@ -2828,9 +2828,9 @@ export const certifications = [
         "id": "aws-ccp-q49",
         "question": "What is 'Low Latency'?",
         "options": [
-          "A cheap cloud",
-          "A slow network",
-          "A small file size",
+          "A cheap cloud service with low capacity",
+          "A slow network with many interruptions",
+          "A small file size for fast transmission",
           "Minimal delay in data transmission"
         ],
         "answer": "Minimal delay in data transmission",
@@ -2842,10 +2842,10 @@ export const certifications = [
         "id": "aws-ccp-q50",
         "question": "What is 'Infrastructure as Code' (IaC)?",
         "options": [
-          "A hardware manual",
-          "A type of cloud billing",
+          "A hardware manual for installing server equipment",
+          "A type of cloud billing for managing monthly costs",
           "Managing infrastructure using configuration files and code",
-          "Writing code on a server"
+          "Writing computer code on a local developer server"
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
@@ -3086,12 +3086,12 @@ export const certifications = [
         "id": "pmp-q1",
         "question": "In Scrum, who is responsible for prioritizing the Product Backlog?",
         "options": [
-          "Development Team",
-          "Product Owner",
-          "Project Manager",
-          "Scrum Master"
+          "The Development Team members",
+          "The Product Owner of the project",
+          "The Project Manager of the org",
+          "The Scrum Master of the team"
         ],
-        "answer": "Product Owner",
+        "answer": "The Product Owner of the project",
         "category": "Core Knowledge",
         "explanation": "The Product Owner represents the business and prioritizes work for the team.",
         "topic": "Process"
@@ -3100,12 +3100,12 @@ export const certifications = [
         "id": "pmp-q2",
         "question": "What is the 'Critical Path' in a project schedule?",
         "options": [
-          "Tasks with the most budget",
-          "The list of easy tasks",
-          "The longest sequence of tasks",
-          "The shortest sequence of tasks"
+          "Tasks with the most budget allocated",
+          "The list of easy tasks in the project",
+          "The longest sequence of dependent tasks",
+          "The shortest sequence of tasks available"
         ],
-        "answer": "The longest sequence of tasks",
+        "answer": "The longest sequence of dependent tasks",
         "category": "Core Knowledge",
         "explanation": "The critical path determines the minimum duration of the project.",
         "topic": "Process"
@@ -3114,12 +3114,12 @@ export const certifications = [
         "id": "pmp-q3",
         "question": "Which methodology uses 'Sprints' to deliver incremental value?",
         "options": [
-          "Agile",
-          "PRINCE2",
-          "Six Sigma",
-          "Waterfall"
+          "Agile frameworks such as Scrum",
+          "PRINCE2 structured methodology",
+          "Six Sigma process improvement",
+          "Waterfall sequential methodology"
         ],
-        "answer": "Agile",
+        "answer": "Agile frameworks such as Scrum",
         "category": "Core Knowledge",
         "explanation": "Agile frameworks like Scrum break work into short time-boxed iterations.",
         "topic": "Process"
@@ -3128,10 +3128,10 @@ export const certifications = [
         "id": "pmp-q4",
         "question": "How should a project manager handle a highly influential but resistant stakeholder?",
         "options": [
-          "Assign them more tasks",
-          "Ignore them",
+          "Assign them more technical tasks",
+          "Ignore them until the project ends",
           "Manage closely and engage frequently",
-          "Remove them from the project"
+          "Remove them from the project team"
         ],
         "answer": "Manage closely and engage frequently",
         "category": "Core Knowledge",
@@ -3156,9 +3156,9 @@ export const certifications = [
         "id": "pmp-q6",
         "question": "What does 'Scope Creep' mean?",
         "options": [
-          "A bug in the software",
-          "A decrease in project budget",
-          "A slow project manager",
+          "A decrease in the project budget allocation",
+          "A minor bug in the software application",
+          "A slow project manager who misses deadlines",
           "Uncontrolled changes in project requirements"
         ],
         "answer": "Uncontrolled changes in project requirements",
@@ -3171,9 +3171,9 @@ export const certifications = [
         "question": "What is 'Velocity' in Agile?",
         "options": [
           "A measure of the amount of work a team can complete in a sprint",
-          "A network protocol",
-          "A type of computer code",
-          "Speed of a car"
+          "A network protocol designed for fast data transmission",
+          "A type of computer code used for measuring system speed",
+          "The speed of a car traveling on a long highway journey"
         ],
         "answer": "A measure of the amount of work a team can complete in a sprint",
         "category": "Domain Review",
@@ -3185,9 +3185,9 @@ export const certifications = [
         "question": "What is a 'PMO' (Project Management Office)?",
         "options": [
           "A department that centralizes and coordinates project management",
-          "A hardware manufacturer",
-          "A type of computer",
-          "A website developer"
+          "A hardware manufacturer that produces project equipment",
+          "A type of computer designed for project management tasks",
+          "A website developer who specializes in project portals"
         ],
         "answer": "A department that centralizes and coordinates project management",
         "category": "Domain Review",
@@ -3212,10 +3212,10 @@ export const certifications = [
         "id": "pmp-q10",
         "question": "What is a 'User Story'?",
         "options": [
-          "A bedtime story",
+          "A bedtime story told to children before they go to sleep",
           "A short description of a feature from an end-user perspective",
-          "A software manual",
-          "A type of book"
+          "A software manual explaining how to use system features",
+          "A type of book that contains many different short stories"
         ],
         "answer": "A short description of a feature from an end-user perspective",
         "category": "Domain Review",
@@ -3226,9 +3226,9 @@ export const certifications = [
         "id": "pmp-q11",
         "question": "What is 'Quality Control' (QC)?",
         "options": [
-          "A hardware warranty",
-          "A software tool",
-          "Controlling the team",
+          "A hardware warranty for repairing broken components",
+          "A software tool designed for tracking project tasks",
+          "Controlling the team members and their activities",
           "Monitoring project results to ensure they meet standards"
         ],
         "answer": "Monitoring project results to ensure they meet standards",
@@ -3241,9 +3241,9 @@ export const certifications = [
         "question": "What is 'Sprint Planning'?",
         "options": [
           "A meeting where the team decides what to work on in the next sprint",
-          "A software update",
-          "A type of project",
-          "Running a race"
+          "A specific type of project that requires rapid development",
+          "A standard software update for project management applications",
+          "The act of running a race at maximum speed for a distance"
         ],
         "answer": "A meeting where the team decides what to work on in the next sprint",
         "category": "Domain Review",
@@ -3254,10 +3254,10 @@ export const certifications = [
         "id": "pmp-q13",
         "question": "What is a 'Lessons Learned' session?",
         "options": [
-          "A classroom lecture",
+          "A classroom lecture given by a senior project manager",
           "A meeting to discuss what went well and what didn't in a project",
-          "A software update",
-          "A type of test"
+          "A standard software update for project management apps",
+          "A type of test designed to evaluate project knowledge"
         ],
         "answer": "A meeting to discuss what went well and what didn't in a project",
         "category": "Domain Review",
@@ -3268,9 +3268,9 @@ export const certifications = [
         "id": "pmp-q14",
         "question": "What is 'Cost Baseline'?",
         "options": [
-          "A financial report",
-          "A low-cost project",
-          "A type of database",
+          "A low-cost project designed for small organizations and teams",
+          "A standard financial report generated at the end of the year",
+          "A type of database optimized for storing project budget data",
           "The approved version of the project budget, used to measure performance"
         ],
         "answer": "The approved version of the project budget, used to measure performance",
@@ -3283,9 +3283,9 @@ export const certifications = [
         "question": "What is a 'SOW' (Statement of Work)?",
         "options": [
           "A document describing the work to be performed under contract",
-          "A financial report",
-          "A list of team members",
-          "A type of pig"
+          "A financial report detailing the project expenditures",
+          "A list of team members and their contact information",
+          "A specific type of pig found on a residential farm"
         ],
         "answer": "A document describing the work to be performed under contract",
         "category": "Domain Review",
@@ -3296,10 +3296,10 @@ export const certifications = [
         "id": "pmp-q16",
         "question": "What is a 'Daily Stand-up'?",
         "options": [
-          "A marathon coding session",
+          "A marathon coding session for developers",
           "A short daily meeting to discuss progress",
-          "A weekly project review",
-          "An exercise break for the team"
+          "A weekly project review for the entire team",
+          "An exercise break for the team members"
         ],
         "answer": "A short daily meeting to discuss progress",
         "category": "Domain Review",
@@ -3311,9 +3311,9 @@ export const certifications = [
         "question": "Who are 'Stakeholders'?",
         "options": [
           "Anyone affected by or involved in the project",
-          "Only the end-users",
-          "Only the investors",
-          "Only the project team"
+          "Only the end-users who will use the product",
+          "Only the investors who provide the funding",
+          "Only the project team members and managers"
         ],
         "answer": "Anyone affected by or involved in the project",
         "category": "Domain Review",
@@ -3324,9 +3324,9 @@ export const certifications = [
         "id": "pmp-q18",
         "question": "What is a 'Story Point'?",
         "options": [
-          "A network protocol",
-          "A part of a book",
-          "A type of computer code",
+          "A network protocol designed for transmitting project data sets",
+          "A specific part of a book that contains a narrative or tale",
+          "A type of computer code used for project management tasks",
           "A unit of measure for expressing an estimate of the size of a user story"
         ],
         "answer": "A unit of measure for expressing an estimate of the size of a user story",
@@ -3338,9 +3338,9 @@ export const certifications = [
         "id": "pmp-q19",
         "question": "What is 'Portfolio Management'?",
         "options": [
-          "A financial account",
-          "A leather folder",
-          "A type of database",
+          "A financial account used for tracking project expenses",
+          "A leather folder used for carrying project documents",
+          "A type of database optimized for storing project data",
           "Managing a collection of projects and programs to meet strategic goals"
         ],
         "answer": "Managing a collection of projects and programs to meet strategic goals",
@@ -3352,10 +3352,10 @@ export const certifications = [
         "id": "pmp-q20",
         "question": "What is 'Backlog Grooming' (or Refinement)?",
         "options": [
-          "A financial report",
-          "A type of software bug",
-          "Cleaning a room",
-          "Keeping the product backlog up to date and prioritized"
+          "A specific type of software bug found in the backlog",
+          "A standard financial report on the state of the backlog",
+          "Keeping the product backlog up to date and prioritized",
+          "The act of cleaning a room and organizing all its items"
         ],
         "answer": "Keeping the product backlog up to date and prioritized",
         "category": "Domain Review",
@@ -3367,9 +3367,9 @@ export const certifications = [
         "question": "What is a 'Sprint Retrospective'?",
         "options": [
           "A meeting to discuss how to improve the team's process",
-          "A software update",
-          "A type of test",
-          "Looking back in time"
+          "A standard software update for project management applications",
+          "A type of test designed to evaluate the team's performance",
+          "The act of looking back in time to study historical events"
         ],
         "answer": "A meeting to discuss how to improve the team's process",
         "category": "Domain Review",
@@ -3380,9 +3380,9 @@ export const certifications = [
         "id": "pmp-q22",
         "question": "What is 'Lean' project management?",
         "options": [
-          "A fast-paced methodology",
-          "A small project",
-          "A type of exercise",
+          "A fast-paced and highly efficient project methodology",
+          "A small project that requires very few resources",
+          "A specific type of physical exercise for project teams",
           "Focusing on maximizing value and minimizing waste"
         ],
         "answer": "Focusing on maximizing value and minimizing waste",
@@ -3395,9 +3395,9 @@ export const certifications = [
         "question": "What is 'Scrum'?",
         "options": [
           "A framework for implementing Agile development",
-          "A rugby formation",
-          "A software tool",
-          "A type of database"
+          "A software tool designed for tracking team tasks",
+          "A standard rugby formation used during a match",
+          "A type of database optimized for project data"
         ],
         "answer": "A framework for implementing Agile development",
         "category": "Domain Review",
@@ -3408,10 +3408,10 @@ export const certifications = [
         "id": "pmp-q24",
         "question": "What is a 'Burndown Chart'?",
         "options": [
-          "A financial report",
-          "A fire hazard",
           "A graphical representation of work remaining versus time",
-          "A type of database"
+          "A physical fire hazard in a project management office",
+          "A standard financial report showing monthly project costs",
+          "A type of database optimized for storing chart information"
         ],
         "answer": "A graphical representation of work remaining versus time",
         "category": "Domain Review",
@@ -3422,10 +3422,10 @@ export const certifications = [
         "id": "pmp-q25",
         "question": "What is a 'Milestone'?",
         "options": [
-          "A large rock",
+          "A large rock found on the side of a highway",
           "A significant point or event in a project",
-          "A task that takes 1 hour",
-          "A unit of distance"
+          "A task that takes exactly one hour to finish",
+          "A unit of distance used for long-range travel"
         ],
         "answer": "A significant point or event in a project",
         "category": "Domain Review",
@@ -3436,10 +3436,10 @@ export const certifications = [
         "id": "pmp-q26",
         "question": "What is 'Iterative Development'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
+          "A network protocol designed for transmitting iterative data",
+          "A type of computer code used for creating iterative loops",
           "Developing a product through repeated cycles (iterations)",
-          "Repeating a task"
+          "The act of repeating a task multiple times for consistency"
         ],
         "answer": "Developing a product through repeated cycles (iterations)",
         "category": "Domain Review",
@@ -3450,9 +3450,9 @@ export const certifications = [
         "id": "pmp-q27",
         "question": "What is a 'Gantt Chart'?",
         "options": [
-          "A database schema",
-          "A financial spreadsheet",
-          "A risk management framework",
+          "A database schema for storing project data",
+          "A financial spreadsheet for tracking costs",
+          "A risk management framework for the team",
           "A visual representation of a project schedule"
         ],
         "answer": "A visual representation of a project schedule",
@@ -3464,10 +3464,10 @@ export const certifications = [
         "id": "pmp-q28",
         "question": "What is a 'Product Backlog'?",
         "options": [
-          "A financial report",
-          "A list of bugs",
+          "A detailed list of all software bugs found in a product",
+          "A large physical storage room for keeping product parts",
           "A prioritized list of everything that might be needed in a product",
-          "A storage room"
+          "A standard financial report on the annual product sales"
         ],
         "answer": "A prioritized list of everything that might be needed in a product",
         "category": "Domain Review",
@@ -3478,9 +3478,9 @@ export const certifications = [
         "id": "pmp-q29",
         "question": "What is 'Incremental Delivery'?",
         "options": [
-          "A delivery truck",
-          "A software update",
-          "A type of storage",
+          "A standard delivery truck for shipping consumer goods",
+          "A standard software update designed to fix minor system bugs",
+          "A type of storage device used for saving product archives",
           "Delivering a product in small, usable parts over time"
         ],
         "answer": "Delivering a product in small, usable parts over time",
@@ -3492,10 +3492,10 @@ export const certifications = [
         "id": "pmp-q30",
         "question": "What is 'Agile Manifesto'?",
         "options": [
-          "A book about projects",
+          "A book about different types of projects and teams",
           "A document outlining the values and principles of Agile",
-          "A hardware manual",
-          "A type of software"
+          "A hardware manual for installing networking equipment",
+          "A specific type of software for managing Agile tasks"
         ],
         "answer": "A document outlining the values and principles of Agile",
         "category": "Domain Review",
@@ -3520,9 +3520,9 @@ export const certifications = [
         "id": "pmp-q32",
         "question": "What is 'Resource Management'?",
         "options": [
-          "A software update",
-          "A type of database",
-          "Finding new resources",
+          "A standard software update for project management apps",
+          "A type of database optimized for storing project data",
+          "Finding new resources to be used for the project",
           "Managing people, equipment, and materials for a project"
         ],
         "answer": "Managing people, equipment, and materials for a project",
@@ -3535,9 +3535,9 @@ export const certifications = [
         "question": "What is 'Change Management'?",
         "options": [
           "A process for managing changes to project scope or plan",
-          "Buying new hardware",
-          "Exchanging money",
-          "Hiring new people"
+          "Buying new hardware for the development system",
+          "Exchanging money from one currency to another",
+          "Hiring new people to join the project team"
         ],
         "answer": "A process for managing changes to project scope or plan",
         "category": "Domain Review",
@@ -3548,10 +3548,10 @@ export const certifications = [
         "id": "pmp-q34",
         "question": "What is a 'Project Charter'?",
         "options": [
+          "A detailed map of the world for navigation",
           "A document that formally authorizes a project",
-          "A financial contract",
-          "A list of team members",
-          "A map of the world"
+          "A financial contract between two different parties",
+          "A list of team members and their assignments"
         ],
         "answer": "A document that formally authorizes a project",
         "category": "Domain Review",
@@ -3562,10 +3562,10 @@ export const certifications = [
         "id": "pmp-q35",
         "question": "What is 'PRINCE2'?",
         "options": [
-          "A hardware standard",
-          "A member of a royal family",
+          "A hardware standard for maintaining equipment consistency",
+          "A high-ranking member of a royal or noble family in Europe",
           "A structured project management methodology used widely in Europe",
-          "A type of software"
+          "A type of computer software for managing project structures"
         ],
         "answer": "A structured project management methodology used widely in Europe",
         "category": "Domain Review",
@@ -3577,9 +3577,9 @@ export const certifications = [
         "question": "What is an 'Epic'?",
         "options": [
           "A large body of work that can be broken down into many user stories",
-          "A long poem",
-          "A software manual",
-          "A type of movie"
+          "A software manual that describes the entire system architecture",
+          "A type of movie with a long duration and a very large budget",
+          "A very long poem that tells a story of heroic deeds and events"
         ],
         "answer": "A large body of work that can be broken down into many user stories",
         "category": "Domain Review",
@@ -3590,9 +3590,9 @@ export const certifications = [
         "id": "pmp-q37",
         "question": "What is 'Project Governance'?",
         "options": [
-          "A government agency",
-          "A security guard",
-          "A set of laws",
+          "A government agency responsible for project oversight",
+          "A security guard responsible for project site safety",
+          "A set of laws and regulations for managing projects",
           "The framework for project decision-making and oversight"
         ],
         "answer": "The framework for project decision-making and oversight",
@@ -3604,10 +3604,10 @@ export const certifications = [
         "id": "pmp-q38",
         "question": "What is 'Planning Poker'?",
         "options": [
-          "A card game",
           "A consensus-based estimation technique for user stories",
-          "A software tool",
-          "A type of gamble"
+          "A software tool used for tracking project development",
+          "A standard card game played with a deck of 52 cards",
+          "A type of financial gamble involving project outcomes"
         ],
         "answer": "A consensus-based estimation technique for user stories",
         "category": "Domain Review",
@@ -3618,9 +3618,9 @@ export const certifications = [
         "id": "pmp-q39",
         "question": "What is 'Agile' methodology?",
         "options": [
-          "A set of strict rules",
-          "A type of sport",
-          "A very fast router",
+          "A set of strict rules for managing organizational tasks",
+          "A type of competitive sport played by professional teams",
+          "A very fast router designed for high-speed networks",
           "An iterative approach to project management and software development"
         ],
         "answer": "An iterative approach to project management and software development",
@@ -3646,10 +3646,10 @@ export const certifications = [
         "id": "pmp-q41",
         "question": "What is 'Program Management'?",
         "options": [
-          "A hardware engineer",
-          "A type of software",
+          "A hardware engineer who designs program architecture",
+          "A type of software application for managing programs",
           "Managing a group of related projects to achieve benefits",
-          "Writing many programs"
+          "The act of writing many different computer programs"
         ],
         "answer": "Managing a group of related projects to achieve benefits",
         "category": "Domain Review",
@@ -3660,9 +3660,9 @@ export const certifications = [
         "id": "pmp-q42",
         "question": "What is 'Project Budget'?",
         "options": [
-          "A financial ledger",
-          "A list of tasks",
-          "A software manual",
+          "A detailed list of tasks required to complete a project",
+          "A software manual explaining how to manage project costs",
+          "A standard financial ledger for tracking company expenses",
           "The total amount of money allocated for a project"
         ],
         "answer": "The total amount of money allocated for a project",
@@ -3674,10 +3674,10 @@ export const certifications = [
         "id": "pmp-q43",
         "question": "What is a 'Sprint Review'?",
         "options": [
-          "A financial report",
           "A meeting to demonstrate the work completed during the sprint",
-          "A type of test",
-          "Checking a website"
+          "A standard financial report generated at the end of a sprint",
+          "A type of test designed to evaluate the quality of a sprint",
+          "The act of checking a website for new content and updates"
         ],
         "answer": "A meeting to demonstrate the work completed during the sprint",
         "category": "Domain Review",
@@ -3688,12 +3688,12 @@ export const certifications = [
         "id": "pmp-q44",
         "question": "What is 'Kanban'?",
         "options": [
-          "A Japanese car",
-          "A financial report",
-          "A type of computer code",
-          "A visual system for managing work as it moves through a process"
+          "A Japanese car designed for high-performance driving",
+          "A financial report that lists all project expenditures",
+          "A system for managing work as it moves through a process",
+          "A type of computer code used for project management"
         ],
-        "answer": "A visual system for managing work as it moves through a process",
+        "answer": "A system for managing work as it moves through a process",
         "category": "Domain Review",
         "explanation": "Kanban helps visualize workflow and limit work-in-progress.",
         "topic": "Process"
@@ -3703,9 +3703,9 @@ export const certifications = [
         "question": "What is a 'Feature' in project management?",
         "options": [
           "A distinct functionality or capability of a product",
-          "A network protocol",
-          "A part of a movie",
-          "A type of computer code"
+          "A network protocol designed for transmitting feature data",
+          "A specific part of a movie that features a main character",
+          "A type of computer code used for adding new functionalities"
         ],
         "answer": "A distinct functionality or capability of a product",
         "category": "Domain Review",
@@ -3716,10 +3716,10 @@ export const certifications = [
         "id": "pmp-q46",
         "question": "What is 'Risk Management'?",
         "options": [
-          "A type of insurance",
-          "Avoiding all risks",
+          "A specific type of insurance for project management",
+          "Avoiding all risks by not starting any new projects",
           "Identifying, assessing, and responding to project risks",
-          "Taking many chances"
+          "Taking many chances to achieve high project rewards"
         ],
         "answer": "Identifying, assessing, and responding to project risks",
         "category": "Domain Review",
@@ -3731,9 +3731,9 @@ export const certifications = [
         "question": "What is a 'Stakeholder Registry'?",
         "options": [
           "A document listing all project stakeholders and their info",
-          "A financial ledger",
-          "A guest book",
-          "A list of project tasks"
+          "A financial ledger for tracking project expenses",
+          "A list of project tasks and their current status",
+          "A simple guest book for visitors to sign their names"
         ],
         "answer": "A document listing all project stakeholders and their info",
         "category": "Domain Review",
@@ -3744,10 +3744,10 @@ export const certifications = [
         "id": "pmp-q48",
         "question": "What is 'Procurement Management'?",
         "options": [
-          "A type of storage",
-          "Hiring new people",
+          "A type of high-capacity storage for project data",
+          "Hiring new people to work on the project tasks",
           "Managing the purchase of goods and services for a project",
-          "Writing code"
+          "Writing computer code for a software application"
         ],
         "answer": "Managing the purchase of goods and services for a project",
         "category": "Domain Review",
@@ -3758,9 +3758,9 @@ export const certifications = [
         "id": "pmp-q49",
         "question": "What is 'Project Scope'?",
         "options": [
-          "A type of telescope",
-          "The budget of a project",
-          "The name of a project",
+          "A type of telescope used for astronomical viewing",
+          "The total budget allocated for a specific project",
+          "The unique name given to a specific project task",
           "The work that must be performed to deliver a result"
         ],
         "answer": "The work that must be performed to deliver a result",
@@ -3772,10 +3772,10 @@ export const certifications = [
         "id": "pmp-q50",
         "question": "What is 'Earned Value Management' (EVM)?",
         "options": [
-          "A software manual",
+          "A software manual that explains how to use EVM tools",
+          "A specific way to earn money through project tasks",
           "A technique to measure project performance and progress",
-          "A type of store",
-          "A way to earn money"
+          "A type of store that sells project management tools"
         ],
         "answer": "A technique to measure project performance and progress",
         "category": "Domain Review",
@@ -4044,12 +4044,12 @@ export const certifications = [
         "id": "aplus-q3",
         "question": "Which port is used for a standard wired network connection?",
         "options": [
-          "DisplayPort",
-          "HDMI",
-          "RJ-45",
-          "USB-C"
+          "DP connector",
+          "HDMI connector",
+          "RJ-45 connector",
+          "USB-C connector"
         ],
-        "answer": "RJ-45",
+        "answer": "RJ-45 connector",
         "category": "Core Knowledge",
         "explanation": "The Registered Jack 45 (RJ-45) is the standard connector for Ethernet cables.",
         "topic": "Hardware"
@@ -4058,12 +4058,12 @@ export const certifications = [
         "id": "aplus-q4",
         "question": "Which storage type has no moving parts and is faster than a traditional HDD?",
         "options": [
-          "CD-ROM",
-          "Floppy Disk",
-          "SSD",
-          "Tape Drive"
+          "Compact Disc (CD-ROM)",
+          "Flexible Floppy Disc",
+          "Magnetic Tape Drive",
+          "Solid State Drive (SSD)"
         ],
-        "answer": "SSD",
+        "answer": "Solid State Drive (SSD)",
         "category": "Core Knowledge",
         "explanation": "Solid State Drives (SSDs) use flash memory for high-speed data access.",
         "topic": "Hardware"
@@ -4087,9 +4087,9 @@ export const certifications = [
         "question": "What is 'Data Center'?",
         "options": [
           "A facility used to house computer systems and associated components",
-          "A hardware guard",
-          "A room with servers",
-          "A type of storage"
+          "A hardware guard that protects the main entrance of a room",
+          "A small office room containing a few computer servers",
+          "A type of storage device used for saving digital archives"
         ],
         "answer": "A facility used to house computer systems and associated components",
         "category": "Domain Review",
@@ -4101,9 +4101,9 @@ export const certifications = [
         "question": "What is 'Snapshot' in storage?",
         "options": [
           "A copy of a system or data at a specific point in time",
-          "A hardware upgrade",
-          "A photograph",
-          "A type of storage"
+          "A digital photograph taken with a standard camera",
+          "A hardware upgrade for increasing computer memory",
+          "A type of high-speed storage for active data files"
         ],
         "answer": "A copy of a system or data at a specific point in time",
         "category": "Domain Review",
@@ -4114,10 +4114,10 @@ export const certifications = [
         "id": "aplus-q8",
         "question": "What is 'Secure Boot'?",
         "options": [
-          "A hardware guard",
-          "A password on a PC",
+          "A hardware guard that protects the internal components of a computer",
           "A security standard that ensures a device boots using only trusted software",
-          "A type of antivirus"
+          "A standard password required to access a personal computer system",
+          "A type of antivirus software designed to scan for malware"
         ],
         "answer": "A security standard that ensures a device boots using only trusted software",
         "category": "Domain Review",
@@ -4128,10 +4128,10 @@ export const certifications = [
         "id": "aplus-q9",
         "question": "What is a 'MAC Address'?",
         "options": [
-          "A home address",
-          "A phone number",
-          "A serial number",
-          "A unique identifier assigned to a network interface controller"
+          "A physical home address for receiving standard postal mail",
+          "A unique identifier assigned to a network interface controller",
+          "A unique phone number for making voice calls and texts",
+          "A unique serial number assigned to a specific device"
         ],
         "answer": "A unique identifier assigned to a network interface controller",
         "category": "Domain Review",
@@ -4142,9 +4142,9 @@ export const certifications = [
         "id": "aplus-q10",
         "question": "What is 'Failover'?",
         "options": [
-          "A hardware warranty",
-          "A project failure",
-          "A software bug",
+          "A complete failure of a project to meet its objectives",
+          "A hardware warranty that covers component repair",
+          "A standard software bug that causes a crash",
           "Automatically switching to a redundant or standby system upon failure"
         ],
         "answer": "Automatically switching to a redundant or standby system upon failure",
@@ -4156,10 +4156,10 @@ export const certifications = [
         "id": "aplus-q11",
         "question": "What is a 'Router'?",
         "options": [
+          "A device that connects devices on a local area network",
           "A device that forwards data packets between computer networks",
-          "A hub",
-          "A repeater",
-          "A switch"
+          "A device that regenerates signals for long distance",
+          "A simple device that connects multiple computers in a hub"
         ],
         "answer": "A device that forwards data packets between computer networks",
         "category": "Domain Review",
@@ -4170,9 +4170,9 @@ export const certifications = [
         "id": "aplus-q12",
         "question": "What is 'Clustering'?",
         "options": [
-          "A group of people",
-          "A hardware update",
-          "A type of database",
+          "A hardware update for increasing server processing speed",
+          "A large group of people standing close to each other",
+          "A type of database optimized for grouping data sets",
           "Connecting multiple servers to work together as a single system"
         ],
         "answer": "Connecting multiple servers to work together as a single system",
@@ -4185,9 +4185,9 @@ export const certifications = [
         "question": "What is 'SSH' (Secure Shell)?",
         "options": [
           "A cryptographic network protocol for operating network services securely",
-          "A fast browser",
-          "A hardware guard",
-          "A type of internet cable"
+          "A hardware guard that protects the internal computer components",
+          "A type of high-speed internet cable used for data transmission",
+          "A very fast web browser for accessing secure online platforms"
         ],
         "answer": "A cryptographic network protocol for operating network services securely",
         "category": "Domain Review",
@@ -4198,9 +4198,9 @@ export const certifications = [
         "id": "aplus-q14",
         "question": "What is 'Colocation'?",
         "options": [
-          "A building with many rooms",
-          "A large cloud",
-          "Hiring many tenants",
+          "A large cloud-based service for storing organizational data",
+          "A large physical building with many different office rooms",
+          "Hiring many tenants to manage your data center infrastructure",
           "Renting space for your servers in a third-party data center"
         ],
         "answer": "Renting space for your servers in a third-party data center",
@@ -4213,9 +4213,9 @@ export const certifications = [
         "question": "What is 'Active Directory' (AD)?",
         "options": [
           "A directory service for Windows domain networks",
-          "A list of files",
-          "A phone book",
-          "A type of firewall"
+          "A physical phone book with names and numbers",
+          "A simple list of files stored in a local folder",
+          "A type of network firewall for blocking traffic"
         ],
         "answer": "A directory service for Windows domain networks",
         "category": "Domain Review",
@@ -4240,10 +4240,10 @@ export const certifications = [
         "id": "aplus-q17",
         "question": "What is 'TPM' (Trusted Platform Module)?",
         "options": [
-          "A hardware guard",
-          "A software update",
+          "A hardware guard that protects the physical ports of a computer system",
+          "A software update designed to improve the security of the operating system",
           "A specialized chip on a device that provides hardware-level security",
-          "A type of software"
+          "A type of software application used for data encryption on a computer"
         ],
         "answer": "A specialized chip on a device that provides hardware-level security",
         "category": "Domain Review",
@@ -4255,9 +4255,9 @@ export const certifications = [
         "question": "What is 'Docker' used for?",
         "options": [
           "Containerization of applications",
-          "Editing photos",
-          "Hosting a database",
-          "Scanning for viruses"
+          "Editing digital photos for web use",
+          "Hosting a database on a local server",
+          "Scanning for viruses on a computer"
         ],
         "answer": "Containerization of applications",
         "category": "Domain Review",
@@ -4268,9 +4268,9 @@ export const certifications = [
         "id": "aplus-q19",
         "question": "What is 'UEFI'?",
         "options": [
-          "A secure protocol",
-          "A software update",
-          "A type of network",
+          "A secure network protocol for transmitting data sets",
+          "A software update for the computer BIOS system",
+          "A type of high-speed local area network connection",
           "The modern replacement for the traditional BIOS"
         ],
         "answer": "The modern replacement for the traditional BIOS",
@@ -4282,9 +4282,9 @@ export const certifications = [
         "id": "aplus-q20",
         "question": "What is 'Patch Management'?",
         "options": [
-          "A hardware guard",
-          "A repair shop",
-          "A type of storage",
+          "A hardware guard that prevents physical access to ports",
+          "A physical repair shop for fixing broken computer parts",
+          "A type of permanent storage for large data archives",
           "The process of distributing and applying updates to software"
         ],
         "answer": "The process of distributing and applying updates to software",
@@ -4296,10 +4296,10 @@ export const certifications = [
         "id": "aplus-q21",
         "question": "What is a 'Firewall'?",
         "options": [
-          "A hardware update",
+          "A large physical wall made of bricks and mortar",
           "A network security system that monitors and controls traffic",
-          "A physical wall",
-          "A type of virus"
+          "A standard hardware update for increasing speed",
+          "A type of malicious virus that infects a computer"
         ],
         "answer": "A network security system that monitors and controls traffic",
         "category": "Domain Review",
@@ -4310,10 +4310,10 @@ export const certifications = [
         "id": "aplus-q22",
         "question": "What is 'Uptime'?",
         "options": [
-          "A hardware warranty",
-          "A type of network speed",
-          "The amount of time a system or service is operational",
-          "Waking up"
+          "A hardware warranty that covers component repair",
+          "A specific type of high-speed network connection",
+          "The act of waking up in the morning for work",
+          "The amount of time a system or service is operational"
         ],
         "answer": "The amount of time a system or service is operational",
         "category": "Domain Review",
@@ -4325,9 +4325,9 @@ export const certifications = [
         "question": "What is 'SLA' (Service Level Agreement)?",
         "options": [
           "A contract that defines the expected level of service from a provider",
-          "A hardware standard",
-          "A member of a royal family",
-          "A type of software"
+          "A hardware standard for maintaining consistency",
+          "A high-ranking member of a royal or noble family",
+          "A type of computer software used for agreement forms"
         ],
         "answer": "A contract that defines the expected level of service from a provider",
         "category": "Domain Review",
@@ -4339,9 +4339,9 @@ export const certifications = [
         "question": "What is 'Virtualization'?",
         "options": [
           "Creating virtual versions of hardware or OS",
-          "Making a website look real",
-          "Storing data on a USB drive",
-          "Using a VR headset"
+          "Making a website look real using advanced graphics",
+          "Storing digital data on a physical USB flash drive",
+          "Using a VR headset for immersive digital experiences"
         ],
         "answer": "Creating virtual versions of hardware or OS",
         "category": "Domain Review",
@@ -4352,10 +4352,10 @@ export const certifications = [
         "id": "aplus-q25",
         "question": "What is 'HDD' (Hard Disk Drive)?",
         "options": [
-          "A backup on a CD",
+          "A copy of data saved on a standard compact disc",
           "A data storage device that uses magnetic storage and rotating disks",
-          "A software update",
-          "A type of cloud"
+          "A standard update for a computer software application",
+          "A type of cloud service for storing digital information"
         ],
         "answer": "A data storage device that uses magnetic storage and rotating disks",
         "category": "Domain Review",
@@ -4366,10 +4366,10 @@ export const certifications = [
         "id": "aplus-q26",
         "question": "What is 'RAM' (Random Access Memory)?",
         "options": [
-          "A backup on a USB",
+          "A copy of data saved on a physical USB flash drive",
           "A form of computer memory that can be read and changed in any order",
-          "A software update",
-          "A type of storage"
+          "A standard update for a computer software application",
+          "A type of permanent storage device for large data sets"
         ],
         "answer": "A form of computer memory that can be read and changed in any order",
         "category": "Domain Review",
@@ -4380,9 +4380,9 @@ export const certifications = [
         "id": "aplus-q27",
         "question": "What is 'Load Balancing'?",
         "options": [
-          "A hardware upgrade",
-          "A heavy server",
-          "A type of storage",
+          "A hardware upgrade designed for increasing memory",
+          "A type of high-capacity storage device for backups",
+          "A very large and heavy computer server in a rack",
           "Distributing network or application traffic across multiple servers"
         ],
         "answer": "Distributing network or application traffic across multiple servers",
@@ -4394,9 +4394,9 @@ export const certifications = [
         "id": "aplus-q28",
         "question": "What is 'Downtime'?",
         "options": [
-          "A slow network",
-          "A software update",
-          "Going to sleep",
+          "A slow network connection that delays data",
+          "A standard software update for computer apps",
+          "The act of going to sleep at the end of the day",
           "The period during which a system or service is unavailable"
         ],
         "answer": "The period during which a system or service is unavailable",
@@ -4422,9 +4422,9 @@ export const certifications = [
         "id": "aplus-q30",
         "question": "What is 'Linux'?",
         "options": [
-          "A Microsoft product",
-          "A specific type of hardware",
-          "A web browser",
+          "A specific type of computer hardware part",
+          "A standard operating system from Microsoft",
+          "A web browser used for accessing the web",
           "An open-source operating system kernel"
         ],
         "answer": "An open-source operating system kernel",
@@ -4436,9 +4436,9 @@ export const certifications = [
         "id": "aplus-q31",
         "question": "What is an 'IP Address'?",
         "options": [
-          "A home address",
-          "A phone number",
-          "A serial number",
+          "A physical home address for receiving standard postal mail",
+          "A unique phone number for making voice calls and texts",
+          "A unique serial number assigned to a specific device",
           "A unique string of numbers that identifies each computer on a network"
         ],
         "answer": "A unique string of numbers that identifies each computer on a network",
@@ -4450,10 +4450,10 @@ export const certifications = [
         "id": "aplus-q32",
         "question": "What is 'SSD' (Solid State Drive)?",
         "options": [
-          "A backup on a CD",
-          "A software update",
+          "A copy of data saved on a standard compact disc",
+          "A standard update for a computer software application",
           "A storage device that uses integrated circuits for data storage",
-          "A type of cloud"
+          "A type of cloud service for storing digital information"
         ],
         "answer": "A storage device that uses integrated circuits for data storage",
         "category": "Domain Review",
@@ -4465,9 +4465,9 @@ export const certifications = [
         "question": "What is 'PSU' (Power Supply Unit)?",
         "options": [
           "A device that converts mains AC to low-voltage regulated DC power",
-          "A hardware guard",
-          "A software update",
-          "A type of battery"
+          "A hardware guard that protects the computer power port",
+          "A standard update for a computer software application",
+          "A type of portable battery for charging mobile devices"
         ],
         "answer": "A device that converts mains AC to low-voltage regulated DC power",
         "category": "Domain Review",
@@ -4478,10 +4478,10 @@ export const certifications = [
         "id": "aplus-q34",
         "question": "What is 'Rack' in a data center?",
         "options": [
-          "A hardware guard",
-          "A shelf",
+          "A guard for hardware safety",
+          "A simple wooden shelf for books",
           "A standardized frame for mounting IT equipment",
-          "A type of storage"
+          "A type of data storage device"
         ],
         "answer": "A standardized frame for mounting IT equipment",
         "category": "Domain Review",
@@ -4492,10 +4492,10 @@ export const certifications = [
         "id": "aplus-q35",
         "question": "What is a 'UPS' (Uninterruptible Power Supply)?",
         "options": [
-          "A delivery service",
           "A device that provides emergency power when the main source fails",
-          "A hardware guard",
-          "A type of battery"
+          "A hardware guard that protects the computer power port",
+          "A standard delivery service for shipping large packages",
+          "A type of portable battery used for charging mobile phones"
         ],
         "answer": "A device that provides emergency power when the main source fails",
         "category": "Domain Review",
@@ -4506,10 +4506,10 @@ export const certifications = [
         "id": "aplus-q36",
         "question": "What is 'Mainframe'?",
         "options": [
-          "A hardware guard",
+          "A hardware guard that protects the internal computer parts",
           "A large, powerful computer used for high-volume data processing",
-          "A server rack",
-          "A type of network cable"
+          "A standardized frame for mounting servers and equipment",
+          "A type of network cable used for high-speed transmission"
         ],
         "answer": "A large, powerful computer used for high-volume data processing",
         "category": "Domain Review",
@@ -4520,9 +4520,9 @@ export const certifications = [
         "id": "aplus-q37",
         "question": "What is 'Form Factor'?",
         "options": [
-          "A hardware warranty",
-          "A software manual",
-          "A type of code",
+          "A manual that explains how to use software",
+          "A type of computer code used for data forms",
+          "A warranty that covers computer hardware",
           "The physical size and shape of a computer component"
         ],
         "answer": "The physical size and shape of a computer component",
@@ -4534,10 +4534,10 @@ export const certifications = [
         "id": "aplus-q38",
         "question": "What is 'Blade Server'?",
         "options": [
-          "A server with sharp edges",
-          "A simple app",
+          "A simple mobile application for tracking server usage",
+          "A standard server with sharp physical edges and corners",
           "A thin, modular server that fits into a specialized chassis",
-          "A type of computer chip"
+          "A type of computer chip designed for mobile devices"
         ],
         "answer": "A thin, modular server that fits into a specialized chassis",
         "category": "Domain Review",
@@ -4548,9 +4548,9 @@ export const certifications = [
         "id": "aplus-q39",
         "question": "What is 'BIOS Update'?",
         "options": [
-          "A software update",
-          "Buying a new PC",
-          "Cleaning a disk",
+          "A standard software update for apps",
+          "Buying a brand new personal computer",
+          "Cleaning a physical disk with a cloth",
           "Updating the firmware on the motherboard"
         ],
         "answer": "Updating the firmware on the motherboard",
@@ -4562,10 +4562,10 @@ export const certifications = [
         "id": "aplus-q40",
         "question": "What is 'VPN' (Virtual Private Network)?",
         "options": [
-          "A fast internet connection",
-          "A private network",
+          "A high-speed internet connection for fast data transfers",
           "A service that creates a safe, encrypted connection over a less secure network",
-          "A type of storage"
+          "A standard private network used within a small organization",
+          "A type of cloud-based storage service for saving files"
         ],
         "answer": "A service that creates a safe, encrypted connection over a less secure network",
         "category": "Domain Review",
@@ -4577,9 +4577,9 @@ export const certifications = [
         "question": "What is 'KVM Switch'?",
         "options": [
           "A hardware device that allows controlling multiple computers from one keyboard/video/mouse",
-          "A hub",
-          "A light switch",
-          "A router"
+          "A hardware device that forwards data packets between networks",
+          "A simple hardware device that connects multiple computers in a hub",
+          "A standard light switch found in a residential home for lighting"
         ],
         "answer": "A hardware device that allows controlling multiple computers from one keyboard/video/mouse",
         "category": "Domain Review",
@@ -4590,10 +4590,10 @@ export const certifications = [
         "id": "aplus-q42",
         "question": "What is 'DHCP'?",
         "options": [
-          "A hardware guard",
+          "A hardware guard that protects the internal computer parts",
           "A protocol for automatically assigning IP addresses to devices",
-          "A secure login",
-          "A type of network cable"
+          "A secure login page for accessing restricted systems",
+          "A type of network cable used for high-speed transmission"
         ],
         "answer": "A protocol for automatically assigning IP addresses to devices",
         "category": "Domain Review",
@@ -4604,9 +4604,9 @@ export const certifications = [
         "id": "aplus-q43",
         "question": "What is 'Motherboard'?",
         "options": [
-          "A hardware guard",
-          "A network cable",
-          "A type of monitor",
+          "A hardware guard that protects the internal computer parts",
+          "A network cable used for transmitting data between systems",
+          "A type of high-resolution monitor for displaying graphics",
           "The main printed circuit board in general-purpose computers"
         ],
         "answer": "The main printed circuit board in general-purpose computers",
@@ -4619,9 +4619,9 @@ export const certifications = [
         "question": "What is a 'Switch' in networking?",
         "options": [
           "A device that connects devices on a computer network using packet switching",
-          "A hub",
-          "A light switch",
-          "A router"
+          "A device that connects multiple computers in a hub",
+          "A device that forwards data packets between networks",
+          "A standard light switch found in a residential home"
         ],
         "answer": "A device that connects devices on a computer network using packet switching",
         "category": "Domain Review",
@@ -4632,10 +4632,10 @@ export const certifications = [
         "id": "aplus-q45",
         "question": "What is 'Firmware'?",
         "options": [
-          "A soft clothing",
-          "A software update",
           "A specific class of computer software that provides low-level control for hardware",
-          "A type of storage"
+          "A standard software update for a computer operating system",
+          "A type of soft clothing worn during the winter season",
+          "A type of storage device used for saving digital photos"
         ],
         "answer": "A specific class of computer software that provides low-level control for hardware",
         "category": "Domain Review",
@@ -4646,9 +4646,9 @@ export const certifications = [
         "id": "aplus-q46",
         "question": "What is 'CPU' (Central Processing Unit)?",
         "options": [
-          "A hardware guard",
-          "A network cable",
-          "A type of monitor",
+          "A hardware guard that protects the internal computer parts",
+          "A network cable used for transmitting data between systems",
+          "A type of high-resolution monitor for displaying graphics",
           "The electronic circuitry that executes instructions of a computer program"
         ],
         "answer": "The electronic circuitry that executes instructions of a computer program",
@@ -4660,10 +4660,10 @@ export const certifications = [
         "id": "aplus-q47",
         "question": "What is 'RAID 5'?",
         "options": [
-          "A type of backup",
-          "Mirroring data",
+          "A standard type of backup for recovering data sets",
+          "Mirroring data across two different hard drives",
           "Striping data and parity across three or more disks",
-          "Using five disks"
+          "Using five different disks for maximum data storage"
         ],
         "answer": "Striping data and parity across three or more disks",
         "category": "Domain Review",
@@ -4674,10 +4674,10 @@ export const certifications = [
         "id": "aplus-q48",
         "question": "What is 'GPU' (Graphics Processing Unit)?",
         "options": [
-          "A hardware guard",
-          "A network cable",
+          "A hardware guard that protects the internal computer parts",
+          "A network cable used for transmitting data between systems",
           "A specialized electronic circuit designed to accelerate image creation",
-          "A type of monitor"
+          "A type of high-resolution monitor for displaying graphics"
         ],
         "answer": "A specialized electronic circuit designed to accelerate image creation",
         "category": "Domain Review",
@@ -4689,9 +4689,9 @@ export const certifications = [
         "question": "What is 'CMOS Battery'?",
         "options": [
           "A battery that powers the CMOS memory when the computer is off",
-          "A hardware guard",
-          "A large battery",
-          "A type of storage"
+          "A hardware guard that protects the internal battery",
+          "A large battery used for powering electric vehicles",
+          "A type of storage device for saving computer settings"
         ],
         "answer": "A battery that powers the CMOS memory when the computer is off",
         "category": "Domain Review",
@@ -4703,9 +4703,9 @@ export const certifications = [
         "question": "What is 'Backup'?",
         "options": [
           "A copy of data stored in a separate location for recovery",
-          "A reverse gear",
-          "A software update",
-          "A type of storage"
+          "A reverse gear in a vehicle used for moving backwards",
+          "A standard update for a computer software application",
+          "A type of primary storage device for active data sets"
         ],
         "answer": "A copy of data stored in a separate location for recovery",
         "category": "Domain Review",
@@ -5015,9 +5015,9 @@ export const certifications = [
         "question": "What does a 'Collision Domain' refer to?",
         "options": [
           "A group of devices where data packets can collide",
-          "A set of devices sharing a router",
-          "A single network cable",
-          "The entire internet"
+          "A set of devices sharing a single network router",
+          "A single network cable connecting two different computers",
+          "The entire internet-wide group of interconnected devices"
         ],
         "answer": "A group of devices where data packets can collide",
         "category": "Domain Review",
@@ -5042,12 +5042,12 @@ export const certifications = [
         "id": "network-plus-q5",
         "question": "Which device connects multiple networks and makes path decisions?",
         "options": [
-          "Hub",
-          "Repeater",
-          "Router",
-          "Switch"
+          "Hub (Layer 1 Device)",
+          "Repeater (Layer 1 Device)",
+          "Router (Layer 3 Device)",
+          "Switch (Layer 2 Device)"
         ],
-        "answer": "Router",
+        "answer": "Router (Layer 3 Device)",
         "category": "Domain Review",
         "explanation": "Routers operate at Layer 3 and route traffic between different networks.",
         "topic": "Routing"
@@ -5070,12 +5070,12 @@ export const certifications = [
         "id": "network-plus-q7",
         "question": "What is a 'Loopback' address?",
         "options": [
-          "A public IP",
-          "An address used to test the local system",
-          "The DNS server address",
-          "The address of the router"
+          "A public IP address accessible from the internet",
+          "An address used to test the local computer system",
+          "The address of the Domain Name System (DNS) server",
+          "The address of the primary network router device"
         ],
-        "answer": "An address used to test the local system",
+        "answer": "An address used to test the local computer system",
         "category": "Domain Review",
         "explanation": "127.0.0.1 is the standard IPv4 loopback address.",
         "topic": "IP Services"
@@ -5126,12 +5126,12 @@ export const certifications = [
         "id": "network-plus-q11",
         "question": "What is the bit length of an IPv6 address?",
         "options": [
-          "128 bits",
-          "256 bits",
-          "32 bits",
-          "64 bits"
+          "128 bits in length",
+          "256 bits in length",
+          "32 bits in length",
+          "64 bits in length"
         ],
-        "answer": "128 bits",
+        "answer": "128 bits in length",
         "category": "Domain Review",
         "explanation": "IPv6 addresses are 128 bits long, providing a massive address space.",
         "topic": "IP Services"
@@ -5196,12 +5196,12 @@ export const certifications = [
         "id": "network-plus-q16",
         "question": "What is the standard port for SSH?",
         "options": [
-          "22",
-          "23",
-          "443",
-          "80"
+          "Port 22 (Standard SSH)",
+          "Port 23 (Standard Telnet)",
+          "Port 443 (Standard HTTPS)",
+          "Port 80 (Standard HTTP)"
         ],
-        "answer": "22",
+        "answer": "Port 22 (Standard SSH)",
         "category": "Domain Review",
         "explanation": "Secure Shell (SSH) uses port 22 by default.",
         "topic": "Security Fundamentals"
@@ -5210,12 +5210,12 @@ export const certifications = [
         "id": "network-plus-q17",
         "question": "What is the purpose of the 'ping' command?",
         "options": [
-          "Change IP address",
-          "Download a file",
-          "Secure a port",
-          "Test network connectivity"
+          "To change the local IP address",
+          "To download a file from a server",
+          "To secure a specific network port",
+          "To test basic network connectivity"
         ],
-        "answer": "Test network connectivity",
+        "answer": "To test basic network connectivity",
         "category": "Domain Review",
         "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable.",
         "topic": "Network Troubleshooting"
@@ -5224,12 +5224,12 @@ export const certifications = [
         "id": "network-plus-q18",
         "question": "Which protocol resolves domain names to IP addresses?",
         "options": [
-          "ARP",
-          "DHCP",
-          "DNS",
-          "SNMP"
+          "Address Resolution Protocol (ARP)",
+          "Domain Name System (DNS)",
+          "Dynamic Host Protocol (DHCP)",
+          "Simple Management Protocol (SNMP)"
         ],
-        "answer": "DNS",
+        "answer": "Domain Name System (DNS)",
         "category": "Domain Review",
         "explanation": "Domain Name System (DNS) maps human-readable names to IP addresses.",
         "topic": "IP Services"
@@ -5238,12 +5238,12 @@ export const certifications = [
         "id": "network-plus-q19",
         "question": "Which cable type uses a laser as a light source?",
         "options": [
-          "Coaxial",
-          "Multi-mode Fiber",
-          "Single-mode Fiber",
-          "UTP"
+          "Multi-mode Fiber cabling",
+          "Single-mode Fiber cabling",
+          "Standard Coaxial cabling",
+          "Unshielded Twisted Pair (UTP)"
         ],
-        "answer": "Single-mode Fiber",
+        "answer": "Single-mode Fiber cabling",
         "category": "Domain Review",
         "explanation": "Single-mode uses lasers for long-distance transmission.",
         "topic": "Physical Infrastructure"
@@ -5252,12 +5252,12 @@ export const certifications = [
         "id": "network-plus-q20",
         "question": "What is the primary function of a Load Balancer?",
         "options": [
-          "Assign IP addresses",
-          "Distribute traffic across multiple servers",
-          "Encrypt network traffic",
-          "Store website files"
+          "Assign IP addresses to all devices on the network",
+          "Distribute incoming traffic across multiple servers",
+          "Encrypt all incoming network traffic for security",
+          "Store website files and images for fast access"
         ],
-        "answer": "Distribute traffic across multiple servers",
+        "answer": "Distribute incoming traffic across multiple servers",
         "category": "Domain Review",
         "explanation": "Load balancers improve reliability and performance by spreading load.",
         "topic": "Network Services"
@@ -5280,12 +5280,12 @@ export const certifications = [
         "id": "network-plus-q22",
         "question": "Which device is used to extend the range of a Wi-Fi signal?",
         "options": [
-          "Access Point",
-          "Modem",
-          "Router",
-          "Switch"
+          "Access Point (AP)",
+          "Modem (Signal)",
+          "Router (Network)",
+          "Switch (Network)"
         ],
-        "answer": "Access Point",
+        "answer": "Access Point (AP)",
         "category": "Domain Review",
         "explanation": "APs provide wireless connectivity to a wired network.",
         "topic": "Wireless"
@@ -5392,12 +5392,12 @@ export const certifications = [
         "id": "network-plus-q30",
         "question": "What is the function of a 'Subnet'?",
         "options": [
-          "Connect to the printer",
-          "Divide a large network into smaller ones",
-          "Speed up the processor",
-          "Store emails"
+          "Connect to the local network printer for printing",
+          "Divide a large network into multiple smaller ones",
+          "Speed up the processing power of the computer",
+          "Store incoming and outgoing emails on the server"
         ],
-        "answer": "Divide a large network into smaller ones",
+        "answer": "Divide a large network into multiple smaller ones",
         "category": "Domain Review",
         "explanation": "Subnetting improves organization and security.",
         "topic": "IP Services"
@@ -5448,10 +5448,10 @@ export const certifications = [
         "id": "network-plus-q34",
         "question": "What does 'VLAN Tagging' (802.1Q) allow?",
         "options": [
-          "Faster browsing",
-          "Hiding the network name",
+          "Faster browsing of the web for all local users",
+          "Hiding the network name for security purposes",
           "Identifying traffic for different VLANs on a trunk",
-          "Printing wirelessly"
+          "Printing documents wirelessly to a network printer"
         ],
         "answer": "Identifying traffic for different VLANs on a trunk",
         "category": "Domain Review",
@@ -5518,12 +5518,12 @@ export const certifications = [
         "id": "network-plus-q39",
         "question": "Which command shows the MAC address on a Windows PC?",
         "options": [
-          "all of the above",
-          "arp -a",
-          "getmac",
-          "ipconfig /all"
+          "All of the above commands",
+          "The arp -a command",
+          "The getmac command",
+          "The ipconfig /all command"
         ],
-        "answer": "all of the above",
+        "answer": "All of the above commands",
         "category": "Domain Review",
         "explanation": "All these commands can be used to find the physical address.",
         "topic": "Network Troubleshooting"
@@ -5546,12 +5546,12 @@ export const certifications = [
         "id": "network-plus-q41",
         "question": "What is 'CSMA/CD' used for?",
         "options": [
-          "Assigning IPs",
-          "Detecting collisions in Ethernet",
-          "Encrypting data",
-          "Routing packets"
+          "Assigning unique IP addresses to network devices",
+          "Detecting collisions in an Ethernet-based network",
+          "Encrypting sensitive data for secure transmission",
+          "Routing data packets between different networks"
         ],
-        "answer": "Detecting collisions in Ethernet",
+        "answer": "Detecting collisions in an Ethernet-based network",
         "category": "Domain Review",
         "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol.",
         "topic": "Networking Core"
@@ -5602,12 +5602,12 @@ export const certifications = [
         "id": "network-plus-q45",
         "question": "What is the purpose of 'NAT'?",
         "options": [
-          "Assign names to devices",
-          "Check for cable breaks",
-          "Speed up downloads",
-          "Translate private IPs to public IPs"
+          "Assign unique names to all networking devices",
+          "Check for physical breaks in networking cables",
+          "Speed up the download of large files from the web",
+          "Translate private IP addresses to public IP addresses"
         ],
-        "answer": "Translate private IPs to public IPs",
+        "answer": "Translate private IP addresses to public IP addresses",
         "category": "Domain Review",
         "explanation": "Network Address Translation (NAT) allows multiple devices to share one public IP.",
         "topic": "IP Services"
@@ -5616,10 +5616,10 @@ export const certifications = [
         "id": "network-plus-q46",
         "question": "What is 'Half-Duplex'?",
         "options": [
-          "Data is sent at half speed",
+          "Data is sent at exactly half the standard speed",
           "Devices can send or receive but not both at once",
-          "Only half the packets arrive",
-          "Only one device can ever send"
+          "Only half of the data packets arrive at destination",
+          "Only one device in the network can ever send data"
         ],
         "answer": "Devices can send or receive but not both at once",
         "category": "Domain Review",
@@ -5672,12 +5672,12 @@ export const certifications = [
         "id": "network-plus-q50",
         "question": "Which type of cable is least susceptible to EMI?",
         "options": [
-          "Coaxial",
-          "Fiber Optic",
-          "STP",
-          "UTP"
+          "Coaxial cabling",
+          "Fiber Optic cabling",
+          "STP cabling",
+          "UTP cabling"
         ],
-        "answer": "Fiber Optic",
+        "answer": "Fiber Optic cabling",
         "category": "Domain Review",
         "explanation": "Fiber uses light instead of electricity, making it immune to electromagnetic interference.",
         "topic": "Physical Infrastructure"
@@ -5957,9 +5957,9 @@ export const certifications = [
         "question": "What does a 'Collision Domain' refer to?",
         "options": [
           "A group of devices where data packets can collide",
-          "A set of devices sharing a router",
-          "A single network cable",
-          "The entire internet"
+          "A set of devices sharing a single network router",
+          "A single network cable connecting two different computers",
+          "The entire internet-wide group of interconnected devices"
         ],
         "answer": "A group of devices where data packets can collide",
         "category": "Domain Review",
@@ -6012,12 +6012,12 @@ export const certifications = [
         "id": "ccnp-encor-q5",
         "question": "What is the primary function of a Load Balancer?",
         "options": [
-          "Assign IP addresses",
-          "Distribute traffic across multiple servers",
-          "Encrypt network traffic",
-          "Store website files"
+          "Assign IP addresses to all devices on the network",
+          "Distribute incoming traffic across multiple servers",
+          "Encrypt all incoming network traffic for security",
+          "Store website files and images for fast access"
         ],
-        "answer": "Distribute traffic across multiple servers",
+        "answer": "Distribute incoming traffic across multiple servers",
         "category": "Domain Review",
         "explanation": "Load balancers improve reliability and performance by spreading load.",
         "topic": "Network Services"
@@ -6082,12 +6082,12 @@ export const certifications = [
         "id": "ccnp-encor-q10",
         "question": "Which device connects multiple networks and makes path decisions?",
         "options": [
-          "Hub",
-          "Repeater",
-          "Router",
-          "Switch"
+          "Hub (Layer 1 Device)",
+          "Repeater (Layer 1 Device)",
+          "Router (Layer 3 Device)",
+          "Switch (Layer 2 Device)"
         ],
-        "answer": "Router",
+        "answer": "Router (Layer 3 Device)",
         "category": "Domain Review",
         "explanation": "Routers operate at Layer 3 and route traffic between different networks.",
         "topic": "Routing"
@@ -6110,12 +6110,12 @@ export const certifications = [
         "id": "ccnp-encor-q12",
         "question": "Which protocol resolves domain names to IP addresses?",
         "options": [
-          "ARP",
-          "DHCP",
-          "DNS",
-          "SNMP"
+          "Address Resolution Protocol (ARP)",
+          "Domain Name System (DNS)",
+          "Dynamic Host Protocol (DHCP)",
+          "Simple Management Protocol (SNMP)"
         ],
-        "answer": "DNS",
+        "answer": "Domain Name System (DNS)",
         "category": "Domain Review",
         "explanation": "Domain Name System (DNS) maps human-readable names to IP addresses.",
         "topic": "IP Services"
@@ -6124,12 +6124,12 @@ export const certifications = [
         "id": "ccnp-encor-q13",
         "question": "What is the bit length of an IPv6 address?",
         "options": [
-          "128 bits",
-          "256 bits",
-          "32 bits",
-          "64 bits"
+          "128 bits in length",
+          "256 bits in length",
+          "32 bits in length",
+          "64 bits in length"
         ],
-        "answer": "128 bits",
+        "answer": "128 bits in length",
         "category": "Domain Review",
         "explanation": "IPv6 addresses are 128 bits long, providing a massive address space.",
         "topic": "IP Services"
@@ -6152,12 +6152,12 @@ export const certifications = [
         "id": "ccnp-encor-q15",
         "question": "What is the purpose of 'NAT'?",
         "options": [
-          "Assign names to devices",
-          "Check for cable breaks",
-          "Speed up downloads",
-          "Translate private IPs to public IPs"
+          "Assign unique names to all networking devices",
+          "Check for physical breaks in networking cables",
+          "Speed up the download of large files from the web",
+          "Translate private IP addresses to public IP addresses"
         ],
-        "answer": "Translate private IPs to public IPs",
+        "answer": "Translate private IP addresses to public IP addresses",
         "category": "Domain Review",
         "explanation": "Network Address Translation (NAT) allows multiple devices to share one public IP.",
         "topic": "IP Services"
@@ -6166,12 +6166,12 @@ export const certifications = [
         "id": "ccnp-encor-q16",
         "question": "What is the purpose of the 'ping' command?",
         "options": [
-          "Change IP address",
-          "Download a file",
-          "Secure a port",
-          "Test network connectivity"
+          "To change the local IP address",
+          "To download a file from a server",
+          "To secure a specific network port",
+          "To test basic network connectivity"
         ],
-        "answer": "Test network connectivity",
+        "answer": "To test basic network connectivity",
         "category": "Domain Review",
         "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable.",
         "topic": "Network Troubleshooting"
@@ -6222,10 +6222,10 @@ export const certifications = [
         "id": "ccnp-encor-q20",
         "question": "What does 'VLAN Tagging' (802.1Q) allow?",
         "options": [
-          "Faster browsing",
-          "Hiding the network name",
+          "Faster browsing of the web for all local users",
+          "Hiding the network name for security purposes",
           "Identifying traffic for different VLANs on a trunk",
-          "Printing wirelessly"
+          "Printing documents wirelessly to a network printer"
         ],
         "answer": "Identifying traffic for different VLANs on a trunk",
         "category": "Domain Review",
@@ -6236,12 +6236,12 @@ export const certifications = [
         "id": "ccnp-encor-q21",
         "question": "What is the function of a 'Subnet'?",
         "options": [
-          "Connect to the printer",
-          "Divide a large network into smaller ones",
-          "Speed up the processor",
-          "Store emails"
+          "Connect to the local network printer for printing",
+          "Divide a large network into multiple smaller ones",
+          "Speed up the processing power of the computer",
+          "Store incoming and outgoing emails on the server"
         ],
-        "answer": "Divide a large network into smaller ones",
+        "answer": "Divide a large network into multiple smaller ones",
         "category": "Domain Review",
         "explanation": "Subnetting improves organization and security.",
         "topic": "IP Services"
@@ -6348,12 +6348,12 @@ export const certifications = [
         "id": "ccnp-encor-q29",
         "question": "Which protocol is used for securely browsing the web?",
         "options": [
-          "FTP",
-          "HTTP",
-          "HTTPS",
-          "SSH"
+          "FTP (File Transfer Protocol)",
+          "HTTP (Standard Protocol)",
+          "HTTPS (Secure Protocol)",
+          "SSH (Secure Shell Protocol)"
         ],
-        "answer": "HTTPS",
+        "answer": "HTTPS (Secure Protocol)",
         "category": "Domain Review",
         "explanation": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server.",
         "topic": "Security Fundamentals"
@@ -6376,12 +6376,12 @@ export const certifications = [
         "id": "ccnp-encor-q31",
         "question": "Which cable type uses a laser as a light source?",
         "options": [
-          "Coaxial",
-          "Multi-mode Fiber",
-          "Single-mode Fiber",
-          "UTP"
+          "Multi-mode Fiber cabling",
+          "Single-mode Fiber cabling",
+          "Standard Coaxial cabling",
+          "Unshielded Twisted Pair (UTP)"
         ],
-        "answer": "Single-mode Fiber",
+        "answer": "Single-mode Fiber cabling",
         "category": "Domain Review",
         "explanation": "Single-mode uses lasers for long-distance transmission.",
         "topic": "Physical Infrastructure"
@@ -6390,10 +6390,10 @@ export const certifications = [
         "id": "ccnp-encor-q32",
         "question": "What is 'Half-Duplex'?",
         "options": [
-          "Data is sent at half speed",
+          "Data is sent at exactly half the standard speed",
           "Devices can send or receive but not both at once",
-          "Only half the packets arrive",
-          "Only one device can ever send"
+          "Only half of the data packets arrive at destination",
+          "Only one device in the network can ever send data"
         ],
         "answer": "Devices can send or receive but not both at once",
         "category": "Domain Review",
@@ -6404,12 +6404,12 @@ export const certifications = [
         "id": "ccnp-encor-q33",
         "question": "Which command shows the MAC address on a Windows PC?",
         "options": [
-          "all of the above",
-          "arp -a",
-          "getmac",
-          "ipconfig /all"
+          "All of the above commands",
+          "The arp -a command",
+          "The getmac command",
+          "The ipconfig /all command"
         ],
-        "answer": "all of the above",
+        "answer": "All of the above commands",
         "category": "Domain Review",
         "explanation": "All these commands can be used to find the physical address.",
         "topic": "Network Troubleshooting"
@@ -6418,12 +6418,12 @@ export const certifications = [
         "id": "ccnp-encor-q34",
         "question": "Which type of cable is least susceptible to EMI?",
         "options": [
-          "Coaxial",
-          "Fiber Optic",
-          "STP",
-          "UTP"
+          "Coaxial cabling",
+          "Fiber Optic cabling",
+          "STP cabling",
+          "UTP cabling"
         ],
-        "answer": "Fiber Optic",
+        "answer": "Fiber Optic cabling",
         "category": "Domain Review",
         "explanation": "Fiber uses light instead of electricity, making it immune to electromagnetic interference.",
         "topic": "Physical Infrastructure"
@@ -6432,10 +6432,10 @@ export const certifications = [
         "id": "ccnp-encor-q35",
         "question": "What is 'STP' (Spanning Tree Protocol) used for?",
         "options": [
-          "Assign IP addresses",
-          "Encrypt passwords",
+          "Assign new IP addresses",
+          "Encrypt all user passwords",
           "Prevent network loops in switches",
-          "Speed up the network"
+          "Speed up the local network"
         ],
         "answer": "Prevent network loops in switches",
         "category": "Domain Review",
@@ -6446,12 +6446,12 @@ export const certifications = [
         "id": "ccnp-encor-q36",
         "question": "What is a 'Loopback' address?",
         "options": [
-          "A public IP",
-          "An address used to test the local system",
-          "The DNS server address",
-          "The address of the router"
+          "A public IP address accessible from the internet",
+          "An address used to test the local computer system",
+          "The address of the Domain Name System (DNS) server",
+          "The address of the primary network router device"
         ],
-        "answer": "An address used to test the local system",
+        "answer": "An address used to test the local computer system",
         "category": "Domain Review",
         "explanation": "127.0.0.1 is the standard IPv4 loopback address.",
         "topic": "IP Services"
@@ -6474,12 +6474,12 @@ export const certifications = [
         "id": "ccnp-encor-q38",
         "question": "Which device is used to extend the range of a Wi-Fi signal?",
         "options": [
-          "Access Point",
-          "Modem",
-          "Router",
-          "Switch"
+          "Access Point (AP)",
+          "Modem (Signal)",
+          "Router (Network)",
+          "Switch (Network)"
         ],
-        "answer": "Access Point",
+        "answer": "Access Point (AP)",
         "category": "Domain Review",
         "explanation": "APs provide wireless connectivity to a wired network.",
         "topic": "Wireless"
@@ -6502,12 +6502,12 @@ export const certifications = [
         "id": "ccnp-encor-q40",
         "question": "What is the standard port for SSH?",
         "options": [
-          "22",
-          "23",
-          "443",
-          "80"
+          "Port 22 (Standard SSH)",
+          "Port 23 (Standard Telnet)",
+          "Port 443 (Standard HTTPS)",
+          "Port 80 (Standard HTTP)"
         ],
-        "answer": "22",
+        "answer": "Port 22 (Standard SSH)",
         "category": "Domain Review",
         "explanation": "Secure Shell (SSH) uses port 22 by default.",
         "topic": "Security Fundamentals"
@@ -6614,12 +6614,12 @@ export const certifications = [
         "id": "ccnp-encor-q48",
         "question": "What is 'CSMA/CD' used for?",
         "options": [
-          "Assigning IPs",
-          "Detecting collisions in Ethernet",
-          "Encrypting data",
-          "Routing packets"
+          "Assigning unique IP addresses to network devices",
+          "Detecting collisions in an Ethernet-based network",
+          "Encrypting sensitive data for secure transmission",
+          "Routing data packets between different networks"
         ],
-        "answer": "Detecting collisions in Ethernet",
+        "answer": "Detecting collisions in an Ethernet-based network",
         "category": "Domain Review",
         "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol.",
         "topic": "Networking Core"
@@ -6901,10 +6901,10 @@ export const certifications = [
         "id": "cissp-q1",
         "question": "What is 'Identification' in security?",
         "options": [
-          "Checking an ID card",
-          "Looking in a mirror",
+          "Checking an ID card at the building entrance",
+          "Looking in a mirror to check your appearance",
           "Stating who you are (e.g., username)",
-          "Taking a photo"
+          "Taking a professional photo for a staff badge"
         ],
         "answer": "Stating who you are (e.g., username)",
         "category": "Domain Review",
@@ -6915,10 +6915,10 @@ export const certifications = [
         "id": "cissp-q2",
         "question": "What is 'Authorization'?",
         "options": [
-          "Checking a password",
-          "Creating a new account",
+          "Checking a password for accessing a secure system",
+          "Creating a new account for a website or application",
           "Determining what an authenticated user can do",
-          "Entering a building"
+          "The act of entering a building through the front door"
         ],
         "answer": "Determining what an authenticated user can do",
         "category": "Domain Review",
@@ -6929,9 +6929,9 @@ export const certifications = [
         "id": "cissp-q3",
         "question": "What is an 'Air Gap'?",
         "options": [
-          "A gap between server racks",
-          "A leak in a tire",
-          "A type of Wi-Fi",
+          "A physical gap between computer server racks in a room",
+          "A small leak in a rubber tire that causes low pressure",
+          "A specific type of high-speed Wi-Fi network connection",
           "Physically isolating a computer from any network"
         ],
         "answer": "Physically isolating a computer from any network",
@@ -6943,10 +6943,10 @@ export const certifications = [
         "id": "cissp-q4",
         "question": "What is 'Two-Factor Authentication' (2FA)?",
         "options": [
-          "Having two accounts",
-          "Logging in twice",
-          "Using two different types of credentials",
-          "Using two passwords"
+          "Having two different accounts for one service",
+          "The act of logging in twice to the same system",
+          "Using two different passwords for one account",
+          "Using two different types of credentials"
         ],
         "answer": "Using two different types of credentials",
         "category": "Domain Review",
@@ -6957,9 +6957,9 @@ export const certifications = [
         "id": "cissp-q5",
         "question": "What is the difference between a 'Virus' and a 'Worm'?",
         "options": [
-          "There is no difference",
-          "Viruses are faster",
-          "Worms are harmless",
+          "There is no difference between a virus and a worm",
+          "Viruses are much faster than worms at infecting systems",
+          "Worms are harmless and do not cause any system damage",
           "Worms replicate automatically; viruses need host files"
         ],
         "answer": "Worms replicate automatically; viruses need host files",
@@ -6999,12 +6999,12 @@ export const certifications = [
         "id": "cissp-q8",
         "question": "Which of these is a form of Symmetric encryption?",
         "options": [
-          "AES",
-          "Diffie-Hellman",
-          "ECC",
-          "RSA"
+          "Advanced Encryption Standard (AES)",
+          "Diffie-Hellman Key Exchange",
+          "Elliptic Curve Cryptography",
+          "Rivest-Shamir-Adleman (RSA)"
         ],
-        "answer": "AES",
+        "answer": "Advanced Encryption Standard (AES)",
         "category": "Domain Review",
         "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher.",
         "topic": "Implementation"
@@ -7013,10 +7013,10 @@ export const certifications = [
         "id": "cissp-q9",
         "question": "What is 'Decryption'?",
         "options": [
-          "Analyzing code",
-          "Breaking a password",
+          "Analyzing computer code for potential bugs",
+          "Breaking a password using a brute force tool",
           "Converting ciphertext back into plaintext",
-          "Downloading data"
+          "Downloading data from a remote computer server"
         ],
         "answer": "Converting ciphertext back into plaintext",
         "category": "Domain Review",
@@ -7041,9 +7041,9 @@ export const certifications = [
         "id": "cissp-q11",
         "question": "What is a 'Penetration Test'?",
         "options": [
-          "A hardware stress test",
-          "A network speed test",
-          "A test of ink levels",
+          "A hardware stress test for computer components",
+          "A network speed test for measuring bandwidth",
+          "A test of ink levels in a professional printer",
           "An authorized simulated attack to find flaws"
         ],
         "answer": "An authorized simulated attack to find flaws",
@@ -7055,10 +7055,10 @@ export const certifications = [
         "id": "cissp-q12",
         "question": "What does 'Integrity' mean in security?",
         "options": [
-          "Being honest",
+          "Being honest in all professional interactions",
           "Ensuring data has not been tampered with",
-          "Keeping secrets",
-          "Making sure the website is fast"
+          "Keeping all organizational secrets safe",
+          "Making sure the website is fast and responsive"
         ],
         "answer": "Ensuring data has not been tampered with",
         "category": "Domain Review",
@@ -7069,9 +7069,9 @@ export const certifications = [
         "id": "cissp-q13",
         "question": "What is a 'Private Key'?",
         "options": [
-          "A key for a private room",
-          "A key that everyone has",
-          "A physical key",
+          "A key that everyone in an office has",
+          "A key used for opening a private room",
+          "A physical metal key for opening a door",
           "A secret key known only to the owner"
         ],
         "answer": "A secret key known only to the owner",
@@ -7083,9 +7083,9 @@ export const certifications = [
         "id": "cissp-q14",
         "question": "What is 'Eavesdropping' in network security?",
         "options": [
-          "A secure protocol",
-          "A type of antenna",
-          "Listening through a wall",
+          "A secure network protocol for transmitting data",
+          "A type of antenna designed for receiving radio data",
+          "Listening through a physical wall using a device",
           "Unauthorized listening to private communication"
         ],
         "answer": "Unauthorized listening to private communication",
@@ -7097,9 +7097,9 @@ export const certifications = [
         "id": "cissp-q15",
         "question": "What is 'Mobile Device Management' (MDM)?",
         "options": [
-          "A phone repair shop",
-          "A type of mobile app",
-          "Hiring a mobile expert",
+          "A professional phone repair shop in a city center",
+          "A specific type of mobile app for playing games",
+          "Hiring a professional mobile expert to manage devices",
           "Software used to manage and secure mobile devices"
         ],
         "answer": "Software used to manage and secure mobile devices",
@@ -7111,12 +7111,12 @@ export const certifications = [
         "id": "cissp-q16",
         "question": "What is 'Social Engineering'?",
         "options": [
-          "Hacking a bank",
-          "Installing cameras",
-          "Manipulating people into giving up info",
-          "Writing code for social media"
+          "Hacking into a financial institution or bank",
+          "Installing physical cameras for security monitoring",
+          "Manipulating people into giving up sensitive info",
+          "Writing computer code for social media platforms"
         ],
-        "answer": "Manipulating people into giving up info",
+        "answer": "Manipulating people into giving up sensitive info",
         "category": "Domain Review",
         "explanation": "It exploits human psychology rather than technical flaws.",
         "topic": "Attacks & Threats"
@@ -7125,10 +7125,10 @@ export const certifications = [
         "id": "cissp-q17",
         "question": "What is the goal of 'Confidentiality' in the CIA triad?",
         "options": [
-          "Ensure data is accurate",
-          "Ensure data is compressed",
+          "Ensure data is accurate and trustworthy",
+          "Ensure data is compressed for storage",
           "Ensure only authorized users can read data",
-          "Ensure services are up"
+          "Ensure services are up and available"
         ],
         "answer": "Ensure only authorized users can read data",
         "category": "Domain Review",
@@ -7139,12 +7139,12 @@ export const certifications = [
         "id": "cissp-q18",
         "question": "Which of these is a social engineering attack?",
         "options": [
-          "Buffer overflow",
-          "Cross-site scripting",
-          "SQLi",
-          "Tailgating"
+          "Buffer overflow (Memory)",
+          "Cross-site scripting (Web)",
+          "SQLi (Injection)",
+          "Tailgating (Physical)"
         ],
-        "answer": "Tailgating",
+        "answer": "Tailgating (Physical)",
         "category": "Domain Review",
         "explanation": "Tailgating involves physically following an authorized person into a secure area.",
         "topic": "Attacks & Threats"
@@ -7153,10 +7153,10 @@ export const certifications = [
         "id": "cissp-q19",
         "question": "What does 'WPA3' improve over WPA2?",
         "options": [
-          "Better Wi-Fi range",
+          "Better Wi-Fi range for large office buildings",
           "Better encryption and protection against brute force",
-          "Cheaper hardware",
-          "Faster speeds only"
+          "Cheaper hardware for small home applications",
+          "Faster speeds only for all network connections"
         ],
         "answer": "Better encryption and protection against brute force",
         "category": "Domain Review",
@@ -7167,10 +7167,10 @@ export const certifications = [
         "id": "cissp-q20",
         "question": "What is a 'Buffer Overflow'?",
         "options": [
-          "A slow internet connection",
-          "A software update",
-          "Overwriting memory to execute malicious code",
-          "Too much data on a disk"
+          "A slow internet connection that delays downloads",
+          "A standard software update for computer applications",
+          "Having too much data on a computer hard disk",
+          "Overwriting memory to execute malicious code"
         ],
         "answer": "Overwriting memory to execute malicious code",
         "category": "Domain Review",
@@ -7181,10 +7181,10 @@ export const certifications = [
         "id": "cissp-q21",
         "question": "What does a Firewall do?",
         "options": [
-          "Cool down the server room",
-          "Detect viruses on a hard drive",
+          "Cool down the hardware in the server room",
+          "Detect viruses on a computer hard drive",
           "Filter traffic based on security rules",
-          "Speed up internet connection"
+          "Speed up the local internet connection"
         ],
         "answer": "Filter traffic based on security rules",
         "category": "Domain Review",
@@ -7195,10 +7195,10 @@ export const certifications = [
         "id": "cissp-q22",
         "question": "What is 'Whaling'?",
         "options": [
-          "A large-scale DDoS",
+          "A large-scale DDoS attack from many sources",
           "A phishing attack targeted at high-level executives",
-          "A type of network cable",
-          "Hunting whales"
+          "A type of network cable for data transmission",
+          "The act of hunting whales in the natural ocean"
         ],
         "answer": "A phishing attack targeted at high-level executives",
         "category": "Domain Review",
@@ -7238,9 +7238,9 @@ export const certifications = [
         "question": "Which of these is used for 'Non-repudiation'?",
         "options": [
           "Digital Signatures",
-          "Encryption",
-          "Firewalls",
-          "Hashing"
+          "Encryption tools",
+          "Hashing algorithms",
+          "Network Firewalls"
         ],
         "answer": "Digital Signatures",
         "category": "Domain Review",
@@ -7251,9 +7251,9 @@ export const certifications = [
         "id": "cissp-q26",
         "question": "What is 'Man-in-the-Middle' (MITM)?",
         "options": [
-          "A network hub",
-          "A referee",
-          "A secure proxy",
+          "A physical network hub for connecting devices",
+          "A professional sports referee during a match",
+          "A standard secure proxy for browsing the web",
           "Intercepting communication between two parties"
         ],
         "answer": "Intercepting communication between two parties",
@@ -7293,10 +7293,10 @@ export const certifications = [
         "id": "cissp-q29",
         "question": "What is 'Steganography'?",
         "options": [
-          "A secure network protocol",
-          "A type of stenography",
+          "A secure network protocol for transmitting data",
+          "A specific type of professional stenography",
           "Hiding data within other data (like an image)",
-          "Writing very fast"
+          "The act of writing very fast during a meeting"
         ],
         "answer": "Hiding data within other data (like an image)",
         "category": "Domain Review",
@@ -7322,9 +7322,9 @@ export const certifications = [
         "question": "What is an 'Audit Trail'?",
         "options": [
           "A chronological record of system activities",
-          "A hardware inventory",
-          "A list of employees",
-          "A path in the woods"
+          "A hardware inventory of all computer parts",
+          "A list of all employees in a small company",
+          "A path through the woods for outdoor hiking"
         ],
         "answer": "A chronological record of system activities",
         "category": "Domain Review",
@@ -7335,9 +7335,9 @@ export const certifications = [
         "id": "cissp-q32",
         "question": "What is Multi-Factor Authentication (MFA)?",
         "options": [
-          "Changing passwords every week",
-          "Using a secure browser",
-          "Using a very long password",
+          "Changing your account passwords every single week",
+          "Using a secure and encrypted web browser for access",
+          "Using a very long and complex alphanumeric password",
           "Using two or more different factors to verify identity"
         ],
         "answer": "Using two or more different factors to verify identity",
@@ -7349,9 +7349,9 @@ export const certifications = [
         "id": "cissp-q33",
         "question": "What is a 'Rootkit'?",
         "options": [
-          "A kit for growing plants",
-          "A tool for fixing roots",
-          "A type of antivirus",
+          "A physical kit used for growing garden plants",
+          "A tool for fixing roots of large trees outdoors",
+          "A type of antivirus software for scanning files",
           "Malware that hides its presence on a system"
         ],
         "answer": "Malware that hides its presence on a system",
@@ -7363,9 +7363,9 @@ export const certifications = [
         "id": "cissp-q34",
         "question": "What is 'Authentication'?",
         "options": [
-          "Creating a backup",
-          "Giving permission",
-          "Logging out",
+          "Creating a backup of sensitive organizational data",
+          "Giving permission to access a secure resource",
+          "The act of logging out from a secure account",
           "Verifying that you are who you say you are"
         ],
         "answer": "Verifying that you are who you say you are",
@@ -7377,10 +7377,10 @@ export const certifications = [
         "id": "cissp-q35",
         "question": "What is 'Pharmimg'?",
         "options": [
-          "A secure network protocol",
-          "A type of agriculture",
+          "A secure network protocol for transmitting data sets",
+          "A specific type of agriculture involving data plants",
           "Redirecting users to a fake website by poisoning DNS",
-          "Stealing emails"
+          "The act of stealing emails from a remote server"
         ],
         "answer": "Redirecting users to a fake website by poisoning DNS",
         "category": "Domain Review",
@@ -7391,9 +7391,9 @@ export const certifications = [
         "id": "cissp-q36",
         "question": "What is 'War Driving'?",
         "options": [
-          "A military exercise",
-          "A type of car race",
-          "Driving a tank",
+          "A specific type of high-speed car race",
+          "A standard military exercise for troops",
+          "Driving a large tank in a combat zone",
           "Searching for Wi-Fi networks from a vehicle"
         ],
         "answer": "Searching for Wi-Fi networks from a vehicle",
@@ -7405,10 +7405,10 @@ export const certifications = [
         "id": "cissp-q37",
         "question": "What is a 'Firewall Policy'?",
         "options": [
-          "A hardware warranty",
-          "A manual for a router",
+          "A hardware warranty that covers component repair costs",
           "A set of rules that define allowed traffic",
-          "An insurance policy"
+          "A standard insurance policy for a company building",
+          "A technical manual for installing a network router"
         ],
         "answer": "A set of rules that define allowed traffic",
         "category": "Domain Review",
@@ -7419,9 +7419,9 @@ export const certifications = [
         "id": "cissp-q38",
         "question": "What is 'Data Loss Prevention' (DLP)?",
         "options": [
-          "A backup system",
-          "A secure hard drive",
-          "A way to find lost files",
+          "A secure and encrypted hardware hard drive",
+          "A specific way to find lost files on a computer",
+          "A standard backup system for organizational data",
           "Tools to prevent sensitive data from leaving the network"
         ],
         "answer": "Tools to prevent sensitive data from leaving the network",
@@ -7447,10 +7447,10 @@ export const certifications = [
         "id": "cissp-q40",
         "question": "What is the purpose of 'Sandboxing'?",
         "options": [
-          "Cleaning a hard drive",
-          "Playing with sand",
+          "Cleaning a physical hard drive with a cloth",
           "Running suspicious programs in an isolated area",
-          "Testing website designs"
+          "Testing website designs for better appearance",
+          "The act of playing with sand on a large beach"
         ],
         "answer": "Running suspicious programs in an isolated area",
         "category": "Domain Review",
@@ -7461,10 +7461,10 @@ export const certifications = [
         "id": "cissp-q41",
         "question": "What is 'Encryption'?",
         "options": [
-          "Compressing data",
+          "Compressing data to save storage space",
           "Converting plaintext into ciphertext",
-          "Deleting files",
-          "Making data public"
+          "Deleting files from a computer system",
+          "Making data public for everyone to see"
         ],
         "answer": "Converting plaintext into ciphertext",
         "category": "Domain Review",
@@ -7475,10 +7475,10 @@ export const certifications = [
         "id": "cissp-q42",
         "question": "What is 'Access Control'?",
         "options": [
-          "A type of remote control",
-          "Hiring a security guard",
+          "A specific type of remote control for a television set",
+          "Hiring a security guard to monitor the office building",
           "Restricting access to resources to authorized users",
-          "Turning off the computer"
+          "The act of turning off the computer at the end of the day"
         ],
         "answer": "Restricting access to resources to authorized users",
         "category": "Domain Review",
@@ -7489,9 +7489,9 @@ export const certifications = [
         "id": "cissp-q43",
         "question": "What is Ransomware?",
         "options": [
-          "A hardware firewall",
-          "A tool for generating passwords",
-          "A type of secure email",
+          "A hardware firewall device for network security",
+          "A tool for generating and storing passwords",
+          "A type of secure and encrypted email service",
           "Malware that encrypts data and demands payment"
         ],
         "answer": "Malware that encrypts data and demands payment",
@@ -7517,9 +7517,9 @@ export const certifications = [
         "id": "cissp-q45",
         "question": "What is a 'Logic Bomb'?",
         "options": [
-          "A secure storage device",
-          "A type of math problem",
-          "An actual explosive",
+          "A secure storage device for organizational data",
+          "A specific type of math problem for students",
+          "An actual explosive used in a combat zone",
           "Malware that triggers on a specific event or time"
         ],
         "answer": "Malware that triggers on a specific event or time",
@@ -7531,9 +7531,9 @@ export const certifications = [
         "id": "cissp-q46",
         "question": "What is 'Biometrics'?",
         "options": [
-          "A secure password manager",
-          "A type of firewall",
-          "Studying biological data",
+          "A secure password manager for all accounts",
+          "A type of firewall for network protection",
+          "Studying biological data sets for research",
           "Using physical traits for authentication"
         ],
         "answer": "Using physical traits for authentication",
@@ -7560,9 +7560,9 @@ export const certifications = [
         "question": "What is a 'Backdoor'?",
         "options": [
           "A hidden way to bypass security",
-          "A real door",
-          "A secure login",
-          "A type of firewall"
+          "A real physical door at the back of a room",
+          "A specific type of network security firewall",
+          "A standard secure login for a web application"
         ],
         "answer": "A hidden way to bypass security",
         "category": "Domain Review",
@@ -7574,9 +7574,9 @@ export const certifications = [
         "question": "What is a 'Honey Pot'?",
         "options": [
           "A decoy system to lure attackers",
-          "A high-speed server",
-          "A jar of honey",
-          "A secure database"
+          "A high-speed server for data sets",
+          "A secure database for organization",
+          "A simple jar of honey from a bee"
         ],
         "answer": "A decoy system to lure attackers",
         "category": "Domain Review",
@@ -7587,9 +7587,9 @@ export const certifications = [
         "id": "cissp-q50",
         "question": "What is 'SQL Injection'?",
         "options": [
-          "A database backup",
-          "A network protocol",
-          "A type of virus",
+          "A network protocol for transmitting data sets",
+          "A specific type of malicious computer virus",
+          "A standard database backup for data safety",
           "Injecting malicious SQL queries into an input field"
         ],
         "answer": "Injecting malicious SQL queries into an input field",
@@ -7846,9 +7846,9 @@ export const certifications = [
         "id": "ceh-q1",
         "question": "What is 'Authentication'?",
         "options": [
-          "Creating a backup",
-          "Giving permission",
-          "Logging out",
+          "Creating a backup of sensitive organizational data",
+          "Giving permission to access a secure resource",
+          "The act of logging out from a secure account",
           "Verifying that you are who you say you are"
         ],
         "answer": "Verifying that you are who you say you are",
@@ -7860,9 +7860,9 @@ export const certifications = [
         "id": "ceh-q2",
         "question": "What is 'SQL Injection'?",
         "options": [
-          "A database backup",
-          "A network protocol",
-          "A type of virus",
+          "A network protocol for transmitting data sets",
+          "A specific type of malicious computer virus",
+          "A standard database backup for data safety",
           "Injecting malicious SQL queries into an input field"
         ],
         "answer": "Injecting malicious SQL queries into an input field",
@@ -7874,9 +7874,9 @@ export const certifications = [
         "id": "ceh-q3",
         "question": "What is 'Eavesdropping' in network security?",
         "options": [
-          "A secure protocol",
-          "A type of antenna",
-          "Listening through a wall",
+          "A secure network protocol for transmitting data",
+          "A type of antenna designed for receiving radio data",
+          "Listening through a physical wall using a device",
           "Unauthorized listening to private communication"
         ],
         "answer": "Unauthorized listening to private communication",
@@ -7888,12 +7888,12 @@ export const certifications = [
         "id": "ceh-q4",
         "question": "Which of these is a form of Symmetric encryption?",
         "options": [
-          "AES",
-          "Diffie-Hellman",
-          "ECC",
-          "RSA"
+          "Advanced Encryption Standard (AES)",
+          "Diffie-Hellman Key Exchange",
+          "Elliptic Curve Cryptography",
+          "Rivest-Shamir-Adleman (RSA)"
         ],
-        "answer": "AES",
+        "answer": "Advanced Encryption Standard (AES)",
         "category": "Domain Review",
         "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher.",
         "topic": "Implementation"
@@ -7902,9 +7902,9 @@ export const certifications = [
         "id": "ceh-q5",
         "question": "What is the difference between a 'Virus' and a 'Worm'?",
         "options": [
-          "There is no difference",
-          "Viruses are faster",
-          "Worms are harmless",
+          "There is no difference between a virus and a worm",
+          "Viruses are much faster than worms at infecting systems",
+          "Worms are harmless and do not cause any system damage",
           "Worms replicate automatically; viruses need host files"
         ],
         "answer": "Worms replicate automatically; viruses need host files",
@@ -7930,9 +7930,9 @@ export const certifications = [
         "id": "ceh-q7",
         "question": "What is a 'Trojan Horse'?",
         "options": [
-          "A secure downloader",
-          "A type of virus that replicates",
-          "A wooden statue",
+          "A large wooden statue from Greek mythology",
+          "A standard secure downloader for applications",
+          "A type of virus that replicates automatically",
           "Malware disguised as legitimate software"
         ],
         "answer": "Malware disguised as legitimate software",
@@ -7972,10 +7972,10 @@ export const certifications = [
         "id": "ceh-q10",
         "question": "What is 'Steganography'?",
         "options": [
-          "A secure network protocol",
-          "A type of stenography",
+          "A secure network protocol for transmitting data",
+          "A specific type of professional stenography",
           "Hiding data within other data (like an image)",
-          "Writing very fast"
+          "The act of writing very fast during a meeting"
         ],
         "answer": "Hiding data within other data (like an image)",
         "category": "Domain Review",
@@ -7986,9 +7986,9 @@ export const certifications = [
         "id": "ceh-q11",
         "question": "What is 'Man-in-the-Middle' (MITM)?",
         "options": [
-          "A network hub",
-          "A referee",
-          "A secure proxy",
+          "A physical network hub for connecting devices",
+          "A professional sports referee during a match",
+          "A standard secure proxy for browsing the web",
           "Intercepting communication between two parties"
         ],
         "answer": "Intercepting communication between two parties",
@@ -8001,9 +8001,9 @@ export const certifications = [
         "question": "What is an 'Audit Trail'?",
         "options": [
           "A chronological record of system activities",
-          "A hardware inventory",
-          "A list of employees",
-          "A path in the woods"
+          "A hardware inventory of all computer parts",
+          "A list of all employees in a small company",
+          "A path through the woods for outdoor hiking"
         ],
         "answer": "A chronological record of system activities",
         "category": "Domain Review",
@@ -8014,10 +8014,10 @@ export const certifications = [
         "id": "ceh-q13",
         "question": "What is 'Pharmimg'?",
         "options": [
-          "A secure network protocol",
-          "A type of agriculture",
+          "A secure network protocol for transmitting data sets",
+          "A specific type of agriculture involving data plants",
           "Redirecting users to a fake website by poisoning DNS",
-          "Stealing emails"
+          "The act of stealing emails from a remote server"
         ],
         "answer": "Redirecting users to a fake website by poisoning DNS",
         "category": "Domain Review",
@@ -8042,9 +8042,9 @@ export const certifications = [
         "id": "ceh-q15",
         "question": "What is a 'Logic Bomb'?",
         "options": [
-          "A secure storage device",
-          "A type of math problem",
-          "An actual explosive",
+          "A secure storage device for organizational data",
+          "A specific type of math problem for students",
+          "An actual explosive used in a combat zone",
           "Malware that triggers on a specific event or time"
         ],
         "answer": "Malware that triggers on a specific event or time",
@@ -8056,9 +8056,9 @@ export const certifications = [
         "id": "ceh-q16",
         "question": "What is a 'Rootkit'?",
         "options": [
-          "A kit for growing plants",
-          "A tool for fixing roots",
-          "A type of antivirus",
+          "A physical kit used for growing garden plants",
+          "A tool for fixing roots of large trees outdoors",
+          "A type of antivirus software for scanning files",
           "Malware that hides its presence on a system"
         ],
         "answer": "Malware that hides its presence on a system",
@@ -8070,9 +8070,9 @@ export const certifications = [
         "id": "ceh-q17",
         "question": "What is 'Biometrics'?",
         "options": [
-          "A secure password manager",
-          "A type of firewall",
-          "Studying biological data",
+          "A secure password manager for all accounts",
+          "A type of firewall for network protection",
+          "Studying biological data sets for research",
           "Using physical traits for authentication"
         ],
         "answer": "Using physical traits for authentication",
@@ -8084,10 +8084,10 @@ export const certifications = [
         "id": "ceh-q18",
         "question": "What is a 'Firewall Policy'?",
         "options": [
-          "A hardware warranty",
-          "A manual for a router",
+          "A hardware warranty that covers component repair costs",
           "A set of rules that define allowed traffic",
-          "An insurance policy"
+          "A standard insurance policy for a company building",
+          "A technical manual for installing a network router"
         ],
         "answer": "A set of rules that define allowed traffic",
         "category": "Domain Review",
@@ -8098,9 +8098,9 @@ export const certifications = [
         "id": "ceh-q19",
         "question": "What is Ransomware?",
         "options": [
-          "A hardware firewall",
-          "A tool for generating passwords",
-          "A type of secure email",
+          "A hardware firewall device for network security",
+          "A tool for generating and storing passwords",
+          "A type of secure and encrypted email service",
           "Malware that encrypts data and demands payment"
         ],
         "answer": "Malware that encrypts data and demands payment",
@@ -8112,10 +8112,10 @@ export const certifications = [
         "id": "ceh-q20",
         "question": "What is 'Whaling'?",
         "options": [
-          "A large-scale DDoS",
+          "A large-scale DDoS attack from many sources",
           "A phishing attack targeted at high-level executives",
-          "A type of network cable",
-          "Hunting whales"
+          "A type of network cable for data transmission",
+          "The act of hunting whales in the natural ocean"
         ],
         "answer": "A phishing attack targeted at high-level executives",
         "category": "Domain Review",
@@ -8126,10 +8126,10 @@ export const certifications = [
         "id": "ceh-q21",
         "question": "What is 'Spear Phishing'?",
         "options": [
-          "A type of network cable",
-          "A very fast attack",
+          "A type of network cable for data transfers",
+          "A very fast attack that occurs in seconds",
           "Phishing targeted at a specific person",
-          "Phishing with a weapon"
+          "Phishing with a physical weapon for theft"
         ],
         "answer": "Phishing targeted at a specific person",
         "category": "Domain Review",
@@ -8140,10 +8140,10 @@ export const certifications = [
         "id": "ceh-q22",
         "question": "What does 'WPA3' improve over WPA2?",
         "options": [
-          "Better Wi-Fi range",
+          "Better Wi-Fi range for large office buildings",
           "Better encryption and protection against brute force",
-          "Cheaper hardware",
-          "Faster speeds only"
+          "Cheaper hardware for small home applications",
+          "Faster speeds only for all network connections"
         ],
         "answer": "Better encryption and protection against brute force",
         "category": "Domain Review",
@@ -8154,10 +8154,10 @@ export const certifications = [
         "id": "ceh-q23",
         "question": "What is 'Identification' in security?",
         "options": [
-          "Checking an ID card",
-          "Looking in a mirror",
+          "Checking an ID card at the building entrance",
+          "Looking in a mirror to check your appearance",
           "Stating who you are (e.g., username)",
-          "Taking a photo"
+          "Taking a professional photo for a staff badge"
         ],
         "answer": "Stating who you are (e.g., username)",
         "category": "Domain Review",
@@ -8182,10 +8182,10 @@ export const certifications = [
         "id": "ceh-q25",
         "question": "What does 'Integrity' mean in security?",
         "options": [
-          "Being honest",
+          "Being honest in all professional interactions",
           "Ensuring data has not been tampered with",
-          "Keeping secrets",
-          "Making sure the website is fast"
+          "Keeping all organizational secrets safe",
+          "Making sure the website is fast and responsive"
         ],
         "answer": "Ensuring data has not been tampered with",
         "category": "Domain Review",
@@ -8197,9 +8197,9 @@ export const certifications = [
         "question": "What is a 'Backdoor'?",
         "options": [
           "A hidden way to bypass security",
-          "A real door",
-          "A secure login",
-          "A type of firewall"
+          "A real physical door at the back of a room",
+          "A specific type of network security firewall",
+          "A standard secure login for a web application"
         ],
         "answer": "A hidden way to bypass security",
         "category": "Domain Review",
@@ -8210,10 +8210,10 @@ export const certifications = [
         "id": "ceh-q27",
         "question": "What is 'Decryption'?",
         "options": [
-          "Analyzing code",
-          "Breaking a password",
+          "Analyzing computer code for potential bugs",
+          "Breaking a password using a brute force tool",
           "Converting ciphertext back into plaintext",
-          "Downloading data"
+          "Downloading data from a remote computer server"
         ],
         "answer": "Converting ciphertext back into plaintext",
         "category": "Domain Review",
@@ -8224,10 +8224,10 @@ export const certifications = [
         "id": "ceh-q28",
         "question": "What is a 'Buffer Overflow'?",
         "options": [
-          "A slow internet connection",
-          "A software update",
-          "Overwriting memory to execute malicious code",
-          "Too much data on a disk"
+          "A slow internet connection that delays downloads",
+          "A standard software update for computer applications",
+          "Having too much data on a computer hard disk",
+          "Overwriting memory to execute malicious code"
         ],
         "answer": "Overwriting memory to execute malicious code",
         "category": "Domain Review",
@@ -8238,9 +8238,9 @@ export const certifications = [
         "id": "ceh-q29",
         "question": "What is an 'Air Gap'?",
         "options": [
-          "A gap between server racks",
-          "A leak in a tire",
-          "A type of Wi-Fi",
+          "A physical gap between computer server racks in a room",
+          "A small leak in a rubber tire that causes low pressure",
+          "A specific type of high-speed Wi-Fi network connection",
           "Physically isolating a computer from any network"
         ],
         "answer": "Physically isolating a computer from any network",
@@ -8252,9 +8252,9 @@ export const certifications = [
         "id": "ceh-q30",
         "question": "What is a 'Private Key'?",
         "options": [
-          "A key for a private room",
-          "A key that everyone has",
-          "A physical key",
+          "A key that everyone in an office has",
+          "A key used for opening a private room",
+          "A physical metal key for opening a door",
           "A secret key known only to the owner"
         ],
         "answer": "A secret key known only to the owner",
@@ -8280,9 +8280,9 @@ export const certifications = [
         "id": "ceh-q32",
         "question": "What is Multi-Factor Authentication (MFA)?",
         "options": [
-          "Changing passwords every week",
-          "Using a secure browser",
-          "Using a very long password",
+          "Changing your account passwords every single week",
+          "Using a secure and encrypted web browser for access",
+          "Using a very long and complex alphanumeric password",
           "Using two or more different factors to verify identity"
         ],
         "answer": "Using two or more different factors to verify identity",
@@ -8294,10 +8294,10 @@ export const certifications = [
         "id": "ceh-q33",
         "question": "What does a Firewall do?",
         "options": [
-          "Cool down the server room",
-          "Detect viruses on a hard drive",
+          "Cool down the hardware in the server room",
+          "Detect viruses on a computer hard drive",
           "Filter traffic based on security rules",
-          "Speed up internet connection"
+          "Speed up the local internet connection"
         ],
         "answer": "Filter traffic based on security rules",
         "category": "Domain Review",
@@ -8308,9 +8308,9 @@ export const certifications = [
         "id": "ceh-q34",
         "question": "What is 'War Driving'?",
         "options": [
-          "A military exercise",
-          "A type of car race",
-          "Driving a tank",
+          "A specific type of high-speed car race",
+          "A standard military exercise for troops",
+          "Driving a large tank in a combat zone",
           "Searching for Wi-Fi networks from a vehicle"
         ],
         "answer": "Searching for Wi-Fi networks from a vehicle",
@@ -8337,9 +8337,9 @@ export const certifications = [
         "question": "Which of these is used for 'Non-repudiation'?",
         "options": [
           "Digital Signatures",
-          "Encryption",
-          "Firewalls",
-          "Hashing"
+          "Encryption tools",
+          "Hashing algorithms",
+          "Network Firewalls"
         ],
         "answer": "Digital Signatures",
         "category": "Domain Review",
@@ -8350,10 +8350,10 @@ export const certifications = [
         "id": "ceh-q37",
         "question": "What is the goal of 'Confidentiality' in the CIA triad?",
         "options": [
-          "Ensure data is accurate",
-          "Ensure data is compressed",
+          "Ensure data is accurate and trustworthy",
+          "Ensure data is compressed for storage",
           "Ensure only authorized users can read data",
-          "Ensure services are up"
+          "Ensure services are up and available"
         ],
         "answer": "Ensure only authorized users can read data",
         "category": "Domain Review",
@@ -8364,9 +8364,9 @@ export const certifications = [
         "id": "ceh-q38",
         "question": "What is 'Mobile Device Management' (MDM)?",
         "options": [
-          "A phone repair shop",
-          "A type of mobile app",
-          "Hiring a mobile expert",
+          "A professional phone repair shop in a city center",
+          "A specific type of mobile app for playing games",
+          "Hiring a professional mobile expert to manage devices",
           "Software used to manage and secure mobile devices"
         ],
         "answer": "Software used to manage and secure mobile devices",
@@ -8378,10 +8378,10 @@ export const certifications = [
         "id": "ceh-q39",
         "question": "What is the purpose of 'Sandboxing'?",
         "options": [
-          "Cleaning a hard drive",
-          "Playing with sand",
+          "Cleaning a physical hard drive with a cloth",
           "Running suspicious programs in an isolated area",
-          "Testing website designs"
+          "Testing website designs for better appearance",
+          "The act of playing with sand on a large beach"
         ],
         "answer": "Running suspicious programs in an isolated area",
         "category": "Domain Review",
@@ -8406,10 +8406,10 @@ export const certifications = [
         "id": "ceh-q41",
         "question": "What is 'Authorization'?",
         "options": [
-          "Checking a password",
-          "Creating a new account",
+          "Checking a password for accessing a secure system",
+          "Creating a new account for a website or application",
           "Determining what an authenticated user can do",
-          "Entering a building"
+          "The act of entering a building through the front door"
         ],
         "answer": "Determining what an authenticated user can do",
         "category": "Domain Review",
@@ -8421,9 +8421,9 @@ export const certifications = [
         "question": "What is a 'Honey Pot'?",
         "options": [
           "A decoy system to lure attackers",
-          "A high-speed server",
-          "A jar of honey",
-          "A secure database"
+          "A high-speed server for data sets",
+          "A secure database for organization",
+          "A simple jar of honey from a bee"
         ],
         "answer": "A decoy system to lure attackers",
         "category": "Domain Review",
@@ -8448,12 +8448,12 @@ export const certifications = [
         "id": "ceh-q44",
         "question": "What is 'Social Engineering'?",
         "options": [
-          "Hacking a bank",
-          "Installing cameras",
-          "Manipulating people into giving up info",
-          "Writing code for social media"
+          "Hacking into a financial institution or bank",
+          "Installing physical cameras for security monitoring",
+          "Manipulating people into giving up sensitive info",
+          "Writing computer code for social media platforms"
         ],
-        "answer": "Manipulating people into giving up info",
+        "answer": "Manipulating people into giving up sensitive info",
         "category": "Domain Review",
         "explanation": "It exploits human psychology rather than technical flaws.",
         "topic": "Attacks & Threats"
@@ -8462,9 +8462,9 @@ export const certifications = [
         "id": "ceh-q45",
         "question": "What is 'Data Loss Prevention' (DLP)?",
         "options": [
-          "A backup system",
-          "A secure hard drive",
-          "A way to find lost files",
+          "A secure and encrypted hardware hard drive",
+          "A specific way to find lost files on a computer",
+          "A standard backup system for organizational data",
           "Tools to prevent sensitive data from leaving the network"
         ],
         "answer": "Tools to prevent sensitive data from leaving the network",
@@ -8476,12 +8476,12 @@ export const certifications = [
         "id": "ceh-q46",
         "question": "Which of these is a social engineering attack?",
         "options": [
-          "Buffer overflow",
-          "Cross-site scripting",
-          "SQLi",
-          "Tailgating"
+          "Buffer overflow (Memory)",
+          "Cross-site scripting (Web)",
+          "SQLi (Injection)",
+          "Tailgating (Physical)"
         ],
-        "answer": "Tailgating",
+        "answer": "Tailgating (Physical)",
         "category": "Domain Review",
         "explanation": "Tailgating involves physically following an authorized person into a secure area.",
         "topic": "Attacks & Threats"
@@ -8490,9 +8490,9 @@ export const certifications = [
         "id": "ceh-q47",
         "question": "What is a 'Penetration Test'?",
         "options": [
-          "A hardware stress test",
-          "A network speed test",
-          "A test of ink levels",
+          "A hardware stress test for computer components",
+          "A network speed test for measuring bandwidth",
+          "A test of ink levels in a professional printer",
           "An authorized simulated attack to find flaws"
         ],
         "answer": "An authorized simulated attack to find flaws",
@@ -8504,10 +8504,10 @@ export const certifications = [
         "id": "ceh-q48",
         "question": "What is 'Two-Factor Authentication' (2FA)?",
         "options": [
-          "Having two accounts",
-          "Logging in twice",
-          "Using two different types of credentials",
-          "Using two passwords"
+          "Having two different accounts for one service",
+          "The act of logging in twice to the same system",
+          "Using two different passwords for one account",
+          "Using two different types of credentials"
         ],
         "answer": "Using two different types of credentials",
         "category": "Domain Review",
@@ -8532,10 +8532,10 @@ export const certifications = [
         "id": "ceh-q50",
         "question": "What is 'Access Control'?",
         "options": [
-          "A type of remote control",
-          "Hiring a security guard",
+          "A specific type of remote control for a television set",
+          "Hiring a security guard to monitor the office building",
           "Restricting access to resources to authorized users",
-          "Turning off the computer"
+          "The act of turning off the computer at the end of the day"
         ],
         "answer": "Restricting access to resources to authorized users",
         "category": "Domain Review",
@@ -8781,9 +8781,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q1",
         "question": "What is 'Block Storage'?",
         "options": [
-          "A secure vault",
-          "A type of memory",
-          "A wall of servers",
+          "A large wall made of physical computer servers in a rack",
+          "A secure and locked vault used for storing physical data",
+          "A specific type of computer memory for high-speed tasks",
           "Data stored in fixed-size blocks, usually for database use"
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
@@ -8809,10 +8809,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q3",
         "question": "What is 'Infrastructure as Code' (IaC)?",
         "options": [
-          "A hardware manual",
-          "A type of cloud billing",
+          "A hardware manual for installing server equipment",
+          "A type of cloud billing for managing monthly costs",
           "Managing infrastructure using configuration files and code",
-          "Writing code on a server"
+          "Writing computer code on a local developer server"
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
@@ -8823,9 +8823,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q4",
         "question": "What is 'Spot Instances'?",
         "options": [
-          "A server with spots",
-          "A temporary cloud",
-          "A type of storage",
+          "A physical server with spots on its chassis",
+          "A specific type of storage for active data sets",
+          "A temporary cloud environment for testing apps",
           "Using spare cloud capacity at a large discount"
         ],
         "answer": "Using spare cloud capacity at a large discount",
@@ -8837,10 +8837,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q5",
         "question": "What is a 'Region' in cloud computing?",
         "options": [
-          "A country-wide network",
+          "A large country-wide computer network for public use",
           "A physical location containing multiple availability zones",
-          "A single data center",
-          "A virtual private cloud"
+          "A single data center facility located in a remote area",
+          "A virtual private cloud connection for an individual"
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
@@ -8851,10 +8851,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q6",
         "question": "What is a 'Virtual Private Cloud' (VPC)?",
         "options": [
-          "A VPN",
-          "A personal server",
+          "A personal server hosted in a private home",
           "A private network section within a public cloud",
-          "A secure website"
+          "A secure website with a SSL certificate",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
@@ -8865,9 +8865,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q7",
         "question": "What is 'Kubernetes'?",
         "options": [
-          "A cloud provider",
-          "A programming language",
-          "A type of database",
+          "A programming language used for creating web applications",
+          "A public cloud provider for storing organizational data",
+          "A specific type of database optimized for container data",
           "An open-source system for automating deployment and management of containers"
         ],
         "answer": "An open-source system for automating deployment and management of containers",
@@ -8880,9 +8880,9 @@ export const certifications = [
         "question": "What is a 'Cloud Service Provider' (CSP)?",
         "options": [
           "A company that offers cloud computing services",
-          "A hardware manufacturer",
-          "A website developer",
-          "An internet provider"
+          "A hardware manufacturer that produces computer components",
+          "A standard internet provider for home and business use",
+          "A website developer who creates online content and sites"
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
@@ -8893,9 +8893,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q9",
         "question": "What is 'Data Sovereignty'?",
         "options": [
-          "A king in the cloud",
-          "A secure database",
-          "A type of storage",
+          "A highly secure database with advanced encryption",
+          "A king or monarch ruling over a cloud-based kingdom",
+          "A specific type of storage device for local data sets",
           "Ensuring data is subject to the laws of the country where it's stored"
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
@@ -8907,9 +8907,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q10",
         "question": "What is 'Cloud Governance'?",
         "options": [
-          "A cloud manual",
-          "A government in the cloud",
-          "A security guard",
+          "A manual that explains how to use a standard cloud system",
+          "A security guard who protects the physical cloud hardware",
+          "A sovereign government ruling over a cloud-based kingdom",
           "Policies and procedures to manage cloud resources and costs"
         ],
         "answer": "Policies and procedures to manage cloud resources and costs",
@@ -8935,10 +8935,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q12",
         "question": "What is 'Content Delivery Network' (CDN)?",
         "options": [
-          "A TV station",
-          "A fast internet connection",
+          "A fast internet connection for home users to browse the web",
           "A system of distributed servers that deliver web content to users",
-          "A type of storage"
+          "A television station for broadcasting news and information",
+          "A type of storage device for local backups of data files"
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
@@ -8963,10 +8963,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q14",
         "question": "What is 'Terraform'?",
         "options": [
-          "A cloud provider",
-          "A database system",
-          "A planet",
-          "A popular tool for Infrastructure as Code"
+          "A database system for storing user profiles",
+          "A planet in the solar system such as Earth",
+          "A popular tool for Infrastructure as Code",
+          "A public cloud provider for data storage"
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
@@ -8977,9 +8977,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q15",
         "question": "What is 'Identity and Access Management' (IAM)?",
         "options": [
-          "A driver's license",
-          "A login page",
-          "A security guard",
+          "A physical driver's license used for identification",
+          "A security guard who protects the data center building",
+          "A standard login page for a website or application",
           "Managing users and their permissions to access cloud resources"
         ],
         "answer": "Managing users and their permissions to access cloud resources",
@@ -8991,9 +8991,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q16",
         "question": "What is 'File Storage'?",
         "options": [
-          "A backup on a CD",
-          "A filing cabinet",
-          "A type of cloud",
+          "A copy of data saved on a standard physical compact disc",
+          "A physical filing cabinet used for storing paper documents",
+          "A specific type of cloud service for general data storage",
           "Data stored in a hierarchical folder structure"
         ],
         "answer": "Data stored in a hierarchical folder structure",
@@ -9005,9 +9005,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q17",
         "question": "What is a 'Hypervisor'?",
         "options": [
-          "A cloud manager",
-          "A type of network cable",
-          "A very fast processor",
+          "A professional manager who oversees a cloud department",
+          "A specific type of high-speed network cable for data",
+          "A very fast computer processor for high-end gaming",
           "Software that creates and runs virtual machines"
         ],
         "answer": "Software that creates and runs virtual machines",
@@ -9019,10 +9019,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q18",
         "question": "What is 'Cloud Monitoring'?",
         "options": [
-          "A security guard",
-          "A software update",
+          "A security guard who monitors the server room",
+          "A standard software update for computer apps",
           "Observing the performance and health of cloud resources",
-          "Watching a cloud"
+          "The act of watching a cloud in the natural sky"
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
@@ -9033,9 +9033,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q19",
         "question": "What is 'Serverless Functions'?",
         "options": [
-          "A cloud with no users",
-          "A computer with no power",
-          "A website with no data",
+          "A computer system that does not have any electrical power",
+          "A public cloud service that has no active users at all",
+          "A website that does not contain any data or information",
           "Running small snippets of code in response to events"
         ],
         "answer": "Running small snippets of code in response to events",
@@ -9047,10 +9047,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q20",
         "question": "What is 'Cloud Native'?",
         "options": [
-          "A cloud provider",
-          "A type of software",
-          "Applications designed specifically for the cloud environment",
-          "Someone born in the cloud"
+          "A person who was born in the cloud computing era",
+          "A public cloud provider such as AWS or Azure",
+          "A specific type of software for managing data",
+          "Applications designed specifically for the cloud environment"
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
@@ -9061,9 +9061,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q21",
         "question": "What is 'Low Latency'?",
         "options": [
-          "A cheap cloud",
-          "A slow network",
-          "A small file size",
+          "A cheap cloud service with low capacity",
+          "A slow network with many interruptions",
+          "A small file size for fast transmission",
           "Minimal delay in data transmission"
         ],
         "answer": "Minimal delay in data transmission",
@@ -9075,10 +9075,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q22",
         "question": "What is 'Fault Tolerance'?",
         "options": [
-          "A bug in the software",
-          "A hardware warranty",
-          "Being very patient",
-          "The ability of a system to continue operating even if a component fails"
+          "A hardware warranty that covers parts and labor costs",
+          "A minor bug in the software application source code",
+          "The ability of a system to continue operating even if a component fails",
+          "The act of being very patient during a system outage"
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
@@ -9089,9 +9089,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q23",
         "question": "What is 'Microservices'?",
         "options": [
-          "A simple app",
-          "A type of computer chip",
-          "A very small server",
+          "A simple application for tracking data sets",
+          "A type of computer chip for mobile devices",
+          "A very small server used for local hosting",
           "Breaking an app into small, independent services"
         ],
         "answer": "Breaking an app into small, independent services",
@@ -9103,10 +9103,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q24",
         "question": "What is 'Disaster Recovery' (DR)?",
         "options": [
-          "A backup on a USB",
-          "A government program",
-          "Fixing a broken PC",
-          "Plans and processes to restore IT systems after a major failure"
+          "A standard backup saved on a physical USB drive",
+          "A standard government program for disaster relief",
+          "Plans and processes to restore IT systems after a major failure",
+          "The simple act of fixing a broken personal computer"
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
@@ -9117,9 +9117,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q25",
         "question": "What is an 'Availability Zone' (AZ)?",
         "options": [
-          "A backup hard drive",
-          "A city-wide network",
-          "A single server rack",
+          "A backup hard drive used for storing sensitive data sets",
+          "A large city-wide computer network for the general public",
+          "A single server rack located inside a small data center",
           "One or more discrete data centers with redundant power"
         ],
         "answer": "One or more discrete data centers with redundant power",
@@ -9131,9 +9131,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q26",
         "question": "What is 'Virtualization' in cloud computing?",
         "options": [
-          "A VR headset",
-          "A computer game",
-          "A fake cloud",
+          "A VR headset used for playing immersive virtual reality computer games",
+          "A computer game designed for teaching general technology concepts",
+          "A fake cloud-based service that does not have any real data sets",
           "Technology that allows creating multiple simulated environments from one physical system"
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
@@ -9146,9 +9146,9 @@ export const certifications = [
         "question": "What is a 'Cloud Gateway'?",
         "options": [
           "A bridge between on-premises and cloud networks",
-          "A fast router",
-          "A type of VPN",
-          "An entrance to a data center"
+          "A high-speed router for local area networks",
+          "A physical entrance to a secured data center",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
@@ -9159,9 +9159,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q28",
         "question": "What is 'Multi-Tenancy'?",
         "options": [
-          "A building with many rooms",
-          "A large cloud",
-          "Hiring many tenants",
+          "A large cloud-based service for storing organizational data",
+          "A physical building with many different office rooms for rent",
+          "Hiring many tenants to manage your data center facility",
           "Multiple customers sharing the same physical hardware"
         ],
         "answer": "Multiple customers sharing the same physical hardware",
@@ -9187,10 +9187,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q30",
         "question": "What is 'Object Storage'?",
         "options": [
-          "A folder on a PC",
-          "A type of database",
+          "A simple hierarchical folder stored on a personal computer",
+          "A specific type of database optimized for storing metadata",
           "Data stored as objects with metadata and a unique identifier",
-          "Storing physical objects"
+          "Storing physical objects in a warehouse or storage facility"
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
@@ -9201,9 +9201,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q31",
         "question": "What is 'Cloud Billing'?",
         "options": [
-          "A paper bill in the mail",
-          "A software license",
-          "A type of payment",
+          "A paper bill sent through the standard mail",
+          "A specific type of payment for web services",
+          "A standard software license for applications",
           "How cloud providers charge for their services"
         ],
         "answer": "How cloud providers charge for their services",
@@ -9215,10 +9215,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q32",
         "question": "What is 'Serverless Database'?",
         "options": [
-          "A database for everyone",
-          "A database on a USB",
+          "A database stored on a physical USB flash drive",
           "A database that scales automatically and has no fixed cost",
-          "A file in the cloud"
+          "A simple text file stored in a cloud environment",
+          "A standard database that is available for everyone"
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
@@ -9229,9 +9229,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q33",
         "question": "What is a 'Private Cloud'?",
         "options": [
-          "A cloud with a password",
-          "A hidden data center",
-          "A personal hard drive",
+          "A cloud-based service that is protected with a password",
+          "A hidden data center facility with no public access points",
+          "A personal hard drive used for storing digital information",
           "Cloud resources used exclusively by one organization"
         ],
         "answer": "Cloud resources used exclusively by one organization",
@@ -9243,9 +9243,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q34",
         "question": "What is 'Cloud Security'?",
         "options": [
-          "A guard in a data center",
-          "A lock on a server",
-          "A secure browser",
+          "A physical lock placed on a computer server in a rack",
+          "A professional security guard working in a data center",
+          "A secure and encrypted web browser for accessing the web",
           "The set of technologies and policies to protect cloud data and apps"
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
@@ -9257,9 +9257,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q35",
         "question": "What is 'Reserved Instances'?",
         "options": [
-          "A backup system",
-          "A private server",
-          "A type of storage",
+          "A backup system for saving organizational data",
+          "A private server for an individual organization",
+          "A specific type of storage for active data sets",
           "Pre-paying for cloud capacity at a discounted rate"
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
@@ -9271,9 +9271,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q36",
         "question": "What is 'DevOps' in the cloud?",
         "options": [
-          "A hardware engineer",
-          "A programming language",
-          "A type of cloud",
+          "A hardware engineer who designs data centers",
+          "A programming language used for cloud apps",
+          "A specific type of cloud for development tasks",
           "Combining development and operations to improve speed and quality"
         ],
         "answer": "Combining development and operations to improve speed and quality",
@@ -9285,9 +9285,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q37",
         "question": "What is 'Cloud Storage'?",
         "options": [
-          "A backup on a USB",
-          "A hard drive in the sky",
-          "A type of memory",
+          "A copy of data saved on a standard physical USB drive",
+          "A physical hard drive floating in the natural sky",
+          "A type of computer memory used for fast processing",
           "Storing data on remote servers accessed via the internet"
         ],
         "answer": "Storing data on remote servers accessed via the internet",
@@ -9299,10 +9299,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q38",
         "question": "What is 'Edge Computing'?",
         "options": [
-          "Building a cloud on a cliff",
-          "Fast internet at home",
+          "A fast internet connection used for general home browsing",
+          "Building a physical cloud data center on a mountain cliff",
           "Processing data closer to the source of data generation",
-          "Using the latest hardware"
+          "Using the latest computer hardware for high-speed processing"
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
@@ -9313,10 +9313,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q39",
         "question": "What is 'Cloud Logging'?",
         "options": [
-          "A type of storage",
-          "Cutting down trees",
+          "A specific type of storage device for local data backups",
           "Recording events and activities in the cloud for auditing",
-          "Writing a diary"
+          "The act of cutting down trees for timber production",
+          "The act of writing a personal diary at the end of the day"
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
@@ -9327,10 +9327,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q40",
         "question": "What is a 'Container'?",
         "options": [
-          "A box for servers",
+          "A large physical box used for shipping computer servers",
           "A lightweight, portable unit containing an app and its dependencies",
-          "A secure room",
-          "A type of storage"
+          "A secure and locked room for housing organizational data",
+          "A specific type of storage device for saving digital files"
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
@@ -9341,10 +9341,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q41",
         "question": "What is a 'Cloud Migration'?",
         "options": [
-          "Birds flying south",
-          "Buying new servers",
+          "Buying new computer servers for an internal data center",
           "Moving data and apps from on-premises to the cloud",
-          "Updating a website"
+          "The act of updating a website with new content and images",
+          "The natural process of birds flying south during winter"
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
@@ -9369,10 +9369,10 @@ export const certifications = [
         "id": "aws-sa-assoc-q43",
         "question": "What is the 'Shared Responsibility Model'?",
         "options": [
+          "A collaborative group project for a university course",
           "A framework defining security tasks for provider and customer",
-          "A group project",
-          "Sharing a password",
-          "Splitting the cloud bill"
+          "Sharing a secure account password with another team member",
+          "Splitting the monthly cloud bill between multiple departments"
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
@@ -9383,12 +9383,12 @@ export const certifications = [
         "id": "aws-sa-assoc-q44",
         "question": "What is 'SaaS'?",
         "options": [
-          "Security as a Service",
-          "Software as a Service",
-          "Storage as a Service",
-          "System as a Service"
+          "Security as a Service (SaaS)",
+          "Software as a Service (SaaS)",
+          "Storage as a Service (SaaS)",
+          "System as a Service (SaaS)"
         ],
-        "answer": "Software as a Service",
+        "answer": "Software as a Service (SaaS)",
         "category": "Domain Review",
         "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
         "topic": "Cloud Concepts"
@@ -9397,9 +9397,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q45",
         "question": "What is 'High Availability' (HA)?",
         "options": [
-          "A cloud for everyone",
-          "A tall server",
-          "Fast internet",
+          "A fast internet connection for data transfers",
+          "A public cloud service for everyone to use",
+          "A very tall server rack in a data center",
           "Systems that are durable and likely to operate continuously"
         ],
         "answer": "Systems that are durable and likely to operate continuously",
@@ -9411,9 +9411,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q46",
         "question": "What is a 'Public Cloud'?",
         "options": [
-          "A cloud for everyone",
-          "A free Wi-Fi hotspot",
-          "A government network",
+          "A free Wi-Fi hotspot available for public use in a city",
+          "A generic cloud-based service that is open for everyone to use",
+          "A government-owned and operated internal computer network",
           "Services offered by third-party providers over the public internet"
         ],
         "answer": "Services offered by third-party providers over the public internet",
@@ -9425,9 +9425,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q47",
         "question": "What is 'Elasticity'?",
         "options": [
-          "A flexible cable",
-          "A type of cloud storage",
-          "Fast network speed",
+          "A flexible cable used for connecting networking devices",
+          "A specific type of cloud-based service for data storage",
+          "A very fast network speed for transmitting large data sets",
           "The ability to automatically scale resources based on demand"
         ],
         "answer": "The ability to automatically scale resources based on demand",
@@ -9439,9 +9439,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q48",
         "question": "What is 'Hybrid IT'?",
         "options": [
-          "A computer that runs on gas",
-          "A fast internet connection",
-          "A type of server",
+          "A fast internet connection for high-speed transfers",
+          "A specialized computer that runs on natural gas",
+          "A standard computer server for managing data sets",
           "Combining on-premises infrastructure with cloud services"
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
@@ -9453,9 +9453,9 @@ export const certifications = [
         "id": "aws-sa-assoc-q49",
         "question": "What is 'Auto Scaling'?",
         "options": [
-          "A hardware upgrade",
-          "A self-adjusting scale",
-          "A type of cloud billing",
+          "A self-adjusting physical scale used for measuring weight",
+          "A specific type of cloud billing for managing monthly costs",
+          "A standard hardware upgrade for increasing system speed",
           "Automatically adding or removing instances based on load"
         ],
         "answer": "Automatically adding or removing instances based on load",
@@ -9467,12 +9467,12 @@ export const certifications = [
         "id": "aws-sa-assoc-q50",
         "question": "What is 'Serverless' computing?",
         "options": [
-          "A cloud with no physical hardware",
-          "A server that never crashes",
-          "Running code without managing servers",
-          "Storing data in the browser"
+          "Running code without managing server infrastructure",
+          "Storing data directly in the user's web browser",
+          "Using a cloud with no physical hardware at all",
+          "Using a server that never crashes or goes offline"
         ],
-        "answer": "Running code without managing servers",
+        "answer": "Running code without managing server infrastructure",
         "category": "Domain Review",
         "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution.",
         "topic": "Technology"
@@ -9716,9 +9716,9 @@ export const certifications = [
         "id": "az-900-q1",
         "question": "What is a 'Public Cloud'?",
         "options": [
-          "A cloud for everyone",
-          "A free Wi-Fi hotspot",
-          "A government network",
+          "A free Wi-Fi hotspot available for public use in a city",
+          "A generic cloud-based service that is open for everyone to use",
+          "A government-owned and operated internal computer network",
           "Services offered by third-party providers over the public internet"
         ],
         "answer": "Services offered by third-party providers over the public internet",
@@ -9730,9 +9730,9 @@ export const certifications = [
         "id": "az-900-q2",
         "question": "What is 'Spot Instances'?",
         "options": [
-          "A server with spots",
-          "A temporary cloud",
-          "A type of storage",
+          "A physical server with spots on its chassis",
+          "A specific type of storage for active data sets",
+          "A temporary cloud environment for testing apps",
           "Using spare cloud capacity at a large discount"
         ],
         "answer": "Using spare cloud capacity at a large discount",
@@ -9744,9 +9744,9 @@ export const certifications = [
         "id": "az-900-q3",
         "question": "What is 'Reserved Instances'?",
         "options": [
-          "A backup system",
-          "A private server",
-          "A type of storage",
+          "A backup system for saving organizational data",
+          "A private server for an individual organization",
+          "A specific type of storage for active data sets",
           "Pre-paying for cloud capacity at a discounted rate"
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
@@ -9758,10 +9758,10 @@ export const certifications = [
         "id": "az-900-q4",
         "question": "What is a 'Region' in cloud computing?",
         "options": [
-          "A country-wide network",
+          "A large country-wide computer network for public use",
           "A physical location containing multiple availability zones",
-          "A single data center",
-          "A virtual private cloud"
+          "A single data center facility located in a remote area",
+          "A virtual private cloud connection for an individual"
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
@@ -9772,9 +9772,9 @@ export const certifications = [
         "id": "az-900-q5",
         "question": "What is 'Cloud Security'?",
         "options": [
-          "A guard in a data center",
-          "A lock on a server",
-          "A secure browser",
+          "A physical lock placed on a computer server in a rack",
+          "A professional security guard working in a data center",
+          "A secure and encrypted web browser for accessing the web",
           "The set of technologies and policies to protect cloud data and apps"
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
@@ -9786,9 +9786,9 @@ export const certifications = [
         "id": "az-900-q6",
         "question": "What is 'Cloud Governance'?",
         "options": [
-          "A cloud manual",
-          "A government in the cloud",
-          "A security guard",
+          "A manual that explains how to use a standard cloud system",
+          "A security guard who protects the physical cloud hardware",
+          "A sovereign government ruling over a cloud-based kingdom",
           "Policies and procedures to manage cloud resources and costs"
         ],
         "answer": "Policies and procedures to manage cloud resources and costs",
@@ -9800,10 +9800,10 @@ export const certifications = [
         "id": "az-900-q7",
         "question": "What is 'Edge Computing'?",
         "options": [
-          "Building a cloud on a cliff",
-          "Fast internet at home",
+          "A fast internet connection used for general home browsing",
+          "Building a physical cloud data center on a mountain cliff",
           "Processing data closer to the source of data generation",
-          "Using the latest hardware"
+          "Using the latest computer hardware for high-speed processing"
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
@@ -9814,9 +9814,9 @@ export const certifications = [
         "id": "az-900-q8",
         "question": "What is 'Low Latency'?",
         "options": [
-          "A cheap cloud",
-          "A slow network",
-          "A small file size",
+          "A cheap cloud service with low capacity",
+          "A slow network with many interruptions",
+          "A small file size for fast transmission",
           "Minimal delay in data transmission"
         ],
         "answer": "Minimal delay in data transmission",
@@ -9828,9 +9828,9 @@ export const certifications = [
         "id": "az-900-q9",
         "question": "What is 'File Storage'?",
         "options": [
-          "A backup on a CD",
-          "A filing cabinet",
-          "A type of cloud",
+          "A copy of data saved on a standard physical compact disc",
+          "A physical filing cabinet used for storing paper documents",
+          "A specific type of cloud service for general data storage",
           "Data stored in a hierarchical folder structure"
         ],
         "answer": "Data stored in a hierarchical folder structure",
@@ -9842,10 +9842,10 @@ export const certifications = [
         "id": "az-900-q10",
         "question": "What is 'Serverless Database'?",
         "options": [
-          "A database for everyone",
-          "A database on a USB",
+          "A database stored on a physical USB flash drive",
           "A database that scales automatically and has no fixed cost",
-          "A file in the cloud"
+          "A simple text file stored in a cloud environment",
+          "A standard database that is available for everyone"
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
@@ -9870,10 +9870,10 @@ export const certifications = [
         "id": "az-900-q12",
         "question": "What is 'Fault Tolerance'?",
         "options": [
-          "A bug in the software",
-          "A hardware warranty",
-          "Being very patient",
-          "The ability of a system to continue operating even if a component fails"
+          "A hardware warranty that covers parts and labor costs",
+          "A minor bug in the software application source code",
+          "The ability of a system to continue operating even if a component fails",
+          "The act of being very patient during a system outage"
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
@@ -9884,10 +9884,10 @@ export const certifications = [
         "id": "az-900-q13",
         "question": "What is 'Content Delivery Network' (CDN)?",
         "options": [
-          "A TV station",
-          "A fast internet connection",
+          "A fast internet connection for home users to browse the web",
           "A system of distributed servers that deliver web content to users",
-          "A type of storage"
+          "A television station for broadcasting news and information",
+          "A type of storage device for local backups of data files"
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
@@ -9898,9 +9898,9 @@ export const certifications = [
         "id": "az-900-q14",
         "question": "What is 'Hybrid IT'?",
         "options": [
-          "A computer that runs on gas",
-          "A fast internet connection",
-          "A type of server",
+          "A fast internet connection for high-speed transfers",
+          "A specialized computer that runs on natural gas",
+          "A standard computer server for managing data sets",
           "Combining on-premises infrastructure with cloud services"
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
@@ -9912,9 +9912,9 @@ export const certifications = [
         "id": "az-900-q15",
         "question": "What is 'Microservices'?",
         "options": [
-          "A simple app",
-          "A type of computer chip",
-          "A very small server",
+          "A simple application for tracking data sets",
+          "A type of computer chip for mobile devices",
+          "A very small server used for local hosting",
           "Breaking an app into small, independent services"
         ],
         "answer": "Breaking an app into small, independent services",
@@ -9926,12 +9926,12 @@ export const certifications = [
         "id": "az-900-q16",
         "question": "What is 'SaaS'?",
         "options": [
-          "Security as a Service",
-          "Software as a Service",
-          "Storage as a Service",
-          "System as a Service"
+          "Security as a Service (SaaS)",
+          "Software as a Service (SaaS)",
+          "Storage as a Service (SaaS)",
+          "System as a Service (SaaS)"
         ],
-        "answer": "Software as a Service",
+        "answer": "Software as a Service (SaaS)",
         "category": "Domain Review",
         "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
         "topic": "Cloud Concepts"
@@ -9940,9 +9940,9 @@ export const certifications = [
         "id": "az-900-q17",
         "question": "What is 'High Availability' (HA)?",
         "options": [
-          "A cloud for everyone",
-          "A tall server",
-          "Fast internet",
+          "A fast internet connection for data transfers",
+          "A public cloud service for everyone to use",
+          "A very tall server rack in a data center",
           "Systems that are durable and likely to operate continuously"
         ],
         "answer": "Systems that are durable and likely to operate continuously",
@@ -9954,10 +9954,10 @@ export const certifications = [
         "id": "az-900-q18",
         "question": "What is 'Object Storage'?",
         "options": [
-          "A folder on a PC",
-          "A type of database",
+          "A simple hierarchical folder stored on a personal computer",
+          "A specific type of database optimized for storing metadata",
           "Data stored as objects with metadata and a unique identifier",
-          "Storing physical objects"
+          "Storing physical objects in a warehouse or storage facility"
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
@@ -9968,9 +9968,9 @@ export const certifications = [
         "id": "az-900-q19",
         "question": "What is 'Cloud Storage'?",
         "options": [
-          "A backup on a USB",
-          "A hard drive in the sky",
-          "A type of memory",
+          "A copy of data saved on a standard physical USB drive",
+          "A physical hard drive floating in the natural sky",
+          "A type of computer memory used for fast processing",
           "Storing data on remote servers accessed via the internet"
         ],
         "answer": "Storing data on remote servers accessed via the internet",
@@ -9982,9 +9982,9 @@ export const certifications = [
         "id": "az-900-q20",
         "question": "What is 'Elasticity'?",
         "options": [
-          "A flexible cable",
-          "A type of cloud storage",
-          "Fast network speed",
+          "A flexible cable used for connecting networking devices",
+          "A specific type of cloud-based service for data storage",
+          "A very fast network speed for transmitting large data sets",
           "The ability to automatically scale resources based on demand"
         ],
         "answer": "The ability to automatically scale resources based on demand",
@@ -9996,10 +9996,10 @@ export const certifications = [
         "id": "az-900-q21",
         "question": "What is a 'Virtual Private Cloud' (VPC)?",
         "options": [
-          "A VPN",
-          "A personal server",
+          "A personal server hosted in a private home",
           "A private network section within a public cloud",
-          "A secure website"
+          "A secure website with a SSL certificate",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
@@ -10010,9 +10010,9 @@ export const certifications = [
         "id": "az-900-q22",
         "question": "What is 'Serverless Functions'?",
         "options": [
-          "A cloud with no users",
-          "A computer with no power",
-          "A website with no data",
+          "A computer system that does not have any electrical power",
+          "A public cloud service that has no active users at all",
+          "A website that does not contain any data or information",
           "Running small snippets of code in response to events"
         ],
         "answer": "Running small snippets of code in response to events",
@@ -10024,9 +10024,9 @@ export const certifications = [
         "id": "az-900-q23",
         "question": "What is 'Block Storage'?",
         "options": [
-          "A secure vault",
-          "A type of memory",
-          "A wall of servers",
+          "A large wall made of physical computer servers in a rack",
+          "A secure and locked vault used for storing physical data",
+          "A specific type of computer memory for high-speed tasks",
           "Data stored in fixed-size blocks, usually for database use"
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
@@ -10038,10 +10038,10 @@ export const certifications = [
         "id": "az-900-q24",
         "question": "What is the 'Shared Responsibility Model'?",
         "options": [
+          "A collaborative group project for a university course",
           "A framework defining security tasks for provider and customer",
-          "A group project",
-          "Sharing a password",
-          "Splitting the cloud bill"
+          "Sharing a secure account password with another team member",
+          "Splitting the monthly cloud bill between multiple departments"
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
@@ -10052,9 +10052,9 @@ export const certifications = [
         "id": "az-900-q25",
         "question": "What is 'DevOps' in the cloud?",
         "options": [
-          "A hardware engineer",
-          "A programming language",
-          "A type of cloud",
+          "A hardware engineer who designs data centers",
+          "A programming language used for cloud apps",
+          "A specific type of cloud for development tasks",
           "Combining development and operations to improve speed and quality"
         ],
         "answer": "Combining development and operations to improve speed and quality",
@@ -10066,9 +10066,9 @@ export const certifications = [
         "id": "az-900-q26",
         "question": "What is a 'Hypervisor'?",
         "options": [
-          "A cloud manager",
-          "A type of network cable",
-          "A very fast processor",
+          "A professional manager who oversees a cloud department",
+          "A specific type of high-speed network cable for data",
+          "A very fast computer processor for high-end gaming",
           "Software that creates and runs virtual machines"
         ],
         "answer": "Software that creates and runs virtual machines",
@@ -10080,9 +10080,9 @@ export const certifications = [
         "id": "az-900-q27",
         "question": "What is 'Identity and Access Management' (IAM)?",
         "options": [
-          "A driver's license",
-          "A login page",
-          "A security guard",
+          "A physical driver's license used for identification",
+          "A security guard who protects the data center building",
+          "A standard login page for a website or application",
           "Managing users and their permissions to access cloud resources"
         ],
         "answer": "Managing users and their permissions to access cloud resources",
@@ -10094,9 +10094,9 @@ export const certifications = [
         "id": "az-900-q28",
         "question": "What is 'Kubernetes'?",
         "options": [
-          "A cloud provider",
-          "A programming language",
-          "A type of database",
+          "A programming language used for creating web applications",
+          "A public cloud provider for storing organizational data",
+          "A specific type of database optimized for container data",
           "An open-source system for automating deployment and management of containers"
         ],
         "answer": "An open-source system for automating deployment and management of containers",
@@ -10108,10 +10108,10 @@ export const certifications = [
         "id": "az-900-q29",
         "question": "What is 'Disaster Recovery' (DR)?",
         "options": [
-          "A backup on a USB",
-          "A government program",
-          "Fixing a broken PC",
-          "Plans and processes to restore IT systems after a major failure"
+          "A standard backup saved on a physical USB drive",
+          "A standard government program for disaster relief",
+          "Plans and processes to restore IT systems after a major failure",
+          "The simple act of fixing a broken personal computer"
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
@@ -10122,9 +10122,9 @@ export const certifications = [
         "id": "az-900-q30",
         "question": "What is 'Multi-Tenancy'?",
         "options": [
-          "A building with many rooms",
-          "A large cloud",
-          "Hiring many tenants",
+          "A large cloud-based service for storing organizational data",
+          "A physical building with many different office rooms for rent",
+          "Hiring many tenants to manage your data center facility",
           "Multiple customers sharing the same physical hardware"
         ],
         "answer": "Multiple customers sharing the same physical hardware",
@@ -10136,9 +10136,9 @@ export const certifications = [
         "id": "az-900-q31",
         "question": "What is 'Data Sovereignty'?",
         "options": [
-          "A king in the cloud",
-          "A secure database",
-          "A type of storage",
+          "A highly secure database with advanced encryption",
+          "A king or monarch ruling over a cloud-based kingdom",
+          "A specific type of storage device for local data sets",
           "Ensuring data is subject to the laws of the country where it's stored"
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
@@ -10165,9 +10165,9 @@ export const certifications = [
         "question": "What is a 'Cloud Service Provider' (CSP)?",
         "options": [
           "A company that offers cloud computing services",
-          "A hardware manufacturer",
-          "A website developer",
-          "An internet provider"
+          "A hardware manufacturer that produces computer components",
+          "A standard internet provider for home and business use",
+          "A website developer who creates online content and sites"
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
@@ -10192,10 +10192,10 @@ export const certifications = [
         "id": "az-900-q35",
         "question": "What is 'Cloud Logging'?",
         "options": [
-          "A type of storage",
-          "Cutting down trees",
+          "A specific type of storage device for local data backups",
           "Recording events and activities in the cloud for auditing",
-          "Writing a diary"
+          "The act of cutting down trees for timber production",
+          "The act of writing a personal diary at the end of the day"
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
@@ -10206,10 +10206,10 @@ export const certifications = [
         "id": "az-900-q36",
         "question": "What is 'Cloud Monitoring'?",
         "options": [
-          "A security guard",
-          "A software update",
+          "A security guard who monitors the server room",
+          "A standard software update for computer apps",
           "Observing the performance and health of cloud resources",
-          "Watching a cloud"
+          "The act of watching a cloud in the natural sky"
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
@@ -10220,9 +10220,9 @@ export const certifications = [
         "id": "az-900-q37",
         "question": "What is an 'Availability Zone' (AZ)?",
         "options": [
-          "A backup hard drive",
-          "A city-wide network",
-          "A single server rack",
+          "A backup hard drive used for storing sensitive data sets",
+          "A large city-wide computer network for the general public",
+          "A single server rack located inside a small data center",
           "One or more discrete data centers with redundant power"
         ],
         "answer": "One or more discrete data centers with redundant power",
@@ -10234,10 +10234,10 @@ export const certifications = [
         "id": "az-900-q38",
         "question": "What is a 'Container'?",
         "options": [
-          "A box for servers",
+          "A large physical box used for shipping computer servers",
           "A lightweight, portable unit containing an app and its dependencies",
-          "A secure room",
-          "A type of storage"
+          "A secure and locked room for housing organizational data",
+          "A specific type of storage device for saving digital files"
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
@@ -10248,9 +10248,9 @@ export const certifications = [
         "id": "az-900-q39",
         "question": "What is 'Cloud Billing'?",
         "options": [
-          "A paper bill in the mail",
-          "A software license",
-          "A type of payment",
+          "A paper bill sent through the standard mail",
+          "A specific type of payment for web services",
+          "A standard software license for applications",
           "How cloud providers charge for their services"
         ],
         "answer": "How cloud providers charge for their services",
@@ -10276,9 +10276,9 @@ export const certifications = [
         "id": "az-900-q41",
         "question": "What is 'Auto Scaling'?",
         "options": [
-          "A hardware upgrade",
-          "A self-adjusting scale",
-          "A type of cloud billing",
+          "A self-adjusting physical scale used for measuring weight",
+          "A specific type of cloud billing for managing monthly costs",
+          "A standard hardware upgrade for increasing system speed",
           "Automatically adding or removing instances based on load"
         ],
         "answer": "Automatically adding or removing instances based on load",
@@ -10291,9 +10291,9 @@ export const certifications = [
         "question": "What is a 'Cloud Gateway'?",
         "options": [
           "A bridge between on-premises and cloud networks",
-          "A fast router",
-          "A type of VPN",
-          "An entrance to a data center"
+          "A high-speed router for local area networks",
+          "A physical entrance to a secured data center",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
@@ -10304,9 +10304,9 @@ export const certifications = [
         "id": "az-900-q43",
         "question": "What is a 'Private Cloud'?",
         "options": [
-          "A cloud with a password",
-          "A hidden data center",
-          "A personal hard drive",
+          "A cloud-based service that is protected with a password",
+          "A hidden data center facility with no public access points",
+          "A personal hard drive used for storing digital information",
           "Cloud resources used exclusively by one organization"
         ],
         "answer": "Cloud resources used exclusively by one organization",
@@ -10332,12 +10332,12 @@ export const certifications = [
         "id": "az-900-q45",
         "question": "What is 'Serverless' computing?",
         "options": [
-          "A cloud with no physical hardware",
-          "A server that never crashes",
-          "Running code without managing servers",
-          "Storing data in the browser"
+          "Running code without managing server infrastructure",
+          "Storing data directly in the user's web browser",
+          "Using a cloud with no physical hardware at all",
+          "Using a server that never crashes or goes offline"
         ],
-        "answer": "Running code without managing servers",
+        "answer": "Running code without managing server infrastructure",
         "category": "Domain Review",
         "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution.",
         "topic": "Technology"
@@ -10346,10 +10346,10 @@ export const certifications = [
         "id": "az-900-q46",
         "question": "What is a 'Cloud Migration'?",
         "options": [
-          "Birds flying south",
-          "Buying new servers",
+          "Buying new computer servers for an internal data center",
           "Moving data and apps from on-premises to the cloud",
-          "Updating a website"
+          "The act of updating a website with new content and images",
+          "The natural process of birds flying south during winter"
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
@@ -10360,10 +10360,10 @@ export const certifications = [
         "id": "az-900-q47",
         "question": "What is 'Terraform'?",
         "options": [
-          "A cloud provider",
-          "A database system",
-          "A planet",
-          "A popular tool for Infrastructure as Code"
+          "A database system for storing user profiles",
+          "A planet in the solar system such as Earth",
+          "A popular tool for Infrastructure as Code",
+          "A public cloud provider for data storage"
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
@@ -10374,10 +10374,10 @@ export const certifications = [
         "id": "az-900-q48",
         "question": "What is 'Cloud Native'?",
         "options": [
-          "A cloud provider",
-          "A type of software",
-          "Applications designed specifically for the cloud environment",
-          "Someone born in the cloud"
+          "A person who was born in the cloud computing era",
+          "A public cloud provider such as AWS or Azure",
+          "A specific type of software for managing data",
+          "Applications designed specifically for the cloud environment"
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
@@ -10388,9 +10388,9 @@ export const certifications = [
         "id": "az-900-q49",
         "question": "What is 'Virtualization' in cloud computing?",
         "options": [
-          "A VR headset",
-          "A computer game",
-          "A fake cloud",
+          "A VR headset used for playing immersive virtual reality computer games",
+          "A computer game designed for teaching general technology concepts",
+          "A fake cloud-based service that does not have any real data sets",
           "Technology that allows creating multiple simulated environments from one physical system"
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
@@ -10402,10 +10402,10 @@ export const certifications = [
         "id": "az-900-q50",
         "question": "What is 'Infrastructure as Code' (IaC)?",
         "options": [
-          "A hardware manual",
-          "A type of cloud billing",
+          "A hardware manual for installing server equipment",
+          "A type of cloud billing for managing monthly costs",
           "Managing infrastructure using configuration files and code",
-          "Writing code on a server"
+          "Writing computer code on a local developer server"
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
@@ -10665,12 +10665,12 @@ export const certifications = [
         "id": "az-104-q2",
         "question": "What is 'SaaS'?",
         "options": [
-          "Security as a Service",
-          "Software as a Service",
-          "Storage as a Service",
-          "System as a Service"
+          "Security as a Service (SaaS)",
+          "Software as a Service (SaaS)",
+          "Storage as a Service (SaaS)",
+          "System as a Service (SaaS)"
         ],
-        "answer": "Software as a Service",
+        "answer": "Software as a Service (SaaS)",
         "category": "Domain Review",
         "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
         "topic": "Cloud Concepts"
@@ -10679,9 +10679,9 @@ export const certifications = [
         "id": "az-104-q3",
         "question": "What is 'Elasticity'?",
         "options": [
-          "A flexible cable",
-          "A type of cloud storage",
-          "Fast network speed",
+          "A flexible cable used for connecting networking devices",
+          "A specific type of cloud-based service for data storage",
+          "A very fast network speed for transmitting large data sets",
           "The ability to automatically scale resources based on demand"
         ],
         "answer": "The ability to automatically scale resources based on demand",
@@ -10707,9 +10707,9 @@ export const certifications = [
         "id": "az-104-q5",
         "question": "What is a 'Hypervisor'?",
         "options": [
-          "A cloud manager",
-          "A type of network cable",
-          "A very fast processor",
+          "A professional manager who oversees a cloud department",
+          "A specific type of high-speed network cable for data",
+          "A very fast computer processor for high-end gaming",
           "Software that creates and runs virtual machines"
         ],
         "answer": "Software that creates and runs virtual machines",
@@ -10721,12 +10721,12 @@ export const certifications = [
         "id": "az-104-q6",
         "question": "What is 'Serverless' computing?",
         "options": [
-          "A cloud with no physical hardware",
-          "A server that never crashes",
-          "Running code without managing servers",
-          "Storing data in the browser"
+          "Running code without managing server infrastructure",
+          "Storing data directly in the user's web browser",
+          "Using a cloud with no physical hardware at all",
+          "Using a server that never crashes or goes offline"
         ],
-        "answer": "Running code without managing servers",
+        "answer": "Running code without managing server infrastructure",
         "category": "Domain Review",
         "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution.",
         "topic": "Technology"
@@ -10735,10 +10735,10 @@ export const certifications = [
         "id": "az-104-q7",
         "question": "What is a 'Container'?",
         "options": [
-          "A box for servers",
+          "A large physical box used for shipping computer servers",
           "A lightweight, portable unit containing an app and its dependencies",
-          "A secure room",
-          "A type of storage"
+          "A secure and locked room for housing organizational data",
+          "A specific type of storage device for saving digital files"
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
@@ -10749,9 +10749,9 @@ export const certifications = [
         "id": "az-104-q8",
         "question": "What is 'File Storage'?",
         "options": [
-          "A backup on a CD",
-          "A filing cabinet",
-          "A type of cloud",
+          "A copy of data saved on a standard physical compact disc",
+          "A physical filing cabinet used for storing paper documents",
+          "A specific type of cloud service for general data storage",
           "Data stored in a hierarchical folder structure"
         ],
         "answer": "Data stored in a hierarchical folder structure",
@@ -10763,9 +10763,9 @@ export const certifications = [
         "id": "az-104-q9",
         "question": "What is 'Reserved Instances'?",
         "options": [
-          "A backup system",
-          "A private server",
-          "A type of storage",
+          "A backup system for saving organizational data",
+          "A private server for an individual organization",
+          "A specific type of storage for active data sets",
           "Pre-paying for cloud capacity at a discounted rate"
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
@@ -10777,10 +10777,10 @@ export const certifications = [
         "id": "az-104-q10",
         "question": "What is 'Disaster Recovery' (DR)?",
         "options": [
-          "A backup on a USB",
-          "A government program",
-          "Fixing a broken PC",
-          "Plans and processes to restore IT systems after a major failure"
+          "A standard backup saved on a physical USB drive",
+          "A standard government program for disaster relief",
+          "Plans and processes to restore IT systems after a major failure",
+          "The simple act of fixing a broken personal computer"
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
@@ -10791,10 +10791,10 @@ export const certifications = [
         "id": "az-104-q11",
         "question": "What is 'Content Delivery Network' (CDN)?",
         "options": [
-          "A TV station",
-          "A fast internet connection",
+          "A fast internet connection for home users to browse the web",
           "A system of distributed servers that deliver web content to users",
-          "A type of storage"
+          "A television station for broadcasting news and information",
+          "A type of storage device for local backups of data files"
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
@@ -10805,10 +10805,10 @@ export const certifications = [
         "id": "az-104-q12",
         "question": "What is 'Infrastructure as Code' (IaC)?",
         "options": [
-          "A hardware manual",
-          "A type of cloud billing",
+          "A hardware manual for installing server equipment",
+          "A type of cloud billing for managing monthly costs",
           "Managing infrastructure using configuration files and code",
-          "Writing code on a server"
+          "Writing computer code on a local developer server"
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
@@ -10833,9 +10833,9 @@ export const certifications = [
         "id": "az-104-q14",
         "question": "What is a 'Private Cloud'?",
         "options": [
-          "A cloud with a password",
-          "A hidden data center",
-          "A personal hard drive",
+          "A cloud-based service that is protected with a password",
+          "A hidden data center facility with no public access points",
+          "A personal hard drive used for storing digital information",
           "Cloud resources used exclusively by one organization"
         ],
         "answer": "Cloud resources used exclusively by one organization",
@@ -10847,9 +10847,9 @@ export const certifications = [
         "id": "az-104-q15",
         "question": "What is 'Cloud Storage'?",
         "options": [
-          "A backup on a USB",
-          "A hard drive in the sky",
-          "A type of memory",
+          "A copy of data saved on a standard physical USB drive",
+          "A physical hard drive floating in the natural sky",
+          "A type of computer memory used for fast processing",
           "Storing data on remote servers accessed via the internet"
         ],
         "answer": "Storing data on remote servers accessed via the internet",
@@ -10861,10 +10861,10 @@ export const certifications = [
         "id": "az-104-q16",
         "question": "What is 'Edge Computing'?",
         "options": [
-          "Building a cloud on a cliff",
-          "Fast internet at home",
+          "A fast internet connection used for general home browsing",
+          "Building a physical cloud data center on a mountain cliff",
           "Processing data closer to the source of data generation",
-          "Using the latest hardware"
+          "Using the latest computer hardware for high-speed processing"
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
@@ -10875,9 +10875,9 @@ export const certifications = [
         "id": "az-104-q17",
         "question": "What is 'Spot Instances'?",
         "options": [
-          "A server with spots",
-          "A temporary cloud",
-          "A type of storage",
+          "A physical server with spots on its chassis",
+          "A specific type of storage for active data sets",
+          "A temporary cloud environment for testing apps",
           "Using spare cloud capacity at a large discount"
         ],
         "answer": "Using spare cloud capacity at a large discount",
@@ -10889,9 +10889,9 @@ export const certifications = [
         "id": "az-104-q18",
         "question": "What is 'Serverless Functions'?",
         "options": [
-          "A cloud with no users",
-          "A computer with no power",
-          "A website with no data",
+          "A computer system that does not have any electrical power",
+          "A public cloud service that has no active users at all",
+          "A website that does not contain any data or information",
           "Running small snippets of code in response to events"
         ],
         "answer": "Running small snippets of code in response to events",
@@ -10903,9 +10903,9 @@ export const certifications = [
         "id": "az-104-q19",
         "question": "What is an 'Availability Zone' (AZ)?",
         "options": [
-          "A backup hard drive",
-          "A city-wide network",
-          "A single server rack",
+          "A backup hard drive used for storing sensitive data sets",
+          "A large city-wide computer network for the general public",
+          "A single server rack located inside a small data center",
           "One or more discrete data centers with redundant power"
         ],
         "answer": "One or more discrete data centers with redundant power",
@@ -10931,9 +10931,9 @@ export const certifications = [
         "id": "az-104-q21",
         "question": "What is 'Low Latency'?",
         "options": [
-          "A cheap cloud",
-          "A slow network",
-          "A small file size",
+          "A cheap cloud service with low capacity",
+          "A slow network with many interruptions",
+          "A small file size for fast transmission",
           "Minimal delay in data transmission"
         ],
         "answer": "Minimal delay in data transmission",
@@ -10945,9 +10945,9 @@ export const certifications = [
         "id": "az-104-q22",
         "question": "What is 'Cloud Billing'?",
         "options": [
-          "A paper bill in the mail",
-          "A software license",
-          "A type of payment",
+          "A paper bill sent through the standard mail",
+          "A specific type of payment for web services",
+          "A standard software license for applications",
           "How cloud providers charge for their services"
         ],
         "answer": "How cloud providers charge for their services",
@@ -10959,10 +10959,10 @@ export const certifications = [
         "id": "az-104-q23",
         "question": "What is a 'Cloud Migration'?",
         "options": [
-          "Birds flying south",
-          "Buying new servers",
+          "Buying new computer servers for an internal data center",
           "Moving data and apps from on-premises to the cloud",
-          "Updating a website"
+          "The act of updating a website with new content and images",
+          "The natural process of birds flying south during winter"
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
@@ -10987,9 +10987,9 @@ export const certifications = [
         "id": "az-104-q25",
         "question": "What is a 'Public Cloud'?",
         "options": [
-          "A cloud for everyone",
-          "A free Wi-Fi hotspot",
-          "A government network",
+          "A free Wi-Fi hotspot available for public use in a city",
+          "A generic cloud-based service that is open for everyone to use",
+          "A government-owned and operated internal computer network",
           "Services offered by third-party providers over the public internet"
         ],
         "answer": "Services offered by third-party providers over the public internet",
@@ -11002,9 +11002,9 @@ export const certifications = [
         "question": "What is a 'Cloud Service Provider' (CSP)?",
         "options": [
           "A company that offers cloud computing services",
-          "A hardware manufacturer",
-          "A website developer",
-          "An internet provider"
+          "A hardware manufacturer that produces computer components",
+          "A standard internet provider for home and business use",
+          "A website developer who creates online content and sites"
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
@@ -11015,9 +11015,9 @@ export const certifications = [
         "id": "az-104-q27",
         "question": "What is 'Multi-Tenancy'?",
         "options": [
-          "A building with many rooms",
-          "A large cloud",
-          "Hiring many tenants",
+          "A large cloud-based service for storing organizational data",
+          "A physical building with many different office rooms for rent",
+          "Hiring many tenants to manage your data center facility",
           "Multiple customers sharing the same physical hardware"
         ],
         "answer": "Multiple customers sharing the same physical hardware",
@@ -11029,9 +11029,9 @@ export const certifications = [
         "id": "az-104-q28",
         "question": "What is 'Data Sovereignty'?",
         "options": [
-          "A king in the cloud",
-          "A secure database",
-          "A type of storage",
+          "A highly secure database with advanced encryption",
+          "A king or monarch ruling over a cloud-based kingdom",
+          "A specific type of storage device for local data sets",
           "Ensuring data is subject to the laws of the country where it's stored"
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
@@ -11043,9 +11043,9 @@ export const certifications = [
         "id": "az-104-q29",
         "question": "What is 'Block Storage'?",
         "options": [
-          "A secure vault",
-          "A type of memory",
-          "A wall of servers",
+          "A large wall made of physical computer servers in a rack",
+          "A secure and locked vault used for storing physical data",
+          "A specific type of computer memory for high-speed tasks",
           "Data stored in fixed-size blocks, usually for database use"
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
@@ -11057,10 +11057,10 @@ export const certifications = [
         "id": "az-104-q30",
         "question": "What is the 'Shared Responsibility Model'?",
         "options": [
+          "A collaborative group project for a university course",
           "A framework defining security tasks for provider and customer",
-          "A group project",
-          "Sharing a password",
-          "Splitting the cloud bill"
+          "Sharing a secure account password with another team member",
+          "Splitting the monthly cloud bill between multiple departments"
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
@@ -11071,9 +11071,9 @@ export const certifications = [
         "id": "az-104-q31",
         "question": "What is 'Kubernetes'?",
         "options": [
-          "A cloud provider",
-          "A programming language",
-          "A type of database",
+          "A programming language used for creating web applications",
+          "A public cloud provider for storing organizational data",
+          "A specific type of database optimized for container data",
           "An open-source system for automating deployment and management of containers"
         ],
         "answer": "An open-source system for automating deployment and management of containers",
@@ -11085,9 +11085,9 @@ export const certifications = [
         "id": "az-104-q32",
         "question": "What is 'Virtualization' in cloud computing?",
         "options": [
-          "A VR headset",
-          "A computer game",
-          "A fake cloud",
+          "A VR headset used for playing immersive virtual reality computer games",
+          "A computer game designed for teaching general technology concepts",
+          "A fake cloud-based service that does not have any real data sets",
           "Technology that allows creating multiple simulated environments from one physical system"
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
@@ -11099,10 +11099,10 @@ export const certifications = [
         "id": "az-104-q33",
         "question": "What is 'Cloud Monitoring'?",
         "options": [
-          "A security guard",
-          "A software update",
+          "A security guard who monitors the server room",
+          "A standard software update for computer apps",
           "Observing the performance and health of cloud resources",
-          "Watching a cloud"
+          "The act of watching a cloud in the natural sky"
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
@@ -11113,9 +11113,9 @@ export const certifications = [
         "id": "az-104-q34",
         "question": "What is 'Auto Scaling'?",
         "options": [
-          "A hardware upgrade",
-          "A self-adjusting scale",
-          "A type of cloud billing",
+          "A self-adjusting physical scale used for measuring weight",
+          "A specific type of cloud billing for managing monthly costs",
+          "A standard hardware upgrade for increasing system speed",
           "Automatically adding or removing instances based on load"
         ],
         "answer": "Automatically adding or removing instances based on load",
@@ -11127,10 +11127,10 @@ export const certifications = [
         "id": "az-104-q35",
         "question": "What is 'Fault Tolerance'?",
         "options": [
-          "A bug in the software",
-          "A hardware warranty",
-          "Being very patient",
-          "The ability of a system to continue operating even if a component fails"
+          "A hardware warranty that covers parts and labor costs",
+          "A minor bug in the software application source code",
+          "The ability of a system to continue operating even if a component fails",
+          "The act of being very patient during a system outage"
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
@@ -11141,9 +11141,9 @@ export const certifications = [
         "id": "az-104-q36",
         "question": "What is 'Cloud Governance'?",
         "options": [
-          "A cloud manual",
-          "A government in the cloud",
-          "A security guard",
+          "A manual that explains how to use a standard cloud system",
+          "A security guard who protects the physical cloud hardware",
+          "A sovereign government ruling over a cloud-based kingdom",
           "Policies and procedures to manage cloud resources and costs"
         ],
         "answer": "Policies and procedures to manage cloud resources and costs",
@@ -11155,10 +11155,10 @@ export const certifications = [
         "id": "az-104-q37",
         "question": "What is 'Cloud Native'?",
         "options": [
-          "A cloud provider",
-          "A type of software",
-          "Applications designed specifically for the cloud environment",
-          "Someone born in the cloud"
+          "A person who was born in the cloud computing era",
+          "A public cloud provider such as AWS or Azure",
+          "A specific type of software for managing data",
+          "Applications designed specifically for the cloud environment"
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
@@ -11169,10 +11169,10 @@ export const certifications = [
         "id": "az-104-q38",
         "question": "What is 'Cloud Logging'?",
         "options": [
-          "A type of storage",
-          "Cutting down trees",
+          "A specific type of storage device for local data backups",
           "Recording events and activities in the cloud for auditing",
-          "Writing a diary"
+          "The act of cutting down trees for timber production",
+          "The act of writing a personal diary at the end of the day"
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
@@ -11183,9 +11183,9 @@ export const certifications = [
         "id": "az-104-q39",
         "question": "What is 'Identity and Access Management' (IAM)?",
         "options": [
-          "A driver's license",
-          "A login page",
-          "A security guard",
+          "A physical driver's license used for identification",
+          "A security guard who protects the data center building",
+          "A standard login page for a website or application",
           "Managing users and their permissions to access cloud resources"
         ],
         "answer": "Managing users and their permissions to access cloud resources",
@@ -11197,10 +11197,10 @@ export const certifications = [
         "id": "az-104-q40",
         "question": "What is a 'Region' in cloud computing?",
         "options": [
-          "A country-wide network",
+          "A large country-wide computer network for public use",
           "A physical location containing multiple availability zones",
-          "A single data center",
-          "A virtual private cloud"
+          "A single data center facility located in a remote area",
+          "A virtual private cloud connection for an individual"
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
@@ -11211,10 +11211,10 @@ export const certifications = [
         "id": "az-104-q41",
         "question": "What is 'Serverless Database'?",
         "options": [
-          "A database for everyone",
-          "A database on a USB",
+          "A database stored on a physical USB flash drive",
           "A database that scales automatically and has no fixed cost",
-          "A file in the cloud"
+          "A simple text file stored in a cloud environment",
+          "A standard database that is available for everyone"
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
@@ -11225,10 +11225,10 @@ export const certifications = [
         "id": "az-104-q42",
         "question": "What is a 'Virtual Private Cloud' (VPC)?",
         "options": [
-          "A VPN",
-          "A personal server",
+          "A personal server hosted in a private home",
           "A private network section within a public cloud",
-          "A secure website"
+          "A secure website with a SSL certificate",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
@@ -11239,9 +11239,9 @@ export const certifications = [
         "id": "az-104-q43",
         "question": "What is 'High Availability' (HA)?",
         "options": [
-          "A cloud for everyone",
-          "A tall server",
-          "Fast internet",
+          "A fast internet connection for data transfers",
+          "A public cloud service for everyone to use",
+          "A very tall server rack in a data center",
           "Systems that are durable and likely to operate continuously"
         ],
         "answer": "Systems that are durable and likely to operate continuously",
@@ -11253,9 +11253,9 @@ export const certifications = [
         "id": "az-104-q44",
         "question": "What is 'Hybrid IT'?",
         "options": [
-          "A computer that runs on gas",
-          "A fast internet connection",
-          "A type of server",
+          "A fast internet connection for high-speed transfers",
+          "A specialized computer that runs on natural gas",
+          "A standard computer server for managing data sets",
           "Combining on-premises infrastructure with cloud services"
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
@@ -11267,10 +11267,10 @@ export const certifications = [
         "id": "az-104-q45",
         "question": "What is 'Object Storage'?",
         "options": [
-          "A folder on a PC",
-          "A type of database",
+          "A simple hierarchical folder stored on a personal computer",
+          "A specific type of database optimized for storing metadata",
           "Data stored as objects with metadata and a unique identifier",
-          "Storing physical objects"
+          "Storing physical objects in a warehouse or storage facility"
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
@@ -11282,9 +11282,9 @@ export const certifications = [
         "question": "What is a 'Cloud Gateway'?",
         "options": [
           "A bridge between on-premises and cloud networks",
-          "A fast router",
-          "A type of VPN",
-          "An entrance to a data center"
+          "A high-speed router for local area networks",
+          "A physical entrance to a secured data center",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
@@ -11295,9 +11295,9 @@ export const certifications = [
         "id": "az-104-q47",
         "question": "What is 'DevOps' in the cloud?",
         "options": [
-          "A hardware engineer",
-          "A programming language",
-          "A type of cloud",
+          "A hardware engineer who designs data centers",
+          "A programming language used for cloud apps",
+          "A specific type of cloud for development tasks",
           "Combining development and operations to improve speed and quality"
         ],
         "answer": "Combining development and operations to improve speed and quality",
@@ -11309,10 +11309,10 @@ export const certifications = [
         "id": "az-104-q48",
         "question": "What is 'Terraform'?",
         "options": [
-          "A cloud provider",
-          "A database system",
-          "A planet",
-          "A popular tool for Infrastructure as Code"
+          "A database system for storing user profiles",
+          "A planet in the solar system such as Earth",
+          "A popular tool for Infrastructure as Code",
+          "A public cloud provider for data storage"
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
@@ -11323,9 +11323,9 @@ export const certifications = [
         "id": "az-104-q49",
         "question": "What is 'Cloud Security'?",
         "options": [
-          "A guard in a data center",
-          "A lock on a server",
-          "A secure browser",
+          "A physical lock placed on a computer server in a rack",
+          "A professional security guard working in a data center",
+          "A secure and encrypted web browser for accessing the web",
           "The set of technologies and policies to protect cloud data and apps"
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
@@ -11337,9 +11337,9 @@ export const certifications = [
         "id": "az-104-q50",
         "question": "What is 'Microservices'?",
         "options": [
-          "A simple app",
-          "A type of computer chip",
-          "A very small server",
+          "A simple application for tracking data sets",
+          "A type of computer chip for mobile devices",
+          "A very small server used for local hosting",
           "Breaking an app into small, independent services"
         ],
         "answer": "Breaking an app into small, independent services",
@@ -11586,10 +11586,10 @@ export const certifications = [
         "id": "gcp-pca-q1",
         "question": "What is 'Fault Tolerance'?",
         "options": [
-          "A bug in the software",
-          "A hardware warranty",
-          "Being very patient",
-          "The ability of a system to continue operating even if a component fails"
+          "A hardware warranty that covers parts and labor costs",
+          "A minor bug in the software application source code",
+          "The ability of a system to continue operating even if a component fails",
+          "The act of being very patient during a system outage"
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
@@ -11614,10 +11614,10 @@ export const certifications = [
         "id": "gcp-pca-q3",
         "question": "What is 'Terraform'?",
         "options": [
-          "A cloud provider",
-          "A database system",
-          "A planet",
-          "A popular tool for Infrastructure as Code"
+          "A database system for storing user profiles",
+          "A planet in the solar system such as Earth",
+          "A popular tool for Infrastructure as Code",
+          "A public cloud provider for data storage"
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
@@ -11642,10 +11642,10 @@ export const certifications = [
         "id": "gcp-pca-q5",
         "question": "What is 'Edge Computing'?",
         "options": [
-          "Building a cloud on a cliff",
-          "Fast internet at home",
+          "A fast internet connection used for general home browsing",
+          "Building a physical cloud data center on a mountain cliff",
           "Processing data closer to the source of data generation",
-          "Using the latest hardware"
+          "Using the latest computer hardware for high-speed processing"
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
@@ -11656,12 +11656,12 @@ export const certifications = [
         "id": "gcp-pca-q6",
         "question": "What is 'SaaS'?",
         "options": [
-          "Security as a Service",
-          "Software as a Service",
-          "Storage as a Service",
-          "System as a Service"
+          "Security as a Service (SaaS)",
+          "Software as a Service (SaaS)",
+          "Storage as a Service (SaaS)",
+          "System as a Service (SaaS)"
         ],
-        "answer": "Software as a Service",
+        "answer": "Software as a Service (SaaS)",
         "category": "Domain Review",
         "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
         "topic": "Cloud Concepts"
@@ -11670,9 +11670,9 @@ export const certifications = [
         "id": "gcp-pca-q7",
         "question": "What is a 'Private Cloud'?",
         "options": [
-          "A cloud with a password",
-          "A hidden data center",
-          "A personal hard drive",
+          "A cloud-based service that is protected with a password",
+          "A hidden data center facility with no public access points",
+          "A personal hard drive used for storing digital information",
           "Cloud resources used exclusively by one organization"
         ],
         "answer": "Cloud resources used exclusively by one organization",
@@ -11684,10 +11684,10 @@ export const certifications = [
         "id": "gcp-pca-q8",
         "question": "What is 'Content Delivery Network' (CDN)?",
         "options": [
-          "A TV station",
-          "A fast internet connection",
+          "A fast internet connection for home users to browse the web",
           "A system of distributed servers that deliver web content to users",
-          "A type of storage"
+          "A television station for broadcasting news and information",
+          "A type of storage device for local backups of data files"
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
@@ -11698,10 +11698,10 @@ export const certifications = [
         "id": "gcp-pca-q9",
         "question": "What is 'Cloud Native'?",
         "options": [
-          "A cloud provider",
-          "A type of software",
-          "Applications designed specifically for the cloud environment",
-          "Someone born in the cloud"
+          "A person who was born in the cloud computing era",
+          "A public cloud provider such as AWS or Azure",
+          "A specific type of software for managing data",
+          "Applications designed specifically for the cloud environment"
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
@@ -11712,9 +11712,9 @@ export const certifications = [
         "id": "gcp-pca-q10",
         "question": "What is 'Cloud Storage'?",
         "options": [
-          "A backup on a USB",
-          "A hard drive in the sky",
-          "A type of memory",
+          "A copy of data saved on a standard physical USB drive",
+          "A physical hard drive floating in the natural sky",
+          "A type of computer memory used for fast processing",
           "Storing data on remote servers accessed via the internet"
         ],
         "answer": "Storing data on remote servers accessed via the internet",
@@ -11726,9 +11726,9 @@ export const certifications = [
         "id": "gcp-pca-q11",
         "question": "What is 'Auto Scaling'?",
         "options": [
-          "A hardware upgrade",
-          "A self-adjusting scale",
-          "A type of cloud billing",
+          "A self-adjusting physical scale used for measuring weight",
+          "A specific type of cloud billing for managing monthly costs",
+          "A standard hardware upgrade for increasing system speed",
           "Automatically adding or removing instances based on load"
         ],
         "answer": "Automatically adding or removing instances based on load",
@@ -11740,12 +11740,12 @@ export const certifications = [
         "id": "gcp-pca-q12",
         "question": "What is 'Serverless' computing?",
         "options": [
-          "A cloud with no physical hardware",
-          "A server that never crashes",
-          "Running code without managing servers",
-          "Storing data in the browser"
+          "Running code without managing server infrastructure",
+          "Storing data directly in the user's web browser",
+          "Using a cloud with no physical hardware at all",
+          "Using a server that never crashes or goes offline"
         ],
-        "answer": "Running code without managing servers",
+        "answer": "Running code without managing server infrastructure",
         "category": "Domain Review",
         "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution.",
         "topic": "Technology"
@@ -11754,9 +11754,9 @@ export const certifications = [
         "id": "gcp-pca-q13",
         "question": "What is 'Microservices'?",
         "options": [
-          "A simple app",
-          "A type of computer chip",
-          "A very small server",
+          "A simple application for tracking data sets",
+          "A type of computer chip for mobile devices",
+          "A very small server used for local hosting",
           "Breaking an app into small, independent services"
         ],
         "answer": "Breaking an app into small, independent services",
@@ -11768,9 +11768,9 @@ export const certifications = [
         "id": "gcp-pca-q14",
         "question": "What is 'Elasticity'?",
         "options": [
-          "A flexible cable",
-          "A type of cloud storage",
-          "Fast network speed",
+          "A flexible cable used for connecting networking devices",
+          "A specific type of cloud-based service for data storage",
+          "A very fast network speed for transmitting large data sets",
           "The ability to automatically scale resources based on demand"
         ],
         "answer": "The ability to automatically scale resources based on demand",
@@ -11782,9 +11782,9 @@ export const certifications = [
         "id": "gcp-pca-q15",
         "question": "What is 'High Availability' (HA)?",
         "options": [
-          "A cloud for everyone",
-          "A tall server",
-          "Fast internet",
+          "A fast internet connection for data transfers",
+          "A public cloud service for everyone to use",
+          "A very tall server rack in a data center",
           "Systems that are durable and likely to operate continuously"
         ],
         "answer": "Systems that are durable and likely to operate continuously",
@@ -11796,10 +11796,10 @@ export const certifications = [
         "id": "gcp-pca-q16",
         "question": "What is a 'Virtual Private Cloud' (VPC)?",
         "options": [
-          "A VPN",
-          "A personal server",
+          "A personal server hosted in a private home",
           "A private network section within a public cloud",
-          "A secure website"
+          "A secure website with a SSL certificate",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
@@ -11810,9 +11810,9 @@ export const certifications = [
         "id": "gcp-pca-q17",
         "question": "What is 'Cloud Security'?",
         "options": [
-          "A guard in a data center",
-          "A lock on a server",
-          "A secure browser",
+          "A physical lock placed on a computer server in a rack",
+          "A professional security guard working in a data center",
+          "A secure and encrypted web browser for accessing the web",
           "The set of technologies and policies to protect cloud data and apps"
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
@@ -11824,9 +11824,9 @@ export const certifications = [
         "id": "gcp-pca-q18",
         "question": "What is a 'Public Cloud'?",
         "options": [
-          "A cloud for everyone",
-          "A free Wi-Fi hotspot",
-          "A government network",
+          "A free Wi-Fi hotspot available for public use in a city",
+          "A generic cloud-based service that is open for everyone to use",
+          "A government-owned and operated internal computer network",
           "Services offered by third-party providers over the public internet"
         ],
         "answer": "Services offered by third-party providers over the public internet",
@@ -11838,10 +11838,10 @@ export const certifications = [
         "id": "gcp-pca-q19",
         "question": "What is a 'Container'?",
         "options": [
-          "A box for servers",
+          "A large physical box used for shipping computer servers",
           "A lightweight, portable unit containing an app and its dependencies",
-          "A secure room",
-          "A type of storage"
+          "A secure and locked room for housing organizational data",
+          "A specific type of storage device for saving digital files"
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
@@ -11852,10 +11852,10 @@ export const certifications = [
         "id": "gcp-pca-q20",
         "question": "What is 'Disaster Recovery' (DR)?",
         "options": [
-          "A backup on a USB",
-          "A government program",
-          "Fixing a broken PC",
-          "Plans and processes to restore IT systems after a major failure"
+          "A standard backup saved on a physical USB drive",
+          "A standard government program for disaster relief",
+          "Plans and processes to restore IT systems after a major failure",
+          "The simple act of fixing a broken personal computer"
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
@@ -11866,10 +11866,10 @@ export const certifications = [
         "id": "gcp-pca-q21",
         "question": "What is 'Infrastructure as Code' (IaC)?",
         "options": [
-          "A hardware manual",
-          "A type of cloud billing",
+          "A hardware manual for installing server equipment",
+          "A type of cloud billing for managing monthly costs",
           "Managing infrastructure using configuration files and code",
-          "Writing code on a server"
+          "Writing computer code on a local developer server"
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
@@ -11881,9 +11881,9 @@ export const certifications = [
         "question": "What is a 'Cloud Service Provider' (CSP)?",
         "options": [
           "A company that offers cloud computing services",
-          "A hardware manufacturer",
-          "A website developer",
-          "An internet provider"
+          "A hardware manufacturer that produces computer components",
+          "A standard internet provider for home and business use",
+          "A website developer who creates online content and sites"
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
@@ -11908,9 +11908,9 @@ export const certifications = [
         "id": "gcp-pca-q24",
         "question": "What is 'Kubernetes'?",
         "options": [
-          "A cloud provider",
-          "A programming language",
-          "A type of database",
+          "A programming language used for creating web applications",
+          "A public cloud provider for storing organizational data",
+          "A specific type of database optimized for container data",
           "An open-source system for automating deployment and management of containers"
         ],
         "answer": "An open-source system for automating deployment and management of containers",
@@ -11936,9 +11936,9 @@ export const certifications = [
         "id": "gcp-pca-q26",
         "question": "What is 'Block Storage'?",
         "options": [
-          "A secure vault",
-          "A type of memory",
-          "A wall of servers",
+          "A large wall made of physical computer servers in a rack",
+          "A secure and locked vault used for storing physical data",
+          "A specific type of computer memory for high-speed tasks",
           "Data stored in fixed-size blocks, usually for database use"
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
@@ -11950,9 +11950,9 @@ export const certifications = [
         "id": "gcp-pca-q27",
         "question": "What is 'File Storage'?",
         "options": [
-          "A backup on a CD",
-          "A filing cabinet",
-          "A type of cloud",
+          "A copy of data saved on a standard physical compact disc",
+          "A physical filing cabinet used for storing paper documents",
+          "A specific type of cloud service for general data storage",
           "Data stored in a hierarchical folder structure"
         ],
         "answer": "Data stored in a hierarchical folder structure",
@@ -11964,10 +11964,10 @@ export const certifications = [
         "id": "gcp-pca-q28",
         "question": "What is the 'Shared Responsibility Model'?",
         "options": [
+          "A collaborative group project for a university course",
           "A framework defining security tasks for provider and customer",
-          "A group project",
-          "Sharing a password",
-          "Splitting the cloud bill"
+          "Sharing a secure account password with another team member",
+          "Splitting the monthly cloud bill between multiple departments"
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
@@ -11978,9 +11978,9 @@ export const certifications = [
         "id": "gcp-pca-q29",
         "question": "What is 'Identity and Access Management' (IAM)?",
         "options": [
-          "A driver's license",
-          "A login page",
-          "A security guard",
+          "A physical driver's license used for identification",
+          "A security guard who protects the data center building",
+          "A standard login page for a website or application",
           "Managing users and their permissions to access cloud resources"
         ],
         "answer": "Managing users and their permissions to access cloud resources",
@@ -11992,9 +11992,9 @@ export const certifications = [
         "id": "gcp-pca-q30",
         "question": "What is 'Cloud Billing'?",
         "options": [
-          "A paper bill in the mail",
-          "A software license",
-          "A type of payment",
+          "A paper bill sent through the standard mail",
+          "A specific type of payment for web services",
+          "A standard software license for applications",
           "How cloud providers charge for their services"
         ],
         "answer": "How cloud providers charge for their services",
@@ -12006,9 +12006,9 @@ export const certifications = [
         "id": "gcp-pca-q31",
         "question": "What is 'Cloud Governance'?",
         "options": [
-          "A cloud manual",
-          "A government in the cloud",
-          "A security guard",
+          "A manual that explains how to use a standard cloud system",
+          "A security guard who protects the physical cloud hardware",
+          "A sovereign government ruling over a cloud-based kingdom",
           "Policies and procedures to manage cloud resources and costs"
         ],
         "answer": "Policies and procedures to manage cloud resources and costs",
@@ -12020,9 +12020,9 @@ export const certifications = [
         "id": "gcp-pca-q32",
         "question": "What is 'Reserved Instances'?",
         "options": [
-          "A backup system",
-          "A private server",
-          "A type of storage",
+          "A backup system for saving organizational data",
+          "A private server for an individual organization",
+          "A specific type of storage for active data sets",
           "Pre-paying for cloud capacity at a discounted rate"
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
@@ -12035,9 +12035,9 @@ export const certifications = [
         "question": "What is a 'Cloud Gateway'?",
         "options": [
           "A bridge between on-premises and cloud networks",
-          "A fast router",
-          "A type of VPN",
-          "An entrance to a data center"
+          "A high-speed router for local area networks",
+          "A physical entrance to a secured data center",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
@@ -12048,9 +12048,9 @@ export const certifications = [
         "id": "gcp-pca-q34",
         "question": "What is 'Hybrid IT'?",
         "options": [
-          "A computer that runs on gas",
-          "A fast internet connection",
-          "A type of server",
+          "A fast internet connection for high-speed transfers",
+          "A specialized computer that runs on natural gas",
+          "A standard computer server for managing data sets",
           "Combining on-premises infrastructure with cloud services"
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
@@ -12062,9 +12062,9 @@ export const certifications = [
         "id": "gcp-pca-q35",
         "question": "What is 'DevOps' in the cloud?",
         "options": [
-          "A hardware engineer",
-          "A programming language",
-          "A type of cloud",
+          "A hardware engineer who designs data centers",
+          "A programming language used for cloud apps",
+          "A specific type of cloud for development tasks",
           "Combining development and operations to improve speed and quality"
         ],
         "answer": "Combining development and operations to improve speed and quality",
@@ -12076,9 +12076,9 @@ export const certifications = [
         "id": "gcp-pca-q36",
         "question": "What is an 'Availability Zone' (AZ)?",
         "options": [
-          "A backup hard drive",
-          "A city-wide network",
-          "A single server rack",
+          "A backup hard drive used for storing sensitive data sets",
+          "A large city-wide computer network for the general public",
+          "A single server rack located inside a small data center",
           "One or more discrete data centers with redundant power"
         ],
         "answer": "One or more discrete data centers with redundant power",
@@ -12090,9 +12090,9 @@ export const certifications = [
         "id": "gcp-pca-q37",
         "question": "What is 'Data Sovereignty'?",
         "options": [
-          "A king in the cloud",
-          "A secure database",
-          "A type of storage",
+          "A highly secure database with advanced encryption",
+          "A king or monarch ruling over a cloud-based kingdom",
+          "A specific type of storage device for local data sets",
           "Ensuring data is subject to the laws of the country where it's stored"
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
@@ -12104,9 +12104,9 @@ export const certifications = [
         "id": "gcp-pca-q38",
         "question": "What is 'Low Latency'?",
         "options": [
-          "A cheap cloud",
-          "A slow network",
-          "A small file size",
+          "A cheap cloud service with low capacity",
+          "A slow network with many interruptions",
+          "A small file size for fast transmission",
           "Minimal delay in data transmission"
         ],
         "answer": "Minimal delay in data transmission",
@@ -12118,9 +12118,9 @@ export const certifications = [
         "id": "gcp-pca-q39",
         "question": "What is 'Serverless Functions'?",
         "options": [
-          "A cloud with no users",
-          "A computer with no power",
-          "A website with no data",
+          "A computer system that does not have any electrical power",
+          "A public cloud service that has no active users at all",
+          "A website that does not contain any data or information",
           "Running small snippets of code in response to events"
         ],
         "answer": "Running small snippets of code in response to events",
@@ -12132,9 +12132,9 @@ export const certifications = [
         "id": "gcp-pca-q40",
         "question": "What is a 'Hypervisor'?",
         "options": [
-          "A cloud manager",
-          "A type of network cable",
-          "A very fast processor",
+          "A professional manager who oversees a cloud department",
+          "A specific type of high-speed network cable for data",
+          "A very fast computer processor for high-end gaming",
           "Software that creates and runs virtual machines"
         ],
         "answer": "Software that creates and runs virtual machines",
@@ -12146,10 +12146,10 @@ export const certifications = [
         "id": "gcp-pca-q41",
         "question": "What is 'Cloud Monitoring'?",
         "options": [
-          "A security guard",
-          "A software update",
+          "A security guard who monitors the server room",
+          "A standard software update for computer apps",
           "Observing the performance and health of cloud resources",
-          "Watching a cloud"
+          "The act of watching a cloud in the natural sky"
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
@@ -12160,10 +12160,10 @@ export const certifications = [
         "id": "gcp-pca-q42",
         "question": "What is a 'Cloud Migration'?",
         "options": [
-          "Birds flying south",
-          "Buying new servers",
+          "Buying new computer servers for an internal data center",
           "Moving data and apps from on-premises to the cloud",
-          "Updating a website"
+          "The act of updating a website with new content and images",
+          "The natural process of birds flying south during winter"
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
@@ -12174,10 +12174,10 @@ export const certifications = [
         "id": "gcp-pca-q43",
         "question": "What is 'Object Storage'?",
         "options": [
-          "A folder on a PC",
-          "A type of database",
+          "A simple hierarchical folder stored on a personal computer",
+          "A specific type of database optimized for storing metadata",
           "Data stored as objects with metadata and a unique identifier",
-          "Storing physical objects"
+          "Storing physical objects in a warehouse or storage facility"
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
@@ -12188,10 +12188,10 @@ export const certifications = [
         "id": "gcp-pca-q44",
         "question": "What is 'Cloud Logging'?",
         "options": [
-          "A type of storage",
-          "Cutting down trees",
+          "A specific type of storage device for local data backups",
           "Recording events and activities in the cloud for auditing",
-          "Writing a diary"
+          "The act of cutting down trees for timber production",
+          "The act of writing a personal diary at the end of the day"
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
@@ -12202,10 +12202,10 @@ export const certifications = [
         "id": "gcp-pca-q45",
         "question": "What is a 'Region' in cloud computing?",
         "options": [
-          "A country-wide network",
+          "A large country-wide computer network for public use",
           "A physical location containing multiple availability zones",
-          "A single data center",
-          "A virtual private cloud"
+          "A single data center facility located in a remote area",
+          "A virtual private cloud connection for an individual"
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
@@ -12216,10 +12216,10 @@ export const certifications = [
         "id": "gcp-pca-q46",
         "question": "What is 'Serverless Database'?",
         "options": [
-          "A database for everyone",
-          "A database on a USB",
+          "A database stored on a physical USB flash drive",
           "A database that scales automatically and has no fixed cost",
-          "A file in the cloud"
+          "A simple text file stored in a cloud environment",
+          "A standard database that is available for everyone"
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
@@ -12230,9 +12230,9 @@ export const certifications = [
         "id": "gcp-pca-q47",
         "question": "What is 'Virtualization' in cloud computing?",
         "options": [
-          "A VR headset",
-          "A computer game",
-          "A fake cloud",
+          "A VR headset used for playing immersive virtual reality computer games",
+          "A computer game designed for teaching general technology concepts",
+          "A fake cloud-based service that does not have any real data sets",
           "Technology that allows creating multiple simulated environments from one physical system"
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
@@ -12258,9 +12258,9 @@ export const certifications = [
         "id": "gcp-pca-q49",
         "question": "What is 'Multi-Tenancy'?",
         "options": [
-          "A building with many rooms",
-          "A large cloud",
-          "Hiring many tenants",
+          "A large cloud-based service for storing organizational data",
+          "A physical building with many different office rooms for rent",
+          "Hiring many tenants to manage your data center facility",
           "Multiple customers sharing the same physical hardware"
         ],
         "answer": "Multiple customers sharing the same physical hardware",
@@ -12272,9 +12272,9 @@ export const certifications = [
         "id": "gcp-pca-q50",
         "question": "What is 'Spot Instances'?",
         "options": [
-          "A server with spots",
-          "A temporary cloud",
-          "A type of storage",
+          "A physical server with spots on its chassis",
+          "A specific type of storage for active data sets",
+          "A temporary cloud environment for testing apps",
           "Using spare cloud capacity at a large discount"
         ],
         "answer": "Using spare cloud capacity at a large discount",
@@ -12521,10 +12521,10 @@ export const certifications = [
         "id": "oci-found-q1",
         "question": "What is 'Terraform'?",
         "options": [
-          "A cloud provider",
-          "A database system",
-          "A planet",
-          "A popular tool for Infrastructure as Code"
+          "A database system for storing user profiles",
+          "A planet in the solar system such as Earth",
+          "A popular tool for Infrastructure as Code",
+          "A public cloud provider for data storage"
         ],
         "answer": "A popular tool for Infrastructure as Code",
         "category": "Domain Review",
@@ -12535,10 +12535,10 @@ export const certifications = [
         "id": "oci-found-q2",
         "question": "What is 'Cloud Native'?",
         "options": [
-          "A cloud provider",
-          "A type of software",
-          "Applications designed specifically for the cloud environment",
-          "Someone born in the cloud"
+          "A person who was born in the cloud computing era",
+          "A public cloud provider such as AWS or Azure",
+          "A specific type of software for managing data",
+          "Applications designed specifically for the cloud environment"
         ],
         "answer": "Applications designed specifically for the cloud environment",
         "category": "Domain Review",
@@ -12549,9 +12549,9 @@ export const certifications = [
         "id": "oci-found-q3",
         "question": "What is 'Cloud Storage'?",
         "options": [
-          "A backup on a USB",
-          "A hard drive in the sky",
-          "A type of memory",
+          "A copy of data saved on a standard physical USB drive",
+          "A physical hard drive floating in the natural sky",
+          "A type of computer memory used for fast processing",
           "Storing data on remote servers accessed via the internet"
         ],
         "answer": "Storing data on remote servers accessed via the internet",
@@ -12577,9 +12577,9 @@ export const certifications = [
         "id": "oci-found-q5",
         "question": "What is 'Hybrid IT'?",
         "options": [
-          "A computer that runs on gas",
-          "A fast internet connection",
-          "A type of server",
+          "A fast internet connection for high-speed transfers",
+          "A specialized computer that runs on natural gas",
+          "A standard computer server for managing data sets",
           "Combining on-premises infrastructure with cloud services"
         ],
         "answer": "Combining on-premises infrastructure with cloud services",
@@ -12591,9 +12591,9 @@ export const certifications = [
         "id": "oci-found-q6",
         "question": "What is 'File Storage'?",
         "options": [
-          "A backup on a CD",
-          "A filing cabinet",
-          "A type of cloud",
+          "A copy of data saved on a standard physical compact disc",
+          "A physical filing cabinet used for storing paper documents",
+          "A specific type of cloud service for general data storage",
           "Data stored in a hierarchical folder structure"
         ],
         "answer": "Data stored in a hierarchical folder structure",
@@ -12605,10 +12605,10 @@ export const certifications = [
         "id": "oci-found-q7",
         "question": "What is 'Cloud Logging'?",
         "options": [
-          "A type of storage",
-          "Cutting down trees",
+          "A specific type of storage device for local data backups",
           "Recording events and activities in the cloud for auditing",
-          "Writing a diary"
+          "The act of cutting down trees for timber production",
+          "The act of writing a personal diary at the end of the day"
         ],
         "answer": "Recording events and activities in the cloud for auditing",
         "category": "Domain Review",
@@ -12619,9 +12619,9 @@ export const certifications = [
         "id": "oci-found-q8",
         "question": "What is 'Cloud Governance'?",
         "options": [
-          "A cloud manual",
-          "A government in the cloud",
-          "A security guard",
+          "A manual that explains how to use a standard cloud system",
+          "A security guard who protects the physical cloud hardware",
+          "A sovereign government ruling over a cloud-based kingdom",
           "Policies and procedures to manage cloud resources and costs"
         ],
         "answer": "Policies and procedures to manage cloud resources and costs",
@@ -12633,10 +12633,10 @@ export const certifications = [
         "id": "oci-found-q9",
         "question": "What is 'Disaster Recovery' (DR)?",
         "options": [
-          "A backup on a USB",
-          "A government program",
-          "Fixing a broken PC",
-          "Plans and processes to restore IT systems after a major failure"
+          "A standard backup saved on a physical USB drive",
+          "A standard government program for disaster relief",
+          "Plans and processes to restore IT systems after a major failure",
+          "The simple act of fixing a broken personal computer"
         ],
         "answer": "Plans and processes to restore IT systems after a major failure",
         "category": "Domain Review",
@@ -12647,9 +12647,9 @@ export const certifications = [
         "id": "oci-found-q10",
         "question": "What is 'Elasticity'?",
         "options": [
-          "A flexible cable",
-          "A type of cloud storage",
-          "Fast network speed",
+          "A flexible cable used for connecting networking devices",
+          "A specific type of cloud-based service for data storage",
+          "A very fast network speed for transmitting large data sets",
           "The ability to automatically scale resources based on demand"
         ],
         "answer": "The ability to automatically scale resources based on demand",
@@ -12662,9 +12662,9 @@ export const certifications = [
         "question": "What is a 'Cloud Service Provider' (CSP)?",
         "options": [
           "A company that offers cloud computing services",
-          "A hardware manufacturer",
-          "A website developer",
-          "An internet provider"
+          "A hardware manufacturer that produces computer components",
+          "A standard internet provider for home and business use",
+          "A website developer who creates online content and sites"
         ],
         "answer": "A company that offers cloud computing services",
         "category": "Domain Review",
@@ -12676,9 +12676,9 @@ export const certifications = [
         "question": "What is a 'Cloud Gateway'?",
         "options": [
           "A bridge between on-premises and cloud networks",
-          "A fast router",
-          "A type of VPN",
-          "An entrance to a data center"
+          "A high-speed router for local area networks",
+          "A physical entrance to a secured data center",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A bridge between on-premises and cloud networks",
         "category": "Domain Review",
@@ -12689,9 +12689,9 @@ export const certifications = [
         "id": "oci-found-q13",
         "question": "What is 'Serverless Functions'?",
         "options": [
-          "A cloud with no users",
-          "A computer with no power",
-          "A website with no data",
+          "A computer system that does not have any electrical power",
+          "A public cloud service that has no active users at all",
+          "A website that does not contain any data or information",
           "Running small snippets of code in response to events"
         ],
         "answer": "Running small snippets of code in response to events",
@@ -12703,10 +12703,10 @@ export const certifications = [
         "id": "oci-found-q14",
         "question": "What is 'Content Delivery Network' (CDN)?",
         "options": [
-          "A TV station",
-          "A fast internet connection",
+          "A fast internet connection for home users to browse the web",
           "A system of distributed servers that deliver web content to users",
-          "A type of storage"
+          "A television station for broadcasting news and information",
+          "A type of storage device for local backups of data files"
         ],
         "answer": "A system of distributed servers that deliver web content to users",
         "category": "Domain Review",
@@ -12717,9 +12717,9 @@ export const certifications = [
         "id": "oci-found-q15",
         "question": "What is 'Kubernetes'?",
         "options": [
-          "A cloud provider",
-          "A programming language",
-          "A type of database",
+          "A programming language used for creating web applications",
+          "A public cloud provider for storing organizational data",
+          "A specific type of database optimized for container data",
           "An open-source system for automating deployment and management of containers"
         ],
         "answer": "An open-source system for automating deployment and management of containers",
@@ -12731,10 +12731,10 @@ export const certifications = [
         "id": "oci-found-q16",
         "question": "What is 'Serverless Database'?",
         "options": [
-          "A database for everyone",
-          "A database on a USB",
+          "A database stored on a physical USB flash drive",
           "A database that scales automatically and has no fixed cost",
-          "A file in the cloud"
+          "A simple text file stored in a cloud environment",
+          "A standard database that is available for everyone"
         ],
         "answer": "A database that scales automatically and has no fixed cost",
         "category": "Domain Review",
@@ -12745,9 +12745,9 @@ export const certifications = [
         "id": "oci-found-q17",
         "question": "What is 'Spot Instances'?",
         "options": [
-          "A server with spots",
-          "A temporary cloud",
-          "A type of storage",
+          "A physical server with spots on its chassis",
+          "A specific type of storage for active data sets",
+          "A temporary cloud environment for testing apps",
           "Using spare cloud capacity at a large discount"
         ],
         "answer": "Using spare cloud capacity at a large discount",
@@ -12759,10 +12759,10 @@ export const certifications = [
         "id": "oci-found-q18",
         "question": "What is 'Infrastructure as Code' (IaC)?",
         "options": [
-          "A hardware manual",
-          "A type of cloud billing",
+          "A hardware manual for installing server equipment",
+          "A type of cloud billing for managing monthly costs",
           "Managing infrastructure using configuration files and code",
-          "Writing code on a server"
+          "Writing computer code on a local developer server"
         ],
         "answer": "Managing infrastructure using configuration files and code",
         "category": "Domain Review",
@@ -12773,12 +12773,12 @@ export const certifications = [
         "id": "oci-found-q19",
         "question": "What is 'SaaS'?",
         "options": [
-          "Security as a Service",
-          "Software as a Service",
-          "Storage as a Service",
-          "System as a Service"
+          "Security as a Service (SaaS)",
+          "Software as a Service (SaaS)",
+          "Storage as a Service (SaaS)",
+          "System as a Service (SaaS)"
         ],
-        "answer": "Software as a Service",
+        "answer": "Software as a Service (SaaS)",
         "category": "Domain Review",
         "explanation": "SaaS delivers software applications over the internet on a subscription basis.",
         "topic": "Cloud Concepts"
@@ -12787,9 +12787,9 @@ export const certifications = [
         "id": "oci-found-q20",
         "question": "What is 'Microservices'?",
         "options": [
-          "A simple app",
-          "A type of computer chip",
-          "A very small server",
+          "A simple application for tracking data sets",
+          "A type of computer chip for mobile devices",
+          "A very small server used for local hosting",
           "Breaking an app into small, independent services"
         ],
         "answer": "Breaking an app into small, independent services",
@@ -12801,12 +12801,12 @@ export const certifications = [
         "id": "oci-found-q21",
         "question": "What is 'Serverless' computing?",
         "options": [
-          "A cloud with no physical hardware",
-          "A server that never crashes",
-          "Running code without managing servers",
-          "Storing data in the browser"
+          "Running code without managing server infrastructure",
+          "Storing data directly in the user's web browser",
+          "Using a cloud with no physical hardware at all",
+          "Using a server that never crashes or goes offline"
         ],
-        "answer": "Running code without managing servers",
+        "answer": "Running code without managing server infrastructure",
         "category": "Domain Review",
         "explanation": "Cloud providers manage the server infrastructure and automatically scale based on code execution.",
         "topic": "Technology"
@@ -12815,10 +12815,10 @@ export const certifications = [
         "id": "oci-found-q22",
         "question": "What is a 'Cloud Migration'?",
         "options": [
-          "Birds flying south",
-          "Buying new servers",
+          "Buying new computer servers for an internal data center",
           "Moving data and apps from on-premises to the cloud",
-          "Updating a website"
+          "The act of updating a website with new content and images",
+          "The natural process of birds flying south during winter"
         ],
         "answer": "Moving data and apps from on-premises to the cloud",
         "category": "Domain Review",
@@ -12843,9 +12843,9 @@ export const certifications = [
         "id": "oci-found-q24",
         "question": "What is 'DevOps' in the cloud?",
         "options": [
-          "A hardware engineer",
-          "A programming language",
-          "A type of cloud",
+          "A hardware engineer who designs data centers",
+          "A programming language used for cloud apps",
+          "A specific type of cloud for development tasks",
           "Combining development and operations to improve speed and quality"
         ],
         "answer": "Combining development and operations to improve speed and quality",
@@ -12871,9 +12871,9 @@ export const certifications = [
         "id": "oci-found-q26",
         "question": "What is a 'Private Cloud'?",
         "options": [
-          "A cloud with a password",
-          "A hidden data center",
-          "A personal hard drive",
+          "A cloud-based service that is protected with a password",
+          "A hidden data center facility with no public access points",
+          "A personal hard drive used for storing digital information",
           "Cloud resources used exclusively by one organization"
         ],
         "answer": "Cloud resources used exclusively by one organization",
@@ -12885,9 +12885,9 @@ export const certifications = [
         "id": "oci-found-q27",
         "question": "What is 'Reserved Instances'?",
         "options": [
-          "A backup system",
-          "A private server",
-          "A type of storage",
+          "A backup system for saving organizational data",
+          "A private server for an individual organization",
+          "A specific type of storage for active data sets",
           "Pre-paying for cloud capacity at a discounted rate"
         ],
         "answer": "Pre-paying for cloud capacity at a discounted rate",
@@ -12899,9 +12899,9 @@ export const certifications = [
         "id": "oci-found-q28",
         "question": "What is 'Auto Scaling'?",
         "options": [
-          "A hardware upgrade",
-          "A self-adjusting scale",
-          "A type of cloud billing",
+          "A self-adjusting physical scale used for measuring weight",
+          "A specific type of cloud billing for managing monthly costs",
+          "A standard hardware upgrade for increasing system speed",
           "Automatically adding or removing instances based on load"
         ],
         "answer": "Automatically adding or removing instances based on load",
@@ -12913,10 +12913,10 @@ export const certifications = [
         "id": "oci-found-q29",
         "question": "What is the 'Shared Responsibility Model'?",
         "options": [
+          "A collaborative group project for a university course",
           "A framework defining security tasks for provider and customer",
-          "A group project",
-          "Sharing a password",
-          "Splitting the cloud bill"
+          "Sharing a secure account password with another team member",
+          "Splitting the monthly cloud bill between multiple departments"
         ],
         "answer": "A framework defining security tasks for provider and customer",
         "category": "Domain Review",
@@ -12927,10 +12927,10 @@ export const certifications = [
         "id": "oci-found-q30",
         "question": "What is a 'Container'?",
         "options": [
-          "A box for servers",
+          "A large physical box used for shipping computer servers",
           "A lightweight, portable unit containing an app and its dependencies",
-          "A secure room",
-          "A type of storage"
+          "A secure and locked room for housing organizational data",
+          "A specific type of storage device for saving digital files"
         ],
         "answer": "A lightweight, portable unit containing an app and its dependencies",
         "category": "Domain Review",
@@ -12941,9 +12941,9 @@ export const certifications = [
         "id": "oci-found-q31",
         "question": "What is 'High Availability' (HA)?",
         "options": [
-          "A cloud for everyone",
-          "A tall server",
-          "Fast internet",
+          "A fast internet connection for data transfers",
+          "A public cloud service for everyone to use",
+          "A very tall server rack in a data center",
           "Systems that are durable and likely to operate continuously"
         ],
         "answer": "Systems that are durable and likely to operate continuously",
@@ -12955,9 +12955,9 @@ export const certifications = [
         "id": "oci-found-q32",
         "question": "What is 'Identity and Access Management' (IAM)?",
         "options": [
-          "A driver's license",
-          "A login page",
-          "A security guard",
+          "A physical driver's license used for identification",
+          "A security guard who protects the data center building",
+          "A standard login page for a website or application",
           "Managing users and their permissions to access cloud resources"
         ],
         "answer": "Managing users and their permissions to access cloud resources",
@@ -12969,9 +12969,9 @@ export const certifications = [
         "id": "oci-found-q33",
         "question": "What is a 'Hypervisor'?",
         "options": [
-          "A cloud manager",
-          "A type of network cable",
-          "A very fast processor",
+          "A professional manager who oversees a cloud department",
+          "A specific type of high-speed network cable for data",
+          "A very fast computer processor for high-end gaming",
           "Software that creates and runs virtual machines"
         ],
         "answer": "Software that creates and runs virtual machines",
@@ -12983,9 +12983,9 @@ export const certifications = [
         "id": "oci-found-q34",
         "question": "What is 'Multi-Tenancy'?",
         "options": [
-          "A building with many rooms",
-          "A large cloud",
-          "Hiring many tenants",
+          "A large cloud-based service for storing organizational data",
+          "A physical building with many different office rooms for rent",
+          "Hiring many tenants to manage your data center facility",
           "Multiple customers sharing the same physical hardware"
         ],
         "answer": "Multiple customers sharing the same physical hardware",
@@ -12997,10 +12997,10 @@ export const certifications = [
         "id": "oci-found-q35",
         "question": "What is 'Object Storage'?",
         "options": [
-          "A folder on a PC",
-          "A type of database",
+          "A simple hierarchical folder stored on a personal computer",
+          "A specific type of database optimized for storing metadata",
           "Data stored as objects with metadata and a unique identifier",
-          "Storing physical objects"
+          "Storing physical objects in a warehouse or storage facility"
         ],
         "answer": "Data stored as objects with metadata and a unique identifier",
         "category": "Domain Review",
@@ -13011,10 +13011,10 @@ export const certifications = [
         "id": "oci-found-q36",
         "question": "What is 'Fault Tolerance'?",
         "options": [
-          "A bug in the software",
-          "A hardware warranty",
-          "Being very patient",
-          "The ability of a system to continue operating even if a component fails"
+          "A hardware warranty that covers parts and labor costs",
+          "A minor bug in the software application source code",
+          "The ability of a system to continue operating even if a component fails",
+          "The act of being very patient during a system outage"
         ],
         "answer": "The ability of a system to continue operating even if a component fails",
         "category": "Domain Review",
@@ -13025,10 +13025,10 @@ export const certifications = [
         "id": "oci-found-q37",
         "question": "What is a 'Virtual Private Cloud' (VPC)?",
         "options": [
-          "A VPN",
-          "A personal server",
+          "A personal server hosted in a private home",
           "A private network section within a public cloud",
-          "A secure website"
+          "A secure website with a SSL certificate",
+          "A virtual private network connection (VPN)"
         ],
         "answer": "A private network section within a public cloud",
         "category": "Domain Review",
@@ -13053,9 +13053,9 @@ export const certifications = [
         "id": "oci-found-q39",
         "question": "What is 'Block Storage'?",
         "options": [
-          "A secure vault",
-          "A type of memory",
-          "A wall of servers",
+          "A large wall made of physical computer servers in a rack",
+          "A secure and locked vault used for storing physical data",
+          "A specific type of computer memory for high-speed tasks",
           "Data stored in fixed-size blocks, usually for database use"
         ],
         "answer": "Data stored in fixed-size blocks, usually for database use",
@@ -13067,9 +13067,9 @@ export const certifications = [
         "id": "oci-found-q40",
         "question": "What is 'Cloud Security'?",
         "options": [
-          "A guard in a data center",
-          "A lock on a server",
-          "A secure browser",
+          "A physical lock placed on a computer server in a rack",
+          "A professional security guard working in a data center",
+          "A secure and encrypted web browser for accessing the web",
           "The set of technologies and policies to protect cloud data and apps"
         ],
         "answer": "The set of technologies and policies to protect cloud data and apps",
@@ -13081,9 +13081,9 @@ export const certifications = [
         "id": "oci-found-q41",
         "question": "What is 'Virtualization' in cloud computing?",
         "options": [
-          "A VR headset",
-          "A computer game",
-          "A fake cloud",
+          "A VR headset used for playing immersive virtual reality computer games",
+          "A computer game designed for teaching general technology concepts",
+          "A fake cloud-based service that does not have any real data sets",
           "Technology that allows creating multiple simulated environments from one physical system"
         ],
         "answer": "Technology that allows creating multiple simulated environments from one physical system",
@@ -13095,9 +13095,9 @@ export const certifications = [
         "id": "oci-found-q42",
         "question": "What is an 'Availability Zone' (AZ)?",
         "options": [
-          "A backup hard drive",
-          "A city-wide network",
-          "A single server rack",
+          "A backup hard drive used for storing sensitive data sets",
+          "A large city-wide computer network for the general public",
+          "A single server rack located inside a small data center",
           "One or more discrete data centers with redundant power"
         ],
         "answer": "One or more discrete data centers with redundant power",
@@ -13109,10 +13109,10 @@ export const certifications = [
         "id": "oci-found-q43",
         "question": "What is a 'Region' in cloud computing?",
         "options": [
-          "A country-wide network",
+          "A large country-wide computer network for public use",
           "A physical location containing multiple availability zones",
-          "A single data center",
-          "A virtual private cloud"
+          "A single data center facility located in a remote area",
+          "A virtual private cloud connection for an individual"
         ],
         "answer": "A physical location containing multiple availability zones",
         "category": "Domain Review",
@@ -13123,10 +13123,10 @@ export const certifications = [
         "id": "oci-found-q44",
         "question": "What is 'Edge Computing'?",
         "options": [
-          "Building a cloud on a cliff",
-          "Fast internet at home",
+          "A fast internet connection used for general home browsing",
+          "Building a physical cloud data center on a mountain cliff",
           "Processing data closer to the source of data generation",
-          "Using the latest hardware"
+          "Using the latest computer hardware for high-speed processing"
         ],
         "answer": "Processing data closer to the source of data generation",
         "category": "Domain Review",
@@ -13137,10 +13137,10 @@ export const certifications = [
         "id": "oci-found-q45",
         "question": "What is 'Cloud Monitoring'?",
         "options": [
-          "A security guard",
-          "A software update",
+          "A security guard who monitors the server room",
+          "A standard software update for computer apps",
           "Observing the performance and health of cloud resources",
-          "Watching a cloud"
+          "The act of watching a cloud in the natural sky"
         ],
         "answer": "Observing the performance and health of cloud resources",
         "category": "Domain Review",
@@ -13151,9 +13151,9 @@ export const certifications = [
         "id": "oci-found-q46",
         "question": "What is 'Data Sovereignty'?",
         "options": [
-          "A king in the cloud",
-          "A secure database",
-          "A type of storage",
+          "A highly secure database with advanced encryption",
+          "A king or monarch ruling over a cloud-based kingdom",
+          "A specific type of storage device for local data sets",
           "Ensuring data is subject to the laws of the country where it's stored"
         ],
         "answer": "Ensuring data is subject to the laws of the country where it's stored",
@@ -13179,9 +13179,9 @@ export const certifications = [
         "id": "oci-found-q48",
         "question": "What is 'Low Latency'?",
         "options": [
-          "A cheap cloud",
-          "A slow network",
-          "A small file size",
+          "A cheap cloud service with low capacity",
+          "A slow network with many interruptions",
+          "A small file size for fast transmission",
           "Minimal delay in data transmission"
         ],
         "answer": "Minimal delay in data transmission",
@@ -13193,9 +13193,9 @@ export const certifications = [
         "id": "oci-found-q49",
         "question": "What is a 'Public Cloud'?",
         "options": [
-          "A cloud for everyone",
-          "A free Wi-Fi hotspot",
-          "A government network",
+          "A free Wi-Fi hotspot available for public use in a city",
+          "A generic cloud-based service that is open for everyone to use",
+          "A government-owned and operated internal computer network",
           "Services offered by third-party providers over the public internet"
         ],
         "answer": "Services offered by third-party providers over the public internet",
@@ -13207,9 +13207,9 @@ export const certifications = [
         "id": "oci-found-q50",
         "question": "What is 'Cloud Billing'?",
         "options": [
-          "A paper bill in the mail",
-          "A software license",
-          "A type of payment",
+          "A paper bill sent through the standard mail",
+          "A specific type of payment for web services",
+          "A standard software license for applications",
           "How cloud providers charge for their services"
         ],
         "answer": "How cloud providers charge for their services",
@@ -13452,9 +13452,9 @@ export const certifications = [
         "question": "What is an 'Epic'?",
         "options": [
           "A large body of work that can be broken down into many user stories",
-          "A long poem",
-          "A software manual",
-          "A type of movie"
+          "A software manual that describes the entire system architecture",
+          "A type of movie with a long duration and a very large budget",
+          "A very long poem that tells a story of heroic deeds and events"
         ],
         "answer": "A large body of work that can be broken down into many user stories",
         "category": "Domain Review",
@@ -13466,9 +13466,9 @@ export const certifications = [
         "question": "What is a 'SOW' (Statement of Work)?",
         "options": [
           "A document describing the work to be performed under contract",
-          "A financial report",
-          "A list of team members",
-          "A type of pig"
+          "A financial report detailing the project expenditures",
+          "A list of team members and their contact information",
+          "A specific type of pig found on a residential farm"
         ],
         "answer": "A document describing the work to be performed under contract",
         "category": "Domain Review",
@@ -13479,10 +13479,10 @@ export const certifications = [
         "id": "capm-q3",
         "question": "What is a 'Lessons Learned' session?",
         "options": [
-          "A classroom lecture",
+          "A classroom lecture given by a senior project manager",
           "A meeting to discuss what went well and what didn't in a project",
-          "A software update",
-          "A type of test"
+          "A standard software update for project management apps",
+          "A type of test designed to evaluate project knowledge"
         ],
         "answer": "A meeting to discuss what went well and what didn't in a project",
         "category": "Domain Review",
@@ -13494,9 +13494,9 @@ export const certifications = [
         "question": "What is a 'Sprint Retrospective'?",
         "options": [
           "A meeting to discuss how to improve the team's process",
-          "A software update",
-          "A type of test",
-          "Looking back in time"
+          "A standard software update for project management applications",
+          "A type of test designed to evaluate the team's performance",
+          "The act of looking back in time to study historical events"
         ],
         "answer": "A meeting to discuss how to improve the team's process",
         "category": "Domain Review",
@@ -13507,9 +13507,9 @@ export const certifications = [
         "id": "capm-q5",
         "question": "What is a 'Critical Success Factor' (CSF)?",
         "options": [
-          "A hardware failure",
-          "A type of software bug",
-          "A very hard task",
+          "A hardware failure in the main data center",
+          "A type of software bug in the production phase",
+          "A very hard task that requires many resources",
           "Something that must happen for a project to succeed"
         ],
         "answer": "Something that must happen for a project to succeed",
@@ -13521,9 +13521,9 @@ export const certifications = [
         "id": "capm-q6",
         "question": "What is 'Resource Management'?",
         "options": [
-          "A software update",
-          "A type of database",
-          "Finding new resources",
+          "A standard software update for project management apps",
+          "A type of database optimized for storing project data",
+          "Finding new resources to be used for the project",
           "Managing people, equipment, and materials for a project"
         ],
         "answer": "Managing people, equipment, and materials for a project",
@@ -13535,9 +13535,9 @@ export const certifications = [
         "id": "capm-q7",
         "question": "What is 'Portfolio Management'?",
         "options": [
-          "A financial account",
-          "A leather folder",
-          "A type of database",
+          "A financial account used for tracking project expenses",
+          "A leather folder used for carrying project documents",
+          "A type of database optimized for storing project data",
           "Managing a collection of projects and programs to meet strategic goals"
         ],
         "answer": "Managing a collection of projects and programs to meet strategic goals",
@@ -13549,9 +13549,9 @@ export const certifications = [
         "id": "capm-q8",
         "question": "What is 'Project Scope'?",
         "options": [
-          "A type of telescope",
-          "The budget of a project",
-          "The name of a project",
+          "A type of telescope used for astronomical viewing",
+          "The total budget allocated for a specific project",
+          "The unique name given to a specific project task",
           "The work that must be performed to deliver a result"
         ],
         "answer": "The work that must be performed to deliver a result",
@@ -13563,9 +13563,9 @@ export const certifications = [
         "id": "capm-q9",
         "question": "What is 'Cost Baseline'?",
         "options": [
-          "A financial report",
-          "A low-cost project",
-          "A type of database",
+          "A low-cost project designed for small organizations and teams",
+          "A standard financial report generated at the end of the year",
+          "A type of database optimized for storing project budget data",
           "The approved version of the project budget, used to measure performance"
         ],
         "answer": "The approved version of the project budget, used to measure performance",
@@ -13578,9 +13578,9 @@ export const certifications = [
         "question": "What is 'Sprint Planning'?",
         "options": [
           "A meeting where the team decides what to work on in the next sprint",
-          "A software update",
-          "A type of project",
-          "Running a race"
+          "A specific type of project that requires rapid development",
+          "A standard software update for project management applications",
+          "The act of running a race at maximum speed for a distance"
         ],
         "answer": "A meeting where the team decides what to work on in the next sprint",
         "category": "Domain Review",
@@ -13591,10 +13591,10 @@ export const certifications = [
         "id": "capm-q11",
         "question": "What is 'Backlog Grooming' (or Refinement)?",
         "options": [
-          "A financial report",
-          "A type of software bug",
-          "Cleaning a room",
-          "Keeping the product backlog up to date and prioritized"
+          "A specific type of software bug found in the backlog",
+          "A standard financial report on the state of the backlog",
+          "Keeping the product backlog up to date and prioritized",
+          "The act of cleaning a room and organizing all its items"
         ],
         "answer": "Keeping the product backlog up to date and prioritized",
         "category": "Domain Review",
@@ -13605,10 +13605,10 @@ export const certifications = [
         "id": "capm-q12",
         "question": "What is a 'WBS' (Work Breakdown Structure)?",
         "options": [
-          "A financial report",
+          "A financial report that lists all project costs",
           "A hierarchical decomposition of project work",
-          "A type of computer",
-          "A website builder"
+          "A specific type of high-performance computer",
+          "A website builder for creating project portals"
         ],
         "answer": "A hierarchical decomposition of project work",
         "category": "Domain Review",
@@ -13619,10 +13619,10 @@ export const certifications = [
         "id": "capm-q13",
         "question": "What is 'Planning Poker'?",
         "options": [
-          "A card game",
           "A consensus-based estimation technique for user stories",
-          "A software tool",
-          "A type of gamble"
+          "A software tool used for tracking project development",
+          "A standard card game played with a deck of 52 cards",
+          "A type of financial gamble involving project outcomes"
         ],
         "answer": "A consensus-based estimation technique for user stories",
         "category": "Domain Review",
@@ -13633,9 +13633,9 @@ export const certifications = [
         "id": "capm-q14",
         "question": "What is 'Lean' project management?",
         "options": [
-          "A fast-paced methodology",
-          "A small project",
-          "A type of exercise",
+          "A fast-paced and highly efficient project methodology",
+          "A small project that requires very few resources",
+          "A specific type of physical exercise for project teams",
           "Focusing on maximizing value and minimizing waste"
         ],
         "answer": "Focusing on maximizing value and minimizing waste",
@@ -13647,10 +13647,10 @@ export const certifications = [
         "id": "capm-q15",
         "question": "What is 'Waterfall' methodology?",
         "options": [
-          "A beautiful scenery",
-          "A fast-paced project",
+          "A beautiful natural scenery with water",
+          "A fast-paced and highly iterative project",
           "A sequential project management process",
-          "A type of plumbing"
+          "A type of high-pressure plumbing system"
         ],
         "answer": "A sequential project management process",
         "category": "Domain Review",
@@ -13661,9 +13661,9 @@ export const certifications = [
         "id": "capm-q16",
         "question": "What does 'Scope Creep' mean?",
         "options": [
-          "A bug in the software",
-          "A decrease in project budget",
-          "A slow project manager",
+          "A decrease in the project budget allocation",
+          "A minor bug in the software application",
+          "A slow project manager who misses deadlines",
           "Uncontrolled changes in project requirements"
         ],
         "answer": "Uncontrolled changes in project requirements",
@@ -13675,10 +13675,10 @@ export const certifications = [
         "id": "capm-q17",
         "question": "What is a 'Sprint' in Scrum?",
         "options": [
-          "A short meeting",
+          "A short meeting for the development team",
           "A time-boxed iteration (usually 1-4 weeks)",
-          "A type of project",
-          "Running very fast"
+          "A type of project that requires rapid delivery",
+          "Running very fast towards a specific goal"
         ],
         "answer": "A time-boxed iteration (usually 1-4 weeks)",
         "category": "Domain Review",
@@ -13690,9 +13690,9 @@ export const certifications = [
         "question": "What is a 'Stakeholder Registry'?",
         "options": [
           "A document listing all project stakeholders and their info",
-          "A financial ledger",
-          "A guest book",
-          "A list of project tasks"
+          "A financial ledger for tracking project expenses",
+          "A list of project tasks and their current status",
+          "A simple guest book for visitors to sign their names"
         ],
         "answer": "A document listing all project stakeholders and their info",
         "category": "Domain Review",
@@ -13704,9 +13704,9 @@ export const certifications = [
         "question": "What is 'Velocity' in Agile?",
         "options": [
           "A measure of the amount of work a team can complete in a sprint",
-          "A network protocol",
-          "A type of computer code",
-          "Speed of a car"
+          "A network protocol designed for fast data transmission",
+          "A type of computer code used for measuring system speed",
+          "The speed of a car traveling on a long highway journey"
         ],
         "answer": "A measure of the amount of work a team can complete in a sprint",
         "category": "Domain Review",
@@ -13718,9 +13718,9 @@ export const certifications = [
         "question": "Who are 'Stakeholders'?",
         "options": [
           "Anyone affected by or involved in the project",
-          "Only the end-users",
-          "Only the investors",
-          "Only the project team"
+          "Only the end-users who will use the product",
+          "Only the investors who provide the funding",
+          "Only the project team members and managers"
         ],
         "answer": "Anyone affected by or involved in the project",
         "category": "Domain Review",
@@ -13731,9 +13731,9 @@ export const certifications = [
         "id": "capm-q21",
         "question": "What is 'Quality Control' (QC)?",
         "options": [
-          "A hardware warranty",
-          "A software tool",
-          "Controlling the team",
+          "A hardware warranty for repairing broken components",
+          "A software tool designed for tracking project tasks",
+          "Controlling the team members and their activities",
           "Monitoring project results to ensure they meet standards"
         ],
         "answer": "Monitoring project results to ensure they meet standards",
@@ -13745,10 +13745,10 @@ export const certifications = [
         "id": "capm-q22",
         "question": "What is 'Earned Value Management' (EVM)?",
         "options": [
-          "A software manual",
+          "A software manual that explains how to use EVM tools",
+          "A specific way to earn money through project tasks",
           "A technique to measure project performance and progress",
-          "A type of store",
-          "A way to earn money"
+          "A type of store that sells project management tools"
         ],
         "answer": "A technique to measure project performance and progress",
         "category": "Domain Review",
@@ -13759,9 +13759,9 @@ export const certifications = [
         "id": "capm-q23",
         "question": "What is a 'Story Point'?",
         "options": [
-          "A network protocol",
-          "A part of a book",
-          "A type of computer code",
+          "A network protocol designed for transmitting project data sets",
+          "A specific part of a book that contains a narrative or tale",
+          "A type of computer code used for project management tasks",
           "A unit of measure for expressing an estimate of the size of a user story"
         ],
         "answer": "A unit of measure for expressing an estimate of the size of a user story",
@@ -13773,10 +13773,10 @@ export const certifications = [
         "id": "capm-q24",
         "question": "What is a 'User Story'?",
         "options": [
-          "A bedtime story",
+          "A bedtime story told to children before they go to sleep",
           "A short description of a feature from an end-user perspective",
-          "A software manual",
-          "A type of book"
+          "A software manual explaining how to use system features",
+          "A type of book that contains many different short stories"
         ],
         "answer": "A short description of a feature from an end-user perspective",
         "category": "Domain Review",
@@ -13787,10 +13787,10 @@ export const certifications = [
         "id": "capm-q25",
         "question": "What is a 'Milestone'?",
         "options": [
-          "A large rock",
+          "A large rock found on the side of a highway",
           "A significant point or event in a project",
-          "A task that takes 1 hour",
-          "A unit of distance"
+          "A task that takes exactly one hour to finish",
+          "A unit of distance used for long-range travel"
         ],
         "answer": "A significant point or event in a project",
         "category": "Domain Review",
@@ -13802,9 +13802,9 @@ export const certifications = [
         "question": "What is 'Scrum'?",
         "options": [
           "A framework for implementing Agile development",
-          "A rugby formation",
-          "A software tool",
-          "A type of database"
+          "A software tool designed for tracking team tasks",
+          "A standard rugby formation used during a match",
+          "A type of database optimized for project data"
         ],
         "answer": "A framework for implementing Agile development",
         "category": "Domain Review",
@@ -13816,9 +13816,9 @@ export const certifications = [
         "question": "What is 'Change Management'?",
         "options": [
           "A process for managing changes to project scope or plan",
-          "Buying new hardware",
-          "Exchanging money",
-          "Hiring new people"
+          "Buying new hardware for the development system",
+          "Exchanging money from one currency to another",
+          "Hiring new people to join the project team"
         ],
         "answer": "A process for managing changes to project scope or plan",
         "category": "Domain Review",
@@ -13829,10 +13829,10 @@ export const certifications = [
         "id": "capm-q28",
         "question": "What is a 'Product Backlog'?",
         "options": [
-          "A financial report",
-          "A list of bugs",
+          "A detailed list of all software bugs found in a product",
+          "A large physical storage room for keeping product parts",
           "A prioritized list of everything that might be needed in a product",
-          "A storage room"
+          "A standard financial report on the annual product sales"
         ],
         "answer": "A prioritized list of everything that might be needed in a product",
         "category": "Domain Review",
@@ -13843,10 +13843,10 @@ export const certifications = [
         "id": "capm-q29",
         "question": "What is 'Six Sigma'?",
         "options": [
-          "A computer game",
-          "A secure network",
+          "A computer game designed for training project teams",
+          "A secure network protocol for transmitting project data",
           "A set of techniques for process improvement and quality control",
-          "A type of math"
+          "A specific type of math used for advanced calculations"
         ],
         "answer": "A set of techniques for process improvement and quality control",
         "category": "Domain Review",
@@ -13871,10 +13871,10 @@ export const certifications = [
         "id": "capm-q31",
         "question": "What is 'Program Management'?",
         "options": [
-          "A hardware engineer",
-          "A type of software",
+          "A hardware engineer who designs program architecture",
+          "A type of software application for managing programs",
           "Managing a group of related projects to achieve benefits",
-          "Writing many programs"
+          "The act of writing many different computer programs"
         ],
         "answer": "Managing a group of related projects to achieve benefits",
         "category": "Domain Review",
@@ -13899,12 +13899,12 @@ export const certifications = [
         "id": "capm-q33",
         "question": "What is 'Kanban'?",
         "options": [
-          "A Japanese car",
-          "A financial report",
-          "A type of computer code",
-          "A visual system for managing work as it moves through a process"
+          "A Japanese car designed for high-performance driving",
+          "A financial report that lists all project expenditures",
+          "A system for managing work as it moves through a process",
+          "A type of computer code used for project management"
         ],
-        "answer": "A visual system for managing work as it moves through a process",
+        "answer": "A system for managing work as it moves through a process",
         "category": "Domain Review",
         "explanation": "Kanban helps visualize workflow and limit work-in-progress.",
         "topic": "Process"
@@ -13913,10 +13913,10 @@ export const certifications = [
         "id": "capm-q34",
         "question": "What is 'Iterative Development'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
+          "A network protocol designed for transmitting iterative data",
+          "A type of computer code used for creating iterative loops",
           "Developing a product through repeated cycles (iterations)",
-          "Repeating a task"
+          "The act of repeating a task multiple times for consistency"
         ],
         "answer": "Developing a product through repeated cycles (iterations)",
         "category": "Domain Review",
@@ -13927,9 +13927,9 @@ export const certifications = [
         "id": "capm-q35",
         "question": "What is a 'Gantt Chart'?",
         "options": [
-          "A database schema",
-          "A financial spreadsheet",
-          "A risk management framework",
+          "A database schema for storing project data",
+          "A financial spreadsheet for tracking costs",
+          "A risk management framework for the team",
           "A visual representation of a project schedule"
         ],
         "answer": "A visual representation of a project schedule",
@@ -13941,10 +13941,10 @@ export const certifications = [
         "id": "capm-q36",
         "question": "What is 'Risk Management'?",
         "options": [
-          "A type of insurance",
-          "Avoiding all risks",
+          "A specific type of insurance for project management",
+          "Avoiding all risks by not starting any new projects",
           "Identifying, assessing, and responding to project risks",
-          "Taking many chances"
+          "Taking many chances to achieve high project rewards"
         ],
         "answer": "Identifying, assessing, and responding to project risks",
         "category": "Domain Review",
@@ -13955,10 +13955,10 @@ export const certifications = [
         "id": "capm-q37",
         "question": "What is 'Agile Manifesto'?",
         "options": [
-          "A book about projects",
+          "A book about different types of projects and teams",
           "A document outlining the values and principles of Agile",
-          "A hardware manual",
-          "A type of software"
+          "A hardware manual for installing networking equipment",
+          "A specific type of software for managing Agile tasks"
         ],
         "answer": "A document outlining the values and principles of Agile",
         "category": "Domain Review",
@@ -13969,10 +13969,10 @@ export const certifications = [
         "id": "capm-q38",
         "question": "What is 'Procurement Management'?",
         "options": [
-          "A type of storage",
-          "Hiring new people",
+          "A type of high-capacity storage for project data",
+          "Hiring new people to work on the project tasks",
           "Managing the purchase of goods and services for a project",
-          "Writing code"
+          "Writing computer code for a software application"
         ],
         "answer": "Managing the purchase of goods and services for a project",
         "category": "Domain Review",
@@ -13983,10 +13983,10 @@ export const certifications = [
         "id": "capm-q39",
         "question": "What is a 'Daily Stand-up'?",
         "options": [
-          "A marathon coding session",
+          "A marathon coding session for developers",
           "A short daily meeting to discuss progress",
-          "A weekly project review",
-          "An exercise break for the team"
+          "A weekly project review for the entire team",
+          "An exercise break for the team members"
         ],
         "answer": "A short daily meeting to discuss progress",
         "category": "Domain Review",
@@ -13997,9 +13997,9 @@ export const certifications = [
         "id": "capm-q40",
         "question": "What is 'Project Governance'?",
         "options": [
-          "A government agency",
-          "A security guard",
-          "A set of laws",
+          "A government agency responsible for project oversight",
+          "A security guard responsible for project site safety",
+          "A set of laws and regulations for managing projects",
           "The framework for project decision-making and oversight"
         ],
         "answer": "The framework for project decision-making and oversight",
@@ -14012,9 +14012,9 @@ export const certifications = [
         "question": "What is a 'PMO' (Project Management Office)?",
         "options": [
           "A department that centralizes and coordinates project management",
-          "A hardware manufacturer",
-          "A type of computer",
-          "A website developer"
+          "A hardware manufacturer that produces project equipment",
+          "A type of computer designed for project management tasks",
+          "A website developer who specializes in project portals"
         ],
         "answer": "A department that centralizes and coordinates project management",
         "category": "Domain Review",
@@ -14025,10 +14025,10 @@ export const certifications = [
         "id": "capm-q42",
         "question": "What is a 'Project Charter'?",
         "options": [
+          "A detailed map of the world for navigation",
           "A document that formally authorizes a project",
-          "A financial contract",
-          "A list of team members",
-          "A map of the world"
+          "A financial contract between two different parties",
+          "A list of team members and their assignments"
         ],
         "answer": "A document that formally authorizes a project",
         "category": "Domain Review",
@@ -14039,9 +14039,9 @@ export const certifications = [
         "id": "capm-q43",
         "question": "What is 'Project Budget'?",
         "options": [
-          "A financial ledger",
-          "A list of tasks",
-          "A software manual",
+          "A detailed list of tasks required to complete a project",
+          "A software manual explaining how to manage project costs",
+          "A standard financial ledger for tracking company expenses",
           "The total amount of money allocated for a project"
         ],
         "answer": "The total amount of money allocated for a project",
@@ -14053,10 +14053,10 @@ export const certifications = [
         "id": "capm-q44",
         "question": "What is 'PRINCE2'?",
         "options": [
-          "A hardware standard",
-          "A member of a royal family",
+          "A hardware standard for maintaining equipment consistency",
+          "A high-ranking member of a royal or noble family in Europe",
           "A structured project management methodology used widely in Europe",
-          "A type of software"
+          "A type of computer software for managing project structures"
         ],
         "answer": "A structured project management methodology used widely in Europe",
         "category": "Domain Review",
@@ -14067,10 +14067,10 @@ export const certifications = [
         "id": "capm-q45",
         "question": "What is 'Quality Assurance' (QA)?",
         "options": [
-          "A guarantee",
-          "Checking for errors",
+          "A written guarantee for the quality of a product",
+          "Checking for errors in a software application",
           "Processes to ensure a project meets quality standards",
-          "Testing a product"
+          "Testing a product before it is shipped to users"
         ],
         "answer": "Processes to ensure a project meets quality standards",
         "category": "Domain Review",
@@ -14081,10 +14081,10 @@ export const certifications = [
         "id": "capm-q46",
         "question": "What is a 'Burndown Chart'?",
         "options": [
-          "A financial report",
-          "A fire hazard",
           "A graphical representation of work remaining versus time",
-          "A type of database"
+          "A physical fire hazard in a project management office",
+          "A standard financial report showing monthly project costs",
+          "A type of database optimized for storing chart information"
         ],
         "answer": "A graphical representation of work remaining versus time",
         "category": "Domain Review",
@@ -14095,10 +14095,10 @@ export const certifications = [
         "id": "capm-q47",
         "question": "What is a 'Sprint Review'?",
         "options": [
-          "A financial report",
           "A meeting to demonstrate the work completed during the sprint",
-          "A type of test",
-          "Checking a website"
+          "A standard financial report generated at the end of a sprint",
+          "A type of test designed to evaluate the quality of a sprint",
+          "The act of checking a website for new content and updates"
         ],
         "answer": "A meeting to demonstrate the work completed during the sprint",
         "category": "Domain Review",
@@ -14123,9 +14123,9 @@ export const certifications = [
         "id": "capm-q49",
         "question": "What is 'Incremental Delivery'?",
         "options": [
-          "A delivery truck",
-          "A software update",
-          "A type of storage",
+          "A standard delivery truck for shipping consumer goods",
+          "A standard software update designed to fix minor system bugs",
+          "A type of storage device used for saving product archives",
           "Delivering a product in small, usable parts over time"
         ],
         "answer": "Delivering a product in small, usable parts over time",
@@ -14138,9 +14138,9 @@ export const certifications = [
         "question": "What is a 'Feature' in project management?",
         "options": [
           "A distinct functionality or capability of a product",
-          "A network protocol",
-          "A part of a movie",
-          "A type of computer code"
+          "A network protocol designed for transmitting feature data",
+          "A specific part of a movie that features a main character",
+          "A type of computer code used for adding new functionalities"
         ],
         "answer": "A distinct functionality or capability of a product",
         "category": "Domain Review",
@@ -14382,9 +14382,9 @@ export const certifications = [
         "question": "What is 'Scrum'?",
         "options": [
           "A framework for implementing Agile development",
-          "A rugby formation",
-          "A software tool",
-          "A type of database"
+          "A software tool designed for tracking team tasks",
+          "A standard rugby formation used during a match",
+          "A type of database optimized for project data"
         ],
         "answer": "A framework for implementing Agile development",
         "category": "Domain Review",
@@ -14395,9 +14395,9 @@ export const certifications = [
         "id": "csm-q2",
         "question": "What is 'Quality Control' (QC)?",
         "options": [
-          "A hardware warranty",
-          "A software tool",
-          "Controlling the team",
+          "A hardware warranty for repairing broken components",
+          "A software tool designed for tracking project tasks",
+          "Controlling the team members and their activities",
           "Monitoring project results to ensure they meet standards"
         ],
         "answer": "Monitoring project results to ensure they meet standards",
@@ -14409,10 +14409,10 @@ export const certifications = [
         "id": "csm-q3",
         "question": "What is a 'Sprint Review'?",
         "options": [
-          "A financial report",
           "A meeting to demonstrate the work completed during the sprint",
-          "A type of test",
-          "Checking a website"
+          "A standard financial report generated at the end of a sprint",
+          "A type of test designed to evaluate the quality of a sprint",
+          "The act of checking a website for new content and updates"
         ],
         "answer": "A meeting to demonstrate the work completed during the sprint",
         "category": "Domain Review",
@@ -14423,10 +14423,10 @@ export const certifications = [
         "id": "csm-q4",
         "question": "What is 'Risk Management'?",
         "options": [
-          "A type of insurance",
-          "Avoiding all risks",
+          "A specific type of insurance for project management",
+          "Avoiding all risks by not starting any new projects",
           "Identifying, assessing, and responding to project risks",
-          "Taking many chances"
+          "Taking many chances to achieve high project rewards"
         ],
         "answer": "Identifying, assessing, and responding to project risks",
         "category": "Domain Review",
@@ -14437,10 +14437,10 @@ export const certifications = [
         "id": "csm-q5",
         "question": "What is a 'WBS' (Work Breakdown Structure)?",
         "options": [
-          "A financial report",
+          "A financial report that lists all project costs",
           "A hierarchical decomposition of project work",
-          "A type of computer",
-          "A website builder"
+          "A specific type of high-performance computer",
+          "A website builder for creating project portals"
         ],
         "answer": "A hierarchical decomposition of project work",
         "category": "Domain Review",
@@ -14452,9 +14452,9 @@ export const certifications = [
         "question": "What is 'Change Management'?",
         "options": [
           "A process for managing changes to project scope or plan",
-          "Buying new hardware",
-          "Exchanging money",
-          "Hiring new people"
+          "Buying new hardware for the development system",
+          "Exchanging money from one currency to another",
+          "Hiring new people to join the project team"
         ],
         "answer": "A process for managing changes to project scope or plan",
         "category": "Domain Review",
@@ -14465,10 +14465,10 @@ export const certifications = [
         "id": "csm-q7",
         "question": "What is 'Backlog Grooming' (or Refinement)?",
         "options": [
-          "A financial report",
-          "A type of software bug",
-          "Cleaning a room",
-          "Keeping the product backlog up to date and prioritized"
+          "A specific type of software bug found in the backlog",
+          "A standard financial report on the state of the backlog",
+          "Keeping the product backlog up to date and prioritized",
+          "The act of cleaning a room and organizing all its items"
         ],
         "answer": "Keeping the product backlog up to date and prioritized",
         "category": "Domain Review",
@@ -14479,10 +14479,10 @@ export const certifications = [
         "id": "csm-q8",
         "question": "What is a 'Sprint' in Scrum?",
         "options": [
-          "A short meeting",
+          "A short meeting for the development team",
           "A time-boxed iteration (usually 1-4 weeks)",
-          "A type of project",
-          "Running very fast"
+          "A type of project that requires rapid delivery",
+          "Running very fast towards a specific goal"
         ],
         "answer": "A time-boxed iteration (usually 1-4 weeks)",
         "category": "Domain Review",
@@ -14493,10 +14493,10 @@ export const certifications = [
         "id": "csm-q9",
         "question": "What is a 'Milestone'?",
         "options": [
-          "A large rock",
+          "A large rock found on the side of a highway",
           "A significant point or event in a project",
-          "A task that takes 1 hour",
-          "A unit of distance"
+          "A task that takes exactly one hour to finish",
+          "A unit of distance used for long-range travel"
         ],
         "answer": "A significant point or event in a project",
         "category": "Domain Review",
@@ -14508,9 +14508,9 @@ export const certifications = [
         "question": "What is a 'SOW' (Statement of Work)?",
         "options": [
           "A document describing the work to be performed under contract",
-          "A financial report",
-          "A list of team members",
-          "A type of pig"
+          "A financial report detailing the project expenditures",
+          "A list of team members and their contact information",
+          "A specific type of pig found on a residential farm"
         ],
         "answer": "A document describing the work to be performed under contract",
         "category": "Domain Review",
@@ -14521,10 +14521,10 @@ export const certifications = [
         "id": "csm-q11",
         "question": "What is a 'Lessons Learned' session?",
         "options": [
-          "A classroom lecture",
+          "A classroom lecture given by a senior project manager",
           "A meeting to discuss what went well and what didn't in a project",
-          "A software update",
-          "A type of test"
+          "A standard software update for project management apps",
+          "A type of test designed to evaluate project knowledge"
         ],
         "answer": "A meeting to discuss what went well and what didn't in a project",
         "category": "Domain Review",
@@ -14550,9 +14550,9 @@ export const certifications = [
         "question": "What is a 'Feature' in project management?",
         "options": [
           "A distinct functionality or capability of a product",
-          "A network protocol",
-          "A part of a movie",
-          "A type of computer code"
+          "A network protocol designed for transmitting feature data",
+          "A specific part of a movie that features a main character",
+          "A type of computer code used for adding new functionalities"
         ],
         "answer": "A distinct functionality or capability of a product",
         "category": "Domain Review",
@@ -14563,10 +14563,10 @@ export const certifications = [
         "id": "csm-q14",
         "question": "What is a 'Project Charter'?",
         "options": [
+          "A detailed map of the world for navigation",
           "A document that formally authorizes a project",
-          "A financial contract",
-          "A list of team members",
-          "A map of the world"
+          "A financial contract between two different parties",
+          "A list of team members and their assignments"
         ],
         "answer": "A document that formally authorizes a project",
         "category": "Domain Review",
@@ -14577,10 +14577,10 @@ export const certifications = [
         "id": "csm-q15",
         "question": "What is a 'User Story'?",
         "options": [
-          "A bedtime story",
+          "A bedtime story told to children before they go to sleep",
           "A short description of a feature from an end-user perspective",
-          "A software manual",
-          "A type of book"
+          "A software manual explaining how to use system features",
+          "A type of book that contains many different short stories"
         ],
         "answer": "A short description of a feature from an end-user perspective",
         "category": "Domain Review",
@@ -14591,10 +14591,10 @@ export const certifications = [
         "id": "csm-q16",
         "question": "What is 'Earned Value Management' (EVM)?",
         "options": [
-          "A software manual",
+          "A software manual that explains how to use EVM tools",
+          "A specific way to earn money through project tasks",
           "A technique to measure project performance and progress",
-          "A type of store",
-          "A way to earn money"
+          "A type of store that sells project management tools"
         ],
         "answer": "A technique to measure project performance and progress",
         "category": "Domain Review",
@@ -14606,9 +14606,9 @@ export const certifications = [
         "question": "What is a 'Stakeholder Registry'?",
         "options": [
           "A document listing all project stakeholders and their info",
-          "A financial ledger",
-          "A guest book",
-          "A list of project tasks"
+          "A financial ledger for tracking project expenses",
+          "A list of project tasks and their current status",
+          "A simple guest book for visitors to sign their names"
         ],
         "answer": "A document listing all project stakeholders and their info",
         "category": "Domain Review",
@@ -14619,9 +14619,9 @@ export const certifications = [
         "id": "csm-q18",
         "question": "What is 'Incremental Delivery'?",
         "options": [
-          "A delivery truck",
-          "A software update",
-          "A type of storage",
+          "A standard delivery truck for shipping consumer goods",
+          "A standard software update designed to fix minor system bugs",
+          "A type of storage device used for saving product archives",
           "Delivering a product in small, usable parts over time"
         ],
         "answer": "Delivering a product in small, usable parts over time",
@@ -14633,10 +14633,10 @@ export const certifications = [
         "id": "csm-q19",
         "question": "What is a 'Product Backlog'?",
         "options": [
-          "A financial report",
-          "A list of bugs",
+          "A detailed list of all software bugs found in a product",
+          "A large physical storage room for keeping product parts",
           "A prioritized list of everything that might be needed in a product",
-          "A storage room"
+          "A standard financial report on the annual product sales"
         ],
         "answer": "A prioritized list of everything that might be needed in a product",
         "category": "Domain Review",
@@ -14647,10 +14647,10 @@ export const certifications = [
         "id": "csm-q20",
         "question": "What is a 'Burndown Chart'?",
         "options": [
-          "A financial report",
-          "A fire hazard",
           "A graphical representation of work remaining versus time",
-          "A type of database"
+          "A physical fire hazard in a project management office",
+          "A standard financial report showing monthly project costs",
+          "A type of database optimized for storing chart information"
         ],
         "answer": "A graphical representation of work remaining versus time",
         "category": "Domain Review",
@@ -14661,9 +14661,9 @@ export const certifications = [
         "id": "csm-q21",
         "question": "What is a 'Story Point'?",
         "options": [
-          "A network protocol",
-          "A part of a book",
-          "A type of computer code",
+          "A network protocol designed for transmitting project data sets",
+          "A specific part of a book that contains a narrative or tale",
+          "A type of computer code used for project management tasks",
           "A unit of measure for expressing an estimate of the size of a user story"
         ],
         "answer": "A unit of measure for expressing an estimate of the size of a user story",
@@ -14675,12 +14675,12 @@ export const certifications = [
         "id": "csm-q22",
         "question": "What is 'Kanban'?",
         "options": [
-          "A Japanese car",
-          "A financial report",
-          "A type of computer code",
-          "A visual system for managing work as it moves through a process"
+          "A Japanese car designed for high-performance driving",
+          "A financial report that lists all project expenditures",
+          "A system for managing work as it moves through a process",
+          "A type of computer code used for project management"
         ],
-        "answer": "A visual system for managing work as it moves through a process",
+        "answer": "A system for managing work as it moves through a process",
         "category": "Domain Review",
         "explanation": "Kanban helps visualize workflow and limit work-in-progress.",
         "topic": "Process"
@@ -14689,9 +14689,9 @@ export const certifications = [
         "id": "csm-q23",
         "question": "What is 'Portfolio Management'?",
         "options": [
-          "A financial account",
-          "A leather folder",
-          "A type of database",
+          "A financial account used for tracking project expenses",
+          "A leather folder used for carrying project documents",
+          "A type of database optimized for storing project data",
           "Managing a collection of projects and programs to meet strategic goals"
         ],
         "answer": "Managing a collection of projects and programs to meet strategic goals",
@@ -14703,9 +14703,9 @@ export const certifications = [
         "id": "csm-q24",
         "question": "What is 'Project Governance'?",
         "options": [
-          "A government agency",
-          "A security guard",
-          "A set of laws",
+          "A government agency responsible for project oversight",
+          "A security guard responsible for project site safety",
+          "A set of laws and regulations for managing projects",
           "The framework for project decision-making and oversight"
         ],
         "answer": "The framework for project decision-making and oversight",
@@ -14717,10 +14717,10 @@ export const certifications = [
         "id": "csm-q25",
         "question": "What is 'Agile Manifesto'?",
         "options": [
-          "A book about projects",
+          "A book about different types of projects and teams",
           "A document outlining the values and principles of Agile",
-          "A hardware manual",
-          "A type of software"
+          "A hardware manual for installing networking equipment",
+          "A specific type of software for managing Agile tasks"
         ],
         "answer": "A document outlining the values and principles of Agile",
         "category": "Domain Review",
@@ -14745,9 +14745,9 @@ export const certifications = [
         "id": "csm-q27",
         "question": "What is a 'Gantt Chart'?",
         "options": [
-          "A database schema",
-          "A financial spreadsheet",
-          "A risk management framework",
+          "A database schema for storing project data",
+          "A financial spreadsheet for tracking costs",
+          "A risk management framework for the team",
           "A visual representation of a project schedule"
         ],
         "answer": "A visual representation of a project schedule",
@@ -14759,10 +14759,10 @@ export const certifications = [
         "id": "csm-q28",
         "question": "What is 'Program Management'?",
         "options": [
-          "A hardware engineer",
-          "A type of software",
+          "A hardware engineer who designs program architecture",
+          "A type of software application for managing programs",
           "Managing a group of related projects to achieve benefits",
-          "Writing many programs"
+          "The act of writing many different computer programs"
         ],
         "answer": "Managing a group of related projects to achieve benefits",
         "category": "Domain Review",
@@ -14773,10 +14773,10 @@ export const certifications = [
         "id": "csm-q29",
         "question": "What is 'Procurement Management'?",
         "options": [
-          "A type of storage",
-          "Hiring new people",
+          "A type of high-capacity storage for project data",
+          "Hiring new people to work on the project tasks",
           "Managing the purchase of goods and services for a project",
-          "Writing code"
+          "Writing computer code for a software application"
         ],
         "answer": "Managing the purchase of goods and services for a project",
         "category": "Domain Review",
@@ -14788,9 +14788,9 @@ export const certifications = [
         "question": "What is a 'Sprint Retrospective'?",
         "options": [
           "A meeting to discuss how to improve the team's process",
-          "A software update",
-          "A type of test",
-          "Looking back in time"
+          "A standard software update for project management applications",
+          "A type of test designed to evaluate the team's performance",
+          "The act of looking back in time to study historical events"
         ],
         "answer": "A meeting to discuss how to improve the team's process",
         "category": "Domain Review",
@@ -14801,9 +14801,9 @@ export const certifications = [
         "id": "csm-q31",
         "question": "What is 'Agile' methodology?",
         "options": [
-          "A set of strict rules",
-          "A type of sport",
-          "A very fast router",
+          "A set of strict rules for managing organizational tasks",
+          "A type of competitive sport played by professional teams",
+          "A very fast router designed for high-speed networks",
           "An iterative approach to project management and software development"
         ],
         "answer": "An iterative approach to project management and software development",
@@ -14829,10 +14829,10 @@ export const certifications = [
         "id": "csm-q33",
         "question": "What is a 'Daily Stand-up'?",
         "options": [
-          "A marathon coding session",
+          "A marathon coding session for developers",
           "A short daily meeting to discuss progress",
-          "A weekly project review",
-          "An exercise break for the team"
+          "A weekly project review for the entire team",
+          "An exercise break for the team members"
         ],
         "answer": "A short daily meeting to discuss progress",
         "category": "Domain Review",
@@ -14843,10 +14843,10 @@ export const certifications = [
         "id": "csm-q34",
         "question": "What is 'Planning Poker'?",
         "options": [
-          "A card game",
           "A consensus-based estimation technique for user stories",
-          "A software tool",
-          "A type of gamble"
+          "A software tool used for tracking project development",
+          "A standard card game played with a deck of 52 cards",
+          "A type of financial gamble involving project outcomes"
         ],
         "answer": "A consensus-based estimation technique for user stories",
         "category": "Domain Review",
@@ -14857,9 +14857,9 @@ export const certifications = [
         "id": "csm-q35",
         "question": "What is 'Cost Baseline'?",
         "options": [
-          "A financial report",
-          "A low-cost project",
-          "A type of database",
+          "A low-cost project designed for small organizations and teams",
+          "A standard financial report generated at the end of the year",
+          "A type of database optimized for storing project budget data",
           "The approved version of the project budget, used to measure performance"
         ],
         "answer": "The approved version of the project budget, used to measure performance",
@@ -14872,9 +14872,9 @@ export const certifications = [
         "question": "Who are 'Stakeholders'?",
         "options": [
           "Anyone affected by or involved in the project",
-          "Only the end-users",
-          "Only the investors",
-          "Only the project team"
+          "Only the end-users who will use the product",
+          "Only the investors who provide the funding",
+          "Only the project team members and managers"
         ],
         "answer": "Anyone affected by or involved in the project",
         "category": "Domain Review",
@@ -14885,10 +14885,10 @@ export const certifications = [
         "id": "csm-q37",
         "question": "What is 'Six Sigma'?",
         "options": [
-          "A computer game",
-          "A secure network",
+          "A computer game designed for training project teams",
+          "A secure network protocol for transmitting project data",
           "A set of techniques for process improvement and quality control",
-          "A type of math"
+          "A specific type of math used for advanced calculations"
         ],
         "answer": "A set of techniques for process improvement and quality control",
         "category": "Domain Review",
@@ -14899,10 +14899,10 @@ export const certifications = [
         "id": "csm-q38",
         "question": "What is 'Iterative Development'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
+          "A network protocol designed for transmitting iterative data",
+          "A type of computer code used for creating iterative loops",
           "Developing a product through repeated cycles (iterations)",
-          "Repeating a task"
+          "The act of repeating a task multiple times for consistency"
         ],
         "answer": "Developing a product through repeated cycles (iterations)",
         "category": "Domain Review",
@@ -14913,9 +14913,9 @@ export const certifications = [
         "id": "csm-q39",
         "question": "What does 'Scope Creep' mean?",
         "options": [
-          "A bug in the software",
-          "A decrease in project budget",
-          "A slow project manager",
+          "A decrease in the project budget allocation",
+          "A minor bug in the software application",
+          "A slow project manager who misses deadlines",
           "Uncontrolled changes in project requirements"
         ],
         "answer": "Uncontrolled changes in project requirements",
@@ -14927,9 +14927,9 @@ export const certifications = [
         "id": "csm-q40",
         "question": "What is 'Resource Management'?",
         "options": [
-          "A software update",
-          "A type of database",
-          "Finding new resources",
+          "A standard software update for project management apps",
+          "A type of database optimized for storing project data",
+          "Finding new resources to be used for the project",
           "Managing people, equipment, and materials for a project"
         ],
         "answer": "Managing people, equipment, and materials for a project",
@@ -14942,9 +14942,9 @@ export const certifications = [
         "question": "What is 'Velocity' in Agile?",
         "options": [
           "A measure of the amount of work a team can complete in a sprint",
-          "A network protocol",
-          "A type of computer code",
-          "Speed of a car"
+          "A network protocol designed for fast data transmission",
+          "A type of computer code used for measuring system speed",
+          "The speed of a car traveling on a long highway journey"
         ],
         "answer": "A measure of the amount of work a team can complete in a sprint",
         "category": "Domain Review",
@@ -14955,9 +14955,9 @@ export const certifications = [
         "id": "csm-q42",
         "question": "What is 'Project Budget'?",
         "options": [
-          "A financial ledger",
-          "A list of tasks",
-          "A software manual",
+          "A detailed list of tasks required to complete a project",
+          "A software manual explaining how to manage project costs",
+          "A standard financial ledger for tracking company expenses",
           "The total amount of money allocated for a project"
         ],
         "answer": "The total amount of money allocated for a project",
@@ -14969,9 +14969,9 @@ export const certifications = [
         "id": "csm-q43",
         "question": "What is 'Project Scope'?",
         "options": [
-          "A type of telescope",
-          "The budget of a project",
-          "The name of a project",
+          "A type of telescope used for astronomical viewing",
+          "The total budget allocated for a specific project",
+          "The unique name given to a specific project task",
           "The work that must be performed to deliver a result"
         ],
         "answer": "The work that must be performed to deliver a result",
@@ -14983,10 +14983,10 @@ export const certifications = [
         "id": "csm-q44",
         "question": "What is 'Waterfall' methodology?",
         "options": [
-          "A beautiful scenery",
-          "A fast-paced project",
+          "A beautiful natural scenery with water",
+          "A fast-paced and highly iterative project",
           "A sequential project management process",
-          "A type of plumbing"
+          "A type of high-pressure plumbing system"
         ],
         "answer": "A sequential project management process",
         "category": "Domain Review",
@@ -14997,9 +14997,9 @@ export const certifications = [
         "id": "csm-q45",
         "question": "What is a 'Critical Success Factor' (CSF)?",
         "options": [
-          "A hardware failure",
-          "A type of software bug",
-          "A very hard task",
+          "A hardware failure in the main data center",
+          "A type of software bug in the production phase",
+          "A very hard task that requires many resources",
           "Something that must happen for a project to succeed"
         ],
         "answer": "Something that must happen for a project to succeed",
@@ -15011,10 +15011,10 @@ export const certifications = [
         "id": "csm-q46",
         "question": "What is 'Quality Assurance' (QA)?",
         "options": [
-          "A guarantee",
-          "Checking for errors",
+          "A written guarantee for the quality of a product",
+          "Checking for errors in a software application",
           "Processes to ensure a project meets quality standards",
-          "Testing a product"
+          "Testing a product before it is shipped to users"
         ],
         "answer": "Processes to ensure a project meets quality standards",
         "category": "Domain Review",
@@ -15026,9 +15026,9 @@ export const certifications = [
         "question": "What is 'Sprint Planning'?",
         "options": [
           "A meeting where the team decides what to work on in the next sprint",
-          "A software update",
-          "A type of project",
-          "Running a race"
+          "A specific type of project that requires rapid development",
+          "A standard software update for project management applications",
+          "The act of running a race at maximum speed for a distance"
         ],
         "answer": "A meeting where the team decides what to work on in the next sprint",
         "category": "Domain Review",
@@ -15040,9 +15040,9 @@ export const certifications = [
         "question": "What is a 'PMO' (Project Management Office)?",
         "options": [
           "A department that centralizes and coordinates project management",
-          "A hardware manufacturer",
-          "A type of computer",
-          "A website developer"
+          "A hardware manufacturer that produces project equipment",
+          "A type of computer designed for project management tasks",
+          "A website developer who specializes in project portals"
         ],
         "answer": "A department that centralizes and coordinates project management",
         "category": "Domain Review",
@@ -15054,9 +15054,9 @@ export const certifications = [
         "question": "What is an 'Epic'?",
         "options": [
           "A large body of work that can be broken down into many user stories",
-          "A long poem",
-          "A software manual",
-          "A type of movie"
+          "A software manual that describes the entire system architecture",
+          "A type of movie with a long duration and a very large budget",
+          "A very long poem that tells a story of heroic deeds and events"
         ],
         "answer": "A large body of work that can be broken down into many user stories",
         "category": "Domain Review",
@@ -15067,10 +15067,10 @@ export const certifications = [
         "id": "csm-q50",
         "question": "What is 'PRINCE2'?",
         "options": [
-          "A hardware standard",
-          "A member of a royal family",
+          "A hardware standard for maintaining equipment consistency",
+          "A high-ranking member of a royal or noble family in Europe",
           "A structured project management methodology used widely in Europe",
-          "A type of software"
+          "A type of computer software for managing project structures"
         ],
         "answer": "A structured project management methodology used widely in Europe",
         "category": "Domain Review",
@@ -15312,9 +15312,9 @@ export const certifications = [
         "question": "Who are 'Stakeholders'?",
         "options": [
           "Anyone affected by or involved in the project",
-          "Only the end-users",
-          "Only the investors",
-          "Only the project team"
+          "Only the end-users who will use the product",
+          "Only the investors who provide the funding",
+          "Only the project team members and managers"
         ],
         "answer": "Anyone affected by or involved in the project",
         "category": "Domain Review",
@@ -15325,9 +15325,9 @@ export const certifications = [
         "id": "itil-found-q2",
         "question": "What is 'Resource Management'?",
         "options": [
-          "A software update",
-          "A type of database",
-          "Finding new resources",
+          "A standard software update for project management apps",
+          "A type of database optimized for storing project data",
+          "Finding new resources to be used for the project",
           "Managing people, equipment, and materials for a project"
         ],
         "answer": "Managing people, equipment, and materials for a project",
@@ -15339,10 +15339,10 @@ export const certifications = [
         "id": "itil-found-q3",
         "question": "What is a 'Project Charter'?",
         "options": [
+          "A detailed map of the world for navigation",
           "A document that formally authorizes a project",
-          "A financial contract",
-          "A list of team members",
-          "A map of the world"
+          "A financial contract between two different parties",
+          "A list of team members and their assignments"
         ],
         "answer": "A document that formally authorizes a project",
         "category": "Domain Review",
@@ -15353,10 +15353,10 @@ export const certifications = [
         "id": "itil-found-q4",
         "question": "What is 'PRINCE2'?",
         "options": [
-          "A hardware standard",
-          "A member of a royal family",
+          "A hardware standard for maintaining equipment consistency",
+          "A high-ranking member of a royal or noble family in Europe",
           "A structured project management methodology used widely in Europe",
-          "A type of software"
+          "A type of computer software for managing project structures"
         ],
         "answer": "A structured project management methodology used widely in Europe",
         "category": "Domain Review",
@@ -15367,10 +15367,10 @@ export const certifications = [
         "id": "itil-found-q5",
         "question": "What is a 'Daily Stand-up'?",
         "options": [
-          "A marathon coding session",
+          "A marathon coding session for developers",
           "A short daily meeting to discuss progress",
-          "A weekly project review",
-          "An exercise break for the team"
+          "A weekly project review for the entire team",
+          "An exercise break for the team members"
         ],
         "answer": "A short daily meeting to discuss progress",
         "category": "Domain Review",
@@ -15381,9 +15381,9 @@ export const certifications = [
         "id": "itil-found-q6",
         "question": "What is 'Project Budget'?",
         "options": [
-          "A financial ledger",
-          "A list of tasks",
-          "A software manual",
+          "A detailed list of tasks required to complete a project",
+          "A software manual explaining how to manage project costs",
+          "A standard financial ledger for tracking company expenses",
           "The total amount of money allocated for a project"
         ],
         "answer": "The total amount of money allocated for a project",
@@ -15396,9 +15396,9 @@ export const certifications = [
         "question": "What is a 'Stakeholder Registry'?",
         "options": [
           "A document listing all project stakeholders and their info",
-          "A financial ledger",
-          "A guest book",
-          "A list of project tasks"
+          "A financial ledger for tracking project expenses",
+          "A list of project tasks and their current status",
+          "A simple guest book for visitors to sign their names"
         ],
         "answer": "A document listing all project stakeholders and their info",
         "category": "Domain Review",
@@ -15409,10 +15409,10 @@ export const certifications = [
         "id": "itil-found-q8",
         "question": "What is 'Planning Poker'?",
         "options": [
-          "A card game",
           "A consensus-based estimation technique for user stories",
-          "A software tool",
-          "A type of gamble"
+          "A software tool used for tracking project development",
+          "A standard card game played with a deck of 52 cards",
+          "A type of financial gamble involving project outcomes"
         ],
         "answer": "A consensus-based estimation technique for user stories",
         "category": "Domain Review",
@@ -15437,9 +15437,9 @@ export const certifications = [
         "id": "itil-found-q10",
         "question": "What does 'Scope Creep' mean?",
         "options": [
-          "A bug in the software",
-          "A decrease in project budget",
-          "A slow project manager",
+          "A decrease in the project budget allocation",
+          "A minor bug in the software application",
+          "A slow project manager who misses deadlines",
           "Uncontrolled changes in project requirements"
         ],
         "answer": "Uncontrolled changes in project requirements",
@@ -15452,9 +15452,9 @@ export const certifications = [
         "question": "What is 'Sprint Planning'?",
         "options": [
           "A meeting where the team decides what to work on in the next sprint",
-          "A software update",
-          "A type of project",
-          "Running a race"
+          "A specific type of project that requires rapid development",
+          "A standard software update for project management applications",
+          "The act of running a race at maximum speed for a distance"
         ],
         "answer": "A meeting where the team decides what to work on in the next sprint",
         "category": "Domain Review",
@@ -15466,9 +15466,9 @@ export const certifications = [
         "question": "What is a 'SOW' (Statement of Work)?",
         "options": [
           "A document describing the work to be performed under contract",
-          "A financial report",
-          "A list of team members",
-          "A type of pig"
+          "A financial report detailing the project expenditures",
+          "A list of team members and their contact information",
+          "A specific type of pig found on a residential farm"
         ],
         "answer": "A document describing the work to be performed under contract",
         "category": "Domain Review",
@@ -15479,10 +15479,10 @@ export const certifications = [
         "id": "itil-found-q13",
         "question": "What is 'Procurement Management'?",
         "options": [
-          "A type of storage",
-          "Hiring new people",
+          "A type of high-capacity storage for project data",
+          "Hiring new people to work on the project tasks",
           "Managing the purchase of goods and services for a project",
-          "Writing code"
+          "Writing computer code for a software application"
         ],
         "answer": "Managing the purchase of goods and services for a project",
         "category": "Domain Review",
@@ -15494,9 +15494,9 @@ export const certifications = [
         "question": "What is 'Scrum'?",
         "options": [
           "A framework for implementing Agile development",
-          "A rugby formation",
-          "A software tool",
-          "A type of database"
+          "A software tool designed for tracking team tasks",
+          "A standard rugby formation used during a match",
+          "A type of database optimized for project data"
         ],
         "answer": "A framework for implementing Agile development",
         "category": "Domain Review",
@@ -15507,10 +15507,10 @@ export const certifications = [
         "id": "itil-found-q15",
         "question": "What is 'Iterative Development'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
+          "A network protocol designed for transmitting iterative data",
+          "A type of computer code used for creating iterative loops",
           "Developing a product through repeated cycles (iterations)",
-          "Repeating a task"
+          "The act of repeating a task multiple times for consistency"
         ],
         "answer": "Developing a product through repeated cycles (iterations)",
         "category": "Domain Review",
@@ -15521,9 +15521,9 @@ export const certifications = [
         "id": "itil-found-q16",
         "question": "What is 'Portfolio Management'?",
         "options": [
-          "A financial account",
-          "A leather folder",
-          "A type of database",
+          "A financial account used for tracking project expenses",
+          "A leather folder used for carrying project documents",
+          "A type of database optimized for storing project data",
           "Managing a collection of projects and programs to meet strategic goals"
         ],
         "answer": "Managing a collection of projects and programs to meet strategic goals",
@@ -15535,10 +15535,10 @@ export const certifications = [
         "id": "itil-found-q17",
         "question": "What is a 'Sprint Review'?",
         "options": [
-          "A financial report",
           "A meeting to demonstrate the work completed during the sprint",
-          "A type of test",
-          "Checking a website"
+          "A standard financial report generated at the end of a sprint",
+          "A type of test designed to evaluate the quality of a sprint",
+          "The act of checking a website for new content and updates"
         ],
         "answer": "A meeting to demonstrate the work completed during the sprint",
         "category": "Domain Review",
@@ -15549,10 +15549,10 @@ export const certifications = [
         "id": "itil-found-q18",
         "question": "What is 'Quality Assurance' (QA)?",
         "options": [
-          "A guarantee",
-          "Checking for errors",
+          "A written guarantee for the quality of a product",
+          "Checking for errors in a software application",
           "Processes to ensure a project meets quality standards",
-          "Testing a product"
+          "Testing a product before it is shipped to users"
         ],
         "answer": "Processes to ensure a project meets quality standards",
         "category": "Domain Review",
@@ -15563,9 +15563,9 @@ export const certifications = [
         "id": "itil-found-q19",
         "question": "What is 'Quality Control' (QC)?",
         "options": [
-          "A hardware warranty",
-          "A software tool",
-          "Controlling the team",
+          "A hardware warranty for repairing broken components",
+          "A software tool designed for tracking project tasks",
+          "Controlling the team members and their activities",
           "Monitoring project results to ensure they meet standards"
         ],
         "answer": "Monitoring project results to ensure they meet standards",
@@ -15577,10 +15577,10 @@ export const certifications = [
         "id": "itil-found-q20",
         "question": "What is 'Agile Manifesto'?",
         "options": [
-          "A book about projects",
+          "A book about different types of projects and teams",
           "A document outlining the values and principles of Agile",
-          "A hardware manual",
-          "A type of software"
+          "A hardware manual for installing networking equipment",
+          "A specific type of software for managing Agile tasks"
         ],
         "answer": "A document outlining the values and principles of Agile",
         "category": "Domain Review",
@@ -15591,9 +15591,9 @@ export const certifications = [
         "id": "itil-found-q21",
         "question": "What is a 'Gantt Chart'?",
         "options": [
-          "A database schema",
-          "A financial spreadsheet",
-          "A risk management framework",
+          "A database schema for storing project data",
+          "A financial spreadsheet for tracking costs",
+          "A risk management framework for the team",
           "A visual representation of a project schedule"
         ],
         "answer": "A visual representation of a project schedule",
@@ -15605,9 +15605,9 @@ export const certifications = [
         "id": "itil-found-q22",
         "question": "What is a 'Critical Success Factor' (CSF)?",
         "options": [
-          "A hardware failure",
-          "A type of software bug",
-          "A very hard task",
+          "A hardware failure in the main data center",
+          "A type of software bug in the production phase",
+          "A very hard task that requires many resources",
           "Something that must happen for a project to succeed"
         ],
         "answer": "Something that must happen for a project to succeed",
@@ -15633,10 +15633,10 @@ export const certifications = [
         "id": "itil-found-q24",
         "question": "What is a 'User Story'?",
         "options": [
-          "A bedtime story",
+          "A bedtime story told to children before they go to sleep",
           "A short description of a feature from an end-user perspective",
-          "A software manual",
-          "A type of book"
+          "A software manual explaining how to use system features",
+          "A type of book that contains many different short stories"
         ],
         "answer": "A short description of a feature from an end-user perspective",
         "category": "Domain Review",
@@ -15647,12 +15647,12 @@ export const certifications = [
         "id": "itil-found-q25",
         "question": "What is 'Kanban'?",
         "options": [
-          "A Japanese car",
-          "A financial report",
-          "A type of computer code",
-          "A visual system for managing work as it moves through a process"
+          "A Japanese car designed for high-performance driving",
+          "A financial report that lists all project expenditures",
+          "A system for managing work as it moves through a process",
+          "A type of computer code used for project management"
         ],
-        "answer": "A visual system for managing work as it moves through a process",
+        "answer": "A system for managing work as it moves through a process",
         "category": "Domain Review",
         "explanation": "Kanban helps visualize workflow and limit work-in-progress.",
         "topic": "Process"
@@ -15662,9 +15662,9 @@ export const certifications = [
         "question": "What is a 'PMO' (Project Management Office)?",
         "options": [
           "A department that centralizes and coordinates project management",
-          "A hardware manufacturer",
-          "A type of computer",
-          "A website developer"
+          "A hardware manufacturer that produces project equipment",
+          "A type of computer designed for project management tasks",
+          "A website developer who specializes in project portals"
         ],
         "answer": "A department that centralizes and coordinates project management",
         "category": "Domain Review",
@@ -15675,10 +15675,10 @@ export const certifications = [
         "id": "itil-found-q27",
         "question": "What is 'Program Management'?",
         "options": [
-          "A hardware engineer",
-          "A type of software",
+          "A hardware engineer who designs program architecture",
+          "A type of software application for managing programs",
           "Managing a group of related projects to achieve benefits",
-          "Writing many programs"
+          "The act of writing many different computer programs"
         ],
         "answer": "Managing a group of related projects to achieve benefits",
         "category": "Domain Review",
@@ -15690,9 +15690,9 @@ export const certifications = [
         "question": "What is 'Change Management'?",
         "options": [
           "A process for managing changes to project scope or plan",
-          "Buying new hardware",
-          "Exchanging money",
-          "Hiring new people"
+          "Buying new hardware for the development system",
+          "Exchanging money from one currency to another",
+          "Hiring new people to join the project team"
         ],
         "answer": "A process for managing changes to project scope or plan",
         "category": "Domain Review",
@@ -15703,10 +15703,10 @@ export const certifications = [
         "id": "itil-found-q29",
         "question": "What is 'Earned Value Management' (EVM)?",
         "options": [
-          "A software manual",
+          "A software manual that explains how to use EVM tools",
+          "A specific way to earn money through project tasks",
           "A technique to measure project performance and progress",
-          "A type of store",
-          "A way to earn money"
+          "A type of store that sells project management tools"
         ],
         "answer": "A technique to measure project performance and progress",
         "category": "Domain Review",
@@ -15717,9 +15717,9 @@ export const certifications = [
         "id": "itil-found-q30",
         "question": "What is 'Project Governance'?",
         "options": [
-          "A government agency",
-          "A security guard",
-          "A set of laws",
+          "A government agency responsible for project oversight",
+          "A security guard responsible for project site safety",
+          "A set of laws and regulations for managing projects",
           "The framework for project decision-making and oversight"
         ],
         "answer": "The framework for project decision-making and oversight",
@@ -15732,9 +15732,9 @@ export const certifications = [
         "question": "What is a 'Feature' in project management?",
         "options": [
           "A distinct functionality or capability of a product",
-          "A network protocol",
-          "A part of a movie",
-          "A type of computer code"
+          "A network protocol designed for transmitting feature data",
+          "A specific part of a movie that features a main character",
+          "A type of computer code used for adding new functionalities"
         ],
         "answer": "A distinct functionality or capability of a product",
         "category": "Domain Review",
@@ -15745,10 +15745,10 @@ export const certifications = [
         "id": "itil-found-q32",
         "question": "What is 'Waterfall' methodology?",
         "options": [
-          "A beautiful scenery",
-          "A fast-paced project",
+          "A beautiful natural scenery with water",
+          "A fast-paced and highly iterative project",
           "A sequential project management process",
-          "A type of plumbing"
+          "A type of high-pressure plumbing system"
         ],
         "answer": "A sequential project management process",
         "category": "Domain Review",
@@ -15759,10 +15759,10 @@ export const certifications = [
         "id": "itil-found-q33",
         "question": "What is a 'Product Backlog'?",
         "options": [
-          "A financial report",
-          "A list of bugs",
+          "A detailed list of all software bugs found in a product",
+          "A large physical storage room for keeping product parts",
           "A prioritized list of everything that might be needed in a product",
-          "A storage room"
+          "A standard financial report on the annual product sales"
         ],
         "answer": "A prioritized list of everything that might be needed in a product",
         "category": "Domain Review",
@@ -15773,9 +15773,9 @@ export const certifications = [
         "id": "itil-found-q34",
         "question": "What is 'Agile' methodology?",
         "options": [
-          "A set of strict rules",
-          "A type of sport",
-          "A very fast router",
+          "A set of strict rules for managing organizational tasks",
+          "A type of competitive sport played by professional teams",
+          "A very fast router designed for high-speed networks",
           "An iterative approach to project management and software development"
         ],
         "answer": "An iterative approach to project management and software development",
@@ -15787,10 +15787,10 @@ export const certifications = [
         "id": "itil-found-q35",
         "question": "What is 'Six Sigma'?",
         "options": [
-          "A computer game",
-          "A secure network",
+          "A computer game designed for training project teams",
+          "A secure network protocol for transmitting project data",
           "A set of techniques for process improvement and quality control",
-          "A type of math"
+          "A specific type of math used for advanced calculations"
         ],
         "answer": "A set of techniques for process improvement and quality control",
         "category": "Domain Review",
@@ -15801,9 +15801,9 @@ export const certifications = [
         "id": "itil-found-q36",
         "question": "What is a 'Story Point'?",
         "options": [
-          "A network protocol",
-          "A part of a book",
-          "A type of computer code",
+          "A network protocol designed for transmitting project data sets",
+          "A specific part of a book that contains a narrative or tale",
+          "A type of computer code used for project management tasks",
           "A unit of measure for expressing an estimate of the size of a user story"
         ],
         "answer": "A unit of measure for expressing an estimate of the size of a user story",
@@ -15816,9 +15816,9 @@ export const certifications = [
         "question": "What is an 'Epic'?",
         "options": [
           "A large body of work that can be broken down into many user stories",
-          "A long poem",
-          "A software manual",
-          "A type of movie"
+          "A software manual that describes the entire system architecture",
+          "A type of movie with a long duration and a very large budget",
+          "A very long poem that tells a story of heroic deeds and events"
         ],
         "answer": "A large body of work that can be broken down into many user stories",
         "category": "Domain Review",
@@ -15829,9 +15829,9 @@ export const certifications = [
         "id": "itil-found-q38",
         "question": "What is 'Incremental Delivery'?",
         "options": [
-          "A delivery truck",
-          "A software update",
-          "A type of storage",
+          "A standard delivery truck for shipping consumer goods",
+          "A standard software update designed to fix minor system bugs",
+          "A type of storage device used for saving product archives",
           "Delivering a product in small, usable parts over time"
         ],
         "answer": "Delivering a product in small, usable parts over time",
@@ -15843,10 +15843,10 @@ export const certifications = [
         "id": "itil-found-q39",
         "question": "What is a 'Milestone'?",
         "options": [
-          "A large rock",
+          "A large rock found on the side of a highway",
           "A significant point or event in a project",
-          "A task that takes 1 hour",
-          "A unit of distance"
+          "A task that takes exactly one hour to finish",
+          "A unit of distance used for long-range travel"
         ],
         "answer": "A significant point or event in a project",
         "category": "Domain Review",
@@ -15857,10 +15857,10 @@ export const certifications = [
         "id": "itil-found-q40",
         "question": "What is 'Risk Management'?",
         "options": [
-          "A type of insurance",
-          "Avoiding all risks",
+          "A specific type of insurance for project management",
+          "Avoiding all risks by not starting any new projects",
           "Identifying, assessing, and responding to project risks",
-          "Taking many chances"
+          "Taking many chances to achieve high project rewards"
         ],
         "answer": "Identifying, assessing, and responding to project risks",
         "category": "Domain Review",
@@ -15871,10 +15871,10 @@ export const certifications = [
         "id": "itil-found-q41",
         "question": "What is 'Backlog Grooming' (or Refinement)?",
         "options": [
-          "A financial report",
-          "A type of software bug",
-          "Cleaning a room",
-          "Keeping the product backlog up to date and prioritized"
+          "A specific type of software bug found in the backlog",
+          "A standard financial report on the state of the backlog",
+          "Keeping the product backlog up to date and prioritized",
+          "The act of cleaning a room and organizing all its items"
         ],
         "answer": "Keeping the product backlog up to date and prioritized",
         "category": "Domain Review",
@@ -15885,10 +15885,10 @@ export const certifications = [
         "id": "itil-found-q42",
         "question": "What is a 'WBS' (Work Breakdown Structure)?",
         "options": [
-          "A financial report",
+          "A financial report that lists all project costs",
           "A hierarchical decomposition of project work",
-          "A type of computer",
-          "A website builder"
+          "A specific type of high-performance computer",
+          "A website builder for creating project portals"
         ],
         "answer": "A hierarchical decomposition of project work",
         "category": "Domain Review",
@@ -15899,10 +15899,10 @@ export const certifications = [
         "id": "itil-found-q43",
         "question": "What is a 'Burndown Chart'?",
         "options": [
-          "A financial report",
-          "A fire hazard",
           "A graphical representation of work remaining versus time",
-          "A type of database"
+          "A physical fire hazard in a project management office",
+          "A standard financial report showing monthly project costs",
+          "A type of database optimized for storing chart information"
         ],
         "answer": "A graphical representation of work remaining versus time",
         "category": "Domain Review",
@@ -15913,10 +15913,10 @@ export const certifications = [
         "id": "itil-found-q44",
         "question": "What is a 'Sprint' in Scrum?",
         "options": [
-          "A short meeting",
+          "A short meeting for the development team",
           "A time-boxed iteration (usually 1-4 weeks)",
-          "A type of project",
-          "Running very fast"
+          "A type of project that requires rapid delivery",
+          "Running very fast towards a specific goal"
         ],
         "answer": "A time-boxed iteration (usually 1-4 weeks)",
         "category": "Domain Review",
@@ -15941,9 +15941,9 @@ export const certifications = [
         "id": "itil-found-q46",
         "question": "What is 'Project Scope'?",
         "options": [
-          "A type of telescope",
-          "The budget of a project",
-          "The name of a project",
+          "A type of telescope used for astronomical viewing",
+          "The total budget allocated for a specific project",
+          "The unique name given to a specific project task",
           "The work that must be performed to deliver a result"
         ],
         "answer": "The work that must be performed to deliver a result",
@@ -15956,9 +15956,9 @@ export const certifications = [
         "question": "What is 'Velocity' in Agile?",
         "options": [
           "A measure of the amount of work a team can complete in a sprint",
-          "A network protocol",
-          "A type of computer code",
-          "Speed of a car"
+          "A network protocol designed for fast data transmission",
+          "A type of computer code used for measuring system speed",
+          "The speed of a car traveling on a long highway journey"
         ],
         "answer": "A measure of the amount of work a team can complete in a sprint",
         "category": "Domain Review",
@@ -15969,9 +15969,9 @@ export const certifications = [
         "id": "itil-found-q48",
         "question": "What is 'Lean' project management?",
         "options": [
-          "A fast-paced methodology",
-          "A small project",
-          "A type of exercise",
+          "A fast-paced and highly efficient project methodology",
+          "A small project that requires very few resources",
+          "A specific type of physical exercise for project teams",
           "Focusing on maximizing value and minimizing waste"
         ],
         "answer": "Focusing on maximizing value and minimizing waste",
@@ -15984,9 +15984,9 @@ export const certifications = [
         "question": "What is a 'Sprint Retrospective'?",
         "options": [
           "A meeting to discuss how to improve the team's process",
-          "A software update",
-          "A type of test",
-          "Looking back in time"
+          "A standard software update for project management applications",
+          "A type of test designed to evaluate the team's performance",
+          "The act of looking back in time to study historical events"
         ],
         "answer": "A meeting to discuss how to improve the team's process",
         "category": "Domain Review",
@@ -15997,9 +15997,9 @@ export const certifications = [
         "id": "itil-found-q50",
         "question": "What is 'Cost Baseline'?",
         "options": [
-          "A financial report",
-          "A low-cost project",
-          "A type of database",
+          "A low-cost project designed for small organizations and teams",
+          "A standard financial report generated at the end of the year",
+          "A type of database optimized for storing project budget data",
           "The approved version of the project budget, used to measure performance"
         ],
         "answer": "The approved version of the project budget, used to measure performance",
@@ -16237,9 +16237,9 @@ export const certifications = [
         "question": "What is 'KVM Switch'?",
         "options": [
           "A hardware device that allows controlling multiple computers from one keyboard/video/mouse",
-          "A hub",
-          "A light switch",
-          "A router"
+          "A hardware device that forwards data packets between networks",
+          "A simple hardware device that connects multiple computers in a hub",
+          "A standard light switch found in a residential home for lighting"
         ],
         "answer": "A hardware device that allows controlling multiple computers from one keyboard/video/mouse",
         "category": "Domain Review",
@@ -16250,10 +16250,10 @@ export const certifications = [
         "id": "linux-plus-q2",
         "question": "What is 'Rack' in a data center?",
         "options": [
-          "A hardware guard",
-          "A shelf",
+          "A guard for hardware safety",
+          "A simple wooden shelf for books",
           "A standardized frame for mounting IT equipment",
-          "A type of storage"
+          "A type of data storage device"
         ],
         "answer": "A standardized frame for mounting IT equipment",
         "category": "Domain Review",
@@ -16264,10 +16264,10 @@ export const certifications = [
         "id": "linux-plus-q3",
         "question": "What is 'Firmware'?",
         "options": [
-          "A soft clothing",
-          "A software update",
           "A specific class of computer software that provides low-level control for hardware",
-          "A type of storage"
+          "A standard software update for a computer operating system",
+          "A type of soft clothing worn during the winter season",
+          "A type of storage device used for saving digital photos"
         ],
         "answer": "A specific class of computer software that provides low-level control for hardware",
         "category": "Domain Review",
@@ -16279,9 +16279,9 @@ export const certifications = [
         "question": "What is 'SSH' (Secure Shell)?",
         "options": [
           "A cryptographic network protocol for operating network services securely",
-          "A fast browser",
-          "A hardware guard",
-          "A type of internet cable"
+          "A hardware guard that protects the internal computer components",
+          "A type of high-speed internet cable used for data transmission",
+          "A very fast web browser for accessing secure online platforms"
         ],
         "answer": "A cryptographic network protocol for operating network services securely",
         "category": "Domain Review",
@@ -16292,10 +16292,10 @@ export const certifications = [
         "id": "linux-plus-q5",
         "question": "What is a 'UPS' (Uninterruptible Power Supply)?",
         "options": [
-          "A delivery service",
           "A device that provides emergency power when the main source fails",
-          "A hardware guard",
-          "A type of battery"
+          "A hardware guard that protects the computer power port",
+          "A standard delivery service for shipping large packages",
+          "A type of portable battery used for charging mobile phones"
         ],
         "answer": "A device that provides emergency power when the main source fails",
         "category": "Domain Review",
@@ -16307,9 +16307,9 @@ export const certifications = [
         "question": "What is 'SLA' (Service Level Agreement)?",
         "options": [
           "A contract that defines the expected level of service from a provider",
-          "A hardware standard",
-          "A member of a royal family",
-          "A type of software"
+          "A hardware standard for maintaining consistency",
+          "A high-ranking member of a royal or noble family",
+          "A type of computer software used for agreement forms"
         ],
         "answer": "A contract that defines the expected level of service from a provider",
         "category": "Domain Review",
@@ -16320,10 +16320,10 @@ export const certifications = [
         "id": "linux-plus-q7",
         "question": "What is a 'MAC Address'?",
         "options": [
-          "A home address",
-          "A phone number",
-          "A serial number",
-          "A unique identifier assigned to a network interface controller"
+          "A physical home address for receiving standard postal mail",
+          "A unique identifier assigned to a network interface controller",
+          "A unique phone number for making voice calls and texts",
+          "A unique serial number assigned to a specific device"
         ],
         "answer": "A unique identifier assigned to a network interface controller",
         "category": "Domain Review",
@@ -16334,10 +16334,10 @@ export const certifications = [
         "id": "linux-plus-q8",
         "question": "What is 'HDD' (Hard Disk Drive)?",
         "options": [
-          "A backup on a CD",
+          "A copy of data saved on a standard compact disc",
           "A data storage device that uses magnetic storage and rotating disks",
-          "A software update",
-          "A type of cloud"
+          "A standard update for a computer software application",
+          "A type of cloud service for storing digital information"
         ],
         "answer": "A data storage device that uses magnetic storage and rotating disks",
         "category": "Domain Review",
@@ -16348,10 +16348,10 @@ export const certifications = [
         "id": "linux-plus-q9",
         "question": "What is 'Blade Server'?",
         "options": [
-          "A server with sharp edges",
-          "A simple app",
+          "A simple mobile application for tracking server usage",
+          "A standard server with sharp physical edges and corners",
           "A thin, modular server that fits into a specialized chassis",
-          "A type of computer chip"
+          "A type of computer chip designed for mobile devices"
         ],
         "answer": "A thin, modular server that fits into a specialized chassis",
         "category": "Domain Review",
@@ -16362,9 +16362,9 @@ export const certifications = [
         "id": "linux-plus-q10",
         "question": "What is 'Patch Management'?",
         "options": [
-          "A hardware guard",
-          "A repair shop",
-          "A type of storage",
+          "A hardware guard that prevents physical access to ports",
+          "A physical repair shop for fixing broken computer parts",
+          "A type of permanent storage for large data archives",
           "The process of distributing and applying updates to software"
         ],
         "answer": "The process of distributing and applying updates to software",
@@ -16376,10 +16376,10 @@ export const certifications = [
         "id": "linux-plus-q11",
         "question": "What is a 'Firewall'?",
         "options": [
-          "A hardware update",
+          "A large physical wall made of bricks and mortar",
           "A network security system that monitors and controls traffic",
-          "A physical wall",
-          "A type of virus"
+          "A standard hardware update for increasing speed",
+          "A type of malicious virus that infects a computer"
         ],
         "answer": "A network security system that monitors and controls traffic",
         "category": "Domain Review",
@@ -16390,9 +16390,9 @@ export const certifications = [
         "id": "linux-plus-q12",
         "question": "What is 'Clustering'?",
         "options": [
-          "A group of people",
-          "A hardware update",
-          "A type of database",
+          "A hardware update for increasing server processing speed",
+          "A large group of people standing close to each other",
+          "A type of database optimized for grouping data sets",
           "Connecting multiple servers to work together as a single system"
         ],
         "answer": "Connecting multiple servers to work together as a single system",
@@ -16405,9 +16405,9 @@ export const certifications = [
         "question": "What is 'PSU' (Power Supply Unit)?",
         "options": [
           "A device that converts mains AC to low-voltage regulated DC power",
-          "A hardware guard",
-          "A software update",
-          "A type of battery"
+          "A hardware guard that protects the computer power port",
+          "A standard update for a computer software application",
+          "A type of portable battery for charging mobile devices"
         ],
         "answer": "A device that converts mains AC to low-voltage regulated DC power",
         "category": "Domain Review",
@@ -16419,9 +16419,9 @@ export const certifications = [
         "question": "What is 'Virtualization'?",
         "options": [
           "Creating virtual versions of hardware or OS",
-          "Making a website look real",
-          "Storing data on a USB drive",
-          "Using a VR headset"
+          "Making a website look real using advanced graphics",
+          "Storing digital data on a physical USB flash drive",
+          "Using a VR headset for immersive digital experiences"
         ],
         "answer": "Creating virtual versions of hardware or OS",
         "category": "Domain Review",
@@ -16433,9 +16433,9 @@ export const certifications = [
         "question": "What is 'CMOS Battery'?",
         "options": [
           "A battery that powers the CMOS memory when the computer is off",
-          "A hardware guard",
-          "A large battery",
-          "A type of storage"
+          "A hardware guard that protects the internal battery",
+          "A large battery used for powering electric vehicles",
+          "A type of storage device for saving computer settings"
         ],
         "answer": "A battery that powers the CMOS memory when the computer is off",
         "category": "Domain Review",
@@ -16446,9 +16446,9 @@ export const certifications = [
         "id": "linux-plus-q16",
         "question": "What is 'UEFI'?",
         "options": [
-          "A secure protocol",
-          "A software update",
-          "A type of network",
+          "A secure network protocol for transmitting data sets",
+          "A software update for the computer BIOS system",
+          "A type of high-speed local area network connection",
           "The modern replacement for the traditional BIOS"
         ],
         "answer": "The modern replacement for the traditional BIOS",
@@ -16460,9 +16460,9 @@ export const certifications = [
         "id": "linux-plus-q17",
         "question": "What is 'Failover'?",
         "options": [
-          "A hardware warranty",
-          "A project failure",
-          "A software bug",
+          "A complete failure of a project to meet its objectives",
+          "A hardware warranty that covers component repair",
+          "A standard software bug that causes a crash",
           "Automatically switching to a redundant or standby system upon failure"
         ],
         "answer": "Automatically switching to a redundant or standby system upon failure",
@@ -16475,9 +16475,9 @@ export const certifications = [
         "question": "What is 'Snapshot' in storage?",
         "options": [
           "A copy of a system or data at a specific point in time",
-          "A hardware upgrade",
-          "A photograph",
-          "A type of storage"
+          "A digital photograph taken with a standard camera",
+          "A hardware upgrade for increasing computer memory",
+          "A type of high-speed storage for active data files"
         ],
         "answer": "A copy of a system or data at a specific point in time",
         "category": "Domain Review",
@@ -16502,10 +16502,10 @@ export const certifications = [
         "id": "linux-plus-q20",
         "question": "What is 'Uptime'?",
         "options": [
-          "A hardware warranty",
-          "A type of network speed",
-          "The amount of time a system or service is operational",
-          "Waking up"
+          "A hardware warranty that covers component repair",
+          "A specific type of high-speed network connection",
+          "The act of waking up in the morning for work",
+          "The amount of time a system or service is operational"
         ],
         "answer": "The amount of time a system or service is operational",
         "category": "Domain Review",
@@ -16517,9 +16517,9 @@ export const certifications = [
         "question": "What is 'Docker' used for?",
         "options": [
           "Containerization of applications",
-          "Editing photos",
-          "Hosting a database",
-          "Scanning for viruses"
+          "Editing digital photos for web use",
+          "Hosting a database on a local server",
+          "Scanning for viruses on a computer"
         ],
         "answer": "Containerization of applications",
         "category": "Domain Review",
@@ -16530,9 +16530,9 @@ export const certifications = [
         "id": "linux-plus-q22",
         "question": "What is 'CPU' (Central Processing Unit)?",
         "options": [
-          "A hardware guard",
-          "A network cable",
-          "A type of monitor",
+          "A hardware guard that protects the internal computer parts",
+          "A network cable used for transmitting data between systems",
+          "A type of high-resolution monitor for displaying graphics",
           "The electronic circuitry that executes instructions of a computer program"
         ],
         "answer": "The electronic circuitry that executes instructions of a computer program",
@@ -16545,9 +16545,9 @@ export const certifications = [
         "question": "What is 'Bash'?",
         "options": [
           "A Unix shell and command language",
-          "A hardware component",
-          "A type of database",
-          "Hitting a computer"
+          "A physical hardware component inside a computer case",
+          "A type of database used for storing shell scripts",
+          "The act of hitting a computer with a heavy object"
         ],
         "answer": "A Unix shell and command language",
         "category": "Domain Review",
@@ -16559,9 +16559,9 @@ export const certifications = [
         "question": "What is 'Active Directory' (AD)?",
         "options": [
           "A directory service for Windows domain networks",
-          "A list of files",
-          "A phone book",
-          "A type of firewall"
+          "A physical phone book with names and numbers",
+          "A simple list of files stored in a local folder",
+          "A type of network firewall for blocking traffic"
         ],
         "answer": "A directory service for Windows domain networks",
         "category": "Domain Review",
@@ -16572,9 +16572,9 @@ export const certifications = [
         "id": "linux-plus-q25",
         "question": "What is 'Colocation'?",
         "options": [
-          "A building with many rooms",
-          "A large cloud",
-          "Hiring many tenants",
+          "A large cloud-based service for storing organizational data",
+          "A large physical building with many different office rooms",
+          "Hiring many tenants to manage your data center infrastructure",
           "Renting space for your servers in a third-party data center"
         ],
         "answer": "Renting space for your servers in a third-party data center",
@@ -16586,10 +16586,10 @@ export const certifications = [
         "id": "linux-plus-q26",
         "question": "What is 'VPN' (Virtual Private Network)?",
         "options": [
-          "A fast internet connection",
-          "A private network",
+          "A high-speed internet connection for fast data transfers",
           "A service that creates a safe, encrypted connection over a less secure network",
-          "A type of storage"
+          "A standard private network used within a small organization",
+          "A type of cloud-based storage service for saving files"
         ],
         "answer": "A service that creates a safe, encrypted connection over a less secure network",
         "category": "Domain Review",
@@ -16600,10 +16600,10 @@ export const certifications = [
         "id": "linux-plus-q27",
         "question": "What is 'SSD' (Solid State Drive)?",
         "options": [
-          "A backup on a CD",
-          "A software update",
+          "A copy of data saved on a standard compact disc",
+          "A standard update for a computer software application",
           "A storage device that uses integrated circuits for data storage",
-          "A type of cloud"
+          "A type of cloud service for storing digital information"
         ],
         "answer": "A storage device that uses integrated circuits for data storage",
         "category": "Domain Review",
@@ -16614,9 +16614,9 @@ export const certifications = [
         "id": "linux-plus-q28",
         "question": "What is 'BIOS Update'?",
         "options": [
-          "A software update",
-          "Buying a new PC",
-          "Cleaning a disk",
+          "A standard software update for apps",
+          "Buying a brand new personal computer",
+          "Cleaning a physical disk with a cloth",
           "Updating the firmware on the motherboard"
         ],
         "answer": "Updating the firmware on the motherboard",
@@ -16628,10 +16628,10 @@ export const certifications = [
         "id": "linux-plus-q29",
         "question": "What is 'Mainframe'?",
         "options": [
-          "A hardware guard",
+          "A hardware guard that protects the internal computer parts",
           "A large, powerful computer used for high-volume data processing",
-          "A server rack",
-          "A type of network cable"
+          "A standardized frame for mounting servers and equipment",
+          "A type of network cable used for high-speed transmission"
         ],
         "answer": "A large, powerful computer used for high-volume data processing",
         "category": "Domain Review",
@@ -16643,9 +16643,9 @@ export const certifications = [
         "question": "What is 'Backup'?",
         "options": [
           "A copy of data stored in a separate location for recovery",
-          "A reverse gear",
-          "A software update",
-          "A type of storage"
+          "A reverse gear in a vehicle used for moving backwards",
+          "A standard update for a computer software application",
+          "A type of primary storage device for active data sets"
         ],
         "answer": "A copy of data stored in a separate location for recovery",
         "category": "Domain Review",
@@ -16657,9 +16657,9 @@ export const certifications = [
         "question": "What is a 'Switch' in networking?",
         "options": [
           "A device that connects devices on a computer network using packet switching",
-          "A hub",
-          "A light switch",
-          "A router"
+          "A device that connects multiple computers in a hub",
+          "A device that forwards data packets between networks",
+          "A standard light switch found in a residential home"
         ],
         "answer": "A device that connects devices on a computer network using packet switching",
         "category": "Domain Review",
@@ -16670,9 +16670,9 @@ export const certifications = [
         "id": "linux-plus-q32",
         "question": "What is 'Linux'?",
         "options": [
-          "A Microsoft product",
-          "A specific type of hardware",
-          "A web browser",
+          "A specific type of computer hardware part",
+          "A standard operating system from Microsoft",
+          "A web browser used for accessing the web",
           "An open-source operating system kernel"
         ],
         "answer": "An open-source operating system kernel",
@@ -16684,10 +16684,10 @@ export const certifications = [
         "id": "linux-plus-q33",
         "question": "What is 'RAID 5'?",
         "options": [
-          "A type of backup",
-          "Mirroring data",
+          "A standard type of backup for recovering data sets",
+          "Mirroring data across two different hard drives",
           "Striping data and parity across three or more disks",
-          "Using five disks"
+          "Using five different disks for maximum data storage"
         ],
         "answer": "Striping data and parity across three or more disks",
         "category": "Domain Review",
@@ -16698,9 +16698,9 @@ export const certifications = [
         "id": "linux-plus-q34",
         "question": "What is a 'Hypervisor'?",
         "options": [
-          "A high-security firewall",
-          "A type of network cable",
-          "A very fast processor",
+          "A high-security firewall for data centers",
+          "A type of network cable for data transfer",
+          "A very fast processor for high-end gaming",
           "Software that creates and runs virtual machines"
         ],
         "answer": "Software that creates and runs virtual machines",
@@ -16712,9 +16712,9 @@ export const certifications = [
         "id": "linux-plus-q35",
         "question": "What is 'Form Factor'?",
         "options": [
-          "A hardware warranty",
-          "A software manual",
-          "A type of code",
+          "A manual that explains how to use software",
+          "A type of computer code used for data forms",
+          "A warranty that covers computer hardware",
           "The physical size and shape of a computer component"
         ],
         "answer": "The physical size and shape of a computer component",
@@ -16726,9 +16726,9 @@ export const certifications = [
         "id": "linux-plus-q36",
         "question": "What is 'Motherboard'?",
         "options": [
-          "A hardware guard",
-          "A network cable",
-          "A type of monitor",
+          "A hardware guard that protects the internal computer parts",
+          "A network cable used for transmitting data between systems",
+          "A type of high-resolution monitor for displaying graphics",
           "The main printed circuit board in general-purpose computers"
         ],
         "answer": "The main printed circuit board in general-purpose computers",
@@ -16741,9 +16741,9 @@ export const certifications = [
         "question": "What is a 'Server'?",
         "options": [
           "A computer or system that provides resources or services to other computers",
-          "A network cable",
-          "A type of monitor",
-          "A waiter"
+          "A network cable used for transmitting data between computers",
+          "A professional waiter working in a busy city center restaurant",
+          "A type of high-resolution monitor used for displaying data"
         ],
         "answer": "A computer or system that provides resources or services to other computers",
         "category": "Domain Review",
@@ -16754,10 +16754,10 @@ export const certifications = [
         "id": "linux-plus-q38",
         "question": "What is 'DHCP'?",
         "options": [
-          "A hardware guard",
+          "A hardware guard that protects the internal computer parts",
           "A protocol for automatically assigning IP addresses to devices",
-          "A secure login",
-          "A type of network cable"
+          "A secure login page for accessing restricted systems",
+          "A type of network cable used for high-speed transmission"
         ],
         "answer": "A protocol for automatically assigning IP addresses to devices",
         "category": "Domain Review",
@@ -16782,10 +16782,10 @@ export const certifications = [
         "id": "linux-plus-q40",
         "question": "What is 'TPM' (Trusted Platform Module)?",
         "options": [
-          "A hardware guard",
-          "A software update",
+          "A hardware guard that protects the physical ports of a computer system",
+          "A software update designed to improve the security of the operating system",
           "A specialized chip on a device that provides hardware-level security",
-          "A type of software"
+          "A type of software application used for data encryption on a computer"
         ],
         "answer": "A specialized chip on a device that provides hardware-level security",
         "category": "Domain Review",
@@ -16796,9 +16796,9 @@ export const certifications = [
         "id": "linux-plus-q41",
         "question": "What is an 'IP Address'?",
         "options": [
-          "A home address",
-          "A phone number",
-          "A serial number",
+          "A physical home address for receiving standard postal mail",
+          "A unique phone number for making voice calls and texts",
+          "A unique serial number assigned to a specific device",
           "A unique string of numbers that identifies each computer on a network"
         ],
         "answer": "A unique string of numbers that identifies each computer on a network",
@@ -16810,10 +16810,10 @@ export const certifications = [
         "id": "linux-plus-q42",
         "question": "What is 'RAM' (Random Access Memory)?",
         "options": [
-          "A backup on a USB",
+          "A copy of data saved on a physical USB flash drive",
           "A form of computer memory that can be read and changed in any order",
-          "A software update",
-          "A type of storage"
+          "A standard update for a computer software application",
+          "A type of permanent storage device for large data sets"
         ],
         "answer": "A form of computer memory that can be read and changed in any order",
         "category": "Domain Review",
@@ -16824,9 +16824,9 @@ export const certifications = [
         "id": "linux-plus-q43",
         "question": "What is 'Load Balancing'?",
         "options": [
-          "A hardware upgrade",
-          "A heavy server",
-          "A type of storage",
+          "A hardware upgrade designed for increasing memory",
+          "A type of high-capacity storage device for backups",
+          "A very large and heavy computer server in a rack",
           "Distributing network or application traffic across multiple servers"
         ],
         "answer": "Distributing network or application traffic across multiple servers",
@@ -16852,10 +16852,10 @@ export const certifications = [
         "id": "linux-plus-q45",
         "question": "What is 'GPU' (Graphics Processing Unit)?",
         "options": [
-          "A hardware guard",
-          "A network cable",
+          "A hardware guard that protects the internal computer parts",
+          "A network cable used for transmitting data between systems",
           "A specialized electronic circuit designed to accelerate image creation",
-          "A type of monitor"
+          "A type of high-resolution monitor for displaying graphics"
         ],
         "answer": "A specialized electronic circuit designed to accelerate image creation",
         "category": "Domain Review",
@@ -16866,10 +16866,10 @@ export const certifications = [
         "id": "linux-plus-q46",
         "question": "What is 'Secure Boot'?",
         "options": [
-          "A hardware guard",
-          "A password on a PC",
+          "A hardware guard that protects the internal components of a computer",
           "A security standard that ensures a device boots using only trusted software",
-          "A type of antivirus"
+          "A standard password required to access a personal computer system",
+          "A type of antivirus software designed to scan for malware"
         ],
         "answer": "A security standard that ensures a device boots using only trusted software",
         "category": "Domain Review",
@@ -16880,9 +16880,9 @@ export const certifications = [
         "id": "linux-plus-q47",
         "question": "What is 'DNS' (Domain Name System)?",
         "options": [
-          "A phone book",
-          "A secure protocol",
-          "A type of storage",
+          "A physical phone book containing names and numbers",
+          "A secure network protocol for transmitting data",
+          "A type of storage device used for data backups",
           "The system that translates domain names into IP addresses"
         ],
         "answer": "The system that translates domain names into IP addresses",
@@ -16894,10 +16894,10 @@ export const certifications = [
         "id": "linux-plus-q48",
         "question": "What is a 'Router'?",
         "options": [
+          "A device that connects devices on a local area network",
           "A device that forwards data packets between computer networks",
-          "A hub",
-          "A repeater",
-          "A switch"
+          "A device that regenerates signals for long distance",
+          "A simple device that connects multiple computers in a hub"
         ],
         "answer": "A device that forwards data packets between computer networks",
         "category": "Domain Review",
@@ -16908,9 +16908,9 @@ export const certifications = [
         "id": "linux-plus-q49",
         "question": "What is 'RAID 0'?",
         "options": [
-          "A single disk",
-          "A type of backup",
-          "A very secure raid",
+          "A single physical hard disk used for storing digital files",
+          "A standard type of backup used for disaster recovery plans",
+          "A very secure raid configuration for high-value data sets",
           "Striping data across disks for performance with no redundancy"
         ],
         "answer": "Striping data across disks for performance with no redundancy",
@@ -16923,9 +16923,9 @@ export const certifications = [
         "question": "What is 'Data Center'?",
         "options": [
           "A facility used to house computer systems and associated components",
-          "A hardware guard",
-          "A room with servers",
-          "A type of storage"
+          "A hardware guard that protects the main entrance of a room",
+          "A small office room containing a few computer servers",
+          "A type of storage device used for saving digital archives"
         ],
         "answer": "A facility used to house computer systems and associated components",
         "category": "Domain Review",
@@ -17162,9 +17162,9 @@ export const certifications = [
         "question": "What is 'SLA' (Service Level Agreement)?",
         "options": [
           "A contract that defines the expected level of service from a provider",
-          "A hardware standard",
-          "A member of a royal family",
-          "A type of software"
+          "A hardware standard for maintaining consistency",
+          "A high-ranking member of a royal or noble family",
+          "A type of computer software used for agreement forms"
         ],
         "answer": "A contract that defines the expected level of service from a provider",
         "category": "Domain Review",
@@ -17175,10 +17175,10 @@ export const certifications = [
         "id": "terraform-assoc-q2",
         "question": "What is a 'MAC Address'?",
         "options": [
-          "A home address",
-          "A phone number",
-          "A serial number",
-          "A unique identifier assigned to a network interface controller"
+          "A physical home address for receiving standard postal mail",
+          "A unique identifier assigned to a network interface controller",
+          "A unique phone number for making voice calls and texts",
+          "A unique serial number assigned to a specific device"
         ],
         "answer": "A unique identifier assigned to a network interface controller",
         "category": "Domain Review",
@@ -17189,9 +17189,9 @@ export const certifications = [
         "id": "terraform-assoc-q3",
         "question": "What is 'UEFI'?",
         "options": [
-          "A secure protocol",
-          "A software update",
-          "A type of network",
+          "A secure network protocol for transmitting data sets",
+          "A software update for the computer BIOS system",
+          "A type of high-speed local area network connection",
           "The modern replacement for the traditional BIOS"
         ],
         "answer": "The modern replacement for the traditional BIOS",
@@ -17203,9 +17203,9 @@ export const certifications = [
         "id": "terraform-assoc-q4",
         "question": "What is 'Clustering'?",
         "options": [
-          "A group of people",
-          "A hardware update",
-          "A type of database",
+          "A hardware update for increasing server processing speed",
+          "A large group of people standing close to each other",
+          "A type of database optimized for grouping data sets",
           "Connecting multiple servers to work together as a single system"
         ],
         "answer": "Connecting multiple servers to work together as a single system",
@@ -17217,10 +17217,10 @@ export const certifications = [
         "id": "terraform-assoc-q5",
         "question": "What is 'VPN' (Virtual Private Network)?",
         "options": [
-          "A fast internet connection",
-          "A private network",
+          "A high-speed internet connection for fast data transfers",
           "A service that creates a safe, encrypted connection over a less secure network",
-          "A type of storage"
+          "A standard private network used within a small organization",
+          "A type of cloud-based storage service for saving files"
         ],
         "answer": "A service that creates a safe, encrypted connection over a less secure network",
         "category": "Domain Review",
@@ -17232,9 +17232,9 @@ export const certifications = [
         "question": "What is 'Virtualization'?",
         "options": [
           "Creating virtual versions of hardware or OS",
-          "Making a website look real",
-          "Storing data on a USB drive",
-          "Using a VR headset"
+          "Making a website look real using advanced graphics",
+          "Storing digital data on a physical USB flash drive",
+          "Using a VR headset for immersive digital experiences"
         ],
         "answer": "Creating virtual versions of hardware or OS",
         "category": "Domain Review",
@@ -17245,9 +17245,9 @@ export const certifications = [
         "id": "terraform-assoc-q7",
         "question": "What is 'Failover'?",
         "options": [
-          "A hardware warranty",
-          "A project failure",
-          "A software bug",
+          "A complete failure of a project to meet its objectives",
+          "A hardware warranty that covers component repair",
+          "A standard software bug that causes a crash",
           "Automatically switching to a redundant or standby system upon failure"
         ],
         "answer": "Automatically switching to a redundant or standby system upon failure",
@@ -17259,10 +17259,10 @@ export const certifications = [
         "id": "terraform-assoc-q8",
         "question": "What is 'RAM' (Random Access Memory)?",
         "options": [
-          "A backup on a USB",
+          "A copy of data saved on a physical USB flash drive",
           "A form of computer memory that can be read and changed in any order",
-          "A software update",
-          "A type of storage"
+          "A standard update for a computer software application",
+          "A type of permanent storage device for large data sets"
         ],
         "answer": "A form of computer memory that can be read and changed in any order",
         "category": "Domain Review",
@@ -17273,9 +17273,9 @@ export const certifications = [
         "id": "terraform-assoc-q9",
         "question": "What is 'Patch Management'?",
         "options": [
-          "A hardware guard",
-          "A repair shop",
-          "A type of storage",
+          "A hardware guard that prevents physical access to ports",
+          "A physical repair shop for fixing broken computer parts",
+          "A type of permanent storage for large data archives",
           "The process of distributing and applying updates to software"
         ],
         "answer": "The process of distributing and applying updates to software",
@@ -17287,9 +17287,9 @@ export const certifications = [
         "id": "terraform-assoc-q10",
         "question": "What is 'Colocation'?",
         "options": [
-          "A building with many rooms",
-          "A large cloud",
-          "Hiring many tenants",
+          "A large cloud-based service for storing organizational data",
+          "A large physical building with many different office rooms",
+          "Hiring many tenants to manage your data center infrastructure",
           "Renting space for your servers in a third-party data center"
         ],
         "answer": "Renting space for your servers in a third-party data center",
@@ -17302,9 +17302,9 @@ export const certifications = [
         "question": "What is 'SSH' (Secure Shell)?",
         "options": [
           "A cryptographic network protocol for operating network services securely",
-          "A fast browser",
-          "A hardware guard",
-          "A type of internet cable"
+          "A hardware guard that protects the internal computer components",
+          "A type of high-speed internet cable used for data transmission",
+          "A very fast web browser for accessing secure online platforms"
         ],
         "answer": "A cryptographic network protocol for operating network services securely",
         "category": "Domain Review",
@@ -17316,9 +17316,9 @@ export const certifications = [
         "question": "What is 'CMOS Battery'?",
         "options": [
           "A battery that powers the CMOS memory when the computer is off",
-          "A hardware guard",
-          "A large battery",
-          "A type of storage"
+          "A hardware guard that protects the internal battery",
+          "A large battery used for powering electric vehicles",
+          "A type of storage device for saving computer settings"
         ],
         "answer": "A battery that powers the CMOS memory when the computer is off",
         "category": "Domain Review",
@@ -17329,9 +17329,9 @@ export const certifications = [
         "id": "terraform-assoc-q13",
         "question": "What is a 'Hypervisor'?",
         "options": [
-          "A high-security firewall",
-          "A type of network cable",
-          "A very fast processor",
+          "A high-security firewall for data centers",
+          "A type of network cable for data transfer",
+          "A very fast processor for high-end gaming",
           "Software that creates and runs virtual machines"
         ],
         "answer": "Software that creates and runs virtual machines",
@@ -17344,9 +17344,9 @@ export const certifications = [
         "question": "What is 'Bash'?",
         "options": [
           "A Unix shell and command language",
-          "A hardware component",
-          "A type of database",
-          "Hitting a computer"
+          "A physical hardware component inside a computer case",
+          "A type of database used for storing shell scripts",
+          "The act of hitting a computer with a heavy object"
         ],
         "answer": "A Unix shell and command language",
         "category": "Domain Review",
@@ -17357,10 +17357,10 @@ export const certifications = [
         "id": "terraform-assoc-q15",
         "question": "What is 'TPM' (Trusted Platform Module)?",
         "options": [
-          "A hardware guard",
-          "A software update",
+          "A hardware guard that protects the physical ports of a computer system",
+          "A software update designed to improve the security of the operating system",
           "A specialized chip on a device that provides hardware-level security",
-          "A type of software"
+          "A type of software application used for data encryption on a computer"
         ],
         "answer": "A specialized chip on a device that provides hardware-level security",
         "category": "Domain Review",
@@ -17372,9 +17372,9 @@ export const certifications = [
         "question": "What is 'PSU' (Power Supply Unit)?",
         "options": [
           "A device that converts mains AC to low-voltage regulated DC power",
-          "A hardware guard",
-          "A software update",
-          "A type of battery"
+          "A hardware guard that protects the computer power port",
+          "A standard update for a computer software application",
+          "A type of portable battery for charging mobile devices"
         ],
         "answer": "A device that converts mains AC to low-voltage regulated DC power",
         "category": "Domain Review",
@@ -17385,10 +17385,10 @@ export const certifications = [
         "id": "terraform-assoc-q17",
         "question": "What is 'Firmware'?",
         "options": [
-          "A soft clothing",
-          "A software update",
           "A specific class of computer software that provides low-level control for hardware",
-          "A type of storage"
+          "A standard software update for a computer operating system",
+          "A type of soft clothing worn during the winter season",
+          "A type of storage device used for saving digital photos"
         ],
         "answer": "A specific class of computer software that provides low-level control for hardware",
         "category": "Domain Review",
@@ -17400,9 +17400,9 @@ export const certifications = [
         "question": "What is 'KVM Switch'?",
         "options": [
           "A hardware device that allows controlling multiple computers from one keyboard/video/mouse",
-          "A hub",
-          "A light switch",
-          "A router"
+          "A hardware device that forwards data packets between networks",
+          "A simple hardware device that connects multiple computers in a hub",
+          "A standard light switch found in a residential home for lighting"
         ],
         "answer": "A hardware device that allows controlling multiple computers from one keyboard/video/mouse",
         "category": "Domain Review",
@@ -17413,9 +17413,9 @@ export const certifications = [
         "id": "terraform-assoc-q19",
         "question": "What is 'Form Factor'?",
         "options": [
-          "A hardware warranty",
-          "A software manual",
-          "A type of code",
+          "A manual that explains how to use software",
+          "A type of computer code used for data forms",
+          "A warranty that covers computer hardware",
           "The physical size and shape of a computer component"
         ],
         "answer": "The physical size and shape of a computer component",
@@ -17428,9 +17428,9 @@ export const certifications = [
         "question": "What is a 'Switch' in networking?",
         "options": [
           "A device that connects devices on a computer network using packet switching",
-          "A hub",
-          "A light switch",
-          "A router"
+          "A device that connects multiple computers in a hub",
+          "A device that forwards data packets between networks",
+          "A standard light switch found in a residential home"
         ],
         "answer": "A device that connects devices on a computer network using packet switching",
         "category": "Domain Review",
@@ -17455,10 +17455,10 @@ export const certifications = [
         "id": "terraform-assoc-q22",
         "question": "What is 'Mainframe'?",
         "options": [
-          "A hardware guard",
+          "A hardware guard that protects the internal computer parts",
           "A large, powerful computer used for high-volume data processing",
-          "A server rack",
-          "A type of network cable"
+          "A standardized frame for mounting servers and equipment",
+          "A type of network cable used for high-speed transmission"
         ],
         "answer": "A large, powerful computer used for high-volume data processing",
         "category": "Domain Review",
@@ -17483,9 +17483,9 @@ export const certifications = [
         "id": "terraform-assoc-q24",
         "question": "What is 'DNS' (Domain Name System)?",
         "options": [
-          "A phone book",
-          "A secure protocol",
-          "A type of storage",
+          "A physical phone book containing names and numbers",
+          "A secure network protocol for transmitting data",
+          "A type of storage device used for data backups",
           "The system that translates domain names into IP addresses"
         ],
         "answer": "The system that translates domain names into IP addresses",
@@ -17497,9 +17497,9 @@ export const certifications = [
         "id": "terraform-assoc-q25",
         "question": "What is 'Motherboard'?",
         "options": [
-          "A hardware guard",
-          "A network cable",
-          "A type of monitor",
+          "A hardware guard that protects the internal computer parts",
+          "A network cable used for transmitting data between systems",
+          "A type of high-resolution monitor for displaying graphics",
           "The main printed circuit board in general-purpose computers"
         ],
         "answer": "The main printed circuit board in general-purpose computers",
@@ -17511,10 +17511,10 @@ export const certifications = [
         "id": "terraform-assoc-q26",
         "question": "What is 'DHCP'?",
         "options": [
-          "A hardware guard",
+          "A hardware guard that protects the internal computer parts",
           "A protocol for automatically assigning IP addresses to devices",
-          "A secure login",
-          "A type of network cable"
+          "A secure login page for accessing restricted systems",
+          "A type of network cable used for high-speed transmission"
         ],
         "answer": "A protocol for automatically assigning IP addresses to devices",
         "category": "Domain Review",
@@ -17525,9 +17525,9 @@ export const certifications = [
         "id": "terraform-assoc-q27",
         "question": "What is 'Downtime'?",
         "options": [
-          "A slow network",
-          "A software update",
-          "Going to sleep",
+          "A slow network connection that delays data",
+          "A standard software update for computer apps",
+          "The act of going to sleep at the end of the day",
           "The period during which a system or service is unavailable"
         ],
         "answer": "The period during which a system or service is unavailable",
@@ -17554,9 +17554,9 @@ export const certifications = [
         "question": "What is 'Data Center'?",
         "options": [
           "A facility used to house computer systems and associated components",
-          "A hardware guard",
-          "A room with servers",
-          "A type of storage"
+          "A hardware guard that protects the main entrance of a room",
+          "A small office room containing a few computer servers",
+          "A type of storage device used for saving digital archives"
         ],
         "answer": "A facility used to house computer systems and associated components",
         "category": "Domain Review",
@@ -17567,10 +17567,10 @@ export const certifications = [
         "id": "terraform-assoc-q30",
         "question": "What is 'Rack' in a data center?",
         "options": [
-          "A hardware guard",
-          "A shelf",
+          "A guard for hardware safety",
+          "A simple wooden shelf for books",
           "A standardized frame for mounting IT equipment",
-          "A type of storage"
+          "A type of data storage device"
         ],
         "answer": "A standardized frame for mounting IT equipment",
         "category": "Domain Review",
@@ -17581,10 +17581,10 @@ export const certifications = [
         "id": "terraform-assoc-q31",
         "question": "What is 'GPU' (Graphics Processing Unit)?",
         "options": [
-          "A hardware guard",
-          "A network cable",
+          "A hardware guard that protects the internal computer parts",
+          "A network cable used for transmitting data between systems",
           "A specialized electronic circuit designed to accelerate image creation",
-          "A type of monitor"
+          "A type of high-resolution monitor for displaying graphics"
         ],
         "answer": "A specialized electronic circuit designed to accelerate image creation",
         "category": "Domain Review",
@@ -17595,10 +17595,10 @@ export const certifications = [
         "id": "terraform-assoc-q32",
         "question": "What is 'Uptime'?",
         "options": [
-          "A hardware warranty",
-          "A type of network speed",
-          "The amount of time a system or service is operational",
-          "Waking up"
+          "A hardware warranty that covers component repair",
+          "A specific type of high-speed network connection",
+          "The act of waking up in the morning for work",
+          "The amount of time a system or service is operational"
         ],
         "answer": "The amount of time a system or service is operational",
         "category": "Domain Review",
@@ -17609,9 +17609,9 @@ export const certifications = [
         "id": "terraform-assoc-q33",
         "question": "What is 'CPU' (Central Processing Unit)?",
         "options": [
-          "A hardware guard",
-          "A network cable",
-          "A type of monitor",
+          "A hardware guard that protects the internal computer parts",
+          "A network cable used for transmitting data between systems",
+          "A type of high-resolution monitor for displaying graphics",
           "The electronic circuitry that executes instructions of a computer program"
         ],
         "answer": "The electronic circuitry that executes instructions of a computer program",
@@ -17623,10 +17623,10 @@ export const certifications = [
         "id": "terraform-assoc-q34",
         "question": "What is 'SSD' (Solid State Drive)?",
         "options": [
-          "A backup on a CD",
-          "A software update",
+          "A copy of data saved on a standard compact disc",
+          "A standard update for a computer software application",
           "A storage device that uses integrated circuits for data storage",
-          "A type of cloud"
+          "A type of cloud service for storing digital information"
         ],
         "answer": "A storage device that uses integrated circuits for data storage",
         "category": "Domain Review",
@@ -17637,10 +17637,10 @@ export const certifications = [
         "id": "terraform-assoc-q35",
         "question": "What is 'Blade Server'?",
         "options": [
-          "A server with sharp edges",
-          "A simple app",
+          "A simple mobile application for tracking server usage",
+          "A standard server with sharp physical edges and corners",
           "A thin, modular server that fits into a specialized chassis",
-          "A type of computer chip"
+          "A type of computer chip designed for mobile devices"
         ],
         "answer": "A thin, modular server that fits into a specialized chassis",
         "category": "Domain Review",
@@ -17651,10 +17651,10 @@ export const certifications = [
         "id": "terraform-assoc-q36",
         "question": "What is 'Secure Boot'?",
         "options": [
-          "A hardware guard",
-          "A password on a PC",
+          "A hardware guard that protects the internal components of a computer",
           "A security standard that ensures a device boots using only trusted software",
-          "A type of antivirus"
+          "A standard password required to access a personal computer system",
+          "A type of antivirus software designed to scan for malware"
         ],
         "answer": "A security standard that ensures a device boots using only trusted software",
         "category": "Domain Review",
@@ -17665,10 +17665,10 @@ export const certifications = [
         "id": "terraform-assoc-q37",
         "question": "What is a 'Firewall'?",
         "options": [
-          "A hardware update",
+          "A large physical wall made of bricks and mortar",
           "A network security system that monitors and controls traffic",
-          "A physical wall",
-          "A type of virus"
+          "A standard hardware update for increasing speed",
+          "A type of malicious virus that infects a computer"
         ],
         "answer": "A network security system that monitors and controls traffic",
         "category": "Domain Review",
@@ -17680,9 +17680,9 @@ export const certifications = [
         "question": "What is 'Backup'?",
         "options": [
           "A copy of data stored in a separate location for recovery",
-          "A reverse gear",
-          "A software update",
-          "A type of storage"
+          "A reverse gear in a vehicle used for moving backwards",
+          "A standard update for a computer software application",
+          "A type of primary storage device for active data sets"
         ],
         "answer": "A copy of data stored in a separate location for recovery",
         "category": "Domain Review",
@@ -17693,9 +17693,9 @@ export const certifications = [
         "id": "terraform-assoc-q39",
         "question": "What is 'Load Balancing'?",
         "options": [
-          "A hardware upgrade",
-          "A heavy server",
-          "A type of storage",
+          "A hardware upgrade designed for increasing memory",
+          "A type of high-capacity storage device for backups",
+          "A very large and heavy computer server in a rack",
           "Distributing network or application traffic across multiple servers"
         ],
         "answer": "Distributing network or application traffic across multiple servers",
@@ -17707,10 +17707,10 @@ export const certifications = [
         "id": "terraform-assoc-q40",
         "question": "What is a 'UPS' (Uninterruptible Power Supply)?",
         "options": [
-          "A delivery service",
           "A device that provides emergency power when the main source fails",
-          "A hardware guard",
-          "A type of battery"
+          "A hardware guard that protects the computer power port",
+          "A standard delivery service for shipping large packages",
+          "A type of portable battery used for charging mobile phones"
         ],
         "answer": "A device that provides emergency power when the main source fails",
         "category": "Domain Review",
@@ -17722,9 +17722,9 @@ export const certifications = [
         "question": "What is a 'Server'?",
         "options": [
           "A computer or system that provides resources or services to other computers",
-          "A network cable",
-          "A type of monitor",
-          "A waiter"
+          "A network cable used for transmitting data between computers",
+          "A professional waiter working in a busy city center restaurant",
+          "A type of high-resolution monitor used for displaying data"
         ],
         "answer": "A computer or system that provides resources or services to other computers",
         "category": "Domain Review",
@@ -17735,10 +17735,10 @@ export const certifications = [
         "id": "terraform-assoc-q42",
         "question": "What is 'RAID 5'?",
         "options": [
-          "A type of backup",
-          "Mirroring data",
+          "A standard type of backup for recovering data sets",
+          "Mirroring data across two different hard drives",
           "Striping data and parity across three or more disks",
-          "Using five disks"
+          "Using five different disks for maximum data storage"
         ],
         "answer": "Striping data and parity across three or more disks",
         "category": "Domain Review",
@@ -17750,9 +17750,9 @@ export const certifications = [
         "question": "What is 'Docker' used for?",
         "options": [
           "Containerization of applications",
-          "Editing photos",
-          "Hosting a database",
-          "Scanning for viruses"
+          "Editing digital photos for web use",
+          "Hosting a database on a local server",
+          "Scanning for viruses on a computer"
         ],
         "answer": "Containerization of applications",
         "category": "Domain Review",
@@ -17763,9 +17763,9 @@ export const certifications = [
         "id": "terraform-assoc-q44",
         "question": "What is 'RAID 0'?",
         "options": [
-          "A single disk",
-          "A type of backup",
-          "A very secure raid",
+          "A single physical hard disk used for storing digital files",
+          "A standard type of backup used for disaster recovery plans",
+          "A very secure raid configuration for high-value data sets",
           "Striping data across disks for performance with no redundancy"
         ],
         "answer": "Striping data across disks for performance with no redundancy",
@@ -17777,9 +17777,9 @@ export const certifications = [
         "id": "terraform-assoc-q45",
         "question": "What is 'BIOS Update'?",
         "options": [
-          "A software update",
-          "Buying a new PC",
-          "Cleaning a disk",
+          "A standard software update for apps",
+          "Buying a brand new personal computer",
+          "Cleaning a physical disk with a cloth",
           "Updating the firmware on the motherboard"
         ],
         "answer": "Updating the firmware on the motherboard",
@@ -17791,10 +17791,10 @@ export const certifications = [
         "id": "terraform-assoc-q46",
         "question": "What is a 'Router'?",
         "options": [
+          "A device that connects devices on a local area network",
           "A device that forwards data packets between computer networks",
-          "A hub",
-          "A repeater",
-          "A switch"
+          "A device that regenerates signals for long distance",
+          "A simple device that connects multiple computers in a hub"
         ],
         "answer": "A device that forwards data packets between computer networks",
         "category": "Domain Review",
@@ -17805,9 +17805,9 @@ export const certifications = [
         "id": "terraform-assoc-q47",
         "question": "What is 'Linux'?",
         "options": [
-          "A Microsoft product",
-          "A specific type of hardware",
-          "A web browser",
+          "A specific type of computer hardware part",
+          "A standard operating system from Microsoft",
+          "A web browser used for accessing the web",
           "An open-source operating system kernel"
         ],
         "answer": "An open-source operating system kernel",
@@ -17819,9 +17819,9 @@ export const certifications = [
         "id": "terraform-assoc-q48",
         "question": "What is an 'IP Address'?",
         "options": [
-          "A home address",
-          "A phone number",
-          "A serial number",
+          "A physical home address for receiving standard postal mail",
+          "A unique phone number for making voice calls and texts",
+          "A unique serial number assigned to a specific device",
           "A unique string of numbers that identifies each computer on a network"
         ],
         "answer": "A unique string of numbers that identifies each computer on a network",
@@ -17834,9 +17834,9 @@ export const certifications = [
         "question": "What is 'Snapshot' in storage?",
         "options": [
           "A copy of a system or data at a specific point in time",
-          "A hardware upgrade",
-          "A photograph",
-          "A type of storage"
+          "A digital photograph taken with a standard camera",
+          "A hardware upgrade for increasing computer memory",
+          "A type of high-speed storage for active data files"
         ],
         "answer": "A copy of a system or data at a specific point in time",
         "category": "Domain Review",
@@ -17847,10 +17847,10 @@ export const certifications = [
         "id": "terraform-assoc-q50",
         "question": "What is 'HDD' (Hard Disk Drive)?",
         "options": [
-          "A backup on a CD",
+          "A copy of data saved on a standard compact disc",
           "A data storage device that uses magnetic storage and rotating disks",
-          "A software update",
-          "A type of cloud"
+          "A standard update for a computer software application",
+          "A type of cloud service for storing digital information"
         ],
         "answer": "A data storage device that uses magnetic storage and rotating disks",
         "category": "Domain Review",
@@ -18081,10 +18081,10 @@ export const certifications = [
         "id": "dp-900-q1",
         "question": "What is 'Classification' in ML?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
+          "A network protocol for discrete labels",
+          "A type of computer code for labeled data",
           "Predicting a discrete label or category",
-          "Sorting things"
+          "The act of sorting things in a database"
         ],
         "answer": "Predicting a discrete label or category",
         "category": "Domain Review",
@@ -18095,9 +18095,9 @@ export const certifications = [
         "id": "dp-900-q2",
         "question": "What is 'Big Data'?",
         "options": [
-          "A high-resolution image",
-          "A long list of names",
-          "A very heavy hard drive",
+          "A high-resolution image with many pixels",
+          "A long list of names and contact addresses",
+          "A very heavy and large computer hard drive",
           "Extremely large and complex datasets"
         ],
         "answer": "Extremely large and complex datasets",
@@ -18109,10 +18109,10 @@ export const certifications = [
         "id": "dp-900-q3",
         "question": "What is 'Data Cleansing'?",
         "options": [
-          "A software manual",
-          "A type of code",
+          "A software manual that explains how to clean data",
+          "A type of computer code used for cleaning data",
           "Identifying and correcting errors or inconsistencies in data",
-          "Washing a computer"
+          "The act of physically washing a computer or server"
         ],
         "answer": "Identifying and correcting errors or inconsistencies in data",
         "category": "Domain Review",
@@ -18123,9 +18123,9 @@ export const certifications = [
         "id": "dp-900-q4",
         "question": "What is 'Semi-Structured Data'?",
         "options": [
-          "A financial report",
-          "A partially built house",
-          "A type of code",
+          "A financial report that is only partially completed by the user",
+          "A partially built house with some completed rooms but no solid foundation",
+          "A type of computer code used for semi-organized data sets and files",
           "Data that does not reside in a relational database but has organizational properties"
         ],
         "answer": "Data that does not reside in a relational database but has organizational properties",
@@ -18137,9 +18137,9 @@ export const certifications = [
         "id": "dp-900-q5",
         "question": "What is 'Unsupervised Learning'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "No teacher",
+          "A network protocol designed for pattern recognition",
+          "A type of computer code used for hidden patterns",
+          "Learning a subject without any teacher or instructor",
           "Training a model on unlabeled data to find hidden patterns"
         ],
         "answer": "Training a model on unlabeled data to find hidden patterns",
@@ -18151,9 +18151,9 @@ export const certifications = [
         "id": "dp-900-q6",
         "question": "What is 'Reinforcement Learning'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "Being very strict",
+          "A network protocol designed for penalty distribution",
+          "A type of computer code used for reward systems",
+          "Being very strict with an AI model during training",
           "Training a model through rewards and penalties"
         ],
         "answer": "Training a model through rewards and penalties",
@@ -18165,10 +18165,10 @@ export const certifications = [
         "id": "dp-900-q7",
         "question": "What is 'NoSQL'?",
         "options": [
-          "A database with no SQL",
-          "A financial report",
+          "A financial report with details on annual revenue",
           "A non-relational database for storing diverse data types",
-          "A type of code"
+          "A standard database with no SQL support at all",
+          "A type of computer code for data encryption"
         ],
         "answer": "A non-relational database for storing diverse data types",
         "category": "Domain Review",
@@ -18179,9 +18179,9 @@ export const certifications = [
         "id": "dp-900-q8",
         "question": "What is 'Data Governance'?",
         "options": [
-          "A government agency",
-          "A security guard",
-          "A set of laws",
+          "A government agency responsible for data protection",
+          "A security guard responsible for physical data safety",
+          "A set of laws and regulations regarding data privacy",
           "Managing the availability, usability, integrity, and security of data"
         ],
         "answer": "Managing the availability, usability, integrity, and security of data",
@@ -18193,10 +18193,10 @@ export const certifications = [
         "id": "dp-900-q9",
         "question": "What is a 'Data Scientist'?",
         "options": [
-          "A hardware engineer",
-          "A math teacher",
-          "A person who uses scientific methods and data to find insights",
-          "A website developer"
+          "A person who designs and builds computer hardware",
+          "A person who develops and maintains complex websites",
+          "A person who teaches advanced mathematics in a school",
+          "A person who uses scientific methods and data to find insights"
         ],
         "answer": "A person who uses scientific methods and data to find insights",
         "category": "Domain Review",
@@ -18207,9 +18207,9 @@ export const certifications = [
         "id": "dp-900-q10",
         "question": "What is 'Spark' (Apache Spark)?",
         "options": [
-          "A fire hazard",
-          "A simple app",
-          "A type of computer chip",
+          "A physical fire hazard in a data center environment",
+          "A simple mobile app used for tracking data usage",
+          "A type of computer chip designed for fast processing",
           "An open-source distributed processing system used for big data workloads"
         ],
         "answer": "An open-source distributed processing system used for big data workloads",
@@ -18221,9 +18221,9 @@ export const certifications = [
         "id": "dp-900-q11",
         "question": "What is 'Big Data Analytics'?",
         "options": [
-          "A software update",
-          "A type of cloud",
-          "A very large spreadsheet",
+          "A software update designed to improve system performance",
+          "A type of cloud service used for storing large files",
+          "A very large spreadsheet with millions of rows of data",
           "The process of examining large and varied data sets to find hidden patterns"
         ],
         "answer": "The process of examining large and varied data sets to find hidden patterns",
@@ -18235,9 +18235,9 @@ export const certifications = [
         "id": "dp-900-q12",
         "question": "What is 'Artificial Intelligence'?",
         "options": [
-          "A smart toaster",
-          "A virtual reality game",
-          "An advanced calculator",
+          "A smart toaster that can connect to the web",
+          "A virtual reality game with high graphics",
+          "An advanced calculator for complex math",
           "Simulation of human intelligence by machines"
         ],
         "answer": "Simulation of human intelligence by machines",
@@ -18250,9 +18250,9 @@ export const certifications = [
         "question": "What is 'Data Lake'?",
         "options": [
           "A centralized repository that allows you to store all your structured and unstructured data",
-          "A hardware guard",
-          "A lake filled with water",
-          "A type of storage"
+          "A hardware guard that protects the data lake server environment from physical access",
+          "A large natural lake filled with fresh or salt water for swimming and fishing",
+          "A type of physical storage device used for saving and managing large data archives"
         ],
         "answer": "A centralized repository that allows you to store all your structured and unstructured data",
         "category": "Domain Review",
@@ -18263,10 +18263,10 @@ export const certifications = [
         "id": "dp-900-q14",
         "question": "What is 'Generative AI'?",
         "options": [
-          "A simple app",
-          "A type of computer chip",
+          "A simple mobile app designed for AI content creation",
+          "A type of computer chip used for artificial intelligence",
           "AI that can create new content like text, images, or music",
-          "AI that generates power"
+          "AI that generates electrical power for a data center"
         ],
         "answer": "AI that can create new content like text, images, or music",
         "category": "Domain Review",
@@ -18277,9 +18277,9 @@ export const certifications = [
         "id": "dp-900-q15",
         "question": "What is 'Clustering' in ML?",
         "options": [
-          "A group of people",
-          "A hardware update",
-          "A type of database",
+          "A group of people standing close together",
+          "A hardware update for data clusters",
+          "A type of database for grouped data",
           "Grouping similar data points together"
         ],
         "answer": "Grouping similar data points together",
@@ -18291,10 +18291,10 @@ export const certifications = [
         "id": "dp-900-q16",
         "question": "What is 'Cloud Database'?",
         "options": [
-          "A database for everyone",
-          "A database on a USB",
           "A database service built and accessed through a cloud platform",
-          "A file in the cloud"
+          "A database stored on a physical USB flash drive",
+          "A database that is available for everyone to use",
+          "A simple text file stored in a cloud storage service"
         ],
         "answer": "A database service built and accessed through a cloud platform",
         "category": "Domain Review",
@@ -18305,9 +18305,9 @@ export const certifications = [
         "id": "dp-900-q17",
         "question": "What is 'Test Data'?",
         "options": [
-          "A network protocol",
-          "A type of code",
-          "A type of exam",
+          "A network protocol designed for data evaluation",
+          "A type of computer code used for model testing",
+          "A type of school exam or test for students",
           "The data used to evaluate the performance of an ML model"
         ],
         "answer": "The data used to evaluate the performance of an ML model",
@@ -18319,10 +18319,10 @@ export const certifications = [
         "id": "dp-900-q18",
         "question": "What is 'Primary Key' in a database?",
         "options": [
-          "A physical key",
-          "A secret password",
+          "A physical metal key used for opening a locked safe",
+          "A secret password used to access a secured database",
           "A unique identifier for each record in a table",
-          "The most important key"
+          "The most important key used to unlock a physical door"
         ],
         "answer": "A unique identifier for each record in a table",
         "category": "Domain Review",
@@ -18333,10 +18333,10 @@ export const certifications = [
         "id": "dp-900-q19",
         "question": "What is 'Explainable AI' (XAI)?",
         "options": [
-          "A book about AI",
-          "A software manual",
-          "AI systems that can explain their decisions and actions to humans",
-          "An AI that speaks"
+          "A book or novel about the future of artificial intelligence",
+          "A software manual explaining AI system operations",
+          "A type of AI system that speaks multiple languages",
+          "AI systems that can explain their decisions and actions to humans"
         ],
         "answer": "AI systems that can explain their decisions and actions to humans",
         "category": "Domain Review",
@@ -18347,12 +18347,12 @@ export const certifications = [
         "id": "dp-900-q20",
         "question": "What is 'ETL'?",
         "options": [
-          "Electronic Transfer Ledger",
-          "Email, Transfer, Link",
-          "Extra Tool Link",
-          "Extract, Transform, Load"
+          "Electronic Transfer Ledger (ETL)",
+          "Email, Transfer, Link (ETL)",
+          "Extra Tool Link (ETL)",
+          "Extract, Transform, Load (ETL)"
         ],
-        "answer": "Extract, Transform, Load",
+        "answer": "Extract, Transform, Load (ETL)",
         "category": "Domain Review",
         "explanation": "ETL is the process of moving data from source systems to a data warehouse.",
         "topic": "Data & AI Fundamentals"
@@ -18361,9 +18361,9 @@ export const certifications = [
         "id": "dp-900-q21",
         "question": "What is 'Predictive Analytics'?",
         "options": [
-          "A financial report",
-          "A type of database",
-          "Guessing the future",
+          "A financial report that lists all past company outcomes",
+          "A type of database optimized for historical predictive data",
+          "The act of guessing the future based on intuition alone",
           "Using data, statistics, and ML to identify the likelihood of future outcomes"
         ],
         "answer": "Using data, statistics, and ML to identify the likelihood of future outcomes",
@@ -18375,10 +18375,10 @@ export const certifications = [
         "id": "dp-900-q22",
         "question": "What is 'Regression' in ML?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "Going backwards",
-          "Predicting a continuous numerical value"
+          "A network protocol for continuous values",
+          "A type of computer code for numerical data",
+          "Predicting a continuous numerical value",
+          "The act of going backwards in an ML model"
         ],
         "answer": "Predicting a continuous numerical value",
         "category": "Domain Review",
@@ -18390,9 +18390,9 @@ export const certifications = [
         "question": "What is an 'Artificial Neural Network'?",
         "options": [
           "A computing system inspired by biological neural networks",
-          "A hardware guard",
-          "A robot's brain",
-          "A type of network cable"
+          "A hardware guard that protects neural data from theft",
+          "A physical brain inside a highly advanced robotic system",
+          "A type of high-speed network cable for data centers"
         ],
         "answer": "A computing system inspired by biological neural networks",
         "category": "Domain Review",
@@ -18403,9 +18403,9 @@ export const certifications = [
         "id": "dp-900-q24",
         "question": "What is 'Business Intelligence' (BI)?",
         "options": [
-          "A financial report",
-          "A type of cloud",
-          "Being very smart",
+          "A set of cognitive abilities used for general problem solving",
+          "A standard financial report generated at the end of the year",
+          "A type of cloud-based service used for general data storage",
           "Strategies and technologies used for data analysis of business info"
         ],
         "answer": "Strategies and technologies used for data analysis of business info",
@@ -18431,9 +18431,9 @@ export const certifications = [
         "id": "dp-900-q26",
         "question": "What is 'Unstructured Data'?",
         "options": [
-          "A financial report",
-          "A messy room",
-          "A type of code",
+          "A financial report with no clear structure or layout",
+          "A messy and unorganized room with many items",
+          "A type of computer code used for unorganized data",
           "Data that does not have a predefined model or organization"
         ],
         "answer": "Data that does not have a predefined model or organization",
@@ -18445,10 +18445,10 @@ export const certifications = [
         "id": "dp-900-q27",
         "question": "What is 'Deep Learning'?",
         "options": [
-          "A hardware update",
+          "A hardware update designed for deep computational tasks",
           "A subset of ML based on artificial neural networks",
-          "A type of database",
-          "Studying very hard"
+          "A type of database optimized for storing neural data",
+          "The act of studying a subject very hard for an exam"
         ],
         "answer": "A subset of ML based on artificial neural networks",
         "category": "Domain Review",
@@ -18459,9 +18459,9 @@ export const certifications = [
         "id": "dp-900-q28",
         "question": "What is 'Training Data'?",
         "options": [
-          "A gym for computers",
-          "A network protocol",
-          "A type of code",
+          "A gym for computers to get faster",
+          "A network protocol for data sets",
+          "A type of code for training data",
           "The data used to train an ML model"
         ],
         "answer": "The data used to train an ML model",
@@ -18473,10 +18473,10 @@ export const certifications = [
         "id": "dp-900-q29",
         "question": "What is 'Data Warehouse'?",
         "options": [
-          "A building for servers",
-          "A hardware guard",
+          "A hardware guard that protects the server room",
+          "A large physical building used for housing servers",
           "A system used for reporting and data analysis",
-          "A type of storage"
+          "A type of storage device used for data backups"
         ],
         "answer": "A system used for reporting and data analysis",
         "category": "Domain Review",
@@ -18487,10 +18487,10 @@ export const certifications = [
         "id": "dp-900-q30",
         "question": "What is 'Natural Language Processing' (NLP)?",
         "options": [
-          "A network protocol",
-          "A type of code",
-          "Speaking very fast",
-          "The ability of computers to understand and process human language"
+          "A network protocol designed for natural language data",
+          "A type of computer code used for natural speech patterns",
+          "The ability of computers to understand and process human language",
+          "The act of speaking very fast to improve data processing"
         ],
         "answer": "The ability of computers to understand and process human language",
         "category": "Domain Review",
@@ -18501,10 +18501,10 @@ export const certifications = [
         "id": "dp-900-q31",
         "question": "What is 'Data Mining'?",
         "options": [
-          "A software update",
-          "A type of database",
-          "Digging for gold",
-          "Discovering patterns and knowledge from large amounts of data"
+          "A software update designed to fix minor system bugs",
+          "A type of database used for storing patterns of data",
+          "Discovering patterns and knowledge from large amounts of data",
+          "The act of digging for gold in a natural gold mine"
         ],
         "answer": "Discovering patterns and knowledge from large amounts of data",
         "category": "Domain Review",
@@ -18515,10 +18515,10 @@ export const certifications = [
         "id": "dp-900-q32",
         "question": "What is 'Data Integration'?",
         "options": [
-          "A network protocol",
-          "A type of code",
+          "A network protocol designed for unified data views",
+          "A type of computer code used for data integration",
           "Combining data from different sources into a single, unified view",
-          "Putting things together"
+          "The simple act of putting different things together"
         ],
         "answer": "Combining data from different sources into a single, unified view",
         "category": "Domain Review",
@@ -18530,9 +18530,9 @@ export const certifications = [
         "question": "What is 'Foreign Key' in a database?",
         "options": [
           "A field in one table that uniquely identifies a row of another table",
-          "A hardware standard",
-          "A key from another country",
-          "A type of code"
+          "A hardware standard for connecting database servers",
+          "A physical key from another country or organization",
+          "A type of computer code used for database encryption"
         ],
         "answer": "A field in one table that uniquely identifies a row of another table",
         "category": "Domain Review",
@@ -18543,9 +18543,9 @@ export const certifications = [
         "id": "dp-900-q34",
         "question": "What is 'Overfitting'?",
         "options": [
-          "A hardware failure",
-          "A software bug",
-          "Wearing small clothes",
+          "A hardware failure that occurs due to overheating components",
+          "A standard software bug that causes an application to crash",
+          "The act of wearing small and tight clothes during a workout",
           "When a model learns the training data too well but fails on new data"
         ],
         "answer": "When a model learns the training data too well but fails on new data",
@@ -18557,9 +18557,9 @@ export const certifications = [
         "id": "dp-900-q35",
         "question": "What is 'Structured Data'?",
         "options": [
-          "A financial report",
-          "A type of code",
-          "A well-built house",
+          "A financial report containing company performance data",
+          "A type of computer code used for data modeling",
+          "A well-built and sturdy house with many rooms",
           "Data that adheres to a predefined schema or model"
         ],
         "answer": "Data that adheres to a predefined schema or model",
@@ -18572,9 +18572,9 @@ export const certifications = [
         "question": "What is 'Database Index'?",
         "options": [
           "A data structure that improves the speed of data retrieval",
-          "A list of files",
-          "A software manual",
-          "A type of storage"
+          "A list of files stored in a database directory",
+          "A software manual that describes database structures",
+          "A type of storage device used for indexing data"
         ],
         "answer": "A data structure that improves the speed of data retrieval",
         "category": "Domain Review",
@@ -18585,10 +18585,10 @@ export const certifications = [
         "id": "dp-900-q37",
         "question": "What is an 'Algorithm'?",
         "options": [
-          "A computer game",
-          "A hardware standard",
+          "A computer game designed for teaching mathematical concepts",
+          "A hardware standard for maintaining consistency in calculations",
           "A set of rules or instructions to be followed in calculations",
-          "A type of music"
+          "A unique type of music or rhythmic composition for listening"
         ],
         "answer": "A set of rules or instructions to be followed in calculations",
         "category": "Domain Review",
@@ -18599,10 +18599,10 @@ export const certifications = [
         "id": "dp-900-q38",
         "question": "What is 'Normalizaton' in a database?",
         "options": [
-          "A hardware standard",
-          "A type of code",
-          "Being very normal",
-          "Organizing data to reduce redundancy and improve integrity"
+          "A hardware standard for maintaining data consistency",
+          "A type of computer code used for data normalization",
+          "Organizing data to reduce redundancy and improve integrity",
+          "The state of being very normal in a database environment"
         ],
         "answer": "Organizing data to reduce redundancy and improve integrity",
         "category": "Domain Review",
@@ -18613,9 +18613,9 @@ export const certifications = [
         "id": "dp-900-q39",
         "question": "What is 'Database Management System' (DBMS)?",
         "options": [
-          "A phone book",
-          "A software manual",
-          "A type of storage",
+          "A physical phone book containing names and numbers",
+          "A software manual that explains how to use a database",
+          "A type of storage device used for backing up data",
           "Software that interacts with end users, applications, and the database"
         ],
         "answer": "Software that interacts with end users, applications, and the database",
@@ -18627,10 +18627,10 @@ export const certifications = [
         "id": "dp-900-q40",
         "question": "What is 'Data Mart'?",
         "options": [
+          "A physical store or marketplace for buying and selling data",
           "A small-scale data warehouse focused on a single functional area",
-          "A software update",
-          "A store for data",
-          "A type of storage"
+          "A software update designed for data mart management",
+          "A type of storage device used for departmental data"
         ],
         "answer": "A small-scale data warehouse focused on a single functional area",
         "category": "Domain Review",
@@ -18641,9 +18641,9 @@ export const certifications = [
         "id": "dp-900-q41",
         "question": "What is 'Supervised Learning'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "Having a teacher",
+          "A network protocol for models",
+          "A type of computer code for data",
+          "Learning a subject with a teacher",
           "Training a model on labeled data"
         ],
         "answer": "Training a model on labeled data",
@@ -18656,9 +18656,9 @@ export const certifications = [
         "question": "What is 'Data Visualization'?",
         "options": [
           "A graphical representation of information and data",
-          "A network cable",
-          "A type of monitor",
-          "Looking at data"
+          "A network cable used for transmitting large data sets",
+          "A type of high-resolution monitor for displaying data",
+          "The act of looking at raw data in a text-based format"
         ],
         "answer": "A graphical representation of information and data",
         "category": "Domain Review",
@@ -18669,9 +18669,9 @@ export const certifications = [
         "id": "dp-900-q43",
         "question": "What is 'Hadoop'?",
         "options": [
-          "A hardware manufacturer",
-          "A type of computer",
-          "A website developer",
+          "A hardware manufacturer that produces storage devices",
+          "A type of computer designed for high-performance computing",
+          "A website developer who specializes in big data applications",
           "An open-source framework for distributed storage and processing of big data"
         ],
         "answer": "An open-source framework for distributed storage and processing of big data",
@@ -18683,9 +18683,9 @@ export const certifications = [
         "id": "dp-900-q44",
         "question": "What is 'Bias' in AI?",
         "options": [
-          "A network protocol",
-          "A strong opinion",
-          "A type of computer code",
+          "A network protocol designed for transmitting biased data sets",
+          "A strong personal opinion about a specific subject or topic",
+          "A type of computer code used for model weight adjustments",
           "When a model produces systematically prejudiced results"
         ],
         "answer": "When a model produces systematically prejudiced results",
@@ -18697,10 +18697,10 @@ export const certifications = [
         "id": "dp-900-q45",
         "question": "What is 'Denormalization'?",
         "options": [
-          "A hardware standard",
-          "A type of code",
+          "A hardware standard for maintaining equipment consistency",
+          "A type of computer code used for data entry procedures",
           "Adding redundant data to improve read performance",
-          "Being very strange"
+          "The state of being very strange in a professional environment"
         ],
         "answer": "Adding redundant data to improve read performance",
         "category": "Domain Review",
@@ -18712,9 +18712,9 @@ export const certifications = [
         "question": "What is 'Model' in ML?",
         "options": [
           "A mathematical representation of a real-world process",
-          "A software manual",
-          "A tiny car",
-          "A type of clothing"
+          "A software manual that explains how an ML model works",
+          "A specific type of clothing worn by a person",
+          "A tiny scale model of a car or other vehicle"
         ],
         "answer": "A mathematical representation of a real-world process",
         "category": "Domain Review",
@@ -18725,12 +18725,12 @@ export const certifications = [
         "id": "dp-900-q47",
         "question": "What is 'Machine Learning'?",
         "options": [
-          "A robot that thinks like a human",
-          "A very large database",
-          "Algorithms that learn patterns from data",
-          "An automated car"
+          "A robot that thinks like a human being",
+          "A very large database stored on a server",
+          "Algorithms that learn patterns from data sets",
+          "An automated car with no human driver"
         ],
-        "answer": "Algorithms that learn patterns from data",
+        "answer": "Algorithms that learn patterns from data sets",
         "category": "Domain Review",
         "explanation": "ML uses statistical techniques to give computers the ability to 'learn' from data.",
         "topic": "Data & AI Fundamentals"
@@ -18739,9 +18739,9 @@ export const certifications = [
         "id": "dp-900-q48",
         "question": "What is 'Underfitting'?",
         "options": [
-          "A hardware failure",
-          "A software bug",
-          "Wearing large clothes",
+          "A hardware failure that occurs due to overheating components",
+          "A standard software bug that causes an application to crash",
+          "The act of wearing large and baggy clothes during a workout",
           "When a model is too simple to learn the patterns in data"
         ],
         "answer": "When a model is too simple to learn the patterns in data",
@@ -18753,10 +18753,10 @@ export const certifications = [
         "id": "dp-900-q49",
         "question": "What is 'Computer Vision'?",
         "options": [
-          "A hardware guard",
-          "A type of monitor",
+          "A hardware guard that protects the computer's optical sensors",
+          "A type of monitor that can see the user in front of it",
           "The ability of computers to gain understanding from digital images or videos",
-          "Wearing glasses"
+          "The act of wearing glasses to improve human vision of screens"
         ],
         "answer": "The ability of computers to gain understanding from digital images or videos",
         "category": "Domain Review",
@@ -18767,9 +18767,9 @@ export const certifications = [
         "id": "dp-900-q50",
         "question": "What is a 'Relational Database'?",
         "options": [
-          "A folder of images",
-          "A list of contacts",
-          "A single large text file",
+          "A folder of images stored on a local computer",
+          "A list of contacts stored in a mobile phone",
+          "A single large text file with unstructured data",
           "Data organized in tables with rows and columns"
         ],
         "answer": "Data organized in tables with rows and columns",
@@ -19001,9 +19001,9 @@ export const certifications = [
         "id": "ai-900-q1",
         "question": "What is 'Clustering' in ML?",
         "options": [
-          "A group of people",
-          "A hardware update",
-          "A type of database",
+          "A group of people standing close together",
+          "A hardware update for data clusters",
+          "A type of database for grouped data",
           "Grouping similar data points together"
         ],
         "answer": "Grouping similar data points together",
@@ -19015,10 +19015,10 @@ export const certifications = [
         "id": "ai-900-q2",
         "question": "What is 'Regression' in ML?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "Going backwards",
-          "Predicting a continuous numerical value"
+          "A network protocol for continuous values",
+          "A type of computer code for numerical data",
+          "Predicting a continuous numerical value",
+          "The act of going backwards in an ML model"
         ],
         "answer": "Predicting a continuous numerical value",
         "category": "Domain Review",
@@ -19029,10 +19029,10 @@ export const certifications = [
         "id": "ai-900-q3",
         "question": "What is 'Generative AI'?",
         "options": [
-          "A simple app",
-          "A type of computer chip",
+          "A simple mobile app designed for AI content creation",
+          "A type of computer chip used for artificial intelligence",
           "AI that can create new content like text, images, or music",
-          "AI that generates power"
+          "AI that generates electrical power for a data center"
         ],
         "answer": "AI that can create new content like text, images, or music",
         "category": "Domain Review",
@@ -19043,10 +19043,10 @@ export const certifications = [
         "id": "ai-900-q4",
         "question": "What is 'Data Mining'?",
         "options": [
-          "A software update",
-          "A type of database",
-          "Digging for gold",
-          "Discovering patterns and knowledge from large amounts of data"
+          "A software update designed to fix minor system bugs",
+          "A type of database used for storing patterns of data",
+          "Discovering patterns and knowledge from large amounts of data",
+          "The act of digging for gold in a natural gold mine"
         ],
         "answer": "Discovering patterns and knowledge from large amounts of data",
         "category": "Domain Review",
@@ -19057,10 +19057,10 @@ export const certifications = [
         "id": "ai-900-q5",
         "question": "What is 'Deep Learning'?",
         "options": [
-          "A hardware update",
+          "A hardware update designed for deep computational tasks",
           "A subset of ML based on artificial neural networks",
-          "A type of database",
-          "Studying very hard"
+          "A type of database optimized for storing neural data",
+          "The act of studying a subject very hard for an exam"
         ],
         "answer": "A subset of ML based on artificial neural networks",
         "category": "Domain Review",
@@ -19071,10 +19071,10 @@ export const certifications = [
         "id": "ai-900-q6",
         "question": "What is 'NoSQL'?",
         "options": [
-          "A database with no SQL",
-          "A financial report",
+          "A financial report with details on annual revenue",
           "A non-relational database for storing diverse data types",
-          "A type of code"
+          "A standard database with no SQL support at all",
+          "A type of computer code for data encryption"
         ],
         "answer": "A non-relational database for storing diverse data types",
         "category": "Domain Review",
@@ -19085,9 +19085,9 @@ export const certifications = [
         "id": "ai-900-q7",
         "question": "What is 'Predictive Analytics'?",
         "options": [
-          "A financial report",
-          "A type of database",
-          "Guessing the future",
+          "A financial report that lists all past company outcomes",
+          "A type of database optimized for historical predictive data",
+          "The act of guessing the future based on intuition alone",
           "Using data, statistics, and ML to identify the likelihood of future outcomes"
         ],
         "answer": "Using data, statistics, and ML to identify the likelihood of future outcomes",
@@ -19099,12 +19099,12 @@ export const certifications = [
         "id": "ai-900-q8",
         "question": "What is 'ETL'?",
         "options": [
-          "Electronic Transfer Ledger",
-          "Email, Transfer, Link",
-          "Extra Tool Link",
-          "Extract, Transform, Load"
+          "Electronic Transfer Ledger (ETL)",
+          "Email, Transfer, Link (ETL)",
+          "Extra Tool Link (ETL)",
+          "Extract, Transform, Load (ETL)"
         ],
-        "answer": "Extract, Transform, Load",
+        "answer": "Extract, Transform, Load (ETL)",
         "category": "Domain Review",
         "explanation": "ETL is the process of moving data from source systems to a data warehouse.",
         "topic": "Data & AI Fundamentals"
@@ -19113,9 +19113,9 @@ export const certifications = [
         "id": "ai-900-q9",
         "question": "What is 'Test Data'?",
         "options": [
-          "A network protocol",
-          "A type of code",
-          "A type of exam",
+          "A network protocol designed for data evaluation",
+          "A type of computer code used for model testing",
+          "A type of school exam or test for students",
           "The data used to evaluate the performance of an ML model"
         ],
         "answer": "The data used to evaluate the performance of an ML model",
@@ -19127,10 +19127,10 @@ export const certifications = [
         "id": "ai-900-q10",
         "question": "What is 'Data Warehouse'?",
         "options": [
-          "A building for servers",
-          "A hardware guard",
+          "A hardware guard that protects the server room",
+          "A large physical building used for housing servers",
           "A system used for reporting and data analysis",
-          "A type of storage"
+          "A type of storage device used for data backups"
         ],
         "answer": "A system used for reporting and data analysis",
         "category": "Domain Review",
@@ -19141,9 +19141,9 @@ export const certifications = [
         "id": "ai-900-q11",
         "question": "What is 'Bias' in AI?",
         "options": [
-          "A network protocol",
-          "A strong opinion",
-          "A type of computer code",
+          "A network protocol designed for transmitting biased data sets",
+          "A strong personal opinion about a specific subject or topic",
+          "A type of computer code used for model weight adjustments",
           "When a model produces systematically prejudiced results"
         ],
         "answer": "When a model produces systematically prejudiced results",
@@ -19155,9 +19155,9 @@ export const certifications = [
         "id": "ai-900-q12",
         "question": "What is 'Semi-Structured Data'?",
         "options": [
-          "A financial report",
-          "A partially built house",
-          "A type of code",
+          "A financial report that is only partially completed by the user",
+          "A partially built house with some completed rooms but no solid foundation",
+          "A type of computer code used for semi-organized data sets and files",
           "Data that does not reside in a relational database but has organizational properties"
         ],
         "answer": "Data that does not reside in a relational database but has organizational properties",
@@ -19169,9 +19169,9 @@ export const certifications = [
         "id": "ai-900-q13",
         "question": "What is 'Unstructured Data'?",
         "options": [
-          "A financial report",
-          "A messy room",
-          "A type of code",
+          "A financial report with no clear structure or layout",
+          "A messy and unorganized room with many items",
+          "A type of computer code used for unorganized data",
           "Data that does not have a predefined model or organization"
         ],
         "answer": "Data that does not have a predefined model or organization",
@@ -19183,9 +19183,9 @@ export const certifications = [
         "id": "ai-900-q14",
         "question": "What is 'Big Data Analytics'?",
         "options": [
-          "A software update",
-          "A type of cloud",
-          "A very large spreadsheet",
+          "A software update designed to improve system performance",
+          "A type of cloud service used for storing large files",
+          "A very large spreadsheet with millions of rows of data",
           "The process of examining large and varied data sets to find hidden patterns"
         ],
         "answer": "The process of examining large and varied data sets to find hidden patterns",
@@ -19198,9 +19198,9 @@ export const certifications = [
         "question": "What is 'Model' in ML?",
         "options": [
           "A mathematical representation of a real-world process",
-          "A software manual",
-          "A tiny car",
-          "A type of clothing"
+          "A software manual that explains how an ML model works",
+          "A specific type of clothing worn by a person",
+          "A tiny scale model of a car or other vehicle"
         ],
         "answer": "A mathematical representation of a real-world process",
         "category": "Domain Review",
@@ -19212,9 +19212,9 @@ export const certifications = [
         "question": "What is 'Foreign Key' in a database?",
         "options": [
           "A field in one table that uniquely identifies a row of another table",
-          "A hardware standard",
-          "A key from another country",
-          "A type of code"
+          "A hardware standard for connecting database servers",
+          "A physical key from another country or organization",
+          "A type of computer code used for database encryption"
         ],
         "answer": "A field in one table that uniquely identifies a row of another table",
         "category": "Domain Review",
@@ -19225,9 +19225,9 @@ export const certifications = [
         "id": "ai-900-q17",
         "question": "What is 'Artificial Intelligence'?",
         "options": [
-          "A smart toaster",
-          "A virtual reality game",
-          "An advanced calculator",
+          "A smart toaster that can connect to the web",
+          "A virtual reality game with high graphics",
+          "An advanced calculator for complex math",
           "Simulation of human intelligence by machines"
         ],
         "answer": "Simulation of human intelligence by machines",
@@ -19239,10 +19239,10 @@ export const certifications = [
         "id": "ai-900-q18",
         "question": "What is 'Data Cleansing'?",
         "options": [
-          "A software manual",
-          "A type of code",
+          "A software manual that explains how to clean data",
+          "A type of computer code used for cleaning data",
           "Identifying and correcting errors or inconsistencies in data",
-          "Washing a computer"
+          "The act of physically washing a computer or server"
         ],
         "answer": "Identifying and correcting errors or inconsistencies in data",
         "category": "Domain Review",
@@ -19253,9 +19253,9 @@ export const certifications = [
         "id": "ai-900-q19",
         "question": "What is 'Training Data'?",
         "options": [
-          "A gym for computers",
-          "A network protocol",
-          "A type of code",
+          "A gym for computers to get faster",
+          "A network protocol for data sets",
+          "A type of code for training data",
           "The data used to train an ML model"
         ],
         "answer": "The data used to train an ML model",
@@ -19267,9 +19267,9 @@ export const certifications = [
         "id": "ai-900-q20",
         "question": "What is 'Business Intelligence' (BI)?",
         "options": [
-          "A financial report",
-          "A type of cloud",
-          "Being very smart",
+          "A set of cognitive abilities used for general problem solving",
+          "A standard financial report generated at the end of the year",
+          "A type of cloud-based service used for general data storage",
           "Strategies and technologies used for data analysis of business info"
         ],
         "answer": "Strategies and technologies used for data analysis of business info",
@@ -19281,10 +19281,10 @@ export const certifications = [
         "id": "ai-900-q21",
         "question": "What is 'Data Mart'?",
         "options": [
+          "A physical store or marketplace for buying and selling data",
           "A small-scale data warehouse focused on a single functional area",
-          "A software update",
-          "A store for data",
-          "A type of storage"
+          "A software update designed for data mart management",
+          "A type of storage device used for departmental data"
         ],
         "answer": "A small-scale data warehouse focused on a single functional area",
         "category": "Domain Review",
@@ -19295,12 +19295,12 @@ export const certifications = [
         "id": "ai-900-q22",
         "question": "What is 'Machine Learning'?",
         "options": [
-          "A robot that thinks like a human",
-          "A very large database",
-          "Algorithms that learn patterns from data",
-          "An automated car"
+          "A robot that thinks like a human being",
+          "A very large database stored on a server",
+          "Algorithms that learn patterns from data sets",
+          "An automated car with no human driver"
         ],
-        "answer": "Algorithms that learn patterns from data",
+        "answer": "Algorithms that learn patterns from data sets",
         "category": "Domain Review",
         "explanation": "ML uses statistical techniques to give computers the ability to 'learn' from data.",
         "topic": "Data & AI Fundamentals"
@@ -19310,9 +19310,9 @@ export const certifications = [
         "question": "What is 'Database Index'?",
         "options": [
           "A data structure that improves the speed of data retrieval",
-          "A list of files",
-          "A software manual",
-          "A type of storage"
+          "A list of files stored in a database directory",
+          "A software manual that describes database structures",
+          "A type of storage device used for indexing data"
         ],
         "answer": "A data structure that improves the speed of data retrieval",
         "category": "Domain Review",
@@ -19323,9 +19323,9 @@ export const certifications = [
         "id": "ai-900-q24",
         "question": "What is 'Big Data'?",
         "options": [
-          "A high-resolution image",
-          "A long list of names",
-          "A very heavy hard drive",
+          "A high-resolution image with many pixels",
+          "A long list of names and contact addresses",
+          "A very heavy and large computer hard drive",
           "Extremely large and complex datasets"
         ],
         "answer": "Extremely large and complex datasets",
@@ -19351,9 +19351,9 @@ export const certifications = [
         "id": "ai-900-q26",
         "question": "What is 'Data Governance'?",
         "options": [
-          "A government agency",
-          "A security guard",
-          "A set of laws",
+          "A government agency responsible for data protection",
+          "A security guard responsible for physical data safety",
+          "A set of laws and regulations regarding data privacy",
           "Managing the availability, usability, integrity, and security of data"
         ],
         "answer": "Managing the availability, usability, integrity, and security of data",
@@ -19366,9 +19366,9 @@ export const certifications = [
         "question": "What is 'Data Lake'?",
         "options": [
           "A centralized repository that allows you to store all your structured and unstructured data",
-          "A hardware guard",
-          "A lake filled with water",
-          "A type of storage"
+          "A hardware guard that protects the data lake server environment from physical access",
+          "A large natural lake filled with fresh or salt water for swimming and fishing",
+          "A type of physical storage device used for saving and managing large data archives"
         ],
         "answer": "A centralized repository that allows you to store all your structured and unstructured data",
         "category": "Domain Review",
@@ -19379,9 +19379,9 @@ export const certifications = [
         "id": "ai-900-q28",
         "question": "What is 'Database Management System' (DBMS)?",
         "options": [
-          "A phone book",
-          "A software manual",
-          "A type of storage",
+          "A physical phone book containing names and numbers",
+          "A software manual that explains how to use a database",
+          "A type of storage device used for backing up data",
           "Software that interacts with end users, applications, and the database"
         ],
         "answer": "Software that interacts with end users, applications, and the database",
@@ -19393,9 +19393,9 @@ export const certifications = [
         "id": "ai-900-q29",
         "question": "What is 'Reinforcement Learning'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "Being very strict",
+          "A network protocol designed for penalty distribution",
+          "A type of computer code used for reward systems",
+          "Being very strict with an AI model during training",
           "Training a model through rewards and penalties"
         ],
         "answer": "Training a model through rewards and penalties",
@@ -19407,10 +19407,10 @@ export const certifications = [
         "id": "ai-900-q30",
         "question": "What is 'Denormalization'?",
         "options": [
-          "A hardware standard",
-          "A type of code",
+          "A hardware standard for maintaining equipment consistency",
+          "A type of computer code used for data entry procedures",
           "Adding redundant data to improve read performance",
-          "Being very strange"
+          "The state of being very strange in a professional environment"
         ],
         "answer": "Adding redundant data to improve read performance",
         "category": "Domain Review",
@@ -19421,10 +19421,10 @@ export const certifications = [
         "id": "ai-900-q31",
         "question": "What is 'Natural Language Processing' (NLP)?",
         "options": [
-          "A network protocol",
-          "A type of code",
-          "Speaking very fast",
-          "The ability of computers to understand and process human language"
+          "A network protocol designed for natural language data",
+          "A type of computer code used for natural speech patterns",
+          "The ability of computers to understand and process human language",
+          "The act of speaking very fast to improve data processing"
         ],
         "answer": "The ability of computers to understand and process human language",
         "category": "Domain Review",
@@ -19435,9 +19435,9 @@ export const certifications = [
         "id": "ai-900-q32",
         "question": "What is 'Unsupervised Learning'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "No teacher",
+          "A network protocol designed for pattern recognition",
+          "A type of computer code used for hidden patterns",
+          "Learning a subject without any teacher or instructor",
           "Training a model on unlabeled data to find hidden patterns"
         ],
         "answer": "Training a model on unlabeled data to find hidden patterns",
@@ -19449,9 +19449,9 @@ export const certifications = [
         "id": "ai-900-q33",
         "question": "What is 'Supervised Learning'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "Having a teacher",
+          "A network protocol for models",
+          "A type of computer code for data",
+          "Learning a subject with a teacher",
           "Training a model on labeled data"
         ],
         "answer": "Training a model on labeled data",
@@ -19463,10 +19463,10 @@ export const certifications = [
         "id": "ai-900-q34",
         "question": "What is an 'Algorithm'?",
         "options": [
-          "A computer game",
-          "A hardware standard",
+          "A computer game designed for teaching mathematical concepts",
+          "A hardware standard for maintaining consistency in calculations",
           "A set of rules or instructions to be followed in calculations",
-          "A type of music"
+          "A unique type of music or rhythmic composition for listening"
         ],
         "answer": "A set of rules or instructions to be followed in calculations",
         "category": "Domain Review",
@@ -19477,10 +19477,10 @@ export const certifications = [
         "id": "ai-900-q35",
         "question": "What is 'Data Integration'?",
         "options": [
-          "A network protocol",
-          "A type of code",
+          "A network protocol designed for unified data views",
+          "A type of computer code used for data integration",
           "Combining data from different sources into a single, unified view",
-          "Putting things together"
+          "The simple act of putting different things together"
         ],
         "answer": "Combining data from different sources into a single, unified view",
         "category": "Domain Review",
@@ -19491,10 +19491,10 @@ export const certifications = [
         "id": "ai-900-q36",
         "question": "What is 'Primary Key' in a database?",
         "options": [
-          "A physical key",
-          "A secret password",
+          "A physical metal key used for opening a locked safe",
+          "A secret password used to access a secured database",
           "A unique identifier for each record in a table",
-          "The most important key"
+          "The most important key used to unlock a physical door"
         ],
         "answer": "A unique identifier for each record in a table",
         "category": "Domain Review",
@@ -19505,10 +19505,10 @@ export const certifications = [
         "id": "ai-900-q37",
         "question": "What is 'Cloud Database'?",
         "options": [
-          "A database for everyone",
-          "A database on a USB",
           "A database service built and accessed through a cloud platform",
-          "A file in the cloud"
+          "A database stored on a physical USB flash drive",
+          "A database that is available for everyone to use",
+          "A simple text file stored in a cloud storage service"
         ],
         "answer": "A database service built and accessed through a cloud platform",
         "category": "Domain Review",
@@ -19519,9 +19519,9 @@ export const certifications = [
         "id": "ai-900-q38",
         "question": "What is 'Hadoop'?",
         "options": [
-          "A hardware manufacturer",
-          "A type of computer",
-          "A website developer",
+          "A hardware manufacturer that produces storage devices",
+          "A type of computer designed for high-performance computing",
+          "A website developer who specializes in big data applications",
           "An open-source framework for distributed storage and processing of big data"
         ],
         "answer": "An open-source framework for distributed storage and processing of big data",
@@ -19534,9 +19534,9 @@ export const certifications = [
         "question": "What is 'Data Visualization'?",
         "options": [
           "A graphical representation of information and data",
-          "A network cable",
-          "A type of monitor",
-          "Looking at data"
+          "A network cable used for transmitting large data sets",
+          "A type of high-resolution monitor for displaying data",
+          "The act of looking at raw data in a text-based format"
         ],
         "answer": "A graphical representation of information and data",
         "category": "Domain Review",
@@ -19547,9 +19547,9 @@ export const certifications = [
         "id": "ai-900-q40",
         "question": "What is 'Structured Data'?",
         "options": [
-          "A financial report",
-          "A type of code",
-          "A well-built house",
+          "A financial report containing company performance data",
+          "A type of computer code used for data modeling",
+          "A well-built and sturdy house with many rooms",
           "Data that adheres to a predefined schema or model"
         ],
         "answer": "Data that adheres to a predefined schema or model",
@@ -19561,10 +19561,10 @@ export const certifications = [
         "id": "ai-900-q41",
         "question": "What is 'Computer Vision'?",
         "options": [
-          "A hardware guard",
-          "A type of monitor",
+          "A hardware guard that protects the computer's optical sensors",
+          "A type of monitor that can see the user in front of it",
           "The ability of computers to gain understanding from digital images or videos",
-          "Wearing glasses"
+          "The act of wearing glasses to improve human vision of screens"
         ],
         "answer": "The ability of computers to gain understanding from digital images or videos",
         "category": "Domain Review",
@@ -19576,9 +19576,9 @@ export const certifications = [
         "question": "What is an 'Artificial Neural Network'?",
         "options": [
           "A computing system inspired by biological neural networks",
-          "A hardware guard",
-          "A robot's brain",
-          "A type of network cable"
+          "A hardware guard that protects neural data from theft",
+          "A physical brain inside a highly advanced robotic system",
+          "A type of high-speed network cable for data centers"
         ],
         "answer": "A computing system inspired by biological neural networks",
         "category": "Domain Review",
@@ -19589,10 +19589,10 @@ export const certifications = [
         "id": "ai-900-q43",
         "question": "What is 'Classification' in ML?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
+          "A network protocol for discrete labels",
+          "A type of computer code for labeled data",
           "Predicting a discrete label or category",
-          "Sorting things"
+          "The act of sorting things in a database"
         ],
         "answer": "Predicting a discrete label or category",
         "category": "Domain Review",
@@ -19603,10 +19603,10 @@ export const certifications = [
         "id": "ai-900-q44",
         "question": "What is a 'Data Scientist'?",
         "options": [
-          "A hardware engineer",
-          "A math teacher",
-          "A person who uses scientific methods and data to find insights",
-          "A website developer"
+          "A person who designs and builds computer hardware",
+          "A person who develops and maintains complex websites",
+          "A person who teaches advanced mathematics in a school",
+          "A person who uses scientific methods and data to find insights"
         ],
         "answer": "A person who uses scientific methods and data to find insights",
         "category": "Domain Review",
@@ -19617,10 +19617,10 @@ export const certifications = [
         "id": "ai-900-q45",
         "question": "What is 'Explainable AI' (XAI)?",
         "options": [
-          "A book about AI",
-          "A software manual",
-          "AI systems that can explain their decisions and actions to humans",
-          "An AI that speaks"
+          "A book or novel about the future of artificial intelligence",
+          "A software manual explaining AI system operations",
+          "A type of AI system that speaks multiple languages",
+          "AI systems that can explain their decisions and actions to humans"
         ],
         "answer": "AI systems that can explain their decisions and actions to humans",
         "category": "Domain Review",
@@ -19631,9 +19631,9 @@ export const certifications = [
         "id": "ai-900-q46",
         "question": "What is a 'Relational Database'?",
         "options": [
-          "A folder of images",
-          "A list of contacts",
-          "A single large text file",
+          "A folder of images stored on a local computer",
+          "A list of contacts stored in a mobile phone",
+          "A single large text file with unstructured data",
           "Data organized in tables with rows and columns"
         ],
         "answer": "Data organized in tables with rows and columns",
@@ -19645,9 +19645,9 @@ export const certifications = [
         "id": "ai-900-q47",
         "question": "What is 'Spark' (Apache Spark)?",
         "options": [
-          "A fire hazard",
-          "A simple app",
-          "A type of computer chip",
+          "A physical fire hazard in a data center environment",
+          "A simple mobile app used for tracking data usage",
+          "A type of computer chip designed for fast processing",
           "An open-source distributed processing system used for big data workloads"
         ],
         "answer": "An open-source distributed processing system used for big data workloads",
@@ -19659,9 +19659,9 @@ export const certifications = [
         "id": "ai-900-q48",
         "question": "What is 'Overfitting'?",
         "options": [
-          "A hardware failure",
-          "A software bug",
-          "Wearing small clothes",
+          "A hardware failure that occurs due to overheating components",
+          "A standard software bug that causes an application to crash",
+          "The act of wearing small and tight clothes during a workout",
           "When a model learns the training data too well but fails on new data"
         ],
         "answer": "When a model learns the training data too well but fails on new data",
@@ -19673,9 +19673,9 @@ export const certifications = [
         "id": "ai-900-q49",
         "question": "What is 'Underfitting'?",
         "options": [
-          "A hardware failure",
-          "A software bug",
-          "Wearing large clothes",
+          "A hardware failure that occurs due to overheating components",
+          "A standard software bug that causes an application to crash",
+          "The act of wearing large and baggy clothes during a workout",
           "When a model is too simple to learn the patterns in data"
         ],
         "answer": "When a model is too simple to learn the patterns in data",
@@ -19687,10 +19687,10 @@ export const certifications = [
         "id": "ai-900-q50",
         "question": "What is 'Normalizaton' in a database?",
         "options": [
-          "A hardware standard",
-          "A type of code",
-          "Being very normal",
-          "Organizing data to reduce redundancy and improve integrity"
+          "A hardware standard for maintaining data consistency",
+          "A type of computer code used for data normalization",
+          "Organizing data to reduce redundancy and improve integrity",
+          "The state of being very normal in a database environment"
         ],
         "answer": "Organizing data to reduce redundancy and improve integrity",
         "category": "Domain Review",
@@ -19921,9 +19921,9 @@ export const certifications = [
         "id": "pl-900-q1",
         "question": "What is 'Business Intelligence' (BI)?",
         "options": [
-          "A financial report",
-          "A type of cloud",
-          "Being very smart",
+          "A set of cognitive abilities used for general problem solving",
+          "A standard financial report generated at the end of the year",
+          "A type of cloud-based service used for general data storage",
           "Strategies and technologies used for data analysis of business info"
         ],
         "answer": "Strategies and technologies used for data analysis of business info",
@@ -19935,9 +19935,9 @@ export const certifications = [
         "id": "pl-900-q2",
         "question": "What is 'Semi-Structured Data'?",
         "options": [
-          "A financial report",
-          "A partially built house",
-          "A type of code",
+          "A financial report that is only partially completed by the user",
+          "A partially built house with some completed rooms but no solid foundation",
+          "A type of computer code used for semi-organized data sets and files",
           "Data that does not reside in a relational database but has organizational properties"
         ],
         "answer": "Data that does not reside in a relational database but has organizational properties",
@@ -19949,9 +19949,9 @@ export const certifications = [
         "id": "pl-900-q3",
         "question": "What is 'Predictive Analytics'?",
         "options": [
-          "A financial report",
-          "A type of database",
-          "Guessing the future",
+          "A financial report that lists all past company outcomes",
+          "A type of database optimized for historical predictive data",
+          "The act of guessing the future based on intuition alone",
           "Using data, statistics, and ML to identify the likelihood of future outcomes"
         ],
         "answer": "Using data, statistics, and ML to identify the likelihood of future outcomes",
@@ -19963,10 +19963,10 @@ export const certifications = [
         "id": "pl-900-q4",
         "question": "What is 'Primary Key' in a database?",
         "options": [
-          "A physical key",
-          "A secret password",
+          "A physical metal key used for opening a locked safe",
+          "A secret password used to access a secured database",
           "A unique identifier for each record in a table",
-          "The most important key"
+          "The most important key used to unlock a physical door"
         ],
         "answer": "A unique identifier for each record in a table",
         "category": "Domain Review",
@@ -19977,10 +19977,10 @@ export const certifications = [
         "id": "pl-900-q5",
         "question": "What is 'Generative AI'?",
         "options": [
-          "A simple app",
-          "A type of computer chip",
+          "A simple mobile app designed for AI content creation",
+          "A type of computer chip used for artificial intelligence",
           "AI that can create new content like text, images, or music",
-          "AI that generates power"
+          "AI that generates electrical power for a data center"
         ],
         "answer": "AI that can create new content like text, images, or music",
         "category": "Domain Review",
@@ -19991,9 +19991,9 @@ export const certifications = [
         "id": "pl-900-q6",
         "question": "What is 'Database Management System' (DBMS)?",
         "options": [
-          "A phone book",
-          "A software manual",
-          "A type of storage",
+          "A physical phone book containing names and numbers",
+          "A software manual that explains how to use a database",
+          "A type of storage device used for backing up data",
           "Software that interacts with end users, applications, and the database"
         ],
         "answer": "Software that interacts with end users, applications, and the database",
@@ -20005,12 +20005,12 @@ export const certifications = [
         "id": "pl-900-q7",
         "question": "What is 'Machine Learning'?",
         "options": [
-          "A robot that thinks like a human",
-          "A very large database",
-          "Algorithms that learn patterns from data",
-          "An automated car"
+          "A robot that thinks like a human being",
+          "A very large database stored on a server",
+          "Algorithms that learn patterns from data sets",
+          "An automated car with no human driver"
         ],
-        "answer": "Algorithms that learn patterns from data",
+        "answer": "Algorithms that learn patterns from data sets",
         "category": "Domain Review",
         "explanation": "ML uses statistical techniques to give computers the ability to 'learn' from data.",
         "topic": "Data & AI Fundamentals"
@@ -20019,9 +20019,9 @@ export const certifications = [
         "id": "pl-900-q8",
         "question": "What is 'Supervised Learning'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "Having a teacher",
+          "A network protocol for models",
+          "A type of computer code for data",
+          "Learning a subject with a teacher",
           "Training a model on labeled data"
         ],
         "answer": "Training a model on labeled data",
@@ -20033,9 +20033,9 @@ export const certifications = [
         "id": "pl-900-q9",
         "question": "What is 'Bias' in AI?",
         "options": [
-          "A network protocol",
-          "A strong opinion",
-          "A type of computer code",
+          "A network protocol designed for transmitting biased data sets",
+          "A strong personal opinion about a specific subject or topic",
+          "A type of computer code used for model weight adjustments",
           "When a model produces systematically prejudiced results"
         ],
         "answer": "When a model produces systematically prejudiced results",
@@ -20047,9 +20047,9 @@ export const certifications = [
         "id": "pl-900-q10",
         "question": "What is 'Artificial Intelligence'?",
         "options": [
-          "A smart toaster",
-          "A virtual reality game",
-          "An advanced calculator",
+          "A smart toaster that can connect to the web",
+          "A virtual reality game with high graphics",
+          "An advanced calculator for complex math",
           "Simulation of human intelligence by machines"
         ],
         "answer": "Simulation of human intelligence by machines",
@@ -20061,10 +20061,10 @@ export const certifications = [
         "id": "pl-900-q11",
         "question": "What is 'Computer Vision'?",
         "options": [
-          "A hardware guard",
-          "A type of monitor",
+          "A hardware guard that protects the computer's optical sensors",
+          "A type of monitor that can see the user in front of it",
           "The ability of computers to gain understanding from digital images or videos",
-          "Wearing glasses"
+          "The act of wearing glasses to improve human vision of screens"
         ],
         "answer": "The ability of computers to gain understanding from digital images or videos",
         "category": "Domain Review",
@@ -20075,10 +20075,10 @@ export const certifications = [
         "id": "pl-900-q12",
         "question": "What is 'Classification' in ML?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
+          "A network protocol for discrete labels",
+          "A type of computer code for labeled data",
           "Predicting a discrete label or category",
-          "Sorting things"
+          "The act of sorting things in a database"
         ],
         "answer": "Predicting a discrete label or category",
         "category": "Domain Review",
@@ -20089,9 +20089,9 @@ export const certifications = [
         "id": "pl-900-q13",
         "question": "What is 'Underfitting'?",
         "options": [
-          "A hardware failure",
-          "A software bug",
-          "Wearing large clothes",
+          "A hardware failure that occurs due to overheating components",
+          "A standard software bug that causes an application to crash",
+          "The act of wearing large and baggy clothes during a workout",
           "When a model is too simple to learn the patterns in data"
         ],
         "answer": "When a model is too simple to learn the patterns in data",
@@ -20103,9 +20103,9 @@ export const certifications = [
         "id": "pl-900-q14",
         "question": "What is 'Structured Data'?",
         "options": [
-          "A financial report",
-          "A type of code",
-          "A well-built house",
+          "A financial report containing company performance data",
+          "A type of computer code used for data modeling",
+          "A well-built and sturdy house with many rooms",
           "Data that adheres to a predefined schema or model"
         ],
         "answer": "Data that adheres to a predefined schema or model",
@@ -20117,10 +20117,10 @@ export const certifications = [
         "id": "pl-900-q15",
         "question": "What is an 'Algorithm'?",
         "options": [
-          "A computer game",
-          "A hardware standard",
+          "A computer game designed for teaching mathematical concepts",
+          "A hardware standard for maintaining consistency in calculations",
           "A set of rules or instructions to be followed in calculations",
-          "A type of music"
+          "A unique type of music or rhythmic composition for listening"
         ],
         "answer": "A set of rules or instructions to be followed in calculations",
         "category": "Domain Review",
@@ -20131,10 +20131,10 @@ export const certifications = [
         "id": "pl-900-q16",
         "question": "What is 'Data Mining'?",
         "options": [
-          "A software update",
-          "A type of database",
-          "Digging for gold",
-          "Discovering patterns and knowledge from large amounts of data"
+          "A software update designed to fix minor system bugs",
+          "A type of database used for storing patterns of data",
+          "Discovering patterns and knowledge from large amounts of data",
+          "The act of digging for gold in a natural gold mine"
         ],
         "answer": "Discovering patterns and knowledge from large amounts of data",
         "category": "Domain Review",
@@ -20145,12 +20145,12 @@ export const certifications = [
         "id": "pl-900-q17",
         "question": "What is 'ETL'?",
         "options": [
-          "Electronic Transfer Ledger",
-          "Email, Transfer, Link",
-          "Extra Tool Link",
-          "Extract, Transform, Load"
+          "Electronic Transfer Ledger (ETL)",
+          "Email, Transfer, Link (ETL)",
+          "Extra Tool Link (ETL)",
+          "Extract, Transform, Load (ETL)"
         ],
-        "answer": "Extract, Transform, Load",
+        "answer": "Extract, Transform, Load (ETL)",
         "category": "Domain Review",
         "explanation": "ETL is the process of moving data from source systems to a data warehouse.",
         "topic": "Data & AI Fundamentals"
@@ -20159,9 +20159,9 @@ export const certifications = [
         "id": "pl-900-q18",
         "question": "What is 'Unstructured Data'?",
         "options": [
-          "A financial report",
-          "A messy room",
-          "A type of code",
+          "A financial report with no clear structure or layout",
+          "A messy and unorganized room with many items",
+          "A type of computer code used for unorganized data",
           "Data that does not have a predefined model or organization"
         ],
         "answer": "Data that does not have a predefined model or organization",
@@ -20173,9 +20173,9 @@ export const certifications = [
         "id": "pl-900-q19",
         "question": "What is 'Training Data'?",
         "options": [
-          "A gym for computers",
-          "A network protocol",
-          "A type of code",
+          "A gym for computers to get faster",
+          "A network protocol for data sets",
+          "A type of code for training data",
           "The data used to train an ML model"
         ],
         "answer": "The data used to train an ML model",
@@ -20187,9 +20187,9 @@ export const certifications = [
         "id": "pl-900-q20",
         "question": "What is 'Hadoop'?",
         "options": [
-          "A hardware manufacturer",
-          "A type of computer",
-          "A website developer",
+          "A hardware manufacturer that produces storage devices",
+          "A type of computer designed for high-performance computing",
+          "A website developer who specializes in big data applications",
           "An open-source framework for distributed storage and processing of big data"
         ],
         "answer": "An open-source framework for distributed storage and processing of big data",
@@ -20201,10 +20201,10 @@ export const certifications = [
         "id": "pl-900-q21",
         "question": "What is 'Data Integration'?",
         "options": [
-          "A network protocol",
-          "A type of code",
+          "A network protocol designed for unified data views",
+          "A type of computer code used for data integration",
           "Combining data from different sources into a single, unified view",
-          "Putting things together"
+          "The simple act of putting different things together"
         ],
         "answer": "Combining data from different sources into a single, unified view",
         "category": "Domain Review",
@@ -20215,10 +20215,10 @@ export const certifications = [
         "id": "pl-900-q22",
         "question": "What is a 'Data Scientist'?",
         "options": [
-          "A hardware engineer",
-          "A math teacher",
-          "A person who uses scientific methods and data to find insights",
-          "A website developer"
+          "A person who designs and builds computer hardware",
+          "A person who develops and maintains complex websites",
+          "A person who teaches advanced mathematics in a school",
+          "A person who uses scientific methods and data to find insights"
         ],
         "answer": "A person who uses scientific methods and data to find insights",
         "category": "Domain Review",
@@ -20229,10 +20229,10 @@ export const certifications = [
         "id": "pl-900-q23",
         "question": "What is 'Explainable AI' (XAI)?",
         "options": [
-          "A book about AI",
-          "A software manual",
-          "AI systems that can explain their decisions and actions to humans",
-          "An AI that speaks"
+          "A book or novel about the future of artificial intelligence",
+          "A software manual explaining AI system operations",
+          "A type of AI system that speaks multiple languages",
+          "AI systems that can explain their decisions and actions to humans"
         ],
         "answer": "AI systems that can explain their decisions and actions to humans",
         "category": "Domain Review",
@@ -20243,9 +20243,9 @@ export const certifications = [
         "id": "pl-900-q24",
         "question": "What is 'Spark' (Apache Spark)?",
         "options": [
-          "A fire hazard",
-          "A simple app",
-          "A type of computer chip",
+          "A physical fire hazard in a data center environment",
+          "A simple mobile app used for tracking data usage",
+          "A type of computer chip designed for fast processing",
           "An open-source distributed processing system used for big data workloads"
         ],
         "answer": "An open-source distributed processing system used for big data workloads",
@@ -20257,10 +20257,10 @@ export const certifications = [
         "id": "pl-900-q25",
         "question": "What is 'Cloud Database'?",
         "options": [
-          "A database for everyone",
-          "A database on a USB",
           "A database service built and accessed through a cloud platform",
-          "A file in the cloud"
+          "A database stored on a physical USB flash drive",
+          "A database that is available for everyone to use",
+          "A simple text file stored in a cloud storage service"
         ],
         "answer": "A database service built and accessed through a cloud platform",
         "category": "Domain Review",
@@ -20286,9 +20286,9 @@ export const certifications = [
         "question": "What is 'Database Index'?",
         "options": [
           "A data structure that improves the speed of data retrieval",
-          "A list of files",
-          "A software manual",
-          "A type of storage"
+          "A list of files stored in a database directory",
+          "A software manual that describes database structures",
+          "A type of storage device used for indexing data"
         ],
         "answer": "A data structure that improves the speed of data retrieval",
         "category": "Domain Review",
@@ -20300,9 +20300,9 @@ export const certifications = [
         "question": "What is 'Data Lake'?",
         "options": [
           "A centralized repository that allows you to store all your structured and unstructured data",
-          "A hardware guard",
-          "A lake filled with water",
-          "A type of storage"
+          "A hardware guard that protects the data lake server environment from physical access",
+          "A large natural lake filled with fresh or salt water for swimming and fishing",
+          "A type of physical storage device used for saving and managing large data archives"
         ],
         "answer": "A centralized repository that allows you to store all your structured and unstructured data",
         "category": "Domain Review",
@@ -20313,9 +20313,9 @@ export const certifications = [
         "id": "pl-900-q29",
         "question": "What is 'Reinforcement Learning'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "Being very strict",
+          "A network protocol designed for penalty distribution",
+          "A type of computer code used for reward systems",
+          "Being very strict with an AI model during training",
           "Training a model through rewards and penalties"
         ],
         "answer": "Training a model through rewards and penalties",
@@ -20328,9 +20328,9 @@ export const certifications = [
         "question": "What is 'Data Visualization'?",
         "options": [
           "A graphical representation of information and data",
-          "A network cable",
-          "A type of monitor",
-          "Looking at data"
+          "A network cable used for transmitting large data sets",
+          "A type of high-resolution monitor for displaying data",
+          "The act of looking at raw data in a text-based format"
         ],
         "answer": "A graphical representation of information and data",
         "category": "Domain Review",
@@ -20341,9 +20341,9 @@ export const certifications = [
         "id": "pl-900-q31",
         "question": "What is 'Unsupervised Learning'?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "No teacher",
+          "A network protocol designed for pattern recognition",
+          "A type of computer code used for hidden patterns",
+          "Learning a subject without any teacher or instructor",
           "Training a model on unlabeled data to find hidden patterns"
         ],
         "answer": "Training a model on unlabeled data to find hidden patterns",
@@ -20355,9 +20355,9 @@ export const certifications = [
         "id": "pl-900-q32",
         "question": "What is 'Test Data'?",
         "options": [
-          "A network protocol",
-          "A type of code",
-          "A type of exam",
+          "A network protocol designed for data evaluation",
+          "A type of computer code used for model testing",
+          "A type of school exam or test for students",
           "The data used to evaluate the performance of an ML model"
         ],
         "answer": "The data used to evaluate the performance of an ML model",
@@ -20369,10 +20369,10 @@ export const certifications = [
         "id": "pl-900-q33",
         "question": "What is 'Regression' in ML?",
         "options": [
-          "A network protocol",
-          "A type of computer code",
-          "Going backwards",
-          "Predicting a continuous numerical value"
+          "A network protocol for continuous values",
+          "A type of computer code for numerical data",
+          "Predicting a continuous numerical value",
+          "The act of going backwards in an ML model"
         ],
         "answer": "Predicting a continuous numerical value",
         "category": "Domain Review",
@@ -20383,10 +20383,10 @@ export const certifications = [
         "id": "pl-900-q34",
         "question": "What is 'Deep Learning'?",
         "options": [
-          "A hardware update",
+          "A hardware update designed for deep computational tasks",
           "A subset of ML based on artificial neural networks",
-          "A type of database",
-          "Studying very hard"
+          "A type of database optimized for storing neural data",
+          "The act of studying a subject very hard for an exam"
         ],
         "answer": "A subset of ML based on artificial neural networks",
         "category": "Domain Review",
@@ -20397,9 +20397,9 @@ export const certifications = [
         "id": "pl-900-q35",
         "question": "What is 'Big Data'?",
         "options": [
-          "A high-resolution image",
-          "A long list of names",
-          "A very heavy hard drive",
+          "A high-resolution image with many pixels",
+          "A long list of names and contact addresses",
+          "A very heavy and large computer hard drive",
           "Extremely large and complex datasets"
         ],
         "answer": "Extremely large and complex datasets",
@@ -20411,10 +20411,10 @@ export const certifications = [
         "id": "pl-900-q36",
         "question": "What is 'Normalizaton' in a database?",
         "options": [
-          "A hardware standard",
-          "A type of code",
-          "Being very normal",
-          "Organizing data to reduce redundancy and improve integrity"
+          "A hardware standard for maintaining data consistency",
+          "A type of computer code used for data normalization",
+          "Organizing data to reduce redundancy and improve integrity",
+          "The state of being very normal in a database environment"
         ],
         "answer": "Organizing data to reduce redundancy and improve integrity",
         "category": "Domain Review",
@@ -20425,9 +20425,9 @@ export const certifications = [
         "id": "pl-900-q37",
         "question": "What is 'Overfitting'?",
         "options": [
-          "A hardware failure",
-          "A software bug",
-          "Wearing small clothes",
+          "A hardware failure that occurs due to overheating components",
+          "A standard software bug that causes an application to crash",
+          "The act of wearing small and tight clothes during a workout",
           "When a model learns the training data too well but fails on new data"
         ],
         "answer": "When a model learns the training data too well but fails on new data",
@@ -20439,9 +20439,9 @@ export const certifications = [
         "id": "pl-900-q38",
         "question": "What is 'Clustering' in ML?",
         "options": [
-          "A group of people",
-          "A hardware update",
-          "A type of database",
+          "A group of people standing close together",
+          "A hardware update for data clusters",
+          "A type of database for grouped data",
           "Grouping similar data points together"
         ],
         "answer": "Grouping similar data points together",
@@ -20454,9 +20454,9 @@ export const certifications = [
         "question": "What is an 'Artificial Neural Network'?",
         "options": [
           "A computing system inspired by biological neural networks",
-          "A hardware guard",
-          "A robot's brain",
-          "A type of network cable"
+          "A hardware guard that protects neural data from theft",
+          "A physical brain inside a highly advanced robotic system",
+          "A type of high-speed network cable for data centers"
         ],
         "answer": "A computing system inspired by biological neural networks",
         "category": "Domain Review",
@@ -20467,10 +20467,10 @@ export const certifications = [
         "id": "pl-900-q40",
         "question": "What is 'Data Cleansing'?",
         "options": [
-          "A software manual",
-          "A type of code",
+          "A software manual that explains how to clean data",
+          "A type of computer code used for cleaning data",
           "Identifying and correcting errors or inconsistencies in data",
-          "Washing a computer"
+          "The act of physically washing a computer or server"
         ],
         "answer": "Identifying and correcting errors or inconsistencies in data",
         "category": "Domain Review",
@@ -20481,9 +20481,9 @@ export const certifications = [
         "id": "pl-900-q41",
         "question": "What is 'Big Data Analytics'?",
         "options": [
-          "A software update",
-          "A type of cloud",
-          "A very large spreadsheet",
+          "A software update designed to improve system performance",
+          "A type of cloud service used for storing large files",
+          "A very large spreadsheet with millions of rows of data",
           "The process of examining large and varied data sets to find hidden patterns"
         ],
         "answer": "The process of examining large and varied data sets to find hidden patterns",
@@ -20495,9 +20495,9 @@ export const certifications = [
         "id": "pl-900-q42",
         "question": "What is a 'Relational Database'?",
         "options": [
-          "A folder of images",
-          "A list of contacts",
-          "A single large text file",
+          "A folder of images stored on a local computer",
+          "A list of contacts stored in a mobile phone",
+          "A single large text file with unstructured data",
           "Data organized in tables with rows and columns"
         ],
         "answer": "Data organized in tables with rows and columns",
@@ -20509,10 +20509,10 @@ export const certifications = [
         "id": "pl-900-q43",
         "question": "What is 'Data Warehouse'?",
         "options": [
-          "A building for servers",
-          "A hardware guard",
+          "A hardware guard that protects the server room",
+          "A large physical building used for housing servers",
           "A system used for reporting and data analysis",
-          "A type of storage"
+          "A type of storage device used for data backups"
         ],
         "answer": "A system used for reporting and data analysis",
         "category": "Domain Review",
@@ -20524,9 +20524,9 @@ export const certifications = [
         "question": "What is 'Model' in ML?",
         "options": [
           "A mathematical representation of a real-world process",
-          "A software manual",
-          "A tiny car",
-          "A type of clothing"
+          "A software manual that explains how an ML model works",
+          "A specific type of clothing worn by a person",
+          "A tiny scale model of a car or other vehicle"
         ],
         "answer": "A mathematical representation of a real-world process",
         "category": "Domain Review",
@@ -20537,10 +20537,10 @@ export const certifications = [
         "id": "pl-900-q45",
         "question": "What is 'Natural Language Processing' (NLP)?",
         "options": [
-          "A network protocol",
-          "A type of code",
-          "Speaking very fast",
-          "The ability of computers to understand and process human language"
+          "A network protocol designed for natural language data",
+          "A type of computer code used for natural speech patterns",
+          "The ability of computers to understand and process human language",
+          "The act of speaking very fast to improve data processing"
         ],
         "answer": "The ability of computers to understand and process human language",
         "category": "Domain Review",
@@ -20551,10 +20551,10 @@ export const certifications = [
         "id": "pl-900-q46",
         "question": "What is 'NoSQL'?",
         "options": [
-          "A database with no SQL",
-          "A financial report",
+          "A financial report with details on annual revenue",
           "A non-relational database for storing diverse data types",
-          "A type of code"
+          "A standard database with no SQL support at all",
+          "A type of computer code for data encryption"
         ],
         "answer": "A non-relational database for storing diverse data types",
         "category": "Domain Review",
@@ -20565,10 +20565,10 @@ export const certifications = [
         "id": "pl-900-q47",
         "question": "What is 'Data Mart'?",
         "options": [
+          "A physical store or marketplace for buying and selling data",
           "A small-scale data warehouse focused on a single functional area",
-          "A software update",
-          "A store for data",
-          "A type of storage"
+          "A software update designed for data mart management",
+          "A type of storage device used for departmental data"
         ],
         "answer": "A small-scale data warehouse focused on a single functional area",
         "category": "Domain Review",
@@ -20579,9 +20579,9 @@ export const certifications = [
         "id": "pl-900-q48",
         "question": "What is 'Data Governance'?",
         "options": [
-          "A government agency",
-          "A security guard",
-          "A set of laws",
+          "A government agency responsible for data protection",
+          "A security guard responsible for physical data safety",
+          "A set of laws and regulations regarding data privacy",
           "Managing the availability, usability, integrity, and security of data"
         ],
         "answer": "Managing the availability, usability, integrity, and security of data",
@@ -20593,10 +20593,10 @@ export const certifications = [
         "id": "pl-900-q49",
         "question": "What is 'Denormalization'?",
         "options": [
-          "A hardware standard",
-          "A type of code",
+          "A hardware standard for maintaining equipment consistency",
+          "A type of computer code used for data entry procedures",
           "Adding redundant data to improve read performance",
-          "Being very strange"
+          "The state of being very strange in a professional environment"
         ],
         "answer": "Adding redundant data to improve read performance",
         "category": "Domain Review",
@@ -20608,9 +20608,9 @@ export const certifications = [
         "question": "What is 'Foreign Key' in a database?",
         "options": [
           "A field in one table that uniquely identifies a row of another table",
-          "A hardware standard",
-          "A key from another country",
-          "A type of code"
+          "A hardware standard for connecting database servers",
+          "A physical key from another country or organization",
+          "A type of computer code used for database encryption"
         ],
         "answer": "A field in one table that uniquely identifies a row of another table",
         "category": "Domain Review",
@@ -20866,10 +20866,10 @@ export const certifications = [
         "id": "cism-q1",
         "question": "What is 'Identification' in security?",
         "options": [
-          "Checking an ID card",
-          "Looking in a mirror",
+          "Checking an ID card at the building entrance",
+          "Looking in a mirror to check your appearance",
           "Stating who you are (e.g., username)",
-          "Taking a photo"
+          "Taking a professional photo for a staff badge"
         ],
         "answer": "Stating who you are (e.g., username)",
         "category": "Domain Review",
@@ -20881,9 +20881,9 @@ export const certifications = [
         "question": "Which of these is used for 'Non-repudiation'?",
         "options": [
           "Digital Signatures",
-          "Encryption",
-          "Firewalls",
-          "Hashing"
+          "Encryption tools",
+          "Hashing algorithms",
+          "Network Firewalls"
         ],
         "answer": "Digital Signatures",
         "category": "Domain Review",
@@ -20894,10 +20894,10 @@ export const certifications = [
         "id": "cism-q3",
         "question": "What is 'Whaling'?",
         "options": [
-          "A large-scale DDoS",
+          "A large-scale DDoS attack from many sources",
           "A phishing attack targeted at high-level executives",
-          "A type of network cable",
-          "Hunting whales"
+          "A type of network cable for data transmission",
+          "The act of hunting whales in the natural ocean"
         ],
         "answer": "A phishing attack targeted at high-level executives",
         "category": "Domain Review",
@@ -20936,10 +20936,10 @@ export const certifications = [
         "id": "cism-q6",
         "question": "What is 'Authorization'?",
         "options": [
-          "Checking a password",
-          "Creating a new account",
+          "Checking a password for accessing a secure system",
+          "Creating a new account for a website or application",
           "Determining what an authenticated user can do",
-          "Entering a building"
+          "The act of entering a building through the front door"
         ],
         "answer": "Determining what an authenticated user can do",
         "category": "Domain Review",
@@ -20950,10 +20950,10 @@ export const certifications = [
         "id": "cism-q7",
         "question": "What is 'Pharmimg'?",
         "options": [
-          "A secure network protocol",
-          "A type of agriculture",
+          "A secure network protocol for transmitting data sets",
+          "A specific type of agriculture involving data plants",
           "Redirecting users to a fake website by poisoning DNS",
-          "Stealing emails"
+          "The act of stealing emails from a remote server"
         ],
         "answer": "Redirecting users to a fake website by poisoning DNS",
         "category": "Domain Review",
@@ -20964,9 +20964,9 @@ export const certifications = [
         "id": "cism-q8",
         "question": "What is an 'Air Gap'?",
         "options": [
-          "A gap between server racks",
-          "A leak in a tire",
-          "A type of Wi-Fi",
+          "A physical gap between computer server racks in a room",
+          "A small leak in a rubber tire that causes low pressure",
+          "A specific type of high-speed Wi-Fi network connection",
           "Physically isolating a computer from any network"
         ],
         "answer": "Physically isolating a computer from any network",
@@ -20978,9 +20978,9 @@ export const certifications = [
         "id": "cism-q9",
         "question": "What is Multi-Factor Authentication (MFA)?",
         "options": [
-          "Changing passwords every week",
-          "Using a secure browser",
-          "Using a very long password",
+          "Changing your account passwords every single week",
+          "Using a secure and encrypted web browser for access",
+          "Using a very long and complex alphanumeric password",
           "Using two or more different factors to verify identity"
         ],
         "answer": "Using two or more different factors to verify identity",
@@ -20992,9 +20992,9 @@ export const certifications = [
         "id": "cism-q10",
         "question": "What is 'Data Loss Prevention' (DLP)?",
         "options": [
-          "A backup system",
-          "A secure hard drive",
-          "A way to find lost files",
+          "A secure and encrypted hardware hard drive",
+          "A specific way to find lost files on a computer",
+          "A standard backup system for organizational data",
           "Tools to prevent sensitive data from leaving the network"
         ],
         "answer": "Tools to prevent sensitive data from leaving the network",
@@ -21006,9 +21006,9 @@ export const certifications = [
         "id": "cism-q11",
         "question": "What is 'Authentication'?",
         "options": [
-          "Creating a backup",
-          "Giving permission",
-          "Logging out",
+          "Creating a backup of sensitive organizational data",
+          "Giving permission to access a secure resource",
+          "The act of logging out from a secure account",
           "Verifying that you are who you say you are"
         ],
         "answer": "Verifying that you are who you say you are",
@@ -21020,9 +21020,9 @@ export const certifications = [
         "id": "cism-q12",
         "question": "What is 'Man-in-the-Middle' (MITM)?",
         "options": [
-          "A network hub",
-          "A referee",
-          "A secure proxy",
+          "A physical network hub for connecting devices",
+          "A professional sports referee during a match",
+          "A standard secure proxy for browsing the web",
           "Intercepting communication between two parties"
         ],
         "answer": "Intercepting communication between two parties",
@@ -21035,9 +21035,9 @@ export const certifications = [
         "question": "What is a 'Honey Pot'?",
         "options": [
           "A decoy system to lure attackers",
-          "A high-speed server",
-          "A jar of honey",
-          "A secure database"
+          "A high-speed server for data sets",
+          "A secure database for organization",
+          "A simple jar of honey from a bee"
         ],
         "answer": "A decoy system to lure attackers",
         "category": "Domain Review",
@@ -21048,9 +21048,9 @@ export const certifications = [
         "id": "cism-q14",
         "question": "What is the difference between a 'Virus' and a 'Worm'?",
         "options": [
-          "There is no difference",
-          "Viruses are faster",
-          "Worms are harmless",
+          "There is no difference between a virus and a worm",
+          "Viruses are much faster than worms at infecting systems",
+          "Worms are harmless and do not cause any system damage",
           "Worms replicate automatically; viruses need host files"
         ],
         "answer": "Worms replicate automatically; viruses need host files",
@@ -21076,9 +21076,9 @@ export const certifications = [
         "id": "cism-q16",
         "question": "What is 'War Driving'?",
         "options": [
-          "A military exercise",
-          "A type of car race",
-          "Driving a tank",
+          "A specific type of high-speed car race",
+          "A standard military exercise for troops",
+          "Driving a large tank in a combat zone",
           "Searching for Wi-Fi networks from a vehicle"
         ],
         "answer": "Searching for Wi-Fi networks from a vehicle",
@@ -21104,10 +21104,10 @@ export const certifications = [
         "id": "cism-q18",
         "question": "What is the purpose of 'Sandboxing'?",
         "options": [
-          "Cleaning a hard drive",
-          "Playing with sand",
+          "Cleaning a physical hard drive with a cloth",
           "Running suspicious programs in an isolated area",
-          "Testing website designs"
+          "Testing website designs for better appearance",
+          "The act of playing with sand on a large beach"
         ],
         "answer": "Running suspicious programs in an isolated area",
         "category": "Domain Review",
@@ -21118,9 +21118,9 @@ export const certifications = [
         "id": "cism-q19",
         "question": "What is 'Biometrics'?",
         "options": [
-          "A secure password manager",
-          "A type of firewall",
-          "Studying biological data",
+          "A secure password manager for all accounts",
+          "A type of firewall for network protection",
+          "Studying biological data sets for research",
           "Using physical traits for authentication"
         ],
         "answer": "Using physical traits for authentication",
@@ -21146,9 +21146,9 @@ export const certifications = [
         "id": "cism-q21",
         "question": "What is 'SQL Injection'?",
         "options": [
-          "A database backup",
-          "A network protocol",
-          "A type of virus",
+          "A network protocol for transmitting data sets",
+          "A specific type of malicious computer virus",
+          "A standard database backup for data safety",
           "Injecting malicious SQL queries into an input field"
         ],
         "answer": "Injecting malicious SQL queries into an input field",
@@ -21161,9 +21161,9 @@ export const certifications = [
         "question": "What is an 'Audit Trail'?",
         "options": [
           "A chronological record of system activities",
-          "A hardware inventory",
-          "A list of employees",
-          "A path in the woods"
+          "A hardware inventory of all computer parts",
+          "A list of all employees in a small company",
+          "A path through the woods for outdoor hiking"
         ],
         "answer": "A chronological record of system activities",
         "category": "Domain Review",
@@ -21188,12 +21188,12 @@ export const certifications = [
         "id": "cism-q24",
         "question": "Which of these is a form of Symmetric encryption?",
         "options": [
-          "AES",
-          "Diffie-Hellman",
-          "ECC",
-          "RSA"
+          "Advanced Encryption Standard (AES)",
+          "Diffie-Hellman Key Exchange",
+          "Elliptic Curve Cryptography",
+          "Rivest-Shamir-Adleman (RSA)"
         ],
-        "answer": "AES",
+        "answer": "Advanced Encryption Standard (AES)",
         "category": "Domain Review",
         "explanation": "Advanced Encryption Standard (AES) is the most common symmetric cipher.",
         "topic": "Implementation"
@@ -21202,9 +21202,9 @@ export const certifications = [
         "id": "cism-q25",
         "question": "What is 'Mobile Device Management' (MDM)?",
         "options": [
-          "A phone repair shop",
-          "A type of mobile app",
-          "Hiring a mobile expert",
+          "A professional phone repair shop in a city center",
+          "A specific type of mobile app for playing games",
+          "Hiring a professional mobile expert to manage devices",
           "Software used to manage and secure mobile devices"
         ],
         "answer": "Software used to manage and secure mobile devices",
@@ -21216,10 +21216,10 @@ export const certifications = [
         "id": "cism-q26",
         "question": "What is the goal of 'Confidentiality' in the CIA triad?",
         "options": [
-          "Ensure data is accurate",
-          "Ensure data is compressed",
+          "Ensure data is accurate and trustworthy",
+          "Ensure data is compressed for storage",
           "Ensure only authorized users can read data",
-          "Ensure services are up"
+          "Ensure services are up and available"
         ],
         "answer": "Ensure only authorized users can read data",
         "category": "Domain Review",
@@ -21230,10 +21230,10 @@ export const certifications = [
         "id": "cism-q27",
         "question": "What is a 'Firewall Policy'?",
         "options": [
-          "A hardware warranty",
-          "A manual for a router",
+          "A hardware warranty that covers component repair costs",
           "A set of rules that define allowed traffic",
-          "An insurance policy"
+          "A standard insurance policy for a company building",
+          "A technical manual for installing a network router"
         ],
         "answer": "A set of rules that define allowed traffic",
         "category": "Domain Review",
@@ -21244,9 +21244,9 @@ export const certifications = [
         "id": "cism-q28",
         "question": "What is a 'Trojan Horse'?",
         "options": [
-          "A secure downloader",
-          "A type of virus that replicates",
-          "A wooden statue",
+          "A large wooden statue from Greek mythology",
+          "A standard secure downloader for applications",
+          "A type of virus that replicates automatically",
           "Malware disguised as legitimate software"
         ],
         "answer": "Malware disguised as legitimate software",
@@ -21258,10 +21258,10 @@ export const certifications = [
         "id": "cism-q29",
         "question": "What is 'Encryption'?",
         "options": [
-          "Compressing data",
+          "Compressing data to save storage space",
           "Converting plaintext into ciphertext",
-          "Deleting files",
-          "Making data public"
+          "Deleting files from a computer system",
+          "Making data public for everyone to see"
         ],
         "answer": "Converting plaintext into ciphertext",
         "category": "Domain Review",
@@ -21272,10 +21272,10 @@ export const certifications = [
         "id": "cism-q30",
         "question": "What is 'Steganography'?",
         "options": [
-          "A secure network protocol",
-          "A type of stenography",
+          "A secure network protocol for transmitting data",
+          "A specific type of professional stenography",
           "Hiding data within other data (like an image)",
-          "Writing very fast"
+          "The act of writing very fast during a meeting"
         ],
         "answer": "Hiding data within other data (like an image)",
         "category": "Domain Review",
@@ -21286,9 +21286,9 @@ export const certifications = [
         "id": "cism-q31",
         "question": "What is a 'Penetration Test'?",
         "options": [
-          "A hardware stress test",
-          "A network speed test",
-          "A test of ink levels",
+          "A hardware stress test for computer components",
+          "A network speed test for measuring bandwidth",
+          "A test of ink levels in a professional printer",
           "An authorized simulated attack to find flaws"
         ],
         "answer": "An authorized simulated attack to find flaws",
@@ -21300,10 +21300,10 @@ export const certifications = [
         "id": "cism-q32",
         "question": "What does 'Integrity' mean in security?",
         "options": [
-          "Being honest",
+          "Being honest in all professional interactions",
           "Ensuring data has not been tampered with",
-          "Keeping secrets",
-          "Making sure the website is fast"
+          "Keeping all organizational secrets safe",
+          "Making sure the website is fast and responsive"
         ],
         "answer": "Ensuring data has not been tampered with",
         "category": "Domain Review",
@@ -21328,9 +21328,9 @@ export const certifications = [
         "id": "cism-q34",
         "question": "What is Ransomware?",
         "options": [
-          "A hardware firewall",
-          "A tool for generating passwords",
-          "A type of secure email",
+          "A hardware firewall device for network security",
+          "A tool for generating and storing passwords",
+          "A type of secure and encrypted email service",
           "Malware that encrypts data and demands payment"
         ],
         "answer": "Malware that encrypts data and demands payment",
@@ -21342,12 +21342,12 @@ export const certifications = [
         "id": "cism-q35",
         "question": "What is 'Social Engineering'?",
         "options": [
-          "Hacking a bank",
-          "Installing cameras",
-          "Manipulating people into giving up info",
-          "Writing code for social media"
+          "Hacking into a financial institution or bank",
+          "Installing physical cameras for security monitoring",
+          "Manipulating people into giving up sensitive info",
+          "Writing computer code for social media platforms"
         ],
-        "answer": "Manipulating people into giving up info",
+        "answer": "Manipulating people into giving up sensitive info",
         "category": "Domain Review",
         "explanation": "It exploits human psychology rather than technical flaws.",
         "topic": "Attacks & Threats"
@@ -21356,10 +21356,10 @@ export const certifications = [
         "id": "cism-q36",
         "question": "What does 'WPA3' improve over WPA2?",
         "options": [
-          "Better Wi-Fi range",
+          "Better Wi-Fi range for large office buildings",
           "Better encryption and protection against brute force",
-          "Cheaper hardware",
-          "Faster speeds only"
+          "Cheaper hardware for small home applications",
+          "Faster speeds only for all network connections"
         ],
         "answer": "Better encryption and protection against brute force",
         "category": "Domain Review",
@@ -21384,10 +21384,10 @@ export const certifications = [
         "id": "cism-q38",
         "question": "What is 'Decryption'?",
         "options": [
-          "Analyzing code",
-          "Breaking a password",
+          "Analyzing computer code for potential bugs",
+          "Breaking a password using a brute force tool",
           "Converting ciphertext back into plaintext",
-          "Downloading data"
+          "Downloading data from a remote computer server"
         ],
         "answer": "Converting ciphertext back into plaintext",
         "category": "Domain Review",
@@ -21399,9 +21399,9 @@ export const certifications = [
         "question": "What is a 'Backdoor'?",
         "options": [
           "A hidden way to bypass security",
-          "A real door",
-          "A secure login",
-          "A type of firewall"
+          "A real physical door at the back of a room",
+          "A specific type of network security firewall",
+          "A standard secure login for a web application"
         ],
         "answer": "A hidden way to bypass security",
         "category": "Domain Review",
@@ -21412,10 +21412,10 @@ export const certifications = [
         "id": "cism-q40",
         "question": "What is 'Access Control'?",
         "options": [
-          "A type of remote control",
-          "Hiring a security guard",
+          "A specific type of remote control for a television set",
+          "Hiring a security guard to monitor the office building",
           "Restricting access to resources to authorized users",
-          "Turning off the computer"
+          "The act of turning off the computer at the end of the day"
         ],
         "answer": "Restricting access to resources to authorized users",
         "category": "Domain Review",
@@ -21426,12 +21426,12 @@ export const certifications = [
         "id": "cism-q41",
         "question": "Which of these is a social engineering attack?",
         "options": [
-          "Buffer overflow",
-          "Cross-site scripting",
-          "SQLi",
-          "Tailgating"
+          "Buffer overflow (Memory)",
+          "Cross-site scripting (Web)",
+          "SQLi (Injection)",
+          "Tailgating (Physical)"
         ],
-        "answer": "Tailgating",
+        "answer": "Tailgating (Physical)",
         "category": "Domain Review",
         "explanation": "Tailgating involves physically following an authorized person into a secure area.",
         "topic": "Attacks & Threats"
@@ -21454,9 +21454,9 @@ export const certifications = [
         "id": "cism-q43",
         "question": "What is a 'Private Key'?",
         "options": [
-          "A key for a private room",
-          "A key that everyone has",
-          "A physical key",
+          "A key that everyone in an office has",
+          "A key used for opening a private room",
+          "A physical metal key for opening a door",
           "A secret key known only to the owner"
         ],
         "answer": "A secret key known only to the owner",
@@ -21482,10 +21482,10 @@ export const certifications = [
         "id": "cism-q45",
         "question": "What does a Firewall do?",
         "options": [
-          "Cool down the server room",
-          "Detect viruses on a hard drive",
+          "Cool down the hardware in the server room",
+          "Detect viruses on a computer hard drive",
           "Filter traffic based on security rules",
-          "Speed up internet connection"
+          "Speed up the local internet connection"
         ],
         "answer": "Filter traffic based on security rules",
         "category": "Domain Review",
@@ -21496,9 +21496,9 @@ export const certifications = [
         "id": "cism-q46",
         "question": "What is 'Eavesdropping' in network security?",
         "options": [
-          "A secure protocol",
-          "A type of antenna",
-          "Listening through a wall",
+          "A secure network protocol for transmitting data",
+          "A type of antenna designed for receiving radio data",
+          "Listening through a physical wall using a device",
           "Unauthorized listening to private communication"
         ],
         "answer": "Unauthorized listening to private communication",
@@ -21510,10 +21510,10 @@ export const certifications = [
         "id": "cism-q47",
         "question": "What is 'Two-Factor Authentication' (2FA)?",
         "options": [
-          "Having two accounts",
-          "Logging in twice",
-          "Using two different types of credentials",
-          "Using two passwords"
+          "Having two different accounts for one service",
+          "The act of logging in twice to the same system",
+          "Using two different passwords for one account",
+          "Using two different types of credentials"
         ],
         "answer": "Using two different types of credentials",
         "category": "Domain Review",
@@ -21524,9 +21524,9 @@ export const certifications = [
         "id": "cism-q48",
         "question": "What is a 'Logic Bomb'?",
         "options": [
-          "A secure storage device",
-          "A type of math problem",
-          "An actual explosive",
+          "A secure storage device for organizational data",
+          "A specific type of math problem for students",
+          "An actual explosive used in a combat zone",
           "Malware that triggers on a specific event or time"
         ],
         "answer": "Malware that triggers on a specific event or time",
@@ -21538,10 +21538,10 @@ export const certifications = [
         "id": "cism-q49",
         "question": "What is a 'Buffer Overflow'?",
         "options": [
-          "A slow internet connection",
-          "A software update",
-          "Overwriting memory to execute malicious code",
-          "Too much data on a disk"
+          "A slow internet connection that delays downloads",
+          "A standard software update for computer applications",
+          "Having too much data on a computer hard disk",
+          "Overwriting memory to execute malicious code"
         ],
         "answer": "Overwriting memory to execute malicious code",
         "category": "Domain Review",
@@ -21839,9 +21839,9 @@ export const certifications = [
         "id": "oscp-q3",
         "question": "What is 'Authentication'?",
         "options": [
-          "Creating a backup",
-          "Giving permission",
-          "Logging out",
+          "Creating a backup of sensitive organizational data",
+          "Giving permission to access a secure resource",
+          "The act of logging out from a secure account",
           "Verifying that you are who you say you are"
         ],
         "answer": "Verifying that you are who you say you are",
@@ -21853,10 +21853,10 @@ export const certifications = [
         "id": "oscp-q4",
         "question": "What does a Firewall do?",
         "options": [
-          "Cool down the server room",
-          "Detect viruses on a hard drive",
+          "Cool down the hardware in the server room",
+          "Detect viruses on a computer hard drive",
           "Filter traffic based on security rules",
-          "Speed up internet connection"
+          "Speed up the local internet connection"
         ],
         "answer": "Filter traffic based on security rules",
         "category": "Domain Review",
@@ -21867,9 +21867,9 @@ export const certifications = [
         "id": "oscp-q5",
         "question": "What is Multi-Factor Authentication (MFA)?",
         "options": [
-          "Changing passwords every week",
-          "Using a secure browser",
-          "Using a very long password",
+          "Changing your account passwords every single week",
+          "Using a secure and encrypted web browser for access",
+          "Using a very long and complex alphanumeric password",
           "Using two or more different factors to verify identity"
         ],
         "answer": "Using two or more different factors to verify identity",
@@ -21881,9 +21881,9 @@ export const certifications = [
         "id": "oscp-q6",
         "question": "What is 'War Driving'?",
         "options": [
-          "A military exercise",
-          "A type of car race",
-          "Driving a tank",
+          "A specific type of high-speed car race",
+          "A standard military exercise for troops",
+          "Driving a large tank in a combat zone",
           "Searching for Wi-Fi networks from a vehicle"
         ],
         "answer": "Searching for Wi-Fi networks from a vehicle",
@@ -21895,10 +21895,10 @@ export const certifications = [
         "id": "oscp-q7",
         "question": "What is 'Access Control'?",
         "options": [
-          "A type of remote control",
-          "Hiring a security guard",
+          "A specific type of remote control for a television set",
+          "Hiring a security guard to monitor the office building",
           "Restricting access to resources to authorized users",
-          "Turning off the computer"
+          "The act of turning off the computer at the end of the day"
         ],
         "answer": "Restricting access to resources to authorized users",
         "category": "Domain Review",
@@ -21923,9 +21923,9 @@ export const certifications = [
         "id": "oscp-q9",
         "question": "What is a 'Logic Bomb'?",
         "options": [
-          "A secure storage device",
-          "A type of math problem",
-          "An actual explosive",
+          "A secure storage device for organizational data",
+          "A specific type of math problem for students",
+          "An actual explosive used in a combat zone",
           "Malware that triggers on a specific event or time"
         ],
         "answer": "Malware that triggers on a specific event or time",
@@ -21965,10 +21965,10 @@ export const certifications = [
         "id": "oscp-q12",
         "question": "What is 'Encryption'?",
         "options": [
-          "Compressing data",
+          "Compressing data to save storage space",
           "Converting plaintext into ciphertext",
-          "Deleting files",
-          "Making data public"
+          "Deleting files from a computer system",
+          "Making data public for everyone to see"
         ],
         "answer": "Converting plaintext into ciphertext",
         "category": "Domain Review",
@@ -21979,12 +21979,12 @@ export const certifications = [
         "id": "oscp-q13",
         "question": "What is 'Social Engineering'?",
         "options": [
-          "Hacking a bank",
-          "Installing cameras",
-          "Manipulating people into giving up info",
-          "Writing code for social media"
+          "Hacking into a financial institution or bank",
+          "Installing physical cameras for security monitoring",
+          "Manipulating people into giving up sensitive info",
+          "Writing computer code for social media platforms"
         ],
-        "answer": "Manipulating people into giving up info",
+        "answer": "Manipulating people into giving up sensitive info",
         "category": "Domain Review",
         "explanation": "It exploits human psychology rather than technical flaws.",
         "topic": "Attacks & Threats"
@@ -21993,10 +21993,10 @@ export const certifications = [
         "id": "oscp-q14",
         "question": "What is a 'Buffer Overflow'?",
         "options": [
-          "A slow internet connection",
-          "A software update",
-          "Overwriting memory to execute malicious code",
-          "Too much data on a disk"
+          "A slow internet connection that delays downloads",
+          "A standard software update for computer applications",
+          "Having too much data on a computer hard disk",
+          "Overwriting memory to execute malicious code"
         ],
         "answer": "Overwriting memory to execute malicious code",
         "category": "Domain Review",
@@ -22007,10 +22007,10 @@ export const certifications = [
         "id": "oscp-q15",
         "question": "What is 'Identification' in security?",
         "options": [
-          "Checking an ID card",
-          "Looking in a mirror",
+          "Checking an ID card at the building entrance",
+          "Looking in a mirror to check your appearance",
           "Stating who you are (e.g., username)",
-          "Taking a photo"
+          "Taking a professional photo for a staff badge"
         ],
         "answer": "Stating who you are (e.g., username)",
         "category": "Domain Review",
@@ -22021,10 +22021,10 @@ export const certifications = [
         "id": "oscp-q16",
         "question": "What is 'Spear Phishing'?",
         "options": [
-          "A type of network cable",
-          "A very fast attack",
+          "A type of network cable for data transfers",
+          "A very fast attack that occurs in seconds",
           "Phishing targeted at a specific person",
-          "Phishing with a weapon"
+          "Phishing with a physical weapon for theft"
         ],
         "answer": "Phishing targeted at a specific person",
         "category": "Domain Review",
@@ -22035,10 +22035,10 @@ export const certifications = [
         "id": "oscp-q17",
         "question": "What is a 'Firewall Policy'?",
         "options": [
-          "A hardware warranty",
-          "A manual for a router",
+          "A hardware warranty that covers component repair costs",
           "A set of rules that define allowed traffic",
-          "An insurance policy"
+          "A standard insurance policy for a company building",
+          "A technical manual for installing a network router"
         ],
         "answer": "A set of rules that define allowed traffic",
         "category": "Domain Review",
@@ -22063,9 +22063,9 @@ export const certifications = [
         "id": "oscp-q19",
         "question": "What is Ransomware?",
         "options": [
-          "A hardware firewall",
-          "A tool for generating passwords",
-          "A type of secure email",
+          "A hardware firewall device for network security",
+          "A tool for generating and storing passwords",
+          "A type of secure and encrypted email service",
           "Malware that encrypts data and demands payment"
         ],
         "answer": "Malware that encrypts data and demands payment",
@@ -22077,10 +22077,10 @@ export const certifications = [
         "id": "oscp-q20",
         "question": "What does 'WPA3' improve over WPA2?",
         "options": [
-          "Better Wi-Fi range",
+          "Better Wi-Fi range for large office buildings",
           "Better encryption and protection against brute force",
-          "Cheaper hardware",
-          "Faster speeds only"
+          "Cheaper hardware for small home applications",
+          "Faster speeds only for all network connections"
         ],
         "answer": "Better encryption and protection against brute force",
         "category": "Domain Review",
@@ -22091,9 +22091,9 @@ export const certifications = [
         "id": "oscp-q21",
         "question": "What is a 'Trojan Horse'?",
         "options": [
-          "A secure downloader",
-          "A type of virus that replicates",
-          "A wooden statue",
+          "A large wooden statue from Greek mythology",
+          "A standard secure downloader for applications",
+          "A type of virus that replicates automatically",
           "Malware disguised as legitimate software"
         ],
         "answer": "Malware disguised as legitimate software",
@@ -22105,10 +22105,10 @@ export const certifications = [
         "id": "oscp-q22",
         "question": "What is 'Whaling'?",
         "options": [
-          "A large-scale DDoS",
+          "A large-scale DDoS attack from many sources",
           "A phishing attack targeted at high-level executives",
-          "A type of network cable",
-          "Hunting whales"
+          "A type of network cable for data transmission",
+          "The act of hunting whales in the natural ocean"
         ],
         "answer": "A phishing attack targeted at high-level executives",
         "category": "Domain Review",
@@ -22119,9 +22119,9 @@ export const certifications = [
         "id": "oscp-q23",
         "question": "What is a 'Private Key'?",
         "options": [
-          "A key for a private room",
-          "A key that everyone has",
-          "A physical key",
+          "A key that everyone in an office has",
+          "A key used for opening a private room",
+          "A physical metal key for opening a door",
           "A secret key known only to the owner"
         ],
         "answer": "A secret key known only to the owner",
@@ -22133,10 +22133,10 @@ export const certifications = [
         "id": "oscp-q24",
         "question": "What is 'Decryption'?",
         "options": [
-          "Analyzing code",
-          "Breaking a password",
+          "Analyzing computer code for potential bugs",
+          "Breaking a password using a brute force tool",
           "Converting ciphertext back into plaintext",
-          "Downloading data"
+          "Downloading data from a remote computer server"
         ],
         "answer": "Converting ciphertext back into plaintext",
         "category": "Domain Review",
@@ -22147,9 +22147,9 @@ export const certifications = [
         "id": "oscp-q25",
         "question": "What is 'Mobile Device Management' (MDM)?",
         "options": [
-          "A phone repair shop",
-          "A type of mobile app",
-          "Hiring a mobile expert",
+          "A professional phone repair shop in a city center",
+          "A specific type of mobile app for playing games",
+          "Hiring a professional mobile expert to manage devices",
           "Software used to manage and secure mobile devices"
         ],
         "answer": "Software used to manage and secure mobile devices",
@@ -22161,9 +22161,9 @@ export const certifications = [
         "id": "oscp-q26",
         "question": "What is a 'Penetration Test'?",
         "options": [
-          "A hardware stress test",
-          "A network speed test",
-          "A test of ink levels",
+          "A hardware stress test for computer components",
+          "A network speed test for measuring bandwidth",
+          "A test of ink levels in a professional printer",
           "An authorized simulated attack to find flaws"
         ],
         "answer": "An authorized simulated attack to find flaws",
@@ -22204,9 +22204,9 @@ export const certifications = [
         "question": "What is an 'Audit Trail'?",
         "options": [
           "A chronological record of system activities",
-          "A hardware inventory",
-          "A list of employees",
-          "A path in the woods"
+          "A hardware inventory of all computer parts",
+          "A list of all employees in a small company",
+          "A path through the woods for outdoor hiking"
         ],
         "answer": "A chronological record of system activities",
         "category": "Domain Review",
@@ -22217,9 +22217,9 @@ export const certifications = [
         "id": "oscp-q30",
         "question": "What is 'Data Loss Prevention' (DLP)?",
         "options": [
-          "A backup system",
-          "A secure hard drive",
-          "A way to find lost files",
+          "A secure and encrypted hardware hard drive",
+          "A specific way to find lost files on a computer",
+          "A standard backup system for organizational data",
           "Tools to prevent sensitive data from leaving the network"
         ],
         "answer": "Tools to prevent sensitive data from leaving the network",
@@ -22245,9 +22245,9 @@ export const certifications = [
         "id": "oscp-q32",
         "question": "What is 'Man-in-the-Middle' (MITM)?",
         "options": [
-          "A network hub",
-          "A referee",
-          "A secure proxy",
+          "A physical network hub for connecting devices",
+          "A professional sports referee during a match",
+          "A standard secure proxy for browsing the web",
           "Intercepting communication between two parties"
         ],
         "answer": "Intercepting communication between two parties",
@@ -22259,12 +22259,12 @@ export const certifications = [
         "id": "oscp-q33",
         "question": "Which of these is a social engineering attack?",
         "options": [
-          "Buffer overflow",
-          "Cross-site scripting",
-          "SQLi",
-          "Tailgating"
+          "Buffer overflow (Memory)",
+          "Cross-site scripting (Web)",
+          "SQLi (Injection)",
+          "Tailgating (Physical)"
         ],
-        "answer": "Tailgating",
+        "answer": "Tailgating (Physical)",
         "category": "Domain Review",
         "explanation": "Tailgating involves physically following an authorized person into a secure area.",
         "topic": "Attacks & Threats"
@@ -22273,9 +22273,9 @@ export const certifications = [
         "id": "oscp-q34",
         "question": "What is an 'Air Gap'?",
         "options": [
-          "A gap between server racks",
-          "A leak in a tire",
-          "A type of Wi-Fi",
+          "A physical gap between computer server racks in a room",
+          "A small leak in a rubber tire that causes low pressure",
+          "A specific type of high-speed Wi-Fi network connection",
           "Physically isolating a computer from any network"
         ],
         "answer": "Physically isolating a computer from any network",
@@ -22301,10 +22301,10 @@ export const certifications = [
         "id": "oscp-q36",
         "question": "What does 'Integrity' mean in security?",
         "options": [
-          "Being honest",
+          "Being honest in all professional interactions",
           "Ensuring data has not been tampered with",
-          "Keeping secrets",
-          "Making sure the website is fast"
+          "Keeping all organizational secrets safe",
+          "Making sure the website is fast and responsive"
         ],
         "answer": "Ensuring data has not been tampered with",
         "category": "Domain Review",
@@ -22315,10 +22315,10 @@ export const certifications = [
         "id": "oscp-q37",
         "question": "What is the goal of 'Confidentiality' in the CIA triad?",
         "options": [
-          "Ensure data is accurate",
-          "Ensure data is compressed",
+          "Ensure data is accurate and trustworthy",
+          "Ensure data is compressed for storage",
           "Ensure only authorized users can read data",
-          "Ensure services are up"
+          "Ensure services are up and available"
         ],
         "answer": "Ensure only authorized users can read data",
         "category": "Domain Review",
@@ -22329,10 +22329,10 @@ export const certifications = [
         "id": "oscp-q38",
         "question": "What is the purpose of 'Sandboxing'?",
         "options": [
-          "Cleaning a hard drive",
-          "Playing with sand",
+          "Cleaning a physical hard drive with a cloth",
           "Running suspicious programs in an isolated area",
-          "Testing website designs"
+          "Testing website designs for better appearance",
+          "The act of playing with sand on a large beach"
         ],
         "answer": "Running suspicious programs in an isolated area",
         "category": "Domain Review",
@@ -22344,9 +22344,9 @@ export const certifications = [
         "question": "What is a 'Backdoor'?",
         "options": [
           "A hidden way to bypass security",
-          "A real door",
-          "A secure login",
-          "A type of firewall"
+          "A real physical door at the back of a room",
+          "A specific type of network security firewall",
+          "A standard secure login for a web application"
         ],
         "answer": "A hidden way to bypass security",
         "category": "Domain Review",
@@ -22357,10 +22357,10 @@ export const certifications = [
         "id": "oscp-q40",
         "question": "What is 'Authorization'?",
         "options": [
-          "Checking a password",
-          "Creating a new account",
+          "Checking a password for accessing a secure system",
+          "Creating a new account for a website or application",
           "Determining what an authenticated user can do",
-          "Entering a building"
+          "The act of entering a building through the front door"
         ],
         "answer": "Determining what an authenticated user can do",
         "category": "Domain Review",
@@ -22371,9 +22371,9 @@ export const certifications = [
         "id": "oscp-q41",
         "question": "What is a 'Rootkit'?",
         "options": [
-          "A kit for growing plants",
-          "A tool for fixing roots",
-          "A type of antivirus",
+          "A physical kit used for growing garden plants",
+          "A tool for fixing roots of large trees outdoors",
+          "A type of antivirus software for scanning files",
           "Malware that hides its presence on a system"
         ],
         "answer": "Malware that hides its presence on a system",
@@ -22385,10 +22385,10 @@ export const certifications = [
         "id": "oscp-q42",
         "question": "What is 'Two-Factor Authentication' (2FA)?",
         "options": [
-          "Having two accounts",
-          "Logging in twice",
-          "Using two different types of credentials",
-          "Using two passwords"
+          "Having two different accounts for one service",
+          "The act of logging in twice to the same system",
+          "Using two different passwords for one account",
+          "Using two different types of credentials"
         ],
         "answer": "Using two different types of credentials",
         "category": "Domain Review",
@@ -22399,9 +22399,9 @@ export const certifications = [
         "id": "oscp-q43",
         "question": "What is the difference between a 'Virus' and a 'Worm'?",
         "options": [
-          "There is no difference",
-          "Viruses are faster",
-          "Worms are harmless",
+          "There is no difference between a virus and a worm",
+          "Viruses are much faster than worms at infecting systems",
+          "Worms are harmless and do not cause any system damage",
           "Worms replicate automatically; viruses need host files"
         ],
         "answer": "Worms replicate automatically; viruses need host files",
@@ -22414,9 +22414,9 @@ export const certifications = [
         "question": "Which of these is used for 'Non-repudiation'?",
         "options": [
           "Digital Signatures",
-          "Encryption",
-          "Firewalls",
-          "Hashing"
+          "Encryption tools",
+          "Hashing algorithms",
+          "Network Firewalls"
         ],
         "answer": "Digital Signatures",
         "category": "Domain Review",
@@ -22427,9 +22427,9 @@ export const certifications = [
         "id": "oscp-q45",
         "question": "What is 'SQL Injection'?",
         "options": [
-          "A database backup",
-          "A network protocol",
-          "A type of virus",
+          "A network protocol for transmitting data sets",
+          "A specific type of malicious computer virus",
+          "A standard database backup for data safety",
           "Injecting malicious SQL queries into an input field"
         ],
         "answer": "Injecting malicious SQL queries into an input field",
@@ -22442,9 +22442,9 @@ export const certifications = [
         "question": "What is a 'Honey Pot'?",
         "options": [
           "A decoy system to lure attackers",
-          "A high-speed server",
-          "A jar of honey",
-          "A secure database"
+          "A high-speed server for data sets",
+          "A secure database for organization",
+          "A simple jar of honey from a bee"
         ],
         "answer": "A decoy system to lure attackers",
         "category": "Domain Review",
@@ -22455,10 +22455,10 @@ export const certifications = [
         "id": "oscp-q47",
         "question": "What is 'Steganography'?",
         "options": [
-          "A secure network protocol",
-          "A type of stenography",
+          "A secure network protocol for transmitting data",
+          "A specific type of professional stenography",
           "Hiding data within other data (like an image)",
-          "Writing very fast"
+          "The act of writing very fast during a meeting"
         ],
         "answer": "Hiding data within other data (like an image)",
         "category": "Domain Review",
@@ -22483,10 +22483,10 @@ export const certifications = [
         "id": "oscp-q49",
         "question": "What is 'Pharmimg'?",
         "options": [
-          "A secure network protocol",
-          "A type of agriculture",
+          "A secure network protocol for transmitting data sets",
+          "A specific type of agriculture involving data plants",
           "Redirecting users to a fake website by poisoning DNS",
-          "Stealing emails"
+          "The act of stealing emails from a remote server"
         ],
         "answer": "Redirecting users to a fake website by poisoning DNS",
         "category": "Domain Review",
@@ -22781,12 +22781,12 @@ export const certifications = [
         "id": "jcia-junos-q1",
         "question": "What is the purpose of the 'ping' command?",
         "options": [
-          "Change IP address",
-          "Download a file",
-          "Secure a port",
-          "Test network connectivity"
+          "To change the local IP address",
+          "To download a file from a server",
+          "To secure a specific network port",
+          "To test basic network connectivity"
         ],
-        "answer": "Test network connectivity",
+        "answer": "To test basic network connectivity",
         "category": "Domain Review",
         "explanation": "Ping uses ICMP Echo Request messages to check if a remote host is reachable.",
         "topic": "Network Troubleshooting"
@@ -22865,12 +22865,12 @@ export const certifications = [
         "id": "jcia-junos-q7",
         "question": "Which protocol is used for securely browsing the web?",
         "options": [
-          "FTP",
-          "HTTP",
-          "HTTPS",
-          "SSH"
+          "FTP (File Transfer Protocol)",
+          "HTTP (Standard Protocol)",
+          "HTTPS (Secure Protocol)",
+          "SSH (Secure Shell Protocol)"
         ],
-        "answer": "HTTPS",
+        "answer": "HTTPS (Secure Protocol)",
         "category": "Domain Review",
         "explanation": "HTTPS uses TLS/SSL to encrypt communication between the browser and the server.",
         "topic": "Security Fundamentals"
@@ -22936,9 +22936,9 @@ export const certifications = [
         "question": "What does a 'Collision Domain' refer to?",
         "options": [
           "A group of devices where data packets can collide",
-          "A set of devices sharing a router",
-          "A single network cable",
-          "The entire internet"
+          "A set of devices sharing a single network router",
+          "A single network cable connecting two different computers",
+          "The entire internet-wide group of interconnected devices"
         ],
         "answer": "A group of devices where data packets can collide",
         "category": "Domain Review",
@@ -22963,12 +22963,12 @@ export const certifications = [
         "id": "jcia-junos-q14",
         "question": "Which protocol resolves domain names to IP addresses?",
         "options": [
-          "ARP",
-          "DHCP",
-          "DNS",
-          "SNMP"
+          "Address Resolution Protocol (ARP)",
+          "Domain Name System (DNS)",
+          "Dynamic Host Protocol (DHCP)",
+          "Simple Management Protocol (SNMP)"
         ],
-        "answer": "DNS",
+        "answer": "Domain Name System (DNS)",
         "category": "Domain Review",
         "explanation": "Domain Name System (DNS) maps human-readable names to IP addresses.",
         "topic": "IP Services"
@@ -22977,10 +22977,10 @@ export const certifications = [
         "id": "jcia-junos-q15",
         "question": "What does 'VLAN Tagging' (802.1Q) allow?",
         "options": [
-          "Faster browsing",
-          "Hiding the network name",
+          "Faster browsing of the web for all local users",
+          "Hiding the network name for security purposes",
           "Identifying traffic for different VLANs on a trunk",
-          "Printing wirelessly"
+          "Printing documents wirelessly to a network printer"
         ],
         "answer": "Identifying traffic for different VLANs on a trunk",
         "category": "Domain Review",
@@ -22991,12 +22991,12 @@ export const certifications = [
         "id": "jcia-junos-q16",
         "question": "What is the primary function of a Load Balancer?",
         "options": [
-          "Assign IP addresses",
-          "Distribute traffic across multiple servers",
-          "Encrypt network traffic",
-          "Store website files"
+          "Assign IP addresses to all devices on the network",
+          "Distribute incoming traffic across multiple servers",
+          "Encrypt all incoming network traffic for security",
+          "Store website files and images for fast access"
         ],
-        "answer": "Distribute traffic across multiple servers",
+        "answer": "Distribute incoming traffic across multiple servers",
         "category": "Domain Review",
         "explanation": "Load balancers improve reliability and performance by spreading load.",
         "topic": "Network Services"
@@ -23005,10 +23005,10 @@ export const certifications = [
         "id": "jcia-junos-q17",
         "question": "What is 'Half-Duplex'?",
         "options": [
-          "Data is sent at half speed",
+          "Data is sent at exactly half the standard speed",
           "Devices can send or receive but not both at once",
-          "Only half the packets arrive",
-          "Only one device can ever send"
+          "Only half of the data packets arrive at destination",
+          "Only one device in the network can ever send data"
         ],
         "answer": "Devices can send or receive but not both at once",
         "category": "Domain Review",
@@ -23033,12 +23033,12 @@ export const certifications = [
         "id": "jcia-junos-q19",
         "question": "What is the purpose of 'NAT'?",
         "options": [
-          "Assign names to devices",
-          "Check for cable breaks",
-          "Speed up downloads",
-          "Translate private IPs to public IPs"
+          "Assign unique names to all networking devices",
+          "Check for physical breaks in networking cables",
+          "Speed up the download of large files from the web",
+          "Translate private IP addresses to public IP addresses"
         ],
-        "answer": "Translate private IPs to public IPs",
+        "answer": "Translate private IP addresses to public IP addresses",
         "category": "Domain Review",
         "explanation": "Network Address Translation (NAT) allows multiple devices to share one public IP.",
         "topic": "IP Services"
@@ -23061,12 +23061,12 @@ export const certifications = [
         "id": "jcia-junos-q21",
         "question": "What is the standard port for SSH?",
         "options": [
-          "22",
-          "23",
-          "443",
-          "80"
+          "Port 22 (Standard SSH)",
+          "Port 23 (Standard Telnet)",
+          "Port 443 (Standard HTTPS)",
+          "Port 80 (Standard HTTP)"
         ],
-        "answer": "22",
+        "answer": "Port 22 (Standard SSH)",
         "category": "Domain Review",
         "explanation": "Secure Shell (SSH) uses port 22 by default.",
         "topic": "Security Fundamentals"
@@ -23089,12 +23089,12 @@ export const certifications = [
         "id": "jcia-junos-q23",
         "question": "Which command shows the MAC address on a Windows PC?",
         "options": [
-          "all of the above",
-          "arp -a",
-          "getmac",
-          "ipconfig /all"
+          "All of the above commands",
+          "The arp -a command",
+          "The getmac command",
+          "The ipconfig /all command"
         ],
-        "answer": "all of the above",
+        "answer": "All of the above commands",
         "category": "Domain Review",
         "explanation": "All these commands can be used to find the physical address.",
         "topic": "Network Troubleshooting"
@@ -23103,12 +23103,12 @@ export const certifications = [
         "id": "jcia-junos-q24",
         "question": "Which cable type uses a laser as a light source?",
         "options": [
-          "Coaxial",
-          "Multi-mode Fiber",
-          "Single-mode Fiber",
-          "UTP"
+          "Multi-mode Fiber cabling",
+          "Single-mode Fiber cabling",
+          "Standard Coaxial cabling",
+          "Unshielded Twisted Pair (UTP)"
         ],
-        "answer": "Single-mode Fiber",
+        "answer": "Single-mode Fiber cabling",
         "category": "Domain Review",
         "explanation": "Single-mode uses lasers for long-distance transmission.",
         "topic": "Physical Infrastructure"
@@ -23187,12 +23187,12 @@ export const certifications = [
         "id": "jcia-junos-q30",
         "question": "Which device is used to extend the range of a Wi-Fi signal?",
         "options": [
-          "Access Point",
-          "Modem",
-          "Router",
-          "Switch"
+          "Access Point (AP)",
+          "Modem (Signal)",
+          "Router (Network)",
+          "Switch (Network)"
         ],
-        "answer": "Access Point",
+        "answer": "Access Point (AP)",
         "category": "Domain Review",
         "explanation": "APs provide wireless connectivity to a wired network.",
         "topic": "Wireless"
@@ -23243,10 +23243,10 @@ export const certifications = [
         "id": "jcia-junos-q34",
         "question": "What is 'STP' (Spanning Tree Protocol) used for?",
         "options": [
-          "Assign IP addresses",
-          "Encrypt passwords",
+          "Assign new IP addresses",
+          "Encrypt all user passwords",
           "Prevent network loops in switches",
-          "Speed up the network"
+          "Speed up the local network"
         ],
         "answer": "Prevent network loops in switches",
         "category": "Domain Review",
@@ -23285,12 +23285,12 @@ export const certifications = [
         "id": "jcia-junos-q37",
         "question": "Which type of cable is least susceptible to EMI?",
         "options": [
-          "Coaxial",
-          "Fiber Optic",
-          "STP",
-          "UTP"
+          "Coaxial cabling",
+          "Fiber Optic cabling",
+          "STP cabling",
+          "UTP cabling"
         ],
-        "answer": "Fiber Optic",
+        "answer": "Fiber Optic cabling",
         "category": "Domain Review",
         "explanation": "Fiber uses light instead of electricity, making it immune to electromagnetic interference.",
         "topic": "Physical Infrastructure"
@@ -23313,12 +23313,12 @@ export const certifications = [
         "id": "jcia-junos-q39",
         "question": "Which device connects multiple networks and makes path decisions?",
         "options": [
-          "Hub",
-          "Repeater",
-          "Router",
-          "Switch"
+          "Hub (Layer 1 Device)",
+          "Repeater (Layer 1 Device)",
+          "Router (Layer 3 Device)",
+          "Switch (Layer 2 Device)"
         ],
-        "answer": "Router",
+        "answer": "Router (Layer 3 Device)",
         "category": "Domain Review",
         "explanation": "Routers operate at Layer 3 and route traffic between different networks.",
         "topic": "Routing"
@@ -23369,12 +23369,12 @@ export const certifications = [
         "id": "jcia-junos-q43",
         "question": "What is the bit length of an IPv6 address?",
         "options": [
-          "128 bits",
-          "256 bits",
-          "32 bits",
-          "64 bits"
+          "128 bits in length",
+          "256 bits in length",
+          "32 bits in length",
+          "64 bits in length"
         ],
-        "answer": "128 bits",
+        "answer": "128 bits in length",
         "category": "Domain Review",
         "explanation": "IPv6 addresses are 128 bits long, providing a massive address space.",
         "topic": "IP Services"
@@ -23397,12 +23397,12 @@ export const certifications = [
         "id": "jcia-junos-q45",
         "question": "What is 'CSMA/CD' used for?",
         "options": [
-          "Assigning IPs",
-          "Detecting collisions in Ethernet",
-          "Encrypting data",
-          "Routing packets"
+          "Assigning unique IP addresses to network devices",
+          "Detecting collisions in an Ethernet-based network",
+          "Encrypting sensitive data for secure transmission",
+          "Routing data packets between different networks"
         ],
-        "answer": "Detecting collisions in Ethernet",
+        "answer": "Detecting collisions in an Ethernet-based network",
         "category": "Domain Review",
         "explanation": "Carrier Sense Multiple Access with Collision Detection is an older Ethernet protocol.",
         "topic": "Networking Core"
@@ -23411,12 +23411,12 @@ export const certifications = [
         "id": "jcia-junos-q46",
         "question": "What is the function of a 'Subnet'?",
         "options": [
-          "Connect to the printer",
-          "Divide a large network into smaller ones",
-          "Speed up the processor",
-          "Store emails"
+          "Connect to the local network printer for printing",
+          "Divide a large network into multiple smaller ones",
+          "Speed up the processing power of the computer",
+          "Store incoming and outgoing emails on the server"
         ],
-        "answer": "Divide a large network into smaller ones",
+        "answer": "Divide a large network into multiple smaller ones",
         "category": "Domain Review",
         "explanation": "Subnetting improves organization and security.",
         "topic": "IP Services"

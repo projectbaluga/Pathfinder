@@ -18,7 +18,12 @@ const QuizEngine = ({ certId, settings, onExit }) => {
     }
     const cert = certifications.find(c => c.id === certId);
     if (cert) {
-      return [...cert.practiceQuestions].sort(() => Math.random() - 0.5).slice(0, settings.length);
+      const selectedQuestions = [...cert.practiceQuestions].sort(() => Math.random() - 0.5).slice(0, settings.length);
+      // Shuffle options for each question
+      return selectedQuestions.map(q => ({
+        ...q,
+        options: [...q.options].sort(() => Math.random() - 0.5)
+      }));
     }
     return [];
   });
