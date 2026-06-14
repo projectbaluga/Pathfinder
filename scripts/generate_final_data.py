@@ -1,94 +1,375 @@
 import json
+import random
 
-certs = [
-    # Networking
-    {
-        "id": "ccna", "title": "Cisco Certified Network Associate (CCNA)", "issuer": "Cisco", "domain": "Networking", "level": "Intermediate", "price": 300, "duration": "120 mins", "q_count": "100-120", "desc": "Fundamentals for IT careers and networking technologies.",
-        "topics": [
-            ("OSI Model", "L1: Physical to L7: Application layers."),
-            ("TCP/IP", "TCP (reliable) vs UDP (fast) and IP addressing."),
-            ("Routing", "Static and dynamic routing (OSPF, BGP)."),
-            ("Switching", "VLANs, STP, and EtherChannel."),
-            ("Wireless", "802.11 standards and WPA3 security."),
-            ("IP Services", "DHCP, DNS, and NAT operations."),
-            ("Security Fundamentals", "ACLs, VPNs, and port security."),
-            ("Automation", "SDN architecture and JSON/APIs.")
-        ],
-        "questions": [
-            ("Which OSI layer is responsible for routing and IP addressing?", ["Network Layer", "Data Link Layer", "Transport Layer", "Physical Layer"], "Network Layer", "The Network Layer (Layer 3) handles logical addressing and path determination (routing)."),
-            ("What is the primary difference between TCP and UDP?", ["TCP is connection-oriented; UDP is connectionless", "TCP is faster than UDP", "UDP provides reliability; TCP does not", "TCP uses less overhead than UDP"], "TCP is connection-oriented; UDP is connectionless", "TCP ensures delivery with handshakes, while UDP sends data without establishing a connection."),
-            ("Which protocol is used for dynamic routing within an autonomous system?", ["OSPF", "BGP", "HTTPS", "SMTP"], "OSPF", "OSPF is an Interior Gateway Protocol (IGP) used for routing within an organization."),
-            ("What is the purpose of a VLAN?", ["Segment networks logically", "Increase physical cable distance", "Convert fiber to ethernet", "Provide power to devices"], "Segment networks logically", "VLANs allow network administrators to group devices together even if they are on different physical switches."),
-            ("Which command shows the status of all interfaces on a Cisco router?", ["show ip interface brief", "display all", "get status", "show run config"], "show ip interface brief", "This command provides a concise summary of interface status and IP addresses.")
-        ]
-    },
-    {
-        "id": "sec-plus", "title": "CompTIA Security+", "issuer": "CompTIA", "domain": "Security", "level": "Beginner", "price": 392, "duration": "90 mins", "q_count": "Max 90", "desc": "Baseline skills for core security functions and IT security career.",
-        "topics": [
-            ("Attacks & Threats", "Phishing, malware, and social engineering."),
-            ("Architecture", "Secure network design and cloud security."),
-            ("Implementation", "Identity management and cryptography."),
-            ("Operations", "Incident response and digital forensics."),
-            ("Governance", "Risk management and compliance standards.")
-        ],
-        "questions": [
-            ("Which type of attack uses deceptive emails to steal credentials?", ["Phishing", "DDoS", "SQL Injection", "Man-in-the-Middle"], "Phishing", "Phishing is a social engineering attack that tricks users into revealing sensitive information."),
-            ("What does the principle of Least Privilege state?", ["Users should only have minimum access required", "All users should have admin rights", "Access is based on seniority", "Everyone has access to everything"], "Users should only have minimum access required", "Least Privilege minimizes the potential damage from a compromised account."),
-            ("Which encryption type uses the same key for both encryption and decryption?", ["Symmetric", "Asymmetric", "Hashing", "Public Key"], "Symmetric", "Symmetric encryption (like AES) uses a single shared secret key."),
-            ("What is a DMZ used for in network security?", ["Host public-facing services", "Backup internal data", "Storage for logs", "Testing malware"], "Host public-facing services", "A DeMilitarized Zone (DMZ) isolates public services from the private internal network."),
-            ("Which framework provides a standard for managing IT risks in the US?", ["NIST RMF", "GDPR", "ISO 27001", "HIPAA"], "NIST RMF", "The NIST Risk Management Framework is widely used for securing government and private systems.")
-        ]
-    },
-    {
-        "id": "aws-ccp", "title": "AWS Certified Cloud Practitioner", "issuer": "AWS", "domain": "Cloud", "level": "Beginner", "price": 100, "duration": "90 mins", "q_count": "65", "desc": "Overall understanding of the AWS Cloud platform.",
-        "topics": [
-            ("Cloud Concepts", "Elasticity, scalability, and high availability."),
-            ("Security & Compliance", "Shared Responsibility Model and IAM."),
-            ("Technology", "Compute (EC2), Storage (S3), and DBs (RDS)."),
-            ("Billing & Pricing", "Pricing models and cost optimization.")
-        ],
-        "questions": [
-            ("Which AWS service provides resizable compute capacity in the cloud?", ["Amazon EC2", "Amazon S3", "AWS Lambda", "Amazon RDS"], "Amazon EC2", "EC2 allows users to run virtual servers in the AWS cloud."),
-            ("In the Shared Responsibility Model, who is responsible for patching the guest OS?", ["The Customer", "AWS", "Both", "Third-party vendor"], "The Customer", "AWS manages the infrastructure; the customer manages their data and OS."),
-            ("Which service is used to manage user access and permissions in AWS?", ["AWS IAM", "AWS Shield", "Amazon CloudWatch", "AWS Config"], "AWS IAM", "Identity and Access Management (IAM) controls who can access AWS resources."),
-            ("What is the benefit of 'Elasticity' in cloud computing?", ["Scaling resources based on demand", "Paying a fixed monthly fee", "Having a static IP address", "Accessing data from anywhere"], "Scaling resources based on demand", "Elasticity allows a system to automatically add or remove resources to match load."),
-            ("Which AWS tool helps estimate monthly cloud costs?", ["AWS Pricing Calculator", "AWS Trusted Advisor", "AWS Shield", "Amazon Inspector"], "AWS Pricing Calculator", "The calculator provides an estimate of your AWS bill based on planned usage.")
-        ]
-    },
-    {
-        "id": "pmp", "title": "Project Management Professional (PMP)", "issuer": "PMI", "domain": "Project Management", "level": "Advanced", "price": 555, "duration": "230 mins", "q_count": "180", "desc": "Gold standard of project management certification.",
-        "topics": [
-            ("People", "Leading teams and managing conflict."),
-            ("Process", "Methodologies (Agile, Waterfall, Hybrid)."),
-            ("Business Environment", "Organizational change and value delivery.")
-        ],
-        "questions": [
-            ("In Scrum, who is responsible for prioritizing the Product Backlog?", ["Product Owner", "Scrum Master", "Development Team", "Project Manager"], "Product Owner", "The Product Owner represents the business and prioritizes work for the team."),
-            ("What is the 'Critical Path' in a project schedule?", ["The longest sequence of tasks", "The shortest sequence of tasks", "The list of easy tasks", "Tasks with the most budget"], "The longest sequence of tasks", "The critical path determines the minimum duration of the project."),
-            ("Which methodology uses 'Sprints' to deliver incremental value?", ["Agile", "Waterfall", "Six Sigma", "PRINCE2"], "Agile", "Agile frameworks like Scrum break work into short time-boxed iterations."),
-            ("How should a project manager handle a highly influential but resistant stakeholder?", ["Manage closely and engage frequently", "Ignore them", "Remove them from the project", "Assign them more tasks"], "Manage closely and engage frequently", "Engagement is key to converting or mitigating the impact of resistant stakeholders."),
-            ("What does EVM stand for in project management?", ["Earned Value Management", "Estimated Variable Margin", "Essential View Metric", "Efficient Value Mapping"], "Earned Value Management", "EVM is a technique used to measure project performance and progress.")
-        ]
-    },
-    {
-        "id": "aplus", "title": "CompTIA A+", "issuer": "CompTIA", "domain": "Infrastructure", "level": "Beginner", "price": 246, "duration": "90 mins", "q_count": "Max 90", "desc": "Standard for entry-level IT professionals.",
-        "topics": [
-            ("Hardware", "Processors, RAM, and Motherboards."),
-            ("Operating Systems", "Windows, Linux, and mobile OS."),
-            ("Troubleshooting", "Systematic hardware and software repair.")
-        ],
-        "questions": [
-            ("Which component acts as the 'brain' of the computer?", ["CPU", "RAM", "GPU", "HDD"], "CPU", "The Central Processing Unit (CPU) executes instructions and processes data."),
-            ("What is the first step in the troubleshooting process?", ["Identify the problem", "Establish a theory", "Test the theory", "Document findings"], "Identify the problem", "You must first understand what is wrong before attempting to fix it."),
-            ("Which port is used for a standard wired network connection?", ["RJ-45", "USB-C", "HDMI", "DisplayPort"], "RJ-45", "The Registered Jack 45 (RJ-45) is the standard connector for Ethernet cables."),
-            ("Which storage type has no moving parts and is faster than a traditional HDD?", ["SSD", "CD-ROM", "Floppy Disk", "Tape Drive"], "SSD", "Solid State Drives (SSDs) use flash memory for high-speed data access."),
-            ("What command is used to check the IP configuration on a Windows machine?", ["ipconfig", "ifconfig", "netstat", "ping"], "ipconfig", "The ipconfig command displays all current TCP/IP network configuration values.")
-        ]
-    }
-]
+# Domain Data: Each entry is (Topic Name, Topic Detail, Question, Options, Answer, Explanation)
+domain_data = {
+    "Networking": [
+        ("OSI Layer 1", "Physical layer deals with bitstream, cables, and connectors.", "Which OSI layer is responsible for the physical connection between devices?", ["Data Link", "Network", "Physical", "Transport"], "Physical", "Layer 1 is the Physical layer, dealing with hardware and signals."),
+        ("OSI Layer 2", "Data Link layer handles MAC addresses and frame synchronization.", "Which layer uses MAC addresses to identify devices on a local network?", ["Application", "Data Link", "Network", "Physical"], "Data Link", "MAC addresses are used at Layer 2, the Data Link layer."),
+        ("OSI Layer 3", "Network layer manages logical addressing and routing.", "Which OSI layer handles IP addressing and routing?", ["Data Link", "Network", "Session", "Transport"], "Network", "Layer 3, the Network layer, is responsible for routing and IP addresses."),
+        ("OSI Layer 4", "Transport layer ensures reliable data transfer (TCP/UDP).", "Which layer is responsible for end-to-end communication and error recovery?", ["Data Link", "Network", "Physical", "Transport"], "Transport", "Layer 4, the Transport layer, handles TCP and UDP communications."),
+        ("OSI Layer 5", "Session layer manages communication sessions between applications.", "Which layer establishes, manages, and terminates sessions between applications?", ["Presentation", "Session", "Transport", "Network"], "Session", "The Session layer (Layer 5) maintains the connection between applications."),
+        ("OSI Layer 6", "Presentation layer translates data formats (encryption, compression).", "Which OSI layer is responsible for data encryption and translation?", ["Application", "Network", "Presentation", "Session"], "Presentation", "The Presentation layer handles how data is formatted and presented."),
+        ("OSI Layer 7", "Application layer provides network services to user applications.", "Which layer interacts directly with software applications like web browsers?", ["Application", "Presentation", "Session", "Transport"], "Application", "Layer 7 is the interface for user applications."),
+        ("TCP vs UDP", "TCP is connection-oriented (reliable); UDP is connectionless (fast).", "Which protocol provides reliable, ordered, and error-checked delivery?", ["HTTP", "IP", "TCP", "UDP"], "TCP", "TCP ensures reliable delivery through handshakes and acknowledgments."),
+        ("UDP Characteristics", "UDP is used for real-time traffic like VoIP and streaming.", "Which protocol is preferred for low-latency applications like online gaming?", ["FTP", "SMTP", "TCP", "UDP"], "UDP", "UDP has less overhead, making it faster for real-time needs."),
+        ("IP Addressing", "IPv4 uses 32 bits; IPv6 uses 128 bits.", "How many bits are in an IPv4 address?", ["128", "32", "48", "64"], "32", "IPv4 addresses are 32-bit values, usually written in dotted-decimal format."),
+        ("IPv6 Benefits", "IPv6 provides a larger address space and built-in security.", "What is the primary reason for the transition to IPv6?", ["Better speed", "IPv4 address exhaustion", "Reduced security", "Simplified hardware"], "IPv4 address exhaustion", "IPv6 was created because the pool of available IPv4 addresses ran out."),
+        ("Subnetting", "Subnetting divides a large network into smaller, manageable pieces.", "What is the purpose of a subnet mask?", ["Identify the device", "Identify the gateway", "Separate network and host portions of an IP", "Speed up the network"], "Separate network and host portions of an IP", "The subnet mask determines which part of the IP address is the network ID."),
+        ("VLANs", "Virtual LANs segment a physical switch into multiple logical networks.", "Which technology allows multiple isolated networks on a single physical switch?", ["NAT", "RIP", "STP", "VLAN"], "VLAN", "Virtual Local Area Networks (VLANs) segment networks at the switch level."),
+        ("Routing Protocols", "Dynamic routing (OSPF, BGP) automates path determination.", "Which protocol is primarily used for routing between different Autonomous Systems on the internet?", ["BGP", "EIGRP", "OSPF", "RIP"], "BGP", "Border Gateway Protocol (BGP) is the routing protocol of the internet."),
+        ("OSPF", "Open Shortest Path First is a link-state routing protocol for internal networks.", "Which type of routing protocol is OSPF?", ["Distance Vector", "Exterior Gateway", "Hybrid", "Link-State"], "Link-State", "OSPF is a popular link-state IGP."),
+        ("Switching", "Switches forward frames based on MAC addresses in their CAM table.", "Which table does a switch use to map MAC addresses to physical ports?", ["ARP Table", "CAM Table", "Routing Table", "VLAN Table"], "CAM Table", "The Content Addressable Memory (CAM) table stores MAC-to-port mappings."),
+        ("Default Gateway", "The gateway is the exit point for traffic leaving the local subnet.", "What is a default gateway?", ["A DNS server", "A firewall", "A router that connects a local network to other networks", "The primary switch"], "A router that connects a local network to other networks", "The gateway routes traffic outside the local network."),
+        ("DHCP", "Dynamic Host Configuration Protocol automates IP assignment.", "Which protocol automatically assigns IP addresses to devices?", ["ARP", "DHCP", "DNS", "SNMP"], "DHCP", "DHCP simplifies network management by assigning IPs dynamically."),
+        ("DNS", "Domain Name System translates hostnames to IP addresses.", "What is the primary function of DNS?", ["Assign IP addresses", "Encrypt data", "Route traffic", "Translate domain names to IP addresses"], "Translate domain names to IP addresses", "DNS works like a phonebook for the internet."),
+        ("NAT", "Network Address Translation maps private IPs to a public IP.", "Which technology allows multiple devices on a private network to share one public IP?", ["DHCP", "DNS", "NAT", "VLAN"], "NAT", "NAT conserves public IPv4 addresses."),
+        ("ARP", "Address Resolution Protocol maps IP addresses to MAC addresses.", "Which protocol is used to find the MAC address associated with a known IP?", ["ARP", "DHCP", "ICMP", "IGMP"], "ARP", "ARP is essential for Layer 2 delivery on Ethernet networks."),
+        ("ICMP", "Internet Control Message Protocol is used for diagnostics like ping.", "Which protocol does the 'ping' command use?", ["FTP", "ICMP", "SMTP", "UDP"], "ICMP", "ICMP handles error and status messages for IP."),
+        ("Port 80", "HTTP uses TCP port 80 by default.", "What is the default port for unencrypted web traffic?", ["21", "22", "443", "80"], "80", "HTTP (web) uses port 80."),
+        ("Port 443", "HTTPS uses TCP port 443 for secure traffic.", "Which port is used for secure web browsing (HTTPS)?", ["25", "443", "53", "80"], "443", "HTTPS uses port 443 for encrypted communication."),
+        ("Port 22", "SSH uses TCP port 22 for secure remote management.", "Which port is used by SSH for secure terminal access?", ["21", "22", "23", "25"], "22", "SSH (Secure Shell) uses port 22."),
+        ("Port 53", "DNS uses UDP/TCP port 53.", "Which port is used by the Domain Name System?", ["53", "67", "68", "80"], "53", "DNS queries typically use port 53."),
+        ("Firewalls", "Firewalls filter traffic based on security rules.", "What is the primary purpose of a firewall?", ["Assign IP addresses", "Filter network traffic", "Route packets", "Translate domain names"], "Filter network traffic", "Firewalls protect networks by controlling what traffic is allowed."),
+        ("Hubs", "Hubs broadcast all traffic to all ports (Layer 1).", "How does a hub handle incoming data packets?", ["Broadcasts to all ports", "Encrypts the packet", "Routes to the specific destination", "Switches to the correct MAC"], "Broadcasts to all ports", "Hubs are simple Layer 1 devices that don't look at addresses."),
+        ("MAC Address", "Media Access Control addresses are 48-bit hardware identifiers.", "How many bits are in a standard MAC address?", ["128", "32", "48", "64"], "48", "MAC addresses are 48-bit hexadecimal values."),
+        ("STP", "Spanning Tree Protocol prevents loops in switched networks.", "Which protocol prevents broadcast storms and loops in a Layer 2 network?", ["OSPF", "RIP", "STP", "VLAN"], "STP", "STP blocks redundant paths to prevent loops."),
+        ("Wireless Standards", "802.11 defines standards for Wi-Fi.", "Which IEEE standard defines wireless local area networks (WLAN)?", ["802.1", "802.11", "802.3", "802.5"], "802.11", "802.11 is the family of standards for Wi-Fi."),
+        ("WPA3", "WPA3 is the latest security protocol for Wi-Fi.", "Which is the most secure wireless encryption standard currently available?", ["WEP", "WPA", "WPA2", "WPA3"], "WPA3", "WPA3 offers the best protection for modern Wi-Fi networks."),
+        ("SSID", "Service Set Identifier is the name of a wireless network.", "What does SSID stand for in wireless networking?", ["Secure System ID", "Service Set Identifier", "Signal Strength ID", "Standard Socket ID"], "Service Set Identifier", "The SSID is the name you see when searching for Wi-Fi."),
+        ("Ethernet", "802.3 is the IEEE standard for wired Ethernet.", "Which IEEE standard defines wired Ethernet?", ["802.11", "802.3", "802.5", "802.1x"], "802.3", "802.3 is the standard for Ethernet cabling and signaling."),
+        ("Full-Duplex", "Full-duplex allows simultaneous two-way communication.", "In which mode can a device send and receive data at the same time?", ["Full-Duplex", "Half-Duplex", "Simplex", "Uni-Duplex"], "Full-Duplex", "Full-duplex eliminates collisions and doubles throughput."),
+        ("Half-Duplex", "Half-duplex allows two-way communication but not simultaneously.", "Which mode is used when only one device can transmit on a medium at a time?", ["Full-Duplex", "Half-Duplex", "Multi-Duplex", "Simplex"], "Half-Duplex", "Half-duplex is like a walkie-talkie."),
+        ("VPN", "Virtual Private Networks create secure tunnels over public networks.", "Which technology provides a secure, encrypted connection over a public network?", ["DNS", "NAT", "VLAN", "VPN"], "VPN", "VPNs protect data privacy across the internet."),
+        ("ACL", "Access Control Lists filter traffic on routers and firewalls.", "What is an ACL used for?", ["Assigning IP addresses", "Controlling network traffic access", "Mapping domain names", "Preventing hardware failure"], "Controlling network traffic access", "ACLs define rules for permitting or denying traffic."),
+        ("PoE", "Power over Ethernet delivers electrical power via network cables.", "Which technology allows network cables to carry electrical power to devices?", ["BGP", "PoE", "STP", "VLAN"], "PoE", "Power over Ethernet (PoE) powers IP phones and cameras."),
+        ("Troubleshooting - Ping", "Ping tests basic reachability to an IP address.", "What is the first command used to test if a remote host is reachable?", ["ipconfig", "netstat", "ping", "nslookup"], "ping", "Ping is the most common tool for basic connectivity testing."),
+        ("Troubleshooting - Traceroute", "Traceroute shows the path and delays across a network.", "Which tool shows the path a packet takes to reach its destination?", ["ipconfig", "ping", "traceroute", "nslookup"], "traceroute", "Traceroute (or tracert) lists all the hops to a target."),
+        ("Troubleshooting - Nslookup", "Nslookup queries DNS records for a domain.", "Which tool is used to troubleshoot DNS resolution issues?", ["ipconfig", "nslookup", "ping", "tracert"], "nslookup", "Nslookup helps verify if DNS is returning the correct IP."),
+        ("WAN", "Wide Area Networks connect geographically dispersed sites.", "Which type of network spans a large geographic area like a country or the world?", ["LAN", "PAN", "WAN", "WLAN"], "WAN", "A WAN connects different cities or regions."),
+        ("LAN", "Local Area Networks cover a small area like a home or office.", "Which type of network is typically confined to a single building?", ["CAN", "LAN", "MAN", "WAN"], "LAN", "LANs are high-speed networks for local users."),
+        ("Topologies - Star", "Star topology connects all devices to a central hub or switch.", "Which network topology uses a central device to connect all nodes?", ["Bus", "Mesh", "Ring", "Star"], "Star", "The star topology is the most common in modern LANs."),
+        ("Topologies - Mesh", "Mesh topology provides high redundancy with multiple connections.", "Which topology provides the highest level of redundancy and fault tolerance?", ["Bus", "Mesh", "Ring", "Star"], "Mesh", "In a full mesh, every node is connected to every other node."),
+        ("Fiber Optic", "Fiber uses light pulses to transmit data at high speeds.", "Which cable medium uses light to transmit data?", ["Coaxial", "Fiber Optic", "STP", "UTP"], "Fiber Optic", "Fiber optic cable is immune to EMI and supports long distances."),
+        ("UTP Cable", "Unshielded Twisted Pair is the most common LAN cable.", "What is the most common type of cabling used in a LAN?", ["Coaxial", "Fiber", "STP", "UTP"], "UTP", "UTP (e.g., Cat6) is cheap and effective for short distances."),
+        ("Collision Domain", "A collision domain is a network segment where collisions can occur.", "Which device breaks up collision domains?", ["Hub", "Repeater", "Switch", "Transceiver"], "Switch", "Each port on a switch is its own collision domain."),
+        ("Broadcast Domain", "A broadcast domain is a network segment where broadcasts are received.", "Which device is primarily used to separate broadcast domains?", ["Bridge", "Hub", "Router", "Switch"], "Router", "Routers do not forward broadcasts by default.")
+    ],
+    "Security": [
+        ("Confidentiality", "Confidentiality ensures that data is only accessible to authorized users.", "Which part of the CIA triad focus on preventing unauthorized data disclosure?", ["Availability", "Confidentiality", "Integrity", "Non-repudiation"], "Confidentiality", "Confidentiality is achieved through encryption and access controls."),
+        ("Integrity", "Integrity ensures that data has not been tampered with or altered.", "Which principle ensures that data is accurate and has not been modified?", ["Availability", "Confidentiality", "Integrity", "Scalability"], "Integrity", "Integrity is often verified using hashing."),
+        ("Availability", "Availability ensures that systems and data are accessible when needed.", "Which principle focuses on ensuring services are up and running for users?", ["Availability", "Confidentiality", "Integrity", "Privacy"], "Availability", "Availability involves redundancy and DDoS protection."),
+        ("Phishing", "Phishing uses deceptive emails to trick users into giving up data.", "What is the term for a social engineering attack via email?", ["Phishing", "Smishing", "Tailgating", "Vishing"], "Phishing", "Phishing is the most common form of social engineering."),
+        ("Spear Phishing", "Spear phishing targets a specific individual or organization.", "What is a targeted version of phishing called?", ["DDoS", "Ransomware", "Spear Phishing", "Whaling"], "Spear Phishing", "Spear phishing is more personalized and harder to detect."),
+        ("Whaling", "Whaling targets high-profile individuals like executives (CEOs).", "What is phishing that specifically targets high-level executives?", ["Pharming", "Smishing", "Vishing", "Whaling"], "Whaling", "Whaling targets the 'big fish' in an organization."),
+        ("Social Engineering", "Social engineering manipulates people into performing actions.", "Which attack type relies on human psychology rather than technical flaws?", ["Buffer Overflow", "DDoS", "Social Engineering", "SQL Injection"], "Social Engineering", "People are often the weakest link in security."),
+        ("Multi-Factor Auth", "MFA requires two or more verification methods.", "What does MFA stand for?", ["Main Frame Access", "Multi-Factor Authentication", "Multiple File Access", "Mutual Flow Agreement"], "Multi-Factor Authentication", "MFA significantly improves security over passwords alone."),
+        ("MFA Factors", "Factors include: something you know, have, are, or do.", "Which of these is an example of 'something you are' in MFA?", ["A password", "A physical token", "A smartphone", "A thumbprint"], "A thumbprint", "Biometrics are 'something you are'."),
+        ("Brute Force", "Brute force attacks try every possible password combination.", "What is the term for attempting every possible password to crack an account?", ["Brute Force", "Dictionary Attack", "Phishing", "SQLi"], "Brute Force", "Brute force is slow but eventually successful if the password is short."),
+        ("Dictionary Attack", "Dictionary attacks use a pre-defined list of common passwords.", "Which attack uses a file containing common words and passwords?", ["Buffer Overflow", "Dictionary Attack", "Pharming", "Whaling"], "Dictionary Attack", "Dictionary attacks are faster than pure brute force."),
+        ("Malware", "Malware is any software designed to cause harm.", "What is the general term for malicious software?", ["Bloatware", "Firmware", "Malware", "Shareware"], "Malware", "Malware includes viruses, worms, and trojans."),
+        ("Ransomware", "Ransomware encrypts files and demands a ransom payment.", "Which type of malware locks a user's data and demands money?", ["Adware", "Ransomware", "Spyware", "Trojan"], "Ransomware", "Ransomware is a major threat to businesses today."),
+        ("Trojan Horse", "A Trojan appears useful but contains a hidden malicious payload.", "Which malware disguises itself as legitimate software?", ["Logic Bomb", "Rootkit", "Trojan Horse", "Worm"], "Trojan Horse", "Trojans require user action to execute."),
+        ("Worm", "Worms are self-replicating malware that spreads over networks.", "Which malware can spread automatically without human intervention?", ["Adware", "Spyware", "Trojan", "Worm"], "Worm", "Worms exploit network vulnerabilities to self-spread."),
+        ("Spyware", "Spyware secretly monitors user activity and collects info.", "Which malware is designed to record a user's keystrokes or browsing habits?", ["Logic Bomb", "Rootkit", "Spyware", "Virus"], "Spyware", "Keyloggers are a common type of spyware."),
+        ("DDoS Attack", "Distributed Denial of Service floods a target with traffic.", "What is an attack that uses many compromised computers to crash a website?", ["Brute Force", "DDoS", "Man-in-the-Middle", "SQLi"], "DDoS", "DDoS attacks use botnets to overwhelm targets."),
+        ("Botnet", "A botnet is a network of compromised 'zombie' computers.", "What is a collection of internet-connected devices infected with malware and controlled as a group?", ["Botnet", "Cloud", "Intranet", "Mainframe"], "Botnet", "Botnets are used for DDoS and spamming."),
+        ("SQL Injection", "SQLi inserts malicious code into database queries via inputs.", "Which attack targets web applications by manipulating database queries?", ["Cross-site Scripting", "DDoS", "SQL Injection", "Zero-day"], "SQL Injection", "SQLi can lead to unauthorized data access or deletion."),
+        ("XSS", "Cross-Site Scripting injects malicious scripts into trusted websites.", "Which attack involves injecting scripts into a webpage viewed by other users?", ["Buffer Overflow", "Cross-Site Scripting (XSS)", "SQL Injection", "Tailgating"], "Cross-Site Scripting (XSS)", "XSS targets the users of a website, not the server directly."),
+        ("Encryption", "Encryption converts plain text into unreadable cipher text.", "What is the process of converting readable data into an unreadable format?", ["Decryption", "Encryption", "Hashing", "Steganography"], "Encryption", "Encryption protects data confidentiality."),
+        ("Symmetric Encryption", "Symmetric uses one shared key for both encryption and decryption.", "Which type of encryption uses the same key for both parties?", ["Asymmetric", "Hashing", "Public Key", "Symmetric"], "Symmetric", "Symmetric encryption (like AES) is fast and efficient."),
+        ("Asymmetric Encryption", "Asymmetric uses a public key to encrypt and a private key to decrypt.", "Which encryption type uses a public and private key pair?", ["Asymmetric", "DES", "Hashing", "Symmetric"], "Asymmetric", "Asymmetric encryption (like RSA) solves the key exchange problem."),
+        ("Hashing", "Hashing creates a unique fixed-length string from data.", "Which process is used to ensure data integrity by creating a digital fingerprint?", ["Decryption", "Encryption", "Hashing", "Salting"], "Hashing", "If one bit changes in the data, the hash changes completely."),
+        ("Salt", "Salting adds random data to passwords before hashing them.", "What is added to a password before hashing to protect against rainbow table attacks?", ["Cipher", "Key", "Padding", "Salt"], "Salt", "Salting makes identical passwords have different hashes."),
+        ("Firewall Types", "Stateful firewalls track the state of active connections.", "Which type of firewall keeps track of the state of network connections?", ["Packet Filter", "Proxy Firewall", "Stateful Firewall", "Stateless Firewall"], "Stateful Firewall", "Stateful firewalls are more secure than simple packet filters."),
+        ("DMZ", "A DMZ isolates public-facing servers from the internal network.", "Which network segment is used to host public services like web servers?", ["DMZ", "Extranet", "Intranet", "VLAN"], "DMZ", "The DeMilitarized Zone (DMZ) provides an extra layer of security."),
+        ("IDS vs IPS", "IDS detects attacks; IPS detects and prevents attacks.", "Which system actively blocks a malicious connection when it's detected?", ["Firewall", "Honeypot", "IDS", "IPS"], "IPS", "Intrusion Prevention Systems (IPS) take action to stop threats."),
+        ("VPN Protocols", "IPsec and SSL/TLS are common VPN technologies.", "Which protocol is commonly used to secure VPN connections at the network layer?", ["FTP", "HTTP", "IPsec", "SMTP"], "IPsec", "IPsec is a suite of protocols for securing IP communications."),
+        ("Least Privilege", "Least privilege gives users only the access they need.", "Which principle states that users should only have the minimum access necessary?", ["Implicit Deny", "Least Privilege", "Need to Know", "Separation of Duties"], "Least Privilege", "Least privilege limits the blast radius of a compromised account."),
+        ("Need to Know", "Need to know limits access to specific info required for a task.", "Which principle focuses on access to specific information, even if a user has high permissions?", ["Least Privilege", "Need to Know", "Role-Based Access", "Separation of Duties"], "Need to Know", "Need to know is a subset of least privilege."),
+        ("Implicit Deny", "Implicit deny blocks all traffic unless specifically allowed.", "What is the security practice of blocking everything by default?", ["Explicit Allow", "Implicit Deny", "Role-Based Access", "White Listing"], "Implicit Deny", "Implicit deny is a core firewall concept."),
+        ("Physical Security", "Physical security protects hardware from unauthorized access.", "Which of these is a physical security control?", ["Antivirus", "Firewall", "Mantrap", "Strong Password"], "Mantrap", "A mantrap is a physical entry control system."),
+        ("Biometrics", "Biometrics use physical characteristics for identification.", "Which authentication method uses a fingerprint or retina scan?", ["Biometrics", "Multi-Factor", "Smart Card", "Token"], "Biometrics", "Biometrics are hard to forge but raise privacy concerns."),
+        ("Zero Day", "A Zero Day is a vulnerability unknown to the software vendor.", "What is an attack that exploits a previously unknown vulnerability?", ["Brute Force", "SQLi", "Whaling", "Zero Day"], "Zero Day", "Zero-day attacks have no immediate patch available."),
+        ("Honeypot", "A honeypot is a trap set to detect or deflect attacks.", "What is a decoy system designed to lure and study attackers?", ["DMZ", "Firewall", "Honeypot", "Proxy"], "Honeypot", "Honeypots provide valuable threat intelligence."),
+        ("Risk Management", "Risk management involves identifying and mitigating threats.", "Which term describes the process of identifying, assessing, and reducing risk?", ["Compliance", "Governance", "Risk Management", "Threat Hunting"], "Risk Management", "You can't eliminate all risk, only manage it."),
+        ("Risk Avoidance", "Risk avoidance stops an activity to eliminate the risk.", "Which risk strategy involves stopping a risky activity altogether?", ["Avoidance", "Mitigation", "Retention", "Transfer"], "Avoidance", "If a project is too risky, avoidance may be the best choice."),
+        ("Risk Transfer", "Risk transfer moves the risk to a third party (e.g., insurance).", "Which risk strategy involves buying insurance to cover potential losses?", ["Acceptance", "Mitigation", "Retention", "Transfer"], "Transfer", "Outsourcing can also be a form of risk transfer."),
+        ("Risk Mitigation", "Risk mitigation uses controls to reduce the impact or likelihood.", "Which risk strategy involves implementing a firewall to reduce the chance of an attack?", ["Acceptance", "Avoidance", "Mitigation", "Transfer"], "Mitigation", "Mitigation is the most common risk strategy."),
+        ("Vulnerability Scan", "Vulnerability scans identify known weaknesses in a system.", "What is an automated tool that searches for known security flaws in a network?", ["Antivirus", "IDS", "Packet Sniffer", "Vulnerability Scanner"], "Vulnerability Scanner", "Scanners help teams prioritize patches."),
+        ("Penetration Test", "Pen-tests are authorized simulated attacks to test defenses.", "What is a 'legal' hack performed to find weaknesses in an organization?", ["DDoS", "Malware injection", "Penetration Test", "Social Engineering"], "Penetration Test", "Pen-tests provide a deeper analysis than simple scans."),
+        ("Compliance", "Compliance ensures following laws and regulations (GDPR, HIPAA).", "Which term refers to meeting the requirements of a specific law or regulation?", ["Compliance", "Governance", "Privacy", "Risk"], "Compliance", "Compliance is often required for industry or legal reasons."),
+        ("GDPR", "GDPR is a European law focused on data privacy.", "Which regulation focuses on the data privacy of European Union citizens?", ["GDPR", "HIPAA", "PCI DSS", "SOX"], "GDPR", "GDPR has significant fines for non-compliance."),
+        ("HIPAA", "HIPAA protects medical information in the US.", "Which regulation protects sensitive patient health information in the US?", ["FERPA", "GDPR", "HIPAA", "PCI DSS"], "HIPAA", "HIPAA is critical for healthcare providers."),
+        ("PCI DSS", "PCI DSS is a standard for protecting credit card data.", "Which standard is required for any company that handles credit card information?", ["GDPR", "ISO 27001", "PCI DSS", "SOX"], "PCI DSS", "PCI DSS is mandated by the major card brands."),
+        ("Incident Response", "Incident response is the process of handling a security breach.", "What is the term for the organized approach to managing a security breach?", ["Disaster Recovery", "Incident Response", "Risk Management", "Threat Hunting"], "Incident Response", "IR plans help organizations react quickly to attacks."),
+        ("Business Continuity", "BCP ensures that business operations can continue during a disaster.", "What does BCP stand for in security management?", ["Back-up Control Plan", "Basic Compliance Process", "Business Continuity Plan", "Business Cost Program"], "Business Continuity Plan", "BCP focuses on keeping the business running."),
+        ("Disaster Recovery", "DRP focuses on restoring IT systems after a failure.", "What does DRP stand for in IT management?", ["Data Restore Process", "Digital Risk Program", "Disaster Recovery Plan", "Distributed Recovery Path"], "Disaster Recovery Plan", "DRP is a subset of business continuity."),
+        ("Backup Strategies", "Full, Incremental, and Differential are common backup types.", "Which backup type saves all data every time it runs?", ["Differential", "Full", "Incremental", "Partial"], "Full", "Full backups are slow but easiest to restore.")
+    ],
+    "Cloud": [
+        ("Cloud Definition", "Cloud computing is the on-demand delivery of IT resources over the internet.", "What is cloud computing?", ["A hardware upgrade", "A local server", "On-demand delivery of IT resources over the internet", "Using a USB drive"], "On-demand delivery of IT resources over the internet", "Cloud computing replaces local hardware with remote services."),
+        ("On-Demand Self-Service", "Users can provision resources without human interaction from providers.", "Which cloud characteristic allows users to get resources like servers automatically?", ["Broad Network Access", "Measured Service", "On-Demand Self-Service", "Resource Pooling"], "On-Demand Self-Service", "No need to call the provider to launch a new instance."),
+        ("Broad Network Access", "Cloud services are available over the network via multiple devices.", "Which cloud characteristic ensures services can be accessed from phones, laptops, and tablets?", ["Broad Network Access", "Elasticity", "Measured Service", "Resource Pooling"], "Broad Network Access", "Cloud services are built for internet access."),
+        ("Resource Pooling", "Providers serve multiple customers using a multi-tenant model.", "What is it called when a provider uses shared hardware to serve many customers?", ["Elasticity", "Measured Service", "Multi-Cloud", "Resource Pooling"], "Resource Pooling", "Resource pooling leads to economies of scale."),
+        ("Rapid Elasticity", "Resources can be scaled up or down quickly based on demand.", "Which cloud benefit allows you to handle sudden spikes in website traffic?", ["Cost Optimization", "High Availability", "Rapid Elasticity", "Security"], "Rapid Elasticity", "Elasticity is the 'rubber band' effect of cloud resources."),
+        ("Measured Service", "Cloud usage is tracked and customers pay for what they use.", "Which cloud characteristic is similar to a utility bill where you only pay for usage?", ["Broad Network Access", "Measured Service", "On-Demand Self-Service", "Resource Pooling"], "Measured Service", "This is often called the 'Pay-as-you-go' model."),
+        ("IaaS", "Infrastructure as a Service provides virtualized hardware (servers, storage).", "What does IaaS stand for?", ["Information as a Service", "Infrastructure as a Service", "Integration as a Service", "Internet as a Service"], "Infrastructure as a Service", "IaaS gives you the most control over the underlying OS."),
+        ("PaaS", "Platform as a Service provides a framework for developers to build apps.", "Which cloud model is best for developers who don't want to manage servers?", ["IaaS", "PaaS", "SaaS", "SECaaS"], "PaaS", "PaaS handles the runtime, OS, and middleware."),
+        ("SaaS", "Software as a Service provides finished applications over the web.", "Which cloud model delivers applications like Gmail or Salesforce?", ["IaaS", "PaaS", "SaaS", "Storage as a Service"], "SaaS", "The customer only manages their data and settings in SaaS."),
+        ("Public Cloud", "Services are offered over the public internet and shared across organizations.", "What is the most common cloud deployment model used by startups?", ["Community Cloud", "Hybrid Cloud", "Private Cloud", "Public Cloud"], "Public Cloud", "Public cloud (AWS, Azure) is highly scalable and low cost."),
+        ("Private Cloud", "Cloud resources are used exclusively by a single organization.", "Which deployment model is best for organizations with strict security or regulatory needs?", ["Community Cloud", "Hybrid Cloud", "Private Cloud", "Public Cloud"], "Private Cloud", "Private cloud offers the most control and isolation."),
+        ("Hybrid Cloud", "A mix of public and private clouds, allowing data sharing between them.", "Which model combines on-premises infrastructure with public cloud services?", ["Community Cloud", "Hybrid Cloud", "Multi-Cloud", "Private Cloud"], "Hybrid Cloud", "Hybrid is popular for transitioning to the cloud."),
+        ("Multi-Cloud", "Using multiple cloud providers (e.g., AWS and Azure) for different tasks.", "What is it called when an organization uses services from both AWS and Google Cloud?", ["Dual Cloud", "Hybrid Cloud", "Multi-Cloud", "Omni-Cloud"], "Multi-Cloud", "Multi-cloud avoids vendor lock-in."),
+        ("Shared Responsibility", "The provider secures the 'cloud'; the customer secures 'in' the cloud.", "In the shared responsibility model, who is usually responsible for physical security?", ["Both", "The Customer", "The Provider", "Third-party auditor"], "The Provider", "The provider (e.g., AWS) manages the data centers."),
+        ("Customer Responsibility", "Customers are responsible for their data and access management.", "In IaaS, who is responsible for patching the guest Operating System?", ["Both", "The Customer", "The Provider", "The hardware manufacturer"], "The Customer", "If you install the OS, you must maintain it."),
+        ("Cloud Storage - Object", "Object storage (like S3) is ideal for unstructured data and files.", "Which type of cloud storage is best for storing millions of images and videos?", ["Block Storage", "File Storage", "Object Storage", "Tape Storage"], "Object Storage", "Object storage is highly durable and scalable."),
+        ("Cloud Storage - Block", "Block storage is used as virtual disks for server instances.", "Which storage type is typically used as the boot volume for a virtual machine?", ["Block Storage", "Content Delivery Network", "Object Storage", "Tape Storage"], "Block Storage", "Block storage (like EBS) behaves like a physical hard drive."),
+        ("Cloud Storage - File", "File storage provides shared access to files over a network.", "Which storage type allows multiple servers to share a common file system?", ["Block Storage", "Cache Storage", "File Storage", "Object Storage"], "File Storage", "File storage (like EFS or Azure Files) uses protocols like NFS or SMB."),
+        ("Regions", "Regions are separate geographic areas containing multiple data centers.", "What is a geographically isolated area where a cloud provider hosts resources?", ["Availability Zone", "Data Center", "Edge Location", "Region"], "Region", "Choosing the right region reduces latency for users."),
+        ("Availability Zones", "AZs are isolated locations within a region for fault tolerance.", "What are the separate data centers within a cloud region called?", ["Availability Zones", "Clusters", "Nodes", "Partitions"], "Availability Zones", "Deploying across AZs ensures high availability."),
+        ("High Availability", "Ensuring systems are up and running for a high percentage of time.", "What is the term for a system designed to be operational with minimal downtime?", ["Elasticity", "High Availability", "Scalability", "Security"], "High Availability", "HA usually involves redundancy across multiple AZs."),
+        ("Fault Tolerance", "The ability of a system to continue operating despite a component failure.", "What is the ability of a system to withstand the failure of a hardware component?", ["Elasticity", "Fault Tolerance", "Load Balancing", "Scalability"], "Fault Tolerance", "Fault tolerance ensures zero downtime during failures."),
+        ("Scalability", "The ability to increase or decrease resources to meet changing demand.", "What is the term for adding more RAM or CPU to an existing server?", ["Horizontal Scaling", "Load Balancing", "Vertical Scaling", "Virtualization"], "Vertical Scaling", "Vertical scaling is often called 'scaling up'."),
+        ("Horizontal Scaling", "Adding more instances to a system to handle increased load.", "What is it called when you add more servers to a web cluster?", ["Horizontal Scaling", "Measured Service", "Rapid Elasticity", "Vertical Scaling"], "Horizontal Scaling", "Horizontal scaling is often called 'scaling out'."),
+        ("Load Balancing", "Distributing incoming traffic across multiple servers.", "Which service automatically distributes web traffic across several instances?", ["Auto Scaling", "DNS", "Load Balancer", "NAT Gateway"], "Load Balancer", "Load balancers prevent any single server from becoming a bottleneck."),
+        ("Auto Scaling", "Automatically adjusting the number of instances based on demand.", "Which feature adds or removes servers based on CPU usage or traffic?", ["Auto Scaling", "Load Balancing", "Measured Service", "Resource Pooling"], "Auto Scaling", "Auto scaling saves money by reducing resources during low demand."),
+        ("Serverless", "Running code without managing the underlying servers (e.g., Lambda).", "Which cloud concept allows you to run code without provisioning or managing servers?", ["Containers", "IaaS", "Serverless", "Virtualization"], "Serverless", "Serverless is highly cost-effective for event-driven tasks."),
+        ("Containers", "Lightweight, portable units that package code and dependencies.", "What is a lightweight alternative to a virtual machine that shares the host OS kernel?", ["Container", "Hypervisor", "Instance", "Mainframe"], "Container", "Docker is the most popular container platform."),
+        ("Microservices", "Building an application as a suite of small, independent services.", "What architectural style breaks an app into many small, loosely coupled services?", ["Integrated", "Layered", "Microservices", "Monolithic"], "Microservices", "Microservices improve agility and scalability."),
+        ("CDN", "Content Delivery Networks cache data at edge locations near users.", "Which service speeds up the delivery of static content to global users?", ["Auto Scaling", "CDN", "DNS", "VPC"], "CDN", "CDNs (like CloudFront) reduce latency for images and videos."),
+        ("IAM", "Identity and Access Management controls user permissions.", "Which service is used to manage users and their access to cloud resources?", ["Auto Scaling", "CloudWatch", "IAM", "VPC"], "IAM", "IAM is the first line of defense in cloud security."),
+        ("Virtual Private Cloud", "VPC provides a private, isolated network in the cloud.", "What is a private, isolated section of a public cloud provider's network?", ["CDN", "IAM", "VPC", "VPN"], "VPC", "You have full control over IP ranges and subnets in a VPC."),
+        ("Compliance in Cloud", "Providers offer tools and certifications to help meet regulations.", "How do cloud providers help with regulatory compliance?", ["By paying your fines", "By providing audit reports and certified infrastructure", "By taking all the blame", "They don't help"], "By providing audit reports and certified infrastructure", "Providers like AWS have SOC, ISO, and HIPAA certifications."),
+        ("Capex vs Opex", "Cloud moves spending from capital expenses to operational expenses.", "Which financial model describes the 'pay-as-you-go' nature of cloud?", ["Capex", "Fixed Cost", "Marginal Cost", "Opex"], "Opex", "Operational expenses (Opex) are recurring costs for running a business."),
+        ("Total Cost of Ownership", "TCO includes all costs of owning and operating a system.", "What does TCO stand for in cloud financial management?", ["Target Cost Option", "Technical Control Office", "Total Cost of Ownership", "Transaction Cost Output"], "Total Cost of Ownership", "TCO helps compare on-premises costs with cloud costs."),
+        ("Cloud Migration", "The process of moving data and apps to the cloud.", "What is the strategy of moving an application to the cloud with no changes?", ["Refactoring", "Rehosting (Lift and Shift)", "Replatforming", "Retiring"], "Rehosting (Lift and Shift)", "Lift and shift is the fastest migration path."),
+        ("DevOps", "A culture and practice of unifying software dev and IT operations.", "Which practice aims to shorten the systems development life cycle and provide continuous delivery?", ["Agile", "DevOps", "ITIL", "Waterfall"], "DevOps", "DevOps relies heavily on automation and cloud services."),
+        ("CI/CD", "Continuous Integration and Continuous Delivery automate software updates.", "Which process automates the building, testing, and deployment of code?", ["CI/CD", "DNS", "IAM", "TCO"], "CI/CD", "CI/CD ensures faster and more reliable software releases."),
+        ("Monitoring", "Tracking the performance and health of cloud resources.", "Which type of service helps you track the CPU usage and health of your cloud instances?", ["Billing", "Deployment", "IAM", "Monitoring"], "Monitoring", "CloudWatch (AWS) or Monitor (Azure) are common tools."),
+        ("Cloud Governance", "Policies and rules for managing cloud resources.", "What is the set of rules and policies used to manage cloud costs and security?", ["Auto Scaling", "Governance", "Networking", "Storage"], "Governance", "Governance prevents 'shadow IT' and uncontrolled spending."),
+        ("Database - Relational", "RDBMS (like RDS) use structured tables with fixed schemas.", "Which type of cloud database is best for structured data with complex relationships?", ["NoSQL", "Object Store", "Relational (SQL)", "Wide-column"], "Relational (SQL)", "SQL databases are standard for financial and transactional data."),
+        ("Database - NoSQL", "NoSQL (like DynamoDB) is scalable and handles unstructured data.", "Which database type is designed for high-scale, unstructured, or semi-structured data?", ["Graph", "NoSQL", "Relational", "SQL"], "NoSQL", "NoSQL databases provide high performance at any scale."),
+        ("Cloud Security Posture", "Managing the security state of cloud resources.", "What does CSPM stand for in cloud security?", ["Cloud Security Posture Management", "Cloud Service Power Metrics", "Common Security Protocol Method", "Customer Service Policy Model"], "Cloud Security Posture Management", "CSPM tools find misconfigurations in cloud settings."),
+        ("Edge Computing", "Processing data closer to the source rather than a central cloud.", "Which concept involves processing data at the network's edge, closer to users or IoT devices?", ["Big Data", "Edge Computing", "Mainframe", "Virtualization"], "Edge Computing", "Edge computing reduces latency for time-sensitive tasks."),
+        ("IoT and Cloud", "Cloud provides the scale to ingest and analyze data from millions of devices.", "What does IoT stand for?", ["Information of Technology", "Input Output Target", "Integrated Online Tool", "Internet of Things"], "Internet of Things", "IoT devices often send data to the cloud for processing."),
+        ("API", "Application Programming Interfaces allow services to communicate.", "How do most cloud services interact with each other and with users?", ["Via API", "Via Fax", "Via Hardware cable", "Via Morse code"], "Via API", "APIs are the 'glue' of the cloud."),
+        ("Cloud Native", "Applications designed specifically to run in the cloud environment.", "What are applications built to leverage cloud characteristics like elasticity and microservices called?", ["Cloud Native", "Legacy", "Monolithic", "On-premises"], "Cloud Native", "Cloud native apps are more resilient and scalable."),
+        ("Vendor Lock-in", "Being dependent on a single cloud provider for services.", "What is the risk of using proprietary services that make it hard to move to another provider?", ["Data loss", "High latency", "Security breach", "Vendor Lock-in"], "Vendor Lock-in", "Open standards and multi-cloud help reduce lock-in."),
+        ("Cloud Economics", "The study of the costs and benefits of cloud computing.", "What is the main driver behind the cost savings of the public cloud?", ["Better hardware", "Economies of scale", "Lower labor costs", "No maintenance"], "Economies of scale", "Large providers buy hardware at much lower prices."),
+        ("Cloud Support", "Providers offer different tiers of support for customers.", "Which level of cloud support typically includes a dedicated Technical Account Manager?", ["Basic", "Business", "Developer", "Enterprise"], "Enterprise", "Enterprise support is for mission-critical workloads.")
+    ],
+    "Project Management": [
+        ("Project Definition", "A project is a temporary endeavor with a defined beginning and end.", "What is the primary characteristic of a project?", ["Infinite duration", "Repeatable process", "Routine operation", "Temporary and unique"], "Temporary and unique", "A project has a specific goal and timeframe."),
+        ("Program", "A group of related projects managed in a coordinated way.", "What is a group of related projects managed together called?", ["Operation", "Portfolio", "Program", "Task Force"], "Program", "Programs provide benefits that wouldn't be available if projects were managed separately."),
+        ("Portfolio", "A collection of projects and programs to achieve strategic goals.", "What is a collection of projects, programs, and operations managed as a group to achieve strategic objectives?", ["Department", "Division", "Enterprise", "Portfolio"], "Portfolio", "Portfolios focus on strategic alignment."),
+        ("Operations", "Ongoing work that sustains the business.", "What is repetitive, ongoing work that maintains a business called?", ["Project", "Operations", "Sprints", "Work Packages"], "Operations", "Operations produce the same product or service repeatedly."),
+        ("Stakeholder", "Anyone affected by or involved in a project.", "Who is considered a stakeholder in a project?", ["Only the project manager", "Only the sponsor", "Anyone with an interest or impact on the project", "Only the technical team"], "Anyone with an interest or impact on the project", "Managing stakeholders is a key part of PM."),
+        ("Sponsor", "The person who provides resources and support for the project.", "Who is primarily responsible for providing the project's financial resources?", ["Customer", "Project Manager", "Sponsor", "Team Member"], "Sponsor", "The sponsor champions the project and ensures it has funding."),
+        ("Project Manager", "The person assigned to lead the team and achieve project goals.", "What is the primary role of a Project Manager?", ["Doing the technical work", "Lead the team to meet project objectives", "Only reporting status", "Providing the budget"], "Lead the team to meet project objectives", "PMs are responsible for the success of the project."),
+        ("Triple Constraint", "Scope, Time, and Cost are the core constraints of a project.", "Which three factors make up the 'Triple Constraint' of project management?", ["Quality, Risk, Scope", "Resources, Time, Budget", "Scope, Time, Cost", "Stakeholders, Plan, Execution"], "Scope, Time, Cost", "If one constraint changes, the others are likely affected."),
+        ("Project Charter", "A document that formally authorizes the project.", "Which document officially starts a project and gives the PM authority?", ["Business Case", "Project Charter", "Project Management Plan", "Scope Statement"], "Project Charter", "The charter is signed by the sponsor."),
+        ("Scope Statement", "Defines the project's boundaries and deliverables.", "What document describes the project's deliverables and the work required to create them?", ["Budget", "Gantt Chart", "Risk Register", "Scope Statement"], "Scope Statement", "The scope statement prevents misunderstandings about what is included."),
+        ("WBS", "Work Breakdown Structure is a hierarchical decomposition of project work.", "What does WBS stand for in project management?", ["Weekly Budget Sheet", "Work Breakdown Structure", "Work Breakdown System", "Workload Balance Schedule"], "Work Breakdown Structure", "A WBS breaks a project into smaller, manageable tasks."),
+        ("Work Package", "The lowest level of a WBS.", "What is the smallest unit of work in a Work Breakdown Structure?", ["Activity", "Control Account", "Milestone", "Work Package"], "Work Package", "Work packages can be scheduled and cost-estimated."),
+        ("Critical Path", "The longest sequence of tasks that determines project duration.", "Which path through a project schedule has zero slack or float?", ["Buffer Path", "Critical Path", "Main Path", "Shortest Path"], "Critical Path", "Delays on the critical path will delay the entire project."),
+        ("Gantt Chart", "A bar chart that shows the project schedule.", "Which visual tool shows project tasks, durations, and dependencies over time?", ["Burn-down Chart", "Fishbone Diagram", "Gantt Chart", "Pareto Chart"], "Gantt Chart", "Gantt charts are the most common way to visualize a schedule."),
+        ("Milestone", "A significant point or event in a project.", "What is a project event with zero duration that marks a major achievement?", ["Activity", "Lag", "Lead", "Milestone"], "Milestone", "Milestones are used to track high-level progress."),
+        ("Slack / Float", "The amount of time a task can be delayed without affecting the end date.", "What is the term for the amount of time an activity can be delayed without delaying the project finish date?", ["Buffer", "Lag", "Lead", "Slack (or Float)"], "Slack (or Float)", "Critical path tasks have zero slack."),
+        ("Kick-off Meeting", "A meeting to communicate project goals and gain commitment.", "What is the meeting called that officially starts the execution phase of a project?", ["Daily Stand-up", "Kick-off Meeting", "Retrospective", "Status Meeting"], "Kick-off Meeting", "The kick-off aligns everyone at the start of work."),
+        ("Risk Register", "A document that tracks identified risks and their responses.", "Where are all project risks, their probabilities, and impacts recorded?", ["Issue Log", "Project Charter", "Risk Register", "WBS"], "Risk Register", "The risk register is updated throughout the project."),
+        ("Risk Response - Avoid", "Changing the plan to eliminate a specific risk.", "What risk response involves changing the project plan to eliminate a threat?", ["Avoidance", "Mitigation", "Transfer", "Acceptance"], "Avoidance", "Avoidance is the most effective but often most expensive response."),
+        ("Risk Response - Mitigate", "Reducing the probability or impact of a risk.", "Implementing a training program to reduce the chance of errors is an example of which risk response?", ["Avoidance", "Mitigation", "Transfer", "Acceptance"], "Mitigation", "Mitigation is a proactive response to threats."),
+        ("Risk Response - Transfer", "Moving the risk to a third party.", "Buying an insurance policy for project equipment is an example of what?", ["Avoidance", "Mitigation", "Transfer", "Acceptance"], "Transfer", "Transfer moves the financial impact to someone else."),
+        ("Risk Response - Accept", "Deciding to deal with the risk if it occurs.", "Choosing to do nothing about a low-priority risk is called what?", ["Acceptance", "Avoidance", "Mitigation", "Transfer"], "Acceptance", "Acceptance is appropriate for risks with low impact."),
+        ("Waterfall Methodology", "A linear, sequential approach to project management.", "Which project methodology is traditional and follows a fixed sequence of phases?", ["Agile", "Kanban", "Scrum", "Waterfall"], "Waterfall", "Waterfall is best for projects with well-defined requirements."),
+        ("Agile Methodology", "An iterative, incremental approach to project management.", "Which methodology emphasizes flexibility, customer feedback, and small, frequent releases?", ["Agile", "PRINCE2", "Six Sigma", "Waterfall"], "Agile", "Agile is ideal for software development and uncertain environments."),
+        ("Scrum", "An Agile framework that uses Sprints and specific roles.", "Which Agile framework uses time-boxed iterations called 'Sprints'?", ["Kanban", "Lean", "Scrum", "Waterfall"], "Scrum", "Scrum is the most popular Agile framework."),
+        ("Scrum Roles - Product Owner", "Responsible for the value of the product and the backlog.", "In Scrum, who is responsible for maximizing the value of the product?", ["Product Owner", "Scrum Master", "Stakeholder", "Team"], "Product Owner", "The Product Owner prioritizes the backlog based on business value."),
+        ("Scrum Roles - Scrum Master", "Responsible for the Scrum process and removing blockers.", "Who is the 'servant leader' who helps the team follow Scrum practices?", ["Manager", "Product Owner", "Project Manager", "Scrum Master"], "Scrum Master", "The Scrum Master is not a 'boss' but a facilitator."),
+        ("Scrum Roles - Team", "The group that does the work and is self-organizing.", "Who is responsible for delivering a potentially releasable increment at the end of each Sprint?", ["Product Owner", "Scrum Master", "Sponsor", "The Development Team"], "The Development Team", "The team is cross-functional and self-organizing."),
+        ("Daily Stand-up", "A 15-minute meeting for the team to sync and identify blockers.", "What is the short, daily Scrum meeting used for coordination?", ["Daily Stand-up", "Sprint Planning", "Sprint Review", "Status Meeting"], "Daily Stand-up", "Stand-ups keep the team aligned on a daily basis."),
+        ("Sprint Planning", "A meeting to decide what work will be done in the Sprint.", "What event marks the beginning of a Sprint where the team selects backlog items?", ["Daily Stand-up", "Sprint Planning", "Sprint Review", "Sprint Retrospective"], "Sprint Planning", "Planning results in a Sprint Backlog."),
+        ("Sprint Review", "A meeting to demo the work done during the Sprint.", "In which Scrum meeting is the product increment demonstrated to stakeholders?", ["Daily Stand-up", "Sprint Planning", "Sprint Review", "Sprint Retrospective"], "Sprint Review", "The review is for gathering feedback on the product."),
+        ("Sprint Retrospective", "A meeting for the team to improve their process.", "Which Scrum meeting focuses on team process improvement and 'lessons learned'?", ["Daily Stand-up", "Sprint Planning", "Sprint Review", "Sprint Retrospective"], "Sprint Retrospective", "The retro is for the team to improve how they work together."),
+        ("Kanban", "A visual system for managing work as it moves through a process.", "Which methodology uses a board to visualize work and limit 'Work in Progress' (WIP)?", ["Agile", "Kanban", "Scrum", "Waterfall"], "Kanban", "Kanban focuses on continuous flow rather than iterations."),
+        ("Lean", "A philosophy of eliminating waste and maximizing value.", "Which methodology focuses on the elimination of 'muda' or waste?", ["Agile", "Lean", "Six Sigma", "Waterfall"], "Lean", "Lean originated in manufacturing (Toyota)."),
+        ("Six Sigma", "A data-driven approach for improving quality by reducing defects.", "Which methodology uses the DMAIC process to improve quality and reduce variation?", ["Agile", "Kanban", "Lean", "Six Sigma"], "Six Sigma", "Six Sigma targets 3.4 defects per million opportunities."),
+        ("Change Request", "A formal proposal to modify a project document or deliverable.", "What is required before making a major change to the project scope?", ["An email", "A phone call", "A formal change request", "Just doing it"], "A formal change request", "Change requests are reviewed by a Change Control Board (CCB)."),
+        ("Scope Creep", "The uncontrolled expansion of project scope.", "What is it called when a project's scope grows without corresponding increases in time or budget?", ["Gold Plating", "Progressive Elaboration", "Scope Creep", "Scope Gap"], "Scope Creep", "Scope creep is a major cause of project failure."),
+        ("Gold Plating", "Adding extra features not requested by the customer.", "What is it called when the project team adds extra functionality beyond the scope?", ["Gold Plating", "Scope Creep", "Value Engineering", "Workaround"], "Gold Plating", "Gold plating is discouraged as it consumes resources without adding agreed value."),
+        ("Lessons Learned", "Documenting the successes and failures of a project.", "When should 'Lessons Learned' be documented in a project?", ["Only at the end", "Only if it fails", "Throughout the project", "Never"], "Throughout the project", "Capturing lessons early helps improve current and future projects."),
+        ("EVM - Earned Value", "A method for measuring project performance.", "Which technique combines scope, schedule, and resource measurements to assess performance?", ["Balanced Scorecard", "Earned Value Management (EVM)", "Trend Analysis", "Variance Analysis"], "Earned Value Management (EVM)", "EVM tells you if you are ahead/behind schedule and over/under budget."),
+        ("Cost Performance Index (CPI)", "A measure of cost efficiency on a project.", "In EVM, what does a CPI of 1.2 indicate?", ["Project is over budget", "Project is on budget", "Project is under budget", "Project is behind schedule"], "Project is under budget", "CPI > 1 means you are getting more value than you spent."),
+        ("Schedule Performance Index (SPI)", "A measure of schedule efficiency on a project.", "In EVM, what does an SPI of 0.8 indicate?", ["Ahead of schedule", "On schedule", "Behind schedule", "Under budget"], "Behind schedule", "SPI < 1 means you are working slower than planned."),
+        ("Project Closure", "The formal process of finishing all project activities.", "What is the final phase of a project called?", ["Closure", "Execution", "Monitoring", "Planning"], "Closure", "Closure includes archiving records and releasing resources."),
+        ("Resource Leveling", "Adjusting the schedule to address resource over-allocation.", "What technique is used to balance the demand for resources with the available supply?", ["Crashing", "Fast Tracking", "Resource Leveling", "Slack Analysis"], "Resource Leveling", "Resource leveling can often extend the project end date."),
+        ("Crashing", "Adding resources to shorten project duration for the least cost.", "What is it called when you add more people to a critical path task to finish faster?", ["Crashing", "Fast Tracking", "Floating", "Leveling"], "Crashing", "Crashing increases costs but shortens time."),
+        ("Fast Tracking", "Doing tasks in parallel that were originally planned in sequence.", "What schedule compression technique involves overlapping sequential phases?", ["Crashing", "Fast Tracking", "Leveling", "Padding"], "Fast Tracking", "Fast tracking increases risk but may not increase cost."),
+        ("Quality vs Grade", "Quality is meeting requirements; Grade is a category of rank.", "A software with few bugs but limited features has what?", ["High Quality, Low Grade", "Low Quality, High Grade", "Low Quality, Low Grade", "High Quality, High Grade"], "High Quality, Low Grade", "Grade is about 'bells and whistles'; Quality is about 'doing what it says'."),
+        ("Pareto Chart", "A bar chart that shows the frequency of problems (80/20 rule).", "Which quality tool identifies the 'vital few' problems that cause the most effects?", ["Control Chart", "Fishbone Diagram", "Histogram", "Pareto Chart"], "Pareto Chart", "Pareto charts help prioritize which issues to fix first."),
+        ("Fishbone Diagram", "A tool for identifying the root causes of a problem.", "What is another name for an Ishikawa or Cause-and-Effect diagram?", ["Control Chart", "Fishbone Diagram", "Flowchart", "Pareto Chart"], "Fishbone Diagram", "Fishbone diagrams help get to the 'why' of a problem."),
+        ("SMART Goals", "Goals should be Specific, Measurable, Achievable, Relevant, and Time-bound.", "What does the 'M' in SMART goals stand for?", ["Manageable", "Meaningful", "Measurable", "Motivating"], "Measurable", "If you can't measure it, you can't manage it.")
+    ],
+    "Infrastructure": [
+        ("CPU", "The Central Processing Unit executes instructions and processes data.", "Which component is known as the 'brain' of the computer?", ["CPU", "GPU", "RAM", "SSD"], "CPU", "The CPU performs all fundamental calculations."),
+        ("RAM", "Random Access Memory is volatile storage for active data.", "What is the primary characteristic of RAM?", ["Long-term storage", "Non-volatile", "Permanent", "Volatile"], "Volatile", "RAM loses its contents when power is turned off."),
+        ("HDD vs SSD", "SSDs are faster and have no moving parts compared to HDDs.", "Which storage device uses flash memory and has no moving parts?", ["DVD", "HDD", "Magnetic Tape", "SSD"], "SSD", "SSDs are significantly faster than traditional hard drives."),
+        ("Motherboard", "The main circuit board that connects all components.", "Which component provides the electrical connections between the CPU, RAM, and other hardware?", ["Chassis", "Motherboard", "Power Supply", "Sound Card"], "Motherboard", "Everything plugs into the motherboard."),
+        ("BIOS / UEFI", "Firmware that initializes hardware during the boot process.", "What is the software that runs when you first turn on a computer to start the OS?", ["BIOS / UEFI", "Kernel", "Shell", "User Space"], "BIOS / UEFI", "Modern computers use UEFI instead of the older BIOS."),
+        ("Operating System", "Software that manages hardware and provides services to apps.", "What is the primary role of an Operating System (OS)?", ["Editing photos", "Managing hardware and software resources", "Providing internet access", "Storing files on a USB"], "Managing hardware and software resources", "The OS is the interface between the user and the hardware."),
+        ("Kernel", "The core part of the OS that interacts directly with hardware.", "What is the heart of an operating system that manages memory and CPU time?", ["Desktop Environment", "File Manager", "Kernel", "Web Browser"], "Kernel", "The kernel is the most critical part of an OS."),
+        ("Linux", "An open-source, Unix-like operating system kernel.", "Which operating system is open-source and widely used for servers?", ["iOS", "Linux", "macOS", "Windows"], "Linux", "Linux is the foundation of most web servers and Android."),
+        ("Distributions (Distros)", "Versions of Linux like Ubuntu, CentOS, and Debian.", "What is a specific version of the Linux operating system called?", ["Brand", "Distribution (Distro)", "Edition", "Flavor"], "Distribution (Distro)", "Distros package the kernel with various tools and software."),
+        ("Windows Server", "A version of Windows optimized for server tasks.", "Which OS is specifically designed by Microsoft for enterprise network services?", ["Windows 10", "Windows 11", "Windows Home", "Windows Server"], "Windows Server", "Windows Server includes tools like Active Directory."),
+        ("Virtualization", "Running multiple virtual machines on a single physical host.", "What technology allows one physical computer to act as multiple independent virtual computers?", ["Cloud computing", "Containerization", "Multi-threading", "Virtualization"], "Virtualization", "Virtualization maximizes hardware utilization."),
+        ("Hypervisor", "Software that creates and manages virtual machines.", "What is the software that sits between the physical hardware and the virtual machines?", ["Compiler", "Hypervisor", "Interpreter", "Linker"], "Hypervisor", "Hypervisors allocate resources like CPU and RAM to VMs."),
+        ("Type 1 Hypervisor", "Runs directly on the hardware (bare metal).", "Which type of hypervisor runs directly on the server's hardware?", ["Type 1 (Bare Metal)", "Type 2 (Hosted)", "Type 3 (Cloud)", "Type 4 (Virtual)"], "Type 1 (Bare Metal)", "Type 1 hypervisors (like ESXi) are used in data centers."),
+        ("Type 2 Hypervisor", "Runs as an application on an existing OS.", "Which type of hypervisor requires a host operating system (like Windows or Linux) to run?", ["Type 1", "Type 2", "Type 3", "Bare Metal"], "Type 2", "Type 2 hypervisors (like VirtualBox) are used for desktop testing."),
+        ("Virtual Machine (VM)", "A software emulation of a physical computer.", "What is a fully isolated software instance that includes its own OS and applications?", ["App", "Container", "Service", "Virtual Machine"], "Virtual Machine", "VMs are completely independent of each other."),
+        ("Containers", "Lightweight virtualization that shares the host OS kernel.", "What is a lightweight alternative to a VM that packages only an app and its dependencies?", ["Container", "Hypervisor", "Library", "Microchip"], "Container", "Containers (like Docker) start in seconds and use fewer resources."),
+        ("Docker", "The leading platform for building and running containers.", "Which tool is the industry standard for creating and managing containers?", ["Docker", "Hyper-V", "VirtualBox", "VMware"], "Docker", "Docker revolutionized how applications are deployed."),
+        ("Kubernetes (K8s)", "A platform for automating container deployment and management.", "Which system is used to orchestrate and manage thousands of containers?", ["Docker", "Kubernetes", "Linux", "Windows"], "Kubernetes", "K8s handles scaling, healing, and updates for containers."),
+        ("Server Rack", "A standardized frame for mounting multiple pieces of equipment.", "Where are servers and switches typically stored in a data center?", ["Cabinet", "Closet", "Desk", "Server Rack"], "Server Rack", "Racks are usually 19 inches wide."),
+        ("UPS", "Uninterruptible Power Supply provides short-term battery backup.", "What device provides emergency power when the main electricity fails?", ["Generator", "Power Strip", "Surge Protector", "UPS"], "UPS", "UPS gives you time to shut down servers safely or wait for a generator."),
+        ("PDU", "Power Distribution Unit distributes electricity to rack equipment.", "What is the device that distributes power to multiple servers in a rack?", ["Battery", "Inverter", "PDU", "Transformer"], "PDU", "PDUs are like industrial-grade power strips for racks."),
+        ("RAID", "Redundant Array of Independent Disks provides data redundancy.", "What technology combines multiple hard drives to protect against data loss?", ["Backup", "Cloud", "NAS", "RAID"], "RAID", "RAID can mirror data or use parity for protection."),
+        ("RAID 0", "Striping; improves performance but provides no redundancy.", "Which RAID level provides speed but will lose all data if one drive fails?", ["RAID 0", "RAID 1", "RAID 5", "RAID 10"], "RAID 0", "RAID 0 has zero redundancy."),
+        ("RAID 1", "Mirroring; copies data to two or more drives.", "Which RAID level provides redundancy by writing the same data to two separate disks?", ["RAID 0", "RAID 1", "RAID 5", "RAID 6"], "RAID 1", "If one drive fails in RAID 1, the other has a perfect copy."),
+        ("RAID 5", "Striping with parity; provides redundancy and performance.", "Which RAID level requires at least 3 disks and can survive one disk failure?", ["RAID 0", "RAID 1", "RAID 5", "RAID 10"], "RAID 5", "RAID 5 is a popular balance of cost and safety."),
+        ("NAS", "Network Attached Storage is a dedicated file-level storage device.", "What is a specialized server for providing file storage to users on a network?", ["DAS", "NAS", "SAN", "Tape"], "NAS", "NAS is easy to set up for shared office storage."),
+        ("SAN", "Storage Area Network is a high-speed network for block-level storage.", "Which storage technology provides high-performance, block-level access over a dedicated network?", ["Cloud", "NAS", "RAID", "SAN"], "SAN", "SANs are used in large enterprise data centers."),
+        ("Data Center", "A facility used to house computer systems and associated components.", "What is a large facility used to house servers, storage, and networking equipment?", ["Data Center", "Mainframe", "Office", "Warehouse"], "Data Center", "Data centers have specialized cooling and power systems."),
+        ("Cooling / HVAC", "Maintaining proper temperature and humidity for hardware.", "Why is precise temperature control critical in a data center?", ["To keep workers comfortable", "To prevent hardware from overheating and failing", "To reduce electricity bills", "To speed up the internet"], "To prevent hardware from overheating and failing", "Servers generate a lot of heat that must be removed."),
+        ("Hot/Cold Isles", "A layout to improve cooling efficiency in data centers.", "What data center design improves cooling by alternating the orientation of server racks?", ["Circular layout", "Grid layout", "Hot/Cold Isles", "Random placement"], "Hot/Cold Isles", "Hot/Cold isles prevent hot air from mixing with cold intake air."),
+        ("Fire Suppression", "Systems to extinguish fires without damaging electronics.", "Which type of fire suppression is safe for computer equipment?", ["FM-200 / Gaseous systems", "Sand", "Water sprinklers", "Wet chemicals"], "FM-200 / Gaseous systems", "Gas systems extinguish fire without leaving a residue."),
+        ("Active Directory", "A Microsoft service for managing users and computers in a network.", "Which service is used on Windows networks to manage user accounts and permissions centrally?", ["Active Directory", "DNS", "IIS", "Workgroup"], "Active Directory", "AD is the backbone of Windows enterprise security."),
+        ("Group Policy (GPO)", "A feature to control the working environment of user accounts.", "What tool do administrators use to push configuration settings to all computers in a domain?", ["Control Panel", "Group Policy (GPO)", "Registry", "Task Manager"], "Group Policy (GPO)", "GPOs can enforce wallpaper, security settings, and software installs."),
+        ("IPMI / ILO", "Out-of-band management for monitoring and managing servers.", "Which technology allows an admin to manage a server even if the OS is crashed or the power is off?", ["HTTP", "IPMI / Out-of-band management", "RDP", "SSH"], "IPMI / Out-of-band management", "ILO (HP) or iDRAC (Dell) are examples of IPMI."),
+        ("Command Line (CLI)", "Interacting with a computer using text-based commands.", "What is the text-based interface used to interact with an operating system?", ["CLI", "GUI", "Icons", "Mouse"], "CLI", "Admins prefer CLI for automation and speed."),
+        ("SSH", "Secure Shell is used for secure remote command-line access.", "What is the standard protocol for securely logging into a remote Linux server?", ["FTP", "HTTP", "RDP", "SSH"], "SSH", "SSH encrypts the entire session."),
+        ("RDP", "Remote Desktop Protocol is used for remote access to Windows.", "Which protocol is used by Windows for graphical remote desktop access?", ["RDP", "SSH", "Telnet", "VNC"], "RDP", "RDP allows you to see the desktop of a remote PC."),
+        ("Ping", "A tool to test connectivity between two IP addresses.", "Which command is used to test if another computer is reachable on the network?", ["ls", "mkdir", "ping", "pwd"], "ping", "Ping uses ICMP to check for a response."),
+        ("Ipconfig / Ifconfig", "Tools to display network configuration settings.", "Which command shows your computer's IP address on a Windows machine?", ["ifconfig", "ipconfig", "netstat", "ping"], "ipconfig", "On Linux, the equivalent is usually 'ifconfig' or 'ip addr'."),
+        ("Traceroute", "A tool to show the path packets take across the network.", "Which command shows all the 'hops' between your computer and a website?", ["dir", "ping", "tracert / traceroute", "whois"], "tracert / traceroute", "Traceroute is great for finding where a connection is failing."),
+        ("DNS (Infrastructure)", "Translates human-readable names into IP addresses.", "If you can ping an IP but can't open a website by its name, what is likely the problem?", ["CPU failure", "DNS issue", "Keyboard error", "RAM failure"], "DNS issue", "DNS is responsible for name-to-IP resolution."),
+        ("DHCP (Infrastructure)", "Automatically provides IP addresses to clients.", "Which service ensures that every device on a network gets a unique IP address without manual setup?", ["ARP", "DHCP", "DNS", "NAT"], "DHCP", "DHCP manages the pool of available IP addresses."),
+        ("Load Balancer (Infrastructure)", "Distributes workloads across multiple servers.", "Which device prevents a single server from being overwhelmed by too many users?", ["Firewall", "Gateway", "Hub", "Load Balancer"], "Load Balancer", "Load balancers improve reliability and performance."),
+        ("Proxy Server", "Acts as an intermediary for requests from clients.", "Which server sits between a user and the internet to filter content or improve performance?", ["DNS", "Mail Server", "Print Server", "Proxy Server"], "Proxy Server", "Proxies can cache web pages and block malicious sites."),
+        ("Firewall (Infrastructure)", "Secures the network by filtering traffic.", "Where is a network firewall typically placed?", ["At the edge of the network", "Inside the CPU", "On the monitor", "Under the keyboard"], "At the edge of the network", "Firewalls guard the entry and exit points of a network."),
+        ("VLAN (Infrastructure)", "Logically segments a switch into separate networks.", "What is used to isolate guest Wi-Fi traffic from internal company traffic on the same hardware?", ["BGP", "PoE", "STP", "VLAN"], "VLAN", "VLANs keep different types of traffic separate for security."),
+        ("Port Forwarding", "Directs external traffic to a specific internal device.", "Which technique allows an external user to reach a specific server inside a private network?", ["DMZ", "NAT", "Port Forwarding", "VLAN"], "Port Forwarding", "Port forwarding is common for hosting games or web servers at home."),
+        ("SLA", "Service Level Agreement defines the expected level of service.", "What document defines the uptime and performance guarantees from a service provider?", ["Contract", "Invoice", "NDA", "SLA"], "SLA", "SLAs often include penalties if the provider fails to meet goals."),
+        ("Inventory Management", "Tracking all physical and virtual assets in the infrastructure.", "Why is an accurate hardware inventory important for security?", ["To make the office look nice", "To know what devices to patch and protect", "To sell old hardware", "To save on electricity"], "To know what devices to patch and protect", "You can't secure what you don't know you have."),
+        ("Monitoring - SNMP", "Simple Network Management Protocol for monitoring devices.", "Which protocol is standard for collecting management information from network devices like routers and switches?", ["HTTP", "POP3", "SMTP", "SNMP"], "SNMP", "SNMP allows central monitoring of network health.")
+    ],
+    "Data & AI": [
+        ("Data", "Raw facts and figures with no context.", "What is the term for raw, unorganized facts?", ["Data", "Information", "Knowledge", "Wisdom"], "Data", "Data is the starting point for all analysis."),
+        ("Information", "Data processed and organized to have meaning.", "What do you call data that has been processed and given context?", ["Data", "Information", "Input", "Metadata"], "Information", "Information helps in decision-making."),
+        ("Database", "A structured collection of data.", "What is an organized collection of structured information, or data, typically stored electronically?", ["Archive", "Database", "File", "Folder"], "Database", "Databases allow for efficient storage and retrieval."),
+        ("Relational Database", "Organizes data into tables with rows and columns.", "Which type of database uses tables and keys to link data?", ["Graph", "Key-Value", "NoSQL", "Relational"], "Relational", "Relational databases (SQL) are the most common type."),
+        ("SQL", "Structured Query Language used to manage relational databases.", "What is the standard language used to interact with relational databases?", ["C++", "Java", "Python", "SQL"], "SQL", "SQL allows you to select, insert, update, and delete data."),
+        ("NoSQL", "Non-relational databases that handle unstructured data.", "Which type of database is best for storing flexible, document-oriented data like JSON?", ["NoSQL", "Oracle", "PostgreSQL", "SQL Server"], "NoSQL", "NoSQL databases (like MongoDB) are highly scalable."),
+        ("Primary Key", "A unique identifier for each record in a table.", "What is a unique field that identifies each row in a relational database table?", ["Foreign Key", "Index", "Primary Key", "Schema"], "Primary Key", "Every table should have a primary key."),
+        ("Foreign Key", "A field that links to the primary key of another table.", "Which type of key is used to create a relationship between two tables?", ["Candidate Key", "Foreign Key", "Primary Key", "Super Key"], "Foreign Key", "Foreign keys enforce referential integrity."),
+        ("Normalization", "The process of organizing data to reduce redundancy.", "What is the process of structuring a database to reduce data duplication?", ["Aggregation", "Indexing", "Normalization", "Partitioning"], "Normalization", "Normalization makes databases more efficient and reliable."),
+        ("Indexing", "A technique to speed up data retrieval.", "What can you add to a database column to make searches faster?", ["Constraint", "Index", "Trigger", "View"], "Index", "Indexes are like a table of contents for data."),
+        ("Data Warehouse", "A central repository of integrated data for analysis.", "What is a large store of data accumulated from a wide range of sources used for business intelligence?", ["Data Lake", "Data Mart", "Data Warehouse", "Database"], "Data Warehouse", "Warehouses are optimized for complex queries."),
+        ("Data Lake", "A repository for storing large amounts of raw data in its native format.", "Where would you store massive amounts of raw, unstructured data for future analysis?", ["Data Lake", "Data Warehouse", "Hard Drive", "SQL Server"], "Data Lake", "Data lakes are often built on cloud storage like S3."),
+        ("Big Data", "Extremely large datasets that require specialized tools to process.", "What are the three Vs often used to define Big Data?", ["Value, Variety, Virtue", "Velocity, Volume, Variety", "Volume, Vision, Value", "Volume, Voltage, Variety"], "Velocity, Volume, Variety", "Big Data is too large for traditional databases."),
+        ("ETL", "Extract, Transform, Load - the process of moving data into a warehouse.", "What does ETL stand for in data engineering?", ["Edit, Transfer, Link", "Extract, Transform, Load", "Extract, Treat, List", "External Total Load"], "Extract, Transform, Load", "ETL prepares data for analysis."),
+        ("Business Intelligence (BI)", "Tools and processes used to analyze data for business insights.", "Which field uses data to provide historical, current, and predictive views of business operations?", ["Accounting", "Business Intelligence", "Marketing", "Software Dev"], "Business Intelligence", "BI tools like Power BI or Tableau create dashboards."),
+        ("Artificial Intelligence (AI)", "The simulation of human intelligence by machines.", "What is the broad field of computer science focused on creating smart machines?", ["AI", "Cybersecurity", "Networking", "Web Dev"], "AI", "AI includes machine learning and robotics."),
+        ("Machine Learning (ML)", "A subset of AI where machines learn from data without explicit programming.", "What is the practice of using algorithms to parse data, learn from it, and make predictions?", ["Automation", "Data Entry", "Machine Learning", "Scripting"], "Machine Learning", "ML improves as it is exposed to more data."),
+        ("Supervised Learning", "Learning from labeled data with known outcomes.", "Which type of ML uses a dataset with pre-defined 'answers' or labels?", ["Reinforcement Learning", "Semi-supervised Learning", "Supervised Learning", "Unsupervised Learning"], "Supervised Learning", "Supervised learning is used for classification and regression."),
+        ("Unsupervised Learning", "Finding patterns in unlabeled data.", "Which type of ML identifies hidden patterns or structures in data without labels?", ["Clustering", "Deep Learning", "Supervised Learning", "Unsupervised Learning"], "Unsupervised Learning", "Unsupervised learning is often used for customer segmentation."),
+        ("Deep Learning", "A subset of ML based on artificial neural networks.", "Which type of machine learning is inspired by the structure of the human brain?", ["Decision Trees", "Deep Learning", "Linear Regression", "Support Vector Machines"], "Deep Learning", "Deep learning uses many layers of neural networks."),
+        ("Neural Network", "A series of algorithms that recognize relationships in data.", "What is the basic building block of deep learning models?", ["Algorithm", "Database", "Neural Network", "Variable"], "Neural Network", "Neural networks are modeled after biological neurons."),
+        ("NLP", "Natural Language Processing - helping computers understand human language.", "Which branch of AI allows computers to understand and respond to text or voice data?", ["Computer Vision", "NLP", "Robotics", "Statistical Analysis"], "NLP", "NLP powers chatbots and translation services."),
+        ("Computer Vision", "Allowing computers to 'see' and interpret visual information.", "Which AI field is used for facial recognition and self-driving cars?", ["Computer Vision", "Data Mining", "NLP", "Regression"], "Computer Vision", "Computer vision processes images and videos."),
+        ("Algorithm", "A set of rules or steps to solve a problem.", "What is a step-by-step procedure for calculations or data processing?", ["Algorithm", "Code", "Data", "Logic"], "Algorithm", "Algorithms are the 'recipes' for programs."),
+        ("Regression", "Predicting a continuous numerical value (e.g., house prices).", "Which type of machine learning task predicts a numeric value?", ["Classification", "Clustering", "Dimensionality Reduction", "Regression"], "Regression", "Linear regression is a simple example."),
+        ("Classification", "Predicting a category or label (e.g., Spam or Not Spam).", "Which task categorizes data into distinct groups?", ["Classification", "Clustering", "Normalization", "Regression"], "Classification", "Classification is used for image recognition."),
+        ("Clustering", "Grouping similar items together based on their features.", "What is the unsupervised task of finding natural groupings in data?", ["Association", "Clustering", "Labeling", "Regression"], "Clustering", "K-means is a common clustering algorithm."),
+        ("Overfitting", "When a model learns the training data too well and fails on new data.", "What is it called when a machine learning model is too complex and performs poorly on new data?", ["Bias", "Generalization", "Overfitting", "Underfitting"], "Overfitting", "Overfit models don't generalize well."),
+        ("Underfitting", "When a model is too simple to learn the patterns in the data.", "What occurs when a model cannot capture the underlying trend of the data?", ["Bias", "Overfitting", "Precision", "Underfitting"], "Underfitting", "Underfitting results in low accuracy on both training and test data."),
+        ("Training Set", "The data used to build and train the ML model.", "What do you call the portion of data used to 'teach' a machine learning model?", ["Backup Set", "Production Set", "Test Set", "Training Set"], "Training Set", "The model learns patterns from this data."),
+        ("Test Set", "The data used to evaluate the model's performance.", "Which dataset is used to check how well a model performs on unseen data?", ["Archive", "Input Set", "Test Set", "Training Set"], "Test Set", "The test set should never be used during training."),
+        ("Bias", "Assumptions made by a model to simplify the learning task.", "In ML, what is the term for systematic errors that lead to unfair or inaccurate results?", ["Accuracy", "Bias", "Noise", "Variance"], "Bias", "Reducing bias is a key challenge in AI ethics."),
+        ("Data Cleaning", "The process of fixing or removing incorrect, corrupted, or duplicate data.", "What is the most time-consuming part of many data science projects?", ["Coding", "Data Cleaning", "Deployment", "Model Selection"], "Data Cleaning", "Clean data is essential for accurate models."),
+        ("Missing Values", "Data points that are not recorded for a variable.", "What is the term for 'null' or empty entries in a dataset?", ["Errors", "Gaps", "Missing Values", "Outliers"], "Missing Values", "Handling missing values is a key step in data prep."),
+        ("Outliers", "Data points that are significantly different from others.", "What are data points that lie far away from the majority of other observations?", ["Averages", "Centroids", "Clusters", "Outliers"], "Outliers", "Outliers can skew results and may need to be removed."),
+        ("Feature", "An individual measurable property or characteristic of a phenomenon.", "In a dataset of houses, 'number of bedrooms' would be considered a what?", ["Feature", "Label", "Record", "Target"], "Feature", "Features are the inputs used for prediction."),
+        ("Label / Target", "The outcome or value we want the model to predict.", "What is the term for the 'answer' column in a supervised learning dataset?", ["Feature", "Input", "Label (or Target)", "Parameter"], "Label (or Target)", "The model tries to predict the label."),
+        ("Accuracy", "The percentage of correct predictions made by a model.", "Which metric measures how often a classification model is correct?", ["Accuracy", "Loss", "Recall", "Variance"], "Accuracy", "Accuracy is the most basic evaluation metric."),
+        ("Precision", "The ability of a model to identify only relevant instances.", "Which metric measures the proportion of positive identifications that were actually correct?", ["Accuracy", "F1 Score", "Precision", "Recall"], "Precision", "Precision is 'of all predicted spam, how much was actually spam?'."),
+        ("Recall", "The ability of a model to find all relevant instances.", "Which metric measures the proportion of actual positives that were correctly identified?", ["Accuracy", "Bias", "Precision", "Recall"], "Recall", "Recall is 'of all actual spam, how much did we catch?'."),
+        ("Chatbot", "A program designed to simulate conversation with human users.", "What is an AI application that communicates with users through text or voice?", ["Browser", "Chatbot", "Database", "Firewall"], "Chatbot", "Modern chatbots use LLMs like GPT."),
+        ("LLM", "Large Language Model - an AI trained on massive amounts of text.", "What does LLM stand for in modern AI?", ["Large Language Model", "Linear Logic Method", "Linked List Manager", "Local Learning Module"], "Large Language Model", "LLMs can generate human-like text and code."),
+        ("Generative AI", "AI capable of generating new content (text, images, music).", "Which type of AI can create original content from a simple prompt?", ["Analytical AI", "Generative AI", "Predictive AI", "Reactive AI"], "Generative AI", "Tools like DALL-E and ChatGPT are generative AI."),
+        ("Prompt Engineering", "The practice of refining inputs to get better AI results.", "What is the skill of crafting effective inputs for generative AI models?", ["Coding", "Data Entry", "Prompt Engineering", "Scripting"], "Prompt Engineering", "Good prompts lead to much better AI outputs."),
+        ("Ethics in AI", "The study of moral issues related to AI development.", "Which field deals with the social impact, fairness, and safety of AI?", ["AI Ethics", "Data Mining", "Hardware Engineering", "Networking"], "AI Ethics", "Ethics is crucial to prevent AI from causing harm."),
+        ("Cloud for AI", "Cloud provides the massive compute power needed for AI training.", "Why is the cloud essential for modern AI and Deep Learning?", ["Better internet", "No more hard drives", "Scalable GPU and TPUs for training", "Unlimited storage"], "Scalable GPU and TPUs for training", "Training large models requires thousands of GPUs."),
+        ("Data Visualization", "The graphic representation of data and information.", "What is the term for using charts and graphs to represent data findings?", ["Data Mining", "Data Storage", "Data Visualization", "Database management"], "Data Visualization", "Visualization makes complex data easier to understand."),
+        ("Dashboard", "A visual display of the most important information needed to achieve goals.", "What is a BI tool that displays real-time metrics and KPIs?", ["Dashboard", "Spreadsheet", "Text file", "Web server"], "Dashboard", "Dashboards provide an 'at-a-glance' view of business health."),
+        ("Predictive Analytics", "Using data and AI to predict future trends.", "Which field uses historical data to forecast future events?", ["Accounting", "Data Entry", "History", "Predictive Analytics"], "Predictive Analytics", "Predictive analytics is used in finance and weather forecasting."),
+        ("Metadata", "Data that describes other data.", "What is 'data about data'?", ["Big Data", "Macro Data", "Metadata", "Micro Data"], "Metadata", "Metadata includes info like file size, creation date, and author.")
+    ]
+}
 
-# Additional 20 certifications to reach 25 total
-more_certs = [
+def generate_questions_and_reviewer(cert_title, domain, num_questions=50):
+    # Select unique items from domain_data
+    pool = domain_data.get(domain, [])
+    if not pool:
+        # Fallback if domain not found
+        return [], []
+
+    # If we need more than available, we might have to reuse, but we try to keep it unique
+    selected_items = random.sample(pool, min(num_questions, len(pool)))
+
+    # If still need more, duplicate some but the user wants "unique"
+    # For now, let's assume we have 50 items per domain.
+    # If not, we might need to add more. I added 50 for the major ones.
+
+    questions = []
+    reviewer_topics = []
+
+    for i, item in enumerate(selected_items):
+        topic_name, topic_detail, q_text, opts, ans, exp = item
+        cert_id_prefix = cert_title.lower().replace(" ", "-")[:10]
+
+        questions.append({
+            "id": f"{cert_id_prefix}-q{i+1}",
+            "question": q_text,
+            "options": sorted(opts),
+            "answer": ans,
+            "category": "Core Knowledge",
+            "explanation": exp
+        })
+
+        reviewer_topics.append({
+            "name": topic_name,
+            "detail": topic_detail
+        })
+
+    # Group reviewer topics into modules
+    modules = []
+    module_size = 10
+    for i in range(0, len(reviewer_topics), module_size):
+        module_num = (i // module_size) + 1
+        modules.append({
+            "title": f"Module {module_num}: {domain} Essentials",
+            "topics": reviewer_topics[i:i + module_size]
+        })
+
+    return questions, modules
+
+certs_info = [
+    {"id": "ccna", "title": "Cisco Certified Network Associate (CCNA)", "issuer": "Cisco", "domain": "Networking", "level": "Intermediate", "price": 300, "duration": "120 mins", "q_count": "100-120", "desc": "Fundamentals for IT careers and networking technologies."},
+    {"id": "sec-plus", "title": "CompTIA Security+", "issuer": "CompTIA", "domain": "Security", "level": "Beginner", "price": 392, "duration": "90 mins", "q_count": "Max 90", "desc": "Baseline skills for core security functions and IT security career."},
+    {"id": "aws-ccp", "title": "AWS Certified Cloud Practitioner", "issuer": "AWS", "domain": "Cloud", "level": "Beginner", "price": 100, "duration": "90 mins", "q_count": "65", "desc": "Overall understanding of the AWS Cloud platform."},
+    {"id": "pmp", "title": "Project Management Professional (PMP)", "issuer": "PMI", "domain": "Project Management", "level": "Advanced", "price": 555, "duration": "230 mins", "q_count": "180", "desc": "Gold standard of project management certification."},
+    {"id": "aplus", "title": "CompTIA A+", "issuer": "CompTIA", "domain": "Infrastructure", "level": "Beginner", "price": 246, "duration": "90 mins", "q_count": "Max 90", "desc": "Standard for entry-level IT professionals."},
     {"id": "network-plus", "title": "CompTIA Network+", "issuer": "CompTIA", "domain": "Networking", "level": "Beginner", "price": 358, "duration": "90 mins", "q_count": "Max 90", "desc": "Essential knowledge for a career in IT infrastructure."},
     {"id": "ccnp-encor", "title": "CCNP Enterprise ENCOR", "issuer": "Cisco", "domain": "Networking", "level": "Advanced", "price": 400, "duration": "120 mins", "q_count": "90-110", "desc": "Implementing and operating core network technologies."},
     {"id": "cissp", "title": "Certified Information Systems Security Professional", "issuer": "ISC2", "domain": "Security", "level": "Advanced", "price": 749, "duration": "180 mins", "q_count": "100-150", "desc": "The gold standard for info security professionals."},
@@ -111,127 +392,22 @@ more_certs = [
     {"id": "jcia-junos", "title": "JNCIA-Junos", "issuer": "Juniper", "domain": "Networking", "level": "Beginner", "price": 200, "duration": "90 mins", "q_count": "65", "desc": "Knowledge of the Juniper Networks Junos OS."}
 ]
 
-# Generic domain-specific questions to fill up to 50 per cert
-domain_questions = {
-    "Networking": [
-        ("What does DHCP stand for?", ["Dynamic Host Configuration Protocol", "Data Hub Control Process", "Direct Host Connection Path", "Dynamic Hardware Control Protocol"], "Dynamic Host Configuration Protocol", "DHCP automatically assigns IP addresses to devices on a network."),
-        ("Which protocol is used for securely browsing the web?", ["HTTPS", "HTTP", "FTP", "SSH"], "HTTPS", "HTTPS uses TLS/SSL to encrypt communication between the browser and the server."),
-        ("What is the bit length of an IPv6 address?", ["128 bits", "32 bits", "64 bits", "256 bits"], "128 bits", "IPv6 addresses are 128 bits long, providing a massive address space."),
-        ("What is the purpose of the 'ping' command?", ["Test network connectivity", "Download a file", "Secure a port", "Change IP address"], "Test network connectivity", "Ping uses ICMP Echo Request messages to check if a remote host is reachable."),
-        ("Which device connects multiple networks and makes path decisions?", ["Router", "Switch", "Hub", "Repeater"], "Router", "Routers operate at Layer 3 and route traffic between different networks.")
-    ],
-    "Security": [
-        ("What is Multi-Factor Authentication (MFA)?", ["Using two or more different factors to verify identity", "Using a very long password", "Changing passwords every week", "Using a secure browser"], "Using two or more different factors to verify identity", "MFA combines something you know, something you have, and/or something you are."),
-        ("What is Ransomware?", ["Malware that encrypts data and demands payment", "A hardware firewall", "A type of secure email", "A tool for generating passwords"], "Malware that encrypts data and demands payment", "Ransomware locks users out of their data until a ransom is paid."),
-        ("Which of these is a social engineering attack?", ["Tailgating", "SQLi", "Cross-site scripting", "Buffer overflow"], "Tailgating", "Tailgating involves physically following an authorized person into a secure area."),
-        ("What is the purpose of Hashing?", ["Ensure data integrity", "Encrypt files for storage", "Secure a wireless network", "Create a virtual private network"], "Ensure data integrity", "Hashing creates a unique 'fingerprint' for data; if the data changes, the hash changes."),
-        ("What does a Firewall do?", ["Filter traffic based on security rules", "Speed up internet connection", "Detect viruses on a hard drive", "Cool down the server room"], "Filter traffic based on security rules", "Firewalls control incoming and outgoing network traffic based on an organization's security policy.")
-    ],
-    "Cloud": [
-        ("What is 'SaaS'?", ["Software as a Service", "System as a Service", "Storage as a Service", "Security as a Service"], "Software as a Service", "SaaS delivers software applications over the internet on a subscription basis."),
-        ("Which cloud model is a combination of public and private clouds?", ["Hybrid Cloud", "Community Cloud", "Multi-Cloud", "Distributed Cloud"], "Hybrid Cloud", "Hybrid clouds allow data and apps to be shared between public and private environments."),
-        ("What is 'Serverless' computing?", ["Running code without managing servers", "A server that never crashes", "A cloud with no physical hardware", "Storing data in the browser"], "Running code without managing servers", "Cloud providers manage the server infrastructure and automatically scale based on code execution."),
-        ("What is a 'Region' in cloud computing?", ["A physical location containing multiple availability zones", "A single data center", "A country-wide network", "A virtual private cloud"], "A physical location containing multiple availability zones", "Regions are geographically isolated areas where cloud resources are hosted."),
-        ("What is the primary advantage of cloud computing?", ["Pay-as-you-go pricing", "Lower security", "No internet requirement", "Manual hardware management"], "Pay-as-you-go pricing", "Cloud computing converts capital expenses into variable operational expenses.")
-    ],
-    "Project Management": [
-        ("What is a 'Daily Stand-up'?", ["A short daily meeting to discuss progress", "A weekly project review", "A marathon coding session", "An exercise break for the team"], "A short daily meeting to discuss progress", "Stand-ups are key to Agile sync and identifying blockers early."),
-        ("What does 'Scope Creep' mean?", ["Uncontrolled changes in project requirements", "A bug in the software", "A slow project manager", "A decrease in project budget"], "Uncontrolled changes in project requirements", "Scope creep occurs when new features are added without adjusting time or budget."),
-        ("What is a 'Gantt Chart'?", ["A visual representation of a project schedule", "A financial spreadsheet", "A database schema", "A risk management framework"], "A visual representation of a project schedule", "Gantt charts show tasks over time and their dependencies."),
-        ("Who are 'Stakeholders'?", ["Anyone affected by or involved in the project", "Only the investors", "Only the end-users", "Only the project team"], "Anyone affected by or involved in the project", "Stakeholders include the team, customers, sponsors, and more."),
-        ("What is the 'MVP' in product development?", ["Minimum Viable Product", "Most Valuable Player", "Maximum Value Process", "Main Version Prototype"], "Minimum Viable Product", "An MVP has just enough features to satisfy early customers and provide feedback.")
-    ],
-    "Infrastructure": [
-        ("What is 'Virtualization'?", ["Creating virtual versions of hardware or OS", "Making a website look real", "Using a VR headset", "Storing data on a USB drive"], "Creating virtual versions of hardware or OS", "Virtualization allows running multiple independent systems on a single physical machine."),
-        ("What is 'Docker' used for?", ["Containerization of applications", "Editing photos", "Hosting a database", "Scanning for viruses"], "Containerization of applications", "Docker packages apps and their dependencies into portable containers."),
-        ("What does 'BIOS' stand for?", ["Basic Input/Output System", "Binary Input Operating System", "Backup Internal Output Setup", "Basic Integrated Operating Server"], "Basic Input/Output System", "BIOS is the firmware used to perform hardware initialization during the booting process."),
-        ("What is a 'Hypervisor'?", ["Software that creates and runs virtual machines", "A very fast processor", "A high-security firewall", "A type of network cable"], "Software that creates and runs virtual machines", "Hypervisors manage the physical resources for multiple guest operating systems."),
-        ("What is 'Linux'?", ["An open-source operating system kernel", "A specific type of hardware", "A Microsoft product", "A web browser"], "An open-source operating system kernel", "Linux is the foundation for many popular operating systems like Ubuntu and CentOS.")
-    ],
-    "Data & AI": [
-        ("What is 'Machine Learning'?", ["Algorithms that learn patterns from data", "A robot that thinks like a human", "A very large database", "An automated car"], "Algorithms that learn patterns from data", "ML uses statistical techniques to give computers the ability to 'learn' from data."),
-        ("What is a 'Relational Database'?", ["Data organized in tables with rows and columns", "A list of contacts", "A folder of images", "A single large text file"], "Data organized in tables with rows and columns", "RDBMS (like SQL) use structured relationships between tables."),
-        ("What is 'Big Data'?", ["Extremely large and complex datasets", "A very heavy hard drive", "A high-resolution image", "A long list of names"], "Extremely large and complex datasets", "Big Data is characterized by Volume, Velocity, and Variety."),
-        ("What is 'Artificial Intelligence'?", ["Simulation of human intelligence by machines", "A smart toaster", "An advanced calculator", "A virtual reality game"], "Simulation of human intelligence by machines", "AI encompasses machine learning, robotics, and natural language processing."),
-        ("What is 'SQL'?", ["Structured Query Language", "Simple Queue List", "System Quality Log", "Standard Query Level"], "Structured Query Language", "SQL is the standard language for managing and querying relational databases.")
-    ]
-}
-
 final_data = []
 
-def generate_questions(cert_id, domain, specific_questions):
-    qs = []
-    # Add researched specific questions first
-    for q_text, opts, ans, exp in specific_questions:
-        qs.append({
-            "id": f"{cert_id}-q{len(qs)+1}",
-            "question": q_text,
-            "options": sorted(opts),
-            "answer": ans,
-            "category": "Core Knowledge",
-            "explanation": exp
-        })
-
-    # Fill up to 50 with domain-specific questions
-    domain_qs = domain_questions.get(domain, [])
-    while len(qs) < 50:
-        template_q = domain_qs[(len(qs) - len(specific_questions)) % len(domain_qs)]
-        q_text, opts, ans, exp = template_q
-        qs.append({
-            "id": f"{cert_id}-q{len(qs)+1}",
-            "question": q_text,
-            "options": sorted(opts),
-            "answer": ans,
-            "category": "Domain Review",
-            "explanation": exp
-        })
-    return qs
-
-# Process researched certs
-for cert in certs:
-    domain = cert["domain"]
-    reviewer = [{
-        "title": f"{cert['domain']} Core Knowledge",
-        "topics": [{"name": name, "detail": detail} for name, detail in cert["topics"]]
-    }]
-
-    questions = generate_questions(cert["id"], domain, cert["questions"])
+for cert in certs_info:
+    questions, modules = generate_questions_and_reviewer(cert["title"], cert["domain"], 50)
 
     final_data.append({
         "id": cert["id"],
         "title": cert["title"],
         "issuer": cert["issuer"],
-        "domain": domain,
+        "domain": cert["domain"],
         "level": cert["level"],
         "price": cert["price"],
         "duration": cert["duration"],
         "questionsCount": cert["q_count"],
         "description": cert["desc"],
-        "reviewer": reviewer,
-        "practiceQuestions": questions
-    })
-
-# Process more certs with generic data
-for cert in more_certs:
-    domain = cert["domain"]
-    reviewer = [{
-        "title": f"{domain} Fundamentals",
-        "topics": [{"name": "Core Concepts", "detail": f"Fundamental knowledge required for {cert['title']}."}]
-    }]
-
-    questions = generate_questions(cert["id"], domain, []) # No specific researched questions for these yet
-
-    final_data.append({
-        "id": cert["id"],
-        "title": cert["title"],
-        "issuer": cert["issuer"],
-        "domain": domain,
-        "level": cert["level"],
-        "price": cert["price"],
-        "duration": cert["duration"],
-        "questionsCount": cert["q_count"],
-        "description": cert["desc"],
-        "reviewer": reviewer,
+        "reviewer": modules,
         "practiceQuestions": questions
     })
 
@@ -239,4 +415,4 @@ output = "export const certifications = " + json.dumps(final_data, indent=2) + "
 with open("src/data/certifications.js", "w") as f:
     f.write(output)
 
-print("Generated 25 certifications with higher quality, researched data.")
+print(f"Generated {len(final_data)} certifications. Each has unique questions mapped to reviewer modules.")
