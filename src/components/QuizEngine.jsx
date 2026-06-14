@@ -1,6 +1,7 @@
+
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { certifications } from '../data/certifications';
-import { CheckCircle2, XCircle, ChevronRight, RefreshCw, Trophy, Clock, AlertCircle, BarChart3 } from 'lucide-react';
+import { CheckCircle2, XCircle, ChevronRight, RefreshCw, Trophy, Clock, AlertCircle, BarChart3, ArrowLeft } from 'lucide-react';
 
 const QuizEngine = ({ certId, settings, onExit }) => {
   const storageKey = useMemo(() => `quiz_progress_${certId}`, [certId]);
@@ -166,44 +167,83 @@ const QuizEngine = ({ certId, settings, onExit }) => {
     const currentCert = certifications.find(c => c.id === certId);
 
     return (
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-white p-8 rounded-2xl shadow-xl text-center border border-slate-100 mb-8">
-          <div className="mb-6 flex justify-center">
-            <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
-              <Trophy className="text-blue-600" size={48} />
+      <div className="max-w-4xl mx-auto animate-in fade-in zoom-in-95 duration-500">
+        <div className="case p-10 text-center bg-surface border-border-2 mb-10">
+          <div className="mb-8 flex justify-center">
+            <div className="w-20 h-20 bg-accent-soft rounded-full flex items-center justify-center border border-accent/20">
+              <Trophy className="text-accent" size={40} />
             </div>
           </div>
-          <h2 className="text-3xl font-bold mb-2 text-slate-900">Quiz Completed!</h2>
-          <p className="text-slate-500 mb-8">You've completed the practice quiz for {currentCert?.title}</p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-            <div className="bg-slate-50 p-4 rounded-xl"><div className="text-2xl font-bold text-slate-900">{score}/{questions.length}</div><div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Score</div></div>
-            <div className="bg-slate-50 p-4 rounded-xl"><div className="text-2xl font-bold text-slate-900">{percentage}%</div><div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Accuracy</div></div>
-            <div className="bg-slate-50 p-4 rounded-xl"><div className="text-2xl font-bold text-slate-900">{settings.length}</div><div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Questions</div></div>
-            <div className="bg-slate-50 p-4 rounded-xl"><div className="text-2xl font-bold text-slate-900">{settings.timed ? 'Yes' : 'No'}</div><div className="text-xs text-slate-500 uppercase tracking-wider font-semibold">Timed</div></div>
+          <h2 className="text-4xl font-display font-bold mb-3 text-text">Session Terminated<span className="text-accent">.</span></h2>
+          <p className="text-text-3 font-mono text-sm uppercase tracking-widest mb-10">Final evaluation for {currentCert?.title}</p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+            <div className="bg-surface-2 p-6 rounded-xl border border-border">
+              <div className="text-3xl font-display font-bold text-text mb-1">{score}/{questions.length}</div>
+              <div className="section-head__label !text-[10px]">Net Score</div>
+            </div>
+            <div className="bg-surface-2 p-6 rounded-xl border border-border">
+              <div className="text-3xl font-display font-bold text-accent-2 mb-1">{percentage}%</div>
+              <div className="section-head__label !text-[10px]">Accuracy</div>
+            </div>
+            <div className="bg-surface-2 p-6 rounded-xl border border-border">
+              <div className="text-3xl font-display font-bold text-text mb-1">{settings.length}</div>
+              <div className="section-head__label !text-[10px]">Units</div>
+            </div>
+            <div className="bg-surface-2 p-6 rounded-xl border border-border">
+              <div className="text-3xl font-display font-bold text-accent-3 mb-1">{settings.timed ? 'ON' : 'OFF'}</div>
+              <div className="section-head__label !text-[10px]">Timed</div>
+            </div>
           </div>
-          <div className={`p-4 rounded-xl mb-8 ${percentage >= 70 ? 'bg-green-50 text-green-800' : 'bg-orange-50 text-orange-800'}`}>
-            {percentage >= 70 ? "Great job! You're showing strong knowledge in this area." : "Keep studying! Review the core concepts and try again."}
+
+          <div className={`p-6 rounded-xl font-display text-lg mb-4 border ${percentage >= 70 ? 'bg-accent-2/10 border-accent-2/20 text-accent-2' : 'bg-accent-3/10 border-accent-3/20 text-accent-3'}`}>
+            {percentage >= 70 ? "Exceptional performance. Deploy knowledge." : "Incomplete mastery. Further cycles required."}
           </div>
         </div>
-        <div className="bg-white p-8 rounded-2xl shadow-md border border-slate-100 mb-8">
-          <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center"><BarChart3 className="mr-2 text-blue-600" /> Performance by Domain</h3>
-          <div className="space-y-6">
+
+        <div className="case p-10 bg-surface border-border mb-10">
+          <h3 className="text-xl font-display font-bold text-text mb-8 flex items-center gap-3">
+            <BarChart3 className="text-accent" size={20} />
+            Domain Analytics
+          </h3>
+          <div className="space-y-8">
             {Object.entries(categoryStats).map(([category, stats]) => {
               const catPerc = Math.round((stats.correct / stats.total) * 100);
               return (
-                <div key={category}>
-                  <div className="flex justify-between mb-2"><span className="font-semibold text-slate-700">{category}</span><span className="text-slate-500">{stats.correct}/{stats.total} ({catPerc}%)</span></div>
-                  <div className="h-3 w-full bg-slate-100 rounded-full overflow-hidden">
-                    <div className={`h-full transition-all duration-1000 ${catPerc >= 70 ? 'bg-green-500' : catPerc >= 40 ? 'bg-yellow-500' : 'bg-red-500'}`} style={{ width: `${catPerc}%` }}></div>
+                <div key={category} className="group">
+                  <div className="flex justify-between mb-3">
+                    <span className="font-mono text-xs uppercase tracking-widest text-text-2 group-hover:text-text transition-colors">
+                      {category}
+                    </span>
+                    <span className="font-mono text-xs text-text-3">
+                      {stats.correct}/{stats.total} — <span className={catPerc >= 70 ? 'text-accent-2' : 'text-accent-3'}>{catPerc}%</span>
+                    </span>
+                  </div>
+                  <div className="h-1.5 w-full bg-surface-2 rounded-full overflow-hidden border border-border/50">
+                    <div
+                      className={`h-full transition-all duration-1000 ease-out ${catPerc >= 70 ? 'bg-accent-2' : catPerc >= 40 ? 'bg-accent-3' : 'bg-accent'}`}
+                      style={{ width: `${catPerc}%` }}
+                    ></div>
                   </div>
                 </div>
               );
             })}
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 mb-12">
-          <button onClick={() => { localStorage.removeItem(storageKey); window.location.reload(); }} className="flex-1 bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center shadow-lg shadow-blue-200"><RefreshCw size={18} className="mr-2" /> Retake Quiz</button>
-          <button onClick={() => { localStorage.removeItem(storageKey); onExit(); }} className="flex-1 bg-white border-2 border-slate-200 text-slate-700 py-4 rounded-xl font-bold hover:bg-slate-50 transition">Back to Quiz Menu</button>
+
+        <div className="flex flex-col sm:flex-row gap-6 mb-20">
+          <button
+            onClick={() => { localStorage.removeItem(storageKey); window.location.reload(); }}
+            className="btn btn--primary flex-1 py-5"
+          >
+            <RefreshCw size={18} className="mr-1" /> Re-initialize
+          </button>
+          <button
+            onClick={() => { localStorage.removeItem(storageKey); onExit(); }}
+            className="btn btn--ghost flex-1 py-5"
+          >
+            Return to Base
+          </button>
         </div>
       </div>
     );
@@ -212,41 +252,111 @@ const QuizEngine = ({ certId, settings, onExit }) => {
   const currentQuestion = questions[currentIndex];
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <div className="flex justify-between items-center mb-6">
+    <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <div className="flex justify-between items-end mb-10 border-b border-border pb-6">
         <div>
-          <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Question {currentIndex + 1} of {questions.length}</span>
-          <div className="h-2 w-48 bg-slate-200 rounded-full mt-2 overflow-hidden">
-            <div className="h-full bg-blue-600 transition-all duration-300" style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}></div>
+          <div className="section-head__label !mb-2 flex items-center gap-2">
+             <span className="text-accent">0{currentIndex + 1}</span> / 0{questions.length} Units
+          </div>
+          <div className="h-1 w-64 bg-surface-2 rounded-full overflow-hidden border border-border/50">
+            <div
+              className="h-full bg-accent transition-all duration-500 ease-out"
+              style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}
+            ></div>
           </div>
         </div>
-        {timeLeft !== null && <div className={`flex items-center font-mono font-bold text-lg ${timeLeft < 30 ? 'text-red-500 animate-pulse' : 'text-slate-700'}`}><Clock size={20} className="mr-2" />{formatTime(timeLeft)}</div>}
+
+        <div className="flex items-center gap-4">
+          {timeLeft !== null && (
+            <div className={`flex items-center gap-2 font-mono font-bold text-xl ${timeLeft < 30 ? 'text-accent-3 animate-pulse' : 'text-text-2'}`}>
+              <Clock size={18} />
+              {formatTime(timeLeft)}
+            </div>
+          )}
+          <button
+            onClick={onExit}
+            className="icon-btn !w-10 !h-10 border-dashed"
+            title="Abort Mission"
+          >
+            <ArrowLeft size={18} />
+          </button>
+        </div>
       </div>
-      <div className="bg-white p-8 rounded-2xl shadow-md border border-slate-100">
-        <div className="mb-4"><span className="text-xs font-bold bg-blue-50 text-blue-600 px-2 py-1 rounded uppercase tracking-wider">{currentQuestion.category}</span></div>
-        <h3 className="text-xl font-bold text-slate-900 mb-8 leading-relaxed">{currentQuestion.question}</h3>
-        <div className="space-y-4 mb-8">
+
+      <div className="case p-10 bg-surface border-border shadow-2xl relative">
+        <div className="mb-6">
+          <span className="case__group-tag !text-[10px]">
+            {currentQuestion.category}
+          </span>
+        </div>
+
+        <h3 className="text-2xl font-display font-bold text-text mb-12 leading-tight">
+          {currentQuestion.question}
+        </h3>
+
+        <div className="space-y-4 mb-12">
           {currentQuestion.options.map((option, idx) => {
-            let variant = "default";
+            let state = "idle";
             if (isAnswered) {
-              if (option === currentQuestion.answer) variant = "correct";
-              else if (option === selectedOption) variant = "incorrect";
-            } else if (option === selectedOption) variant = "selected";
+              if (option === currentQuestion.answer) state = "correct";
+              else if (option === selectedOption) state = "incorrect";
+            } else if (option === selectedOption) state = "selected";
+
             return (
-              <button key={idx} disabled={isAnswered} onClick={() => handleOptionSelect(option)} className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center justify-between ${variant === "correct" ? "border-green-500 bg-green-50 text-green-900" : variant === "incorrect" ? "border-red-500 bg-red-50 text-red-900" : variant === "selected" ? "border-blue-500 bg-blue-50 text-blue-900" : "border-slate-100 hover:border-slate-300 bg-white"}`}><span className="font-medium">{option}</span>{variant === "correct" && <CheckCircle2 size={20} className="text-green-600" />}{variant === "incorrect" && <XCircle size={20} className="text-red-600" />}</button>
+              <button
+                key={idx}
+                disabled={isAnswered}
+                onClick={() => handleOptionSelect(option)}
+                className={`w-full text-left p-5 rounded-xl border transition-all flex items-center justify-between group relative overflow-hidden ${
+                  state === "correct" ? "border-accent-2 bg-accent-2/10 text-text" :
+                  state === "incorrect" ? "border-accent bg-accent/10 text-text" :
+                  state === "selected" ? "border-accent-2 bg-surface-2 text-text" :
+                  "border-border bg-surface-2 hover:border-border-2 text-text-2"
+                }`}
+              >
+                <span className="font-medium relative z-10">{option}</span>
+                <div className="relative z-10">
+                  {state === "correct" && <CheckCircle2 size={20} className="text-accent-2" />}
+                  {state === "incorrect" && <XCircle size={20} className="text-accent" />}
+                </div>
+              </button>
             );
           })}
         </div>
+
         {isAnswered && (
-          <div className="bg-slate-50 p-6 rounded-xl mb-8 animate-in fade-in slide-in-from-top-4">
-            <div className="flex items-start"><AlertCircle size={20} className="mr-3 text-blue-600 mt-0.5" /><div><h4 className="font-bold text-slate-900 mb-1">Explanation</h4><p className="text-slate-600 text-sm leading-relaxed">{currentQuestion.explanation}</p></div></div>
+          <div className="case p-8 bg-surface-2 border-accent-soft/30 mb-10 animate-in fade-in slide-in-from-top-2 duration-300">
+            <div className="flex items-start gap-4">
+              <div className="principle__icon !w-8 !h-8 !mb-0 !bg-accent-soft/20">
+                <AlertCircle size={16} className="text-accent" />
+              </div>
+              <div>
+                <h4 className="font-display font-bold text-text mb-2">Technical Insight</h4>
+                <p className="text-text-2 text-sm leading-relaxed italic border-l-2 border-accent-soft/50 pl-4">
+                  {currentQuestion.explanation}
+                </p>
+              </div>
+            </div>
           </div>
         )}
-        <div className="flex justify-end">
+
+        <div className="flex justify-end pt-6 border-t border-border">
           {!isAnswered ? (
-            <button onClick={handleSubmit} disabled={selectedOption === null} className={`px-8 py-3 rounded-xl font-bold transition-all ${selectedOption === null ? "bg-slate-100 text-slate-400 cursor-not-allowed" : "bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-200"}`}>Check Answer</button>
+            <button
+              onClick={handleSubmit}
+              disabled={selectedOption === null}
+              className={`btn btn--lg min-w-[200px] ${selectedOption === null ? "opacity-30 grayscale cursor-not-allowed" : "btn--primary"}`}
+            >
+              Analyze Input
+            </button>
           ) : (
-            <button onClick={handleNext} className="bg-slate-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-800 transition-all flex items-center">{currentIndex < questions.length - 1 ? "Next Question" : "View Results"}<ChevronRight size={20} className="ml-1" /></button>
+            <button
+              onClick={handleNext}
+              className="btn btn--primary btn--lg min-w-[200px]"
+            >
+              {currentIndex < questions.length - 1 ? "Next Unit" : "Finalize Output"}
+              <ChevronRight size={18} className="ml-1" />
+            </button>
           )}
         </div>
       </div>
