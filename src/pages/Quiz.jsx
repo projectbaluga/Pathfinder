@@ -1,11 +1,20 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { certifications } from '../data/certifications';
 import QuizEngine from '../components/QuizEngine';
 import { GraduationCap, Settings2, Play, Timer } from 'lucide-react';
 
 const Quiz = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const certQuery = searchParams.get('cert');
+
   const [quizState, setQuizState] = useState('setup'); // setup, active
-  const [selectedCertId, setSelectedCertId] = useState(certifications[0].id);
+
+  // Derive selectedCertId directly from query params if valid, falling back to certification array
+  const selectedCertId = (certQuery && certifications.some(c => c.id === certQuery))
+    ? certQuery
+    : certifications[0].id;
+
   const [quizSettings, setQuizSettings] = useState({
     length: 10,
     timed: false
@@ -31,6 +40,11 @@ const Quiz = () => {
     );
   }
 
+  // Update selectedCertId via router URL search query
+  const handleCertSelect = (id) => {
+    setSearchParams({ cert: id });
+  };
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-12">
@@ -52,7 +66,7 @@ const Quiz = () => {
               {certifications.map(cert => (
                 <button
                   key={cert.id}
-                  onClick={() => setSelectedCertId(cert.id)}
+                  onClick={() => handleCertSelect(cert.id)}
                   className={`w-full text-left px-5 py-4 rounded-xl border-2 transition-all ${
                     selectedCertId === cert.id
                       ? 'border-blue-600 bg-blue-50 text-blue-700 font-bold'

@@ -1,9 +1,20 @@
 import { ExternalLink, DollarSign, Clock, Tag, Award } from 'lucide-react';
 
 const CertCard = ({ cert, onClick }) => {
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onClick(cert);
+    }
+  };
+
   return (
     <div
-      className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer"
+      role="button"
+      tabIndex={0}
+      aria-label={`View details for ${cert.title}`}
+      onKeyDown={handleKeyDown}
+      className="bg-white rounded-xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
       onClick={() => onClick(cert)}
     >
       <div className="p-6">

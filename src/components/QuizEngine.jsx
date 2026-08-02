@@ -1,83 +1,63 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { certifications } from '../data/certifications';
 import { CheckCircle2, XCircle, ChevronRight, RefreshCw, Trophy, Clock, AlertCircle, BarChart3 } from 'lucide-react';
 
+// Pure helper to build questions
+export const buildQuestions = (certId, settings) => {
+  const cert = certifications.find(c => c.id === certId);
+  if (cert) {
+    const selectedQuestions = [...cert.practiceQuestions].sort(() => Math.random() - 0.5).slice(0, settings.length);
+    // Shuffle options for each question
+    return selectedQuestions.map(q => ({
+      ...q,
+      options: [...q.options].sort(() => Math.random() - 0.5)
+    }));
+  }
+  return [];
+};
+
+// Pure helper to load saved progress
+export const loadSavedProgress = (storageKey, settings) => {
+  const savedProgress = localStorage.getItem(storageKey);
+  if (savedProgress) {
+    try {
+      const parsed = JSON.parse(savedProgress);
+      if (parsed && parsed.settings && parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
+        return parsed;
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
+  return null;
+};
+
 const QuizEngine = ({ certId, settings, onExit }) => {
   const storageKey = useMemo(() => `quiz_progress_${certId}`, [certId]);
 
-  // Initialize state from localStorage or defaults
-  const [questions] = useState(() => {
-    const savedProgress = localStorage.getItem(storageKey);
-    if (savedProgress) {
-      try {
-        const parsed = JSON.parse(savedProgress);
-        if (parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
-          return parsed.questions;
-        }
-      } catch (e) { console.error(e); }
-    }
-    const cert = certifications.find(c => c.id === certId);
-    if (cert) {
-      const selectedQuestions = [...cert.practiceQuestions].sort(() => Math.random() - 0.5).slice(0, settings.length);
-      // Shuffle options for each question
-      return selectedQuestions.map(q => ({
-        ...q,
-        options: [...q.options].sort(() => Math.random() - 0.5)
-      }));
-    }
-    return [];
+  // Compute saved progress once
+  const saved = useMemo(() => loadSavedProgress(storageKey, settings), [storageKey, settings]);
+
+  // Initialize state from computed saved progress or defaults
+  const [questions, setQuestions] = useState(() => {
+    return saved?.questions ?? buildQuestions(certId, settings);
   });
 
   const [currentIndex, setCurrentIndex] = useState(() => {
-    const savedProgress = localStorage.getItem(storageKey);
-    if (savedProgress) {
-      try {
-        const parsed = JSON.parse(savedProgress);
-        if (parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
-          return parsed.currentIndex;
-        }
-      } catch (e) { console.error(e); }
-    }
-    return 0;
+    return saved?.currentIndex ?? 0;
   });
 
   const [score, setScore] = useState(() => {
-    const savedProgress = localStorage.getItem(storageKey);
-    if (savedProgress) {
-      try {
-        const parsed = JSON.parse(savedProgress);
-        if (parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
-          return parsed.score;
-        }
-      } catch (e) { console.error(e); }
-    }
-    return 0;
+    return saved?.score ?? 0;
   });
 
   const [resultsData, setResultsData] = useState(() => {
-    const savedProgress = localStorage.getItem(storageKey);
-    if (savedProgress) {
-      try {
-        const parsed = JSON.parse(savedProgress);
-        if (parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
-          return parsed.resultsData;
-        }
-      } catch (e) { console.error(e); }
-    }
-    return [];
+    return saved?.resultsData ?? [];
   });
 
   const [timeLeft, setTimeLeft] = useState(() => {
-    const savedProgress = localStorage.getItem(storageKey);
-    if (savedProgress) {
-      try {
-        const parsed = JSON.parse(savedProgress);
-        if (parsed.settings.length === settings.length && parsed.settings.timed === settings.timed) {
-          return parsed.timeLeft;
-        }
-      } catch (e) { console.error(e); }
-    }
-    return settings.timed ? settings.length * 60 : null;
+    return saved?.timeLeft ?? (settings.timed ? settings.length * 60 : null);
   });
 
   const [selectedOption, setSelectedOption] = useState(null);
@@ -142,6 +122,20 @@ const QuizEngine = ({ certId, settings, onExit }) => {
     }
   };
 
+  // Pure React reset function
+  const resetQuiz = useCallback(() => {
+    localStorage.removeItem(storageKey);
+    const newQuestions = buildQuestions(certId, settings);
+    setQuestions(newQuestions);
+    setCurrentIndex(0);
+    setScore(0);
+    setResultsData([]);
+    setTimeLeft(settings.timed ? settings.length * 60 : null);
+    setSelectedOption(null);
+    setIsAnswered(false);
+    setShowResults(false);
+  }, [storageKey, certId, settings]);
+
   const formatTime = (seconds) => {
     const m = Math.floor(seconds / 60);
     const s = seconds % 60;
@@ -202,7 +196,7 @@ const QuizEngine = ({ certId, settings, onExit }) => {
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
-          <button onClick={() => { localStorage.removeItem(storageKey); window.location.reload(); }} className="flex-1 bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center shadow-lg shadow-blue-200"><RefreshCw size={18} className="mr-2" /> Retake Quiz</button>
+          <button onClick={resetQuiz} className="flex-1 bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition flex items-center justify-center shadow-lg shadow-blue-200"><RefreshCw size={18} className="mr-2" /> Retake Quiz</button>
           <button onClick={() => { localStorage.removeItem(storageKey); onExit(); }} className="flex-1 bg-white border-2 border-slate-200 text-slate-700 py-4 rounded-xl font-bold hover:bg-slate-50 transition">Back to Quiz Menu</button>
         </div>
       </div>
@@ -220,20 +214,31 @@ const QuizEngine = ({ certId, settings, onExit }) => {
             <div className="h-full bg-blue-600 transition-all duration-300" style={{ width: `${((currentIndex + 1) / questions.length) * 100}%` }}></div>
           </div>
         </div>
-        {timeLeft !== null && <div className={`flex items-center font-mono font-bold text-lg ${timeLeft < 30 ? 'text-red-500 animate-pulse' : 'text-slate-700'}`}><Clock size={20} className="mr-2" />{formatTime(timeLeft)}</div>}
+        {timeLeft !== null && <div role="timer" aria-live="polite" className={`flex items-center font-mono font-bold text-lg ${timeLeft < 30 ? 'text-red-500 animate-pulse' : 'text-slate-700'}`}><Clock size={20} className="mr-2" />{formatTime(timeLeft)}</div>}
       </div>
       <div className="bg-white p-8 rounded-2xl shadow-md border border-slate-100">
         <div className="mb-4"><span className="text-xs font-bold bg-blue-50 text-blue-600 px-2 py-1 rounded uppercase tracking-wider">{currentQuestion.category}</span></div>
         <h3 className="text-xl font-bold text-slate-900 mb-8 leading-relaxed">{currentQuestion.question}</h3>
-        <div className="space-y-4 mb-8">
+        <div role="group" aria-label={`Question ${currentIndex + 1} options`} className="space-y-4 mb-8">
           {currentQuestion.options.map((option, idx) => {
             let variant = "default";
             if (isAnswered) {
               if (option === currentQuestion.answer) variant = "correct";
               else if (option === selectedOption) variant = "incorrect";
             } else if (option === selectedOption) variant = "selected";
+
+            // accessibility state label
+            let ariaLabel = option;
+            if (isAnswered) {
+              if (option === currentQuestion.answer) {
+                ariaLabel += " - correct answer";
+              } else if (option === selectedOption) {
+                ariaLabel += " - your answer, incorrect";
+              }
+            }
+
             return (
-              <button key={idx} disabled={isAnswered} onClick={() => handleOptionSelect(option)} className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center justify-between ${variant === "correct" ? "border-green-500 bg-green-50 text-green-900" : variant === "incorrect" ? "border-red-500 bg-red-50 text-red-900" : variant === "selected" ? "border-blue-500 bg-blue-50 text-blue-900" : "border-slate-100 hover:border-slate-300 bg-white"}`}><span className="font-medium">{option}</span>{variant === "correct" && <CheckCircle2 size={20} className="text-green-600" />}{variant === "incorrect" && <XCircle size={20} className="text-red-600" />}</button>
+              <button key={idx} disabled={isAnswered} aria-pressed={option === selectedOption} aria-label={ariaLabel} onClick={() => handleOptionSelect(option)} className={`w-full text-left p-4 rounded-xl border-2 transition-all flex items-center justify-between ${variant === "correct" ? "border-green-500 bg-green-50 text-green-900" : variant === "incorrect" ? "border-red-500 bg-red-50 text-red-900" : variant === "selected" ? "border-blue-500 bg-blue-50 text-blue-900" : "border-slate-100 hover:border-slate-300 bg-white"}`}><span className="font-medium">{option}</span>{variant === "correct" && <CheckCircle2 size={20} className="text-green-600" />}{variant === "incorrect" && <XCircle size={20} className="text-red-600" />}</button>
             );
           })}
         </div>

@@ -1,9 +1,17 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { certifications } from '../data/certifications';
 import { ChevronDown, ChevronUp, Book, Lightbulb, Clock, BookOpen } from 'lucide-react';
 
 const Reviewer = () => {
-  const [selectedCertId, setSelectedCertId] = useState(certifications[0].id);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const certQuery = searchParams.get('cert');
+
+  // Derive selectedCertId directly from query param, falling back to certification array
+  const selectedCertId = (certQuery && certifications.some(c => c.id === certQuery))
+    ? certQuery
+    : certifications[0].id;
+
   const [expandedSections, setExpandedSections] = useState({});
 
   const selectedCert = certifications.find(c => c.id === selectedCertId);
@@ -13,6 +21,11 @@ const Reviewer = () => {
       ...prev,
       [index]: !prev[index]
     }));
+  };
+
+  const handleCertSelect = (id) => {
+    setExpandedSections({});
+    setSearchParams({ cert: id });
   };
 
   return (
@@ -35,10 +48,7 @@ const Reviewer = () => {
               {certifications.map(cert => (
                 <button
                   key={cert.id}
-                  onClick={() => {
-                    setSelectedCertId(cert.id);
-                    setExpandedSections({});
-                  }}
+                  onClick={() => handleCertSelect(cert.id)}
                   className={`w-full text-left px-6 py-4 transition-colors hover:bg-slate-50 ${
                     selectedCertId === cert.id ? 'bg-blue-50 border-r-4 border-blue-600 text-blue-700 font-semibold' : 'text-slate-600'
                   }`}
@@ -78,26 +88,31 @@ const Reviewer = () => {
                     <div key={idx} className="border border-slate-200 rounded-xl overflow-hidden">
                       <button
                         onClick={() => toggleSection(idx)}
+                        aria-expanded={!!expandedSections[idx]}
+                        aria-controls={`reviewer-section-${idx}`}
                         className="w-full flex items-center justify-between p-5 text-left bg-slate-50 hover:bg-slate-100 transition-colors"
                       >
                         <span className="font-bold text-slate-800">{section.title}</span>
                         {expandedSections[idx] ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                       </button>
-                      {expandedSections[idx] && (
-                        <div className="p-5 bg-white space-y-6">
-                          {section.topics.map((topic, tIdx) => (
-                            <div key={tIdx} className="group">
-                              <h4 className="font-bold text-blue-600 mb-2 flex items-center group-hover:translate-x-1 transition-transform">
-                                <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>
-                                {topic.name}
-                              </h4>
-                              <p className="text-slate-600 pl-4.5 border-l-2 border-slate-100 ml-0.75 py-1">
-                                {topic.detail}
-                              </p>
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                      <div
+                        id={`reviewer-section-${idx}`}
+                        role="region"
+                        hidden={!expandedSections[idx]}
+                        className={`p-5 bg-white space-y-6 ${!expandedSections[idx] ? 'hidden' : ''}`}
+                      >
+                        {section.topics.map((topic, tIdx) => (
+                          <div key={tIdx} className="group">
+                            <h4 className="font-bold text-blue-600 mb-2 flex items-center group-hover:translate-x-1 transition-transform">
+                              <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span>
+                              {topic.name}
+                            </h4>
+                            <p className="text-slate-600 pl-4.5 border-l-2 border-slate-100 ml-0.75 py-1">
+                              {topic.detail}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>
