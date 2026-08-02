@@ -75,15 +75,15 @@ const CertDetails = ({ cert, onClose }) => {
       <div
         ref={containerRef}
         onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto"
+        className="bg-white rounded-xl2 shadow-soft-lg w-full max-w-3xl max-h-[90vh] overflow-y-auto"
       >
-        <div className="sticky top-0 bg-white border-b border-slate-100 px-6 py-4 flex justify-between items-center">
-          <h2 id="cert-details-title" className="text-2xl font-bold text-slate-900">{cert.title}</h2>
+        <div className="sticky top-0 bg-white/95 backdrop-blur-md border-b border-slate-100 px-6 py-4 flex justify-between items-center z-10">
+          <h2 id="cert-details-title" className="text-2xl font-extrabold tracking-tight text-slate-900">{cert.title}</h2>
           <button
             ref={closeButtonRef}
             onClick={onClose}
             aria-label="Close details"
-            className="p-2 hover:bg-slate-100 rounded-full transition-colors"
+            className="p-2 hover:bg-slate-100 rounded-full transition-colors text-slate-500 hover:text-slate-800"
           >
             <X size={24} />
           </button>
@@ -91,32 +91,32 @@ const CertDetails = ({ cert, onClose }) => {
 
         <div className="p-6 md:p-8">
           <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center">
-                <Info size={16} className="mr-2" /> Overview
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100/50">
+              <h3 className="text-xs font-bold text-primary-400 uppercase tracking-widest mb-4 flex items-center">
+                <Info size={16} className="mr-2 text-primary-500" /> Overview
               </h3>
-              <div className="space-y-3">
-                <p><span className="font-semibold text-slate-700">Issuer:</span> {cert.issuer}</p>
-                <p><span className="font-semibold text-slate-700">Domain:</span> {cert.domain}</p>
-                <p><span className="font-semibold text-slate-700">Level:</span> {cert.level}</p>
-                <p><span className="font-semibold text-slate-700">Cost:</span> ${cert.price}</p>
+              <div className="space-y-3 text-sm">
+                <p><span className="font-semibold text-slate-600">Issuer:</span> {cert.issuer}</p>
+                <p><span className="font-semibold text-slate-600">Domain:</span> {cert.domain}</p>
+                <p><span className="font-semibold text-slate-600">Level:</span> {cert.level}</p>
+                <p><span className="font-semibold text-slate-600">Cost:</span> ${cert.price}</p>
               </div>
             </div>
-            <div>
-              <h3 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4 flex items-center">
-                <ListChecks size={16} className="mr-2" /> Exam Details
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100/50">
+              <h3 className="text-xs font-bold text-primary-400 uppercase tracking-widest mb-4 flex items-center">
+                <ListChecks size={16} className="mr-2 text-primary-500" /> Exam Details
               </h3>
-              <div className="space-y-3">
-                <p><span className="font-semibold text-slate-700">Questions:</span> {cert.questionsCount}</p>
-                <p><span className="font-semibold text-slate-700">Duration:</span> {cert.duration}</p>
-                <p><span className="font-semibold text-slate-700">Practice:</span> {cert.practiceQuestions?.length ?? 0} questions available</p>
+              <div className="space-y-3 text-sm">
+                <p><span className="font-semibold text-slate-600">Questions:</span> {cert.questionsCount}</p>
+                <p><span className="font-semibold text-slate-600">Duration:</span> {cert.duration}</p>
+                <p><span className="font-semibold text-slate-600">Practice:</span> {cert.practiceQuestions?.length ?? 0} questions available</p>
               </div>
             </div>
           </div>
 
-          <div className="bg-blue-50 border border-blue-100 p-6 rounded-xl">
-            <h3 className="text-lg font-bold text-blue-900 mb-2">Description</h3>
-            <p className="text-blue-800 leading-relaxed">{cert.description}</p>
+          <div className="bg-primary-50/50 border border-primary-100 p-6 rounded-xl2">
+            <h3 className="text-lg font-bold text-primary-900 mb-2">Description</h3>
+            <p className="text-primary-800 leading-relaxed text-sm font-medium">{cert.description}</p>
           </div>
         </div>
 
@@ -124,20 +124,20 @@ const CertDetails = ({ cert, onClose }) => {
           <Link
             to={`/reviewer?cert=${cert.id}`}
             onClick={onClose}
-            className="bg-green-600 text-white px-6 py-2.5 rounded-xl font-bold hover:bg-green-700 transition shadow-lg shadow-green-100 flex items-center justify-center"
+            className="bg-green-600 text-white px-6 py-2.5 rounded-pill font-bold hover:bg-green-700 transition shadow-md shadow-green-200 flex items-center justify-center text-sm"
           >
             Study Reviewer
           </Link>
           <Link
             to={`/quiz?cert=${cert.id}`}
             onClick={onClose}
-            className="bg-blue-600 text-white px-6 py-2.5 rounded-xl font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-100 flex items-center justify-center"
+            className="bg-primary-500 text-white px-6 py-2.5 rounded-pill font-bold hover:bg-primary-600 transition shadow-md shadow-primary-200 flex items-center justify-center text-sm"
           >
             Take Practice Quiz
           </Link>
           <button
             onClick={onClose}
-            className="bg-slate-900 text-white px-8 py-2.5 rounded-xl font-bold hover:bg-slate-800 transition shadow-lg shadow-slate-200"
+            className="bg-slate-900 text-white px-8 py-2.5 rounded-pill font-bold hover:bg-slate-800 transition shadow-md shadow-slate-200 text-sm"
           >
             Close
           </button>

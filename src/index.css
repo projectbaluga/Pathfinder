@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F4F6FC; /* Docy light-blue/off-white airy background */
+    color: #334155; /* slate-700 for highly readable body copy */
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+  }
+}

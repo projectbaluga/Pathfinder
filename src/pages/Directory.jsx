@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { certifications } from '../data/certifications';
 import CertCard from '../components/CertCard';
 import CertDetails from '../components/CertDetails';
@@ -6,7 +7,17 @@ import { isFavorite } from '../utils/favorites';
 import { Search, Filter, SlidersHorizontal, CircleDollarSign, Star } from 'lucide-react';
 
 const Directory = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialQuery = searchParams.get('q') || '';
+
+  // Drive search value straight from initial render to avoid effect cascades
+  const [searchTerm, setSearchTerm] = useState(initialQuery);
+  const [prevQuery, setPrevQuery] = useState(initialQuery);
+  if (initialQuery !== prevQuery) {
+    setPrevQuery(initialQuery);
+    setSearchTerm(initialQuery);
+  }
+
   const [domainFilter, setDomainFilter] = useState('All');
   const [levelFilter, setLevelFilter] = useState('All');
   const [priceFilter, setPriceFilter] = useState('All');
@@ -45,21 +56,24 @@ const Directory = () => {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-12">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Certification Directory</h1>
-        <p className="text-slate-600 max-w-2xl">
+        <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900 tracking-tight">Certification Directory</h1>
+        <p className="text-slate-500 font-medium max-w-2xl leading-relaxed">
           Browse our comprehensive catalog of IT certifications. Filter by domain, difficulty, and price to find the right path for your career growth.
         </p>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6 mb-10">
         <div className="relative flex-grow">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-primary-400" size={20} />
           <input
             type="text"
             placeholder="Search certifications or issuers..."
-            className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 transition shadow-sm"
+            className="w-full pl-12 pr-4 py-3.5 border border-slate-200 rounded-pill focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white transition shadow-soft font-medium text-slate-800 text-sm"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              setSearchParams(e.target.value ? { q: e.target.value } : {});
+            }}
           />
         </div>
 
@@ -68,20 +82,20 @@ const Directory = () => {
           <button
             type="button"
             onClick={() => setFavoritesOnly(prev => !prev)}
-            className={`flex items-center space-x-2 border rounded-xl px-4 py-3 transition shadow-sm font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
+            className={`flex items-center space-x-2 border rounded-pill px-5 py-3 transition shadow-soft font-bold text-xs focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
               favoritesOnly
                 ? 'bg-yellow-50 border-yellow-200 text-yellow-700'
                 : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
             }`}
           >
-            <Star size={18} fill={favoritesOnly ? "currentColor" : "none"} />
+            <Star size={16} fill={favoritesOnly ? "currentColor" : "none"} className="text-yellow-500" />
             <span>Favorites Only</span>
           </button>
 
           <div className="flex items-center space-x-2">
-            <Filter size={20} className="text-slate-400" />
+            <Filter size={18} className="text-primary-400" />
             <select
-              className="bg-white border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
+              className="bg-white border border-slate-200 rounded-pill px-5 py-3 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-primary-500 shadow-soft cursor-pointer"
               value={domainFilter}
               onChange={(e) => setDomainFilter(e.target.value)}
             >
@@ -92,9 +106,9 @@ const Directory = () => {
           </div>
 
           <div className="flex items-center space-x-2">
-            <SlidersHorizontal size={20} className="text-slate-400" />
+            <SlidersHorizontal size={18} className="text-primary-400" />
             <select
-              className="bg-white border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
+              className="bg-white border border-slate-200 rounded-pill px-5 py-3 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-primary-500 shadow-soft cursor-pointer"
               value={levelFilter}
               onChange={(e) => setLevelFilter(e.target.value)}
             >
@@ -105,9 +119,9 @@ const Directory = () => {
           </div>
 
           <div className="flex items-center space-x-2">
-            <CircleDollarSign size={20} className="text-slate-400" />
+            <CircleDollarSign size={18} className="text-primary-400" />
             <select
-              className="bg-white border border-slate-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
+              className="bg-white border border-slate-200 rounded-pill px-5 py-3 text-xs font-bold text-slate-700 focus:outline-none focus:ring-2 focus:ring-primary-500 shadow-soft cursor-pointer"
               value={priceFilter}
               onChange={(e) => setPriceFilter(e.target.value)}
             >
@@ -126,11 +140,18 @@ const Directory = () => {
           ))}
         </div>
       ) : (
-        <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-slate-300">
-          <p className="text-slate-500 text-lg">No certifications found matching your criteria.</p>
+        <div className="text-center py-20 bg-white rounded-xl2 border border-dashed border-slate-300 shadow-soft">
+          <p className="text-slate-500 text-lg font-bold">No certifications found matching your criteria.</p>
           <button
-            onClick={() => {setSearchTerm(''); setDomainFilter('All'); setLevelFilter('All'); setPriceFilter('All'); setFavoritesOnly(false);}}
-            className="mt-4 text-blue-600 font-semibold hover:underline"
+            onClick={() => {
+              setSearchTerm('');
+              setDomainFilter('All');
+              setLevelFilter('All');
+              setPriceFilter('All');
+              setFavoritesOnly(false);
+              setSearchParams({});
+            }}
+            className="mt-4 text-primary-500 font-extrabold hover:underline"
           >
             Clear all filters
           </button>
