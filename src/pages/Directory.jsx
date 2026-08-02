@@ -2,13 +2,15 @@ import { useState, useMemo } from 'react';
 import { certifications } from '../data/certifications';
 import CertCard from '../components/CertCard';
 import CertDetails from '../components/CertDetails';
-import { Search, Filter, SlidersHorizontal, CircleDollarSign } from 'lucide-react';
+import { isFavorite } from '../utils/favorites';
+import { Search, Filter, SlidersHorizontal, CircleDollarSign, Star } from 'lucide-react';
 
 const Directory = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [domainFilter, setDomainFilter] = useState('All');
   const [levelFilter, setLevelFilter] = useState('All');
   const [priceFilter, setPriceFilter] = useState('All');
+  const [favoritesOnly, setFavoritesOnly] = useState(false);
   const [selectedCert, setSelectedCert] = useState(null);
 
   const domains = ['All', ...new Set(certifications.map(c => c.domain))];
@@ -34,9 +36,11 @@ const Directory = () => {
       else if (priceFilter === '500') matchesPrice = cert.price < 500;
       else if (priceFilter === '500+') matchesPrice = cert.price >= 500;
 
-      return matchesSearch && matchesDomain && matchesLevel && matchesPrice;
+      const matchesFavorite = !favoritesOnly || isFavorite(cert.id);
+
+      return matchesSearch && matchesDomain && matchesLevel && matchesPrice && matchesFavorite;
     });
-  }, [searchTerm, domainFilter, levelFilter, priceFilter]);
+  }, [searchTerm, domainFilter, levelFilter, priceFilter, favoritesOnly]);
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -59,7 +63,21 @@ const Directory = () => {
           />
         </div>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap items-center gap-4">
+          {/* Favorites Filter Button */}
+          <button
+            type="button"
+            onClick={() => setFavoritesOnly(prev => !prev)}
+            className={`flex items-center space-x-2 border rounded-xl px-4 py-3 transition shadow-sm font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 ${
+              favoritesOnly
+                ? 'bg-yellow-50 border-yellow-200 text-yellow-700'
+                : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+            }`}
+          >
+            <Star size={18} fill={favoritesOnly ? "currentColor" : "none"} />
+            <span>Favorites Only</span>
+          </button>
+
           <div className="flex items-center space-x-2">
             <Filter size={20} className="text-slate-400" />
             <select
@@ -111,7 +129,7 @@ const Directory = () => {
         <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-slate-300">
           <p className="text-slate-500 text-lg">No certifications found matching your criteria.</p>
           <button
-            onClick={() => {setSearchTerm(''); setDomainFilter('All'); setLevelFilter('All'); setPriceFilter('All');}}
+            onClick={() => {setSearchTerm(''); setDomainFilter('All'); setLevelFilter('All'); setPriceFilter('All'); setFavoritesOnly(false);}}
             className="mt-4 text-blue-600 font-semibold hover:underline"
           >
             Clear all filters

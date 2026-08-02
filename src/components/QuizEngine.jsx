@@ -1,6 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import { certifications } from '../data/certifications';
+import { addQuizResult } from '../utils/quizHistory';
 import { CheckCircle2, XCircle, ChevronRight, RefreshCw, Trophy, Clock, AlertCircle, BarChart3 } from 'lucide-react';
 
 // Pure helper to build questions
@@ -64,10 +65,26 @@ const QuizEngine = ({ certId, settings, onExit }) => {
   const [isAnswered, setIsAnswered] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
+  // Results review toggle filter state: "all" or "incorrect"
+  const [reviewFilter, setReviewFilter] = useState('all');
+
+  const currentCert = useMemo(() => certifications.find(c => c.id === certId), [certId]);
+
   const endQuiz = useCallback(() => {
     setShowResults(true);
     localStorage.removeItem(storageKey);
-  }, [storageKey]);
+
+    // Save final quiz metrics into overall quizHistory database
+    addQuizResult({
+      certId,
+      certTitle: currentCert?.title || 'Unknown Certification',
+      score,
+      total: questions.length,
+      timed: settings.timed,
+      durationSeconds: settings.timed ? (settings.length * 60 - (timeLeft ?? 0)) : 0,
+      completedAt: new Date().toISOString()
+    });
+  }, [storageKey, certId, currentCert, score, questions.length, settings.timed, settings.length, timeLeft]);
 
   // Persist Progress
   useEffect(() => {
@@ -89,14 +106,13 @@ const QuizEngine = ({ certId, settings, onExit }) => {
     if (timeLeft === null || showResults) return;
     if (timeLeft <= 0) {
       const timer = setTimeout(() => {
-        setShowResults(true);
-        localStorage.removeItem(storageKey);
+        endQuiz();
       }, 0);
       return () => clearTimeout(timer);
     }
     const timer = setTimeout(() => setTimeLeft(prev => (prev !== null ? prev - 1 : null)), 1000);
     return () => clearTimeout(timer);
-  }, [timeLeft, showResults, storageKey]);
+  }, [timeLeft, showResults, endQuiz]);
 
   const handleOptionSelect = (option) => {
     if (isAnswered) return;
@@ -107,7 +123,7 @@ const QuizEngine = ({ certId, settings, onExit }) => {
     if (selectedOption === null || isAnswered) return;
     const currentQ = questions[currentIndex];
     const isCorrect = selectedOption === currentQ.answer;
-    setResultsData(prev => [...prev, { questionId: currentQ.id, category: currentQ.category, isCorrect }]);
+    setResultsData(prev => [...prev, { questionId: currentQ.id, category: currentQ.category, selectedOption, isCorrect }]);
     setIsAnswered(true);
     if (isCorrect) setScore(score + 1);
   };
@@ -134,6 +150,7 @@ const QuizEngine = ({ certId, settings, onExit }) => {
     setSelectedOption(null);
     setIsAnswered(false);
     setShowResults(false);
+    setReviewFilter('all');
   }, [storageKey, certId, settings]);
 
   const formatTime = (seconds) => {
@@ -157,7 +174,21 @@ const QuizEngine = ({ certId, settings, onExit }) => {
   if (showResults) {
     const percentage = Math.round((score / questions.length) * 100);
     const categoryStats = getCategoryPerformance();
-    const currentCert = certifications.find(c => c.id === certId);
+
+    // Align resultsData with original questions to fetch texts and explanations
+    const mappedReviewItems = resultsData.map(res => {
+      const originalQ = questions.find(q => q.id === res.questionId);
+      return {
+        ...res,
+        questionText: originalQ?.question || '',
+        answer: originalQ?.answer || '',
+        explanation: originalQ?.explanation || '',
+      };
+    });
+
+    const displayedReviewItems = reviewFilter === 'incorrect'
+      ? mappedReviewItems.filter(item => !item.isCorrect)
+      : mappedReviewItems;
 
     return (
       <div className="max-w-4xl mx-auto">
@@ -179,6 +210,80 @@ const QuizEngine = ({ certId, settings, onExit }) => {
             {percentage >= 70 ? "Great job! You're showing strong knowledge in this area." : "Keep studying! Review the core concepts and try again."}
           </div>
         </div>
+
+        {/* Incorrect review segment */}
+        <div className="bg-white p-8 rounded-2xl shadow-md border border-slate-100 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <h3 className="text-xl font-bold text-slate-900 flex items-center">
+              <AlertCircle className="mr-2 text-blue-600" /> Review Answers
+            </h3>
+            <div className="inline-flex rounded-xl p-1 bg-slate-100">
+              <button
+                type="button"
+                onClick={() => setReviewFilter('all')}
+                className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all ${
+                  reviewFilter === 'all' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                All ({mappedReviewItems.length})
+              </button>
+              <button
+                type="button"
+                onClick={() => setReviewFilter('incorrect')}
+                className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all ${
+                  reviewFilter === 'incorrect' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                Incorrect Only ({mappedReviewItems.filter(i => !i.isCorrect).length})
+              </button>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            {displayedReviewItems.length > 0 ? (
+              displayedReviewItems.map((item, idx) => (
+                <div key={idx} className="border-b border-slate-100 pb-6 last:border-none last:pb-0">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-xs font-bold text-slate-400">Q#{idx + 1}</span>
+                    <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${
+                      item.isCorrect ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'
+                    }`}>
+                      {item.isCorrect ? 'Correct' : 'Incorrect'}
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-slate-900 mb-3 leading-relaxed">{item.questionText}</h4>
+
+                  <div className="grid sm:grid-cols-2 gap-3 mb-3 text-sm">
+                    <div className="p-3 rounded-lg bg-slate-50 border border-slate-100">
+                      <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Your Answer</div>
+                      <div className={`font-semibold ${item.isCorrect ? 'text-green-700' : 'text-red-700'}`}>
+                        {item.selectedOption || '(Skipped / Timed out)'}
+                      </div>
+                    </div>
+                    {!item.isCorrect && (
+                      <div className="p-3 rounded-lg bg-green-50/50 border border-green-100">
+                        <div className="text-[10px] font-bold text-green-500 uppercase tracking-widest mb-1">Correct Answer</div>
+                        <div className="font-semibold text-green-700">{item.answer}</div>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="p-4 rounded-xl bg-blue-50/50 border border-blue-50 flex items-start">
+                    <AlertCircle size={16} className="text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
+                    <p className="text-xs text-blue-800 leading-relaxed font-medium">
+                      <span className="font-bold">Explanation:</span> {item.explanation}
+                    </p>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="text-center py-8 text-slate-500">
+                {reviewFilter === 'incorrect' ? 'Congratulations! No incorrect answers to display.' : 'No review details available.'}
+              </div>
+            )}
+          </div>
+        </div>
+
         <div className="bg-white p-8 rounded-2xl shadow-md border border-slate-100 mb-8">
           <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center"><BarChart3 className="mr-2 text-blue-600" /> Performance by Domain</h3>
           <div className="space-y-6">

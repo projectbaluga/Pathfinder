@@ -1,11 +1,31 @@
 
 import { Link } from 'react-router-dom';
-import { Search, BookOpen, GraduationCap, ArrowRight, Award, HelpCircle } from 'lucide-react';
+import { Search, BookOpen, GraduationCap, ArrowRight, Award, HelpCircle, CheckSquare } from 'lucide-react';
 import { certifications } from '../data/certifications';
+import { getQuizHistory } from '../utils/quizHistory';
+import { useMemo } from 'react';
 
 const Home = () => {
   const totalCerts = certifications.length;
-  const totalQuestions = certifications.reduce((acc, cert) => acc + cert.practiceQuestions.length, 0);
+  const history = useMemo(() => getQuizHistory(), []);
+
+  // Compute total dynamic questions answered if history exists, otherwise fallback to global bank total
+  const stats = useMemo(() => {
+    if (history.length > 0) {
+      const answered = history.reduce((acc, curr) => acc + curr.total, 0);
+      return {
+        label: "Questions Answered",
+        count: answered,
+        isDynamic: true
+      };
+    }
+    const globalBankQuestions = certifications.reduce((acc, cert) => acc + cert.practiceQuestions.length, 0);
+    return {
+      label: "Practice Questions",
+      count: globalBankQuestions,
+      isDynamic: false
+    };
+  }, [history]);
 
   return (
     <div className="flex flex-col">
@@ -40,10 +60,14 @@ const Home = () => {
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center text-purple-600 mb-2">
-                <HelpCircle size={32} className="mr-3" />
-                <span className="text-4xl font-bold text-slate-900">{totalQuestions}</span>
+                {stats.isDynamic ? (
+                  <CheckSquare size={32} className="mr-3 text-green-500" />
+                ) : (
+                  <HelpCircle size={32} className="mr-3" />
+                )}
+                <span className="text-4xl font-bold text-slate-900">{stats.count}</span>
               </div>
-              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">Practice Questions</p>
+              <p className="text-slate-500 font-medium uppercase tracking-wider text-sm">{stats.label}</p>
             </div>
           </div>
         </div>

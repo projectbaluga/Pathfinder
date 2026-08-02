@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Directory from './pages/Directory';
 import Reviewer from './pages/Reviewer';
 import Quiz from './pages/Quiz';
+import Progress from './pages/Progress';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="directory" element={<Directory />} />
           <Route path="reviewer" element={<Reviewer />} />
           <Route path="quiz" element={<Quiz />} />
+          <Route path="progress" element={<Progress />} />
         </Route>
       </Routes>
     </BrowserRouter>

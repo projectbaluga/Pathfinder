@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Shield, BookOpen, GraduationCap, Search } from 'lucide-react';
+import { Shield, BookOpen, GraduationCap, Search, BarChart3 } from 'lucide-react';
 
 const Navbar = () => {
   return (
@@ -22,6 +22,10 @@ const Navbar = () => {
           <Link to="/quiz" className="hover:text-blue-400 flex items-center space-x-1">
             <GraduationCap size={18} />
             <span className="hidden sm:inline">Practice Quiz</span>
+          </Link>
+          <Link to="/progress" className="hover:text-blue-400 flex items-center space-x-1">
+            <BarChart3 size={18} />
+            <span className="hidden sm:inline">Progress</span>
           </Link>
         </div>
       </div>
