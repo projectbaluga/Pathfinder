@@ -132,7 +132,7 @@ const Reviewer = () => {
                   <ul className="text-slate-500 text-xs font-bold space-y-3">
                     <li className="hover:text-primary-500 transition-colors cursor-pointer">• Official Study Guide</li>
                     <li className="hover:text-primary-500 transition-colors cursor-pointer">• Hands-on Labs / Sandboxes</li>
-                    <li className="hover:text-primary-500 transition-colors cursor-pointer">• Pathfinder Practice Quizzes</li>
+                    <li className="hover:text-primary-500 transition-colors cursor-pointer">• ProveIT Practice Quizzes</li>
                     <li className="hover:text-primary-500 transition-colors cursor-pointer">• Community Forums (Reddit/Discord)</li>
                   </ul>
                 </div>

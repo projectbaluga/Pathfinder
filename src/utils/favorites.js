@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'pathfinder_favorites';
+const STORAGE_KEY = 'proveit_favorites';
 
 export const getFavorites = () => {
   try {

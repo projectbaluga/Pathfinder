@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'pathfinder_quiz_history';
+const STORAGE_KEY = 'proveit_quiz_history';
 
 export const getQuizHistory = () => {
   try {

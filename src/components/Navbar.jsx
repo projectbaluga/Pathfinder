@@ -21,7 +21,7 @@ const Navbar = () => {
             <Shield size={20} />
           </div>
           <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">
-            Pathfinder
+            ProveIT
           </span>
         </Link>
         <div className="flex items-center space-x-1 sm:space-x-3 mt-2 sm:mt-0">

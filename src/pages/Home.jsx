@@ -113,7 +113,7 @@ const Home = () => {
       <section className="py-24 px-4 bg-slate-50/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">How Pathfinder Works</h2>
+            <h2 className="text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">How ProveIT Works</h2>
             <p className="text-slate-500 font-medium max-w-xl mx-auto">
               Follow our structured preparation flow to build confidence and easily clear your upcoming IT certification exams.
             </p>
