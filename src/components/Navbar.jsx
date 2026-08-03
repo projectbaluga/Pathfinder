@@ -1,6 +1,6 @@
 
 import { Link, useLocation } from 'react-router-dom';
-import { Shield, BookOpen, GraduationCap, Search, BarChart3 } from 'lucide-react';
+import { BookOpen, GraduationCap, Search, BarChart3 } from 'lucide-react';
 
 const Navbar = () => {
   const location = useLocation();
@@ -17,8 +17,14 @@ const Navbar = () => {
     <nav className="bg-white/90 backdrop-blur-md text-slate-800 border-b border-slate-100 shadow-soft sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
         <Link to="/" className="flex items-center space-x-2 text-xl font-bold tracking-tight text-slate-900">
-          <div className="bg-primary-500 p-2 rounded-xl text-white shadow-soft">
-            <Shield size={20} />
+          {/* Custom Brand Logo Checkmark Badge inline SVG */}
+          <div className="bg-primary-500 p-2 rounded-xl text-white shadow-soft flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="w-5 h-5" fill="none">
+              <circle cx="210" cy="210" r="85" stroke="#FBA919" strokeWidth="48" />
+              <path d="M125 125 L125 385" stroke="#FFFFFF" strokeWidth="48" strokeLinecap="round" />
+              <path d="M125 210 L250 210" stroke="#FBA919" strokeWidth="48" strokeLinecap="round" />
+              <path d="M300 270 L350 340 L450 180" stroke="#FBA919" strokeWidth="48" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
           </div>
           <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-600">
             ProveIT
