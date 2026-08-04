@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { X, Info, ListChecks } from 'lucide-react';
+import { X, Info, ListChecks, Award, Link as LinkIcon, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const CertDetails = ({ cert, onClose }) => {
@@ -89,38 +89,86 @@ const CertDetails = ({ cert, onClose }) => {
           </button>
         </div>
 
-        <div className="p-6 md:p-8">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100/50">
-              <h3 className="text-xs font-bold text-primary-400 uppercase tracking-widest mb-4 flex items-center">
-                <Info size={16} className="mr-2 text-primary-500" /> Overview
+        <div className="p-6 md:p-8 space-y-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100/50 space-y-3">
+              <h3 className="text-xs font-bold text-primary-500 uppercase tracking-widest flex items-center mb-1">
+                <Info size={16} className="mr-2" /> Overview
               </h3>
-              <div className="space-y-3 text-sm">
+              <div className="space-y-2 text-sm">
                 <p><span className="font-semibold text-slate-600">Issuer:</span> {cert.issuer}</p>
                 <p><span className="font-semibold text-slate-600">Domain:</span> {cert.domain}</p>
                 <p><span className="font-semibold text-slate-600">Level:</span> {cert.level}</p>
                 <p><span className="font-semibold text-slate-600">Cost:</span> ${cert.price}</p>
+                {cert.validity && <p><span className="font-semibold text-slate-600">Validity:</span> {cert.validity}</p>}
               </div>
             </div>
-            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100/50">
-              <h3 className="text-xs font-bold text-primary-400 uppercase tracking-widest mb-4 flex items-center">
-                <ListChecks size={16} className="mr-2 text-primary-500" /> Exam Details
+            <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100/50 space-y-3">
+              <h3 className="text-xs font-bold text-primary-500 uppercase tracking-widest flex items-center mb-1">
+                <ListChecks size={16} className="mr-2" /> Exam Details
               </h3>
-              <div className="space-y-3 text-sm">
+              <div className="space-y-2 text-sm">
+                {cert.examCode && <p><span className="font-semibold text-slate-600">Exam Code:</span> {cert.examCode}</p>}
                 <p><span className="font-semibold text-slate-600">Questions:</span> {cert.questionsCount}</p>
                 <p><span className="font-semibold text-slate-600">Duration:</span> {cert.duration}</p>
-                <p><span className="font-semibold text-slate-600">Practice:</span> {cert.practiceQuestions?.length ?? 0} questions available</p>
+                {cert.passingScore && <p><span className="font-semibold text-slate-600">Passing Score:</span> {cert.passingScore}</p>}
+                <p><span className="font-semibold text-slate-600">Practice Bank:</span> {cert.practiceQuestions?.length ?? 0} unique questions</p>
               </div>
             </div>
           </div>
 
-          <div className="bg-primary-50/50 border border-primary-100 p-6 rounded-xl2">
-            <h3 className="text-lg font-bold text-primary-900 mb-2">Description</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {cert.prerequisites && cert.prerequisites.length > 0 && (
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100/50">
+                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                  <Award size={16} className="mr-2 text-primary-500" /> Prerequisites
+                </h3>
+                <ul className="list-disc pl-5 text-xs text-slate-600 space-y-1 font-semibold">
+                  {cert.prerequisites.map((prereq, index) => (
+                    <li key={index}>{prereq}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {cert.careerRoles && cert.careerRoles.length > 0 && (
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-100/50">
+                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3 flex items-center">
+                  <DollarSign size={16} className="mr-2 text-primary-500" /> Career & Salary
+                </h3>
+                <div className="space-y-2">
+                  <p className="text-xs text-slate-600 font-semibold">
+                    <span className="text-slate-400 font-bold uppercase tracking-wider block text-[10px] mb-0.5">Average Salary Range</span>
+                    {cert.salaryRange || 'N/A'}
+                  </p>
+                  <p className="text-xs text-slate-600 font-semibold">
+                    <span className="text-slate-400 font-bold uppercase tracking-wider block text-[10px] mb-0.5">Target Roles</span>
+                    {cert.careerRoles.join(', ')}
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="bg-primary-50/50 border border-primary-100 p-6 rounded-xl2 space-y-3">
+            <h3 className="text-lg font-bold text-primary-900 flex items-center justify-between">
+              <span>Description</span>
+              {cert.officialUrl && (
+                <a
+                  href={cert.officialUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold text-primary-500 hover:text-primary-600 flex items-center gap-1 bg-white px-3 py-1.5 rounded-pill shadow-sm border border-slate-100"
+                >
+                  <LinkIcon size={12} /> Official Site
+                </a>
+              )}
+            </h3>
             <p className="text-primary-800 leading-relaxed text-sm font-medium">{cert.description}</p>
           </div>
         </div>
 
-        <div className="sticky bottom-0 bg-white border-t border-slate-100 px-6 py-4 flex flex-wrap justify-end gap-3">
+        <div className="sticky bottom-0 bg-white border-t border-slate-100 px-6 py-4 flex flex-wrap justify-end gap-3 z-10">
           <Link
             to={`/reviewer?cert=${cert.id}`}
             onClick={onClose}

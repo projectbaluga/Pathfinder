@@ -28,6 +28,19 @@ const Reviewer = () => {
     setSearchParams({ cert: id });
   };
 
+  // Define sensible fallback defaults for timeline & resources
+  const timelineData = selectedCert?.studyPlan || [
+    { phase: "Week 1-2", focus: "Core fundamentals and concepts." },
+    { phase: "Week 3-4", focus: "Deep dive into specific domains." },
+    { phase: "Week 5", focus: "Practice exams and weak area review." }
+  ];
+
+  const resourcesData = selectedCert?.resources || [
+    { label: "Official Study Guide", url: "#" },
+    { label: "Hands-on Labs / Sandboxes", url: "#" },
+    { label: "ProveIT Practice Quizzes", url: "#" }
+  ];
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="mb-12">
@@ -122,18 +135,28 @@ const Reviewer = () => {
                 <div className="bg-white p-6 rounded-xl2 shadow-soft border border-slate-100">
                   <h3 className="font-bold text-slate-900 mb-4 flex items-center text-sm"><ListChecks className="mr-2 text-green-500" /> Recommended Timeline</h3>
                   <ul className="text-slate-500 text-xs font-semibold space-y-3">
-                    <li className="flex items-start"><span className="font-bold text-slate-800 mr-2">Week 1-2:</span> Core fundamentals and concepts.</li>
-                    <li className="flex items-start"><span className="font-bold text-slate-800 mr-2">Week 3-4:</span> Deep dive into specific domains.</li>
-                    <li className="flex items-start"><span className="font-bold text-slate-800 mr-2">Week 5:</span> Practice exams and weak area review.</li>
+                    {timelineData.map((item, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="font-bold text-slate-800 mr-2">{item.phase}:</span> {item.focus}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div className="bg-white p-6 rounded-xl2 shadow-soft border border-slate-100">
                   <h3 className="font-bold text-slate-900 mb-4 flex items-center text-sm"><BookOpen className="mr-2 text-primary-500" /> Key Resources</h3>
                   <ul className="text-slate-500 text-xs font-bold space-y-3">
-                    <li className="hover:text-primary-500 transition-colors cursor-pointer">• Official Study Guide</li>
-                    <li className="hover:text-primary-500 transition-colors cursor-pointer">• Hands-on Labs / Sandboxes</li>
-                    <li className="hover:text-primary-500 transition-colors cursor-pointer">• ProveIT Practice Quizzes</li>
-                    <li className="hover:text-primary-500 transition-colors cursor-pointer">• Community Forums (Reddit/Discord)</li>
+                    {resourcesData.map((res, index) => (
+                      <li key={index}>
+                        <a
+                          href={res.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:text-primary-500 transition-colors cursor-pointer"
+                        >
+                          • {res.label}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

@@ -24,7 +24,7 @@ describe('CertDetails component', () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByText(/50 questions available/i)).toBeInTheDocument();
+    expect(screen.getByText(/50 unique questions/i)).toBeInTheDocument();
   });
 
   test('pressing Escape calls onClose', () => {
